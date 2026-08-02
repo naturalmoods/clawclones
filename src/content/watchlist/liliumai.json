@@ -1,0 +1,60 @@
+{
+  "id": "beidald/liliumai",
+  "name": "Liliumai",
+  "language": "TypeScript",
+  "vibe_summary": "Lilium AI: The ultimate personal AI agent framework for autonomous computer control. Featuring browser automation, shell execution, and multi-channel integration (WeChat/Telegram/Discord).",
+  "health_status": "warning",
+  "github_stars": 95,
+  "metrics": {
+    "boot_time_ms": 0,
+    "memory_mb": 0,
+    "security_score": 0
+  },
+  "radar_chart": {
+    "sandboxing": 5,
+    "api_security": 5,
+    "network_isolation": 5,
+    "telemetry_safety": 5,
+    "shell_access_risk": 5
+  },
+  "tags": [
+    "liliumai",
+    "watchlist",
+    "new"
+  ],
+  "community_sentiment": 47,
+  "reddit_mentions": 0,
+  "web_mentions": 0,
+  "best_for": [],
+  "avoid_if": [],
+  "deployment_target": [],
+  "local_first": null,
+  "cloud_dependency": "unknown",
+  "setup_difficulty": "unknown",
+  "privacy_posture": "unknown",
+  "multi_user": null,
+  "plugin_ecosystem": "unknown",
+  "license_type": null,
+  "last_commit_at": null,
+  "contributors_count": null,
+  "open_issues_count": null,
+  "release_cadence_days": null,
+  "operational_risk": "unknown",
+  "openclaw_advantages": [],
+  "openclaw_disadvantages": [],
+  "confidence_summary": "Watchlist profiles use lightweight signals until a full AI analysis is available.",
+  "evidence_confidence": 20,
+  "content_ops": {
+    "last_generated_at": "2026-03-13T04:57:30.495Z",
+    "last_reviewed_at": "2026-08-02T08:08:27.146Z",
+    "refresh_mode": "refresh",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
+    "change_reason": "Watchlist refresh using lightweight repository signals.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "",
+  "latest_release": null,
+  "last_updated": "2026-08-02T08:08:27.146Z",
+  "watchlist_added": "2026-03-09T00:10:49.059Z",
+  "promotion_status": "observing"
+}

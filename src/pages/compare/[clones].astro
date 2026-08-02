@@ -1,0 +1,133 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import CompareDashboard from "../../components/CompareDashboard.tsx";
+import { getCanonicalComparePath, getCanonicalCompareSlugs, getCompareSlug } from "../../lib/compare";
+import { formatSignalDate } from "../../lib/content-signals";
+import { getDisplayName } from "../../lib/clone-format";
+// Decided by `scripts/generate-indexable-compares.ts`; the sitemap filter in
+// `astro.config.mjs` reads the same file, so the two cannot disagree.
+import { loadIndexableCompares } from "../../lib/compare-indexing";
+
+export async function getStaticPaths() {
+    const allClones = await getCollection("clones");
+    const indexable = loadIndexableCompares();
+    const paths = [];
+    const lastUpdatedAt = allClones.reduce(
+        (latest: string, clone: any) =>
+            clone.data.last_updated > latest ? clone.data.last_updated : latest,
+        allClones[0]?.data.last_updated ?? "",
+    );
+
+    for (let i = 0; i < allClones.length; i++) {
+        for (let j = i + 1; j < allClones.length; j++) {
+            const clone1 = allClones[i];
+            const clone2 = allClones[j];
+            if (!clone1 || !clone2) continue;
+
+            const [firstSlug, secondSlug] = getCanonicalCompareSlugs(
+                clone1,
+                clone2,
+            );
+            const [firstClone, secondClone] =
+                getCompareSlug(clone1) === firstSlug
+                    ? [clone1, clone2]
+                    : [clone2, clone1];
+
+            const pairSlug = `${firstSlug}-vs-${secondSlug}`;
+            paths.push({
+                params: { clones: pairSlug },
+                props: {
+                    clone1: firstClone,
+                    clone2: secondClone,
+                    cloneOptions: allClones.map((clone) => ({
+                        id: clone.id,
+                        name: clone.data.name,
+                        slug: getCompareSlug(clone),
+                    })),
+                    lastUpdatedAt,
+                    isIndexable:
+                        indexable.has(pairSlug) ||
+                        clone1.id === "openclaw" ||
+                        clone2.id === "openclaw",
+                },
+            });
+        }
+    }
+    return paths;
+}
+
+const { clone1, clone2, cloneOptions, lastUpdatedAt, isIndexable } = Astro.props;
+const name1 = clone1 ? getDisplayName(clone1) : "";
+const name2 = clone2 ? getDisplayName(clone2) : "";
+const compareClone1WithOpenClawHref =
+    clone1?.id !== "openclaw" ? getCanonicalComparePath(clone1, "openclaw") : null;
+const compareClone2WithOpenClawHref =
+    clone2?.id !== "openclaw" ? getCanonicalComparePath(clone2, "openclaw") : null;
+// Kept separate from `isIndexable`: the OpenClaw-relative title only makes
+// sense when OpenClaw is actually one of the two, while indexability now also
+// covers pairs that have earned their own traffic.
+const involvesOpenClaw = clone1?.id === 'openclaw' || clone2?.id === 'openclaw';
+const alternative = clone1?.id === 'openclaw' ? clone2 : clone1;
+const comparisonTitle = involvesOpenClaw
+    ? `${alternative?.data.name || 'OpenClaw alternative'} vs OpenClaw - comparison for ${alternative?.data.best_for?.[0] || 'AI builders'}`
+    : `${name1} vs ${name2} - ClawClones comparison`;
+const comparisonDescription = involvesOpenClaw
+    ? `Compare ${alternative?.data.name || 'this alternative'} with OpenClaw: ${alternative?.data.vibe_summary || ''}`
+    : `Decision-oriented comparison between ${name1} and ${name2}.`;
+const ogImage = `https://clawclones.com/og/compare/${Astro.params.clones}.svg`;
+const permalink = `https://clawclones.com/compare/${Astro.params.clones}`;
+---
+
+<Layout
+    title={comparisonTitle}
+    description={comparisonDescription}
+    robots={isIndexable ? 'index, follow' : 'noindex, follow'}
+    image={ogImage}
+>
+    <section class="mx-auto max-w-7xl px-6 pt-20 pb-14 md:pt-28 md:pb-20">
+        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+            Compare · 2 of {cloneOptions.length} tracked · updated {formatSignalDate(lastUpdatedAt)}
+        </p>
+        <h1 class="mt-7 font-semibold text-[40px] md:text-[72px] leading-[1.02] tracking-[-0.02em]">
+            {name1} <span class="text-pale-slate-300 dark:text-pale-slate-600">vs.</span> {name2}
+        </h1>
+        <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-2 font-mono text-[12px] text-pale-slate-500">
+            <span>
+                <span class="inline-block h-3 w-3 bg-accent/10 border border-accent/40 dark:bg-accent-soft/10 dark:border-accent-soft/40 align-[-1px] mr-2"></span>
+                tinted rows differ across the selection — neutral rows match
+            </span>
+            <button id="copy-permalink" data-permalink={permalink} class="hover:text-ink dark:hover:text-white transition-colors duration-150">
+                Copy permalink
+            </button>
+            {compareClone1WithOpenClawHref && (
+                <a href={compareClone1WithOpenClawHref} class="hover:text-ink dark:hover:text-white transition-colors duration-150">{name1} vs OpenClaw</a>
+            )}
+            {compareClone2WithOpenClawHref && (
+                <a href={compareClone2WithOpenClawHref} class="hover:text-ink dark:hover:text-white transition-colors duration-150">{name2} vs OpenClaw</a>
+            )}
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-6 pb-24 md:pb-32">
+        <CompareDashboard
+            client:load
+            cloneOptions={cloneOptions}
+            initialClone1={clone1}
+            initialClone2={clone2}
+        />
+    </section>
+
+    <script is:inline>
+        document.getElementById("copy-permalink")?.addEventListener("click", (event) => {
+            const button = event.currentTarget;
+            const url = button?.dataset?.permalink;
+            if (url && navigator.clipboard) {
+                navigator.clipboard.writeText(url);
+                const original = button.textContent;
+                button.textContent = "Copied!";
+                setTimeout(() => { button.textContent = original; }, 1500);
+            }
+        });
+    </script>
+</Layout>

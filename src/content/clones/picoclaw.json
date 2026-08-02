@@ -1,0 +1,85 @@
+{
+  "id": "sipeed/picoclaw",
+  "name": "PicoClaw",
+  "language": "Go",
+  "vibe_summary": "A from-scratch Go rewrite of the personal AI assistant concept, boasting <10MB RAM footprint on $10 hardware. Recently shipped v0.3.1 with active AI-assisted development and multi-arch edge focus.",
+  "health_status": "healthy",
+  "github_stars": 29794,
+  "metrics": {
+    "boot_time_ms": 8,
+    "memory_mb": 1.9,
+    "security_score": 75
+  },
+  "radar_chart": {
+    "sandboxing": 5,
+    "api_security": 7,
+    "network_isolation": 4,
+    "telemetry_safety": 8,
+    "shell_access_risk": 6
+  },
+  "tags": [
+    "edge-ai",
+    "go",
+    "lightweight",
+    "personal-assistant",
+    "multi-arch"
+  ],
+  "community_sentiment": 85,
+  "reddit_mentions": 5,
+  "web_mentions": 10,
+  "best_for": [
+    "Edge and IoT deployments on cheap hardware",
+    "Hobbyists wanting a tiny local AI assistant",
+    "Multi-arch experimentation (RISC-V, MIPS)"
+  ],
+  "avoid_if": [
+    "Users needing heavy enterprise sandboxing",
+    "Those requiring rich plugin ecosystem like OpenClaw",
+    "Teams wanting guaranteed commercial support"
+  ],
+  "deployment_target": [
+    "edge",
+    "self-hosted",
+    "desktop"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "mixed",
+  "multi_user": false,
+  "plugin_ecosystem": "emerging",
+  "license_type": "MIT",
+  "last_commit_at": "2026-07-23T02:08:09Z",
+  "contributors_count": 239,
+  "open_issues_count": 56,
+  "release_cadence_days": 13,
+  "operational_risk": "low",
+  "openclaw_advantages": [
+    "Runs on $10 hardware with <10MB RAM (99% less than OpenClaw)",
+    "Multi-arch support including RISC-V, MIPS, LoongArch",
+    "Single Go binary, no runtime dependencies, instant boot",
+    "Self-bootstrapped by AI agent, rapid iteration"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller plugin/extension ecosystem compared to OpenClaw",
+    "Less mature cross-platform UI (Canvas, mobile) than OpenClaw",
+    "Fewer pre-built integrations and community channels"
+  ],
+  "confidence_summary": "Evidence from README, recent commits, and web mentions shows active development and clear positioning; uncertainty remains on real-world security hardening and multi-user scaling.",
+  "evidence_confidence": 80,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T01:55:50.731Z",
+    "last_reviewed_at": "2026-07-13T01:55:50.731Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "PicoClaw is an ultra-lightweight personal AI assistant written from scratch in Go by Sipeed, explicitly inspired by NanoBot and positioned as a lean alternative to OpenClaw. It targets edge and embedded hardware, running on as little as $10 devices with under 10MB RAM while supporting diverse architectures including x86_64, ARM64, MIPS, RISC-V, and LoongArch.\n\nThe project was uniquely 'self-bootstrapped'—the AI agent itself drove the architecture migration and code optimization—and continues to evolve with AI-assisted commits (e.g., Claude co-authored fixes for tool safety and provider compatibility). Recent work focuses on hardening tool access (write_file overwrite guards) and robust provider history handling (anthropic tool_use fallback), indicating a security-conscious development pace.\n\nUnlike OpenClaw's broader ecosystem with rich Canvas UI and mobile presence, PicoClaw prioritizes minimal footprint and deployability, making it ideal for constrained environments. The v0.3.1 release and active community show a healthy, emerging project with MIT licensing and a clear edge-first vision.",
+  "latest_release": {
+    "version": "v0.3.1",
+    "date": "2026-07-03T07:37:06Z",
+    "url": "https://github.com/sipeed/picoclaw/releases/tag/v0.3.1"
+  },
+  "last_updated": "2026-08-02T12:53:28.545Z"
+}

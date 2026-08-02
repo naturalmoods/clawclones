@@ -1,0 +1,86 @@
+{
+  "id": "zeroclaw-labs/zeroclaw",
+  "name": "ZeroClaw",
+  "language": "Rust",
+  "vibe_summary": "ZeroClaw is a Rust-written, fully autonomous AI assistant runtime that boots in milliseconds with a tiny memory footprint, giving users complete ownership of their agent, data, and hardware. Its vibrant development pace shows constant channel i18n, identity binding, and quickstart auth improvements, signaling a mature yet lean OpenClaw alternative.",
+  "health_status": "healthy",
+  "github_stars": 32484,
+  "metrics": {
+    "boot_time_ms": 5,
+    "memory_mb": 1.5,
+    "security_score": 85
+  },
+  "radar_chart": {
+    "sandboxing": 6,
+    "api_security": 8,
+    "network_isolation": 5,
+    "telemetry_safety": 9,
+    "shell_access_risk": 8
+  },
+  "tags": [
+    "rust",
+    "ai-agent",
+    "local-first",
+    "self-hosted",
+    "autonomous"
+  ],
+  "community_sentiment": 82,
+  "reddit_mentions": 4,
+  "web_mentions": 10,
+  "best_for": [
+    "Privacy-focused users wanting local AI control",
+    "Rust enthusiasts needing lightweight agent runtime",
+    "Self-hosted multi-channel assistant deployments"
+  ],
+  "avoid_if": [
+    "Teams needing enterprise managed cloud SaaS",
+    "Users uncomfortable with CLI configuration",
+    "Those requiring guaranteed multi-tenant support"
+  ],
+  "deployment_target": [
+    "desktop",
+    "edge",
+    "self-hosted",
+    "cloud"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "strong",
+  "multi_user": null,
+  "plugin_ecosystem": "strong",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-08-01T19:30:25Z",
+  "contributors_count": 402,
+  "open_issues_count": 686,
+  "release_cadence_days": 10,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Rust binary with <10ms boot and <2MB memory",
+    "Strong local-first privacy by design",
+    "Operator-bind identities without round-trip codes",
+    "Broad LLM provider and channel support"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller community than original OpenClaw (32k vs 382k stars)",
+    "Fork maturity and third-party plugin count lagging",
+    "Documentation translation relies on submodules, possibly fragmented"
+  ],
+  "confidence_summary": "Evidence from README, commit history, and search snippets shows active Rust development and clear local-first stance; uncertainty persists on multi-user readiness and precise sandboxing defaults.",
+  "evidence_confidence": 85,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T01:51:07.283Z",
+    "last_reviewed_at": "2026-07-13T01:51:07.283Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "ZeroClaw is an agent runtime distributed as a single Rust binary that users configure and run on their own machines, embodying a local-first philosophy where the operator owns the agent, the data, and the hardware. It connects to a wide range of LLM providers—including Anthropic, OpenAI, Ollama, and roughly twenty others—and exposes the assistant through over thirty channels such as Discord, Telegram, Matrix, email, voice, and webhooks, while executing actions via tools like shell, browser, HTTP, hardware, and custom MCP servers.\n\nArchitecturally, ZeroClaw emphasizes minimal footprint and high performance, leveraging Rust's edition 2024 to achieve boot times under ten milliseconds and memory usage below two megabytes, a stark contrast to heavier Node or Python-based assistants. Recent commit activity reveals a focus on internationalization of channel replies, inline subscription authentication in the quickstart flow, and operator-bind identity mechanisms that remove the need for bind-code round-trips, alongside test coverage for channel bind auth and phantom-alias trust boundaries.\n\nCompared to OpenClaw, ZeroClaw trades some ecosystem size for a compiled, security-minded, and resource-efficient core that still mirrors the multi-channel, tool-using autonomy of the original. Its documentation and submodule-based translation system show a commitment to maintainability, while release cadence (v0.8.2) and active Discord indicate a healthy, evolving project.",
+  "latest_release": {
+    "version": "v0.8.3",
+    "date": "2026-07-16T01:47:13Z",
+    "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.3"
+  },
+  "last_updated": "2026-08-02T12:53:26.461Z"
+}

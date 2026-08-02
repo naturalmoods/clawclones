@@ -1,0 +1,85 @@
+{
+  "id": "puremachinery/carapace",
+  "name": "Carapace",
+  "language": "Rust",
+  "vibe_summary": "A hardened Rust rewrite of OpenClaw that prioritizes security defaults and signed WASM plugins. It positions itself as the 'hard shell' alternative for users wary of the January 2026 OpenClaw disclosures.",
+  "health_status": "healthy",
+  "github_stars": 46,
+  "metrics": {
+    "boot_time_ms": 30,
+    "memory_mb": 15,
+    "security_score": 95
+  },
+  "radar_chart": {
+    "sandboxing": 9,
+    "api_security": 8,
+    "network_isolation": 9,
+    "telemetry_safety": 8,
+    "shell_access_risk": 2
+  },
+  "tags": [
+    "rust",
+    "security",
+    "ai-assistant",
+    "openclaw-alternative",
+    "local-first"
+  ],
+  "community_sentiment": 10,
+  "reddit_mentions": 21,
+  "web_mentions": 10,
+  "best_for": [
+    "Privacy-focused self-hosters",
+    "Security-conscious developers",
+    "Rust enthusiasts wanting local AI assistant"
+  ],
+  "avoid_if": [
+    "Users needing large plugin ecosystem",
+    "Non-technical users",
+    "Those wanting managed cloud service"
+  ],
+  "deployment_target": [
+    "desktop",
+    "self-hosted",
+    "edge"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "medium",
+  "privacy_posture": "strong",
+  "multi_user": null,
+  "plugin_ecosystem": "emerging",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-07-31T11:08:52Z",
+  "contributors_count": 5,
+  "open_issues_count": 14,
+  "release_cadence_days": 7,
+  "operational_risk": "low",
+  "openclaw_advantages": [
+    "OS-level subprocess sandboxing and encrypted secret storage",
+    "Rust memory safety with low resource footprint",
+    "Signed WASM plugins with strict capability limits",
+    "Explicit threat-model fixes for OpenClaw CVEs"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller community and fewer ready-made skills",
+    "Younger project (v0.8.0) with partial feature paths",
+    "Less cross-platform mobile support than OpenClaw"
+  ],
+  "confidence_summary": "Repo README and commit history show active maintenance and detailed security model, but Reddit and Brave results are off-topic (gaming/biology) or OpenClaw-centric, leaving external sentiment unverified.",
+  "evidence_confidence": 70,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:24:48.986Z",
+    "last_reviewed_at": "2026-07-13T02:24:48.986Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "Carapace is a security-focused, open-source personal AI assistant written in Rust, explicitly built as a hardened alternative to OpenClaw/clawdbot. It runs locally on a user's machine and connects to multiple messaging channels (Matrix, Signal, Telegram, Discord, Slack, webhooks, console) while supporting a wide range of LLM providers including Anthropic, OpenAI, Ollama, Gemini, Bedrock, and local Claude CLI.\n\nIts core architecture emphasizes secure defaults: localhost-only binding, OS credential store with AES-256-GCM fallback, OS-level subprocess sandboxing for protected paths, and a signed WASM plugin runtime with resource limits. The project documents a threat-by-threat comparison addressing the January 2026 OpenClaw security disclosures, covering unauthenticated access, plaintext secrets, supply chain risks, prompt injection, and SSRF.\n\nUnlike OpenClaw's broad ecosystem and cross-platform reach, Carapace is younger (v0.8.0) and prioritizes stability on verified paths, with partial features explicitly flagged. It is best suited for technically inclined users who value a hard security shell over plug-and-play convenience.",
+  "latest_release": {
+    "version": "v0.8.0",
+    "date": "2026-05-01T22:18:48Z",
+    "url": "https://github.com/puremachinery/carapace/releases/tag/v0.8.0"
+  },
+  "last_updated": "2026-08-02T12:53:40.477Z"
+}

@@ -1,0 +1,583 @@
+---
+/**
+ * ClawVerse map: OpenClaw at the centre, every tracked clone on an orbit ring
+ * chosen by star tier. Node size encodes stars, node colour encodes language.
+ *
+ * The canvas is drawn flat on purpose — no glows, auras or drifting particles —
+ * so it reads as part of the paper-and-ink system rather than a space scene.
+ * The page supplies the heading; this component owns the map only.
+ */
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+const clones = await getCollection("clones");
+
+const nodes = clones
+    .map((c) => ({
+        id: c.id,
+        name: c.data.name,
+        stars: c.data.github_stars ?? 0,
+        language: c.data.language ?? "Unknown",
+        health: c.data.health_status ?? "unknown",
+        tags: c.data.tags ?? [],
+        vibe: c.data.vibe_summary ?? "",
+        isOrigin: c.data.name === "OpenClaw",
+    }))
+    .sort((a, b) => b.stars - a.stars);
+
+const serialized = JSON.stringify(nodes);
+---
+
+<section id="ecosystem-map" class="border-t hairline">
+    <div class="ecosystem-inner">
+        <div class="map-container">
+            <canvas id="eco-canvas"></canvas>
+            <div id="eco-tooltip" class="eco-tooltip hidden"></div>
+
+            <div class="eco-toolbar">
+                <button id="download-map" class="tool-btn" title="Download as image">
+                    <Icon name="lucide:download" />
+                    <span>Save map</span>
+                </button>
+                <div class="tool-divider"></div>
+                <button
+                    class="tool-btn share-link"
+                    data-platform="x"
+                    title="Share on X"
+                    aria-label="Share on X"
+                >
+                    <Icon name="lucide:twitter" />
+                </button>
+                <button
+                    class="tool-btn share-link"
+                    data-platform="reddit"
+                    title="Share on Reddit"
+                    aria-label="Share on Reddit"
+                >
+                    <Icon name="lucide:message-square" />
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .ecosystem-inner {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: var(--font-sans);
+    }
+
+    .map-container {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #eco-canvas {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        cursor: default;
+    }
+
+    .eco-tooltip {
+        position: fixed;
+        background: var(--color-paper);
+        border: 1px solid var(--color-line);
+        border-radius: 2px;
+        padding: 14px 18px;
+        min-width: 220px;
+        max-width: 280px;
+        pointer-events: none;
+        z-index: 999;
+        transition: opacity 0.15s ease;
+    }
+
+    .eco-tooltip.hidden {
+        opacity: 0;
+    }
+
+    .eco-toolbar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: color-mix(in srgb, var(--color-paper) 92%, transparent);
+        border: 1px solid var(--color-line);
+        border-radius: 2px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        z-index: 10;
+    }
+
+    .tool-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border-radius: 2px;
+        color: var(--color-pale-slate-500);
+        font-family: var(--font-mono);
+        font-size: 0.6875rem;
+        letter-spacing: 0.02em;
+        transition: color 0.15s var(--ease-out), background-color 0.15s var(--ease-out);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .tool-btn:hover {
+        background: color-mix(in srgb, var(--color-ink) 5%, transparent);
+        color: var(--color-ink);
+    }
+
+    .tool-divider {
+        width: 1px;
+        height: 18px;
+        background: var(--color-line);
+        margin: 0 2px;
+    }
+
+    @media (max-width: 640px) {
+        .ecosystem-inner {
+            padding: 1.5rem 1rem 5.5rem;
+        }
+        .eco-toolbar {
+            bottom: -52px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+</style>
+
+<script define:vars={{ serialized }}>
+    const NODES = JSON.parse(serialized);
+
+    // The export renders a deterministic light poster, so the draw helpers read
+    // their colours from `palette` when one is pinned instead of following the
+    // visitor's current theme. Without this the exported PNG painted ink-dark
+    // text onto its own dark background in light mode.
+    let palette = null;
+    const isDark = () => document.documentElement.classList.contains("dark");
+    const FG = () => (palette ? palette.fg : isDark() ? "235,234,228" : "23,23,21");
+    const BGRGB = () => (palette ? palette.bgRgb : isDark() ? "19,19,17" : "250,250,248");
+    const INK = () => (palette ? palette.ink : isDark() ? "#EBEAE4" : "#171715");
+    const PAPER = () => (palette ? palette.paper : isDark() ? "#131311" : "#FAFAF8");
+    const ACCENT = () => (palette ? palette.accent : isDark() ? "#9DB0FF" : "#2E4BC6");
+
+    const LANG_COLORS = {
+        TypeScript: "#3b82f6",
+        Rust: "#f97316",
+        Python: "#a855f7",
+        Go: "#22c55e",
+        JavaScript: "#eab308",
+        Unknown: "#6b7280",
+    };
+
+    function formatStars(n) {
+        if (n >= 1000) return (n / 1000).toFixed(1) + "k";
+        return String(n);
+    }
+
+    function nodeRadius(stars) {
+        if (stars >= 100000) return 22;
+        if (stars >= 10000) return 14;
+        if (stars >= 1000) return 9;
+        return 6;
+    }
+
+    function hexToRgb(hex) {
+        return [
+            parseInt(hex.slice(1, 3), 16),
+            parseInt(hex.slice(3, 5), 16),
+            parseInt(hex.slice(5, 7), 16),
+        ].join(",");
+    }
+
+    const canvas = document.getElementById("eco-canvas");
+    const tooltip = document.getElementById("eco-tooltip");
+    let ctx = canvas.getContext("2d");
+
+    const DPR = window.devicePixelRatio || 1;
+    let W = Math.min(900, window.innerWidth - 40);
+    let H = W * 0.85;
+
+    function resize() {
+        W = Math.min(900, window.innerWidth - 40);
+        H = W * 0.85;
+        canvas.width = W * DPR;
+        canvas.height = H * DPR;
+        canvas.style.width = W + "px";
+        canvas.style.height = H + "px";
+        ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    }
+    resize();
+    window.addEventListener("resize", resize);
+
+    const origin = NODES.find((n) => n.isOrigin);
+    const others = NODES.filter((n) => !n.isOrigin);
+
+    // 3 orbit rings by star tier
+    const RING_DEFS = [
+        { minStars: 5000, radius: 200, speed: 0.00014 },
+        { minStars: 500, radius: 300, speed: 0.00008 },
+        { minStars: 0, radius: 400, speed: 0.00004 },
+    ];
+
+    const ringNodes = [[], [], []];
+    for (const node of others) {
+        if (node.stars >= RING_DEFS[0].minStars) ringNodes[0].push(node);
+        else if (node.stars >= RING_DEFS[1].minStars) ringNodes[1].push(node);
+        else ringNodes[2].push(node);
+    }
+
+    const nodeAngles = new Map();
+    ringNodes.forEach((nodes, ri) => {
+        nodes.forEach((node, i) => {
+            nodeAngles.set(
+                node.id,
+                (i / Math.max(1, nodes.length)) * Math.PI * 2 + ri * 0.6,
+            );
+        });
+    });
+
+    let startTime = null;
+    let hoveredNode = null;
+
+    function getColor(lang) {
+        return LANG_COLORS[lang] || LANG_COLORS.Unknown;
+    }
+
+    function drawOrbitRing(radius) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(W / 2, H / 2, radius, 0, Math.PI * 2);
+        ctx.setLineDash([3, 10]);
+        ctx.strokeStyle = `rgba(${FG()},0.12)`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.restore();
+    }
+
+    function drawConnection(x, y, color, alpha) {
+        ctx.beginPath();
+        ctx.moveTo(W / 2, H / 2);
+        ctx.lineTo(x, y);
+        ctx.strokeStyle = `rgba(${hexToRgb(color)},${alpha})`;
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+    }
+
+    function drawOrigin(scale = 1) {
+        const r = 46 * scale;
+        const cx = W / 2;
+        const cy = H / 2;
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.fillStyle = ACCENT();
+        ctx.fill();
+
+        ctx.fillStyle = PAPER();
+        ctx.font = `600 ${12 * scale}px Archivo, sans-serif`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("OPEN", cx, cy - 8 * scale);
+        ctx.fillText("CLAW", cx, cy + 8 * scale);
+
+        ctx.font = `${9 * scale}px 'IBM Plex Mono', monospace`;
+        ctx.fillStyle = `rgba(${FG()},0.55)`;
+        ctx.fillText("★ " + formatStars(origin?.stars || 0), cx, cy + r + 18 * scale);
+        ctx.restore();
+    }
+
+    function drawNode(node, x, y, isHovered, scale = 1) {
+        const r = nodeRadius(node.stars) * scale * (isHovered ? 1.2 : 1);
+        const color = getColor(node.language);
+
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.strokeStyle = isHovered ? INK() : `rgba(${FG()},0.25)`;
+        ctx.lineWidth = isHovered ? 2 : 1;
+        ctx.stroke();
+
+        if (r >= 8 * scale || isHovered) {
+            ctx.fillStyle = isHovered ? INK() : `rgba(${FG()},0.6)`;
+            ctx.font = `${isHovered ? "600" : "400"} ${10 * scale}px Archivo, sans-serif`;
+            ctx.textAlign = "center";
+            ctx.textBaseline = "alphabetic";
+            ctx.fillText(node.name, x, y + r + 12 * scale);
+        }
+    }
+
+    function computePositions(t, orbitScale = 1) {
+        const positions = [];
+        ringNodes.forEach((nodes, ri) => {
+            const ring = RING_DEFS[ri];
+            const radius = ring.radius * orbitScale;
+            nodes.forEach((node) => {
+                const angle = nodeAngles.get(node.id) + t * ring.speed;
+                positions.push({
+                    x: W / 2 + Math.cos(angle) * radius,
+                    y: H / 2 + Math.sin(angle) * radius,
+                    node,
+                });
+            });
+        });
+        return positions;
+    }
+
+    function drawLegend(scale = 1) {
+        const lx = W - 140 * scale;
+        const ly = 40 * scale;
+        const spacing = 20 * scale;
+
+        ctx.save();
+        ctx.fillStyle = `rgba(${BGRGB()},0.92)`;
+        ctx.strokeStyle = `rgba(${FG()},0.14)`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.rect(lx - 15 * scale, ly - 22 * scale, 130 * scale, 232 * scale);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.textBaseline = "alphabetic";
+        ctx.fillStyle = `rgba(${FG()},0.45)`;
+        ctx.font = `500 ${9 * scale}px 'IBM Plex Mono', monospace`;
+        ctx.textAlign = "left";
+        ctx.fillText("LANGUAGE", lx, ly);
+
+        let offset = 22 * scale;
+        Object.entries(LANG_COLORS).forEach(([lang, color]) => {
+            if (lang === "Unknown") return;
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(lx + 4 * scale, ly + offset - 4 * scale, 4 * scale, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = `rgba(${FG()},0.75)`;
+            ctx.font = `${11 * scale}px Archivo, sans-serif`;
+            ctx.fillText(lang, lx + 18 * scale, ly + offset);
+            offset += spacing;
+        });
+
+        offset += 14 * scale;
+        ctx.fillStyle = `rgba(${FG()},0.45)`;
+        ctx.font = `500 ${9 * scale}px 'IBM Plex Mono', monospace`;
+        ctx.fillText("SIZE = STARS", lx, ly + offset);
+
+        offset += 24 * scale;
+        [
+            { label: "100k+", r: 9 * scale },
+            { label: "10k+", r: 6 * scale },
+            { label: "1k+", r: 3 * scale },
+        ].forEach((size) => {
+            ctx.strokeStyle = `rgba(${FG()},0.4)`;
+            ctx.lineWidth = 1.5 * scale;
+            ctx.beginPath();
+            ctx.arc(lx + 4 * scale, ly + offset - 4 * scale, size.r, 0, Math.PI * 2);
+            ctx.stroke();
+
+            ctx.fillStyle = `rgba(${FG()},0.75)`;
+            ctx.font = `${11 * scale}px Archivo, sans-serif`;
+            ctx.fillText(size.label, lx + 18 * scale, ly + offset);
+            offset += spacing;
+        });
+
+        ctx.restore();
+    }
+
+    function draw(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const t = timestamp - startTime;
+        ctx.clearRect(0, 0, W, H);
+
+        drawLegend();
+        RING_DEFS.forEach((ring) => drawOrbitRing(ring.radius));
+
+        const positions = computePositions(t);
+        positions.forEach((p) =>
+            drawConnection(
+                p.x,
+                p.y,
+                getColor(p.node.language),
+                p.node.stars > 5000 ? 0.25 : 0.1,
+            ),
+        );
+
+        drawOrigin();
+        positions.forEach((p) =>
+            drawNode(p.node, p.x, p.y, hoveredNode?.id === p.node.id),
+        );
+
+        canvas._positions = positions;
+        requestAnimationFrame(draw);
+    }
+
+    requestAnimationFrame(draw);
+
+    function canvasCoords(e) {
+        const rect = canvas.getBoundingClientRect();
+        return {
+            x: (e.clientX - rect.left) * (W / rect.width),
+            y: (e.clientY - rect.top) * (H / rect.height),
+        };
+    }
+
+    canvas.addEventListener("mousemove", (e) => {
+        if (!canvas._positions) return;
+        const { x, y } = canvasCoords(e);
+        let found = null;
+        let best = Infinity;
+
+        for (const p of canvas._positions) {
+            const r = nodeRadius(p.node.stars) + 12;
+            const d = Math.hypot(x - p.x, y - p.y);
+            if (d < r && d < best) {
+                best = d;
+                found = p;
+            }
+        }
+
+        if (found) {
+            hoveredNode = found.node;
+            canvas.style.cursor = "pointer";
+            const color = getColor(found.node.language);
+            tooltip.innerHTML = `
+                <div style="font-size:0.9375rem;font-weight:600;letter-spacing:-0.01em;color:var(--color-ink);margin-bottom:6px">${found.node.name}</div>
+                <div style="font-family:var(--font-mono);font-size:0.6875rem;margin-bottom:8px;display:flex;align-items:center;gap:6px">
+                    <span style="width:8px;height:8px;border-radius:50%;background:${color};display:inline-block"></span>
+                    <span style="color:var(--color-pale-slate-500)">${found.node.language} · ★ ${formatStars(found.node.stars)}</span>
+                </div>
+                <div style="font-size:0.8125rem;color:var(--color-pale-slate-500);line-height:1.55;border-top:1px solid var(--color-line);padding-top:8px">${found.node.vibe}</div>
+            `;
+            const rect = canvas.getBoundingClientRect();
+            tooltip.style.left = rect.left + found.x * (rect.width / W) + 15 + "px";
+            tooltip.style.top = rect.top + found.y * (rect.height / H) - 20 + "px";
+            tooltip.classList.remove("hidden");
+        } else {
+            hoveredNode = null;
+            canvas.style.cursor = "default";
+            tooltip.classList.add("hidden");
+        }
+    });
+
+    canvas.addEventListener("mouseleave", () => {
+        hoveredNode = null;
+        tooltip.classList.add("hidden");
+    });
+
+    canvas.addEventListener("click", (e) => {
+        if (!canvas._positions) return;
+        const { x, y } = canvasCoords(e);
+        for (const p of canvas._positions) {
+            if (Math.hypot(x - p.x, y - p.y) < nodeRadius(p.node.stars) + 15) {
+                const slug = p.node.id.split("/").pop();
+                window.location.href = "/clones/" + slug;
+                return;
+            }
+        }
+    });
+
+    // --- High resolution export ---
+    document.getElementById("download-map").addEventListener("click", () => {
+        const exportW = 2000;
+        const exportH = 1200;
+
+        const tempCanvas = document.createElement("canvas");
+        const tCtx = tempCanvas.getContext("2d");
+        tempCanvas.width = exportW;
+        tempCanvas.height = exportH;
+
+        const originalCtx = ctx;
+        const oW = W;
+        const oH = H;
+
+        ctx = tCtx;
+        W = exportW;
+        H = exportH;
+        // Pin the light palette so a dark-mode visitor still exports a readable poster.
+        palette = {
+            fg: "23,23,21",
+            bgRgb: "250,250,248",
+            ink: "#171715",
+            paper: "#FAFAF8",
+            accent: "#2E4BC6",
+        };
+
+        tCtx.fillStyle = PAPER();
+        tCtx.fillRect(0, 0, W, H);
+
+        const t = performance.now() - (startTime ?? 0);
+        const orbitScale = 1.45;
+        const nodeScale = 1.6;
+
+        drawLegend(1.7);
+        RING_DEFS.forEach((ring) => drawOrbitRing(ring.radius * orbitScale));
+
+        const positions = computePositions(t, orbitScale);
+        positions.forEach((p) =>
+            drawConnection(p.x, p.y, getColor(p.node.language), 0.2),
+        );
+
+        drawOrigin(1.4);
+        positions.forEach((p) => drawNode(p.node, p.x, p.y, false, nodeScale));
+
+        ctx.save();
+        ctx.textAlign = "left";
+        ctx.textBaseline = "alphabetic";
+        ctx.fillStyle = INK();
+        ctx.font = "600 44px Archivo, sans-serif";
+        ctx.fillText("THE CLAWVERSE", 120, 110);
+        ctx.fillStyle = `rgba(${FG()},0.5)`;
+        ctx.font = "500 16px 'IBM Plex Mono', monospace";
+        ctx.fillText("OPENCLAW ECOSYSTEM TRACKER", 120, 140);
+        ctx.textAlign = "right";
+        ctx.fillStyle = ACCENT();
+        ctx.font = "500 20px 'IBM Plex Mono', monospace";
+        ctx.fillText("clawclones.com", W - 120, H - 90);
+        ctx.restore();
+
+        const now = new Date();
+        const timestamp = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}-${String(now.getHours()).padStart(2, "0")}-${String(now.getMinutes()).padStart(2, "0")}`;
+
+        const link = document.createElement("a");
+        link.download = `The-ClawVerse-Map-${timestamp}.png`;
+        link.href = tempCanvas.toDataURL("image/png", 1.0);
+        link.click();
+
+        ctx = originalCtx;
+        W = oW;
+        H = oH;
+        palette = null;
+    });
+
+    document.querySelectorAll(".share-link").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const platform = btn.dataset.platform;
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("The OpenClaw ClawVerse map");
+
+            let shareUrl = "";
+            if (platform === "x")
+                shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+            if (platform === "reddit")
+                shareUrl = `https://www.reddit.com/submit?url=${url}&title=${text}`;
+
+            window.open(shareUrl, "_blank");
+        });
+    });
+</script>

@@ -1,0 +1,49 @@
+name: Weekly Deep Analysis Update
+
+on:
+  schedule:
+    # Futtatás minden vasárnap hajnali 3:00-kor (UTC)
+    - cron: '0 3 * * 0'
+  workflow_dispatch:
+    # Kézzel is indítható
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Deep Analysis Script
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || '~deepseek/deepseek-v4-flash-latest' }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER || 'nvidia' }}
+          NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL || 'z-ai/glm-5.2' }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+        run: npm run update-analysis
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # A jelentés táblázatai build időben számolódnak; itt csak a köré írt
+          # szöveges réteg és a metaadat változik.
+          git add src/data/analysis-narrative.json src/data/analysis-metadata.json
+          
+          # -X theirs biztosítja, hogy ütközés esetén a frissen generált jelentésünk maradjon meg
+          git diff --staged --quiet || (git commit -m "docs: weekly deep analysis report auto-update" && git pull --rebase -X theirs --autostash origin "$GITHUB_REF_NAME" && git push)

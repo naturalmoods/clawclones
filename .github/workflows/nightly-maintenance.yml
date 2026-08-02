@@ -1,0 +1,63 @@
+name: Nightly Maintenance Update
+
+on:
+  schedule:
+    # Futtatás naponta egyszer éjfélkor UTC szerint
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # Kézi indításhoz
+
+jobs:
+  nightly-maintenance:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Fetch Analytics Script
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        run: npm run fetch-analytics
+
+      - name: Run Lightweight GitHub Update
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+        run: npm run update-github
+
+      # After the fresh analytics and star counts: decides which comparison
+      # pages may be indexed. The list is sticky, so it only ever grows for
+      # pairs that still exist.
+      - name: Refresh Indexable Comparisons
+        run: npm run generate-indexable-compares
+
+      - name: Generate Partner Feed
+        run: npm run generate-partner-feed
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+          git add src/data/analytics.json src/data/indexable-compares.json src/content/clones/ src/data/history.json public/api/partner-feed.json
+
+          if git diff --staged --quiet; then
+            exit 0
+          fi
+
+          git commit -m "chore: nightly analytics and github refresh"
+          git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+          git push

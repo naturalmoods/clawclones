@@ -1,0 +1,86 @@
+{
+  "id": "5unnykum4r/grip-ai",
+  "name": "grip-ai",
+  "language": "Python",
+  "vibe_summary": "A Python-native OpenClaw alternative using Claude Agent SDK with LiteLLM failover across 15+ providers. Recently shipped v1.6.1 with mypy-clean CI and 882 passing tests, emphasizing reliability and unified tooling.",
+  "health_status": "healthy",
+  "github_stars": 10,
+  "metrics": {
+    "boot_time_ms": 150,
+    "memory_mb": 80,
+    "security_score": 65
+  },
+  "radar_chart": {
+    "sandboxing": 3,
+    "api_security": 7,
+    "network_isolation": 4,
+    "telemetry_safety": 8,
+    "shell_access_risk": 8
+  },
+  "tags": [
+    "openclaw-alternative",
+    "python",
+    "multi-agent",
+    "self-hosted",
+    "litellm"
+  ],
+  "community_sentiment": 0,
+  "reddit_mentions": 19,
+  "web_mentions": 10,
+  "best_for": [
+    "self-hosters wanting Python-based agent platform",
+    "users needing multi-provider LLM failover",
+    "Telegram/Discord/Slack automation"
+  ],
+  "avoid_if": [
+    "those needing strict sandboxing by default",
+    "users wanting large community support",
+    "projects requiring minimal shell risk"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "cloud",
+    "desktop"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "medium",
+  "privacy_posture": "mixed",
+  "multi_user": null,
+  "plugin_ecosystem": "emerging",
+  "license_type": null,
+  "last_commit_at": "2026-05-28T20:03:58Z",
+  "contributors_count": 2,
+  "open_issues_count": 0,
+  "release_cadence_days": 10,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Python codebase easier to customize for Python devs",
+    "Built-in LiteLLM multi-provider failover",
+    "882 tests and strict mypy typing",
+    "Unified tool surface across engines"
+  ],
+  "openclaw_disadvantages": [
+    "Much smaller community (10 stars vs OpenClaw's large)",
+    "No mobile/voice features like OpenClaw",
+    "Shell access risk higher without default sandbox",
+    "Younger project, less battle-tested"
+  ],
+  "confidence_summary": "Evidence from README and commits shows active Python development as OpenClaw alternative, but Reddit/web mentions are unrelated noise, so community sentiment is uncertain.",
+  "evidence_confidence": 80,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:28:50.153Z",
+    "last_reviewed_at": "2026-07-13T02:28:50.153Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "grip-ai is a self-hostable AI agent platform written in Python, positioned as a lightweight alternative to OpenClaw. It leverages the Claude Agent SDK as its primary engine while providing a LiteLLM fallback for 15+ additional LLM providers, ensuring cross-provider failover and cost tracking. The system exposes 31 built-in tools (file ops, shell, web search, browser automation, document conversion) bridged uniformly into both engines, and supports multi-channel chat via Telegram, Discord, and Slack from a single `grip gateway` process.\n\nRecent development focuses on reliability and code quality: v1.6.0 introduced real LiteLLM router failover, unified tool surfaces, and USD cost tracking; v1.6.1 enforced a mypy-clean tree with CI type-checking across 123 files and 882 passing tests. The onboarding wizard verifies API keys and loads live models, with local provider support for Ollama and LM Studio.\n\nCompared to OpenClaw, grip-ai offers a Python-native, highly typed codebase with explicit multi-model routing, but lacks the broader community, mobile integration, and default sandboxing that OpenClaw provides. Its permission modes mirror the Claude SDK, allowing bypassPermissions which elevates shell access risk if misconfigured.",
+  "latest_release": {
+    "version": "v1.6.1",
+    "date": "2026-05-28T20:05:30Z",
+    "url": "https://github.com/5unnykum4r/grip-ai/releases/tag/v1.6.1"
+  },
+  "last_updated": "2026-08-02T12:53:41.873Z"
+}

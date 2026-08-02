@@ -1,0 +1,64 @@
+---
+import WatchlistGrid from "./WatchlistGrid.astro";
+import { formatSignalDate } from "../lib/content-signals";
+import type { WatchlistRow } from "../lib/clone-format";
+import { PROMOTION_THRESHOLDS } from "../lib/watchlist";
+
+interface Props {
+    rows: WatchlistRow[];
+    lastUpdatedAt?: string;
+}
+
+const { rows, lastUpdatedAt } = Astro.props;
+
+// Read off the same constant the pipeline promotes by, so the stated bar and
+// the enforced bar cannot drift apart.
+const bar = [
+    `★ ${PROMOTION_THRESHOLDS.minStars.toLocaleString("en-US")}`,
+    `${PROMOTION_THRESHOLDS.minSentiment}% pulse`,
+    `${PROMOTION_THRESHOLDS.minAgeDays} days observed`,
+].join(" · ");
+
+const readyCount = rows.filter((row) => row.tag === "candidate").length;
+---
+
+{
+    rows.length > 0 && (
+        <section class="border-t hairline">
+            <div class="mx-auto max-w-7xl px-6 pt-14 pb-8 md:pt-20">
+                <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+                    Radar · {rows.length} waiting · updated {formatSignalDate(lastUpdatedAt)}
+                </p>
+                <h2 class="mt-7 font-semibold text-[34px] md:text-[52px] leading-[1.02] tracking-[-0.02em] max-w-4xl">
+                    {rows.length} in the waiting room.<br />They join the index on their own.
+                </h2>
+                <p class="mt-7 max-w-xl text-[17px] leading-relaxed text-pale-slate-400">
+                    Newly discovered clones that have not cleared the bar yet, plus
+                    previously tracked ones that went quiet for six months. Nothing here
+                    is a judgement — the nightly run moves a project into the index the
+                    moment it qualifies, and the last column says what each one is still
+                    short of.
+                </p>
+                <p class="mt-5 font-mono text-[12px] text-pale-slate-500">
+                    The bar: {bar}
+                    {readyCount > 0 && (
+                        <span class="text-accent dark:text-accent-soft">
+                            {" "}· {readyCount} clearing it on the next run
+                        </span>
+                    )}
+                </p>
+            </div>
+
+            <div class="mx-auto max-w-7xl">
+                <WatchlistGrid watchlistClones={rows} />
+            </div>
+
+            <div class="mx-auto max-w-7xl px-6 pt-6 pb-14 md:pb-20">
+                <p class="font-mono text-[11px] text-pale-slate-400">
+                    A project that went quiet returns as soon as it has a commit again;
+                    the three-part bar only applies to newcomers.
+                </p>
+            </div>
+        </section>
+    )
+}

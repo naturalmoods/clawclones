@@ -1,0 +1,278 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import analyticsData from "../../data/analytics.json";
+import {
+    getCanonicalComparePath,
+    getCompareSlug,
+    matchesCompareSlug,
+} from "../../lib/compare";
+import { formatStars, getDisplayName } from "../../lib/clone-format";
+
+const allClones = await getCollection("clones");
+const sorted = [...allClones].sort(
+    (a, b) => b.data.github_stars - a.data.github_stars,
+);
+
+// Aggregate all VS visits across all dates
+const vsAggregated: Record<string, number> = {};
+
+if (analyticsData) {
+    for (const [_date, entries] of Object.entries(analyticsData)) {
+        for (const [key, value] of Object.entries(entries as any)) {
+            const v = value as any;
+            if (v.type === "vs" && v.visits > 0) {
+                // Normalize the VS key: always put alphabetically first clone first
+                const parts = key.split("-vs-");
+                if (parts.length === 2) {
+                    const decoded = parts.map((p: string) =>
+                        decodeURIComponent(p).toLowerCase(),
+                    );
+                    const normalizedKey = decoded.sort().join("-vs-");
+                    vsAggregated[normalizedKey] =
+                        (vsAggregated[normalizedKey] || 0) + v.visits;
+                }
+            }
+        }
+    }
+}
+
+// Sort by total visits and take top 10
+const top10Vs = Object.entries(vsAggregated)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 10)
+    .map(([key, visits], index) => {
+        const parts = key.split("-vs-");
+        const clone1 = allClones.find((c) => matchesCompareSlug(c, parts[0] || ""));
+        const clone2 = allClones.find((c) => matchesCompareSlug(c, parts[1] || ""));
+
+        return {
+            rank: index + 1,
+            name1: clone1 ? getDisplayName(clone1) : parts[0] || "???",
+            name2: clone2 ? getDisplayName(clone2) : parts[1] || "???",
+            visits,
+            url: getCanonicalComparePath(
+                clone1 || parts[0] || "",
+                clone2 || parts[1] || "",
+            ),
+            lang1: clone1?.data.language || "—",
+            lang2: clone2?.data.language || "—",
+            stars1: clone1?.data.github_stars || 0,
+            stars2: clone2?.data.github_stars || 0,
+        };
+    });
+
+const [featured, ...runnersUp] = top10Vs;
+const totalVsVisits = Object.values(vsAggregated).reduce((a, b) => a + b, 0);
+const possibleBattles = (allClones.length * (allClones.length - 1)) / 2;
+
+// Same column template for every leaderboard row, mirroring the index table.
+const ROW_GRID =
+    "grid-cols-[32px_minmax(0,1fr)_72px] md:grid-cols-[32px_minmax(0,1fr)_200px_72px]";
+---
+
+<Layout
+    title="Compare OpenClaw alternatives head-to-head - ClawClones"
+    description="Pick two OpenClaw alternatives and compare architecture, resource footprint, licensing and security posture side by side."
+>
+    <section class="mx-auto max-w-7xl px-6 pt-20 pb-14 md:pt-28 md:pb-20">
+        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+            Compare · {allClones.length} tracked · {possibleBattles.toLocaleString("en-US")} pairings · {totalVsVisits.toLocaleString("en-US")} visits recorded
+        </p>
+        <h1 class="mt-7 font-semibold text-[40px] md:text-[72px] leading-[1.02] tracking-[-0.02em] max-w-4xl">
+            Pick two.<br />Compare properly.
+        </h1>
+        <p class="mt-7 max-w-xl text-[17px] leading-relaxed text-pale-slate-400">
+            Architecture, resource footprint, licensing and security posture, side by side — from the same nightly data that drives the index.
+        </p>
+
+        <div class="mt-12 border hairline max-w-3xl" id="vs-launcher">
+            <div class="px-6 py-4 border-b hairline">
+                <span class="eyebrow">Quick battle</span>
+            </div>
+            <div class="px-6 py-6 flex flex-col md:flex-row md:items-center gap-4">
+                <label class="sr-only" for="vs-clone1">First clone</label>
+                <select
+                    id="vs-clone1"
+                    class="w-full md:flex-1 bg-transparent border hairline rounded-sm px-3 py-2.5 font-mono text-[13px] text-ink outline-none focus:border-accent cursor-pointer transition-colors duration-150"
+                >
+                    {
+                        sorted.map((c, i) => (
+                            <option value={getCompareSlug(c)} selected={i === 0}>
+                                {getDisplayName(c)} — {formatStars(c.data.github_stars)} stars
+                            </option>
+                        ))
+                    }
+                </select>
+
+                <span class="shrink-0 font-mono text-[11px] uppercase tracking-[0.18em] text-pale-slate-400 text-center">
+                    vs
+                </span>
+
+                <label class="sr-only" for="vs-clone2">Second clone</label>
+                <select
+                    id="vs-clone2"
+                    class="w-full md:flex-1 bg-transparent border hairline rounded-sm px-3 py-2.5 font-mono text-[13px] text-ink outline-none focus:border-accent cursor-pointer transition-colors duration-150"
+                >
+                    {
+                        sorted.map((c, i) => (
+                            <option value={getCompareSlug(c)} selected={i === 1}>
+                                {getDisplayName(c)} — {formatStars(c.data.github_stars)} stars
+                            </option>
+                        ))
+                    }
+                </select>
+            </div>
+            <div class="px-6 pb-6">
+                <button id="vs-start-btn" type="button" class="btn-primary w-full md:w-auto">
+                    Compare →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    {
+        top10Vs.length > 0 && (
+            <section class="border-t hairline">
+                <div class="mx-auto max-w-7xl px-6 pt-14 pb-8 md:pt-20">
+                    <h2 class="eyebrow">Most visited</h2>
+                    <h3 class="mt-3 font-semibold text-[28px] md:text-[36px] tracking-[-0.01em]">
+                        Top {top10Vs.length} matchups
+                    </h3>
+                    <p class="mt-3 max-w-xl text-[15px] leading-relaxed text-pale-slate-400">
+                        Ranked by recorded visits across the ClawVerse.
+                    </p>
+                </div>
+
+                {featured && (
+                    <div class="mx-auto max-w-7xl px-6 pb-8">
+                        <a
+                            href={featured.url}
+                            class="group block border hairline bg-accent/[0.04] dark:bg-accent-soft/[0.05] hover:border-accent/40 dark:hover:border-accent-soft/40 transition-colors duration-150 px-6 py-8 md:px-10 md:py-12"
+                        >
+                            <div class="flex items-center justify-between gap-4">
+                                <span class="eyebrow text-accent dark:text-accent-soft">Most popular</span>
+                                <span class="font-mono text-[11px] tabular-nums text-pale-slate-500">
+                                    {featured.visits.toLocaleString("en-US")} visits
+                                </span>
+                            </div>
+                            <div class="mt-8 flex flex-wrap items-baseline gap-x-5 gap-y-2">
+                                <span class="font-semibold text-[32px] md:text-[52px] leading-none tracking-[-0.02em]">
+                                    {featured.name1}
+                                </span>
+                                <span class="font-mono text-[13px] uppercase tracking-[0.18em] text-pale-slate-400">
+                                    vs
+                                </span>
+                                <span class="font-semibold text-[32px] md:text-[52px] leading-none tracking-[-0.02em]">
+                                    {featured.name2}
+                                </span>
+                            </div>
+                            <div class="mt-6 flex flex-wrap items-center gap-x-8 gap-y-2 font-mono text-[11px] text-pale-slate-500">
+                                <span>{featured.lang1} · {formatStars(featured.stars1)} stars</span>
+                                <span>{featured.lang2} · {formatStars(featured.stars2)} stars</span>
+                                <span class="text-accent dark:text-accent-soft">View comparison →</span>
+                            </div>
+                        </a>
+                    </div>
+                )}
+
+                {runnersUp.length > 0 && (
+                    <div class="mx-auto max-w-7xl">
+                        <div
+                            class={`grid ${ROW_GRID} gap-x-4 px-6 py-2.5 border-y hairline font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400 select-none`}
+                        >
+                            <div>#</div>
+                            <div>Matchup</div>
+                            <div class="hidden md:block">Stack</div>
+                            <div class="text-right">Visits</div>
+                        </div>
+                        {runnersUp.map((vs) => (
+                            <a
+                                href={vs.url}
+                                class={`group grid ${ROW_GRID} gap-x-4 items-center px-6 py-[15px] border-b hairline hover:bg-black/[0.02] dark:hover:bg-white/[0.03] transition-colors duration-150`}
+                            >
+                                <div class="font-mono text-[13px] tabular-nums text-pale-slate-400">
+                                    {vs.rank}
+                                </div>
+                                <div class="min-w-0 truncate text-[15px] tracking-[-0.01em]">
+                                    <span class="font-medium group-hover:text-accent dark:group-hover:text-accent-soft transition-colors duration-150">
+                                        {vs.name1}
+                                    </span>
+                                    <span class="mx-2 font-mono text-[11px] text-pale-slate-400">vs</span>
+                                    <span class="font-medium group-hover:text-accent dark:group-hover:text-accent-soft transition-colors duration-150">
+                                        {vs.name2}
+                                    </span>
+                                </div>
+                                <div class="hidden md:block font-mono text-[11px] text-pale-slate-500 truncate">
+                                    {vs.lang1} / {vs.lang2}
+                                </div>
+                                <div class="font-mono text-[13px] text-right tabular-nums text-pale-slate-700 dark:text-pale-slate-300">
+                                    {vs.visits.toLocaleString("en-US")}
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                )}
+
+                <div class="mx-auto max-w-7xl px-6 pt-6 pb-14 md:pb-20">
+                    <p class="font-mono text-[11px] text-pale-slate-400">
+                        {allClones.length} clones make {possibleBattles.toLocaleString("en-US")} possible pairings — use the quick battle launcher above for any of them.
+                    </p>
+                </div>
+            </section>
+        )
+    }
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+            <h2 class="eyebrow">All contenders</h2>
+            <p class="mt-3 max-w-xl text-[15px] leading-relaxed text-pale-slate-400">
+                Open a profile, or send any two of them into the launcher above.
+            </p>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line border hairline">
+                {
+                    sorted.map((c) => (
+                        <a
+                            href={`/clones/${c.id}`}
+                            class="group bg-paper px-5 py-4 hover:bg-black/[0.02] dark:hover:bg-white/[0.03] transition-colors duration-150 flex items-baseline justify-between gap-4"
+                        >
+                            <span class="text-[15px] font-medium tracking-[-0.01em] truncate group-hover:text-accent dark:group-hover:text-accent-soft transition-colors duration-150">
+                                {getDisplayName(c)}
+                            </span>
+                            <span class="shrink-0 font-mono text-[11px] tabular-nums text-pale-slate-400">
+                                {formatStars(c.data.github_stars)} · {c.data.language}
+                            </span>
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script is:inline>
+    // Quick Battle launcher
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("vs-start-btn");
+        const sel1 = document.getElementById("vs-clone1");
+        const sel2 = document.getElementById("vs-clone2");
+        if (!btn || !sel1 || !sel2) return;
+
+        btn.addEventListener("click", () => {
+            const c1 = sel1.value;
+            let c2 = sel2.value;
+            if (c1 === c2) {
+                // Fall back to the first option that is not the left-hand pick
+                for (const opt of sel2.querySelectorAll("option")) {
+                    if (opt.value !== c1) {
+                        c2 = opt.value;
+                        break;
+                    }
+                }
+            }
+            // Must match getCanonicalCompareSlugs, which sorts with localeCompare
+            const parts = [c1, c2].sort((a, b) => a.localeCompare(b));
+            window.location.href = `/compare/${parts[0]}-vs-${parts[1]}`;
+        });
+    });
+</script>

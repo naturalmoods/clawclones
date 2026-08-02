@@ -1,0 +1,56 @@
+name: Clone nomination
+description: Suggest an OpenClaw fork or alternative that should be tracked
+title: "Nomination: owner/repo"
+labels: ["nomination"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the pointer. Nominations are reviewed by hand before anything
+        is added, so a sentence about *why* it belongs here matters more than the
+        star count.
+
+        In a hurry and comfortable with a PR? Adding a `{ "repo": "owner/repo", "status": "tracked" }` line to
+        [`projects.json`](../../blob/HEAD/projects.json) is the fastest
+        route — the pipeline generates the profile from there.
+
+  - type: input
+    id: repo-url
+    attributes:
+      label: GitHub repository
+      description: The project you are nominating.
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should it be tracked?
+      description: What makes it worth comparing against the projects already listed?
+      placeholder: |
+        What it does differently, who it suits, anything measurable that stands out.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Relationship to OpenClaw
+      options:
+        - A fork of OpenClaw
+        - An independent implementation of the same idea
+        - A compatible client or runtime
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked the [index](https://clawclones.com/#clones) and it is not tracked yet
+          required: true
+        - label: The repository is public and has a README
+          required: true

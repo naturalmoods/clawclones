@@ -1,0 +1,86 @@
+{
+  "id": "KafClaw/KafClaw",
+  "name": "KafClaw",
+  "language": "Go",
+  "vibe_summary": "Ultra-compact Go agent framework using Kafka for distributed multi-agent swarms. Enterprise-grade coordination with typed message envelopes and zero LLM provider lock-in.",
+  "health_status": "warning",
+  "github_stars": 20,
+  "metrics": {
+    "boot_time_ms": 30,
+    "memory_mb": 15,
+    "security_score": 80
+  },
+  "radar_chart": {
+    "sandboxing": 3,
+    "api_security": 6,
+    "network_isolation": 4,
+    "telemetry_safety": 5,
+    "shell_access_risk": 6
+  },
+  "tags": [
+    "kafka",
+    "multi-agent",
+    "go",
+    "distributed",
+    "enterprise"
+  ],
+  "community_sentiment": 5,
+  "reddit_mentions": 1,
+  "web_mentions": 10,
+  "best_for": [
+    "Enterprise teams needing distributed agent coordination",
+    "Kafka-native infrastructure with existing event pipelines",
+    "Multi-agent swarms without LLM provider lock-in"
+  ],
+  "avoid_if": [
+    "Solo developers wanting a simple personal assistant",
+    "Environments without Kafka available",
+    "Users seeking large community support (low stars)"
+  ],
+  "deployment_target": [
+    "cloud",
+    "self-hosted",
+    "desktop"
+  ],
+  "local_first": false,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "medium",
+  "privacy_posture": "mixed",
+  "multi_user": true,
+  "plugin_ecosystem": "emerging",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-07-28T14:00:20Z",
+  "contributors_count": 5,
+  "open_issues_count": 2,
+  "release_cadence_days": 15,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Native Kafka-backed distributed multi-agent orchestration",
+    "Provider-agnostic agent routing without single-device limits",
+    "Enterprise audit trails and typed message envelopes",
+    "Horizontal scaling via event log infrastructure"
+  ],
+  "openclaw_disadvantages": [
+    "Requires Kafka infrastructure, heavier than single-device OpenClaw",
+    "Minimal community traction (20 stars vs OpenClaw's large ecosystem)",
+    "No personal assistant UX focus; enterprise-oriented",
+    "Limited documented plugins compared to ClawHub"
+  ],
+  "confidence_summary": "Evidence from README and commits shows active maintenance but low community visibility; web mentions are predominantly about OpenClaw, not KafClaw, creating uncertainty about real-world sentiment.",
+  "evidence_confidence": 70,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:12:45.558Z",
+    "last_reviewed_at": "2026-07-13T02:12:45.558Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "KafClaw is an enterprise-grade multi-agent coordination framework written in Go, using Apache Kafka as its messaging backbone. It enables autonomous AI agents to collaborate through a structured topic hierarchy with typed envelopes (`announce`, `request`, `response`, `trace`, `memory`, `audit`), providing built-in observability, correlation tracking, and hierarchical orchestration. Unlike single-device personal assistants, KafClaw is designed for distributed swarms that can run in local, Kafka-connected, or remote gateway modes without coupling to any specific LLM provider.\n\nThe project is part of a broader infrastructure suite (including KafScale and GitClaw) backed by Scalytics, and emphasizes security practices such as CodeQL scanning, dependency hygiene via automated updates, and explicit non-affiliation with crypto tokens. Recent repository activity shows consistent dependency bumps across Go, docs, and Electron components, alongside a v1.0.0 release, indicating maintained but early-stage maturity.\n\nCompared to OpenClaw—a personal AI assistant focused on individual productivity—KafClaw targets organizational workloads requiring scalable, event-driven agent networks. Its strengths lie in enterprise auditability and Kafka-native scaling, while its weaknesses include heavier infrastructure requirements and a nascent community footprint.",
+  "latest_release": {
+    "version": "v1.0.0",
+    "date": "2026-06-17T15:05:13Z",
+    "url": "https://github.com/KafClaw/KafClaw/releases/tag/v1.0.0"
+  },
+  "last_updated": "2026-08-02T12:53:35.854Z"
+}

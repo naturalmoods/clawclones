@@ -1,0 +1,157 @@
+---
+/**
+ * The detail owner for methodology questions. The About page carries the short
+ * version and the measured freshness; anything explained here is not repeated
+ * there.
+ */
+import Layout from "../layouts/Layout.astro";
+import { formatSignalDate } from "../lib/content-signals";
+import { SITE_REPO_URL } from "../lib/site";
+
+/** Bump when the answers below change; see the same constant in about.astro. */
+const LAST_REVIEWED = "2026-08-02";
+
+const faqs: { id?: string; question: string; answer: string }[] = [
+    {
+        // Linked directly from the ecosystem report's security section.
+        id: "radar",
+        question: "How is the security score broken down?",
+        answer: `Every profile carries five 1-10 sub-scores under <strong>Security breakdown</strong>. Four measure <strong>protection</strong>, so higher is safer. The fifth measures <strong>risk</strong>, so higher is worse.
+        <ul>
+            <li><strong>Sandboxing</strong> — isolation from the host OS. 10 is fully virtualised or containerised; 1 is direct local execution.</li>
+            <li><strong>API security</strong> — how external integrations are handled. 10 is scoped, encrypted and multi-user safe; 1 is plaintext keys.</li>
+            <li><strong>Network isolation</strong> — outbound traffic control. 10 is air-gapped or strictly whitelisted; 1 is unrestricted internet access.</li>
+            <li><strong>Telemetry safety</strong> — what the tool reports back. 10 is no telemetry; 1 is extensive logging to external servers.</li>
+            <li><strong>Shell access risk</strong> (higher is riskier) — 10 is raw unmonitored shell access; 1 is no unsupervised execution.</li>
+        </ul>
+        The 0-100 security score shown on profiles and compare pages is separate: it weighs these axes together with the wider evidence we hold.`,
+    },
+    {
+        question: "What is measured, and what is written by AI?",
+        answer: `<strong>Measured:</strong> GitHub metadata, releases, stars, commit history, language and runtime clues — anything directly observable. <strong>AI-written:</strong> clone summaries, "why choose this over OpenClaw" blocks, compare verdicts, tradeoffs and confidence notes, generated from that evidence. <strong>Community:</strong> Reddit and public search coverage, used as supporting evidence. The ecosystem report keeps the same split — its tables are computed, its commentary is labelled.`,
+    },
+    {
+        question: "What does evidence confidence mean?",
+        answer: `How strong the backing evidence looks behind an AI-heavy claim. High usually means multiple direct signals agree. Low often means the repo is young, the docs are thin, or sources conflict. Read low-confidence content as a directional nudge, not a verdict.`,
+    },
+    {
+        question: "Why do some fields say unknown or mixed?",
+        answer: `Because unknown is more honest than filler. If a project does not clearly publish something like deployment posture or privacy behaviour, we show <strong>unknown</strong> or <strong>mixed</strong> rather than polished speculation.`,
+    },
+    {
+        question: "How often does everything refresh?",
+        answer: `Targets: repo data nightly, clone profiles reviewed weekly, compare verdicts checked more aggressively, methodology pages monthly. These are targets, not guarantees — the <a href="/about">About page</a> shows the dates that actually landed, so you can check the gap yourself.`,
+    },
+    {
+        question: "What triggers an update outside the normal cycle?",
+        answer: `Security incidents, major releases, architecture changes, momentum spikes, confidence drops, or a meaningful change in OpenClaw itself. Credible community reports of a factual miss also send a profile back for review.`,
+    },
+    {
+        question: "Which external sources feed the analysis?",
+        answer: `<strong>GitHub</strong> for repository facts, <strong>Reddit</strong> for community discussion, and <strong>public search and news coverage</strong> for wider signals. They are complementary evidence, not a replacement for reading the repo.`,
+    },
+    {
+        question: "Should I trust the compare verdict or the raw metrics?",
+        answer: `The verdict is a shortcut; the metrics are the evidence. If the two disagree, the evidence wins.`,
+    },
+    {
+        question: "Can I suggest a correction or a new clone?",
+        answer: `Yes. For a missing project use the <strong>Add clone</strong> button in the header; for a wrong or stale figure open a <a href="${SITE_REPO_URL}/issues/new?template=data-correction.yml">correction issue</a>. Both land as public GitHub issues, and a link to the source beats a description. We would rather queue a review than leave a misleading claim live.`,
+    },
+];
+
+const faqStructuredData = [{
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer.replace(/<[^>]+>/g, ''),
+        },
+    })),
+}];
+---
+
+<Layout
+    title="FAQ - ClawClones Trust, AI Review & Methodology"
+    description="How ClawClones scores security, splits measured data from AI analysis, refreshes profiles, and handles corrections."
+    structuredData={faqStructuredData}
+>
+    <section class="mx-auto max-w-7xl px-6 pt-20 pb-12 md:pt-28 md:pb-14">
+        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+            Trust &amp; methodology · reviewed {formatSignalDate(LAST_REVIEWED)}
+        </p>
+        <h1 class="mt-7 font-semibold text-[40px] md:text-[72px] leading-[1.02] tracking-[-0.02em] max-w-4xl">
+            How the system works
+        </h1>
+        <p class="mt-7 max-w-xl text-[17px] leading-relaxed text-pale-slate-400">
+            The scoring, the refresh rules, and where the line runs between what we
+            measured and what the model wrote.
+        </p>
+    </section>
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-12 md:py-16">
+            <div class="max-w-3xl border-t hairline">
+                {
+                    faqs.map((faq) => (
+                        <details id={faq.id} class="group border-b hairline scroll-mt-20">
+                            <summary class="flex items-start justify-between gap-6 py-5 cursor-pointer list-none">
+                                <h2 class="text-[16px] md:text-[18px] font-medium tracking-[-0.01em] text-ink dark:text-white group-hover:text-accent dark:group-hover:text-accent-soft transition-colors duration-150">
+                                    {faq.question}
+                                </h2>
+                                <svg
+                                    class="mt-1 shrink-0 text-pale-slate-400 group-open:rotate-180 transition-transform duration-200"
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    aria-hidden="true"
+                                >
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                            </summary>
+                            <div
+                                class="pb-6 pr-6 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400 [&_ul]:mt-3 [&_ul]:space-y-2 [&_li]:list-disc [&_li]:ml-5 [&_strong]:text-ink dark:[&_strong]:text-white [&_strong]:font-medium [&_a]:text-accent dark:[&_a]:text-accent-soft [&_a]:underline [&_a]:underline-offset-4 [&_a]:decoration-accent/30 dark:[&_a]:decoration-accent-soft/30"
+                                set:html={faq.answer}
+                            />
+                        </details>
+                    ))
+                }
+            </div>
+
+            <p class="mt-8 max-w-3xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                Something looks misread or stale?
+                {" "}<a href="mailto:hello@clawclones.com" class="text-accent dark:text-accent-soft underline underline-offset-4 decoration-accent/30 dark:decoration-accent-soft/30 hover:decoration-current transition-colors duration-150">Send the evidence</a>
+                {" "}and we will review it.
+            </p>
+        </div>
+    </section>
+</Layout>
+
+<script is:inline>
+    // A linked answer has to arrive open, otherwise the deep link lands the
+    // reader on a collapsed row with no indication of which one was meant.
+    (function () {
+        function openTarget() {
+            var id = window.location.hash.slice(1);
+            if (!id) return;
+            var target = document.getElementById(id);
+            if (target && target.tagName === "DETAILS") target.open = true;
+        }
+        openTarget();
+        window.addEventListener("hashchange", openTarget);
+    })();
+</script>
+
+<style>
+    details summary::-webkit-details-marker {
+        display: none;
+    }
+</style>

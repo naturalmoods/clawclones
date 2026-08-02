@@ -1,0 +1,135 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WatchlistSection from "../components/WatchlistSection.astro";
+import { formatSignalDate } from "../lib/content-signals";
+import { isCloneActive } from "../lib/activity";
+import { toCloneRow } from "../lib/clone-format";
+import { describePromotionGap, evaluatePromotion } from "../lib/watchlist";
+import { cloneGridCategories, getIntentScore } from "../lib/use-cases";
+
+import ComparisonTable from "../components/ComparisonTable.tsx";
+import SeismographCard from "../components/SeismographCard.astro";
+import { getCollection } from "astro:content";
+
+const now = new Date();
+const clones = await getCollection("clones");
+// No filter needed: a promoted project's watchlist file is deleted when it
+// moves to the clones collection.
+const watchlistClones = await getCollection("watchlist");
+
+const activeClones = clones.filter((clone) => isCloneActive(clone, now));
+const staleClones = clones.filter((clone) => !isCloneActive(clone, now));
+
+const lastUpdatedAt = clones.reduce(
+	(latest: string, clone: any) =>
+		clone.data.last_updated > latest ? clone.data.last_updated : latest,
+	clones[0]?.data.last_updated ?? "",
+);
+
+const comparisonRows = activeClones.map(toCloneRow);
+
+// Intent shortlists are scored here rather than in the table island: the scoring
+// needs the full clone entry (radar sub-scores, narrative text), while the table
+// only ever receives the slim row shape.
+const INTENT_SHORTLIST_SIZE = 8;
+const openClaw = clones.find((clone) => clone.id === "openclaw");
+const intentShortlists = Object.fromEntries(
+	cloneGridCategories
+		.filter((category) => category.id !== "all")
+		.map((category) => [
+			category.id,
+			activeClones
+				.map((clone) => ({
+					id: clone.id,
+					score: getIntentScore(category.id, clone, openClaw),
+				}))
+				.sort((left, right) => right.score - left.score)
+				.slice(0, INTENT_SHORTLIST_SIZE)
+				.map((entry) => entry.id),
+		]),
+);
+
+// The radar list mixes two sources: unverified newcomers that link out to
+// GitHub, and previously tracked clones that went quiet but still have a profile.
+const radarRows = [
+	...watchlistClones.map((clone: any) => ({
+		...toCloneRow(clone),
+		// `candidate` means the entry already clears the promotion thresholds,
+		// which is the one thing worth calling out in this list.
+		tag: (clone.data.promotion_status === "candidate" ? "candidate" : "radar") as
+			| "candidate"
+			| "radar",
+		href: `https://github.com/${clone.data.id}`,
+		linkLabel: "GitHub ↗",
+		external: true,
+		pulse: clone.data.community_sentiment ?? null,
+		since: clone.data.watchlist_added ?? null,
+		sinceLabel: "observed",
+		waitingOn: describePromotionGap(
+			evaluatePromotion(
+				{
+					stars: clone.data.github_stars,
+					sentiment: clone.data.community_sentiment,
+					since: clone.data.watchlist_added,
+				},
+				now,
+			).criteria,
+		),
+	})),
+	...staleClones.map((clone) => ({
+		...toCloneRow(clone),
+		tag: "stale" as const,
+		href: `/clones/${clone.id}`,
+		linkLabel: "Profile →",
+		external: false,
+		pulse: clone.data.community_sentiment ?? null,
+		since: clone.data.last_commit_at ?? null,
+		sinceLabel: "last commit",
+		// A previously tracked clone returns on activity, not on the thresholds.
+		waitingOn: "needs a new commit",
+	})),
+];
+
+const homeStructuredData = [{
+	'@context': 'https://schema.org',
+	'@type': 'ItemList',
+	name: 'OpenClaw alternatives and clones',
+	itemListElement: activeClones.map((clone, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: clone.data.name,
+		url: `https://clawclones.com/clones/${clone.id}`,
+	})),
+}];
+---
+
+<Layout
+	title="OpenClaw alternatives and clones compared - ClawClones"
+	description="Compare OpenClaw alternatives and clones by language, activity, security signals, deployment fit, and community evidence."
+	structuredData={homeStructuredData}
+>
+	<section class="mx-auto max-w-7xl px-6 pt-24 pb-16 md:pt-36 md:pb-24" aria-labelledby="comparison-heading">
+		<p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+			Index · {activeClones.length} tracked · {radarRows.length} on radar · updated {formatSignalDate(lastUpdatedAt)}
+		</p>
+		<h1 id="comparison-heading" class="mt-7 font-semibold text-[52px] md:text-[88px] leading-[0.98] tracking-[-0.02em] max-w-5xl">
+			{activeClones.length} OpenClaw alternatives.<br />Compared properly.
+		</h1>
+		<p class="mt-7 max-w-xl text-[17px] leading-relaxed text-pale-slate-400">
+			Stars, memory footprint and commit activity for every serious clone — refreshed nightly. Narrow by what you need, pick two, compare, decide.
+		</p>
+	</section>
+
+	<section id="clones" class="mx-auto max-w-7xl pb-32 scroll-mt-14">
+		<ComparisonTable
+			client:load
+			clones={comparisonRows}
+			intentCategories={cloneGridCategories}
+			intentShortlists={intentShortlists}
+		/>
+	</section>
+
+	<WatchlistSection rows={radarRows} lastUpdatedAt={lastUpdatedAt} />
+
+	<SeismographCard dataUrl="https://api.openclaw.lu/api/partner/clawclones?site=lu" />
+</Layout>

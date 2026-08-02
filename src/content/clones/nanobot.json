@@ -1,0 +1,84 @@
+{
+  "id": "HKUDS/nanobot",
+  "name": "nanobot",
+  "language": "Python",
+  "vibe_summary": "A ~4,000-line Python rewrite of OpenClaw that strips away bloat while keeping multi-channel agent capabilities. Recent v0.2.2 pushes durability with reliable WebUI sessions and an on-demand skill loader.",
+  "health_status": "healthy",
+  "github_stars": 46511,
+  "metrics": {
+    "boot_time_ms": 5,
+    "memory_mb": 1.8,
+    "security_score": 70
+  },
+  "radar_chart": {
+    "sandboxing": 4,
+    "api_security": 6,
+    "network_isolation": 3,
+    "telemetry_safety": 7,
+    "shell_access_risk": 8
+  },
+  "tags": [
+    "openclaw-alternative",
+    "lightweight-agent",
+    "python",
+    "multi-channel",
+    "local-ai"
+  ],
+  "community_sentiment": 85,
+  "reddit_mentions": 3,
+  "web_mentions": 10,
+  "best_for": [
+    "Developers wanting a minimal OpenClaw-like agent in Python",
+    "Self-hosted multi-channel chatbots with scheduled tasks",
+    "Lightweight tool-use experimentation"
+  ],
+  "avoid_if": [
+    "Users needing enterprise-grade sandboxing",
+    "Those requiring heavy built-in security compliance",
+    "Teams wanting a large plugin ecosystem"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "desktop",
+    "cloud"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "strong",
+  "multi_user": null,
+  "plugin_ecosystem": "emerging",
+  "license_type": "MIT",
+  "last_commit_at": "2026-08-01T14:54:32Z",
+  "contributors_count": 408,
+  "open_issues_count": 775,
+  "release_cadence_days": 15,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Ultra-lightweight Python codebase (~4k lines) easier to audit",
+    "Lower resource footprint (nano-optimized boot/memory)",
+    "Simpler customization for developers familiar with Python"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller community than OpenClaw (45k vs 382k stars)",
+    "Less mature plugin ecosystem",
+    "Fewer built-in channels/integrations than OpenClaw"
+  ],
+  "confidence_summary": "Evidence from README, recent commits, and web search confirms nanobot as a Python OpenClaw alternative with active development; uncertainty remains on enterprise security features due to limited documentation.",
+  "evidence_confidence": 80,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T01:54:14.290Z",
+    "last_reviewed_at": "2026-07-13T01:54:14.290Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "## Overview\n\nNanobot is a lightweight, open-source AI agent developed by HKUDS as a Python rewrite of OpenClaw, weighing in at roughly 4,000 lines of code. It provides tool use, persistent memory, scheduled tasks, and multi-channel support across Telegram, Discord, WhatsApp, and more, while maintaining a minimal footprint suitable for self-hosted or desktop deployment.\n\nRecent development focuses on durability and developer experience, as seen in the v0.2.2 release which improved WebUI session reliability, strengthened the Python SDK, and expanded provider/channel integrations. Commits indicate active refinement of agent runtime context, on-demand skill loading, and workspace access controls, showing a security-conscious evolution.\n\nCompared to OpenClaw, Nanobot trades breadth of built-in features for simplicity and auditability, making it ideal for Python-centric developers who want a lean agent foundation. However, its smaller community and plugin ecosystem mean it lacks the extensive channel support and battle-tested maturity of the original lobster-themed assistant.",
+  "latest_release": {
+    "version": "v0.3.0",
+    "date": "2026-07-25T08:08:47Z",
+    "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0"
+  },
+  "last_updated": "2026-08-02T12:53:27.790Z"
+}

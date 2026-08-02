@@ -1,0 +1,86 @@
+{
+  "id": "nextlevelbuilder/goclaw",
+  "name": "GoClaw",
+  "language": "Go",
+  "vibe_summary": "A production-tested, multi-tenant AI agent gateway rebuilt from OpenClaw in Go, emphasizing safety and native concurrency. Ships as a single binary with PostgreSQL-backed isolation for deploying agent teams at scale.",
+  "health_status": "healthy",
+  "github_stars": 3500,
+  "metrics": {
+    "boot_time_ms": 25,
+    "memory_mb": 18,
+    "security_score": 85
+  },
+  "radar_chart": {
+    "sandboxing": 8,
+    "api_security": 8,
+    "network_isolation": 7,
+    "telemetry_safety": 6,
+    "shell_access_risk": 4
+  },
+  "tags": [
+    "openclaw-clone",
+    "go",
+    "multi-tenant",
+    "ai-agent",
+    "gateway"
+  ],
+  "community_sentiment": 55,
+  "reddit_mentions": 0,
+  "web_mentions": 10,
+  "best_for": [
+    "Teams needing multi-tenant AI agent deployment",
+    "Organizations wanting OpenClaw features with Go performance",
+    "Self-hosted scalable agent gateways"
+  ],
+  "avoid_if": [
+    "Solo users wanting a simple local assistant",
+    "Projects requiring permissive open-source license (CC BY-NC is non-commercial)",
+    "Those avoiding PostgreSQL dependency"
+  ],
+  "deployment_target": [
+    "cloud",
+    "self-hosted",
+    "desktop"
+  ],
+  "local_first": false,
+  "cloud_dependency": "required",
+  "setup_difficulty": "medium",
+  "privacy_posture": "mixed",
+  "multi_user": true,
+  "plugin_ecosystem": "emerging",
+  "license_type": "NOASSERTION",
+  "last_commit_at": "2026-08-02T06:59:22Z",
+  "contributors_count": 99,
+  "open_issues_count": 300,
+  "release_cadence_days": 0,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Compiled Go binary offers lower memory and faster boot than Node/TS OpenClaw",
+    "Built-in multi-tenant isolation for team deployments",
+    "Explicit 5-layer security model for safer agent execution",
+    "Native concurrency handles many agents simultaneously"
+  ],
+  "openclaw_disadvantages": [
+    "Non-commercial CC BY-NC license limits enterprise adoption",
+    "Requires PostgreSQL, adding infrastructure overhead vs local-first OpenClaw",
+    "Smaller community (no Reddit mentions) vs OpenClaw's established ecosystem",
+    "Less focus on personal/local assistant use cases"
+  ],
+  "confidence_summary": "Evidence from README and recent commits shows active development and clear OpenClaw lineage, but limited external sentiment (0 Reddit, sparse web) reduces confidence in community traction.",
+  "evidence_confidence": 75,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:48:09.613Z",
+    "last_reviewed_at": "2026-07-13T02:48:09.613Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "GoClaw is a multi-tenant AI agent platform that reimplements the OpenClaw assistant gateway in Go. It provides a single-binary, production-tested service connecting to 20+ LLM providers across 7 communication channels (including Telegram, WhatsApp, Discord, Bitrix24), with multi-tenant PostgreSQL backing for isolation. Recent commits show active maintenance, with fixes for channel webhooks, i18n expansions (Russian, etc.), and memory search improvements.\n\nArchitecturally, GoClaw emphasizes safety via a claimed 5-layer security model and native concurrency for scaling agent teams. Unlike the original OpenClaw which is local-first and personal, GoClaw targets organizational deployments requiring tenant isolation and centralized management. It includes OpenTelemetry instrumentation, Docker deployment, and a web/desktop UI with extensive localization.\n\nCompared to OpenClaw, GoClaw trades local-first simplicity for multi-tenant scalability and Go performance, but adopts a non-commercial CC BY-NC 4.0 license and depends on external PostgreSQL and LLM APIs. Its plugin/skill ecosystem is emerging, mirroring OpenClaw's channels but with less community footprint so far.",
+  "latest_release": {
+    "version": "v3.14.0",
+    "date": "2026-06-15T08:59:44Z",
+    "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
+  },
+  "last_updated": "2026-08-02T12:53:49.217Z"
+}

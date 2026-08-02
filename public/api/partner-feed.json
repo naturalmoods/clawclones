@@ -1,0 +1,72 @@
+{
+  "brand": {
+    "name": "ClawClones Ecosystem Tracker",
+    "url": "https://clawclones.com",
+    "description": "Discover, compare and track the open-source OpenClaw AI ecosystem."
+  },
+  "ecosystem": {
+    "total_clones": 42,
+    "total_stars": 929540,
+    "total_stars_formatted": "929.5k",
+    "most_active_language": "Rust",
+    "language_breakdown": {
+      "TypeScript": 10,
+      "Kotlin": 1,
+      "Python": 10,
+      "Go": 4,
+      "Shell": 1,
+      "Rust": 11,
+      "C": 2,
+      "JSON": 1,
+      "Zig": 1,
+      "JavaScript": 1
+    },
+    "avg_sentiment": 38,
+    "top_clone": {
+      "name": "OpenClaw",
+      "stars": 384899,
+      "language": "TypeScript",
+      "url": "https://clawclones.com/clones/openclaw/openclaw"
+    }
+  },
+  "trending": {
+    "name": "CoPaw",
+    "stars": 32088,
+    "stars_growth_7d": 4605,
+    "language": "Python",
+    "sentiment": 50,
+    "vibe_summary": "A personal AI assistant focused on easy local/cloud deployment with extensible chat app integrations, recently rebranded to QwenPaw 2.0 with memory and tool enhancements. It aims to be a user-friendly OpenClaw alternative with strong multi-platform chat support.",
+    "health": "healthy",
+    "latest_version": "v2.0.1",
+    "url": "https://clawclones.com/clones/agentscope-ai/CoPaw"
+  },
+  "hot_vs": {
+    "clone_a": "GoClaw",
+    "clone_b": "OpenClaw",
+    "visits": 7,
+    "url": "https://clawclones.com/compare/goclaw-vs-openclaw"
+  },
+  "updated_at": "2026-08-02T23:59:59.999Z",
+  "generated_at": "2026-08-02T12:53:50.945Z",
+  "freshness": {
+    "updated_at": "2026-08-02T23:59:59.999Z",
+    "generated_at": "2026-08-02T12:53:50.945Z",
+    "source_age_hours": 0,
+    "stale_threshold_hours": 336,
+    "is_stale": false,
+    "sources": {
+      "clones": {
+        "updated_at": "2026-08-02T12:53:50.522Z",
+        "age_hours": 0
+      },
+      "history": {
+        "updated_at": "2026-08-02T23:59:59.999Z",
+        "age_hours": 0
+      },
+      "analytics": {
+        "updated_at": "2026-08-02T23:59:59.999Z",
+        "age_hours": 0
+      }
+    }
+  }
+}

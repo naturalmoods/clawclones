@@ -1,0 +1,135 @@
+---
+/**
+ * Segments the tracked clones along the four axes people actually decide on.
+ *
+ * Membership is derived from the clone data, never hand-listed: the previous
+ * version named specific repos and silently rendered empty cards once those
+ * repos left the collection. Each segment links to the matching index filter
+ * so the visitor lands on the same shortlist with the full table around it.
+ */
+import { getCollection } from "astro:content";
+import { formatStars, getDisplayName } from "../lib/clone-format";
+import { isCloneActive } from "../lib/activity";
+
+const clones = (await getCollection("clones")).filter((clone) =>
+    isCloneActive(clone, new Date()),
+);
+
+type Segment = {
+    label: string;
+    rule: string;
+    description: string;
+    intent: string;
+    matches: (clone: (typeof clones)[number]) => boolean;
+    metric: (clone: (typeof clones)[number]) => string;
+};
+
+const segments: Segment[] = [
+    {
+        label: "Ultralight",
+        rule: "Memory ≤ 5 MB",
+        description:
+            "Small enough for a tiny VPS, an ARM board, or an always-on background process.",
+        intent: "edge",
+        matches: (clone) => clone.data.metrics.memory_mb <= 5,
+        metric: (clone) => `${clone.data.metrics.memory_mb} MB`,
+    },
+    {
+        label: "Hardened",
+        rule: "Security ≥ 85 and shell risk ≤ 4",
+        description:
+            "Stronger containment with less unsupervised command execution than the field.",
+        intent: "secure",
+        matches: (clone) =>
+            clone.data.metrics.security_score >= 85 &&
+            clone.data.radar_chart.shell_access_risk <= 4,
+        metric: (clone) => `${clone.data.metrics.security_score} / 100`,
+    },
+    {
+        label: "Team-ready",
+        rule: "Multi-user support declared",
+        description:
+            "Built for shared workspaces and channels rather than a single operator.",
+        intent: "teams",
+        matches: (clone) => clone.data.multi_user === true,
+        metric: (clone) => clone.data.language,
+    },
+    {
+        label: "Local-first",
+        rule: "Local-first with no required cloud",
+        description:
+            "The core loop is designed to run without handing data to a hosted service.",
+        intent: "local",
+        matches: (clone) =>
+            clone.data.local_first === true &&
+            clone.data.cloud_dependency !== "required",
+        metric: (clone) => `${clone.data.radar_chart.telemetry_safety} / 10 telemetry`,
+    },
+];
+
+const resolved = segments
+    .map((segment) => {
+        const members = clones
+            .filter(segment.matches)
+            .sort((left, right) => right.data.github_stars - left.data.github_stars);
+        return { ...segment, members, top: members.slice(0, 3) };
+    })
+    .filter((segment) => segment.members.length > 0);
+---
+
+<section class="border-t hairline">
+    <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+        <h2 class="eyebrow">Segments</h2>
+        <h3 class="mt-3 font-semibold text-[28px] md:text-[36px] tracking-[-0.01em] max-w-2xl">
+            The ecosystem, cut along the four axes people decide on.
+        </h3>
+        <p class="mt-3 max-w-xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+            Membership is computed from the tracked data, so these lists move as the
+            projects do. Open a segment to rank it inside the full index.
+        </p>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-px bg-line border hairline">
+            {
+                resolved.map((segment) => (
+                    <div class="bg-paper px-6 py-6 flex flex-col">
+                        <div class="flex items-baseline justify-between gap-4">
+                            <span class="eyebrow">{segment.label}</span>
+                            <span class="font-mono text-[11px] tabular-nums text-pale-slate-400">
+                                {segment.members.length} of {clones.length}
+                            </span>
+                        </div>
+                        <p class="mt-3 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                            {segment.description}
+                        </p>
+                        <p class="mt-2 font-mono text-[11px] text-pale-slate-400">
+                            Rule: {segment.rule}
+                        </p>
+
+                        <div class="mt-5 border-t hairline">
+                            {segment.top.map((clone) => (
+                                <a
+                                    href={`/clones/${clone.id}`}
+                                    class="group flex items-baseline justify-between gap-4 py-2.5 border-b hairline hover:text-accent dark:hover:text-accent-soft transition-colors duration-150"
+                                >
+                                    <span class="text-[15px] font-medium tracking-[-0.01em] truncate">
+                                        {getDisplayName(clone)}
+                                    </span>
+                                    <span class="shrink-0 font-mono text-[11px] tabular-nums text-pale-slate-400">
+                                        {segment.metric(clone)} · {formatStars(clone.data.github_stars)}
+                                    </span>
+                                </a>
+                            ))}
+                        </div>
+
+                        <a
+                            href={`/?intent=${segment.intent}#clones`}
+                            class="mt-5 inline-flex items-center gap-2 font-mono text-[12px] text-pale-slate-500 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                        >
+                            Rank this segment in the index →
+                        </a>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

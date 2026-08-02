@@ -1,0 +1,86 @@
+{
+  "id": "qhkm/zeptoclaw",
+  "name": "ZeptoClaw",
+  "language": "Rust",
+  "vibe_summary": "ZeptoClaw packs OpenClaw-style integrations, NanoClaw-style container isolation, and NemoClaw-style guardrails into a single 6MB Rust binary. It's the minimalist, local-first AI agent infra that boots in 50ms and runs on edge hardware without bloat.",
+  "health_status": "healthy",
+  "github_stars": 645,
+  "metrics": {
+    "boot_time_ms": 50,
+    "memory_mb": 6,
+    "security_score": 88
+  },
+  "radar_chart": {
+    "sandboxing": 9,
+    "api_security": 8,
+    "network_isolation": 7,
+    "telemetry_safety": 8,
+    "shell_access_risk": 3
+  },
+  "tags": [
+    "rust",
+    "local-first",
+    "edge",
+    "sandbox",
+    "ai-agent"
+  ],
+  "community_sentiment": 40,
+  "reddit_mentions": 0,
+  "web_mentions": 10,
+  "best_for": [
+    "Edge AI deployments on low-power hardware",
+    "Privacy-focused local assistant without cloud dependency",
+    "Developers wanting a single binary agent infra"
+  ],
+  "avoid_if": [
+    "Teams needing large plugin ecosystem like OpenClaw",
+    "Users uncomfortable with Rust tooling/compilation",
+    "Those requiring heavy enterprise support"
+  ],
+  "deployment_target": [
+    "edge",
+    "desktop",
+    "self-hosted",
+    "cloud"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "strong",
+  "multi_user": null,
+  "plugin_ecosystem": "emerging",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-07-24T17:49:50Z",
+  "contributors_count": 16,
+  "open_issues_count": 46,
+  "release_cadence_days": 3,
+  "operational_risk": "low",
+  "openclaw_advantages": [
+    "6MB binary vs OpenClaw's larger TS app footprint",
+    "50ms boot time and 6MB RAM for edge efficiency",
+    "Rust memory safety and built-in container isolation",
+    "Strict CI binary-size gate prevents bloat"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller plugin/skills ecosystem than OpenClaw",
+    "Less community traction (643 stars vs OpenClaw's larger)",
+    "Younger project (v0.9.2) with less battle-testing"
+  ],
+  "confidence_summary": "Evidence from README and recent commits shows active development and clear positioning against OpenClaw; however direct community feedback is absent (0 Reddit, web search indirect). Confidence moderate due to lack of user sentiment data.",
+  "evidence_confidence": 80,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:40:36.072Z",
+    "last_reviewed_at": "2026-07-13T02:40:36.072Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "ZeptoClaw is a single Rust binary personal AI assistant infrastructure that consolidates tools, memory, channels, providers, and sandboxed autonomy. It explicitly draws from OpenClaw's integration breadth, NanoClaw's container isolation, NemoClaw's policy-gated guardrails, and PicoClaw's edge efficiency, but implements them in Rust with a ~6MB stripped binary, ~50ms startup, and ~6MB RAM footprint.\n\nCore architecture includes built-in provider abstraction with 18 LLM providers, long-term memory storage, channel messaging, and container-based sandboxing for shell and tool execution. Recent commits show strict engineering discipline: a CI binary-size gate at 7.5MB, dependency audits via cargo-deny, and bug fixes preventing unconfigured provider fallback. The project is local-first, with optional cloud LLM providers, and targets edge, desktop, and VPS deployments.\n\nCompared to OpenClaw, ZeptoClaw trades a massive plugin ecosystem for minimal footprint and Rust's safety guarantees, making it ideal for resource-constrained or privacy-sensitive environments. However, its youth (v0.9.2) and smaller community mean fewer ready-made skills.",
+  "latest_release": {
+    "version": "v0.9.2",
+    "date": "2026-04-07T15:45:01Z",
+    "url": "https://github.com/qhkm/zeptoclaw/releases/tag/v0.9.2"
+  },
+  "last_updated": "2026-08-02T12:53:46.477Z"
+}

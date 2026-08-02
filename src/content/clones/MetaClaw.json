@@ -1,0 +1,85 @@
+{
+  "id": "aiming-lab/MetaClaw",
+  "name": "MetaClaw",
+  "language": "Python",
+  "vibe_summary": "MetaClaw adds continuous meta-learning and skill evolution to the OpenClaw lobster, letting agents improve from every chat without a GPU cluster. Recent v0.4.1 brings incremental memory ingestion and cross-session context persistence for always-on adaptation.",
+  "health_status": "healthy",
+  "github_stars": 3504,
+  "metrics": {
+    "boot_time_ms": 150,
+    "memory_mb": 80,
+    "security_score": 50
+  },
+  "radar_chart": {
+    "sandboxing": 3,
+    "api_security": 4,
+    "network_isolation": 3,
+    "telemetry_safety": 5,
+    "shell_access_risk": 8
+  },
+  "tags": [
+    "meta-learning",
+    "openclaw",
+    "agent-evolution",
+    "memory",
+    "rl"
+  ],
+  "community_sentiment": 35,
+  "reddit_mentions": 16,
+  "web_mentions": 10,
+  "best_for": [
+    "Users wanting agents that improve from conversations without GPU clusters",
+    "OpenClaw users seeking persistent cross-session memory and skill evolution",
+    "Self-hosted meta-learning experimentation"
+  ],
+  "avoid_if": [
+    "Teams needing strict sandboxing and low shell risk",
+    "Environments requiring verified enterprise security posture",
+    "Users wanting minimal resource usage (Python overhead)"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "desktop",
+    "cloud"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "mixed",
+  "multi_user": true,
+  "plugin_ecosystem": "emerging",
+  "license_type": "MIT",
+  "last_commit_at": "2026-06-07T04:53:29Z",
+  "contributors_count": 21,
+  "open_issues_count": 17,
+  "release_cadence_days": 5,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Continuous meta-learning from conversations without explicit retraining",
+    "Cross-session memory persistence and incremental ingestion",
+    "Built-in RL and skill evolution modes",
+    "Multi-Claw routing and per-agent isolation"
+  ],
+  "openclaw_disadvantages": [
+    "Higher resource usage as Python-based vs optimized Rust/Go cores",
+    "Less mature ecosystem and smaller community than OpenClaw",
+    "Potential shell access risk from spawn capabilities"
+  ],
+  "confidence_summary": "Evidence from README and recent commits shows active development and OpenClaw integration, but Reddit/Web mentions are largely unrelated, causing uncertainty in community sentiment. Core architecture inferred from docs and commit logs.",
+  "evidence_confidence": 75,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:49:38.193Z",
+    "last_reviewed_at": "2026-07-13T02:49:38.193Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "MetaClaw is an OpenClaw-compatible AI agent framework written in Python that focuses on continuous meta-learning and evolution. Inspired by how brains learn, it enables agents to accumulate skills and memories from every conversation without requiring a GPU cluster, using asynchronous processing and a one-click deploy model.\n\nThe architecture includes a memory layer with cross-session persistence and incremental per-turn ingestion (v0.4.1), reducing mid-session blackout windows. It supports multiple modes: skills-only, RL training (with scheduled or immediate), and auto mode combining both. Recent commits show active maintenance with cross-platform Windows fixes, benchmark data corrections, and configuration improvements.\n\nCompared to base OpenClaw, MetaClaw adds explicit meta-learning loops, a contexture memory layer, and multi-claw routing, but inherits Python's heavier runtime footprint and potentially broader shell access via spawn commands. It is licensed MIT and targets self-hosted, desktop, and cloud deployments.",
+  "latest_release": {
+    "version": "v0.4.1",
+    "date": "2026-04-11T20:04:14Z",
+    "url": "https://github.com/aiming-lab/MetaClaw/releases/tag/v0.4.1"
+  },
+  "last_updated": "2026-08-02T12:53:49.727Z"
+}

@@ -1,0 +1,44 @@
+name: Frequent GitHub Update (Stars and Releases)
+
+on:
+  schedule:
+    # Futtatás naponta egyszer délben UTC szerint
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+    # Kézi indításhoz
+
+jobs:
+  update-github-only:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Lightweight GitHub Update
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+        run: npm run update-github
+
+      - name: Generate Partner Feed
+        run: npm run generate-partner-feed
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          git add src/content/clones/ src/data/history.json public/api/partner-feed.json
+          
+          git diff --staged --quiet || (git commit -m "chore: frequent update of stars and latest versions" && git pull --rebase --autostash origin "$GITHUB_REF_NAME" && git push)

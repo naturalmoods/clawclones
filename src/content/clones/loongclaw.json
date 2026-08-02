@@ -1,0 +1,81 @@
+{
+  "id": "loongclaw-ai/loongclaw",
+  "name": "LoongClaw",
+  "language": "Rust",
+  "vibe_summary": "A Rust-native agent base for building vertical AI agents with a secure, observable, and extensible core. Recent commits show active refactoring and OpenTelemetry integration for closed-loop workflow improvement.",
+  "health_status": "healthy",
+  "github_stars": 639,
+  "metrics": {
+    "boot_time_ms": 30,
+    "memory_mb": 15,
+    "security_score": 75
+  },
+  "radar_chart": {
+    "sandboxing": 7,
+    "api_security": 7,
+    "network_isolation": 5,
+    "telemetry_safety": 8,
+    "shell_access_risk": 6
+  },
+  "tags": [
+    "rust",
+    "ai-agent",
+    "framework",
+    "extensible",
+    "vertical-agents"
+  ],
+  "community_sentiment": 15,
+  "reddit_mentions": 0,
+  "web_mentions": 10,
+  "best_for": [
+    "developers building vertical AI agents",
+    "rust enthusiasts wanting extensible agent base",
+    "teams needing observable agent workflows"
+  ],
+  "avoid_if": [
+    "users wanting turnkey personal assistant like OpenClaw",
+    "non-rust developers",
+    "those needing mature plugin ecosystem"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "cloud",
+    "edge"
+  ],
+  "local_first": true,
+  "cloud_dependency": "required",
+  "setup_difficulty": "medium",
+  "privacy_posture": "mixed",
+  "multi_user": null,
+  "plugin_ecosystem": "emerging",
+  "license_type": "MIT",
+  "last_commit_at": "2026-07-07T02:32:09Z",
+  "contributors_count": 36,
+  "open_issues_count": 44,
+  "release_cadence_days": 17,
+  "operational_risk": "low",
+  "openclaw_advantages": [
+    "Rust-based low overhead and memory safety",
+    "Designed for vertical agent workflows with closed-loop improvement",
+    "Built-in OpenTelemetry observability with feature flags",
+    "Secure controlled base for longer-horizon tasks"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller community and no official release yet",
+    "No turnkey personal assistant UX like OpenClaw",
+    "Less documented plugin registry compared to OpenClaw's ClawHub",
+    "Requires Rust toolchain to build"
+  ],
+  "confidence_summary": "Evidence from README and commits shows active Rust development but limited external sentiment; web search returned unrelated OpenClaw results, creating uncertainty about community traction.",
+  "evidence_confidence": 70,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:51:18.421Z",
+    "last_reviewed_at": "2026-07-13T02:51:18.421Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "LoongClaw (Loong) is a lightweight, Rust-based infrastructure for building vertical AI agents. It emphasizes a secure and controlled base that supports longer-horizon workflow construction, compound task execution, and closed-loop improvement, enabling human-AI collaboration in real-world scenarios.\n\nThe project is actively developed, with recent commits refactoring the tools module layout and introducing an observability-otel feature that gates OpenTelemetry behind a flag with no-op stubs when disabled. This allows developers to capture telemetry content in a feature-aware manner while keeping the core lean.\n\nUnlike OpenClaw, which appears as a turnkey personal AI assistant (likely TypeScript/Node based), LoongClaw targets developers who want to customize and extend agent behavior from a Rust foundation. Its MIT license and extensible architecture make it suitable for embedding into specialized vertical solutions, though it lacks a mature plugin ecosystem and official release.",
+  "last_updated": "2026-08-02T12:53:50.522Z"
+}

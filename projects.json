@@ -1,0 +1,324 @@
+[
+  {
+    "repo": "5unnykum4r/grip-ai",
+    "status": "tracked"
+  },
+  {
+    "repo": "agent0ai/agent-zero",
+    "status": "tracked"
+  },
+  {
+    "repo": "agentscope-ai/CoPaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "aiming-lab/MetaClaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "AstrBotDevs/AstrBot",
+    "status": "tracked"
+  },
+  {
+    "repo": "EthereumPhone/AndyClaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "HKUDS/nanobot",
+    "status": "tracked"
+  },
+  {
+    "repo": "iOfficeAI/AionUi",
+    "status": "tracked"
+  },
+  {
+    "repo": "KafClaw/KafClaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "letta-ai/lettabot",
+    "status": "tracked"
+  },
+  {
+    "repo": "loongclaw-ai/loongclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "louisho5/picobot",
+    "status": "tracked"
+  },
+  {
+    "repo": "memovai/mimiclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "microclaw/microclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "moltis-org/moltis",
+    "status": "tracked"
+  },
+  {
+    "repo": "nearai/ironclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "netease-youdao/LobsterAI",
+    "status": "tracked"
+  },
+  {
+    "repo": "NevaMind-AI/memUBot",
+    "status": "tracked"
+  },
+  {
+    "repo": "nextlevelbuilder/goclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "NousResearch/hermes-agent",
+    "status": "tracked"
+  },
+  {
+    "repo": "nullclaw/nullclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "open-gitagent/gitclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "openclaw/openclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "openconstruct/freeclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "PhantomReaper2025/titanclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "poco-ai/poco-agent",
+    "status": "tracked"
+  },
+  {
+    "repo": "princezuda/safeclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "puremachinery/carapace",
+    "status": "tracked"
+  },
+  {
+    "repo": "qhkm/zeptoclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "qwibitai/nanoclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "razzant/ouroboros",
+    "status": "tracked"
+  },
+  {
+    "repo": "RightNow-AI/openfang",
+    "status": "tracked"
+  },
+  {
+    "repo": "shabbirun/n8nclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "sipeed/picoclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "spacedriveapp/spacebot",
+    "status": "tracked"
+  },
+  {
+    "repo": "stephengpope/thepopebot",
+    "status": "tracked"
+  },
+  {
+    "repo": "TinyAGI/tinyclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "tnm/zclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "unitedbyai/droidclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "uraimo/bashobot",
+    "status": "tracked"
+  },
+  {
+    "repo": "XposeMarket/SmallClaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "zeroclaw-labs/zeroclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "zofrasca/lightclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "Abdur-rahmaanJ/angel-claw",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "Array-Ventures/coworker",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "aspasskiy/GoGogot",
+    "status": "watching",
+    "since": "2026-03-06T05:16:19.598Z"
+  },
+  {
+    "repo": "beidald/liliumai",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "bkataru/zeptoclaw",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "brendanhogan/hermitclaw",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "crystal-autobot/autobot",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "czl9707/pickle-bot",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "DioCrafts/OxiBot",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "hivementality-ai/hivemind",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "jetpax/pycoclaw",
+    "status": "watching",
+    "since": "2026-03-13T00:10:01.123Z"
+  },
+  {
+    "repo": "jmlago/subzeroclaw",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "Kxrbx/Clawlet",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "langoai/lango",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "m0at/hermes-lite",
+    "status": "watching",
+    "since": "2026-03-19T06:19:42.490Z"
+  },
+  {
+    "repo": "Masmedeam/shrew",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "MEKXH/golem",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "meso4444/chat-agent-matrix",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "Miosa-osa/OSA",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "moxxy-ai/moxxy",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "Nocetic/flowlyai",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "openlegion-ai/openlegion",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.058Z"
+  },
+  {
+    "repo": "oujingzhou/openmozi",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "SawyerHood/gitclaw",
+    "status": "watching",
+    "since": "2026-03-20T06:16:25.130Z"
+  },
+  {
+    "repo": "SimonSchubert/Kai",
+    "status": "watching",
+    "since": "2026-03-06T05:16:19.597Z"
+  },
+  {
+    "repo": "tinyfatco/troublemaker",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "tsingliuwin/autoclaw",
+    "status": "watching",
+    "since": "2026-03-12T19:50:19.124Z"
+  },
+  {
+    "repo": "vincenzodomina/supaclaw",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  },
+  {
+    "repo": "waynesutton/clawsync",
+    "status": "watching",
+    "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "yogesharc/babyclaw",
+    "status": "watching",
+    "since": "2026-03-05T04:46:03.370Z"
+  }
+]

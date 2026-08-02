@@ -1,0 +1,79 @@
+{
+  "id": "NevaMind-AI/memUBot",
+  "name": "memUBot",
+  "language": "TypeScript",
+  "vibe_summary": "memUBot positions itself as the enterprise-grade OpenClaw, adding a persistent memory layer and proactive execution for team-scale deployments. Its current vibe emphasizes security-by-design, local-first data, and cost-efficient token usage via intelligent caching.",
+  "health_status": "healthy",
+  "github_stars": 453,
+  "metrics": {
+    "boot_time_ms": 200,
+    "memory_mb": 80,
+    "security_score": 85
+  },
+  "radar_chart": {
+    "sandboxing": 6,
+    "api_security": 8,
+    "network_isolation": 7,
+    "telemetry_safety": 6,
+    "shell_access_risk": 4
+  },
+  "tags": [
+    "openclaw-clone",
+    "enterprise",
+    "memory",
+    "ai-assistant",
+    "local-first"
+  ],
+  "community_sentiment": 20,
+  "reddit_mentions": 0,
+  "web_mentions": 10,
+  "best_for": [
+    "enterprise teams needing shared AI assistant",
+    "users wanting persistent memory across sessions",
+    "orgs with strict data locality requirements"
+  ],
+  "avoid_if": [
+    "solo hobbyists happy with vanilla OpenClaw",
+    "those needing lightweight CLI-only agent",
+    "projects requiring minimal dependencies"
+  ],
+  "deployment_target": [
+    "desktop",
+    "self-hosted"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "medium",
+  "privacy_posture": "strong",
+  "multi_user": true,
+  "plugin_ecosystem": "emerging",
+  "license_type": "AGPL-3.0",
+  "last_commit_at": "2026-05-04T06:59:07Z",
+  "contributors_count": 11,
+  "open_issues_count": 14,
+  "release_cadence_days": null,
+  "operational_risk": "low",
+  "openclaw_advantages": [
+    "Persistent memory layer via memU framework for long-term context",
+    "Built-in enterprise security (encrypted secure storage, SOC2-friendly)",
+    "Proactive execution instead of purely reactive prompts",
+    "Team-scale multi-user support out of the box"
+  ],
+  "openclaw_disadvantages": [
+    "Heavier TypeScript/Electron stack vs OpenClaw's lean cross-platform core",
+    "Smaller community and no Reddit traction yet",
+    "Newer project with no formal release tagged"
+  ],
+  "confidence_summary": "Evidence from README and commit history indicates active enterprise-focused development, but lack of direct community feedback and no tagged release introduces uncertainty about production maturity.",
+  "evidence_confidence": 75,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:23:33.077Z",
+    "last_reviewed_at": "2026-07-13T02:23:33.077Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "memUBot is presented as the enterprise-ready alternative to OpenClaw, built on the open-source memU memory framework. It is a proactive, 24/7 AI assistant designed for team-scale usage, emphasizing persistent memory, security, and cost-efficiency. The architecture leverages TypeScript with an Electron-style desktop shell (evident from preload scripts) and integrates local-first secure storage using scrypt and AES-256-GCM for API keys and MCP environment variables.\n\nRecent development activity shows a focus on enterprise requirements: merged support for SKILL_ENV, secure storage with OS-level encryption and backup/restore UI, and an observability system with traces, metrics, and structured logging. These additions aim to close the gap between personal AI assistants and production deployments, offering multi-user collaboration, SOC2-friendly data handling, and intelligent memory caching that reduces token consumption.\n\nCompared to OpenClaw, memUBot prioritizes memory-first architecture and proactive execution, targeting organizations rather than individual hobbyists. While it inherits the OpenClaw spirit, its heavier stack and enterprise features may introduce complexity not needed for simple personal use.",
+  "last_updated": "2026-08-02T12:53:39.915Z"
+}

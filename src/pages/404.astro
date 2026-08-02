@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title="404 - Clone or page not found"
+    description="The requested clone or page was not found in the OpenClaw ClawVerse."
+    robots="noindex, follow"
+>
+    <section class="mx-auto max-w-7xl px-6 pt-20 pb-14 md:pt-28 md:pb-20">
+        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+            Error 404
+        </p>
+        <h1 class="mt-7 font-semibold text-[40px] md:text-[72px] leading-[1.02] tracking-[-0.02em] max-w-4xl">
+            That page isn't tracked.
+        </h1>
+        <p class="mt-7 max-w-xl text-[17px] leading-relaxed text-pale-slate-400">
+            The clone or page you asked for isn't in the index. It may have been
+            renamed, archived, or it never existed here in the first place.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-3">
+            <a href="/#clones" class="btn-primary">Browse the index →</a>
+            <a
+                href="/compare"
+                class="border hairline px-5 py-2.5 text-[13px] font-medium rounded-sm text-pale-slate-600 dark:text-pale-slate-300 hover:text-ink dark:hover:text-white transition-colors duration-150"
+            >
+                Compare two clones
+            </a>
+        </div>
+    </section>
+</Layout>

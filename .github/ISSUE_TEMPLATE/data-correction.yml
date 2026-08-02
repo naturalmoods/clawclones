@@ -1,0 +1,41 @@
+name: Data correction
+description: Report a wrong, stale or misleading figure on a profile or comparison
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections are the most useful thing you can send. Part of every profile
+        is AI-written on top of measured repo data — see
+        [the methodology](https://clawclones.com/faq) for where that line runs —
+        so a wrong reading is a bug worth filing.
+
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      placeholder: https://clawclones.com/clones/example
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong?
+      options:
+        - A measured value (stars, memory, boot time, licence, dates)
+        - A security sub-score
+        - An AI-written recommendation or verdict
+        - The data is stale
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What should it say, and how do we know?
+      description: A link to the source beats a description — a README section, a release, a commit, an issue.
+    validations:
+      required: true

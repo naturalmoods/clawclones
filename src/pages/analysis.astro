@@ -1,0 +1,647 @@
+---
+/**
+ * The ecosystem report. Every figure on this page is computed from the tracked
+ * collection at build time; the model only supplies the connective copy, and
+ * only where the page marks it as such.
+ */
+import * as fs from "fs";
+import * as path from "path";
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { formatSignalDate } from "../lib/content-signals";
+import { formatStars, getDisplayName } from "../lib/clone-format";
+import {
+    buildAnalysisReport,
+    buildComputedHighlights,
+    toAnalysisFacts,
+    type StarHistory,
+} from "../lib/analysis";
+
+const clones = await getCollection("clones");
+const facts = clones.map((clone) => toAnalysisFacts(clone as any));
+
+let history: StarHistory = {};
+try {
+    history = JSON.parse(
+        fs.readFileSync(path.join(process.cwd(), "src", "data", "history.json"), "utf8"),
+    );
+} catch {
+    console.warn("analysis: star history unavailable, movement section will be omitted");
+}
+
+const report = buildAnalysisReport(facts, history);
+
+/**
+ * The weekly narrative is optional on purpose: a failed or skipped generation
+ * leaves the computed report intact instead of stranding stale prose.
+ */
+type Narrative = {
+    generated_at?: string;
+    data_as_of?: string;
+    tldr?: string[];
+    sections?: Record<string, string>;
+};
+let narrative: Narrative = {};
+try {
+    narrative = JSON.parse(
+        fs.readFileSync(
+            path.join(process.cwd(), "src", "data", "analysis-narrative.json"),
+            "utf8",
+        ),
+    );
+} catch {
+    narrative = {};
+}
+
+// The weekly run stamps this file even when the copy is dropped by validation,
+// so it is the honest answer to "when was this report last regenerated".
+let reportGeneratedAt: string | undefined = narrative.generated_at;
+try {
+    reportGeneratedAt =
+        narrative.generated_at ||
+        JSON.parse(
+            fs.readFileSync(
+                path.join(process.cwd(), "src", "data", "analysis-metadata.json"),
+                "utf8",
+            ),
+        ).lastUpdated;
+} catch {
+    // Leave whatever the narrative provided, which may be nothing.
+}
+
+const computedHighlights = buildComputedHighlights(report);
+const tldr = narrative.tldr?.length ? narrative.tldr : computedHighlights;
+const tldrIsGenerated = Boolean(narrative.tldr?.length);
+const narrativeStale = Boolean(
+    narrative.data_as_of && narrative.data_as_of !== report.dataAsOf.slice(0, 10),
+);
+const section = (key: string): string | null =>
+    narrative.sections?.[key]?.trim() || null;
+
+const sections = [
+    { id: "movement", label: "What moved" },
+    { id: "architecture", label: "Architecture" },
+    { id: "security", label: "Security" },
+    { id: "posture", label: "Posture" },
+];
+
+const windowLabel = report.window
+    ? `${formatSignalDate(report.window.start)} → ${formatSignalDate(report.window.end)}`
+    : null;
+
+const [nativeCohort, scriptedCohort] = report.security.cohorts;
+
+const headlineStats = [
+    { label: "Tracked", value: String(report.trackedCount), detail: "projects in every table below" },
+    {
+        label: "New stars",
+        value: report.movement.totalDelta.toLocaleString("en-US"),
+        detail: report.window ? `across ${report.window.days} days` : "no window",
+    },
+    {
+        label: "Flat",
+        value: `${report.movement.flat}`,
+        detail: "gained nothing in the window",
+    },
+    {
+        label: "Hardened",
+        value: `${report.security.hardened}`,
+        detail: "security ≥ 85 and shell risk ≤ 4",
+    },
+];
+
+const structuredData = [
+    {
+        "@context": "https://schema.org",
+        "@type": "Report",
+        name: "State of the OpenClaw ecosystem",
+        description: `Weekly data report covering ${report.trackedCount} tracked OpenClaw alternatives: star movement, architecture cohorts, security posture and deployment posture.`,
+        url: "https://clawclones.com/analysis",
+        datePublished: reportGeneratedAt || report.dataAsOf.slice(0, 10),
+        dateModified: reportGeneratedAt || report.dataAsOf.slice(0, 10),
+    },
+];
+
+const CELL = "px-4 py-3";
+---
+
+<Layout
+    title="State of the OpenClaw ecosystem - ClawClones"
+    description="Weekly data report on the OpenClaw ecosystem: which projects moved, how the architecture cohorts compare, and where the security and deployment posture sits."
+    structuredData={structuredData}
+>
+    <section class="mx-auto max-w-7xl px-6 pt-20 pb-14 md:pt-28 md:pb-16">
+        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+            Ecosystem report · {report.trackedCount} tracked · data as of {formatSignalDate(report.dataAsOf)}
+        </p>
+        <h1 class="mt-7 font-semibold text-[40px] md:text-[72px] leading-[1.02] tracking-[-0.02em] max-w-4xl">
+            State of the ecosystem.
+        </h1>
+        <p class="mt-7 max-w-xl text-[17px] leading-relaxed text-pale-slate-400">
+            What moved across every tracked OpenClaw alternative, how the
+            architecture cohorts actually compare, and where the security and
+            deployment posture sits. Numbers are computed from the same data the
+            profiles use — no figure on this page is written by a model.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-2">
+            <span class="pill text-pale-slate-500 border-pale-slate-500/30 bg-pale-slate-500/[0.08]">
+                Measured · tables built at compile time
+            </span>
+            {
+                tldrIsGenerated ? (
+                    <span class="pill text-accent dark:text-accent-soft border-accent/30 dark:border-accent-soft/30 bg-accent/[0.06] dark:bg-accent-soft/10">
+                        AI-written summary
+                        {reportGeneratedAt && ` · ${formatSignalDate(reportGeneratedAt)}`}
+                    </span>
+                ) : (
+                    <span class="pill text-pale-slate-500 border-pale-slate-500/30 bg-pale-slate-500/[0.08]">
+                        No AI summary
+                        {reportGeneratedAt && ` · last run ${formatSignalDate(reportGeneratedAt)}`}
+                    </span>
+                )
+            }
+            {
+                narrativeStale && (
+                    <span class="pill text-amber-700 dark:text-amber-400 border-amber-700/30 dark:border-amber-400/30 bg-amber-700/[0.06] dark:bg-amber-400/10">
+                        Summary written against older data
+                    </span>
+                )
+            }
+        </div>
+    </section>
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-10 md:py-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-line border hairline">
+                {
+                    headlineStats.map((stat) => (
+                        <div class="bg-paper px-5 py-5">
+                            <p class="eyebrow">{stat.label}</p>
+                            <p class="mt-3 font-mono text-[28px] md:text-[32px] tabular-nums leading-none text-ink dark:text-white">
+                                {stat.value}
+                            </p>
+                            <p class="mt-2 text-[13px] leading-snug text-pale-slate-600 dark:text-pale-slate-400">
+                                {stat.detail}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-16">
+            <div class="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+                <div>
+                    <h2 class="eyebrow">The short version</h2>
+                    <p class="mt-4 max-w-md text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                        Five things worth knowing before you open the index. Everything
+                        below expands on them with the full tables.
+                    </p>
+                    <nav class="mt-8 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[12px]">
+                        {
+                            sections.map((entry) => (
+                                <a
+                                    href={`#${entry.id}`}
+                                    class="text-pale-slate-500 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                                >
+                                    {entry.label} ↓
+                                </a>
+                            ))
+                        }
+                    </nav>
+                </div>
+
+                <ol class="border-t hairline">
+                    {
+                        tldr.map((item, index) => (
+                            <li class="flex gap-5 border-b hairline py-4">
+                                <span class="font-mono text-[12px] tabular-nums text-pale-slate-500 pt-1">
+                                    {String(index + 1).padStart(2, "0")}
+                                </span>
+                                <span class="text-[15px] md:text-[16px] leading-relaxed text-ink dark:text-white">
+                                    {item}
+                                </span>
+                            </li>
+                        ))
+                    }
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="movement" class="border-t hairline scroll-mt-20">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+            <h2 class="eyebrow">What moved</h2>
+            <h3 class="mt-3 font-semibold text-[28px] md:text-[36px] tracking-[-0.01em] max-w-3xl">
+                {windowLabel ? `Star movement, ${windowLabel}.` : "Star movement."}
+            </h3>
+            <p class="mt-4 max-w-2xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                Measured from the daily star history for {report.movement.covered} of
+                {" "}{report.trackedCount} tracked projects. Absolute growth favours the
+                large repos, so the relative column is listed beside it.
+            </p>
+
+            {
+                section("movement") && (
+                    <p class="mt-6 max-w-2xl border-l-2 border-accent/40 dark:border-accent-soft/40 pl-5 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                        <span class="eyebrow block mb-2 text-accent dark:text-accent-soft">AI reading</span>
+                        {section("movement")}
+                    </p>
+                )
+            }
+
+            {
+                report.movement.gainers.length > 0 ? (
+                    <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-px bg-line border hairline">
+                        <div class="bg-paper">
+                            <p class="eyebrow px-4 pt-5 pb-3">Most stars added</p>
+                            <div class="border-t hairline">
+                                {report.movement.gainers.map((mover) => (
+                                    <a
+                                        href={`/clones/${mover.slug}`}
+                                        class="flex items-baseline justify-between gap-4 border-b hairline last:border-b-0 hover:bg-black/[0.02] dark:hover:bg-white/[0.03] transition-colors duration-150"
+                                    >
+                                        <span class={`${CELL} text-[15px] font-medium tracking-[-0.01em] truncate`}>
+                                            {getDisplayName(mover.name)}
+                                        </span>
+                                        <span class={`${CELL} shrink-0 font-mono text-[13px] tabular-nums text-right`}>
+                                            <span class="text-emerald-700 dark:text-emerald-400">
+                                                +{mover.delta.toLocaleString("en-US")}
+                                            </span>
+                                            <span class="text-pale-slate-400"> · {formatStars(mover.stars)}</span>
+                                        </span>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div class="bg-paper">
+                            <p class="eyebrow px-4 pt-5 pb-3">Fastest relative growth</p>
+                            <div class="border-t hairline">
+                                {report.movement.surgers.map((mover) => (
+                                    <a
+                                        href={`/clones/${mover.slug}`}
+                                        class="flex items-baseline justify-between gap-4 border-b hairline last:border-b-0 hover:bg-black/[0.02] dark:hover:bg-white/[0.03] transition-colors duration-150"
+                                    >
+                                        <span class={`${CELL} text-[15px] font-medium tracking-[-0.01em] truncate`}>
+                                            {getDisplayName(mover.name)}
+                                        </span>
+                                        <span class={`${CELL} shrink-0 font-mono text-[13px] tabular-nums text-right`}>
+                                            <span class="text-emerald-700 dark:text-emerald-400">
+                                                +{mover.percent}%
+                                            </span>
+                                            <span class="text-pale-slate-400"> · {formatStars(mover.stars)}</span>
+                                        </span>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                ) : (
+                    <p class="mt-10 border hairline px-6 py-8 text-[15px] text-pale-slate-600 dark:text-pale-slate-400">
+                        No star history is available for this window, so no movement is
+                        reported rather than showing an empty table.
+                    </p>
+                )
+            }
+
+            {
+                report.movement.covered > 0 && (
+                    <p class="mt-5 font-mono text-[12px] text-pale-slate-500">
+                        {report.movement.flat} of {report.movement.covered} projects gained
+                        nothing over the window.
+                    </p>
+                )
+            }
+        </div>
+    </section>
+
+    <section id="architecture" class="border-t hairline scroll-mt-20">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+            <h2 class="eyebrow">Architecture</h2>
+            <h3 class="mt-3 font-semibold text-[28px] md:text-[36px] tracking-[-0.01em] max-w-3xl">
+                Three cohorts, assigned by rule.
+            </h3>
+            <p class="mt-4 max-w-2xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                Rules are applied in order and the first match wins, so all
+                {" "}{report.trackedCount} projects land in exactly one cohort and none can
+                appear twice. Medians are computed per cohort.
+            </p>
+
+            {
+                section("architecture") && (
+                    <p class="mt-6 max-w-2xl border-l-2 border-accent/40 dark:border-accent-soft/40 pl-5 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                        <span class="eyebrow block mb-2 text-accent dark:text-accent-soft">AI reading</span>
+                        {section("architecture")}
+                    </p>
+                )
+            }
+
+            <div class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-px bg-line border hairline">
+                {
+                    report.archetypes.map((archetype) => (
+                        <div class="bg-paper px-6 py-6 flex flex-col">
+                            <div class="flex items-baseline justify-between gap-4">
+                                <span class="eyebrow">{archetype.label}</span>
+                                <span class="font-mono text-[11px] tabular-nums text-pale-slate-400">
+                                    {archetype.members.length} of {report.trackedCount}
+                                </span>
+                            </div>
+                            <p class="mt-3 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                {archetype.description}
+                            </p>
+                            <p class="mt-2 font-mono text-[11px] text-pale-slate-400">
+                                Rule: {archetype.rule}
+                            </p>
+
+                            <dl class="mt-5 grid grid-cols-3 gap-px bg-line border hairline">
+                                <div class="bg-paper px-3 py-3">
+                                    <dt class="font-mono text-[10px] uppercase tracking-[0.14em] text-pale-slate-500">Mem</dt>
+                                    <dd class="mt-1 font-mono text-[15px] tabular-nums text-ink dark:text-white">
+                                        {archetype.medianMemoryMb} MB
+                                    </dd>
+                                </div>
+                                <div class="bg-paper px-3 py-3">
+                                    <dt class="font-mono text-[10px] uppercase tracking-[0.14em] text-pale-slate-500">Boot</dt>
+                                    <dd class="mt-1 font-mono text-[15px] tabular-nums text-ink dark:text-white">
+                                        {archetype.medianBootMs} ms
+                                    </dd>
+                                </div>
+                                <div class="bg-paper px-3 py-3">
+                                    <dt class="font-mono text-[10px] uppercase tracking-[0.14em] text-pale-slate-500">Sec</dt>
+                                    <dd class="mt-1 font-mono text-[15px] tabular-nums text-ink dark:text-white">
+                                        {archetype.medianSecurity}
+                                    </dd>
+                                </div>
+                            </dl>
+
+                            <div class="mt-5 border-t hairline">
+                                {archetype.members.slice(0, 5).map((member) => (
+                                    <a
+                                        href={`/clones/${member.slug}`}
+                                        class="flex items-baseline justify-between gap-4 py-2.5 border-b hairline hover:text-accent dark:hover:text-accent-soft transition-colors duration-150"
+                                    >
+                                        <span class="text-[15px] font-medium tracking-[-0.01em] truncate">
+                                            {getDisplayName(member.name)}
+                                        </span>
+                                        <span class="shrink-0 font-mono text-[11px] tabular-nums text-pale-slate-400">
+                                            {member.memoryMb} MB · {formatStars(member.stars)}
+                                        </span>
+                                    </a>
+                                ))}
+                            </div>
+
+                            {archetype.members.length > 5 && (
+                                <p class="mt-4 font-mono text-[11px] text-pale-slate-500">
+                                    + {archetype.members.length - 5} more in this cohort
+                                </p>
+                            )}
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <section id="security" class="border-t hairline scroll-mt-20">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+            <h2 class="eyebrow">Security</h2>
+            <h3 class="mt-3 font-semibold text-[28px] md:text-[36px] tracking-[-0.01em] max-w-3xl">
+                The runtime split, in real numbers.
+            </h3>
+            <p class="mt-4 max-w-2xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                Averages and medians over the five security sub-scores every profile carries.
+                Sandboxing and telemetry safety are protection axes where higher is
+                better; shell risk runs the other way.
+                {" "}<a href="/faq#radar" class="text-accent dark:text-accent-soft underline underline-offset-4 decoration-accent/30 dark:decoration-accent-soft/30 hover:decoration-current transition-colors duration-150">How the axes are scored</a>.
+            </p>
+
+            {
+                section("security") && (
+                    <p class="mt-6 max-w-2xl border-l-2 border-accent/40 dark:border-accent-soft/40 pl-5 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                        <span class="eyebrow block mb-2 text-accent dark:text-accent-soft">AI reading</span>
+                        {section("security")}
+                    </p>
+                )
+            }
+
+            <div class="mt-10 overflow-x-auto border hairline">
+                <table class="w-full min-w-[640px] text-left border-collapse">
+                    <thead>
+                        <tr class="border-b hairline">
+                            <th class={`${CELL} eyebrow font-normal`}>Cohort</th>
+                            <th class={`${CELL} eyebrow font-normal text-right`}>Projects</th>
+                            <th class={`${CELL} eyebrow font-normal text-right`}>Avg security</th>
+                            <th class={`${CELL} eyebrow font-normal text-right`}>Sandboxing</th>
+                            <th class={`${CELL} eyebrow font-normal text-right`}>Shell risk</th>
+                            <th class={`${CELL} eyebrow font-normal text-right`}>Telemetry</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            report.security.cohorts.map((cohort) => (
+                                <tr class="border-b hairline last:border-b-0">
+                                    <td class={CELL}>
+                                        <span class="text-[15px] font-medium text-ink dark:text-white">
+                                            {cohort.label}
+                                        </span>
+                                        <span class="block font-mono text-[11px] text-pale-slate-500">
+                                            {cohort.rule}
+                                        </span>
+                                    </td>
+                                    <td class={`${CELL} font-mono text-[14px] tabular-nums text-right`}>
+                                        {cohort.count}
+                                    </td>
+                                    <td class={`${CELL} font-mono text-[14px] tabular-nums text-right text-ink dark:text-white`}>
+                                        {cohort.avgSecurity}
+                                    </td>
+                                    <td class={`${CELL} font-mono text-[14px] tabular-nums text-right`}>
+                                        {cohort.medianSandboxing} / 10
+                                    </td>
+                                    <td class={`${CELL} font-mono text-[14px] tabular-nums text-right`}>
+                                        {cohort.medianShellRisk} / 10
+                                    </td>
+                                    <td class={`${CELL} font-mono text-[14px] tabular-nums text-right`}>
+                                        {cohort.medianTelemetry} / 10
+                                    </td>
+                                </tr>
+                            ))
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-px bg-line border hairline">
+                <div class="bg-paper px-6 py-5">
+                    <p class="eyebrow">Median score</p>
+                    <p class="mt-3 font-mono text-[24px] tabular-nums text-ink dark:text-white">
+                        {report.security.medianSecurity} / 100
+                    </p>
+                    <p class="mt-2 text-[13px] leading-snug text-pale-slate-600 dark:text-pale-slate-400">
+                        Across all {report.trackedCount} tracked projects
+                    </p>
+                </div>
+                <div class="bg-paper px-6 py-5">
+                    <p class="eyebrow">Hardened</p>
+                    <p class="mt-3 font-mono text-[24px] tabular-nums text-ink dark:text-white">
+                        {report.security.hardened}
+                    </p>
+                    <p class="mt-2 text-[13px] leading-snug text-pale-slate-600 dark:text-pale-slate-400">
+                        Security ≥ 85 with shell risk ≤ 4
+                    </p>
+                </div>
+                <div class="bg-paper px-6 py-5">
+                    <p class="eyebrow">Open shell</p>
+                    <p class="mt-3 font-mono text-[24px] tabular-nums text-ink dark:text-white">
+                        {report.security.exposedShell}
+                    </p>
+                    <p class="mt-2 text-[13px] leading-snug text-pale-slate-600 dark:text-pale-slate-400">
+                        Shell risk ≥ 8, largely unsupervised execution
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="posture" class="border-t hairline scroll-mt-20">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+            <h2 class="eyebrow">Posture</h2>
+            <h3 class="mt-3 font-semibold text-[28px] md:text-[36px] tracking-[-0.01em] max-w-3xl">
+                Where the data actually runs, and under what licence.
+            </h3>
+
+            {
+                section("posture") && (
+                    <p class="mt-6 max-w-2xl border-l-2 border-accent/40 dark:border-accent-soft/40 pl-5 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                        <span class="eyebrow block mb-2 text-accent dark:text-accent-soft">AI reading</span>
+                        {section("posture")}
+                    </p>
+                )
+            }
+
+            <div class="mt-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
+                <div>
+                    <div class="grid grid-cols-2 gap-px bg-line border hairline">
+                        <div class="bg-paper px-5 py-5">
+                            <p class="eyebrow">Local-first</p>
+                            <p class="mt-3 font-mono text-[24px] tabular-nums text-ink dark:text-white">
+                                {report.posture.localFirst} / {report.trackedCount}
+                            </p>
+                        </div>
+                        <div class="bg-paper px-5 py-5">
+                            <p class="eyebrow">Cloud required</p>
+                            <p class="mt-3 font-mono text-[24px] tabular-nums text-ink dark:text-white">
+                                {report.posture.cloudRequired} / {report.trackedCount}
+                            </p>
+                        </div>
+                        <div class="bg-paper px-5 py-5">
+                            <p class="eyebrow">Cloud optional</p>
+                            <p class="mt-3 font-mono text-[24px] tabular-nums text-ink dark:text-white">
+                                {report.posture.cloudOptional} / {report.trackedCount}
+                            </p>
+                        </div>
+                        <div class="bg-paper px-5 py-5">
+                            <p class="eyebrow">Multi-user</p>
+                            <p class="mt-3 font-mono text-[24px] tabular-nums text-ink dark:text-white">
+                                {report.posture.multiUser} / {report.trackedCount}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 border hairline px-5 py-5">
+                        <p class="eyebrow">Licences</p>
+                        <ul class="mt-4 space-y-2.5">
+                            {
+                                report.posture.licenses.map((license) => (
+                                    <li class="flex items-baseline justify-between gap-4 text-[14px]">
+                                        <span class="text-pale-slate-600 dark:text-pale-slate-400">
+                                            {license.label}
+                                        </span>
+                                        <span class="font-mono text-[13px] tabular-nums text-ink dark:text-white">
+                                            {license.count}
+                                        </span>
+                                    </li>
+                                ))
+                            }
+                            {
+                                report.posture.unlicensed > 0 && (
+                                    <li class="flex items-baseline justify-between gap-4 text-[14px]">
+                                        <span class="text-pale-slate-500">Not published</span>
+                                        <span class="font-mono text-[13px] tabular-nums text-pale-slate-500">
+                                            {report.posture.unlicensed}
+                                        </span>
+                                    </li>
+                                )
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="eyebrow">Runtimes by median footprint</p>
+                    <div class="mt-5 border-t hairline">
+                        {
+                            report.languages.map((language) => (
+                                <div class="flex items-baseline justify-between gap-4 border-b hairline py-3">
+                                    <span class="text-[15px] text-ink dark:text-white">
+                                        {language.label}
+                                    </span>
+                                    <span class="font-mono text-[12px] tabular-nums text-pale-slate-400">
+                                        {language.count} {language.count === 1 ? "project" : "projects"} · median {language.medianMemoryMb} MB
+                                    </span>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    {
+                        nativeCohort && scriptedCohort && (
+                            <p class="mt-6 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                {nativeCohort.count} projects run on a compiled runtime and
+                                {" "}{scriptedCohort.count} on a scripting runtime — the split that
+                                drives most of the footprint and containment difference above.
+                            </p>
+                        )
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+            <div class="border hairline bg-accent/[0.04] dark:bg-accent-soft/[0.05] px-6 py-8 md:px-10 md:py-12">
+                <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+                    <div>
+                        <h2 class="eyebrow text-accent dark:text-accent-soft">Next</h2>
+                        <h3 class="mt-3 max-w-3xl font-semibold text-[28px] md:text-[40px] leading-[1.1] tracking-[-0.01em]">
+                            The report shows the shape. The index gets you to a shortlist.
+                        </h3>
+                        <p class="mt-4 max-w-2xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                            Every project named above links to its profile. Sort the full
+                            index by what you care about, then send two candidates into a
+                            side-by-side comparison.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-3">
+                        <a href="/#clones" class="btn-primary">Open the index →</a>
+                        <a
+                            href="/clawverse"
+                            class="border hairline px-5 py-2.5 text-[13px] font-medium rounded-sm text-pale-slate-600 dark:text-pale-slate-300 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                        >
+                            Ecosystem map
+                        </a>
+                        <a
+                            href="/faq"
+                            class="border hairline px-5 py-2.5 text-[13px] font-medium rounded-sm text-pale-slate-600 dark:text-pale-slate-300 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                        >
+                            Methodology
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

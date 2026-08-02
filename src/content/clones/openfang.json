@@ -1,0 +1,85 @@
+{
+  "id": "RightNow-AI/openfang",
+  "name": "OpenFang",
+  "language": "Rust",
+  "vibe_summary": "OpenFang is a Rust-built Agent OS shipping as a single 32MB binary with autonomous 'Hands' that run scheduled tasks without prompting. It's pre-1.0 but battle-tested with 2,696+ passing tests and active security audits, aiming to be an autonomous agent platform rather than a chatbot.",
+  "health_status": "healthy",
+  "github_stars": 18073,
+  "metrics": {
+    "boot_time_ms": 30,
+    "memory_mb": 15,
+    "security_score": 85
+  },
+  "radar_chart": {
+    "sandboxing": 7,
+    "api_security": 8,
+    "network_isolation": 6,
+    "telemetry_safety": 5,
+    "shell_access_risk": 7
+  },
+  "tags": [
+    "agent-os",
+    "rust",
+    "autonomous-agents",
+    "single-binary",
+    "scheduling"
+  ],
+  "community_sentiment": 0,
+  "reddit_mentions": 0,
+  "web_mentions": 10,
+  "best_for": [
+    "autonomous 24/7 agent workflows",
+    "self-hosted agent infrastructure",
+    "rust enthusiasts wanting single-binary deploy"
+  ],
+  "avoid_if": [
+    "need stable v1.0 api",
+    "want chat-based assistant like openclaw",
+    "require extensive plugin marketplace"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "desktop",
+    "cloud"
+  ],
+  "local_first": true,
+  "cloud_dependency": "unknown",
+  "setup_difficulty": "low",
+  "privacy_posture": "mixed",
+  "multi_user": null,
+  "plugin_ecosystem": "emerging",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-05-12T18:42:08Z",
+  "contributors_count": 76,
+  "open_issues_count": 116,
+  "release_cadence_days": 3,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "single 32mb rust binary with no runtime deps",
+    "autonomous scheduled agents (hands) vs reactive assistant",
+    "high test coverage and clippy clean",
+    "built-in dashboard and knowledge graph"
+  ],
+  "openclaw_disadvantages": [
+    "openclaw has larger community and plugin ecosystem (clawhub)",
+    "openclaw supports more platforms/channels natively",
+    "openfang pre-1.0 breaking changes risk"
+  ],
+  "confidence_summary": "Evidence from README and commits shows active Rust agent OS, but web search returned only OpenClaw results, so community sentiment for OpenFang is uncertain. License discrepancy (Apache-2.0 vs README MIT badge) adds minor uncertainty.",
+  "evidence_confidence": 70,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:16:01.110Z",
+    "last_reviewed_at": "2026-07-13T02:16:01.110Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "OpenFang is an open-source Agent Operating System written from scratch in Rust, compiling to a single ~32MB binary that runs autonomous agents called 'Hands' on schedules without user prompting. Its architecture spans 14 crates and 137K LOC, with 2,696+ passing tests and zero clippy warnings, emphasizing reliability and a small footprint for self-hosted deployments.\n\nRecent commit activity shows a focus on security hardening (audit fixes, codex hardening, toctou staging, endpoint audits) and continuous releases, with v0.6.9 published in May 2026. Unlike OpenClaw's personal assistant model that reacts to user channels, OpenFang positions itself as a background agent OS that builds knowledge graphs, monitors targets, and reports to a local dashboard at port 4200.\n\nWhile pre-1.0 and subject to breaking changes, OpenFang's Rust foundation and single-binary distribution offer a lightweight alternative for users wanting always-on autonomous workflows rather than conversational interactions. Its privacy posture is mixed due to likely cloud LLM dependencies, but local-first execution and active audits mitigate some risks.",
+  "latest_release": {
+    "version": "v0.6.9",
+    "date": "2026-05-12T18:42:42Z",
+    "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.9"
+  },
+  "last_updated": "2026-08-02T12:53:36.893Z"
+}

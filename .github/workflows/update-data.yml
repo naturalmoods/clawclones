@@ -1,0 +1,145 @@
+name: Ecosystem Data Update
+
+on:
+  schedule:
+    # Check every Monday at 00:00 UTC; full refresh runs every other week
+    - cron: '0 0 * * 1'
+  push:
+    # Only on the deploy branch: a feature branch pushing projects.json used to
+    # start a data run of its own.
+    branches:
+      - master
+    paths:
+      - 'projects.json'
+  workflow_dispatch:
+    inputs:
+      repos:
+        description: 'Optional comma-separated repository IDs to refresh'
+        required: false
+        type: string
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Detect Newly Added Tracked Repos
+        id: tracked
+        if: github.event_name == 'push'
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const { execSync } = require('child_process');
+
+          const tracked = (list) =>
+            list.filter((entry) => entry.status === 'tracked').map((entry) => entry.repo);
+
+          function readTracked(ref) {
+            try {
+              return tracked(JSON.parse(execSync(`git show ${ref}:projects.json`, { encoding: 'utf8' })));
+            } catch {
+              return [];
+            }
+          }
+
+          // A first push, a new branch or a force-push reports an all-zero
+          // "before" SHA. Without this guard the diff is taken against nothing
+          // and every tracked repo looks new, queueing a full AI regeneration.
+          const beforeSha = process.env.BEFORE_SHA || '';
+          const hasBaseline = /[^0]/.test(beforeSha);
+
+          const before = hasBaseline ? readTracked(beforeSha) : null;
+          const after = tracked(JSON.parse(fs.readFileSync('projects.json', 'utf8')));
+          const added = before === null ? [] : after.filter((repo) => !before.includes(repo));
+
+          if (before === null) {
+            console.log('No usable baseline commit; skipping the targeted run.');
+          }
+
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `has_new_repos=${added.length > 0}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `target_repos=${added.join(',')}\n`);
+
+          console.log(`New tracked repos: ${added.join(', ') || 'none'}`);
+          NODE
+
+      - name: Evaluate Biweekly Cadence
+        id: cadence
+        if: github.event_name == 'schedule'
+        run: |
+          iso_week="$(date -u +%V)"
+          if [ $((10#$iso_week % 2)) -eq 1 ]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run Full Data Update
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && steps.cadence.outputs.should_run == 'true')
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || '~deepseek/deepseek-v4-flash-latest' }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER || 'nvidia' }}
+          NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL || 'z-ai/glm-5.2' }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          TARGET_REPOS: ${{ inputs.repos || '' }}
+        run: npm run update-data
+
+      - name: Run Targeted Data Update For New Clones
+        if: github.event_name == 'push' && steps.tracked.outputs.has_new_repos == 'true'
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || '~deepseek/deepseek-v4-flash-latest' }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER || 'nvidia' }}
+          NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL || 'z-ai/glm-5.2' }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          TARGET_REPOS: ${{ steps.tracked.outputs.target_repos }}
+        run: npm run update-data
+
+      - name: Generate Partner Feed
+        run: npm run generate-partner-feed
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+          git add src/data/ src/content/clones/ public/api/partner-feed.json projects.json
+
+          if git diff --staged --quiet; then
+            exit 0
+          fi
+
+          if [ "${{ github.event_name }}" = "push" ]; then
+            git commit -m "chore: generate data for newly tracked clones"
+          else
+            git commit -m "chore: biweekly ecosystem refresh"
+          fi
+
+          git pull --rebase -X theirs --autostash origin "$GITHUB_REF_NAME"
+          git push

@@ -1,0 +1,115 @@
+---
+/**
+ * The radar table. It used to borrow the index table's columns for visual
+ * consistency, but a watchlist entry is fetched without the AI pass: memory,
+ * boot time, security score and licence are never populated, so four of the
+ * eight columns rendered an em dash and security rendered a misleading `0`.
+ *
+ * These columns are the ones that carry data — and stars, pulse and
+ * observed-since happen to be exactly the three promotion thresholds spelled
+ * out under the table.
+ */
+import {
+    WATCHLIST_ROW_GRID,
+    formatCommitDate,
+    formatStars,
+    formatWatchlistSubline,
+    type WatchlistRow,
+} from "../lib/clone-format";
+
+interface Props {
+    watchlistClones: WatchlistRow[];
+}
+
+const { watchlistClones } = Astro.props;
+const rows = [...watchlistClones].sort((a, b) => b.stars - a.stars);
+
+const CELL = "relative z-[1] pointer-events-none";
+---
+
+{
+    rows.length > 0 && (
+        <div>
+            <div
+                class={`sticky top-14 z-30 grid ${WATCHLIST_ROW_GRID} gap-x-4 px-6 py-2.5 border-y hairline bg-paper font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400 select-none`}
+            >
+                <div>Name</div>
+                <div class="hidden sm:block">Language</div>
+                <div class="text-right">Stars</div>
+                <div class="hidden sm:block text-right">Pulse</div>
+                <div class="hidden xl:block text-right">Since</div>
+                <div class="hidden lg:block text-right">Waiting on</div>
+                <div class="text-right">View</div>
+            </div>
+
+            {rows.map((clone) => (
+                <div
+                    class={`group relative grid ${WATCHLIST_ROW_GRID} gap-x-4 items-center px-6 py-[15px] border-b hairline hover:bg-black/[0.02] dark:hover:bg-white/[0.03] transition-colors duration-150`}
+                >
+                    <a
+                        href={clone.href}
+                        target={clone.external ? "_blank" : undefined}
+                        rel={clone.external ? "noopener noreferrer" : undefined}
+                        class="absolute inset-0 z-0"
+                        aria-label={clone.name}
+                    />
+                    <div class={`min-w-0 ${CELL}`}>
+                        <div class="truncate">
+                            <span class="text-[16px] font-medium tracking-[-0.01em] text-pale-slate-600 dark:text-pale-slate-400">
+                                {clone.name}
+                            </span>
+                            <span class="ml-2 font-mono text-[11px] text-pale-slate-400 hidden 2xl:inline">
+                                {clone.repoPath}
+                            </span>
+                            <span
+                                class={`ml-2 align-middle font-mono text-[10px] uppercase tracking-[0.12em] border px-1.5 py-0.5 rounded-sm ${
+                                    clone.tag === "candidate"
+                                        ? "text-accent dark:text-accent-soft border-accent/40 dark:border-accent-soft/40"
+                                        : "text-pale-slate-400 hairline"
+                                }`}
+                            >
+                                {clone.tag}
+                            </span>
+                        </div>
+                        <div class="sm:hidden mt-1 font-mono text-[11px] text-pale-slate-400 truncate">
+                            {formatWatchlistSubline(clone)}
+                        </div>
+                    </div>
+                    <div class={`hidden sm:block font-mono text-[11px] text-pale-slate-400 truncate ${CELL}`}>
+                        {clone.language}
+                    </div>
+                    <div class={`font-mono text-[13px] text-right tabular-nums text-pale-slate-400 ${CELL}`}>
+                        {clone.stars ? formatStars(clone.stars) : "—"}
+                    </div>
+                    <div class={`hidden sm:block font-mono text-[13px] text-right tabular-nums ${CELL} ${typeof clone.pulse === "number" && clone.pulse >= 60 ? "text-ink dark:text-white" : "text-pale-slate-400"}`}>
+                        {typeof clone.pulse === "number" ? `${clone.pulse}%` : "—"}
+                    </div>
+                    <div class={`hidden xl:block font-mono text-[11px] text-right text-pale-slate-400 whitespace-nowrap ${CELL}`}>
+                        {clone.since ? (
+                            <>
+                                <span class="text-pale-slate-500">{clone.sinceLabel}</span>{" "}
+                                {formatCommitDate(clone.since)}
+                            </>
+                        ) : (
+                            "—"
+                        )}
+                    </div>
+                    <div
+                        class={`hidden lg:block font-mono text-[11px] text-right truncate ${CELL} ${
+                            clone.tag === "candidate"
+                                ? "text-accent dark:text-accent-soft"
+                                : "text-pale-slate-500"
+                        }`}
+                    >
+                        {clone.waitingOn}
+                    </div>
+                    <div class={`justify-self-end ${CELL}`}>
+                        <span class="font-mono text-[11px] text-pale-slate-500 dark:text-pale-slate-400 border hairline rounded-sm px-2 py-1 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-150 whitespace-nowrap">
+                            {clone.linkLabel}
+                        </span>
+                    </div>
+                </div>
+            ))}
+        </div>
+    )
+}

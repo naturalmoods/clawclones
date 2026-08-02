@@ -1,0 +1,86 @@
+{
+  "id": "EthereumPhone/AndyClaw",
+  "name": "AndyClaw",
+  "language": "Kotlin",
+  "vibe_summary": "AndyClaw ports the OpenClaw agent paradigm to Android, adding native device control and Web3 wallet integration on ethOS devices. Its open mode brings local Qwen2.5-1.5B inference and ClawHub skills to any stock Android phone.",
+  "health_status": "healthy",
+  "github_stars": 90,
+  "metrics": {
+    "boot_time_ms": 250,
+    "memory_mb": 80,
+    "security_score": 65
+  },
+  "radar_chart": {
+    "sandboxing": 3,
+    "api_security": 6,
+    "network_isolation": 4,
+    "telemetry_safety": 6,
+    "shell_access_risk": 9
+  },
+  "tags": [
+    "android",
+    "ai-agent",
+    "web3",
+    "local-llm",
+    "openclaw-clone"
+  ],
+  "community_sentiment": 10,
+  "reddit_mentions": 12,
+  "web_mentions": 10,
+  "best_for": [
+    "Android users wanting on-device AI assistant",
+    "ethOS/dGEN1 owners needing wallet-integrated agent",
+    "Privacy-focused users using local LLM"
+  ],
+  "avoid_if": [
+    "Users needing strong sandboxing/enterprise security",
+    "Those without Android device",
+    "Users averse to YOLO full-access mode"
+  ],
+  "deployment_target": [
+    "edge",
+    "mobile",
+    "self-hosted"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "mixed",
+  "multi_user": false,
+  "plugin_ecosystem": "emerging",
+  "license_type": "GPL-3.0",
+  "last_commit_at": "2026-07-27T16:16:53Z",
+  "contributors_count": 4,
+  "open_issues_count": 15,
+  "release_cadence_days": 3,
+  "operational_risk": "high",
+  "openclaw_advantages": [
+    "Native Android device controls (SMS, calls, apps)",
+    "Built-in Web3 wallet & XMTP on ethOS",
+    "On-device local LLM (Qwen/GGUF) no cloud",
+    "Termux integration for Linux commands"
+  ],
+  "openclaw_disadvantages": [
+    "Android-only (no desktop/cloud multi-OS)",
+    "Smaller community (89 stars)",
+    "Weaker sandboxing (YOLO mode, shell risk)",
+    "Plaintext backup export warning"
+  ],
+  "confidence_summary": "Repo data (README, commits, release) strongly confirms OpenClaw-related Android clone with active dev; however provided Reddit/Brave mentions are unrelated to AndyClaw, making sentiment scores low-confidence.",
+  "evidence_confidence": 80,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:17:29.586Z",
+    "last_reviewed_at": "2026-07-13T02:17:29.586Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "AndyClaw is an open-source AI assistant APK for Android that mirrors OpenClaw's agentic tool-use loop but targets mobile and Web3 use cases. On ethOS-powered dGEN1 devices it unlocks privileged mode with wallet signing, XMTP messaging, full device control, and an autonomous sub-account for DeFi; on stock Android it runs in open mode with a local Qwen2.5-1.5B model or user-supplied API keys (OpenRouter, tinfoil.sh, self-hosted OpenAI-compatible endpoints). The architecture includes a heartbeat service, ClawHub skill installation, Termux integration, and structured long-term memory with BM25 search.\n\nRecent commits show hardening of backup restore (atomic per-section Room transactions), expanded local LLM GGUF management via launcher binder, and provider-aware error labeling. Unlike OpenClaw's cross-platform Python/Node base, AndyClaw is written in Kotlin and deeply coupled to Android APIs, trading broad OS support for native mobile capabilities like SMS, camera, and app management. Its YOLO mode and shell access introduce higher operational risk but enable powerful automation for personal device owners.",
+  "latest_release": {
+    "version": "v19",
+    "date": "2026-03-16T18:15:59Z",
+    "url": "https://github.com/EthereumPhone/AndyClaw/releases/tag/v19"
+  },
+  "last_updated": "2026-08-02T12:53:37.449Z"
+}

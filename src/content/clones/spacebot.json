@@ -1,0 +1,85 @@
+{
+  "id": "spacedriveapp/spacebot",
+  "name": "Spacebot",
+  "language": "Rust",
+  "vibe_summary": "Spacebot is an opinionated agent harness that splits monolithic LLM loops into specialized processes for true multi-user concurrency. Its typed graph memory in SQLite and automatic skill capture make it smarter the more teams use it.",
+  "health_status": "healthy",
+  "github_stars": 2351,
+  "metrics": {
+    "boot_time_ms": 30,
+    "memory_mb": 15,
+    "security_score": 75
+  },
+  "radar_chart": {
+    "sandboxing": 7,
+    "api_security": 8,
+    "network_isolation": 6,
+    "telemetry_safety": 5,
+    "shell_access_risk": 3
+  },
+  "tags": [
+    "ai-agent",
+    "multi-user",
+    "rust",
+    "team-collaboration",
+    "agent-harness"
+  ],
+  "community_sentiment": 0,
+  "reddit_mentions": 2,
+  "web_mentions": 10,
+  "best_for": [
+    "Discord/Slack communities needing shared AI agent",
+    "Teams wanting persistent typed memory across channels",
+    "Multi-user autonomous task execution"
+  ],
+  "avoid_if": [
+    "Solo users wanting minimal setup without team features",
+    "Those requiring fully local-only offline operation (cloud deploy emphasized)",
+    "Projects needing extensive third-party plugin ecosystem"
+  ],
+  "deployment_target": [
+    "cloud",
+    "self-hosted"
+  ],
+  "local_first": false,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "mixed",
+  "multi_user": true,
+  "plugin_ecosystem": "emerging",
+  "license_type": "NOASSERTION",
+  "last_commit_at": "2026-05-09T21:44:03Z",
+  "contributors_count": 61,
+  "open_issues_count": 203,
+  "release_cadence_days": 8,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Native multi-user concurrency across chat platforms",
+    "Typed graph memory in SQLite vs markdown files",
+    "Automatic skill capture from completed tasks",
+    "Process-separated architecture avoids blocked LLM loops"
+  ],
+  "openclaw_disadvantages": [
+    "Less mature single-user personal assistant focus",
+    "No clear mobile/local-first offline mode",
+    "Smaller community footprint compared to OpenClaw",
+    "Licensing not fully open-source (FSL)"
+  ],
+  "confidence_summary": "Evidence from README and commits shows active Rust development with team features, but provided Reddit/Web mentions are unrelated to Spacebot, causing low confidence in community sentiment.",
+  "evidence_confidence": 70,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:45:01.405Z",
+    "last_reviewed_at": "2026-07-13T02:45:01.405Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "Spacebot is an opinionated AI agent harness built in Rust, designed for teams, communities, and multi-user environments. Unlike monolithic agent loops, it splits conversation, reasoning, tool execution, and memory into specialized processes, enabling true concurrent multi-user interactions across Discord, Slack, Telegram, and Twitch without blocking.\n\nIts core architecture stores state in a typed graph within SQLite rather than markdown files, and autonomy is driven by a task state machine linked to goals. After complex tasks or idle conversations, a background process captures learned skills and memories, making the system progressively smarter with zero user action. Recent commits (v0.5.0) introduce per-agent secret isolation, dormant cortex, and structured worker outcomes, indicating a focus on security and scalable backend readiness.\n\nCompared to OpenClaw's personal assistant focus, Spacebot prioritizes shared memory across channels and process-level concurrency for organizations. While it offers one-click cloud deployment via spacebot.sh, Docker builds allow self-hosting, though its FSL license and emerging plugin ecosystem differentiate it from fully open-source alternatives.",
+  "latest_release": {
+    "version": "v0.5.0",
+    "date": "2026-05-07T06:55:33Z",
+    "url": "https://github.com/spacedriveapp/spacebot/releases/tag/v0.5.0"
+  },
+  "last_updated": "2026-08-02T12:53:48.109Z"
+}

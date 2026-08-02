@@ -1,0 +1,548 @@
+---
+import { Icon } from 'astro-icon/components';
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import StarHistoryChart from "../../components/StarHistoryChart.tsx";
+import fs from "fs";
+import path from "path";
+import { marked } from "marked";
+import { getCanonicalComparePath, getCompareSlug } from "../../lib/compare";
+import {
+    formatSignalDate,
+    getConfidenceLabel,
+    getConfidenceTone,
+    getFreshnessState,
+    getSignalDates,
+} from "../../lib/content-signals";
+import {
+    deriveAvoidIf,
+    deriveBestFit,
+    deriveTradeoffs,
+    deriveWhyChoose,
+} from "../../lib/use-cases";
+import { getDisplayName } from "../../lib/clone-format";
+
+export async function getStaticPaths() {
+    const clones = await getCollection("clones");
+    return clones.map((clone: any) => ({
+        params: { id: clone.id },
+        props: { clone, allClones: clones },
+    }));
+}
+
+const { clone, allClones } = Astro.props;
+const currentCompareSlug = getCompareSlug(clone);
+const openClawClone = allClones.find((entry: any) => entry.id === "openclaw");
+const isOpenClaw = clone.id === "openclaw";
+const compareWithOpenClawHref =
+    !isOpenClaw && openClawClone
+        ? getCanonicalComparePath(clone, openClawClone)
+        : null;
+
+const whyChoosePoints = deriveWhyChoose(clone);
+const tradeoffPoints = deriveTradeoffs(clone);
+const bestFitPoints = deriveBestFit(clone);
+const avoidIfPoints = deriveAvoidIf(clone);
+const confidenceScore = clone.data.evidence_confidence;
+const confidenceLabel = getConfidenceLabel(confidenceScore);
+const confidenceTone = getConfidenceTone(confidenceScore);
+const freshness = getFreshnessState(clone.data);
+const { lastReviewedAt } = getSignalDates(clone.data);
+const hasCommunityEvidence = clone.data.reddit_mentions > 0 || clone.data.web_mentions > 0;
+const relatedClones = allClones
+    .filter((other: any) => other.id !== clone.id)
+    .sort((left: any, right: any) => {
+        const score = (other: any) => {
+            let total = other.data.language === clone.data.language ? 4 : 0;
+            const memoryDistance = Math.abs((other.data.metrics?.memory_mb || 0) - (clone.data.metrics?.memory_mb || 0));
+            total += Math.max(0, 3 - memoryDistance / 100);
+            total += (other.data.deployment_target || []).filter((target: string) => clone.data.deployment_target?.includes(target)).length * 2;
+            total += (other.data.tags || []).filter((tag: string) => clone.data.tags.includes(tag)).length;
+            return total;
+        };
+        return score(right) - score(left) || right.data.github_stars - left.data.github_stars;
+    })
+    .slice(0, 6);
+
+// Load History Data for this clone
+const historyPath = path.join(process.cwd(), "src", "data", "history.json");
+let historyData: any = {};
+try {
+    const rawData = fs.readFileSync(historyPath, "utf8");
+    const fullHistory = JSON.parse(rawData);
+    if (fullHistory[clone.data.id]) {
+        historyData = { [clone.data.id]: fullHistory[clone.data.id] };
+    }
+} catch (e) {
+    console.error("Could not load history for clone", clone.id);
+}
+
+const hasStarHistory = Object.keys(historyData).length > 0;
+
+const cloneStructuredData = [{
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: clone.data.name,
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'Cross-platform',
+    programmingLanguage: clone.data.language,
+    description: clone.data.vibe_summary,
+    url: `https://clawclones.com/clones/${clone.id}`,
+    codeRepository: `https://github.com/${clone.data.id}`,
+    license: clone.data.license_type || undefined,
+}];
+
+const displayName = getDisplayName(clone);
+const rankedByStars = [...allClones].sort(
+    (a: any, b: any) => b.data.github_stars - a.data.github_stars,
+);
+const starRank = rankedByStars.findIndex((c: any) => c.id === clone.id) + 1;
+
+const fmtNum = (value: unknown, suffix = "") =>
+    typeof value === "number" ? `${value.toLocaleString("en-US")}${suffix}` : "—";
+const fmtDays = (value: unknown) => (typeof value === "number" ? `~${value} days` : "—");
+const fmtBool = (value: unknown) =>
+    value === true ? "Yes" : value === false ? "No" : "—";
+const fmtEnum = (value: unknown) =>
+    typeof value === "string" && value.length > 0
+        ? value.charAt(0).toUpperCase() + value.slice(1)
+        : "—";
+const fmtList = (value: unknown) =>
+    Array.isArray(value) && value.length > 0 ? value.join(" · ") : "—";
+
+/**
+ * Facts grid. Stars and the composite security score are deliberately absent:
+ * the header already ranks the project by stars and the security block below
+ * this grid leads with the composite, so repeating them here only added rows.
+ *
+ * Rows that would render as an em dash are dropped rather than shown empty —
+ * a blank row costs the same space as a real one and reads like a gap.
+ */
+const specGroups = [
+    {
+        title: "Repository",
+        rows: [
+            ["Contributors", fmtNum(clone.data.contributors_count)],
+            ["Open issues", fmtNum(clone.data.open_issues_count)],
+            ["Last commit", formatSignalDate(clone.data.last_commit_at)],
+            ["Release cadence", fmtDays(clone.data.release_cadence_days)],
+            ["Latest release", clone.data.latest_release?.version || "—"],
+        ],
+    },
+    {
+        title: "Runtime",
+        rows: [
+            ["Language", clone.data.language || "—"],
+            ["Memory", fmtNum(clone.data.metrics.memory_mb, " MB")],
+            ["Boot time", fmtNum(clone.data.metrics.boot_time_ms, " ms")],
+            ["Deployment", fmtList(clone.data.deployment_target)],
+            ["Setup difficulty", fmtEnum(clone.data.setup_difficulty)],
+            ["Plugin ecosystem", fmtEnum(clone.data.plugin_ecosystem)],
+        ],
+    },
+    {
+        title: "Posture",
+        rows: [
+            ["License", clone.data.license_type || "—"],
+            ["Local-first", fmtBool(clone.data.local_first)],
+            ["Cloud dependency", fmtEnum(clone.data.cloud_dependency)],
+            ["Multi-user", fmtBool(clone.data.multi_user)],
+            ["Privacy posture", fmtEnum(clone.data.privacy_posture)],
+        ],
+    },
+    ...(hasCommunityEvidence
+        ? [
+              {
+                  title: "Community",
+                  rows: [
+                      ["Sentiment", `${clone.data.community_sentiment}% positive`],
+                      ["Reddit mentions", fmtNum(clone.data.reddit_mentions)],
+                      ["Web results", fmtNum(clone.data.web_mentions)],
+                  ],
+              },
+          ]
+        : []),
+]
+    .map((group) => ({
+        ...group,
+        rows: group.rows.filter(([, value]) => value !== "—"),
+    }))
+    .filter((group) => group.rows.length > 0);
+
+// The four protection axes score safety directly; shell access is stored as a
+// RISK, so it reads in the opposite direction and has to be labelled as such.
+const securityAxes = [
+    { label: "Sandboxing", value: clone.data.radar_chart.sandboxing, higherIsSafer: true },
+    { label: "API security", value: clone.data.radar_chart.api_security, higherIsSafer: true },
+    { label: "Network isolation", value: clone.data.radar_chart.network_isolation, higherIsSafer: true },
+    { label: "Telemetry safety", value: clone.data.radar_chart.telemetry_safety, higherIsSafer: true },
+    { label: "Shell access risk", value: clone.data.radar_chart.shell_access_risk, higherIsSafer: false },
+].map((row) => {
+    const safety = row.higherIsSafer ? row.value : 10 - row.value;
+    return {
+        ...row,
+        caption: row.higherIsSafer ? "higher is safer" : "higher is riskier",
+        tone:
+            safety >= 7
+                ? "bg-accent"
+                : safety >= 5
+                  ? "bg-pale-slate-500"
+                  : "bg-amber-500",
+    };
+});
+
+/**
+ * One comparison exit, at the end of the page. The header already carries the
+ * primary CTA and the full picker; the profile used to repeat the same links
+ * across a six-card grid and a pill row as well, so eleven compare links
+ * resolved to seven distinct destinations.
+ */
+const compareLinks = [
+    ...(!isOpenClaw && compareWithOpenClawHref
+        ? [{ label: "OpenClaw", href: compareWithOpenClawHref }]
+        : []),
+    ...relatedClones
+        .filter((other: any) => other.id !== "openclaw")
+        .slice(0, 3)
+        .map((other: any) => ({
+            label: getDisplayName(other),
+            href: getCanonicalComparePath(clone, other),
+        })),
+];
+
+const totalBattles = (allClones.length * (allClones.length - 1)) / 2;
+---
+
+<Layout
+    title={`${clone.data.name} - ${clone.data.language} OpenClaw alternative`}
+    description={clone.data.vibe_summary}
+    structuredData={cloneStructuredData}
+>
+    <section class="mx-auto max-w-7xl px-6 pt-14 pb-14 md:pt-20 md:pb-20">
+        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+            <a href="/" class="hover:text-ink dark:hover:text-white transition-colors duration-150">Index</a>
+            {" "}/ {displayName} · updated {formatSignalDate(clone.data.last_updated)}
+        </p>
+        <div class="mt-7 flex flex-wrap items-end justify-between gap-8">
+            <div class="max-w-3xl">
+                <h1 class="font-semibold text-[40px] md:text-[72px] leading-[0.98] tracking-[-0.02em] text-ink dark:text-white">
+                    {displayName}
+                </h1>
+                <p class="mt-4 font-mono text-[13px] text-pale-slate-400">
+                    {clone.data.id} · {clone.data.health_status} · rank {starRank} of {allClones.length} by stars
+                </p>
+                <p class="mt-6 text-[17px] leading-relaxed text-pale-slate-400 max-w-xl">
+                    {clone.data.vibe_summary}
+                </p>
+                {
+                    clone.data.tags.length > 0 && (
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            {clone.data.tags.map((tag: string) => (
+                                <span class="font-mono text-[12px] border hairline rounded-sm px-2.5 py-1 text-pale-slate-600 dark:text-pale-slate-400">
+                                    #{tag}
+                                </span>
+                            ))}
+                        </div>
+                    )
+                }
+            </div>
+            <div class="flex flex-wrap items-center gap-3 pb-1">
+                {
+                    !isOpenClaw && compareWithOpenClawHref && (
+                        <a
+                            href={compareWithOpenClawHref}
+                            class="btn-primary flex items-center gap-2"
+                        >
+                            Compare vs OpenClaw <Icon name="lucide:swords" class={"w-4 h-4"} />
+                        </a>
+                    )
+                }
+                <div class="relative flex items-center gap-2 border hairline rounded-sm px-3 py-2">
+                    <span class="hidden sm:block font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-500">
+                        Compare with…
+                    </span>
+                    <select
+                        class="bg-transparent text-ink dark:text-white text-[13px] font-medium outline-none appearance-none cursor-pointer hover:text-accent dark:hover:text-accent-soft transition-colors pr-4"
+                        onchange={`if(this.value){const parts=['${currentCompareSlug}', this.value].sort(); window.location.href='/compare/' + parts[0] + '-vs-' + parts[1];}`}
+                    >
+                        <option value="" class="bg-paper">Select...</option>
+                        {
+                            allClones
+                                .filter((c: any) => c.id !== clone.id)
+                                .map((c: any) => {
+                                    const otherName = getCompareSlug(c);
+                                    const otherDisplayName = getDisplayName(c);
+                                    return (
+                                        <option value={otherName} class="bg-paper">
+                                            {otherDisplayName}
+                                        </option>
+                                    );
+                                })
+                        }
+                    </select>
+                    <Icon name="lucide:chevron-down" class={"w-3 h-3 text-pale-slate-500 absolute right-2.5 pointer-events-none"} />
+                </div>
+                <a
+                    href={`https://github.com/${clone.data.id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="border hairline px-5 py-2.5 text-[13px] font-medium rounded-sm text-pale-slate-600 dark:text-pale-slate-300 hover:text-ink dark:hover:text-white transition-colors duration-150 flex items-center gap-2"
+                >
+                    <Icon name="lucide:github" class={"w-4 h-4"} /> GitHub ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+            <h2 class="eyebrow">Facts</h2>
+            <div class={`mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-16 ${specGroups.length > 3 ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}>
+                {
+                    specGroups.map((group) => (
+                        <div class="mt-10 sm:mt-0">
+                            <h3 class="font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400 pb-3 border-b hairline">
+                                {group.title}
+                            </h3>
+                            {group.rows.map(([label, value]) => (
+                                <div class="flex items-center justify-between py-3 border-b hairline gap-4">
+                                    <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400 shrink-0">
+                                        {label}
+                                    </span>
+                                    <span class="font-mono text-[14px] tabular-nums text-pale-slate-700 dark:text-pale-slate-300 text-right">
+                                        {value}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    ))
+                }
+            </div>
+
+            <div class="mt-14 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
+                <h3 class="eyebrow">Security breakdown</h3>
+                <p class="font-mono text-[11px] text-pale-slate-500">
+                    Composite {fmtNum(clone.data.metrics.security_score)} / 100 ·{" "}
+                    <a href="/faq#radar" class="hover:text-ink dark:hover:text-white transition-colors duration-150">
+                        how these are scored
+                    </a>
+                </p>
+            </div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
+                {
+                    securityAxes.map((row) => (
+                        <div>
+                            <div class="flex items-baseline justify-between gap-4">
+                                <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400">
+                                    {row.label}
+                                </span>
+                                <span class="font-mono text-[13px] tabular-nums text-pale-slate-700 dark:text-pale-slate-300">
+                                    {row.value} / 10
+                                </span>
+                            </div>
+                            <div class="mt-2 h-1.5 w-full bg-line rounded-full overflow-hidden">
+                                <div class={`h-full ${row.tone}`} style={`width: ${row.value * 10}%`} />
+                            </div>
+                            <p class="mt-1.5 font-mono text-[10px] text-pale-slate-500">{row.caption}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    {
+        !isOpenClaw ? (
+            <section class="border-t hairline">
+                <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+                    <div class="mb-8">
+                        <h2 class="eyebrow">Decision</h2>
+                        <h3 class="mt-3 font-semibold text-2xl md:text-3xl tracking-[-0.01em] max-w-2xl">
+                            Why choose {displayName} over OpenClaw?
+                        </h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-x-16 gap-y-10">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
+                            <div>
+                                <h4 class="eyebrow text-accent dark:text-accent-soft mb-4">Why choose this</h4>
+                                <ul class="space-y-3 text-[14px] text-pale-slate-600 dark:text-pale-slate-400 leading-relaxed">
+                                    {
+                                        whyChoosePoints.length > 0 ? (
+                                            whyChoosePoints.map((point: string) => (
+                                                <li class="flex gap-3">
+                                                    <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0"></span>
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <li>Recommendation signal still sparse. Use the compare view and source links before making a call.</li>
+                                        )
+                                    }
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="eyebrow mb-4">Tradeoffs</h4>
+                                <ul class="space-y-3 text-[14px] text-pale-slate-600 dark:text-pale-slate-400 leading-relaxed">
+                                    {
+                                        tradeoffPoints.length > 0 ? (
+                                            tradeoffPoints.map((point: string) => (
+                                                <li class="flex gap-3">
+                                                    <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-pale-slate-500 shrink-0"></span>
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <li>Main tradeoffs are not yet strongly evidenced. Verify setup depth, docs quality, and release cadence manually.</li>
+                                        )
+                                    }
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="eyebrow text-accent dark:text-accent-soft mb-4">Best fit</h4>
+                                <ul class="space-y-3 text-[14px] text-pale-slate-600 dark:text-pale-slate-400 leading-relaxed">
+                                    {
+                                        bestFitPoints.length > 0 ? (
+                                            bestFitPoints.map((point: string) => (
+                                                <li class="flex gap-3">
+                                                    <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0"></span>
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <li>General-purpose alternative seekers who want a narrower profile than OpenClaw.</li>
+                                        )
+                                    }
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="eyebrow text-amber-500 dark:text-amber-400 mb-4">Avoid if</h4>
+                                <ul class="space-y-3 text-[14px] text-pale-slate-600 dark:text-pale-slate-400 leading-relaxed">
+                                    {
+                                        avoidIfPoints.length > 0 ? (
+                                            avoidIfPoints.map((point: string) => (
+                                                <li class="flex gap-3">
+                                                    <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0"></span>
+                                                    <span>{point}</span>
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <li>Skip if you need the broadest possible OpenClaw-style ecosystem with fewer assumptions.</li>
+                                        )
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/*
+                          One confidence signal, one sentence, one date. The
+                          previous sidebar carried three pills, two paragraphs,
+                          three label rows and a source-window line — and printed
+                          the refresh mode twice.
+                        */}
+                        <div class="border-t lg:border-t-0 lg:border-l hairline pt-8 lg:pt-0 lg:pl-12">
+                            <span class={`pill ${confidenceTone}`}>
+                                <span class="h-1.5 w-1.5 rounded-full bg-current"></span>
+                                {confidenceLabel}
+                                {
+                                    typeof confidenceScore === "number" && (
+                                        <span class="opacity-80">{confidenceScore}%</span>
+                                    )
+                                }
+                            </span>
+
+                            <p class="mt-5 text-[14px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                {clone.data.confidence_summary || "This recommendation blends measured signals with AI interpretation. Treat it as a shortcut, not a substitute for reading the source repo."}
+                            </p>
+
+                            <p
+                                class={`mt-5 font-mono text-[11px] ${freshness.stale ? "text-amber-700 dark:text-amber-400" : "text-pale-slate-500"}`}
+                            >
+                                AI layer reviewed {formatSignalDate(lastReviewedAt)} ·{" "}
+                                <a href="/faq" class="hover:text-ink dark:hover:text-white transition-colors duration-150">
+                                    how this is written
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        ) : (
+            <section class="border-t hairline">
+                <div class="mx-auto max-w-7xl px-6 py-14 md:py-20 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                    <div>
+                        <h2 class="eyebrow text-accent dark:text-accent-soft">Baseline project</h2>
+                        <h3 class="mt-3 font-semibold text-2xl md:text-4xl tracking-[-0.01em] leading-tight max-w-3xl">
+                            OpenClaw is the reference point for every alternative on this site.
+                        </h3>
+                        <p class="mt-3 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400 max-w-2xl">
+                            Use OpenClaw as the baseline when you want maximum ecosystem breadth, then compare it against narrower tools that optimize for security, local-first operation, team workflows, or ultra-lightweight deployment.
+                        </p>
+                    </div>
+                    <a
+                        href="/compare"
+                        class="btn-primary flex items-center gap-2 whitespace-nowrap"
+                    >
+                        Browse OpenClaw comparisons <Icon name="lucide:arrow-right" class={"w-4 h-4"} />
+                    </a>
+                </div>
+            </section>
+        )
+    }
+
+    {
+        hasStarHistory && (
+            <section class="border-t hairline">
+                <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+                    <div class="flex flex-wrap items-baseline justify-between gap-4">
+                        <h2 class="eyebrow">Star activity</h2>
+                        <p class="font-mono text-[11px] text-pale-slate-500">
+                            {fmtNum(clone.data.github_stars)} stars today
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <StarHistoryChart client:visible historyData={historyData} />
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+            <h2 class="eyebrow">Overview</h2>
+            {
+                clone.data.overview_markdown ? (
+                    <div
+                        class="markdown-body mt-6 max-w-3xl text-[15px] leading-[1.75]"
+                        set:html={marked.parse(clone.data.overview_markdown)}
+                    />
+                ) : (
+                    <p class="mt-6 max-w-3xl text-[15px] leading-[1.75] text-pale-slate-600 dark:text-pale-slate-400">
+                        {clone.data.vibe_summary}
+                    </p>
+                )
+            }
+
+            <div class="mt-12 border-t hairline pt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <span class="eyebrow">Compare with</span>
+                {
+                    compareLinks.map((link) => (
+                        <a
+                            href={link.href}
+                            class="font-mono text-[13px] text-pale-slate-600 dark:text-pale-slate-400 hover:text-accent dark:hover:text-accent-soft transition-colors duration-150"
+                        >
+                            {link.label}
+                        </a>
+                    ))
+                }
+                <a
+                    href="/compare"
+                    class="font-mono text-[13px] text-pale-slate-500 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                >
+                    all {totalBattles} →
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>

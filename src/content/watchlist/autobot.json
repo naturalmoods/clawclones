@@ -1,0 +1,64 @@
+{
+  "id": "crystal-autobot/autobot",
+  "name": "Autobot",
+  "language": "Crystal",
+  "vibe_summary": "Ultra-efficient personal AI assistant powered by Crystal",
+  "health_status": "healthy",
+  "github_stars": 44,
+  "metrics": {
+    "boot_time_ms": 0,
+    "memory_mb": 0,
+    "security_score": 0
+  },
+  "radar_chart": {
+    "sandboxing": 5,
+    "api_security": 5,
+    "network_isolation": 5,
+    "telemetry_safety": 5,
+    "shell_access_risk": 5
+  },
+  "tags": [
+    "autobot",
+    "watchlist",
+    "new"
+  ],
+  "community_sentiment": 23,
+  "reddit_mentions": 0,
+  "web_mentions": 0,
+  "best_for": [],
+  "avoid_if": [],
+  "deployment_target": [],
+  "local_first": null,
+  "cloud_dependency": "unknown",
+  "setup_difficulty": "unknown",
+  "privacy_posture": "unknown",
+  "multi_user": null,
+  "plugin_ecosystem": "unknown",
+  "license_type": null,
+  "last_commit_at": null,
+  "contributors_count": null,
+  "open_issues_count": null,
+  "release_cadence_days": null,
+  "operational_risk": "unknown",
+  "openclaw_advantages": [],
+  "openclaw_disadvantages": [],
+  "confidence_summary": "Watchlist profiles use lightweight signals until a full AI analysis is available.",
+  "evidence_confidence": 20,
+  "content_ops": {
+    "last_generated_at": "2026-03-13T04:57:21.775Z",
+    "last_reviewed_at": "2026-08-02T08:08:21.221Z",
+    "refresh_mode": "refresh",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
+    "change_reason": "Watchlist refresh using lightweight repository signals.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "",
+  "latest_release": {
+    "version": "v0.7.0",
+    "date": "2026-03-22T07:26:11Z",
+    "url": "https://github.com/crystal-autobot/autobot/releases/tag/v0.7.0"
+  },
+  "last_updated": "2026-08-02T08:08:21.221Z",
+  "watchlist_added": "2026-03-05T04:46:03.370Z",
+  "promotion_status": "observing"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "AstrBotDevs/AstrBot",
+  "name": "AstrBot",
+  "language": "Python",
+  "vibe_summary": "AstrBot is a multilingual, plugin-rich AI agent framework bridging dozens of IM platforms with LLMs via a web dashboard. Its active development and broad protocol support make it a strong self-hosted OpenClaw alternative for community-driven bot deployments.",
+  "health_status": "healthy",
+  "github_stars": 38466,
+  "metrics": {
+    "boot_time_ms": 200,
+    "memory_mb": 80,
+    "security_score": 75
+  },
+  "radar_chart": {
+    "sandboxing": 5,
+    "api_security": 7,
+    "network_isolation": 5,
+    "telemetry_safety": 6,
+    "shell_access_risk": 7
+  },
+  "tags": [
+    "ai-agent",
+    "im-integration",
+    "plugin-framework",
+    "self-hosted",
+    "llm"
+  ],
+  "community_sentiment": 50,
+  "reddit_mentions": 8,
+  "web_mentions": 10,
+  "best_for": [
+    "Self-hosters wanting multi-IM bot coverage",
+    "Developers building custom LLM plugins",
+    "Communities needing a web UI for agent management"
+  ],
+  "avoid_if": [
+    "Users wanting minimal dependency footprint",
+    "Those needing enterprise-grade sandboxing out of the box",
+    "Projects requiring guaranteed no-shell execution"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "cloud"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "medium",
+  "privacy_posture": "mixed",
+  "multi_user": true,
+  "plugin_ecosystem": "strong",
+  "license_type": "AGPL-3.0",
+  "last_commit_at": "2026-08-02T09:53:20Z",
+  "contributors_count": 335,
+  "open_issues_count": 1361,
+  "release_cadence_days": 4,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Broader IM platform integration out of the box",
+    "Built-in web management dashboard and ChatUI",
+    "Mature plugin/skill system with error hardening",
+    "AGPL-3.0 licensing ensures copyleft protections"
+  ],
+  "openclaw_disadvantages": [
+    "Higher memory and boot overhead vs optimized OpenClaw builds",
+    "Less focused on lightweight edge deployment",
+    "Community sentiment less proven in provided English searches"
+  ],
+  "confidence_summary": "Repo metadata and commits show active development and clear OpenClaw alternative positioning, but provided Reddit and web mentions are largely unrelated to AstrBot, creating uncertainty in community sentiment scoring.",
+  "evidence_confidence": 80,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:34:14.718Z",
+    "last_reviewed_at": "2026-07-13T02:34:14.718Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "AstrBot is an open-source AI agent assistant and development framework written in Python that aims to serve as a comprehensive alternative to OpenClaw. It integrates a wide array of instant messaging platforms, large language models, and a plugin architecture, allowing users to deploy a single bot across many networks with centralized control.\n\nThe project is under active development, with recent commits focusing on robustness—such as hardening skill archive downloads with proper HTTP error codes, improving provider cache hit rates, and fixing mobile ChatUI issues. Its release cadence is frequent, with v4.26.5 published in July 2026, reflecting a healthy maintenance status.\n\nUnlike OpenClaw’s minimalist lobster-themed approach, AstrBot emphasizes a web-based management console, multilingual support (including Chinese, Japanese, French, etc.), and a broad skill ecosystem. While it offers strong integration capabilities, operators should note potential shell-access risks from plugins and moderate resource usage typical of Python services.",
+  "latest_release": {
+    "version": "v4.27.0",
+    "date": "2026-08-02T09:55:56Z",
+    "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.27.0"
+  },
+  "last_updated": "2026-08-02T12:53:44.454Z"
+}

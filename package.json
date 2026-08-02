@@ -1,0 +1,44 @@
+{
+  "name": "clawclones",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && tsx scripts/generate-indexable-compares.ts && tsx scripts/generate-compare-og-images.ts && astro build && tsx scripts/generate-compare-redirects.ts",
+    "preview": "astro preview",
+    "generate-compare-og": "tsx scripts/generate-compare-og-images.ts",
+    "generate-indexable-compares": "tsx scripts/generate-indexable-compares.ts",
+    "astro": "astro",
+    "update-data": "tsx scripts/update-data.ts",
+    "update-github": "tsx scripts/update-github.ts",
+    "fetch-analytics": "tsx scripts/fetch-analytics.ts",
+    "update-analysis": "tsx scripts/generate-deep-analysis.ts",
+    "generate-partner-feed": "tsx scripts/generate-partner-feed.ts",
+    "update-watchlist": "tsx scripts/update-watchlist.ts"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/sitemap": "^3.7.0",
+    "@iconify-json/lucide": "^1.2.116",
+    "@tailwindcss/vite": "^4.2.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.17.1",
+    "astro-icon": "^1.1.5",
+    "echarts": "^6.0.0",
+    "fuse.js": "^7.1.0",
+    "lucide-react": "^0.575.0",
+    "marked": "^17.0.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "dotenv": "^17.3.1",
+    "tsx": "^4.21.0"
+  }
+}

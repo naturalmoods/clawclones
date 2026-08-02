@@ -1,0 +1,85 @@
+{
+  "id": "agentscope-ai/CoPaw",
+  "name": "CoPaw",
+  "language": "Python",
+  "vibe_summary": "A personal AI assistant focused on easy local/cloud deployment with extensible chat app integrations, recently rebranded to QwenPaw 2.0 with memory and tool enhancements. It aims to be a user-friendly OpenClaw alternative with strong multi-platform chat support.",
+  "health_status": "healthy",
+  "github_stars": 32088,
+  "metrics": {
+    "boot_time_ms": 200,
+    "memory_mb": 80,
+    "security_score": 65
+  },
+  "radar_chart": {
+    "sandboxing": 5,
+    "api_security": 6,
+    "network_isolation": 4,
+    "telemetry_safety": 5,
+    "shell_access_risk": 7
+  },
+  "tags": [
+    "personal-ai",
+    "assistant",
+    "multi-chat",
+    "extensible",
+    "local-deploy"
+  ],
+  "community_sentiment": 50,
+  "reddit_mentions": 15,
+  "web_mentions": 10,
+  "best_for": [
+    "Users wanting a personal AI assistant on own machine",
+    "Those needing multi-chat app integration",
+    "Developers wanting extensible Python-based assistant"
+  ],
+  "avoid_if": [
+    "Users needing strict sandboxing",
+    "Those wanting a non-Python lightweight agent",
+    "Projects requiring high security out-of-box"
+  ],
+  "deployment_target": [
+    "desktop",
+    "cloud",
+    "self-hosted"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "mixed",
+  "multi_user": null,
+  "plugin_ecosystem": "emerging",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-07-31T09:45:22Z",
+  "contributors_count": 213,
+  "open_issues_count": 953,
+  "release_cadence_days": 2,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Easy install and deploy on own machine or cloud",
+    "Supports multiple chat apps with extensible capabilities",
+    "Python-based, familiar to many devs",
+    "Recent v2.0.0 with memory and tool improvements"
+  ],
+  "openclaw_disadvantages": [
+    "Less focused on security/sandboxing than OpenClaw may be",
+    "Reddit community not yet engaged (noise matches)",
+    "Possibly heavier resource usage than OpenClaw's optimized versions"
+  ],
+  "confidence_summary": "Evidence from README and release shows active development as personal AI assistant alternative, but Reddit mentions are unrelated noise and security details are sparse.",
+  "evidence_confidence": 70,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:30:08.524Z",
+    "last_reviewed_at": "2026-07-13T02:30:08.524Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "CoPaw (formerly or also known as QwenPaw) is a personal AI assistant built in Python, designed for easy installation and deployment either on a user's own machine or in the cloud. It supports integration with multiple chat applications and offers easily extensible capabilities through tools and plugins, as seen in its v2.0.0 release that added web search/fetch tool chunks and memory session propagation.\n\nThe architecture emphasizes user-friendly setup and broad chat platform connectivity, differentiating from OpenClaw by its Python foundation and explicit multi-app support. Recent commits show active maintenance with bug fixes for memory summarization and desktop mode, indicating a healthy project trajectory.\n\nWhile it shares OpenClaw's goal of a personal assistant for any platform, CoPaw's security posture and sandboxing are less documented, making it suitable for users prioritizing extensibility over hardened isolation.",
+  "latest_release": {
+    "version": "v2.0.1",
+    "date": "2026-07-24T07:18:16Z",
+    "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.0.1"
+  },
+  "last_updated": "2026-08-02T12:53:42.635Z"
+}

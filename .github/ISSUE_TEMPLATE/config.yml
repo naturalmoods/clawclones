@@ -1,0 +1,10 @@
+# Blank issues stay enabled so code bugs and questions do not have to be
+# squeezed into the two content templates.
+blank_issues_enabled: true
+contact_links:
+  - name: Methodology and scoring
+    url: https://clawclones.com/faq
+    about: How the security sub-scores, refresh cadence and AI layer work.
+  - name: Email
+    url: mailto:hello@clawclones.com
+    about: Anything you would rather not discuss in a public issue.

@@ -1,0 +1,85 @@
+{
+  "id": "microclaw/microclaw",
+  "name": "MicroClaw",
+  "language": "Rust",
+  "vibe_summary": "A Rust-native, channel-agnostic agent runtime focused on rock-solid reliability and verified task completion. Aggressive active development with strong emphasis on sandboxing, governance, and operational resilience.",
+  "health_status": "healthy",
+  "github_stars": 729,
+  "metrics": {
+    "boot_time_ms": 8,
+    "memory_mb": 1.5,
+    "security_score": 88
+  },
+  "radar_chart": {
+    "sandboxing": 8,
+    "api_security": 8,
+    "network_isolation": 6,
+    "telemetry_safety": 7,
+    "shell_access_risk": 4
+  },
+  "tags": [
+    "rust",
+    "agent-runtime",
+    "chat-agents",
+    "self-hosted",
+    "mcp"
+  ],
+  "community_sentiment": 50,
+  "reddit_mentions": 0,
+  "web_mentions": 10,
+  "best_for": [
+    "Self-hosters wanting a Rust-based multi-channel agent",
+    "Teams needing verified task completion and governance",
+    "Users wanting extensible skills/MCP with local control plane"
+  ],
+  "avoid_if": [
+    "Those needing a stable production release (main is volatile)",
+    "Users wanting extensive community plugins (ecosystem emerging)",
+    "Non-technical users uncomfortable with CLI/config"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "desktop",
+    "cloud"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "medium",
+  "privacy_posture": "strong",
+  "multi_user": true,
+  "plugin_ecosystem": "emerging",
+  "license_type": "MIT",
+  "last_commit_at": "2026-08-02T02:08:59Z",
+  "contributors_count": 25,
+  "open_issues_count": 0,
+  "release_cadence_days": 7,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Rust-native performance and low memory footprint (micro-optimized)",
+    "Built-in verified completion contracts with evidence stamping",
+    "Strong governance: tool policy gates, token budgets, editable config",
+    "Resilient provider fallback and DLQ auto-replay"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller community and plugin ecosystem vs OpenClaw",
+    "Main branch unstable; stable branch lags",
+    "Less cross-platform mobile support (no native Android/iOS apps mentioned)"
+  ],
+  "confidence_summary": "Evidence from README and recent commits is strong for architecture and security, but community sentiment is uncertain due to zero Reddit mentions and weak web footprint specific to MicroClaw.",
+  "evidence_confidence": 80,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:36:44.014Z",
+    "last_reviewed_at": "2026-07-13T02:36:44.014Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "MicroClaw is a Rust-built, channel-agnostic agent runtime that unifies Telegram, Discord, Slack, Feishu, IRC, and web interfaces under a single persistent agent loop. It emphasizes agentic execution with multi-step tool use, sub-agents, scheduled tasks, skills, and MCP support, while providing a local web control plane for governance and task management.\n\nRecent development focuses heavily on reliability and security: completion contracts verify task outcomes with machine-checkable evidence, a tool-policy gate enforces pre-call restrictions, ClawHub installs are tree-pinned and injection-scanned, and provider circuit breakers with fallback models improve resilience. The architecture includes delivery outboxes for guaranteed message delivery, interrupted-turn recovery, and supervised background loops with restart backoff.\n\nCompared to OpenClaw, MicroClaw prioritizes a lightweight Rust footprint (micro-optimized memory/boot) and operational rigor, but trades off a smaller community, less mobile-native support, and a rapidly changing main branch that recommends using the stable branch for production.",
+  "latest_release": {
+    "version": "v0.3.5",
+    "date": "2026-08-01T21:26:19Z",
+    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.3.5"
+  },
+  "last_updated": "2026-08-02T12:53:45.521Z"
+}

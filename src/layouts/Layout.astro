@@ -1,0 +1,405 @@
+---
+import { Icon } from 'astro-icon/components';
+import "../styles/global.css";
+import SuggestForm from "../components/SuggestForm.astro";
+import QuickSearchWrapper from "../components/QuickSearchWrapper.astro";
+import QuickSearchModal from "../components/QuickSearchModal";
+import { getCollection } from "astro:content";
+import { formatSignalDate } from "../lib/content-signals";
+
+const clones = await getCollection("clones");
+const searchClones = clones.map(({ id, data }) => ({
+	id,
+	data: {
+		name: data.name,
+		language: data.language,
+		vibe_summary: data.vibe_summary,
+		github_stars: data.github_stars,
+		tags: data.tags,
+	},
+}));
+
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	url?: string;
+	frontmatter?: Record<string, any>;
+	robots?: string;
+	structuredData?: Record<string, unknown>[];
+}
+
+const { title, description, image, url, frontmatter, robots, structuredData = [] } = Astro.props;
+const pageTitle =
+	title || frontmatter?.title || "ClawClones - The OpenClaw ClawVerse";
+const pageDescription =
+	description ||
+	frontmatter?.description ||
+	"Discover, compare and stay up-to-date with the fastest growing open-source OpenClaw AI ecosystem forks and alternatives. Explore the clones.";
+const pageImage =
+	image || frontmatter?.image || "https://clawclones.com/infographic.jpg";
+const pageUrl =
+	url ||
+	frontmatter?.url ||
+	`https://clawclones.com${Astro.url ? Astro.url.pathname : "/"}`;
+const isArticle = frontmatter?.isArticle || false;
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbData = pathSegments.length === 0
+	? []
+	: [{
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://clawclones.com/' },
+			...pathSegments.map((segment, index) => ({
+				'@type': 'ListItem',
+				position: index + 2,
+				name: segment.replace(/-/g, ' '),
+				item: `https://clawclones.com/${pathSegments.slice(0, index + 1).join('/')}/`,
+			})),
+		],
+	}];
+const jsonLd = [...breadcrumbData, ...structuredData];
+
+/**
+ * One flat level of navigation. The three editorial routes used to sit behind
+ * a dropdown labelled "Hub", which named neither its contents nor a
+ * destination and buried the ecosystem report two interactions deep. Labels
+ * are kept short enough that all six fit the desktop bar at `lg`.
+ */
+const navLinks = [
+	{ href: "/", label: "Index", match: "exact" as const },
+	{ href: "/clawverse", label: "Ecosystem map", match: "prefix" as const },
+	{ href: "/compare", label: "Compare", match: "prefix" as const },
+	{ href: "/analysis", label: "Analysis", match: "prefix" as const },
+	{ href: "/about", label: "About", match: "prefix" as const },
+	{ href: "/faq", label: "Methodology", match: "prefix" as const },
+];
+
+// Astro emits directory-style URLs, so a trailing slash is normalised away
+// before matching; otherwise `/analysis/` would never look active.
+const currentPath = Astro.url.pathname.replace(/\/+$/, "") || "/";
+const isActive = (link: (typeof navLinks)[number]) =>
+	link.match === "exact"
+		? currentPath === link.href
+		: currentPath === link.href || currentPath.startsWith(`${link.href}/`);
+
+const lastRefreshedAt = clones.reduce(
+	(latest: string, clone) =>
+		clone.data.last_updated > latest ? clone.data.last_updated : latest,
+	clones[0]?.data.last_updated ?? "",
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--
+		  The SVG carries its own prefers-color-scheme rule, so the mark flips
+		  with the browser theme rather than disappearing into a dark tab bar.
+		  The .ico is the legacy fallback; iOS ignores both and wants a PNG
+		  with an opaque background.
+		-->
+		<link rel="icon" href="/favicon.ico" sizes="32x32" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<script is:inline>
+			// Theme init before paint: dark if saved, else follow system preference.
+			const _t = localStorage.cc_theme;
+			if (_t === "dark" || (!_t && matchMedia("(prefers-color-scheme: dark)").matches))
+				document.documentElement.classList.add("dark");
+			function ccToggle() {
+				const r = document.documentElement;
+				r.classList.toggle("dark");
+				localStorage.cc_theme = r.classList.contains("dark") ? "dark" : "light";
+			}
+		</script>
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Primary Meta Tags -->
+		<meta name="title" content={pageTitle} />
+		<meta name="description" content={pageDescription} />
+		<meta name="robots" content={robots || "index, follow"} />
+		<link rel="canonical" href={pageUrl} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={pageUrl} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={pageDescription} />
+		<meta property="og:image" content={pageImage} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={pageUrl} />
+		<meta property="twitter:title" content={pageTitle} />
+		<meta property="twitter:description" content={pageDescription} />
+		<meta property="twitter:image" content={pageImage} />
+		{jsonLd.map((data) => (
+			<script type="application/ld+json" set:html={JSON.stringify(data)} />
+		))}
+
+		<title>{pageTitle}</title>
+	</head>
+	<body
+		class="min-h-screen bg-paper text-pale-slate antialiased relative overflow-x-hidden font-sans"
+	>
+		<!--
+		  Above the mobile menu (z-60) on purpose: the drawer's backdrop would
+		  otherwise cover the header's own close button. The panel clears the
+		  header with its top padding.
+		-->
+		<header
+			class="sticky top-0 left-0 right-0 z-[70] glass-nav border-b hairline"
+		>
+			<div
+				class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 h-14 group/nav"
+			>
+				<!-- Brand -->
+				<div class="flex items-center gap-4">
+					<a
+						href="/"
+						class="flex items-center gap-2 group/logo relative"
+					>
+						<span
+							class="relative font-semibold tracking-[0.22em] text-[13px] text-white"
+						>
+							CLAWCLONES
+						</span>
+					</a>
+				</div>
+
+				<nav class="flex items-center gap-6 sm:gap-10">
+					<div
+						class="hidden lg:flex items-center gap-5 xl:gap-7 text-[13px] font-mono text-pale-slate-500"
+					>
+						{
+							navLinks.map((link) => (
+								<a
+									href={link.href}
+									aria-current={isActive(link) ? "page" : undefined}
+									class={`relative py-1 transition-colors duration-150 ${
+										isActive(link)
+											? "text-ink dark:text-white after:absolute after:inset-x-0 after:-bottom-px after:h-px after:bg-ink dark:after:bg-white"
+											: "hover:text-ink dark:hover:text-white"
+									}`}
+								>
+									{link.label}
+								</a>
+							))
+						}
+					</div>
+
+					<div class="flex items-center gap-2 sm:gap-4">
+						<QuickSearchWrapper />
+						<button
+							onclick="ccToggle()"
+							aria-label="Toggle color mode"
+							class="font-mono text-[13px] text-pale-slate-500 hover:text-white transition-colors duration-150 px-1"
+						>
+							◐
+						</button>
+						<!-- Hamburger Menu Button (mobile only) -->
+						<button
+							id="mobile-menu-btn"
+							class="lg:hidden flex items-center justify-center w-9 h-9 rounded-sm border hairline text-pale-slate-500 hover:text-ink dark:hover:text-white transition-colors duration-150"
+							aria-label="Open menu"
+						>
+							<svg
+								id="hamburger-icon"
+								class="w-5 h-5"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M4 6h16M4 12h16M4 18h16"></path>
+							</svg>
+							<svg
+								id="close-icon"
+								class="w-5 h-5 hidden"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M6 18L18 6M6 6l12 12"></path>
+							</svg>
+						</button>
+						<button
+							onclick="document.getElementById('suggest-modal')?.showModal?.()"
+							class="hidden lg:flex px-4 py-2 rounded-sm bg-ink text-paper text-[13px] font-medium hover:opacity-90 transition-opacity duration-150 flex items-center gap-1.5 group/btn"
+						>
+							<Icon name="lucide:plus" class={"w-3.5 h-3.5 group-hover/btn:rotate-90 transition-transform duration-500"} />
+							<span>Add clone</span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Mobile Menu Overlay -->
+		<div
+			id="mobile-menu"
+			class="fixed inset-0 z-[60] pointer-events-none opacity-0 transition-opacity duration-300"
+		>
+			<!-- Backdrop -->
+			<div
+				id="mobile-menu-backdrop"
+				class="absolute inset-0 bg-black/80 backdrop-blur-sm"
+			>
+			</div>
+
+			<!-- Menu Panel -->
+			<div
+				id="mobile-menu-panel"
+				class="absolute top-0 right-0 w-[85%] max-w-sm h-full bg-paper border-l hairline transform translate-x-full transition-transform duration-300 ease-out overflow-y-auto"
+			>
+				<div class="p-6 pt-24 flex flex-col gap-2">
+					<!-- Add Button for Mobile -->
+					<button
+						onclick="document.getElementById('suggest-modal')?.showModal?.(); document.getElementById('mobile-menu-btn')?.click();"
+						class="w-full mb-4 px-6 py-4 rounded-sm bg-ink text-paper font-mono font-medium text-[12px] uppercase tracking-[0.18em] hover:opacity-90 transition-opacity duration-150 flex items-center justify-center gap-3 active:scale-95"
+					>
+						<Icon name="lucide:plus" class={"w-5 h-5"} />
+						Submit New Clone
+					</button>
+
+					<!-- Nav Links: same flat list and order as the desktop bar -->
+					<div class="border hairline rounded-sm overflow-hidden">
+						{
+							navLinks.map((link, index) => (
+								<a
+									href={link.href}
+									aria-current={isActive(link) ? "page" : undefined}
+									class={`mobile-menu-link block px-5 py-4 text-[14px] transition-colors duration-150 ${
+										index < navLinks.length - 1 ? "border-b hairline" : ""
+									} ${
+										isActive(link)
+											? "text-ink dark:text-white bg-black/[0.03] dark:bg-white/[0.05]"
+											: "text-pale-slate-600 dark:text-pale-slate-400 hover:text-ink dark:hover:text-white hover:bg-black/[0.02] dark:hover:bg-white/[0.03]"
+									}`}
+								>
+									{link.label}
+								</a>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main
+			class={`relative z-10 ${isArticle ? "mx-auto max-w-3xl px-6 py-16 md:py-24 markdown-body" : "w-full"}`}
+		>
+			<slot />
+		</main>
+
+		<footer class="border-t hairline relative z-10">
+			<div
+				class="max-w-7xl mx-auto px-6 py-8 flex flex-wrap items-center gap-x-8 gap-y-2 font-mono text-[11px] text-pale-slate-500"
+			>
+				<span>
+					&copy; {new Date().getFullYear()} ClawClones.com · OpenClaw
+					ClawVerse
+				</span>
+				<!--
+				  The measured refresh date rather than a claim about the schedule:
+				  when the pipeline stalls, the footer should show it instead of
+				  repeating "nightly".
+				-->
+				<span class="hidden md:inline">
+					Data from GitHub, Reddit and the open web · last refreshed {
+						formatSignalDate(lastRefreshedAt)
+					}
+				</span>
+				<a
+					href="/faq"
+					class="hover:text-white transition-colors duration-150"
+				>
+					Methodology (FAQ)
+				</a>
+				<a
+					href="https://openclaw.lu/?utm_source=clawclones&utm_medium=footer&utm_campaign=partner-link"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="hover:text-white transition-colors duration-150"
+				>
+					Ecosystem signals by OpenClaw Seismograph ↗
+				</a>
+				<a
+					href="mailto:hello@clawclones.com"
+					class="hover:text-white transition-colors duration-150"
+				>
+					hello@clawclones.com
+				</a>
+			</div>
+		</footer>
+
+		<SuggestForm />
+		<QuickSearchModal clones={searchClones} client:idle />
+
+		<script is:inline>
+
+			// Mobile Hamburger Menu
+			(function () {
+				var btn = document.getElementById("mobile-menu-btn");
+				var menu = document.getElementById("mobile-menu");
+				var panel = document.getElementById("mobile-menu-panel");
+				var backdrop = document.getElementById("mobile-menu-backdrop");
+				var hamburgerIcon = document.getElementById("hamburger-icon");
+				var closeIcon = document.getElementById("close-icon");
+				if (!btn || !menu || !panel) return;
+				var isOpen = false;
+				function openMenu() {
+					isOpen = true;
+					menu.classList.remove("pointer-events-none", "opacity-0");
+					menu.classList.add("pointer-events-auto", "opacity-100");
+					panel.classList.remove("translate-x-full");
+					panel.classList.add("translate-x-0");
+					if (hamburgerIcon) hamburgerIcon.classList.add("hidden");
+					if (closeIcon) closeIcon.classList.remove("hidden");
+					document.body.style.overflow = "hidden";
+				}
+				function closeMenu() {
+					isOpen = false;
+					menu.classList.add("opacity-0");
+					menu.classList.remove("opacity-100");
+					panel.classList.add("translate-x-full");
+					panel.classList.remove("translate-x-0");
+					if (hamburgerIcon) hamburgerIcon.classList.remove("hidden");
+					if (closeIcon) closeIcon.classList.add("hidden");
+					document.body.style.overflow = "";
+					setTimeout(function () {
+						if (!isOpen) {
+							menu.classList.add("pointer-events-none");
+							menu.classList.remove("pointer-events-auto");
+						}
+					}, 300);
+				}
+				btn.addEventListener("click", function () {
+					isOpen ? closeMenu() : openMenu();
+				});
+				document.addEventListener("keydown", function (event) {
+					if (event.key !== "Escape" || !isOpen) return;
+					closeMenu();
+					btn.focus();
+				});
+				if (backdrop) backdrop.addEventListener("click", closeMenu);
+				menu.querySelectorAll(".mobile-menu-link").forEach(
+					function (link) {
+						link.addEventListener("click", closeMenu);
+					},
+				);
+			})();
+		</script>
+	</body>
+</html>

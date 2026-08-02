@@ -1,0 +1,89 @@
+---
+/**
+ * Ecosystem-level aggregates for the ClawVerse page. Deliberately four numbers
+ * on one hairline row: the per-clone detail lives in the index table.
+ */
+import { getCollection } from "astro:content";
+import { isCloneActive } from "../lib/activity";
+
+const clones = (await getCollection("clones")).filter((clone) =>
+    isCloneActive(clone, new Date()),
+);
+
+const totalStars = clones.reduce(
+    (total, clone) => total + (clone.data.github_stars || 0),
+    0,
+);
+
+const languageCounts = clones.reduce(
+    (counts, clone) => {
+        counts[clone.data.language] = (counts[clone.data.language] || 0) + 1;
+        return counts;
+    },
+    {} as Record<string, number>,
+);
+const [topLanguage, topLanguageCount] = Object.entries(languageCounts).sort(
+    (left, right) => right[1] - left[1],
+)[0] ?? ["—", 0];
+
+const securityAvg = Math.round(
+    clones.reduce(
+        (total, clone) => total + (clone.data.metrics.security_score || 0),
+        0,
+    ) / Math.max(1, clones.length),
+);
+
+const medianMemory = (() => {
+    const sorted = clones
+        .map((clone) => clone.data.metrics.memory_mb)
+        .sort((left, right) => left - right);
+    if (sorted.length === 0) return 0;
+    const middle = Math.floor(sorted.length / 2);
+    return sorted.length % 2 === 0
+        ? (sorted[middle - 1] + sorted[middle]) / 2
+        : sorted[middle];
+})();
+
+const stats = [
+    {
+        label: "Tracked clones",
+        value: String(clones.length),
+        detail: `${Object.keys(languageCounts).length} languages`,
+    },
+    {
+        label: "Combined stars",
+        value: `${(totalStars / 1000).toFixed(1)}k`,
+        detail: "across every tracked repo",
+    },
+    {
+        label: "Most common stack",
+        value: topLanguage,
+        detail: `${topLanguageCount} project${topLanguageCount === 1 ? "" : "s"}`,
+    },
+    {
+        label: "Median memory",
+        value: `${medianMemory} MB`,
+        detail: `avg. security ${securityAvg} / 100`,
+    },
+];
+---
+
+<section class="border-t hairline">
+    <div class="mx-auto max-w-7xl px-6 py-10 md:py-12">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8">
+            {
+                stats.map((stat) => (
+                    <div>
+                        <div class="eyebrow">{stat.label}</div>
+                        <div class="mt-3 font-semibold text-[28px] md:text-[34px] leading-none tracking-[-0.02em] tabular-nums">
+                            {stat.value}
+                        </div>
+                        <div class="mt-2 font-mono text-[11px] text-pale-slate-400">
+                            {stat.detail}
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,278 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { getCanonicalComparePath } from "../../lib/compare";
+import { formatStars, getDisplayName } from "../../lib/clone-format";
+import {
+    formatSignalDate,
+    getConfidenceDetail,
+    getConfidenceLabel,
+    getConfidenceTone,
+    getFreshnessState,
+    getRefreshModeLabel,
+    getSignalDates,
+} from "../../lib/content-signals";
+import {
+    deriveBestFor,
+    deriveOpenClawDelta,
+    deriveTradeoff,
+    getUseCaseLandingPage,
+    getUseCaseLandingShortlist,
+    useCaseLandingPages,
+} from "../../lib/use-cases";
+
+export async function getStaticPaths() {
+    return useCaseLandingPages.map((page) => ({
+        params: { slug: page.slug },
+        props: { page },
+    }));
+}
+
+const { page } = Astro.props;
+const clones = await getCollection("clones");
+const openClaw = clones.find((clone) => clone.id === "openclaw");
+const resolvedPage = getUseCaseLandingPage(page.slug) || page;
+const shortlist = getUseCaseLandingShortlist(resolvedPage.slug, clones, 6);
+const primary = shortlist[0];
+const secondary = shortlist.slice(1);
+const primaryFreshness = primary ? getFreshnessState(primary.data) : null;
+const primarySignalDates = primary ? getSignalDates(primary.data) : null;
+
+function compareHref(clone: (typeof clones)[number]) {
+    if (!openClaw) {
+        return `/clones/${clone.id}`;
+    }
+
+    return getCanonicalComparePath(clone, openClaw);
+}
+---
+
+<Layout
+    title={`${resolvedPage.title} - ClawClones`}
+    description={resolvedPage.description}
+>
+    <section class="mx-auto max-w-7xl px-6 pt-20 pb-14 md:pt-28 md:pb-20">
+        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+            {resolvedPage.kicker} · {shortlist.length} shortlisted of {clones.length} tracked
+        </p>
+        <h1 class="mt-7 font-semibold text-[40px] md:text-[72px] leading-[1.02] tracking-[-0.02em] max-w-4xl">
+            {resolvedPage.title}
+        </h1>
+        <p class="mt-7 max-w-2xl text-[17px] leading-relaxed text-pale-slate-400">
+            {resolvedPage.description}
+        </p>
+
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-x-16 gap-y-10">
+            <p class="text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400 max-w-2xl">
+                {resolvedPage.intro}
+            </p>
+            <div class="border-t lg:border-t-0 lg:border-l hairline pt-8 lg:pt-0 lg:pl-12">
+                <h2 class="eyebrow">This page optimizes for</h2>
+                <ul class="mt-4 space-y-3 text-[14px] text-pale-slate-600 dark:text-pale-slate-400 leading-relaxed">
+                    {
+                        resolvedPage.criteria.map((criterion) => (
+                            <li class="flex gap-3">
+                                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent shrink-0" />
+                                <span>{criterion}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+                <div class="mt-6 flex flex-wrap items-center gap-3">
+                    <a href={`/?intent=${resolvedPage.intent}#clones`} class="btn-primary">
+                        Open the filtered index →
+                    </a>
+                    <a
+                        href="/faq"
+                        class="border hairline px-5 py-2.5 text-[13px] font-medium rounded-sm text-pale-slate-600 dark:text-pale-slate-300 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                    >
+                        Methodology
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {
+        primary && (
+            <section class="border-t hairline">
+                <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+                    <div class="flex flex-wrap items-end justify-between gap-6">
+                        <div>
+                            <h2 class="eyebrow text-accent dark:text-accent-soft">
+                                Recommended first click
+                            </h2>
+                            <h3 class="mt-3 font-semibold text-[32px] md:text-[52px] leading-none tracking-[-0.02em]">
+                                {getDisplayName(primary)}
+                            </h3>
+                            <p class="mt-5 max-w-2xl text-[16px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                {primary.data.vibe_summary}
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href={compareHref(primary)} class="btn-primary flex items-center gap-2">
+                                Compare with OpenClaw <Icon name="lucide:swords" class={"w-4 h-4"} />
+                            </a>
+                            <a
+                                href={`/clones/${primary.id}`}
+                                class="border hairline px-5 py-2.5 text-[13px] font-medium rounded-sm text-pale-slate-600 dark:text-pale-slate-300 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                            >
+                                Full profile
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 flex flex-wrap items-center gap-2">
+                        <span class={`pill ${getConfidenceTone(primary.data.evidence_confidence)}`}>
+                            <span class="h-1.5 w-1.5 rounded-full bg-current" />
+                            {getConfidenceLabel(primary.data.evidence_confidence)}
+                        </span>
+                        {primaryFreshness && (
+                            <span class={`pill ${primaryFreshness.tone}`}>
+                                <span class="h-1.5 w-1.5 rounded-full bg-current" />
+                                {primaryFreshness.label}
+                            </span>
+                        )}
+                        <span class="font-mono text-[11px] text-pale-slate-400 ml-1">
+                            Security {primary.data.metrics.security_score} / 100 · Best fit:{" "}
+                            {deriveBestFor(primary)}
+                        </span>
+                    </div>
+
+                    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-8">
+                        <div>
+                            <h4 class="eyebrow text-accent dark:text-accent-soft">Why it leads</h4>
+                            <p class="mt-3 text-[14px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                {deriveOpenClawDelta(primary, openClaw)}
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="eyebrow">Key tradeoff</h4>
+                            <p class="mt-3 text-[14px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                {deriveTradeoff(primary)}
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="eyebrow">Signal state</h4>
+                            <p class="mt-3 text-[14px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                {primaryFreshness?.detail}{" "}
+                                {getConfidenceDetail(primary.data.evidence_confidence)}
+                            </p>
+                            <p class="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-500">
+                                Reviewed {formatSignalDate(primarySignalDates?.lastReviewedAt)} ·
+                                generated {formatSignalDate(primarySignalDates?.lastGeneratedAt)} ·{" "}
+                                {getRefreshModeLabel(primary.data.content_ops?.refresh_mode)}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    {
+        secondary.length > 0 && (
+            <section class="border-t hairline">
+                <div class="mx-auto max-w-7xl px-6 pt-14 pb-8 md:pt-20">
+                    <h2 class="eyebrow">Shortlist</h2>
+                    <h3 class="mt-3 font-semibold text-[28px] md:text-[36px] tracking-[-0.01em] max-w-2xl">
+                        The rest of the current contenders.
+                    </h3>
+                    <p class="mt-3 max-w-xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                        Use the top pick as your first click, then come here if you need a
+                        different tradeoff around footprint, maturity, or collaboration.
+                    </p>
+                </div>
+
+                <div class="mx-auto max-w-7xl px-6 pb-14 md:pb-20">
+                    <div class="border-t hairline">
+                        {secondary.map((clone) => {
+                            const freshness = getFreshnessState(clone.data);
+                            return (
+                                <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_auto] gap-x-10 gap-y-3 items-start py-6 border-b hairline">
+                                    <div class="min-w-0">
+                                        <a
+                                            href={`/clones/${clone.id}`}
+                                            class="text-[17px] font-medium tracking-[-0.01em] hover:underline underline-offset-4 decoration-1"
+                                        >
+                                            {getDisplayName(clone)}
+                                        </a>
+                                        <p class="mt-1.5 font-mono text-[11px] text-pale-slate-400">
+                                            {clone.data.language} · {formatStars(clone.data.github_stars)} ·
+                                            security {clone.data.metrics.security_score} / 100
+                                        </p>
+                                        <p class="mt-2 font-mono text-[10px] uppercase tracking-[0.16em] text-pale-slate-500">
+                                            {freshness.label} ·{" "}
+                                            {getConfidenceLabel(clone.data.evidence_confidence).toLowerCase()}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="eyebrow">OpenClaw delta</h4>
+                                        <p class="mt-2 text-[14px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                            {deriveOpenClawDelta(clone, openClaw)}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h4 class="eyebrow">Tradeoff</h4>
+                                        <p class="mt-2 text-[14px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                            {deriveTradeoff(clone)}
+                                        </p>
+                                    </div>
+                                    <div class="shrink-0">
+                                        <a
+                                            href={compareHref(clone)}
+                                            class="font-mono text-[12px] border hairline rounded-sm px-3 py-1.5 text-pale-slate-500 dark:text-pale-slate-400 hover:text-accent dark:hover:text-accent-soft hover:border-accent/40 dark:hover:border-accent-soft/40 transition-colors duration-150 whitespace-nowrap"
+                                        >
+                                            vs OpenClaw →
+                                        </a>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
+            </section>
+        )
+    }
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-x-16 gap-y-10">
+            <div>
+                <h2 class="eyebrow text-amber-500 dark:text-amber-400">Read this carefully</h2>
+                <ul class="mt-4 space-y-3 text-[14px] text-pale-slate-600 dark:text-pale-slate-400 leading-relaxed">
+                    {
+                        resolvedPage.cautions.map((caution) => (
+                            <li class="flex gap-3">
+                                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0" />
+                                <span>{caution}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+            <div class="border-t lg:border-t-0 lg:border-l hairline pt-8 lg:pt-0 lg:pl-12">
+                <h2 class="eyebrow">Next move</h2>
+                <h3 class="mt-3 font-semibold text-[22px] md:text-[26px] tracking-[-0.01em] leading-snug max-w-md">
+                    Narrow fast here, then verify against the repo and the compare view.
+                </h3>
+                <p class="mt-3 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400 max-w-md">
+                    This page is a first pass. For a final decision, open the profile, compare
+                    directly with OpenClaw, and check the methodology if any confidence or
+                    freshness state looks weak.
+                </p>
+                <div class="mt-6 flex flex-wrap items-center gap-3">
+                    <a href={`/?intent=${resolvedPage.intent}#clones`} class="btn-primary">
+                        See the full filtered index →
+                    </a>
+                    <a
+                        href="/faq"
+                        class="border hairline px-5 py-2.5 text-[13px] font-medium rounded-sm text-pale-slate-600 dark:text-pale-slate-300 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                    >
+                        Read the FAQ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

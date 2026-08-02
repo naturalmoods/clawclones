@@ -1,0 +1,211 @@
+---
+import { Icon } from "astro-icon/components";
+import { SITE_REPO_URL } from "../lib/site";
+
+/**
+ * The form never posts anywhere: it opens a prefilled GitHub issue form, so
+ * there is no endpoint to secure, no spam surface and no secret to leak once
+ * the repository is public.
+ */
+const nominationsUrl = `${SITE_REPO_URL}/issues?q=is%3Aissue+label%3Anomination`;
+const projectListUrl = `${SITE_REPO_URL}/blob/HEAD/projects.json`;
+---
+
+<dialog
+    id="suggest-modal"
+    class="bg-transparent backdrop:bg-black/60 outline-none w-full max-w-lg p-4 m-auto"
+    onclick="event.target === this && this.close()"
+>
+    <div class="bg-paper border hairline rounded-sm">
+        <div class="px-6 py-4 border-b hairline flex items-center justify-between gap-4">
+            <span class="eyebrow">Nominate a clone</span>
+            <button
+                type="button"
+                onclick="document.getElementById('suggest-modal').close()"
+                aria-label="Close"
+                class="font-mono text-[11px] border hairline rounded-sm px-2 py-1 text-pale-slate-500 hover:text-ink dark:hover:text-white transition-colors duration-150"
+            >
+                ESC
+            </button>
+        </div>
+
+        <form id="github-suggest-form" class="px-6 py-6 flex flex-col gap-5">
+            <div>
+                <h2 class="text-[20px] font-semibold tracking-[-0.01em]">Add a new Claw</h2>
+                <p class="mt-2 text-[14px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                    Paste a GitHub repository and tell us why it belongs on the tracker.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label
+                    for="repo"
+                    class="font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400"
+                >
+                    GitHub URL
+                </label>
+                <div class="relative">
+                    <input
+                        type="url"
+                        id="repo"
+                        name="github_url"
+                        required
+                        placeholder="https://github.com/owner/repo"
+                        class="w-full bg-transparent border hairline rounded-sm px-3 py-2.5 pr-9 font-mono text-[12px] text-ink dark:text-white placeholder-pale-slate-400 focus:outline-none focus:border-accent dark:focus:border-accent-soft transition-colors duration-150"
+                    />
+                    <div
+                        id="repo-loader"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 hidden"
+                    >
+                        <div
+                            class="animate-spin rounded-full h-3 w-3 border-2 border-accent border-t-transparent"
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="repo-preview" class="hidden">
+                <div class="border hairline rounded-sm px-4 py-3">
+                    <div class="flex items-baseline justify-between gap-4">
+                        <h3 id="preview-name" class="text-[14px] font-medium tracking-[-0.01em] truncate">
+                            Project name
+                        </h3>
+                        <span class="shrink-0 font-mono text-[11px] tabular-nums text-pale-slate-400">
+                            ★ <span id="preview-stars">0</span>
+                        </span>
+                    </div>
+                    <p
+                        id="preview-desc"
+                        class="mt-1.5 text-[13px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400 line-clamp-2"
+                    >
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label
+                    for="comment"
+                    class="font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400"
+                >
+                    Why track it?
+                </label>
+                <textarea
+                    id="comment"
+                    name="comment"
+                    rows="3"
+                    placeholder="What makes it worth comparing against the others?"
+                    class="w-full bg-transparent border hairline rounded-sm px-3 py-2.5 text-[14px] text-ink dark:text-white placeholder-pale-slate-400 focus:outline-none focus:border-accent dark:focus:border-accent-soft transition-colors duration-150 resize-none"
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full flex items-center justify-center gap-2">
+                Submit nomination
+                <Icon name="lucide:arrow-right" class={"w-3.5 h-3.5"} />
+            </button>
+
+            <p class="text-[12px] leading-relaxed text-pale-slate-500">
+                Opens a prefilled issue on GitHub —
+                {" "}<a
+                    href={nominationsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-accent dark:text-accent-soft hover:underline underline-offset-4"
+                >
+                    every nomination is public
+                </a>. Comfortable with a PR? Adding the repo to
+                {" "}<a
+                    href={projectListUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-accent dark:text-accent-soft hover:underline underline-offset-4"
+                >
+                    projects.json
+                </a>{" "}
+                is faster.
+            </p>
+        </form>
+    </div>
+</dialog>
+
+<script>
+    import { issueFormUrl } from "../lib/site";
+
+    const form = document.getElementById(
+        "github-suggest-form",
+    ) as HTMLFormElement;
+    const repoInput = document.getElementById("repo") as HTMLInputElement;
+    const preview = document.getElementById("repo-preview");
+    const loader = document.getElementById("repo-loader");
+
+    // --- Live Preview Logic ---
+    let debounceTimer: any;
+    repoInput?.addEventListener("input", (e) => {
+        const url = (e.target as HTMLInputElement).value;
+        clearTimeout(debounceTimer);
+
+        const match = url.match(
+            /github\.com\/([a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+)/,
+        );
+        if (match) {
+            debounceTimer = setTimeout(async () => {
+                loader?.classList.remove("hidden");
+                try {
+                    const res = await fetch(
+                        `https://api.github.com/repos/${match[1]}`,
+                    );
+                    if (res.ok) {
+                        const data = await res.json();
+                        const name = document.getElementById("preview-name");
+                        const stars = document.getElementById("preview-stars");
+                        const desc = document.getElementById("preview-desc");
+                        if (name) name.textContent = data.full_name;
+                        if (stars)
+                            stars.textContent =
+                                data.stargazers_count.toLocaleString("en-US");
+                        if (desc)
+                            desc.textContent =
+                                data.description || "No description available.";
+                        preview?.classList.remove("hidden");
+                    }
+                } catch (err) {}
+                loader?.classList.add("hidden");
+            }, 500);
+        } else {
+            preview?.classList.add("hidden");
+        }
+    });
+
+    // --- Submit Logic ---
+    form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const repo = formData.get("github_url")?.toString().trim() || "";
+        const comment = formData.get("comment")?.toString().trim() || "";
+
+        let shortName = repo;
+        try {
+            const urlObj = new URL(repo);
+            if (urlObj.hostname.includes("github.com")) {
+                const parts = urlObj.pathname.split("/").filter(Boolean);
+                if (parts.length >= 2) shortName = `${parts[0]}/${parts[1]}`;
+            }
+        } catch {}
+
+        // Prefills the structured issue form by field id. The previous version
+        // pasted a markdown body into a free-form issue and asked for a
+        // `nomination` label that did not exist in the target repository, so
+        // every nomination arrived unlabelled.
+        const url = issueFormUrl("clone-nomination.yml", {
+            title: `Nomination: ${shortName}`,
+            "repo-url": repo,
+            why: comment,
+        });
+
+        window.open(url, "_blank", "noopener");
+        form.reset();
+        preview?.classList.add("hidden");
+        const modal = document.getElementById("suggest-modal") as any;
+        if (modal) modal.close();
+    });
+</script>

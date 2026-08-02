@@ -1,0 +1,84 @@
+{
+  "id": "iOfficeAI/AionUi",
+  "name": "AionUi",
+  "language": "TypeScript",
+  "vibe_summary": "A local-first cowork desktop app that orchestrates OpenClaw and 20+ CLI agents with polished multi-agent team UX. Recent commits show frantic polishing of team warmup overlays, mobile UI, and i18n across 12 locales.",
+  "health_status": "healthy",
+  "github_stars": 31260,
+  "metrics": {
+    "boot_time_ms": 200,
+    "memory_mb": 80,
+    "security_score": 65
+  },
+  "radar_chart": {
+    "sandboxing": 4,
+    "api_security": 6,
+    "network_isolation": 5,
+    "telemetry_safety": 7,
+    "shell_access_risk": 8
+  },
+  "tags": [
+    "openclaw",
+    "multi-agent",
+    "cowork",
+    "local-first",
+    "cli-orchestration"
+  ],
+  "community_sentiment": 70,
+  "reddit_mentions": 16,
+  "web_mentions": 10,
+  "best_for": [
+    "Teams wanting 24/7 local multi-agent automation",
+    "Users needing a GUI to manage OpenClaw and coding CLIs",
+    "Cross-platform desktop users seeking zero-setup cowork"
+  ],
+  "avoid_if": [
+    "Environments requiring strict sandboxing or no shell access",
+    "Headless cloud-only deployments without desktop",
+    "Users wanting a lightweight terminal-only agent"
+  ],
+  "deployment_target": [
+    "desktop",
+    "self-hosted"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "mixed",
+  "multi_user": false,
+  "plugin_ecosystem": "emerging",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-07-31T14:31:25Z",
+  "contributors_count": 108,
+  "open_issues_count": 729,
+  "release_cadence_days": 2,
+  "operational_risk": "medium",
+  "openclaw_advantages": [
+    "Polished cross-platform GUI for cowork vs OpenClaw's CLI focus",
+    "Built-in multi-agent team orchestration with visual warmup states",
+    "Zero-setup support for 20+ CLI agents including OpenClaw itself",
+    "Mobile-responsive layout and remote access options"
+  ],
+  "openclaw_disadvantages": [
+    "Heavier desktop app footprint vs OpenClaw's lightweight terminal agent",
+    "Less explicit security sandboxing for agent shell actions",
+    "Acts as a frontend dependent on external CLIs rather than standalone"
+  ],
+  "confidence_summary": "README and commit history strongly confirm OpenClaw integration and active development, but security posture and multi-user support are underdocumented, adding minor uncertainty.",
+  "evidence_confidence": 85,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T02:22:12.442Z",
+    "last_reviewed_at": "2026-07-13T02:22:12.442Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "AionUi is a free, local, open-source Cowork application built with TypeScript that provides a graphical interface for AI agents to work alongside users on their computers. It explicitly supports OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI, and over 20 other command-line agents, allowing users to customize assistants, manage multi-agent teams, and automate tasks 24/7 with zero setup.\n\nArchitecturally, AionUi is a cross-platform desktop app (macOS, Windows, Linux) that wraps these CLI tools behind a unified UI, featuring built-in agent runtime management, remote access, and extensive internationalization across 12 languages. Recent development focuses on a sophisticated team collaboration system: member identity colors, parallel/single view toggles, warmup loading overlays gated on leader readiness, and granular error recovery for failed agent starts, indicating a mature frontend with React/UnoCSS and an AionCore backend.\n\nUnlike OpenClaw—which is fundamentally a personal AI assistant daemon driven via CLI and messaging channels—AionUi positions itself as a visual control plane and cowork environment that can host OpenClaw as one of many backends. This makes it ideal for users who want a desktop GUI to supervise multiple agents, but less suitable for those seeking a minimal, headless, or strongly sandboxed agent runtime.",
+  "latest_release": {
+    "version": "v2.1.45",
+    "date": "2026-07-31T15:40:43Z",
+    "url": "https://github.com/iOfficeAI/AionUi/releases/tag/v2.1.45"
+  },
+  "last_updated": "2026-08-02T12:53:39.402Z"
+}

@@ -1,0 +1,230 @@
+---
+/**
+ * The short trust page: who runs this, what the three evidence lanes are, and
+ * how fresh the data actually is. Everything that used to be explained twice —
+ * cadence, triggers, guardrails — now lives once, in the FAQ.
+ */
+import * as fs from "fs";
+import * as path from "path";
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { formatAge, formatSignalDate, getAgeInDays } from "../lib/content-signals";
+import { CONTACT_EMAIL, MAINTAINER_GITHUB_URL, SITE_REPO_URL } from "../lib/site";
+
+/**
+ * Bump this whenever the copy on this page changes. A trust page that claims a
+ * review cadence but shows no review date asks to be taken on faith.
+ */
+const LAST_REVIEWED = "2026-08-02";
+
+const clones = await getCollection("clones");
+const dataRefreshedAt = clones.reduce(
+    (latest: string, clone) =>
+        clone.data.last_updated > latest ? clone.data.last_updated : latest,
+    clones[0]?.data.last_updated ?? "",
+);
+
+let reportGeneratedAt: string | undefined;
+try {
+    reportGeneratedAt = JSON.parse(
+        fs.readFileSync(
+            path.join(process.cwd(), "src", "data", "analysis-metadata.json"),
+            "utf8",
+        ),
+    ).lastUpdated;
+} catch {
+    reportGeneratedAt = undefined;
+}
+
+const lanes = [
+    {
+        label: "Measured",
+        body: "Repo metadata, releases, commit activity and other directly observable signals.",
+    },
+    {
+        label: "AI-written",
+        body: "Summaries, tradeoffs, compare verdicts and recommendation framing, always labelled as such.",
+    },
+    {
+        label: "Community",
+        body: "Reddit and public-web discussion, used as supporting evidence rather than as ground truth.",
+    },
+];
+
+/**
+ * Measured freshness beside the promised cadence. The targets are what the
+ * pipelines aim for; these are what actually landed, so a stalled refresh is
+ * visible here rather than contradicted silently on every profile.
+ */
+const freshnessChecks = [
+    {
+        label: "Clone data",
+        target: "Refreshed nightly",
+        value: dataRefreshedAt,
+        limitDays: 3,
+    },
+    {
+        label: "Ecosystem report",
+        target: "Regenerated weekly",
+        value: reportGeneratedAt,
+        limitDays: 10,
+    },
+    {
+        label: "This page",
+        target: "Reviewed monthly",
+        value: LAST_REVIEWED,
+        limitDays: 45,
+    },
+].map((check) => {
+    const age = getAgeInDays(check.value);
+    return {
+        ...check,
+        age: formatAge(check.value),
+        date: formatSignalDate(check.value),
+        overdue: age === null || age > check.limitDays,
+    };
+});
+---
+
+<Layout
+    title="About - ClawClones Trust & Methodology"
+    description="Who runs ClawClones, which parts are measured, which parts are AI-written, and how fresh the data is right now."
+>
+    <section class="mx-auto max-w-7xl px-6 pt-20 pb-14 md:pt-28 md:pb-16">
+        <p class="font-mono text-[11px] uppercase tracking-[0.22em] text-pale-slate-500">
+            Trust layer · reviewed {formatSignalDate(LAST_REVIEWED)}
+        </p>
+        <h1 class="mt-7 font-semibold text-[40px] md:text-[72px] leading-[1.02] tracking-[-0.02em] max-w-4xl">
+            What this is, and who runs it.
+        </h1>
+        <p class="mt-7 max-w-xl text-[17px] leading-relaxed text-pale-slate-400">
+            ClawClones tracks every serious <span class="text-ink dark:text-white font-medium">OpenClaw alternative</span> so you can reach a shortlist of three in minutes instead of an afternoon. It mixes hard repo facts with AI-written decision support, and marks which is which.
+        </p>
+    </section>
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-12 md:py-14">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-line border hairline">
+                {
+                    lanes.map((lane) => (
+                        <div class="bg-paper px-6 py-5">
+                            <p class="eyebrow">{lane.label}</p>
+                            <p class="mt-3 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                {lane.body}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+            <p class="mt-5 text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                Where a project does not publish something clearly, the field stays
+                <span class="text-ink dark:text-white">unknown</span> instead of being filled with confident guesswork.
+                {" "}<a href="/faq" class="text-accent dark:text-accent-soft underline underline-offset-4 decoration-accent/30 dark:decoration-accent-soft/30 hover:decoration-current transition-colors duration-150">The FAQ covers the scoring, cadence and sources in detail</a>.
+            </p>
+        </div>
+    </section>
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-12 md:py-14">
+            <div class="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16 lg:items-start">
+                <div>
+                    <h2 class="eyebrow">Freshness</h2>
+                    <p class="mt-4 max-w-md text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                        The cadence below is the target. The dates are what actually
+                        landed, measured from the data this page is built from.
+                    </p>
+                </div>
+
+                <div class="border hairline">
+                    {
+                        freshnessChecks.map((check) => (
+                            <div class="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b hairline last:border-b-0 px-5 py-4">
+                                <div>
+                                    <p class="text-[15px] font-medium tracking-[-0.01em] text-ink dark:text-white">
+                                        {check.label}
+                                    </p>
+                                    <p class="mt-0.5 font-mono text-[11px] text-pale-slate-500">
+                                        Target: {check.target.toLowerCase()}
+                                    </p>
+                                </div>
+                                <p
+                                    class={`font-mono text-[12px] tabular-nums text-right ${
+                                        check.overdue
+                                            ? "text-amber-700 dark:text-amber-400"
+                                            : "text-pale-slate-500"
+                                    }`}
+                                >
+                                    {check.date}
+                                    <span class="block text-[11px]">{check.age}</span>
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-12 md:py-14">
+            <h2 class="eyebrow">Who</h2>
+            <p class="mt-4 max-w-2xl text-[17px] leading-relaxed text-ink dark:text-white">
+                Built and maintained by Péter Cziczlavicz.
+            </p>
+            <div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[13px]">
+                <a
+                    href={MAINTAINER_GITHUB_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-accent dark:text-accent-soft underline underline-offset-4 decoration-accent/30 dark:decoration-accent-soft/30 hover:decoration-current transition-colors duration-150"
+                >
+                    github.com/naturalmoods ↗
+                </a>
+                <a
+                    href={SITE_REPO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-accent dark:text-accent-soft underline underline-offset-4 decoration-accent/30 dark:decoration-accent-soft/30 hover:decoration-current transition-colors duration-150"
+                >
+                    source on GitHub ↗
+                </a>
+                <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    class="text-pale-slate-500 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                >
+                    hello@clawclones.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="border-t hairline">
+        <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+            <div class="border hairline bg-accent/[0.04] dark:bg-accent-soft/[0.05] px-6 py-8 md:px-10 md:py-12">
+                <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+                    <div>
+                        <h2 class="eyebrow text-accent dark:text-accent-soft">Bottom line</h2>
+                        <h3 class="mt-3 max-w-3xl font-semibold text-[28px] md:text-[40px] leading-[1.1] tracking-[-0.01em]">
+                            A fast decision layer, not your last due-diligence step.
+                        </h3>
+                        <p class="mt-4 max-w-2xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                            The best outcome is that this site gets you to the right three
+                            candidates faster. After that, read the docs, inspect the repo,
+                            and test the deployment path that matters to you.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3">
+                        <a href="/#clones" class="btn-primary">Open the index →</a>
+                        <a
+                            href="/faq"
+                            class="border hairline px-5 py-2.5 text-[13px] font-medium rounded-sm text-pale-slate-600 dark:text-pale-slate-300 hover:text-ink dark:hover:text-white transition-colors duration-150"
+                        >
+                            Methodology
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

@@ -1,0 +1,84 @@
+---
+import { loadSeismographData } from "../lib/seismograph";
+
+export interface Props {
+    dataUrl?: string;
+}
+
+const { dataUrl } = Astro.props;
+
+const defaultData = {
+    brand: {
+        name: "OpenClaw Seismograph",
+        url: "https://openclaw.lu/?utm_source=clawclones&utm_medium=partner_card&utm_campaign=partner-box",
+    },
+    threat: { level: "medium" },
+    summary: {
+        headline: "Tracking early signals across the agentic AI ecosystem.",
+    },
+};
+
+const data = await loadSeismographData(dataUrl, defaultData);
+
+// Tone classes must match BOX_TONES in seismograph-live.ts so the live refresh
+// can swap them, and must appear literally here so Tailwind generates them.
+const threatLevelTones: Record<string, string> = {
+    critical: "bg-red-500/10 border-red-500/30 text-red-500",
+    high: "bg-[#eab308]/10 border-[#eab308]/30 text-[#eab308]",
+    medium: "bg-[#fbbf24]/10 border-[#fbbf24]/30 text-[#fbbf24]",
+    low: "bg-green-500/10 border-green-500/30 text-green-500",
+};
+
+const currentTone =
+    threatLevelTones[data.threat.level.toLowerCase()] || threatLevelTones.medium;
+---
+
+<section class="border-t hairline">
+    <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+        <a
+            href={data.brand.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-seismograph-card
+            data-seismograph-url={dataUrl || ""}
+            class="group block border hairline max-w-3xl hover:border-accent/40 dark:hover:border-accent-soft/40 transition-colors duration-150"
+        >
+            <div class="px-6 py-4 border-b hairline flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+                <span class="eyebrow">Partner · Ecosystem signals</span>
+                <span class={`pill ${currentTone}`} data-seismograph-threat-box>
+                    <span class="h-1.5 w-1.5 rounded-full bg-current"></span>
+                    threat: <span data-seismograph-threat-label>{data.threat.level}</span>
+                </span>
+            </div>
+            <div class="px-6 py-6">
+                <h2
+                    class="text-[20px] font-semibold tracking-[-0.01em] group-hover:text-accent dark:group-hover:text-accent-soft transition-colors duration-150"
+                    data-seismograph-brand-name
+                >
+                    {data.brand.name}
+                </h2>
+                <p
+                    class="mt-3 max-w-xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400"
+                    data-seismograph-headline
+                >
+                    {data.summary.headline}
+                </p>
+                <p class="mt-4 font-mono text-[11px] leading-relaxed text-pale-slate-400">
+                    Early indicators of closed-loop AI agent adoption — security, business, markets, infrastructure.
+                </p>
+            </div>
+            <div class="px-6 py-3.5 border-t hairline flex items-center justify-between gap-4">
+                <span class="font-mono text-[11px] text-pale-slate-400">openclaw.lu · updated daily</span>
+                <span class="font-mono text-[12px] text-pale-slate-500 group-hover:text-ink dark:group-hover:text-white transition-colors duration-150">
+                    Open dashboard ↗
+                </span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<script>
+    import { initLiveSeismographEmbeds } from "../lib/seismograph-live";
+
+    initLiveSeismographEmbeds();
+</script>

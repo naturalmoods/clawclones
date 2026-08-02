@@ -1,0 +1,84 @@
+{
+  "id": "memovai/mimiclaw",
+  "name": "MimiClaw",
+  "language": "C",
+  "vibe_summary": "Runs OpenClaw-style agent loop on a $5 ESP32-S3 chip with pure C, no OS or Node.js. Tiny hardware assistant with Telegram UI, local flash memory, and 0.5W draw.",
+  "health_status": "healthy",
+  "github_stars": 5587,
+  "metrics": {
+    "boot_time_ms": 5,
+    "memory_mb": 1.5,
+    "security_score": 40
+  },
+  "radar_chart": {
+    "sandboxing": 1,
+    "api_security": 3,
+    "network_isolation": 2,
+    "telemetry_safety": 7,
+    "shell_access_risk": 1
+  },
+  "tags": [
+    "embedded",
+    "esp32",
+    "hardware",
+    "telegram",
+    "local-first"
+  ],
+  "community_sentiment": 55,
+  "reddit_mentions": 11,
+  "web_mentions": 10,
+  "best_for": [
+    "Hobbyists wanting AI on tiny hardware",
+    "Offline-ish local agent on ESP32",
+    "Telegram-based assistant on the cheap"
+  ],
+  "avoid_if": [
+    "Need full OS-level integrations",
+    "Want rich plugin ecosystem",
+    "Require multi-user support"
+  ],
+  "deployment_target": [
+    "edge",
+    "self-hosted"
+  ],
+  "local_first": true,
+  "cloud_dependency": "required",
+  "setup_difficulty": "medium",
+  "privacy_posture": "mixed",
+  "multi_user": false,
+  "plugin_ecosystem": "limited",
+  "license_type": "MIT",
+  "last_commit_at": "2026-03-17T04:02:14Z",
+  "contributors_count": 6,
+  "open_issues_count": 113,
+  "release_cadence_days": 36,
+  "operational_risk": "low",
+  "openclaw_advantages": [
+    "Runs on $5 chip with 0.5W power",
+    "No OS overhead, pure C bare metal",
+    "Tiny footprint, physically portable"
+  ],
+  "openclaw_disadvantages": [
+    "Limited tooling vs full OpenClaw",
+    "No rich plugin/skill ecosystem",
+    "Requires flashing firmware, less accessible",
+    "Same cloud LLM dependency but less flexible"
+  ],
+  "confidence_summary": "README and commits confirm active OpenClaw-compatible embedded clone, but Reddit hits are unrelated game mentions, creating uncertainty in community sentiment.",
+  "evidence_confidence": 80,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T01:58:48.757Z",
+    "last_reviewed_at": "2026-07-13T01:58:48.757Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "MimiClaw is a hardware-native AI assistant that ports the OpenClaw concept onto a $5 ESP32-S3 microcontroller, running entirely in pure C without any operating system, Node.js, or external server. Its core architecture consists of a lightweight agent loop that receives Telegram messages over WiFi, queries Anthropic or OpenAI models, executes local tools, and persists session memory on onboard SPIFFS flash storage.\n\nRecent commits show active development: USB-JTAG console switching, SPIFFS binary inclusion in releases, GPIO skill support, and captive portal WiFi onboarding. Unlike OpenClaw which targets desktops, mobile, and cloud with a rich plugin ecosystem, MimiClaw prioritizes physical portability, 0.5W power draw, and a minimal attack surface on edge silicon.\n\nThe project is best suited for makers and embedded enthusiasts who want a pocket-sized, always-on assistant, but it lacks the multi-channel integrations, skill registry, and user-friendly setup of the parent OpenClaw project.",
+  "latest_release": {
+    "version": "v0.1.1",
+    "date": "2026-03-17T04:25:41Z",
+    "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
+  },
+  "last_updated": "2026-08-02T12:53:29.710Z"
+}

@@ -1,0 +1,92 @@
+name: Watchlist Update (New Clone Discovery)
+
+on:
+  schedule:
+    # Futtatás naponta egyszer, reggel 6-kor UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    # Kézi indításhoz
+
+jobs:
+  update-watchlist:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Snapshot the project list
+        run: cp projects.json /tmp/projects.before.json
+
+      - name: Run Watchlist Update
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          WATCHLIST_AUTO_PROMOTE: ${{ vars.WATCHLIST_AUTO_PROMOTE || 'false' }}
+        run: npm run update-watchlist
+
+      - name: Detect promoted clones
+        id: promoted
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+
+          const tracked = (file) =>
+            JSON.parse(fs.readFileSync(file, 'utf8'))
+              .filter((entry) => entry.status === 'tracked')
+              .map((entry) => entry.repo);
+
+          const before = tracked('/tmp/projects.before.json');
+          const after = tracked('projects.json');
+          const promoted = after.filter((repo) => !before.includes(repo));
+
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `has_promoted=${promoted.length > 0}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `target_repos=${promoted.join(',')}\n`);
+
+          console.log(`Promoted clones: ${promoted.join(', ') || 'none'}`);
+          NODE
+
+      - name: Generate full data for promoted clones
+        if: steps.promoted.outputs.has_promoted == 'true'
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || '~deepseek/deepseek-v4-flash-latest' }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER || 'nvidia' }}
+          NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL || 'z-ai/glm-5.2' }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          TARGET_REPOS: ${{ steps.promoted.outputs.target_repos }}
+        run: npm run update-data
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+          git add src/content/watchlist/ src/content/clones/ src/data/history.json projects.json
+
+          if git diff --staged --quiet; then
+            exit 0
+          fi
+
+          if [ "${{ steps.promoted.outputs.has_promoted }}" = "true" ]; then
+            git commit -m "chore: watchlist update and promoted clone refresh"
+          else
+            git commit -m "chore: watchlist update — monitoring new clones"
+          fi
+
+          git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+          git push
