@@ -41,22 +41,22 @@
     "url": "https://clawclones.com/clones/agentscope-ai/CoPaw"
   },
   "hot_vs": {
-    "clone_a": "GoClaw",
-    "clone_b": "OpenClaw",
+    "clone_a": "OpenClaw",
+    "clone_b": "tinyclaw",
     "visits": 7,
-    "url": "https://clawclones.com/compare/goclaw-vs-openclaw"
+    "url": "https://clawclones.com/compare/openclaw-vs-tinyclaw"
   },
   "updated_at": "2026-08-02T23:59:59.999Z",
-  "generated_at": "2026-08-02T16:23:10.830Z",
+  "generated_at": "2026-08-02T18:13:56.054Z",
   "freshness": {
     "updated_at": "2026-08-02T23:59:59.999Z",
-    "generated_at": "2026-08-02T16:23:10.830Z",
+    "generated_at": "2026-08-02T18:13:56.054Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-08-02T16:23:10.443Z",
+        "updated_at": "2026-08-02T18:13:32.768Z",
         "age_hours": 0
       },
       "history": {
