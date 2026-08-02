@@ -83,8 +83,9 @@ export async function fetchCloudflareStats() {
         const json = await res.json() as GraphQLResponse;
 
         if (json.errors) {
-            console.error("Cloudflare GraphQL Errors:", json.errors);
-            return;
+            // Thrown, not logged-and-returned: a misconfigured zone or token
+            // used to leave the workflow green while nothing was collected.
+            throw new Error(`Cloudflare GraphQL: ${JSON.stringify(json.errors)}`);
         }
 
         const groups = json.data?.viewer?.zones?.[0]?.httpRequestsAdaptiveGroups || [];
@@ -117,6 +118,7 @@ export async function fetchCloudflareStats() {
 
     } catch (e) {
         console.error("Failed to fetch Cloudflare stats:", e);
+        process.exitCode = 1;
     }
 }
 
