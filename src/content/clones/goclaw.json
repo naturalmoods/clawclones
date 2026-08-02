@@ -26,7 +26,7 @@
   ],
   "community_sentiment": 55,
   "reddit_mentions": 0,
-  "web_mentions": 10,
+  "web_mentions": 0,
   "best_for": [
     "Teams needing multi-tenant AI agent deployment",
     "Organizations wanting OpenClaw features with Go performance",
@@ -70,10 +70,10 @@
   "evidence_confidence": 75,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:48:09.613Z",
-    "last_reviewed_at": "2026-07-13T02:48:09.613Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:28.615Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "GoClaw is a multi-tenant AI agent platform that reimplements the OpenClaw assistant gateway in Go. It provides a single-binary, production-tested service connecting to 20+ LLM providers across 7 communication channels (including Telegram, WhatsApp, Discord, Bitrix24), with multi-tenant PostgreSQL backing for isolation. Recent commits show active maintenance, with fixes for channel webhooks, i18n expansions (Russian, etc.), and memory search improvements.\n\nArchitecturally, GoClaw emphasizes safety via a claimed 5-layer security model and native concurrency for scaling agent teams. Unlike the original OpenClaw which is local-first and personal, GoClaw targets organizational deployments requiring tenant isolation and centralized management. It includes OpenTelemetry instrumentation, Docker deployment, and a web/desktop UI with extensive localization.\n\nCompared to OpenClaw, GoClaw trades local-first simplicity for multi-tenant scalability and Go performance, but adopts a non-commercial CC BY-NC 4.0 license and depends on external PostgreSQL and LLM APIs. Its plugin/skill ecosystem is emerging, mirroring OpenClaw's channels but with less community footprint so far.",
@@ -82,5 +82,5 @@
     "date": "2026-06-15T08:59:44Z",
     "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
   },
-  "last_updated": "2026-08-02T12:53:49.217Z"
+  "last_updated": "2026-08-02T15:53:28.615Z"
 }

@@ -26,7 +26,7 @@
   ],
   "community_sentiment": 70,
   "reddit_mentions": 0,
-  "web_mentions": 10,
+  "web_mentions": 0,
   "best_for": [
     "edge and IoT deployments",
     "resource-constrained SBCs",
@@ -70,10 +70,10 @@
   "evidence_confidence": 85,
   "content_ops": {
     "last_generated_at": "2026-07-13T01:59:22.728Z",
-    "last_reviewed_at": "2026-07-13T01:59:22.728Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:29.695Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "NullClaw is an OpenClaw-compatible autonomous AI assistant infrastructure written entirely in Zig, compiling to a 678 KB static binary that boots in under 2 ms and consumes roughly 1 MB of RAM. Its core architecture relies on vtable interfaces for providers, channels, tools, memory, and tunnels, making every subsystem pluggable while maintaining zero runtime overhead, no garbage collector, and true portability across ARM, x86, and RISC-V.\n\nRecent development activity shows a focus on hardening: commits suppress stderr leakage to channels, enforce public-host rejection before socket side effects, and make queue-mode configuration fail-closed on typos. Security features include multi-layer sandboxing (landlock, firejail, bubblewrap, docker), encrypted secrets, workspace scoping, and explicit allowlists, positioning NullClaw as a privacy-strong edge agent.\n\nCompared to OpenClaw, NullClaw trades breadth of community and UI polish for extreme efficiency and deterministic resource usage, targeting $5 boards and microcontrollers rather than full desktop or cloud suites. The accompanying nullhub project (beta) provides a UI layer, but the base binary remains deliberately minimal.",
@@ -82,5 +82,5 @@
     "date": "2026-05-29T13:41:10Z",
     "url": "https://github.com/nullclaw/nullclaw/releases/tag/v2026.5.29"
   },
-  "last_updated": "2026-08-02T12:53:30.285Z"
+  "last_updated": "2026-08-02T15:53:29.695Z"
 }

@@ -69,10 +69,10 @@
   "evidence_confidence": 60,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:25:58.044Z",
-    "last_reviewed_at": "2026-07-13T02:25:58.044Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:31.626Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "FreeClaw is a minimal Python-based reimplementation of the OpenClaw personal AI assistant concept, targeting developers who prefer a lightweight command-line interface over a full cross-platform GUI. Its core architecture centers on a provider-agnostic chat completion layer that currently supports NVIDIA NIM, OpenRouter, and Groq via OpenAI-compatible endpoints, with configuration driven by environment variables and a simple onboarding flow.\n\nUnique features include multi-agent profiles with isolated workspaces, per-agent environment files, and a Discord bot integration that can launch all configured agents simultaneously or selectively. A local timer sidecar (default port 3000) provides task scheduling and optional web UI, while tool execution is constrained to a configurable root directory to limit filesystem access.\n\nCompared to OpenClaw, FreeClaw trades broad native platform support (macOS/iOS/Android) and a rich skill/plugin registry for simplicity and ease of modification in Python. It is best suited for self-hosted or desktop deployments that rely on external LLM APIs, and it lacks the mature security and telemetry safeguards found in the original project.",
@@ -81,5 +81,5 @@
     "date": "2026-02-22T17:20:21Z",
     "url": "https://github.com/openconstruct/freeclaw/releases/tag/0.1.0"
   },
-  "last_updated": "2026-08-02T12:53:40.913Z"
+  "last_updated": "2026-08-02T15:53:31.626Z"
 }

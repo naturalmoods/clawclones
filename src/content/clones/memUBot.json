@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "memUBot positions itself as the enterprise-grade OpenClaw, adding a persistent memory layer and proactive execution for team-scale deployments. Its current vibe emphasizes security-by-design, local-first data, and cost-efficient token usage via intelligent caching.",
   "health_status": "healthy",
-  "github_stars": 453,
+  "github_stars": 454,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -50,7 +50,7 @@
   "license_type": "AGPL-3.0",
   "last_commit_at": "2026-05-04T06:59:07Z",
   "contributors_count": 11,
-  "open_issues_count": 14,
+  "open_issues_count": 15,
   "release_cadence_days": null,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -68,12 +68,12 @@
   "evidence_confidence": 75,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:23:33.077Z",
-    "last_reviewed_at": "2026-07-13T02:23:33.077Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:28.149Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "memUBot is presented as the enterprise-ready alternative to OpenClaw, built on the open-source memU memory framework. It is a proactive, 24/7 AI assistant designed for team-scale usage, emphasizing persistent memory, security, and cost-efficiency. The architecture leverages TypeScript with an Electron-style desktop shell (evident from preload scripts) and integrates local-first secure storage using scrypt and AES-256-GCM for API keys and MCP environment variables.\n\nRecent development activity shows a focus on enterprise requirements: merged support for SKILL_ENV, secure storage with OS-level encryption and backup/restore UI, and an observability system with traces, metrics, and structured logging. These additions aim to close the gap between personal AI assistants and production deployments, offering multi-user collaboration, SOC2-friendly data handling, and intelligent memory caching that reduces token consumption.\n\nCompared to OpenClaw, memUBot prioritizes memory-first architecture and proactive execution, targeting organizations rather than individual hobbyists. While it inherits the OpenClaw spirit, its heavier stack and enterprise features may introduce complexity not needed for simple personal use.",
-  "last_updated": "2026-08-02T12:53:39.915Z"
+  "last_updated": "2026-08-02T15:53:28.149Z"
 }

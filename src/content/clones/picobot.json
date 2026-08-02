@@ -25,8 +25,8 @@
     "openclaw-alternative"
   ],
   "community_sentiment": 45,
-  "reddit_mentions": 8,
-  "web_mentions": 10,
+  "reddit_mentions": 0,
+  "web_mentions": 0,
   "best_for": [
     "self-hosters on tiny VPS or Raspberry Pi",
     "users wanting OpenClaw-like features without Python/Node",
@@ -70,10 +70,10 @@
   "evidence_confidence": 80,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:11:25.979Z",
-    "last_reviewed_at": "2026-07-13T02:11:25.979Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:24.256Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Picobot is a lightweight, self-hosted AI agent written entirely in Go, distributed as a single ~9MB binary with zero external dependencies. It provides persistent memory, tool calling, skills, and integrations with Telegram, Discord, and Slack, directly positioning itself as a lean alternative to OpenClaw. Recent commits show active development with added MCP server integration, Slack support, and configuration improvements, alongside a v0.2.0 release.\n\nArchitecturally, Picobot uses a simple config file and local filesystem persistence (`.picobot` directory) for memory and skills, enabling cold starts in milliseconds and idle RAM around 10MB (estimated highly optimized per naming). This contrasts with typical agent frameworks that require Python/Node environments and large containers. While it lacks the extensive plugin registry and graphical interfaces of OpenClaw, its minimal footprint makes it ideal for edge devices, cheap VPS, and Raspberry Pi deployments where resource constraints are paramount.",
@@ -82,5 +82,5 @@
     "date": "2026-03-18T18:34:38Z",
     "url": "https://github.com/louisho5/picobot/releases/tag/v0.2.0"
   },
-  "last_updated": "2026-08-02T12:53:35.187Z"
+  "last_updated": "2026-08-02T15:53:24.256Z"
 }

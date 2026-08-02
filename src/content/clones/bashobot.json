@@ -70,10 +70,10 @@
   "evidence_confidence": 70,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:27:23.918Z",
-    "last_reviewed_at": "2026-07-13T02:27:23.918Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:41.059Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "BashoBot is a personal AI assistant explicitly inspired by OpenClaw, implemented entirely in bash (≥3.2) with standard Unix utilities such as `curl`, `jq`, and `base64`. Its modular architecture relies on named pipes for inter-process communication, allowing it to run as a daemon serving both a Telegram bot and a local CLI without requiring Node.js or other heavy runtimes. The project aims to replicate core OpenClaw features—including tools, markdown memory, shared sessions, and a SOUL.md configuration—within roughly 4,000 lines of shell code, making it exceptionally portable across edge devices, desktops, and self-hosted servers.\n\nRecent development activity shows a focus on stability and provider compatibility, with commits addressing tool-call timeouts, excessive `read_file` invocations, and OAuth login flows for subscription providers like OpenAI. The v0.9.0 release (February 2026) indicates an active, if small, maintenance cadence. Security considerations are addressed via an optional command whitelist with user approval for the exec tool and the recommendation to launch inside a container for isolation.\n\nCompared to OpenClaw, BashoBot trades a rich plugin ecosystem and polished cross-platform UI for extreme simplicity, auditability, and a near-zero dependency footprint. It is best suited for hobbyists, educators, or operators who need a lightweight, transparent assistant on constrained hardware, but less appropriate for teams needing multi-user controls or extensive skill marketplaces.",
@@ -82,5 +82,5 @@
     "date": "2026-02-12T17:15:49Z",
     "url": "https://github.com/uraimo/bashobot/releases/tag/0.9.0"
   },
-  "last_updated": "2026-08-02T12:53:41.385Z"
+  "last_updated": "2026-08-02T15:53:41.059Z"
 }

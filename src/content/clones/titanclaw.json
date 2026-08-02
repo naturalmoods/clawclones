@@ -25,8 +25,8 @@
     "agi"
   ],
   "community_sentiment": 5,
-  "reddit_mentions": 1,
-  "web_mentions": 10,
+  "reddit_mentions": 0,
+  "web_mentions": 0,
   "best_for": [
     "privacy-focused self-hosters",
     "developers wanting rust agent runtime",
@@ -69,10 +69,10 @@
   "evidence_confidence": 75,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:03:39.359Z",
-    "last_reviewed_at": "2026-07-13T02:03:39.359Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:32.266Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "TitanClaw is a Rust-based AI agent runtime explicitly inspired by OpenClaw and IronClaw, positioning itself as a security-first, privacy-preserving alternative with ambitions toward AGI assistance. Its architecture leverages hardened Docker sandboxes, a WASM tool execution system, and a distributed swarm mesh to enable concurrent, isolated job processing across multiple provider backends (NEAR AI, OpenAI-compatible, Ollama, Tinfoil). Recent development has focused on achieving feature parity with OpenClaw through CLI commands for canvas, agents, approvals, backup, browser, cron, and channels, alongside continuous runtime hardening of approval flows and sandbox jobs.\n\nUnlike OpenClaw's likely TypeScript/Node foundation, TitanClaw's Rust core targets lower memory footprint and stronger memory safety, while integrating local-first inference and tree-sitter based context indexing via a memory graph. The project is in active Phase 0-2 completion with version 1.2.0 in progress, though its community footprint remains minimal compared to the original OpenClaw ecosystem. This makes it a compelling experimental choice for developers prioritizing sandboxing and multi-provider control, but less suitable for those relying on broad community support.",
@@ -81,5 +81,5 @@
     "date": "2026-03-02T22:20:48Z",
     "url": "https://github.com/PhantomReaper2025/titanclaw/releases/tag/v1.1.2"
   },
-  "last_updated": "2026-08-02T12:53:32.132Z"
+  "last_updated": "2026-08-02T15:53:32.266Z"
 }

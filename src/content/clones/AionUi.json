@@ -2,46 +2,48 @@
   "id": "iOfficeAI/AionUi",
   "name": "AionUi",
   "language": "TypeScript",
-  "vibe_summary": "A local-first cowork desktop app that orchestrates OpenClaw and 20+ CLI agents with polished multi-agent team UX. Recent commits show frantic polishing of team warmup overlays, mobile UI, and i18n across 12 locales.",
+  "vibe_summary": "AionUi is a feature-packed, Electron-based desktop cowork app that wraps 20+ CLI coding agents (including OpenClaw) in a unified GUI with multi-agent orchestration, remote access, and 24/7 automation. It's aggressively iterating with near-daily releases, a strong plugin/skills ecosystem, and a growing contributor community fueled by partnership perks.",
   "health_status": "healthy",
-  "github_stars": 31260,
+  "github_stars": 31268,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
-    "security_score": 65
+    "security_score": 55
   },
   "radar_chart": {
-    "sandboxing": 4,
+    "sandboxing": 5,
     "api_security": 6,
-    "network_isolation": 5,
-    "telemetry_safety": 7,
+    "network_isolation": 4,
+    "telemetry_safety": 5,
     "shell_access_risk": 8
   },
   "tags": [
-    "openclaw",
+    "ai-agent-gui",
     "multi-agent",
     "cowork",
-    "local-first",
-    "cli-orchestration"
+    "cli-wrapper",
+    "desktop-app"
   ],
-  "community_sentiment": 70,
-  "reddit_mentions": 16,
+  "community_sentiment": 72,
+  "reddit_mentions": 10,
   "web_mentions": 10,
   "best_for": [
-    "Teams wanting 24/7 local multi-agent automation",
-    "Users needing a GUI to manage OpenClaw and coding CLIs",
-    "Cross-platform desktop users seeking zero-setup cowork"
+    "Developers who want a unified desktop GUI to manage multiple CLI coding agents (OpenClaw, Claude Code, Codex, etc.) side-by-side",
+    "Teams needing remote access and 24/7 agent automation without building custom orchestration",
+    "Users who prefer a batteries-included Electron app over configuring terminal-based agent workflows",
+    "Contributors looking to earn premium API credits through the Kimi partnership program"
   ],
   "avoid_if": [
-    "Environments requiring strict sandboxing or no shell access",
-    "Headless cloud-only deployments without desktop",
-    "Users wanting a lightweight terminal-only agent"
+    "You need strong sandboxing or restricted shell access — AionUi wraps CLI agents that typically have broad filesystem permissions",
+    "You're privacy-sensitive and want fully offline, telemetry-free operation — the partnership model and remote-access features introduce cloud touchpoints",
+    "You prefer lightweight, terminal-native workflows — the Electron shell adds significant resource overhead vs. running agents directly",
+    "You need enterprise-grade multi-user RBAC and audit trails — AionUi is primarily single-user with remote access bolted on"
   ],
   "deployment_target": [
     "desktop",
     "self-hosted"
   ],
-  "local_first": true,
+  "local_first": false,
   "cloud_dependency": "optional",
   "setup_difficulty": "low",
   "privacy_posture": "mixed",
@@ -54,31 +56,34 @@
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "openclaw_advantages": [
-    "Polished cross-platform GUI for cowork vs OpenClaw's CLI focus",
-    "Built-in multi-agent team orchestration with visual warmup states",
-    "Zero-setup support for 20+ CLI agents including OpenClaw itself",
-    "Mobile-responsive layout and remote access options"
+    "Unified GUI for 20+ CLI agents including OpenClaw, reducing context-switching between terminal sessions",
+    "Built-in multi-agent orchestration lets you run agents in parallel with scoped permissions",
+    "Zero-setup onboarding with any API key — no config files or CLI fluency required",
+    "Remote access and 24/7 automation out of the box, which OpenClaw requires additional infrastructure to achieve",
+    "Active partnership ecosystem (Kimi) providing free premium API access to contributors"
   ],
   "openclaw_disadvantages": [
-    "Heavier desktop app footprint vs OpenClaw's lightweight terminal agent",
-    "Less explicit security sandboxing for agent shell actions",
-    "Acts as a frontend dependent on external CLIs rather than standalone"
+    "Electron-based desktop app is heavier than OpenClaw's native CLI — higher memory footprint and slower startup",
+    "Wraps agents rather than being an agent itself, adding a layer of indirection and potential compatibility lag",
+    "Less mature security posture — broad shell access risk and no documented sandboxing comparable to OpenClaw's guardrails",
+    "Smaller community and plugin ecosystem compared to OpenClaw's 385k+ stars and extensive integrations",
+    "Mixed privacy posture with cloud-dependent features (remote access, partnership telemetry) vs OpenClaw's local-first philosophy"
   ],
-  "confidence_summary": "README and commit history strongly confirm OpenClaw integration and active development, but security posture and multi-user support are underdocumented, adding minor uncertainty.",
-  "evidence_confidence": 85,
+  "confidence_summary": "High confidence in core feature assessment based on detailed README and recent commit history showing active development. Reddit and web search results are largely noise (unrelated subreddits, brand-name collisions with GAC Aion vehicles and Aion MMO), so community sentiment scoring relies primarily on GitHub signals and web search snippets rather than genuine user feedback.",
+  "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-07-13T02:22:12.442Z",
-    "last_reviewed_at": "2026-07-13T02:22:12.442Z",
+    "last_generated_at": "2026-08-02T15:43:00.608Z",
+    "last_reviewed_at": "2026-08-02T15:43:00.608Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "AionUi is a free, local, open-source Cowork application built with TypeScript that provides a graphical interface for AI agents to work alongside users on their computers. It explicitly supports OpenClaw, Hermes Agent, Claude Code, Codex, OpenCode, Gemini CLI, and over 20 other command-line agents, allowing users to customize assistants, manage multi-agent teams, and automate tasks 24/7 with zero setup.\n\nArchitecturally, AionUi is a cross-platform desktop app (macOS, Windows, Linux) that wraps these CLI tools behind a unified UI, featuring built-in agent runtime management, remote access, and extensive internationalization across 12 languages. Recent development focuses on a sophisticated team collaboration system: member identity colors, parallel/single view toggles, warmup loading overlays gated on leader readiness, and granular error recovery for failed agent starts, indicating a mature frontend with React/UnoCSS and an AionCore backend.\n\nUnlike OpenClaw—which is fundamentally a personal AI assistant daemon driven via CLI and messaging channels—AionUi positions itself as a visual control plane and cowork environment that can host OpenClaw as one of many backends. This makes it ideal for users who want a desktop GUI to supervise multiple agents, but less suitable for those seeking a minimal, headless, or strongly sandboxed agent runtime.",
+  "overview_markdown": "AionUi is a free, open-source (Apache-2.0) Electron desktop application that positions itself as a universal coworking interface for AI coding agents. Rather than building its own agent, AionUi wraps over 20 popular CLI-based agents — including OpenClaw, Claude Code, Codex, Gemini CLI, OpenCode, and Hermes Agent — into a single cross-platform GUI available on macOS, Windows, and Linux. The app emphasizes zero-setup onboarding: users bring their own API keys, and AionUi handles the orchestration, conversation management, and file-system integration.\n\nArchitecturally, AionUi is built on TypeScript with an Electron shell and a companion backend called `aioncore` (currently at v0.1.56). Recent commits reveal active development across several fronts: a file-search system with chat-ref integration for @-mention workflows, a skills marketplace with a file-browser detail page, context-usage indicators for ACP (Agent Communication Protocol) conversations with token/cost breakdowns, and Explorer tree enhancements for file preview and reveal highlighting. The project ships with a tray-based system-tray integration, custom title-bar close-to-tray behavior, and sandboxed workspace @mention fallbacks. The release cadence is aggressive — three version bumps (2.1.43 → 2.1.45) in the recent commit window alone.\n\nWhat differentiates AionUi from OpenClaw is its GUI-first, multi-agent philosophy. Where OpenClaw is a single, deeply integrated personal assistant with its own identity, skills, and memory, AionUi is an agent-agnostic orchestration layer. It lets users run Claude Code for one task, OpenClaw for another, and Gemini CLI for a third — all from the same desktop interface with shared file-system context. The project has also secured a partnership with Kimi (Moonshot AI) offering free premium plans to contributors, signaling a growth strategy tied to API-provider relationships. The trade-off is that AionUi inherits the security posture of every agent it wraps, and its Electron architecture adds resource overhead compared to running agents natively in a terminal.",
   "latest_release": {
     "version": "v2.1.45",
     "date": "2026-07-31T15:40:43Z",
     "url": "https://github.com/iOfficeAI/AionUi/releases/tag/v2.1.45"
   },
-  "last_updated": "2026-08-02T12:53:39.402Z"
+  "last_updated": "2026-08-02T15:43:00.608Z"
 }

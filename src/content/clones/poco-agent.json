@@ -25,7 +25,7 @@
     "web-ui"
   ],
   "community_sentiment": 15,
-  "reddit_mentions": 20,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Teams wanting channel-based AI collaboration with sandboxed execution",
@@ -69,10 +69,10 @@
   "evidence_confidence": 80,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:43:11.977Z",
-    "last_reviewed_at": "2026-07-13T02:43:11.977Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:32.960Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Poco (poco-ai/poco-agent) is an open-source AI agent framework positioned as a safer, more beautiful, and easier-to-use alternative to OpenClaw. It wraps a Claude Code–based agent inside a FastAPI backend and a Next.js web UI, providing a polished collaborative environment with servers, channels, DMs, and reply threads where persistent agents can be mentioned, tasked, and monitored.\n\nCore architecture emphasizes security and productivity: all tasks execute inside isolated containers (sandboxes) with optional local directory mounts for self-hosted deployments, while the frontend offers artifacts preview, execution playback, and light/dark modes. Recent commits show rapid iteration on capability grouping, skill references, shared session mobile views, and workspace streaming via signed routes, indicating a focus on team features and UX refinement.\n\nCompared to OpenClaw’s lobster-way terminal/messaging-centric approach, Poco differentiates with built-in IM integrations (DingTalk, Feishu, Telegram), project management, and background cloud execution. It targets groups wanting a self-hosted or cloud AI coworker with strong sandboxing, but trades ultra-lightweight edge efficiency for a richer full-stack experience.",
@@ -81,5 +81,5 @@
     "date": "2026-06-18T02:32:30Z",
     "url": "https://github.com/poco-ai/poco-claw/releases/tag/0.5.7"
   },
-  "last_updated": "2026-08-02T12:53:47.634Z"
+  "last_updated": "2026-08-02T15:53:32.960Z"
 }

@@ -1,85 +1,89 @@
 {
   "id": "agentscope-ai/CoPaw",
-  "name": "CoPaw",
+  "name": "QwenPaw",
   "language": "Python",
-  "vibe_summary": "A personal AI assistant focused on easy local/cloud deployment with extensible chat app integrations, recently rebranded to QwenPaw 2.0 with memory and tool enhancements. It aims to be a user-friendly OpenClaw alternative with strong multi-platform chat support.",
+  "vibe_summary": "A polished, multi-chat-app personal AI assistant from the AgentScope ecosystem with strong local-first deployment and a rapidly iterating codebase. Recent commits show active hardening of memory, sandboxing, and console UX—signaling a maturing product rather than a toy prototype.",
   "health_status": "healthy",
-  "github_stars": 32088,
+  "github_stars": 32152,
   "metrics": {
-    "boot_time_ms": 200,
-    "memory_mb": 80,
-    "security_score": 65
+    "boot_time_ms": 150,
+    "memory_mb": 75,
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 5,
+    "sandboxing": 7,
     "api_security": 6,
-    "network_isolation": 4,
+    "network_isolation": 5,
     "telemetry_safety": 5,
-    "shell_access_risk": 7
+    "shell_access_risk": 6
   },
   "tags": [
-    "personal-ai",
-    "assistant",
+    "ai-assistant",
     "multi-chat",
-    "extensible",
-    "local-deploy"
+    "self-hosted",
+    "python",
+    "agent-framework"
   ],
-  "community_sentiment": 50,
-  "reddit_mentions": 15,
+  "community_sentiment": 0,
+  "reddit_mentions": 14,
   "web_mentions": 10,
   "best_for": [
-    "Users wanting a personal AI assistant on own machine",
-    "Those needing multi-chat app integration",
-    "Developers wanting extensible Python-based assistant"
+    "Users wanting a self-hosted AI assistant that plugs into multiple chat apps (Discord, DingTalk, etc.)",
+    "Developers who prefer Python extensibility and the AgentScope ecosystem",
+    "Teams needing cloud-or-local deployment flexibility with sandboxed execution",
+    "Chinese-market users given DingTalk integration and AgentScope's community focus"
   ],
   "avoid_if": [
-    "Users needing strict sandboxing",
-    "Those wanting a non-Python lightweight agent",
-    "Projects requiring high security out-of-box"
+    "You need ultra-low-latency edge deployment (Python boot overhead is real)",
+    "You want a pure Rust/Go stack with minimal memory footprint",
+    "You require strong privacy guarantees out of the box — telemetry posture is unclear",
+    "You need a mature plugin ecosystem comparable to OpenClaw's 86+ repos"
   ],
   "deployment_target": [
-    "desktop",
+    "self-hosted",
     "cloud",
-    "self-hosted"
+    "desktop"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "low",
+  "setup_difficulty": "medium",
   "privacy_posture": "mixed",
-  "multi_user": null,
+  "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-07-31T09:45:22Z",
   "contributors_count": 213,
-  "open_issues_count": 953,
+  "open_issues_count": 956,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "openclaw_advantages": [
-    "Easy install and deploy on own machine or cloud",
-    "Supports multiple chat apps with extensible capabilities",
-    "Python-based, familiar to many devs",
-    "Recent v2.0.0 with memory and tool improvements"
+    "Native DingTalk integration for Chinese enterprise users — OpenClaw lacks this",
+    "AgentScope ecosystem alignment gives it a distinct agent-orchestration pedigree",
+    "Apache-2.0 license is more permissive than some OpenClaw components",
+    "Active sandbox hardening in recent commits suggests stronger execution isolation focus"
   ],
   "openclaw_disadvantages": [
-    "Less focused on security/sandboxing than OpenClaw may be",
-    "Reddit community not yet engaged (noise matches)",
-    "Possibly heavier resource usage than OpenClaw's optimized versions"
+    "Python runtime means higher memory usage and slower boot vs OpenClaw's Rust/Go options",
+    "Smaller plugin ecosystem — OpenClaw has 86+ repos and a broader skill marketplace",
+    "No evidence of edge-optimized variants (no 'pico'/'nano' tier like picoclaw)",
+    "Community is heavily Chinese-platform focused (DingTalk, Discord CN) — less Western community gravity",
+    "Telemetry and data safety posture is undocumented compared to OpenClaw's explicit guardrail projects"
   ],
-  "confidence_summary": "Evidence from README and release shows active development as personal AI assistant alternative, but Reddit mentions are unrelated noise and security details are sparse.",
-  "evidence_confidence": 70,
+  "confidence_summary": "Evidence is moderate: README and commit history are rich and recent, confirming active development, but Reddit results are entirely noise (pet/cat posts matching 'paw'), and web search results are thin beyond GitHub listings. Community sentiment cannot be reliably scored from the provided data.",
+  "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-07-13T02:30:08.524Z",
-    "last_reviewed_at": "2026-07-13T02:30:08.524Z",
+    "last_generated_at": "2026-08-02T15:27:39.197Z",
+    "last_reviewed_at": "2026-08-02T15:27:39.197Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "CoPaw (formerly or also known as QwenPaw) is a personal AI assistant built in Python, designed for easy installation and deployment either on a user's own machine or in the cloud. It supports integration with multiple chat applications and offers easily extensible capabilities through tools and plugins, as seen in its v2.0.0 release that added web search/fetch tool chunks and memory session propagation.\n\nThe architecture emphasizes user-friendly setup and broad chat platform connectivity, differentiating from OpenClaw by its Python foundation and explicit multi-app support. Recent commits show active maintenance with bug fixes for memory summarization and desktop mode, indicating a healthy project trajectory.\n\nWhile it shares OpenClaw's goal of a personal assistant for any platform, CoPaw's security posture and sandboxing are less documented, making it suitable for users prioritizing extensibility over hardened isolation.",
+  "overview_markdown": "QwenPaw is a personal AI assistant framework developed under the AgentScope-AI organization, designed for easy installation and deployment on local machines or in the cloud. It supports multiple chat applications — including Discord and DingTalk — and emphasizes extensibility through a Python-based plugin architecture. The project is licensed under Apache-2.0 and targets Python 3.11 through 3.14, with a codebase that enforces Black formatting and maintains active CI/CD via PyPI releases.\n\nArchitecturally, QwenPaw appears to follow a modular agent design pattern common in the AgentScope ecosystem. Recent commits reveal a sophisticated memory subsystem (Auto-Memory with Scroll context eviction and a ReMe knowledge base), sandbox mode with auto-downgrade safety, ACP protocol support for session management, and git identity injection for coding workflows. The v2.0.1 release and the rapid cadence of fixes (audio transcription, console session integrity, skill injection) suggest a project in active hardening — moving from feature velocity toward production reliability.\n\nCompared to OpenClaw, QwenPaw differentiates through its AgentScope lineage and Chinese-platform integrations (DingTalk), but shares the same core vision of a self-hosted, multi-channel AI assistant. Where OpenClaw has diversified into Rust-based edge variants (picoclaw) and safety guardrails (NemoClaw), QwenPaw remains a Python-first monolith with an emerging plugin ecosystem. Its sandboxing and memory work are notable strengths, but the Python runtime imposes inherent latency and memory tradeoffs versus OpenClaw's compiled-language options.",
   "latest_release": {
     "version": "v2.0.1",
     "date": "2026-07-24T07:18:16Z",
     "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.0.1"
   },
-  "last_updated": "2026-08-02T12:53:42.635Z"
+  "last_updated": "2026-08-02T15:27:39.197Z"
 }

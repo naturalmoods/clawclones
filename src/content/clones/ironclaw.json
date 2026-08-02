@@ -25,7 +25,7 @@
     "openclaw-alternative"
   ],
   "community_sentiment": 85,
-  "reddit_mentions": 21,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Privacy-focused users wanting a local AI assistant",
@@ -68,10 +68,10 @@
   "evidence_confidence": 90,
   "content_ops": {
     "last_generated_at": "2026-07-13T01:57:37.371Z",
-    "last_reviewed_at": "2026-07-13T01:57:37.371Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:27.105Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "IronClaw is an Agent OS written in Rust by NEAR AI, positioned as a security-hardened alternative to OpenClaw. Its architecture emphasizes privacy and extensibility through WASM sandbox isolation, capability-based permission models, and prompt-injection defenses, as noted in external summaries. The project is undergoing a significant transition with the 'Reborn' standalone runtime (on the `reborn-integration` branch) that introduces a separate `ironclaw-reborn` binary, isolated state roots, and CLI-native model route configuration.\n\nRecent commit activity shows heavy investment in test coverage, CI stability, and migration of core commands (`doctor`, `status`, `config`) to the Reborn framework, indicating a healthy, fast-moving codebase. Features include multi-provider LLM routing (OpenAI, local near.ai endpoints), Slack/Telegram integrations, and a skill/extension system. Compared to OpenClaw, IronClaw trades a larger plug-and-play ecosystem for stronger isolation guarantees and a memory-safe Rust foundation, targeting users who prioritize local-first operation and adversarial robustness.",
@@ -80,5 +80,5 @@
     "date": "2026-07-27T19:32:01Z",
     "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.0.0"
   },
-  "last_updated": "2026-08-02T12:53:29.182Z"
+  "last_updated": "2026-08-02T15:53:27.105Z"
 }

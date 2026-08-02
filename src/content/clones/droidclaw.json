@@ -26,7 +26,7 @@
   ],
   "community_sentiment": 50,
   "reddit_mentions": 0,
-  "web_mentions": 10,
+  "web_mentions": 0,
   "best_for": [
     "Repurposing old Android devices as autonomous agents",
     "Non-technical users wanting app automation via plain English",
@@ -68,10 +68,10 @@
   "evidence_confidence": 70,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:34:58.373Z",
-    "last_reviewed_at": "2026-07-13T02:34:58.373Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:40.385Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "DroidClaw is an AI agent framework that transforms Android devices—particularly older phones—into autonomous agents capable of executing high-level goals expressed in natural language. Its core architecture implements a perception → reasoning → action loop: it dumps the accessibility tree via ADB, parses interactive UI elements, diffs screen changes, and optionally captures screenshots, then leverages an LLM to decide taps, types, and swipes until the objective is met or step limit reached.\n\nUnlike OpenClaw, which is a cross-platform personal assistant with a growing plugin ecosystem and multi-channel communication, DroidClaw focuses exclusively on device-level UI automation without requiring API keys or custom integrations. Recent commits show active maintenance: fixes for session mapping between device and web dashboard, idempotent database migrations, and QStash scheduling support indicate a maturing server component alongside the Android APK.\n\nThe project’s unique value lies in its ability to delegate tasks to existing apps (e.g., ChatGPT, Gemini, Google Search) by simulating human interaction, effectively turning any installed app into a tool for the agent. This makes it ideal for repurposing hardware, though it sacrifices the broad platform support and extensibility that OpenClaw provides.",
@@ -80,5 +80,5 @@
     "date": "2026-02-25T14:48:02Z",
     "url": "https://github.com/unitedbyai/droidclaw/releases/tag/v0.5.3"
   },
-  "last_updated": "2026-08-02T12:53:44.907Z"
+  "last_updated": "2026-08-02T15:53:40.385Z"
 }

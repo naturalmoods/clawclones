@@ -25,8 +25,8 @@
     "agent-harness"
   ],
   "community_sentiment": 0,
-  "reddit_mentions": 2,
-  "web_mentions": 10,
+  "reddit_mentions": 0,
+  "web_mentions": 0,
   "best_for": [
     "Discord/Slack communities needing shared AI agent",
     "Teams wanting persistent typed memory across channels",
@@ -69,10 +69,10 @@
   "evidence_confidence": 70,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:45:01.405Z",
-    "last_reviewed_at": "2026-07-13T02:45:01.405Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:38.235Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Spacebot is an opinionated AI agent harness built in Rust, designed for teams, communities, and multi-user environments. Unlike monolithic agent loops, it splits conversation, reasoning, tool execution, and memory into specialized processes, enabling true concurrent multi-user interactions across Discord, Slack, Telegram, and Twitch without blocking.\n\nIts core architecture stores state in a typed graph within SQLite rather than markdown files, and autonomy is driven by a task state machine linked to goals. After complex tasks or idle conversations, a background process captures learned skills and memories, making the system progressively smarter with zero user action. Recent commits (v0.5.0) introduce per-agent secret isolation, dormant cortex, and structured worker outcomes, indicating a focus on security and scalable backend readiness.\n\nCompared to OpenClaw's personal assistant focus, Spacebot prioritizes shared memory across channels and process-level concurrency for organizations. While it offers one-click cloud deployment via spacebot.sh, Docker builds allow self-hosting, though its FSL license and emerging plugin ecosystem differentiate it from fully open-source alternatives.",
@@ -81,5 +81,5 @@
     "date": "2026-05-07T06:55:33Z",
     "url": "https://github.com/spacedriveapp/spacebot/releases/tag/v0.5.0"
   },
-  "last_updated": "2026-08-02T12:53:48.109Z"
+  "last_updated": "2026-08-02T15:53:38.235Z"
 }

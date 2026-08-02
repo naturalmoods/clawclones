@@ -26,7 +26,7 @@
   ],
   "community_sentiment": 40,
   "reddit_mentions": 0,
-  "web_mentions": 10,
+  "web_mentions": 0,
   "best_for": [
     "Edge AI deployments on low-power hardware",
     "Privacy-focused local assistant without cloud dependency",
@@ -70,10 +70,10 @@
   "evidence_confidence": 80,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:40:36.072Z",
-    "last_reviewed_at": "2026-07-13T02:40:36.072Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:34.785Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "ZeptoClaw is a single Rust binary personal AI assistant infrastructure that consolidates tools, memory, channels, providers, and sandboxed autonomy. It explicitly draws from OpenClaw's integration breadth, NanoClaw's container isolation, NemoClaw's policy-gated guardrails, and PicoClaw's edge efficiency, but implements them in Rust with a ~6MB stripped binary, ~50ms startup, and ~6MB RAM footprint.\n\nCore architecture includes built-in provider abstraction with 18 LLM providers, long-term memory storage, channel messaging, and container-based sandboxing for shell and tool execution. Recent commits show strict engineering discipline: a CI binary-size gate at 7.5MB, dependency audits via cargo-deny, and bug fixes preventing unconfigured provider fallback. The project is local-first, with optional cloud LLM providers, and targets edge, desktop, and VPS deployments.\n\nCompared to OpenClaw, ZeptoClaw trades a massive plugin ecosystem for minimal footprint and Rust's safety guarantees, making it ideal for resource-constrained or privacy-sensitive environments. However, its youth (v0.9.2) and smaller community mean fewer ready-made skills.",
@@ -82,5 +82,5 @@
     "date": "2026-04-07T15:45:01Z",
     "url": "https://github.com/qhkm/zeptoclaw/releases/tag/v0.9.2"
   },
-  "last_updated": "2026-08-02T12:53:46.477Z"
+  "last_updated": "2026-08-02T15:53:34.785Z"
 }

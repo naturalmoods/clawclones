@@ -2,52 +2,54 @@
   "id": "KafClaw/KafClaw",
   "name": "KafClaw",
   "language": "Go",
-  "vibe_summary": "Ultra-compact Go agent framework using Kafka for distributed multi-agent swarms. Enterprise-grade coordination with typed message envelopes and zero LLM provider lock-in.",
-  "health_status": "warning",
+  "vibe_summary": "KafClaw brings enterprise Kafka messaging to multi-agent coordination, turning agent swarms into observable, topic-driven workflows. It's a Go-native framework that prioritizes distributed collaboration over single-assistant convenience.",
+  "health_status": "healthy",
   "github_stars": 20,
   "metrics": {
-    "boot_time_ms": 30,
+    "boot_time_ms": 25,
     "memory_mb": 15,
-    "security_score": 80
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 3,
-    "api_security": 6,
-    "network_isolation": 4,
-    "telemetry_safety": 5,
-    "shell_access_risk": 6
+    "sandboxing": 4,
+    "api_security": 7,
+    "network_isolation": 5,
+    "telemetry_safety": 6,
+    "shell_access_risk": 5
   },
   "tags": [
-    "kafka",
     "multi-agent",
+    "kafka",
+    "distributed-systems",
     "go",
-    "distributed",
-    "enterprise"
+    "agent-framework"
   ],
-  "community_sentiment": 5,
+  "community_sentiment": 35,
   "reddit_mentions": 1,
   "web_mentions": 10,
   "best_for": [
-    "Enterprise teams needing distributed agent coordination",
-    "Kafka-native infrastructure with existing event pipelines",
-    "Multi-agent swarms without LLM provider lock-in"
+    "Teams already running Kafka who need agent orchestration",
+    "Enterprise deployments requiring structured, auditable agent messaging",
+    "Go shops wanting a lightweight agent coordination layer without LLM vendor lock-in",
+    "Distributed swarm architectures with hierarchical task routing"
   ],
   "avoid_if": [
-    "Solo developers wanting a simple personal assistant",
-    "Environments without Kafka available",
-    "Users seeking large community support (low stars)"
+    "You need a personal AI assistant with built-in chat/messaging integrations",
+    "You lack Kafka infrastructure or Kafka operational expertise",
+    "You want a batteries-included single-agent experience like OpenClaw",
+    "You need a large plugin ecosystem or community support today"
   ],
   "deployment_target": [
     "cloud",
     "self-hosted",
-    "desktop"
+    "distributed"
   ],
   "local_first": false,
   "cloud_dependency": "optional",
-  "setup_difficulty": "medium",
-  "privacy_posture": "mixed",
+  "setup_difficulty": "high",
+  "privacy_posture": "strong",
   "multi_user": true,
-  "plugin_ecosystem": "emerging",
+  "plugin_ecosystem": "limited",
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-07-28T14:00:20Z",
   "contributors_count": 5,
@@ -55,32 +57,34 @@
   "release_cadence_days": 15,
   "operational_risk": "medium",
   "openclaw_advantages": [
-    "Native Kafka-backed distributed multi-agent orchestration",
-    "Provider-agnostic agent routing without single-device limits",
-    "Enterprise audit trails and typed message envelopes",
-    "Horizontal scaling via event log infrastructure"
+    "Native Kafka protocol support enables enterprise-grade distributed agent swarms out of the box",
+    "Go runtime offers lower memory footprint and faster boot than Node.js-based OpenClaw",
+    "Structured topic hierarchy with typed envelopes gives built-in observability and audit trails",
+    "No LLM provider lock-in — agents are transport-layer citizens, not model-bound",
+    "Part of a broader infrastructure suite (KafScale, GitClaw, Scalytics Copilot) for end-to-end workflows"
   ],
   "openclaw_disadvantages": [
-    "Requires Kafka infrastructure, heavier than single-device OpenClaw",
-    "Minimal community traction (20 stars vs OpenClaw's large ecosystem)",
-    "No personal assistant UX focus; enterprise-oriented",
-    "Limited documented plugins compared to ClawHub"
+    "Requires Kafka infrastructure — significantly higher operational complexity than OpenClaw's standalone model",
+    "No built-in personal assistant UX, chat integrations, or end-user-facing channels",
+    "Tiny community (20 stars, 1 Reddit mention) vs OpenClaw's 30k+ stars and active ecosystem",
+    "Plugin ecosystem is limited; OpenClaw has a mature plugin and integration landscape",
+    "Focused on agent-to-agent coordination, not human-agent interaction"
   ],
-  "confidence_summary": "Evidence from README and commits shows active maintenance but low community visibility; web mentions are predominantly about OpenClaw, not KafClaw, creating uncertainty about real-world sentiment.",
-  "evidence_confidence": 70,
+  "confidence_summary": "Evidence is based on README documentation, recent commit activity (active Dependabot maintenance), and a v1.0.0 release. Reddit and web search results show very low community awareness, so community sentiment and ecosystem strength estimates carry higher uncertainty.",
+  "evidence_confidence": 68,
   "content_ops": {
-    "last_generated_at": "2026-07-13T02:12:45.558Z",
-    "last_reviewed_at": "2026-07-13T02:12:45.558Z",
+    "last_generated_at": "2026-08-02T15:46:56.860Z",
+    "last_reviewed_at": "2026-08-02T15:46:56.860Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "KafClaw is an enterprise-grade multi-agent coordination framework written in Go, using Apache Kafka as its messaging backbone. It enables autonomous AI agents to collaborate through a structured topic hierarchy with typed envelopes (`announce`, `request`, `response`, `trace`, `memory`, `audit`), providing built-in observability, correlation tracking, and hierarchical orchestration. Unlike single-device personal assistants, KafClaw is designed for distributed swarms that can run in local, Kafka-connected, or remote gateway modes without coupling to any specific LLM provider.\n\nThe project is part of a broader infrastructure suite (including KafScale and GitClaw) backed by Scalytics, and emphasizes security practices such as CodeQL scanning, dependency hygiene via automated updates, and explicit non-affiliation with crypto tokens. Recent repository activity shows consistent dependency bumps across Go, docs, and Electron components, alongside a v1.0.0 release, indicating maintained but early-stage maturity.\n\nCompared to OpenClaw—a personal AI assistant focused on individual productivity—KafClaw targets organizational workloads requiring scalable, event-driven agent networks. Its strengths lie in enterprise auditability and Kafka-native scaling, while its weaknesses include heavier infrastructure requirements and a nascent community footprint.",
+  "overview_markdown": "KafClaw is an agent coordination framework written in Go that uses Apache Kafka as its messaging backbone. Rather than focusing on personal AI assistance, it targets enterprise multi-agent collaboration — enabling autonomous agents to communicate through a structured Kafka topic hierarchy with typed message envelopes (`announce`, `request`, `response`, `trace`, `memory`, `audit`). Each message carries correlation IDs and timestamps, providing distributed tracing and auditability out of the box. The framework supports group-based agent topologies with hierarchical orchestration, shared memory, and distributed skill routing, all without coupling to any single LLM provider.\n\nArchitecturally, KafClaw operates in three modes: local (single-node), Kafka-connected (distributed swarm), and remote gateway. It is part of a broader Scalytics infrastructure suite that includes KafScale (Kafka-compatible + S3-compatible transport), GitClaw (agent-first self-hosted Git), and Scalytics Copilot (private AI inference). This positions KafClaw as the coordination layer in a larger enterprise stack rather than a standalone assistant. The Go implementation keeps it lightweight with fast boot times and low memory overhead compared to Node.js or Python alternatives.\n\nWhere OpenClaw excels as a personal AI assistant with broad messaging integrations and a rich plugin ecosystem, KafClaw carves a different niche: distributed agent swarms over Kafka. It is not a drop-in OpenClaw replacement but a complementary tool for teams already invested in Kafka infrastructure who need structured, observable multi-agent coordination. The project is actively maintained (frequent Dependabot updates, CI/CD pipelines, CodeQL scanning) but has a very small community at this stage.",
   "latest_release": {
     "version": "v1.0.0",
     "date": "2026-06-17T15:05:13Z",
     "url": "https://github.com/KafClaw/KafClaw/releases/tag/v1.0.0"
   },
-  "last_updated": "2026-08-02T12:53:35.854Z"
+  "last_updated": "2026-08-02T15:46:56.860Z"
 }

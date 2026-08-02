@@ -26,7 +26,7 @@
   ],
   "community_sentiment": 40,
   "reddit_mentions": 0,
-  "web_mentions": 10,
+  "web_mentions": 0,
   "best_for": [
     "No-code enthusiasts wanting OpenClaw-like assistant",
     "Self-hosters already running n8n",
@@ -68,12 +68,12 @@
   "evidence_confidence": 30,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:10:09.304Z",
-    "last_reviewed_at": "2026-07-13T02:10:09.304Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:36.925Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "n8nClaw is a lightweight alternative to OpenClaw implemented entirely as an n8n workflow export. Instead of a compiled agent runtime, it uses n8n's visual automation canvas to connect Telegram, WhatsApp (via Evolution API), Gmail, and an hourly schedule trigger into a central Claude Sonnet 4.5 agent powered by OpenRouter. The agent maintains short-term context in Postgres chat memory (15 messages) and offloads long-term recall to a Supabase vector store via a scheduled summarization pipeline using Haiku.\n\nThe architecture emphasizes no-code customization: users edit fields like 'soul' for personality, and tiered worker sub-agents handle research, email, and document tasks. Unlike OpenClaw's native multi-platform binaries, n8nClaw requires a self-hosted or cloud n8n instance with associated Postgres and Supabase credentials, making it accessible to those already in the n8n ecosystem but heavier to bootstrap for newcomers.\n\nCompared to OpenClaw, n8nClaw trades standalone efficiency and a dedicated skill registry for visual transparency and reuse of n8n's integration library. It currently lacks official releases, security hardening, and community traction beyond its GitHub stars.",
-  "last_updated": "2026-08-02T12:53:34.696Z"
+  "last_updated": "2026-08-02T15:53:36.925Z"
 }

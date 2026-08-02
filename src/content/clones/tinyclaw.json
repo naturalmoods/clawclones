@@ -25,8 +25,8 @@
     "discord-bot"
   ],
   "community_sentiment": 40,
-  "reddit_mentions": 2,
-  "web_mentions": 10,
+  "reddit_mentions": 0,
+  "web_mentions": 0,
   "best_for": [
     "Solo founders needing agent teams",
     "24/7 multi-channel AI ops",
@@ -70,10 +70,10 @@
   "evidence_confidence": 70,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:00:30.596Z",
-    "last_reviewed_at": "2026-07-13T02:00:30.596Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:39.411Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "TinyAGI (formerly TinyClaw) is a TypeScript-based multi-agent orchestration framework designed for one-person companies. It enables running multiple isolated AI agents organized into teams that collaborate via chain execution and fan-out, with persistent chat rooms and a SQLite-backed task queue for reliable 24/7 operation. The system integrates with Anthropic Claude and OpenAI Codex CLIs, as well as custom OpenAI/Anthropic-compatible endpoints, and provides multi-channel connectivity through Discord, WhatsApp, and Telegram.\n\nArchitecturally, TinyAGI comprises a Node.js daemon, a React-based web portal called TinyOffice for real-time monitoring and Linear-style project management, and a plugin system for message hooks and event listeners. Recent commits show rapid UI refactoring, task database migration to SQLite, and Docker improvements (though currently running as root). Unlike OpenClaw which positions itself as a personal AI assistant across devices, TinyAGI emphasizes team simulation and asynchronous agent handoffs within a self-hosted control plane, making it a more specialized alternative for orchestrating autonomous workflows rather than a single lobster assistant.",
@@ -82,5 +82,5 @@
     "date": "2026-03-26T17:23:07Z",
     "url": "https://github.com/TinyAGI/tinyagi/releases/tag/v0.0.20"
   },
-  "last_updated": "2026-08-02T12:53:31.041Z"
+  "last_updated": "2026-08-02T15:53:39.411Z"
 }

@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "The original lobster-themed personal AI assistant that runs on your own devices across any OS and channel. Recent commits show relentless focus on trimming dead code, speeding up gateway startup, and polishing multi-channel UX.",
   "health_status": "healthy",
-  "github_stars": 384899,
+  "github_stars": 384922,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 80,
@@ -25,8 +25,8 @@
     "typescript"
   ],
   "community_sentiment": 82,
-  "reddit_mentions": 18,
-  "web_mentions": 10,
+  "reddit_mentions": 0,
+  "web_mentions": 0,
   "best_for": [
     "Users wanting a personal local AI assistant on any OS",
     "Those needing broad chat channel integration (WhatsApp, Slack, etc)",
@@ -50,9 +50,9 @@
   "multi_user": false,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-08-02T12:49:56Z",
-  "contributors_count": 3044,
-  "open_issues_count": 5588,
+  "last_commit_at": "2026-08-02T15:38:07Z",
+  "contributors_count": 3043,
+  "open_issues_count": 5585,
   "release_cadence_days": 3,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -69,10 +69,10 @@
   "evidence_confidence": 92,
   "content_ops": {
     "last_generated_at": "2026-07-13T01:49:57.901Z",
-    "last_reviewed_at": "2026-07-13T01:49:57.901Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:31.057Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "OpenClaw is a personal AI assistant framework designed to run locally on user-owned devices across macOS, Linux, Windows, iOS, and Android. Its architecture separates a lightweight Gateway control plane from the assistant product itself, enabling seamless integration with over 20 messaging channels including WhatsApp, Slack, Discord, and Matrix, while supporting voice, live Canvas rendering, and skill extensions via the ClawHub registry.\n\nRecent development activity shows a strong emphasis on performance and code hygiene: commits streamline cold startup and first agent turn latency, make gateway hot reload transactional, and aggressively trim dead exports across UI, Slack, browser, and plugin modules. This indicates a mature, actively maintained project focused on reliability and developer experience.\n\nUnlike many minimalist clones, OpenClaw prioritizes breadth of channel support, native mobile presence, and a rich plugin ecosystem, making it the reference implementation for local-first personal AI assistants, though its Node/TypeScript baseline implies higher resource usage than pico-scale alternatives.",
@@ -81,5 +81,5 @@
     "date": "2026-07-13T22:33:14Z",
     "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1"
   },
-  "last_updated": "2026-08-02T12:53:25.866Z"
+  "last_updated": "2026-08-02T15:53:31.057Z"
 }

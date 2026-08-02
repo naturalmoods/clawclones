@@ -4,7 +4,7 @@
   "language": "Go",
   "vibe_summary": "A from-scratch Go rewrite of the personal AI assistant concept, boasting <10MB RAM footprint on $10 hardware. Recently shipped v0.3.1 with active AI-assisted development and multi-arch edge focus.",
   "health_status": "healthy",
-  "github_stars": 29794,
+  "github_stars": 29797,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.9,
@@ -25,7 +25,7 @@
     "multi-arch"
   ],
   "community_sentiment": 85,
-  "reddit_mentions": 5,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Edge and IoT deployments on cheap hardware",
@@ -69,10 +69,10 @@
   "evidence_confidence": 80,
   "content_ops": {
     "last_generated_at": "2026-07-13T01:55:50.731Z",
-    "last_reviewed_at": "2026-07-13T01:55:50.731Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:37.694Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "PicoClaw is an ultra-lightweight personal AI assistant written from scratch in Go by Sipeed, explicitly inspired by NanoBot and positioned as a lean alternative to OpenClaw. It targets edge and embedded hardware, running on as little as $10 devices with under 10MB RAM while supporting diverse architectures including x86_64, ARM64, MIPS, RISC-V, and LoongArch.\n\nThe project was uniquely 'self-bootstrapped'—the AI agent itself drove the architecture migration and code optimization—and continues to evolve with AI-assisted commits (e.g., Claude co-authored fixes for tool safety and provider compatibility). Recent work focuses on hardening tool access (write_file overwrite guards) and robust provider history handling (anthropic tool_use fallback), indicating a security-conscious development pace.\n\nUnlike OpenClaw's broader ecosystem with rich Canvas UI and mobile presence, PicoClaw prioritizes minimal footprint and deployability, making it ideal for constrained environments. The v0.3.1 release and active community show a healthy, emerging project with MIT licensing and a clear edge-first vision.",
@@ -81,5 +81,5 @@
     "date": "2026-07-03T07:37:06Z",
     "url": "https://github.com/sipeed/picoclaw/releases/tag/v0.3.1"
   },
-  "last_updated": "2026-08-02T12:53:28.545Z"
+  "last_updated": "2026-08-02T15:53:37.694Z"
 }

@@ -69,10 +69,10 @@
   "evidence_confidence": 70,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:02:04.299Z",
-    "last_reviewed_at": "2026-07-13T02:02:04.299Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:39.928Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "zclaw is a minimalist personal AI assistant written in C and built on the ESP-IDF/FreeRTOS stack for ESP32 microcontrollers. It enforces a strict all-in firmware budget of 888 KiB, including networking, TLS, and runtime, while still delivering scheduled tasks, persistent memory, Telegram/web relay chat, and custom firmware tools for GPIO, DHT sensors, and I2C devices.\n\nUnlike OpenClaw which targets general-purpose OSes (macOS, Linux, Android) with a large plugin ecosystem, zclaw is laser-focused on edge and IoT use cases. Its architecture favors static compilation and direct hardware access over dynamic skill loading, making it extremely lightweight and power-efficient but less flexible for non-embedded workflows.\n\nRecent commits show active maintenance with added hardware tools (DHT, I2C) and documentation improvements, and a v2.13.0 release. The project emphasizes security via encrypted flash credentials, bootstrap integrity checks, and rate limits, positioning it as a privacy-strong, self-hosted alternative for makers.",
@@ -81,5 +81,5 @@
     "date": "2026-03-22T07:08:28Z",
     "url": "https://github.com/tnm/zclaw/releases/tag/v2.13.0"
   },
-  "last_updated": "2026-08-02T12:53:31.499Z"
+  "last_updated": "2026-08-02T15:53:39.928Z"
 }

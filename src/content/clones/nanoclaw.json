@@ -25,7 +25,7 @@
     "anthropic-sdk"
   ],
   "community_sentiment": 78,
-  "reddit_mentions": 7,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Self-hosters wanting OS-level isolation for AI agents",
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-01T20:45:44Z",
+  "last_commit_at": "2026-08-02T14:13:24Z",
   "contributors_count": 145,
-  "open_issues_count": 865,
+  "open_issues_count": 863,
   "release_cadence_days": 20,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -70,10 +70,10 @@
   "evidence_confidence": 85,
   "content_ops": {
     "last_generated_at": "2026-07-13T01:52:32.801Z",
-    "last_reviewed_at": "2026-07-13T01:52:32.801Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:35.386Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "NanoClaw is a lightweight alternative to OpenClaw designed for security-conscious users who want an AI assistant they can actually understand. Instead of OpenClaw's near-half-million-line monolith running in a single Node process with application-level permissions, NanoClaw uses a compact TypeScript codebase (around 232k tokens) where each agent executes inside its own Linux container with filesystem isolation. This provides true OS-level sandboxing rather than relying solely on allowlists and pairing codes.\n\nThe project connects to popular messaging platforms including WhatsApp, Telegram, Slack, Discord, and Gmail, and leverages Anthropic's Agents SDK for agent execution, memory, and scheduled jobs. Recent development activity (version 2.1.46 in progress, release v2.1.17) shows rapid iteration on channel adapter defaults, WhatsApp number-ownership steering, and migration tooling from v1. The `nanoclaw.sh` bootstrap script automates installation of Node, pnpm, and Docker, then builds the agent container and pairs the first channel, even invoking Claude Code to self-heal on failures.\n\nCompared to OpenClaw, NanoClaw trades breadth of plugins and channel support for auditability and isolation. It is best suited for self-hosters who prioritize containment of AI workloads, while those needing a vast skill registry or model-agnostic backends may find it limiting. Its MIT license and active Discord community indicate a welcoming, open development model.",
@@ -82,5 +82,5 @@
     "date": "2026-08-01T20:46:31Z",
     "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2.1.54"
   },
-  "last_updated": "2026-08-02T12:53:27.253Z"
+  "last_updated": "2026-08-02T15:53:35.386Z"
 }

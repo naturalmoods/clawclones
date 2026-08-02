@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-modifying AI agent that rewrites its own mind and evolves autonomously with a constitution and persistent identity. Ships as a native desktop app with local model support, layered safety, and a community skills marketplace.",
   "health_status": "healthy",
-  "github_stars": 881,
+  "github_stars": 883,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -25,8 +25,8 @@
     "skills-marketplace"
   ],
   "community_sentiment": 35,
-  "reddit_mentions": 20,
-  "web_mentions": 10,
+  "reddit_mentions": 0,
+  "web_mentions": 0,
   "best_for": [
     "Researchers exploring self-evolving agents",
     "Users wanting local-first desktop AI",
@@ -69,10 +69,10 @@
   "evidence_confidence": 80,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:18:59.889Z",
-    "last_reviewed_at": "2026-07-13T02:18:59.889Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:35.841Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Ouroboros is a self-modifying AI agent implemented in Python that autonomously writes and rewrites its own code, maintaining a persistent identity and background consciousness across restarts. Unlike a typical coding assistant, it operates as a native desktop application for macOS, Linux, and Windows with a web UI, local model support, and a layered safety system combining a hardcoded sandbox with policy-based LLM safety checks.\n\nArchitecturally, Ouroboros emphasizes autonomous evolution: it includes a constitution, reusable live cards for background tasks, and an idempotent scratch workspace for safe file operations. Recent commits show robust engineering for benchmark harnesses (GAIA, SWE-Pro) with bwrap filesystem isolation to prevent answer leakage, cost hard-stop budgets, and protected-artifact policies. A companion skills marketplace, OuroborosHub, allows community distribution of transport bridges and tools.\n\nCompared to OpenClaw—a personal AI assistant focused on multi-channel communication and ease of use—Ouroboros leans into self-evolution and local-first desktop autonomy. It lacks OpenClaw’s broad chat-platform integrations and enterprise multi-user story, but offers stronger experimental isolation for agent safety and a unique self-improving codebase.",
@@ -81,5 +81,5 @@
     "date": "2026-07-31T23:50:20Z",
     "url": "https://github.com/razzant/ouroboros/releases/tag/v6.87.5"
   },
-  "last_updated": "2026-08-02T12:53:37.914Z"
+  "last_updated": "2026-08-02T15:53:35.841Z"
 }

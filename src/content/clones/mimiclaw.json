@@ -25,7 +25,7 @@
     "local-first"
   ],
   "community_sentiment": 55,
-  "reddit_mentions": 11,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Hobbyists wanting AI on tiny hardware",
@@ -68,10 +68,10 @@
   "evidence_confidence": 80,
   "content_ops": {
     "last_generated_at": "2026-07-13T01:58:48.757Z",
-    "last_reviewed_at": "2026-07-13T01:58:48.757Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:24.773Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "MimiClaw is a hardware-native AI assistant that ports the OpenClaw concept onto a $5 ESP32-S3 microcontroller, running entirely in pure C without any operating system, Node.js, or external server. Its core architecture consists of a lightweight agent loop that receives Telegram messages over WiFi, queries Anthropic or OpenAI models, executes local tools, and persists session memory on onboard SPIFFS flash storage.\n\nRecent commits show active development: USB-JTAG console switching, SPIFFS binary inclusion in releases, GPIO skill support, and captive portal WiFi onboarding. Unlike OpenClaw which targets desktops, mobile, and cloud with a rich plugin ecosystem, MimiClaw prioritizes physical portability, 0.5W power draw, and a minimal attack surface on edge silicon.\n\nThe project is best suited for makers and embedded enthusiasts who want a pocket-sized, always-on assistant, but it lacks the multi-channel integrations, skill registry, and user-friendly setup of the parent OpenClaw project.",
@@ -80,5 +80,5 @@
     "date": "2026-03-17T04:25:41Z",
     "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
   },
-  "last_updated": "2026-08-02T12:53:29.710Z"
+  "last_updated": "2026-08-02T15:53:24.773Z"
 }

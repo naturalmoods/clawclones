@@ -69,10 +69,10 @@
   "evidence_confidence": 70,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:16:01.110Z",
-    "last_reviewed_at": "2026-07-13T02:16:01.110Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:36.478Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "OpenFang is an open-source Agent Operating System written from scratch in Rust, compiling to a single ~32MB binary that runs autonomous agents called 'Hands' on schedules without user prompting. Its architecture spans 14 crates and 137K LOC, with 2,696+ passing tests and zero clippy warnings, emphasizing reliability and a small footprint for self-hosted deployments.\n\nRecent commit activity shows a focus on security hardening (audit fixes, codex hardening, toctou staging, endpoint audits) and continuous releases, with v0.6.9 published in May 2026. Unlike OpenClaw's personal assistant model that reacts to user channels, OpenFang positions itself as a background agent OS that builds knowledge graphs, monitors targets, and reports to a local dashboard at port 4200.\n\nWhile pre-1.0 and subject to breaking changes, OpenFang's Rust foundation and single-binary distribution offer a lightweight alternative for users wanting always-on autonomous workflows rather than conversational interactions. Its privacy posture is mixed due to likely cloud LLM dependencies, but local-first execution and active audits mitigate some risks.",
@@ -81,5 +81,5 @@
     "date": "2026-05-12T18:42:42Z",
     "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.9"
   },
-  "last_updated": "2026-08-02T12:53:36.893Z"
+  "last_updated": "2026-08-02T15:53:36.478Z"
 }

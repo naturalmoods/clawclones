@@ -26,7 +26,7 @@
   ],
   "community_sentiment": 10,
   "reddit_mentions": 0,
-  "web_mentions": 10,
+  "web_mentions": 0,
   "best_for": [
     "users wanting zero-cost AI assistant",
     "privacy-conscious offline use",
@@ -69,10 +69,10 @@
   "evidence_confidence": 80,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:08:20.017Z",
-    "last_reviewed_at": "2026-07-13T02:08:20.017Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:33.635Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "SafestClaw is positioned as a zero-cost, LLM-optional alternative to OpenClaw, written in Python and installable via `pip install safestclaw`. Its core architecture relies on ML-based intent detection and deterministic rule/action mappings for tasks like weather queries, news summarization, research, blogging, and code security audits, thereby avoiding the recurring API costs and prompt-injection surface associated with language-model-dependent assistants. Optional LLM integration (via `setup ai`) is available for free-form chat, but the system is designed so that most features work fully offline and locally.\n\nRecent development activity shows a focus on robustness: commits address configuration path stability across systemd/launchd/cron contexts, improved Telegram bot error surfacing, and ensuring NLU enablement persists correctly. The project emphasizes privacy (local-by-default, external calls only on explicit user request) and minimal attack surface. Compared to OpenClaw, SafestClaw trades generative flexibility for cost-free, deterministic, and auditable operations on modest hardware.",
@@ -81,5 +81,5 @@
     "date": "2026-05-09T13:40:00Z",
     "url": "https://github.com/princezuda/safestclaw/releases/tag/4.2.4"
   },
-  "last_updated": "2026-08-02T12:53:34.237Z"
+  "last_updated": "2026-08-02T15:53:33.635Z"
 }

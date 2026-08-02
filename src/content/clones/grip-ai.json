@@ -2,40 +2,42 @@
   "id": "5unnykum4r/grip-ai",
   "name": "grip-ai",
   "language": "Python",
-  "vibe_summary": "A Python-native OpenClaw alternative using Claude Agent SDK with LiteLLM failover across 15+ providers. Recently shipped v1.6.1 with mypy-clean CI and 882 passing tests, emphasizing reliability and unified tooling.",
+  "vibe_summary": "A Python-native OpenClaw alternative that bridges Claude Agent SDK with LiteLLM for 15+ providers, offering real cross-provider failover and a unified 31-tool surface. Actively maintained with 882 tests, mypy-clean code, and a pragmatic 'dual-engine' architecture that prioritizes reliability over novelty.",
   "health_status": "healthy",
   "github_stars": 10,
   "metrics": {
     "boot_time_ms": 150,
-    "memory_mb": 80,
-    "security_score": 65
+    "memory_mb": 75,
+    "security_score": 62
   },
   "radar_chart": {
     "sandboxing": 3,
-    "api_security": 7,
+    "api_security": 6,
     "network_isolation": 4,
-    "telemetry_safety": 8,
+    "telemetry_safety": 7,
     "shell_access_risk": 8
   },
   "tags": [
+    "ai-agent",
     "openclaw-alternative",
-    "python",
-    "multi-agent",
+    "multi-model",
     "self-hosted",
-    "litellm"
+    "claude-agent-sdk"
   ],
-  "community_sentiment": 0,
+  "community_sentiment": 5,
   "reddit_mentions": 19,
   "web_mentions": 10,
   "best_for": [
-    "self-hosters wanting Python-based agent platform",
-    "users needing multi-provider LLM failover",
-    "Telegram/Discord/Slack automation"
+    "Teams wanting Claude Agent SDK as primary engine with LiteLLM fallback for cost savings",
+    "Developers who need a single gateway process exposing Telegram, Discord, Slack, and REST API",
+    "Users who value type safety and test coverage (882 tests, mypy-clean) in an agent framework",
+    "Self-hosters needing cross-provider failover with per-call USD cost tracking"
   ],
   "avoid_if": [
-    "those needing strict sandboxing by default",
-    "users wanting large community support",
-    "projects requiring minimal shell risk"
+    "You need containerized or per-agent sandboxing — grip runs tools in-process with no isolation",
+    "You require a mature plugin ecosystem or community extensions (early-stage, 10 stars)",
+    "You want a non-Python runtime (Go/Rust/TypeScript) for lower memory or faster boot",
+    "You need production-hardened multi-user auth and RBAC (not evidenced in README or commits)"
   ],
   "deployment_target": [
     "self-hosted",
@@ -47,7 +49,7 @@
   "setup_difficulty": "medium",
   "privacy_posture": "mixed",
   "multi_user": null,
-  "plugin_ecosystem": "emerging",
+  "plugin_ecosystem": "limited",
   "license_type": null,
   "last_commit_at": "2026-05-28T20:03:58Z",
   "contributors_count": 2,
@@ -55,32 +57,34 @@
   "release_cadence_days": 10,
   "operational_risk": "medium",
   "openclaw_advantages": [
-    "Python codebase easier to customize for Python devs",
-    "Built-in LiteLLM multi-provider failover",
-    "882 tests and strict mypy typing",
-    "Unified tool surface across engines"
+    "Dual-engine architecture: Claude Agent SDK primary + LiteLLM fallback with real cross-provider failover via litellm.Router",
+    "Unified 31-tool surface bridged into both engines (SDK tools exposed as in-process MCP tools)",
+    "Per-call USD cost tracking with daily totals across all providers",
+    "Strong CI discipline: 882 tests, mypy type-check enforcement, ruff linting",
+    "Single `grip gateway` process — simpler deployment than OpenClaw's multi-service architecture"
   ],
   "openclaw_disadvantages": [
-    "Much smaller community (10 stars vs OpenClaw's large)",
-    "No mobile/voice features like OpenClaw",
-    "Shell access risk higher without default sandbox",
-    "Younger project, less battle-tested"
+    "No containerized or per-agent sandboxing — shell execution runs in-process with full host access",
+    "Tiny community (10 stars, no visible Discord/forum) vs OpenClaw's 385k+ stars and ecosystem",
+    "Python-only runtime with higher memory footprint and slower boot than OpenClaw's native stack",
+    "No evidence of multi-user auth, RBAC, or audit logging for team deployments",
+    "Limited channel support (Telegram, Discord, Slack) vs OpenClaw's broader integrations (WhatsApp, Gmail, Notion, etc.)"
   ],
-  "confidence_summary": "Evidence from README and commits shows active Python development as OpenClaw alternative, but Reddit/web mentions are unrelated noise, so community sentiment is uncertain.",
-  "evidence_confidence": 80,
+  "confidence_summary": "High confidence in technical assessment based on detailed commit history, README, and CI artifacts. Low confidence in community sentiment — all 19 Reddit matches are false positives (unrelated to this repo), and web mentions are generic OpenClaw results. Star count (10) is the only reliable community signal.",
+  "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-07-13T02:28:50.153Z",
-    "last_reviewed_at": "2026-07-13T02:28:50.153Z",
+    "last_generated_at": "2026-08-02T15:21:16.309Z",
+    "last_reviewed_at": "2026-08-02T15:21:16.309Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "grip-ai is a self-hostable AI agent platform written in Python, positioned as a lightweight alternative to OpenClaw. It leverages the Claude Agent SDK as its primary engine while providing a LiteLLM fallback for 15+ additional LLM providers, ensuring cross-provider failover and cost tracking. The system exposes 31 built-in tools (file ops, shell, web search, browser automation, document conversion) bridged uniformly into both engines, and supports multi-channel chat via Telegram, Discord, and Slack from a single `grip gateway` process.\n\nRecent development focuses on reliability and code quality: v1.6.0 introduced real LiteLLM router failover, unified tool surfaces, and USD cost tracking; v1.6.1 enforced a mypy-clean tree with CI type-checking across 123 files and 882 passing tests. The onboarding wizard verifies API keys and loads live models, with local provider support for Ollama and LM Studio.\n\nCompared to OpenClaw, grip-ai offers a Python-native, highly typed codebase with explicit multi-model routing, but lacks the broader community, mobile integration, and default sandboxing that OpenClaw provides. Its permission modes mirror the Claude SDK, allowing bypassPermissions which elevates shell access risk if misconfigured.",
+  "overview_markdown": "## Architecture\n\ngrip-ai is a Python 3.12+ AI agent platform built around a **dual-engine architecture**. The primary engine is the **Claude Agent SDK**, which powers Claude-family models with native tool use. A secondary **LiteLLM engine** provides access to 15+ additional providers (OpenAI, DeepSeek, Groq, Gemini, Ollama, vLLM, and any OpenAI-compatible API). Both engines share the same 31-tool surface — grip bridges its tool registry into the SDK engine as in-process MCP tools, while the LiteLLM path uses function-calling. The entire platform runs as a single `grip gateway` process.\n\n## Architecture\n\nThe codebase spans ~24,000 lines across 120+ Python modules with 882 tests and strict mypy type enforcement. Key subsystems include: a **tool registry** (16 modules covering filesystem, shell, web search via Brave/DuckDuckGo, Playwright browser automation, document conversion via MarkItDown, code analysis, data transforms, finance, scheduling, and MCP integration); a **reliability layer** with automatic retries, exponential backoff, and cross-provider failover via `litellm.Router` with per-deployment API keys; a **cost tracking** system that accumulates per-call USD costs from LiteLLM's `response_cost`; and **multi-channel support** for Telegram, Discord, and Slack. The onboarding wizard verifies API keys against live provider endpoints and fetches real model catalogues.\n\n## How It Differs from OpenClaw\n\nWhere OpenClaw is a mature, multi-language ecosystem with containerized sandboxing, broad channel integrations, and a massive community, grip is a focused Python alternative that prioritizes Claude Agent SDK integration and provider redundancy. Its key differentiator is the **unified tool surface across engines** — the same 31 tools work whether you're using Claude via the SDK or any LiteLLM provider. The trade-off is that grip runs tools in-process with no sandboxing (shell access risk is high), has a limited channel set, and is early-stage with minimal community. For teams already committed to the Claude Agent SDK who want a clean, well-tested Python agent with multi-provider fallback, grip offers a pragmatic alternative to OpenClaw's broader but more complex architecture.",
   "latest_release": {
     "version": "v1.6.1",
     "date": "2026-05-28T20:05:30Z",
     "url": "https://github.com/5unnykum4r/grip-ai/releases/tag/v1.6.1"
   },
-  "last_updated": "2026-08-02T12:53:41.873Z"
+  "last_updated": "2026-08-02T15:21:16.309Z"
 }

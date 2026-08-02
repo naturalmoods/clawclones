@@ -25,7 +25,7 @@
     "local-first"
   ],
   "community_sentiment": 10,
-  "reddit_mentions": 21,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Privacy-focused self-hosters",
@@ -69,10 +69,10 @@
   "evidence_confidence": 70,
   "content_ops": {
     "last_generated_at": "2026-07-13T02:24:48.986Z",
-    "last_reviewed_at": "2026-07-13T02:24:48.986Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-08-02T15:53:34.246Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Carapace is a security-focused, open-source personal AI assistant written in Rust, explicitly built as a hardened alternative to OpenClaw/clawdbot. It runs locally on a user's machine and connects to multiple messaging channels (Matrix, Signal, Telegram, Discord, Slack, webhooks, console) while supporting a wide range of LLM providers including Anthropic, OpenAI, Ollama, Gemini, Bedrock, and local Claude CLI.\n\nIts core architecture emphasizes secure defaults: localhost-only binding, OS credential store with AES-256-GCM fallback, OS-level subprocess sandboxing for protected paths, and a signed WASM plugin runtime with resource limits. The project documents a threat-by-threat comparison addressing the January 2026 OpenClaw security disclosures, covering unauthenticated access, plaintext secrets, supply chain risks, prompt injection, and SSRF.\n\nUnlike OpenClaw's broad ecosystem and cross-platform reach, Carapace is younger (v0.8.0) and prioritizes stability on verified paths, with partial features explicitly flagged. It is best suited for technically inclined users who value a hard security shell over plug-and-play convenience.",
@@ -81,5 +81,5 @@
     "date": "2026-05-01T22:18:48Z",
     "url": "https://github.com/puremachinery/carapace/releases/tag/v0.8.0"
   },
-  "last_updated": "2026-08-02T12:53:40.477Z"
+  "last_updated": "2026-08-02T15:53:34.246Z"
 }
