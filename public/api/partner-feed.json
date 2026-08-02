@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 948424,
-    "total_stars_formatted": "948.4k",
+    "total_stars": 948465,
+    "total_stars_formatted": "948.5k",
     "most_active_language": "Python",
     "language_breakdown": {
       "TypeScript": 10,
@@ -24,15 +24,15 @@
     "avg_sentiment": 38,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 384922,
+      "stars": 384926,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "QwenPaw",
-    "stars": 32152,
-    "stars_growth_7d": 4669,
+    "stars": 32165,
+    "stars_growth_7d": 4682,
     "language": "Python",
     "sentiment": 0,
     "vibe_summary": "A polished, multi-chat-app personal AI assistant from the AgentScope ecosystem with strong local-first deployment and a rapidly iterating codebase. Recent commits show active hardening of memory, sandboxing, and console UX—signaling a maturing product rather than a toy prototype.",
@@ -47,16 +47,16 @@
     "url": "https://clawclones.com/compare/goclaw-vs-openclaw"
   },
   "updated_at": "2026-08-02T23:59:59.999Z",
-  "generated_at": "2026-08-02T15:53:43.311Z",
+  "generated_at": "2026-08-02T16:23:10.830Z",
   "freshness": {
     "updated_at": "2026-08-02T23:59:59.999Z",
-    "generated_at": "2026-08-02T15:53:43.311Z",
+    "generated_at": "2026-08-02T16:23:10.830Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-08-02T15:53:42.793Z",
+        "updated_at": "2026-08-02T16:23:10.443Z",
         "age_hours": 0
       },
       "history": {

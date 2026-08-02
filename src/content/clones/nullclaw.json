@@ -4,7 +4,7 @@
   "language": "Zig",
   "vibe_summary": "NullClaw is the fastest and smallest OpenClaw-compatible AI agent, compiled as a 678KB static Zig binary that boots in under 2ms with ~1MB RAM. Its vibe is lean, security-hardened, and rapidly iterated, with recent commits focusing on sandboxing and failure-path privacy.",
   "health_status": "healthy",
-  "github_stars": 7982,
+  "github_stars": 7983,
   "metrics": {
     "boot_time_ms": 2,
     "memory_mb": 1,
@@ -82,5 +82,5 @@
     "date": "2026-05-29T13:41:10Z",
     "url": "https://github.com/nullclaw/nullclaw/releases/tag/v2026.5.29"
   },
-  "last_updated": "2026-08-02T15:53:29.695Z"
+  "last_updated": "2026-08-02T16:22:54.814Z"
 }
