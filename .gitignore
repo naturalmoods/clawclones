@@ -34,3 +34,6 @@ artifacts/
 # local design references (static mockups and logo sources, not part of the build)
 redesign/
 cc.svg
+
+# build-time fallback cache written by src/lib/seismograph.ts
+.seismograph-cache.json
