@@ -101,8 +101,6 @@ jobs:
           NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL || 'z-ai/glm-5.2' }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           TARGET_REPOS: ${{ inputs.repos || '' }}
         run: npm run update-data
 
@@ -116,8 +114,6 @@ jobs:
           NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL || 'z-ai/glm-5.2' }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
-          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
-          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           TARGET_REPOS: ${{ steps.tracked.outputs.target_repos }}
         run: npm run update-data
 
