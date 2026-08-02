@@ -1,4 +1,3 @@
-import * as fs from 'fs';
 import * as path from 'path';
 import 'dotenv/config';
 import { OUTPUT_DIR } from './lib/config';
