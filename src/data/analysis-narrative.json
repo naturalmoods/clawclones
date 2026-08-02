@@ -3,15 +3,15 @@
   "data_as_of": "2026-08-02",
   "model": "deepseek-ai/deepseek-v4-pro",
   "tldr": [
-    "CoPaw added 4605 stars this week, the largest absolute gain, while Ouroboros grew 20.9% from a smaller base.",
-    "Hermes Agent crossed 224k stars and remains the most-starred multi-tenant project in the tracked set.",
-    "14 of 43 projects were flat or declining, so momentum is concentrating in a handful of runtimes.",
-    "Compiled runtimes average an 80 security score versus 69 for scripting runtimes, with better sandboxing and lower shell risk.",
-    "36 projects are local-first and 33 offer cloud-optional operation, leaving only 9 that require a cloud dependency."
+    "QwenPaw added 4,669 stars this week, the largest absolute gain across all 43 tracked projects.",
+    "Ouroboros grew 21.1% week-over-week, the fastest relative mover in the ecosystem.",
+    "14 projects were flat or declining, signaling that attention is concentrating among fewer names.",
+    "Edge & minimalist runtimes now account for 20 projects with a median boot time of just 22.5 ms.",
+    "34 projects are local-first, and 30 support cloud-optional operation, giving teams real deployment choice."
   ],
   "sections": {
-    "movement": "Star movement this cycle was top-heavy. CoPaw and Hermes Agent together accounted for more than two-thirds of the 11,593 new stars across 43 projects, while 14 projects stayed flat or lost ground. The fastest percentage growers came from smaller bases: Ouroboros at 20.9% and CoPaw at 16.8% show that early-stage projects can still capture attention quickly. For a developer choosing a tool, the signal is that community energy is flowing toward a few established names and a handful of fast risers, not evenly across the ecosystem.",
-    "security": "The median security score across all 43 projects is 75, but the split between compiled and scripting runtimes reveals a practical gap. Compiled runtimes average 80 with stronger sandboxing and lower shell risk, while scripting runtimes average 69 with a median shell risk of 7. Ten projects still allow unsupervised shell access, which is a concrete risk for any deployment that touches untrusted input. Hardened projects number only 12, so a developer who needs runtime isolation should verify sandboxing and shell posture directly rather than relying on the ecosystem median.",
-    "posture": "Local-first operation is the norm: 36 projects support it, and 33 of those also offer cloud-optional paths. Only 9 projects require a cloud connection, which limits offline use and introduces a dependency on a third-party service. Licensing is dominated by MIT at 20 projects and Apache-2.0 at 10, with only 3 copyleft-licensed projects. Ten projects have no clear license, which is a practical blocker for commercial integration. A developer who needs full offline operation and predictable licensing has plenty of options, but should verify both before committing."
+    "movement": "Star movement this week was dominated by a handful of projects pulling far ahead. QwenPaw and Hermes Agent together accounted for more than 8,000 new stars, while the median project saw far smaller gains. Fourteen projects were flat or declining, which suggests that developer attention is consolidating around a narrower set of tools. For someone choosing a framework today, the widening gap between the fastest-growing projects and the rest means community momentum and ecosystem support are increasingly uneven across the landscape.",
+    "security": "The security picture splits cleanly along runtime lines. Compiled runtimes, 19 projects, average a security score of 79 with stronger sandboxing and lower shell risk. Scripting runtimes, 24 projects, average 68 with weaker sandboxing and higher shell risk. Eight projects still allow unsupervised shell access, which is a concrete operational risk for anyone running agent code in production. The practical cost of choosing a scripting runtime is not just a lower score but a measurably wider attack surface that teams must compensate for with external controls.",
+    "posture": "Local-first operation is the norm, with 34 of 43 projects supporting it, and 30 projects offer cloud-optional deployment. Only 10 projects require a cloud connection, which means most tools in this space respect data locality and offline capability. Licensing is heavily permissive: MIT leads with 20 projects, Apache-2.0 covers another 10, and copyleft licenses like AGPL-3.0 and GPL-3.0 appear in just 3 projects combined. Ten projects have unknown licenses, which is a due-diligence gap worth closing before integration."
   }
 }
