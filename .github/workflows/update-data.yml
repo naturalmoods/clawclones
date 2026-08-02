@@ -8,7 +8,7 @@ on:
     # Only on the deploy branch: a feature branch pushing projects.json used to
     # start a data run of its own.
     branches:
-      - master
+      - main
     paths:
       - 'projects.json'
   workflow_dispatch:
@@ -37,7 +37,7 @@ jobs:
           node-version: '24'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Detect Newly Added Tracked Repos
         id: tracked
@@ -125,7 +125,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-          git add src/data/ src/content/clones/ public/api/partner-feed.json projects.json
+          git add src/data/ src/content/clones/ projects.json
 
           if git diff --staged --quiet; then
             exit 0

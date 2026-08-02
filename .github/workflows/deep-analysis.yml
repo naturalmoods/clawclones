@@ -24,7 +24,7 @@ jobs:
           node-version: '24'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Deep Analysis Script
         env:

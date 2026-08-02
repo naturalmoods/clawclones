@@ -21,7 +21,7 @@ jobs:
           node-version: '24'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Fetch Analytics Script
         env:
