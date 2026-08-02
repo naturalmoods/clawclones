@@ -5,7 +5,9 @@
  * Contains: ecosystem stats, trending clone, hot VS matchup.
  * 
  * Run: npx tsx scripts/generate-partner-feed.ts
- * Output: public/api/partner-feed.json (served by Cloudflare Function with API key check)
+ * Output: src/data/partner-feed.json — bundled into the Cloudflare Function
+ * (functions/api/partner-feed.ts) at deploy time; deliberately kept out of
+ * public/ so the API key check cannot be bypassed via the static asset.
  */
 
 import * as fs from 'fs';
@@ -17,7 +19,7 @@ const __dirname = path.dirname(__filename);
 
 const DATA_DIR = path.join(__dirname, '..', 'src', 'data');
 const CONTENT_DIR = path.join(__dirname, '..', 'src', 'content', 'clones');
-const OUTPUT_PATH = path.join(__dirname, '..', 'public', 'api', 'partner-feed.json');
+const OUTPUT_PATH = path.join(__dirname, '..', 'src', 'data', 'partner-feed.json');
 
 interface CloneData {
     id: string;

@@ -67,7 +67,7 @@ npm run astro -- check # types and content-schema validation on its own
 | `npm run update-watchlist` | The radar list of unverified newcomers |
 | `npm run update-analysis` | The weekly ecosystem report narrative |
 | `npm run fetch-analytics` | Cloudflare page analytics |
-| `npm run generate-partner-feed` | The public JSON feed |
+| `npm run generate-partner-feed` | The key-gated partner JSON feed |
 
 Every provider degrades gracefully: a missing key logs a warning and skips that
 source instead of failing the run.
