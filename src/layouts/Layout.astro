@@ -24,25 +24,18 @@ interface Props {
 	description?: string;
 	image?: string;
 	url?: string;
-	frontmatter?: Record<string, any>;
 	robots?: string;
 	structuredData?: Record<string, unknown>[];
 }
 
-const { title, description, image, url, frontmatter, robots, structuredData = [] } = Astro.props;
-const pageTitle =
-	title || frontmatter?.title || "ClawClones - The OpenClaw ClawVerse";
+const { title, description, image, url, robots, structuredData = [] } = Astro.props;
+const pageTitle = title || "ClawClones - The OpenClaw ClawVerse";
 const pageDescription =
 	description ||
-	frontmatter?.description ||
 	"Discover, compare and stay up-to-date with the fastest growing open-source OpenClaw AI ecosystem forks and alternatives. Explore the clones.";
-const pageImage =
-	image || frontmatter?.image || "https://clawclones.com/infographic.jpg";
+const pageImage = image || "https://clawclones.com/infographic.jpg";
 const pageUrl =
-	url ||
-	frontmatter?.url ||
-	`https://clawclones.com${Astro.url ? Astro.url.pathname : "/"}`;
-const isArticle = frontmatter?.isArticle || false;
+	url || `https://clawclones.com${Astro.url ? Astro.url.pathname : "/"}`;
 const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
 const breadcrumbData = pathSegments.length === 0
 	? []
@@ -297,9 +290,7 @@ const lastRefreshedAt = clones.reduce(
 			</div>
 		</div>
 
-		<main
-			class={`relative z-10 ${isArticle ? "mx-auto max-w-3xl px-6 py-16 md:py-24 markdown-body" : "w-full"}`}
-		>
+		<main class="relative z-10 w-full">
 			<slot />
 		</main>
 
