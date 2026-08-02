@@ -6,6 +6,7 @@ import StarHistoryChart from "../../components/StarHistoryChart.tsx";
 import fs from "fs";
 import path from "path";
 import { marked } from "marked";
+import sanitizeHtml from "sanitize-html";
 import { getCanonicalComparePath, getCompareSlug } from "../../lib/compare";
 import {
     formatSignalDate,
@@ -515,7 +516,9 @@ const totalBattles = (allClones.length * (allClones.length - 1)) / 2;
                 clone.data.overview_markdown ? (
                     <div
                         class="markdown-body mt-6 max-w-3xl text-[15px] leading-[1.75]"
-                        set:html={marked.parse(clone.data.overview_markdown)}
+                        set:html={sanitizeHtml(
+                            marked.parse(clone.data.overview_markdown, { async: false }),
+                        )}
                     />
                 ) : (
                     <p class="mt-6 max-w-3xl text-[15px] leading-[1.75] text-pale-slate-600 dark:text-pale-slate-400">

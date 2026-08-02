@@ -71,8 +71,17 @@ function applyCardData(root: HTMLElement, data: SeismographPayload) {
     const brand = root.querySelector<HTMLElement>("[data-seismograph-brand-name]");
     const headline = root.querySelector<HTMLElement>("[data-seismograph-headline]");
 
+    // The URL arrives from an external feed; only accept http(s) so a
+    // compromised feed cannot plant a javascript: link.
     if (data.brand?.url) {
-        link.href = data.brand.url;
+        try {
+            const parsed = new URL(data.brand.url, window.location.href);
+            if (parsed.protocol === "https:" || parsed.protocol === "http:") {
+                link.href = parsed.href;
+            }
+        } catch {
+            // Malformed URL: keep the server-rendered href.
+        }
     }
 
     if (brand && data.brand?.name) {

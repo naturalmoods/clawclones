@@ -189,6 +189,22 @@ const serialized = JSON.stringify(nodes);
         return String(n);
     }
 
+    // Node names and vibe summaries come from the generated content pipeline,
+    // so they must never reach the tooltip's innerHTML unescaped.
+    function escapeHtml(value) {
+        return String(value).replace(
+            /[&<>"']/g,
+            (ch) =>
+                ({
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    '"': "&quot;",
+                    "'": "&#39;",
+                })[ch],
+        );
+    }
+
     function nodeRadius(stars) {
         if (stars >= 100000) return 22;
         if (stars >= 10000) return 14;
@@ -457,12 +473,12 @@ const serialized = JSON.stringify(nodes);
             canvas.style.cursor = "pointer";
             const color = getColor(found.node.language);
             tooltip.innerHTML = `
-                <div style="font-size:0.9375rem;font-weight:600;letter-spacing:-0.01em;color:var(--color-ink);margin-bottom:6px">${found.node.name}</div>
+                <div style="font-size:0.9375rem;font-weight:600;letter-spacing:-0.01em;color:var(--color-ink);margin-bottom:6px">${escapeHtml(found.node.name)}</div>
                 <div style="font-family:var(--font-mono);font-size:0.6875rem;margin-bottom:8px;display:flex;align-items:center;gap:6px">
                     <span style="width:8px;height:8px;border-radius:50%;background:${color};display:inline-block"></span>
-                    <span style="color:var(--color-pale-slate-500)">${found.node.language} · ★ ${formatStars(found.node.stars)}</span>
+                    <span style="color:var(--color-pale-slate-500)">${escapeHtml(found.node.language)} · ★ ${formatStars(found.node.stars)}</span>
                 </div>
-                <div style="font-size:0.8125rem;color:var(--color-pale-slate-500);line-height:1.55;border-top:1px solid var(--color-line);padding-top:8px">${found.node.vibe}</div>
+                <div style="font-size:0.8125rem;color:var(--color-pale-slate-500);line-height:1.55;border-top:1px solid var(--color-line);padding-top:8px">${escapeHtml(found.node.vibe)}</div>
             `;
             const rect = canvas.getBoundingClientRect();
             tooltip.style.left = rect.left + found.x * (rect.width / W) + 15 + "px";
