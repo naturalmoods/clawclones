@@ -20,28 +20,11 @@ export function saveJSON(filePath: string, data: any): void {
 export function updateHistoricalStars(repo: string, currentStars: number) {
     let history: Record<string, { date: string, stars: number }[]> = loadJSON(HISTORY_FILE) || {};
 
+    // History accrues from the day a repo is first tracked. No synthetic
+    // backfill: the site promises that star counts are measured, so a chart
+    // may start short but it must not start invented.
     if (!history[repo]) {
         history[repo] = [];
-        const start = new Date('2026-01-01T12:00:00Z');
-        const now = new Date();
-        const daysDiff = Math.floor((now.getTime() - start.getTime()) / (1000 * 3600 * 24));
-        const startStars = Math.floor(currentStars * 0.1);
-
-        for (let i = 0; i <= daysDiff; i++) {
-            const d = new Date(start);
-            d.setDate(start.getDate() + i);
-            const progress = i / daysDiff;
-            const curve = Math.pow(progress, 2);
-            const noise = (Math.random() - 0.5) * (currentStars * 0.02);
-            let starsAtDay = Math.floor(startStars + (currentStars - startStars) * curve + noise);
-            if (i === daysDiff) starsAtDay = currentStars;
-            if (starsAtDay < 0) starsAtDay = 0;
-
-            history[repo].push({
-                date: d.toISOString().split('T')[0],
-                stars: starsAtDay
-            });
-        }
     }
 
     const todayStr = new Date().toISOString().split('T')[0];
