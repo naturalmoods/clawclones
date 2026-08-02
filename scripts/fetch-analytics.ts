@@ -1,10 +1,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-// Load environment variables (Make sure CLOUDFLARE_API_TOKEN, CLOUDFLARE_ZONE_ID and CLOUDFLARE_ACCOUNT_ID are in your .env)
+// Load environment variables (CLOUDFLARE_API_TOKEN and CLOUDFLARE_ZONE_ID)
 import 'dotenv/config';
 
-const ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;
 const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN;
 const ZONE_ID = process.env.CLOUDFLARE_ZONE_ID; // The Zone ID of your domain
 
@@ -27,7 +26,10 @@ interface GraphQLResponse {
 }
 
 export async function fetchCloudflareStats() {
-    if (!API_TOKEN || !ACCOUNT_ID || !ZONE_ID) {
+    // The GraphQL query is scoped by zoneTag alone; there is no account-level
+    // call here, so an account id was never needed — requiring it only meant a
+    // missing value silently skipped the whole analytics run.
+    if (!API_TOKEN || !ZONE_ID) {
         console.warn("Missing Cloudflare credentials in .env. Skipping analytics update.");
         return;
     }

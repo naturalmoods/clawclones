@@ -93,7 +93,8 @@ If a real test framework is added later, update this file with exact single-file
 - `WATCHLIST_AUTO_PROMOTE`: whether a watchlist entry that clears the thresholds promotes itself. Currently on.
 - `TARGET_REPOS`: restrict a data run to specific `owner/repo` entries.
 - See `.env.example` for the full list with comments.
-- `PARTNER_API_KEYS`, `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ZONE_ID`: API/feed and analytics tasks.
+- `PARTNER_API_KEYS`: the Cloudflare Pages Function guarding the partner feed; set it as a Pages variable, not a GitHub secret.
+- `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ZONE_ID`: page analytics. The token needs only Zone / Analytics / Read.
 If a required secret is missing, many scripts warn and skip that provider rather than hard-failing the whole run.
 ## Code style: general rules
 - Use TypeScript everywhere; the repo extends `astro/tsconfigs/strict`.
