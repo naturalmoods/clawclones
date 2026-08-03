@@ -30,15 +30,15 @@
     }
   },
   "trending": {
-    "name": "QwenPaw",
-    "stars": 32165,
-    "stars_growth_7d": 4682,
-    "language": "Python",
-    "sentiment": 0,
-    "vibe_summary": "A polished, multi-chat-app personal AI assistant from the AgentScope ecosystem with strong local-first deployment and a rapidly iterating codebase. Recent commits show active hardening of memory, sandboxing, and console UX—signaling a maturing product rather than a toy prototype.",
+    "name": "AionUi",
+    "stars": 31267,
+    "stars_growth_7d": 0,
+    "language": "TypeScript",
+    "sentiment": 72,
+    "vibe_summary": "AionUi is a feature-packed, Electron-based desktop cowork app that wraps 20+ CLI coding agents (including OpenClaw) in a unified GUI with multi-agent orchestration, remote access, and 24/7 automation. It's aggressively iterating with near-daily releases, a strong plugin/skills ecosystem, and a growing contributor community fueled by partnership perks.",
     "health": "healthy",
-    "latest_version": "v2.0.1",
-    "url": "https://clawclones.com/clones/agentscope-ai/CoPaw"
+    "latest_version": "v2.1.45",
+    "url": "https://clawclones.com/clones/iOfficeAI/AionUi"
   },
   "hot_vs": {
     "clone_a": "OpenClaw",
@@ -47,25 +47,25 @@
     "url": "https://clawclones.com/compare/openclaw-vs-tinyclaw"
   },
   "updated_at": "2026-08-02T23:59:59.999Z",
-  "generated_at": "2026-08-02T18:13:56.054Z",
+  "generated_at": "2026-08-03T01:23:36.866Z",
   "freshness": {
     "updated_at": "2026-08-02T23:59:59.999Z",
-    "generated_at": "2026-08-02T18:13:56.054Z",
-    "source_age_hours": 0,
+    "generated_at": "2026-08-03T01:23:36.866Z",
+    "source_age_hours": 1.4,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
         "updated_at": "2026-08-02T18:13:32.768Z",
-        "age_hours": 0
+        "age_hours": 7.2
       },
       "history": {
         "updated_at": "2026-08-02T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 1.4
       },
       "analytics": {
         "updated_at": "2026-08-02T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 1.4
       }
     }
   }
