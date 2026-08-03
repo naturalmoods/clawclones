@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 948465,
-    "total_stars_formatted": "948.5k",
+    "total_stars": 948765,
+    "total_stars_formatted": "948.8k",
     "most_active_language": "Python",
     "language_breakdown": {
       "TypeScript": 10,
@@ -24,48 +24,48 @@
     "avg_sentiment": 38,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 384926,
+      "stars": 384960,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
-    "name": "AionUi",
-    "stars": 31267,
-    "stars_growth_7d": 0,
-    "language": "TypeScript",
-    "sentiment": 72,
-    "vibe_summary": "AionUi is a feature-packed, Electron-based desktop cowork app that wraps 20+ CLI coding agents (including OpenClaw) in a unified GUI with multi-agent orchestration, remote access, and 24/7 automation. It's aggressively iterating with near-daily releases, a strong plugin/skills ecosystem, and a growing contributor community fueled by partnership perks.",
+    "name": "Hermes Agent",
+    "stars": 224331,
+    "stars_growth_7d": 105,
+    "language": "Python",
+    "sentiment": 85,
+    "vibe_summary": "Self-improving agent that spins up skills from its own experience and meets you on every chat app from one gateway. Explosive growth and weekly releases make it the most talked-about personal AI companion of 2026.",
     "health": "healthy",
-    "latest_version": "v2.1.45",
-    "url": "https://clawclones.com/clones/iOfficeAI/AionUi"
+    "latest_version": "v2026.7.30",
+    "url": "https://clawclones.com/clones/NousResearch/hermes-agent"
   },
   "hot_vs": {
-    "clone_a": "OpenClaw",
-    "clone_b": "tinyclaw",
+    "clone_a": "GoClaw",
+    "clone_b": "OpenClaw",
     "visits": 7,
-    "url": "https://clawclones.com/compare/openclaw-vs-tinyclaw"
+    "url": "https://clawclones.com/compare/goclaw-vs-openclaw"
   },
-  "updated_at": "2026-08-02T23:59:59.999Z",
-  "generated_at": "2026-08-03T01:23:36.866Z",
+  "updated_at": "2026-08-03T23:59:59.999Z",
+  "generated_at": "2026-08-03T01:28:37.409Z",
   "freshness": {
-    "updated_at": "2026-08-02T23:59:59.999Z",
-    "generated_at": "2026-08-03T01:23:36.866Z",
-    "source_age_hours": 1.4,
+    "updated_at": "2026-08-03T23:59:59.999Z",
+    "generated_at": "2026-08-03T01:28:37.409Z",
+    "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-08-02T18:13:32.768Z",
-        "age_hours": 7.2
+        "updated_at": "2026-08-03T01:28:36.623Z",
+        "age_hours": 0
       },
       "history": {
-        "updated_at": "2026-08-02T23:59:59.999Z",
-        "age_hours": 1.4
+        "updated_at": "2026-08-03T23:59:59.999Z",
+        "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-08-02T23:59:59.999Z",
-        "age_hours": 1.4
+        "updated_at": "2026-08-03T23:59:59.999Z",
+        "age_hours": 0
       }
     }
   }

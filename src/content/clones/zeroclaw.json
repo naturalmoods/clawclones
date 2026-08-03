@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "ZeroClaw is a Rust-written, fully autonomous AI assistant runtime that boots in milliseconds with a tiny memory footprint, giving users complete ownership of their agent, data, and hardware. Its vibrant development pace shows constant channel i18n, identity binding, and quickstart auth improvements, signaling a mature yet lean OpenClaw alternative.",
   "health_status": "healthy",
-  "github_stars": 32483,
+  "github_stars": 32485,
   "metrics": {
     "boot_time_ms": 5,
     "memory_mb": 1.5,
@@ -50,10 +50,10 @@
   "multi_user": null,
   "plugin_ecosystem": "strong",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-01T19:30:25Z",
+  "last_commit_at": "2026-08-03T01:23:20Z",
   "contributors_count": 402,
-  "open_issues_count": 691,
-  "release_cadence_days": 10,
+  "open_issues_count": 698,
+  "release_cadence_days": 12,
   "operational_risk": "medium",
   "openclaw_advantages": [
     "Rust binary with <10ms boot and <2MB memory",
@@ -78,9 +78,9 @@
   },
   "overview_markdown": "ZeroClaw is an agent runtime distributed as a single Rust binary that users configure and run on their own machines, embodying a local-first philosophy where the operator owns the agent, the data, and the hardware. It connects to a wide range of LLM providers—including Anthropic, OpenAI, Ollama, and roughly twenty others—and exposes the assistant through over thirty channels such as Discord, Telegram, Matrix, email, voice, and webhooks, while executing actions via tools like shell, browser, HTTP, hardware, and custom MCP servers.\n\nArchitecturally, ZeroClaw emphasizes minimal footprint and high performance, leveraging Rust's edition 2024 to achieve boot times under ten milliseconds and memory usage below two megabytes, a stark contrast to heavier Node or Python-based assistants. Recent commit activity reveals a focus on internationalization of channel replies, inline subscription authentication in the quickstart flow, and operator-bind identity mechanisms that remove the need for bind-code round-trips, alongside test coverage for channel bind auth and phantom-alias trust boundaries.\n\nCompared to OpenClaw, ZeroClaw trades some ecosystem size for a compiled, security-minded, and resource-efficient core that still mirrors the multi-channel, tool-using autonomy of the original. Its documentation and submodule-based translation system show a commitment to maintainability, while release cadence (v0.8.2) and active Discord indicate a healthy, evolving project.",
   "latest_release": {
-    "version": "v0.8.3",
-    "date": "2026-07-16T01:47:13Z",
-    "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.3"
+    "version": "v0.8.4",
+    "date": "2026-08-02T21:00:00Z",
+    "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.4"
   },
-  "last_updated": "2026-08-02T16:23:09.570Z"
+  "last_updated": "2026-08-03T01:28:35.617Z"
 }
