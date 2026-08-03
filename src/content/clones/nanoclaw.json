@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "NanoClaw ditches OpenClaw's half-million-line monolith for a tiny, readable codebase where every agent runs in its own Linux container with real filesystem isolation. It's the security-first, audit-friendly alternative for people who want AI assistants without handing over their whole machine.",
   "health_status": "healthy",
-  "github_stars": 30410,
+  "github_stars": 30415,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.8,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-02T14:13:24Z",
+  "last_commit_at": "2026-08-03T14:30:24Z",
   "contributors_count": 145,
-  "open_issues_count": 864,
+  "open_issues_count": 865,
   "release_cadence_days": 20,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -82,5 +82,5 @@
     "date": "2026-08-01T20:46:31Z",
     "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2.1.54"
   },
-  "last_updated": "2026-08-03T01:28:27.717Z"
+  "last_updated": "2026-08-03T14:33:13.443Z"
 }

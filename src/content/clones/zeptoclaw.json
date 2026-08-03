@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "ZeptoClaw packs OpenClaw-style integrations, NanoClaw-style container isolation, and NemoClaw-style guardrails into a single 6MB Rust binary. It's the minimalist, local-first AI agent infra that boots in 50ms and runs on edge hardware without bloat.",
   "health_status": "healthy",
-  "github_stars": 644,
+  "github_stars": 645,
   "metrics": {
     "boot_time_ms": 50,
     "memory_mb": 6,
@@ -82,5 +82,5 @@
     "date": "2026-04-07T15:45:01Z",
     "url": "https://github.com/qhkm/zeptoclaw/releases/tag/v0.9.2"
   },
-  "last_updated": "2026-08-03T01:28:26.765Z"
+  "last_updated": "2026-08-03T14:33:12.487Z"
 }
