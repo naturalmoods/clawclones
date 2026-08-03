@@ -46,7 +46,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:22.265Z",
-    "last_reviewed_at": "2026-08-02T08:08:21.550Z",
+    "last_reviewed_at": "2026-08-03T08:59:39.226Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -54,11 +54,11 @@
   },
   "overview_markdown": "",
   "latest_release": {
-    "version": "@moxxy/plugin-memory@0.35.4",
-    "date": "2026-07-30T22:57:03Z",
-    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-memory%400.35.4"
+    "version": "@moxxy/sdk@0.36.0",
+    "date": "2026-08-03T08:59:38Z",
+    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/sdk%400.36.0"
   },
-  "last_updated": "2026-08-02T08:08:21.550Z",
+  "last_updated": "2026-08-03T08:59:39.226Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }

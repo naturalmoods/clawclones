@@ -46,7 +46,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:23.762Z",
-    "last_reviewed_at": "2026-08-02T08:08:22.575Z",
+    "last_reviewed_at": "2026-08-03T08:59:43.263Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -54,7 +54,7 @@
   },
   "overview_markdown": "",
   "latest_release": null,
-  "last_updated": "2026-08-02T08:08:22.575Z",
+  "last_updated": "2026-08-03T08:59:43.263Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }

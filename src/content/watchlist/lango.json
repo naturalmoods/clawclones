@@ -46,7 +46,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:27.346Z",
-    "last_reviewed_at": "2026-08-02T08:08:25.179Z",
+    "last_reviewed_at": "2026-08-03T08:59:36.054Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -58,7 +58,7 @@
     "date": "2026-03-09T15:24:09Z",
     "url": "https://github.com/langoai/lango/releases/tag/v0.5.0"
   },
-  "last_updated": "2026-08-02T08:08:25.179Z",
+  "last_updated": "2026-08-03T08:59:36.054Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }
