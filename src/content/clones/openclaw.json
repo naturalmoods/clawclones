@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "The original lobster-themed personal AI assistant that runs on your own devices across any OS and channel. Recent commits show relentless focus on trimming dead code, speeding up gateway startup, and polishing multi-channel UX.",
   "health_status": "healthy",
-  "github_stars": 385048,
+  "github_stars": 385106,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 80,
@@ -50,9 +50,9 @@
   "multi_user": false,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-08-04T01:15:55Z",
-  "contributors_count": 3052,
-  "open_issues_count": 5468,
+  "last_commit_at": "2026-08-04T13:25:02Z",
+  "contributors_count": 3055,
+  "open_issues_count": 5490,
   "release_cadence_days": 2,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -81,5 +81,5 @@
     "date": "2026-08-04T00:41:26Z",
     "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-2"
   },
-  "last_updated": "2026-08-04T01:18:02.655Z"
+  "last_updated": "2026-08-04T13:56:04.802Z"
 }
