@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "hermitclaw - a new project under observation.",
   "health_status": "warning",
-  "github_stars": 328,
+  "github_stars": 327,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -46,7 +46,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:18.509Z",
-    "last_reviewed_at": "2026-08-04T08:15:45.922Z",
+    "last_reviewed_at": "2026-08-05T08:14:03.698Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -54,7 +54,7 @@
   },
   "overview_markdown": "",
   "latest_release": null,
-  "last_updated": "2026-08-04T08:15:45.922Z",
+  "last_updated": "2026-08-05T08:14:03.698Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
