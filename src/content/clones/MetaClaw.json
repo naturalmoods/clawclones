@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-evolving wrapper around OpenClaw that learns from real conversations without manual fine-tuning. Ships with RL-based skill optimization, cross-session memory, and a one-click setup—no GPU cluster required.",
   "health_status": "healthy",
-  "github_stars": 3514,
+  "github_stars": 3515,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 75,
@@ -86,5 +86,5 @@
     "date": "2026-04-11T20:04:14Z",
     "url": "https://github.com/aiming-lab/MetaClaw/releases/tag/v0.4.1"
   },
-  "last_updated": "2026-08-05T01:21:44.557Z"
+  "last_updated": "2026-08-05T13:53:05.220Z"
 }
