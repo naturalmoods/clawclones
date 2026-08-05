@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A local-first AI agent framework optimized for small models with hybrid cloud fallback, emphasizing zero API cost and on-device privacy. Recent v1.1 overhaul adds sub-agents, security hardening, and Docker improvements while keeping a single-pass chat handler for low latency.",
   "health_status": "healthy",
-  "github_stars": 257,
+  "github_stars": 256,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 80,
@@ -76,5 +76,5 @@
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "SmallClaw is a local-first AI agent framework written in TypeScript, designed to run small language models on user hardware with optional hybrid cloud support. It provides a chat-first web UI and integrates multiple local providers (Ollama, llama.cpp, LM Studio) as well as cloud APIs (OpenAI, Codex OAuth). Core capabilities include file operations, multi-provider web search, Playwright browser automation, and sandboxed terminal access, all manageable through a drop-in SKILL.md skills system.\n\nArchitecturally, SmallClaw v1.1 employs a single-pass chat handler where one LLM call decides responses or tool use, reducing latency for small models. Recent commits show a system overhaul (v1.1) with security hardening, Docker improvements, background tasks, sub-agents, and Telegram file browser, indicating active iteration. Unlike OpenClaw's broader multi-agent and cross-platform push, SmallClaw focuses on lightweight local execution and zero API cost.\n\nWhile the project claims strong privacy via local-first design, its license is unspecified and community traction is currently low (search results conflate with unrelated 'claw' topics). It positions itself as a free, self-hosted alternative for privacy-conscious users, but lacks official release packaging and mature plugin ecosystem compared to OpenClaw.",
-  "last_updated": "2026-08-04T13:56:17.895Z"
+  "last_updated": "2026-08-05T01:22:04.771Z"
 }

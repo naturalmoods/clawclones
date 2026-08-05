@@ -49,9 +49,9 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-04T13:28:30Z",
-  "contributors_count": 118,
-  "open_issues_count": 1503,
+  "last_commit_at": "2026-08-05T01:06:38Z",
+  "contributors_count": 119,
+  "open_issues_count": 1516,
   "release_cadence_days": 12,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -80,5 +80,5 @@
     "date": "2026-07-27T19:32:01Z",
     "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.0.0"
   },
-  "last_updated": "2026-08-04T13:55:59.544Z"
+  "last_updated": "2026-08-05T01:21:51.530Z"
 }

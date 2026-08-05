@@ -51,7 +51,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-05-12T18:42:08Z",
   "contributors_count": 76,
-  "open_issues_count": 116,
+  "open_issues_count": 118,
   "release_cadence_days": 3,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -81,5 +81,5 @@
     "date": "2026-05-12T18:42:42Z",
     "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.9"
   },
-  "last_updated": "2026-08-04T13:56:12.226Z"
+  "last_updated": "2026-08-05T01:22:00.251Z"
 }
