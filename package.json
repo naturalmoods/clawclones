@@ -12,6 +12,7 @@
     "astro": "astro",
     "update-data": "tsx scripts/update-data.ts",
     "update-github": "tsx scripts/update-github.ts",
+    "update-model-support": "tsx scripts/update-model-support.ts",
     "fetch-analytics": "tsx scripts/fetch-analytics.ts",
     "update-analysis": "tsx scripts/generate-deep-analysis.ts",
     "generate-partner-feed": "tsx scripts/generate-partner-feed.ts",
