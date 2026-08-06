@@ -30,7 +30,7 @@ Use this file as the working agreement for agentic coding tools operating in thi
 - `src/pages/`: Astro routes and page entrypoints.
 - `src/components/`: Astro and React UI components.
 - `src/layouts/`: the page shell, metadata and navigation.
-- `src/lib/`: logic shared between pages and pipelines — `compare` (canonical pair slugs), `compare-indexing` (which comparisons may be indexed), `analysis` (the ecosystem report's computed figures), `watchlist` (promotion thresholds), `activity`, `clone-format`, `content-signals`, `site`.
+- `src/lib/`: logic shared between pages and pipelines — `compare` (canonical pair slugs), `compare-indexing` (which comparisons may be indexed), `analysis` (the ecosystem report's computed figures), `watchlist` (promotion thresholds), `activity`, `clone-format`, `content-signals`, `model-access` (labels and grouping for detected providers), `site`.
 - `src/styles/global.css`: Tailwind v4 theme tokens, fonts, shared utility classes, animation helpers, and globals.
 - `src/content/clones/` and `src/content/watchlist/`: generated JSON content collections; membership is decided by `projects.json`, not by what is in these folders.
 - `src/content/config.ts`: Zod schemas for content collections; keep this aligned with generated JSON shapes.
@@ -59,6 +59,7 @@ Validation is mostly Astro checking plus real script runs.
 - Multiple targeted repos: `npm run update-data -- --repos=owner/repo,owner2/repo2`
 - Env-based targeted refresh: `TARGET_REPOS=owner/repo npm run update-data`
 - Lightweight GitHub-only refresh: `npm run update-github`
+- Provider and default-model refresh: `npm run update-model-support` (no AI, Reddit or Brave calls; add `--dry-run` to print without writing)
 - Watchlist refresh: `npm run update-watchlist`
 - Regenerate the ecosystem report's narrative: `npm run update-analysis` (writes `src/data/analysis-narrative.json`; the report's tables are computed at build time and are never model-written)
 - Recompute which comparisons may be indexed: `npm run generate-indexable-compares`
@@ -165,6 +166,14 @@ If a required secret is missing, many scripts warn and skip that provider rather
 - Do not hand-edit generated content unless the task explicitly calls for content fixes.
 - `projects.json` is the single source of truth for membership: each entry is `{ repo, status, since? }` with status `tracked`, `watching` or `archived`. Promotion is a status change, not a move between files.
 - Validate it through `scripts/lib/projects.ts`; the loader rejects duplicates and malformed repo names rather than letting them reach the pipeline.
+
+## Model support detection
+- `scripts/lib/model-support.ts` holds the detection rules and is deliberately network-free, so the same logic runs against the GitHub API in the pipeline and against a local checkout in a smoke test.
+- Sources are read through `RepoFileSource` (`scripts/lib/repo-source.ts`): `GitHubRepoSource` for pipeline runs, `LocalRepoSource` for a checkout on disk.
+- A provider is only reported when a file backs it. Every published claim carries the file it came from, and the profile page links to that file.
+- `model_support` is measured data: `normalizeCloneData` reads it from `measured` and never from the AI response. Do not let a generated field write into it.
+- Empty `providers` means detection found nothing, which is not the same as the project supporting nothing. Keep that distinction in any UI that consumes the field.
+- Adding a provider means adding an entry to `PROVIDER_RULES`; prefer a dependency name or env key over a bare endpoint string, since endpoints also appear in documentation and router tables.
 
 ## Cloudflare function conventions
 - Files in `functions/api/` export `onRequest` handlers.
