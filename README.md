@@ -104,7 +104,7 @@ cases, and both are also reachable from the site itself:
 For code, keep changes scoped and run `npm run astro -- check && npm run build`
 before opening a PR.
 
-Do not hand-edit files under `src/content/` — they are pipeline
+Do not hand-edit files under `src/content/` or `src/data/` — they are pipeline
 output. Change the generator instead.
 
 ## Licence
