@@ -74,6 +74,7 @@ interface NormalizeCloneDataOptions {
         contributors_count?: number | null;
         open_issues_count?: number | null;
         release_cadence_days?: number | null;
+        model_support?: CloneData['model_support'];
         last_updated?: string;
     };
 }
@@ -245,6 +246,12 @@ export function normalizeCloneData(
             ['low', 'medium', 'high', 'unknown'] as const,
             existingData?.operational_risk || 'unknown',
         ),
+        // Detector output only. A model is never allowed to author this field, so
+        // `merged` — which carries the AI response — is deliberately not consulted.
+        model_support:
+            measured.model_support === undefined
+                ? existingData?.model_support ?? null
+                : measured.model_support,
         openclaw_advantages: normalizeStringArray(
             merged.openclaw_advantages,
             existingData?.openclaw_advantages || [],
