@@ -18,7 +18,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 385260
+      "stars": 385342
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -40,7 +40,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 32521
+      "stars": 32524
     }
   ],
   "qwibitai/nanoclaw": [
@@ -62,7 +62,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 30446
+      "stars": 30457
     }
   ],
   "HKUDS/nanobot": [
@@ -84,7 +84,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 46686
+      "stars": 46703
     }
   ],
   "sipeed/picoclaw": [
@@ -106,7 +106,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 29822
+      "stars": 29824
     }
   ],
   "hesreallyhim/awesome-claude-code": [
@@ -134,7 +134,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 12590
+      "stars": 12591
     }
   ],
   "memovai/mimiclaw": [
@@ -156,7 +156,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 5594
+      "stars": 5595
     }
   ],
   "TinyAGI/tinyclaw": [
@@ -178,7 +178,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 3609
+      "stars": 3608
     }
   ],
   "nullclaw/nullclaw": [
@@ -200,7 +200,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 8002
+      "stars": 8004
     }
   ],
   "tnm/zclaw": [
@@ -294,7 +294,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 2808
+      "stars": 2809
     }
   ],
   "ruvnet/ruvector": [
@@ -438,7 +438,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 18077
+      "stars": 18078
     }
   ],
   "EthereumPhone/AndyClaw": [
@@ -482,7 +482,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 979
+      "stars": 987
     }
   ],
   "zofrasca/lightclaw": [
@@ -526,7 +526,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 31514
+      "stars": 31573
     }
   ],
   "NevaMind-AI/memUBot": [
@@ -658,7 +658,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 33583
+      "stars": 33954
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -680,7 +680,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 5776
+      "stars": 5797
     }
   ],
   "open-gitagent/gitclaw": [
@@ -702,7 +702,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 638
+      "stars": 637
     }
   ],
   "AstrBotDevs/AstrBot": [
@@ -724,7 +724,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 38661
+      "stars": 38711
     }
   ],
   "unitedbyai/droidclaw": [
@@ -746,7 +746,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 1556
+      "stars": 1557
     }
   ],
   "microclaw/microclaw": [
@@ -768,7 +768,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 731
+      "stars": 730
     }
   ],
   "letta-ai/lettabot": [
@@ -834,7 +834,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 2351
+      "stars": 2354
     }
   ],
   "poco-ai/poco-agent": [
@@ -856,7 +856,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 1345
+      "stars": 1346
     }
   ],
   "NousResearch/hermes-agent": [
@@ -878,7 +878,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 226078
+      "stars": 226427
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -900,7 +900,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 3509
+      "stars": 3514
     }
   ],
   "aiming-lab/MetaClaw": [
@@ -922,7 +922,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 3515
+      "stars": 3517
     }
   ],
   "loongclaw-ai/loongclaw": [
@@ -944,7 +944,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 640
+      "stars": 641
     }
   ],
   "agent0ai/agent-zero": [
@@ -966,7 +966,7 @@
     },
     {
       "date": "2026-08-06",
-      "stars": 18743
+      "stars": 18747
     }
   ]
 }
