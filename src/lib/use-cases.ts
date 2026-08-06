@@ -102,6 +102,25 @@ function cloudDependencyScore(
     }
 }
 
+/**
+ * Detected provider wiring, for the two intents where it is direct evidence
+ * rather than a hint. A repo that imports Ollama can demonstrably run without a
+ * cloud key; the keyword pass could only guess at that from prose.
+ *
+ * Scores 0 when detection has not run, so profiles without the field are ranked
+ * exactly as they were before.
+ */
+function localRuntimeScore(
+    clone: CloneEntry,
+    weights: { present: number; locked: number; byo: number } = { present: 70, locked: -40, byo: 15 },
+): number {
+    const support = clone.data.model_support;
+    if (!support || support.providers.length === 0) return 0;
+    if (support.local_capable) return weights.present;
+    if (support.provider_lock) return weights.locked;
+    return support.byo_endpoint ? weights.byo : 0;
+}
+
 export function getIntentScore(filter: IntentFilter, clone: CloneEntry, openClaw?: CloneEntry): number {
     const text = getCloneText(clone);
 
@@ -122,12 +141,14 @@ export function getIntentScore(filter: IntentFilter, clone: CloneEntry, openClaw
                 clone.data.radar_chart.network_isolation * 10 +
                 (clone.data.local_first === true ? 60 : clone.data.local_first === false ? -60 : 0) +
                 cloudDependencyScore(clone, { none: 40, optional: 15, required: -50 }) +
+                localRuntimeScore(clone) +
                 keywordScore(text, ['local-first', 'offline', 'on-device', 'ollama', 'data stays', 'privacy'])
             );
         case 'zero-api':
             return (
                 keywordScore(text, ['zero-cost', 'zero cost', 'no api', 'free forever', 'offline', 'local models', 'deterministic']) +
                 cloudDependencyScore(clone, { none: 60, optional: 20, required: -60 }) +
+                localRuntimeScore(clone, { present: 80, locked: -60, byo: 10 }) +
                 clone.data.radar_chart.telemetry_safety * 6 +
                 clone.data.radar_chart.network_isolation * 5
             );
