@@ -11,6 +11,7 @@ import { ensureDirectories, retry, getSafeFileName } from './lib/utils';
 import { fetchGitHubData } from './lib/github';
 import { fetchRedditData } from './lib/reddit';
 import { fetchBraveSearchData } from './lib/brave';
+import { fetchModelSupport } from './lib/model-support-github';
 import {
     DEFAULT_SOURCE_WINDOW,
     generateAIJSON,
@@ -47,10 +48,11 @@ async function processRepo(repo: string) {
     const isNew = !existingData;
 
     // 1. Fetch data from sources (Parallelized for each repo)
-    const [github, reddit, brave] = await Promise.all([
+    const [github, reddit, brave, modelSupport] = await Promise.all([
         retry(() => fetchGitHubData(repo)),
         retry(() => fetchRedditData(safeName)),
-        retry(() => fetchBraveSearchData(safeName))
+        retry(() => fetchBraveSearchData(safeName)),
+        fetchModelSupport(repo)
     ]);
     const now = new Date().toISOString();
 
@@ -89,6 +91,7 @@ async function processRepo(repo: string) {
                     contributors_count: github.contributorsCount,
                     open_issues_count: github.openIssuesCount,
                     release_cadence_days: github.releaseCadenceDays,
+                    model_support: modelSupport,
                     last_updated: now,
                 },
             });
@@ -127,6 +130,7 @@ async function processRepo(repo: string) {
                 contributors_count: github?.contributorsCount,
                 open_issues_count: github?.openIssuesCount,
                 release_cadence_days: github?.releaseCadenceDays,
+                model_support: modelSupport,
                 last_updated: now,
             },
         });
