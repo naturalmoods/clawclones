@@ -10,8 +10,9 @@ afternoon.
 
 - **Index** — every tracked project in one sortable table: stars, memory footprint,
   boot time, security score, licence, commit activity.
-- **Profiles** — a page per project with the security radar, star history, and an
-  AI-written read on where it beats or loses to OpenClaw.
+- **Profiles** — a page per project with the security radar, star history, the
+  detected model access (which providers it reaches, what it pins, whether it can
+  run locally), and an AI-written read on where it beats or loses to OpenClaw.
 - **Compare** — any two projects side by side, with a verdict that names who each
   one suits.
 - **Ecosystem report** — a weekly state-of-the-field report whose tables are computed
@@ -25,7 +26,7 @@ The interesting constraint in this project is keeping those three apart:
 
 | Lane | What it covers | Where it comes from |
 | --- | --- | --- |
-| **Measured** | Stars, releases, commit tempo, language, footprint, licence | GitHub API, stored as typed fields under `src/content/clones/` |
+| **Measured** | Stars, releases, commit tempo, language, footprint, licence, LLM providers and pinned models | GitHub API, stored as typed fields under `src/content/clones/` |
 | **AI-written** | Summaries, tradeoffs, compare verdicts, recommendation framing | Generation pipeline in `scripts/`, always labelled in the UI |
 | **Community** | Discussion volume and web mentions | Reddit public search feed, Brave Search |
 
@@ -64,6 +65,7 @@ npm run astro -- check # types and content-schema validation on its own
 | `npm run update-data` | Full ecosystem pass: repos, community signals, AI copy |
 | `npm run update-data -- --repos=owner/repo` | A single project |
 | `npm run update-github` | GitHub metadata only, no AI calls |
+| `npm run update-model-support` | Which LLM providers each project reaches, and the models it pins |
 | `npm run update-watchlist` | The radar list of unverified newcomers |
 | `npm run update-analysis` | The weekly ecosystem report narrative |
 | `npm run fetch-analytics` | Cloudflare page analytics |

@@ -21,6 +21,8 @@ export interface CloneRow {
     /** Only surfaced when it is not `healthy`; the index never flags the normal case. */
     health: string | null;
     lastCommitAt: string | null;
+    /** Detected providers, searchable from the table filter. Empty when not detected. */
+    providers: string[];
 }
 
 /**
@@ -77,6 +79,7 @@ type RowSource = {
         license_type?: string | null;
         health_status?: string | null;
         last_commit_at?: string | null;
+        model_support?: { providers?: string[] } | null;
     };
 };
 
@@ -95,6 +98,7 @@ export function toCloneRow(clone: RowSource): CloneRow {
             ? clone.data.health_status
             : null,
         lastCommitAt: clone.data.last_commit_at || null,
+        providers: clone.data.model_support?.providers ?? [],
     };
 }
 

@@ -22,6 +22,16 @@ import {
     deriveWhyChoose,
 } from "../../lib/use-cases";
 import { getDisplayName } from "../../lib/clone-format";
+import {
+    accessSummary,
+    groupProviders,
+    modelDateHint,
+    pinAge,
+    providerLabel,
+    signalLabel,
+    sourceUrl,
+} from "../../lib/model-access";
+import type { DefaultModel, ModelSupport, ProviderSignal } from "../../lib/model-access";
 
 export async function getStaticPaths() {
     const clones = await getCollection("clones");
@@ -169,6 +179,18 @@ const specGroups = [
         rows: group.rows.filter(([, value]) => value !== "—"),
     }))
     .filter((group) => group.rows.length > 0);
+
+const modelSupport: ModelSupport | null = clone.data.model_support ?? null;
+const providerGroups = modelSupport ? groupProviders(modelSupport) : [];
+const modelAccessSummary = modelSupport ? accessSummary(modelSupport) : null;
+const pinnedModels: DefaultModel[] = modelSupport?.default_models ?? [];
+// Evidence is capped on the page, not in the data, so the JSON stays checkable.
+const shownEvidence: ProviderSignal[] = modelSupport ? modelSupport.evidence.slice(0, 8) : [];
+const modelPinAge = modelSupport ? pinAge(modelSupport) : null;
+const pinAgeTone =
+    modelPinAge?.tone === "stale"
+        ? "text-amber-700 dark:text-amber-400"
+        : "text-pale-slate-500";
 
 // The four protection axes score safety directly; shell access is stored as a
 // RISK, so it reads in the opposite direction and has to be labelled as such.
@@ -351,6 +373,132 @@ const totalBattles = (allClones.length * (allClones.length - 1)) / 2;
             </div>
         </div>
     </section>
+
+    {
+        modelSupport && (
+            <section class="border-t hairline">
+                <div class="mx-auto max-w-7xl px-6 py-14 md:py-20">
+                    <div class="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3">
+                        <h2 class="eyebrow">Model access</h2>
+                        <p class="font-mono text-[11px] text-pale-slate-500">
+                            Read from the repository, not written by a model ·{" "}
+                            {modelSupport.files_examined} files examined
+                        </p>
+                    </div>
+
+                    {modelSupport.providers.length === 0 ? (
+                        <p class="mt-8 max-w-2xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                            No provider wiring was found in this repository. That is not the same as
+                            the project supporting none — it usually means the model call lives
+                            somewhere the detector does not read, such as an exported workflow or a
+                            binary dependency.
+                        </p>
+                    ) : (
+                        <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-x-16 gap-y-10">
+                            <div class="lg:col-span-2">
+                                {modelAccessSummary && (
+                                    <p class="font-mono text-[11px] uppercase tracking-[0.18em] text-pale-slate-400">
+                                        {modelAccessSummary}
+                                    </p>
+                                )}
+
+                                <div class="mt-6 space-y-5">
+                                    {providerGroups.map((group) => (
+                                        <div class="flex flex-col sm:flex-row sm:items-baseline gap-x-6 gap-y-2">
+                                            <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400 sm:w-24 shrink-0">
+                                                {group.title}
+                                            </span>
+                                            <div class="flex flex-wrap gap-2">
+                                                {group.providers.map((provider) => (
+                                                    <span class="pill">{providerLabel(provider)}</span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {modelSupport.provider_lock && (
+                                    <p class="mt-8 max-w-2xl text-[15px] leading-relaxed text-pale-slate-600 dark:text-pale-slate-400">
+                                        Only {providerLabel(modelSupport.provider_lock)} was found,
+                                        with no gateway, local runtime or configurable endpoint
+                                        alongside it. Switching providers would mean changing code.
+                                    </p>
+                                )}
+                            </div>
+
+                            <div>
+                                <h3 class="font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400 pb-3 border-b hairline">
+                                    Pinned models
+                                </h3>
+                                {pinnedModels.length === 0 ? (
+                                    <p class="mt-3 font-mono text-[12px] text-pale-slate-500">
+                                        None pinned in the repository.
+                                    </p>
+                                ) : (
+                                    pinnedModels.map((model) => (
+                                        <div class="flex items-center justify-between py-3 border-b hairline gap-4">
+                                            <a
+                                                href={sourceUrl(clone.data.id, model.path)}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="font-mono text-[13px] text-pale-slate-700 dark:text-pale-slate-300 hover:text-ink dark:hover:text-white transition-colors duration-150 truncate"
+                                                title={model.line}
+                                            >
+                                                {model.model}
+                                            </a>
+                                            <span class="font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400 shrink-0">
+                                                {modelDateHint(model.model) ??
+                                                    (model.provider ? providerLabel(model.provider) : "—")}
+                                            </span>
+                                        </div>
+                                    ))
+                                )}
+                                {modelPinAge && (
+                                    <p class={`mt-3 font-mono text-[10px] ${pinAgeTone}`}>
+                                        Pin untouched for {modelPinAge.label}
+                                        {modelPinAge.tone === "stale" ? " — several model generations" : ""}
+                                    </p>
+                                )}
+                                {modelSupport.default_model_ambiguous && (
+                                    <p class="mt-3 font-mono text-[10px] text-pale-slate-500">
+                                        Several defaults are pinned; the project picks one per
+                                        provider rather than shipping a single default.
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                    )}
+
+                    {shownEvidence.length > 0 && (
+                        <details class="mt-12 group">
+                            <summary class="font-mono text-[10px] uppercase tracking-[0.18em] text-pale-slate-400 cursor-pointer hover:text-ink dark:hover:text-white transition-colors duration-150">
+                                Evidence
+                            </summary>
+                            <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-16">
+                                {shownEvidence.map((signal) => (
+                                    <div class="flex items-center justify-between py-2.5 border-b hairline gap-4">
+                                        <span class="font-mono text-[11px] text-pale-slate-500 shrink-0">
+                                            {providerLabel(signal.value) === signal.value
+                                                ? signal.value
+                                                : providerLabel(signal.value)}
+                                        </span>
+                                        <a
+                                            href={sourceUrl(clone.data.id, signal.path)}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="font-mono text-[11px] text-pale-slate-400 hover:text-ink dark:hover:text-white transition-colors duration-150 truncate text-right"
+                                        >
+                                            {signalLabel(signal.kind)} · {signal.path}
+                                        </a>
+                                    </div>
+                                ))}
+                            </div>
+                        </details>
+                    )}
+                </div>
+            </section>
+        )
+    }
 
     {
         !isOpenClaw ? (

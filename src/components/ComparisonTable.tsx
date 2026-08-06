@@ -115,7 +115,13 @@ export default function ComparisonTable({ clones, intentCategories, intentShortl
     const rows = useMemo(() => {
         const pool = shortlist ? clones.filter((clone) => rankById.has(clone.id)) : clones;
         return pool
-            .filter((clone) => `${clone.name} ${clone.language}`.toLowerCase().includes(query.toLowerCase()))
+            // Providers are searchable but not shown as a column: typing "ollama"
+            // should narrow the table without spending width on a list of badges.
+            .filter((clone) =>
+                `${clone.name} ${clone.language} ${clone.providers.join(' ')}`
+                    .toLowerCase()
+                    .includes(query.toLowerCase()),
+            )
             .sort((left, right) => (effectiveSort.desc ? -1 : 1) * compareBy(effectiveSort.key, left, right, rankById));
     }, [clones, query, effectiveSort.key, effectiveSort.desc, shortlist, rankById]);
 
@@ -199,7 +205,7 @@ export default function ComparisonTable({ clones, intentCategories, intentShortl
                         id="clone-table-search"
                         value={query}
                         onChange={(event) => setQuery(event.target.value)}
-                        placeholder="Filter by name or language"
+                        placeholder="Name, language or provider"
                         className="flex-1 min-w-0 sm:flex-none sm:w-52 font-mono text-[12px] bg-transparent border hairline rounded-sm px-2.5 py-1.5 text-pale-slate-600 dark:text-pale-slate-400 placeholder-pale-slate-400 focus:outline-none focus:border-accent dark:focus:border-accent-soft"
                     />
                     {/* Memory and last commit have no visible header below `sm`, so touch layouts sort from here. */}

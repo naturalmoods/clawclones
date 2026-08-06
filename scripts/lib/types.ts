@@ -1,3 +1,7 @@
+import type { PublishedModelSupport } from './model-support';
+
+export type { PublishedModelSupport };
+
 export interface GitHubData {
     repoInfo: any;
     readme: string;
@@ -95,6 +99,8 @@ export interface CloneData {
     open_issues_count?: number | null;
     release_cadence_days?: number | null;
     operational_risk?: OperationalRisk;
+    /** Measured, never model-written: which providers the code can reach. */
+    model_support?: PublishedModelSupport | null;
     openclaw_advantages?: string[];
     openclaw_disadvantages?: string[];
     confidence_summary?: string;
