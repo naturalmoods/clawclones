@@ -9,6 +9,42 @@ const pluginEcosystemSchema = z.enum(['strong', 'emerging', 'limited', 'unknown'
 const operationalRiskSchema = z.enum(['low', 'medium', 'high', 'unknown']);
 const refreshModeSchema = z.enum(['refresh', 'review', 'rewrite']);
 
+const providerSignalSchema = z.object({
+    kind: z.enum(['dependency', 'endpoint', 'env_key', 'adapter_file', 'prose']),
+    value: z.string(),
+    path: z.string(),
+    strength: z.enum(['strong', 'weak']),
+});
+
+const defaultModelSchema = z.object({
+    model: z.string(),
+    provider: z.string().nullable(),
+    path: z.string(),
+    line: z.string(),
+    strength: z.enum(['strong', 'weak']),
+});
+
+/**
+ * Detector output, not model-written. `providers` being empty means detection
+ * found nothing, which is not the same as the project supporting nothing.
+ */
+const modelSupportSchema = z.object({
+    providers: z.array(z.string()),
+    provider_count: z.number().int().nonnegative(),
+    local_capable: z.boolean(),
+    aggregator_capable: z.boolean(),
+    byo_endpoint: z.boolean(),
+    provider_lock: z.string().nullable(),
+    default_model: defaultModelSchema.nullable(),
+    default_models: z.array(defaultModelSchema).default([]),
+    default_model_ambiguous: z.boolean().default(false),
+    evidence: z.array(providerSignalSchema).default([]),
+    default_model_last_touched: z.string().nullable().default(null),
+    files_examined: z.number().int().nonnegative(),
+    detected_at: z.string(),
+    detection_version: z.string(),
+});
+
 const contentOpsSchema = z.object({
     last_generated_at: z.string(),
     last_reviewed_at: z.string(),
@@ -56,6 +92,7 @@ const cloneSchema = z.object({
     open_issues_count: z.number().int().nonnegative().nullable().optional(),
     release_cadence_days: z.number().int().nonnegative().nullable().optional(),
     operational_risk: operationalRiskSchema.optional(),
+    model_support: modelSupportSchema.nullable().optional(),
     openclaw_advantages: z.array(z.string()).optional(),
     openclaw_disadvantages: z.array(z.string()).optional(),
     confidence_summary: z.string().optional(),
