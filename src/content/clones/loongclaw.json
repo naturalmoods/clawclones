@@ -77,5 +77,156 @@
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "LoongClaw (Loong) is a lightweight, Rust-based infrastructure for building vertical AI agents. It emphasizes a secure and controlled base that supports longer-horizon workflow construction, compound task execution, and closed-loop improvement, enabling human-AI collaboration in real-world scenarios.\n\nThe project is actively developed, with recent commits refactoring the tools module layout and introducing an observability-otel feature that gates OpenTelemetry behind a flag with no-op stubs when disabled. This allows developers to capture telemetry content in a feature-aware manner while keeping the core lean.\n\nUnlike OpenClaw, which appears as a turnkey personal AI assistant (likely TypeScript/Node based), LoongClaw targets developers who want to customize and extend agent behavior from a Rust foundation. Its MIT license and extensible architecture make it suitable for embedding into specialized vertical solutions, though it lacks a mature plugin ecosystem and official release.",
-  "last_updated": "2026-08-07T02:00:16.254Z"
+  "last_updated": "2026-08-07T02:00:16.254Z",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "bedrock",
+      "deepseek",
+      "litellm",
+      "minimax",
+      "openai",
+      "openai-compatible",
+      "zhipu"
+    ],
+    "provider_count": 6,
+    "local_capable": false,
+    "aggregator_capable": true,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": {
+      "model": "MiniMax-M2.5",
+      "provider": "minimax",
+      "path": "crates/app/src/provider/model_candidate_resolver_runtime.rs",
+      "line": "model: \"MiniMax-M2.5\".to_owned(),",
+      "strength": "weak"
+    },
+    "default_models": [
+      {
+        "model": "MiniMax-M2.5",
+        "provider": "minimax",
+        "path": "crates/app/src/provider/model_candidate_resolver_runtime.rs",
+        "line": "model: \"MiniMax-M2.5\".to_owned(),",
+        "strength": "weak"
+      },
+      {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "path": "crates/app/src/provider/failover.rs",
+        "line": "model: \"openai/gpt-4o\".to_owned(),",
+        "strength": "weak"
+      },
+      {
+        "model": "gpt-5.4",
+        "provider": "openai",
+        "path": "crates/app/src/provider/request_executor.rs",
+        "line": "model: \"gpt-5.4\",",
+        "strength": "weak"
+      },
+      {
+        "model": "deepseek-chat",
+        "provider": "deepseek",
+        "path": "crates/app/src/config/provider/tests.rs",
+        "line": "model: \"deepseek-chat\".to_owned(),",
+        "strength": "weak"
+      }
+    ],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "env_key",
+        "value": "ANTHROPIC_API_KEY",
+        "path": "crates/daemon/src/provider_presentation.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "ANTHROPIC_API_KEY",
+        "path": "crates/daemon/src/provider_credential_policy.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "bedrock-runtime",
+        "path": "crates/app/src/provider/transport.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "AWS_BEARER_TOKEN_BEDROCK",
+        "path": "crates/app/src/config/provider/catalog.rs",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
+        "value": "DEEPSEEK_API_KEY",
+        "path": "crates/daemon/src/migration/provider_selection.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "DEEPSEEK_API_KEY",
+        "path": "crates/app/src/config/provider/catalog.rs",
+        "strength": "weak"
+      },
+      {
+        "kind": "endpoint",
+        "value": "litellm",
+        "path": "crates/app/src/provider/copilot_auth.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.minimaxi.com",
+        "path": "crates/app/src/provider/catalog_executor.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.minimaxi.com",
+        "path": "crates/app/src/provider/request_executor.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "crates/daemon/src/provider_credential_policy.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "crates/daemon/src/migration/provider_selection.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "crates/daemon/src/migration/provider_transport.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "crates/app/src/channel/registry/config_backed.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "open.bigmodel.cn",
+        "path": "crates/app/src/provider/request_executor.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.z.ai",
+        "path": "crates/app/src/provider/request_executor.rs",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-04-18T15:06:55Z",
+    "files_examined": 87,
+    "detected_at": "2026-08-07T04:39:51.568Z",
+    "detection_version": "1"
+  }
 }

@@ -81,5 +81,75 @@
     "date": "2026-02-22T17:20:21Z",
     "url": "https://github.com/openconstruct/freeclaw/releases/tag/0.1.0"
   },
-  "last_updated": "2026-08-07T02:00:23.960Z"
+  "last_updated": "2026-08-07T02:00:23.960Z",
+  "model_support": {
+    "providers": [
+      "groq",
+      "openai",
+      "openai-compatible",
+      "openrouter"
+    ],
+    "provider_count": 2,
+    "local_capable": false,
+    "aggregator_capable": true,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": null,
+    "default_models": [],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "dependency",
+        "value": "groq",
+        "path": "freeclaw/pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "groq",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "freeclaw/providers/openrouter.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "freeclaw/freeclaw/providers/openrouter.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "freeclaw/config.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "freeclaw/freeclaw/config.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openrouter",
+        "path": "freeclaw/pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openrouter",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": null,
+    "files_examined": 24,
+    "detected_at": "2026-08-07T04:42:20.999Z",
+    "detection_version": "1"
+  }
 }

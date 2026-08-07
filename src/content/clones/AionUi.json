@@ -85,5 +85,75 @@
     "date": "2026-08-06T11:52:41Z",
     "url": "https://github.com/iOfficeAI/AionUi/releases/tag/v2.1.50"
   },
-  "last_updated": "2026-08-07T02:00:13.960Z"
+  "last_updated": "2026-08-07T02:00:13.960Z",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "google",
+      "openai",
+      "openai-compatible"
+    ],
+    "provider_count": 3,
+    "local_capable": false,
+    "aggregator_capable": false,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": null,
+    "default_models": [],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "dependency",
+        "value": "@anthropic-ai/sdk",
+        "path": "package.json",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.anthropic.com",
+        "path": "packages/desktop/src/renderer/utils/model/modelPlatforms.ts",
+        "strength": "weak"
+      },
+      {
+        "kind": "dependency",
+        "value": "@google/genai",
+        "path": "package.json",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "genai",
+        "path": "package.json",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "package.json",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.openai.com",
+        "path": "packages/desktop/src/renderer/utils/model/modelPlatforms.ts",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "packages/desktop/src/common/config/configMigration.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "packages/desktop/src/common/types/provider/providerApi.ts",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": null,
+    "files_examined": 76,
+    "detected_at": "2026-08-07T04:39:34.195Z",
+    "detection_version": "1"
+  }
 }

@@ -86,5 +86,115 @@
     "date": "2026-08-05T03:22:07Z",
     "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.27.2"
   },
-  "last_updated": "2026-08-07T02:00:12.194Z"
+  "last_updated": "2026-08-07T02:00:12.194Z",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "deepseek",
+      "google",
+      "openai",
+      "openai-compatible",
+      "qwen"
+    ],
+    "provider_count": 5,
+    "local_capable": false,
+    "aggregator_capable": false,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": {
+      "model": "minimax-m3",
+      "provider": "minimax",
+      "path": "astrbot/core/provider/sources/openai_source.py",
+      "line": "and model == \"minimaxai/minimax-m3\"",
+      "strength": "weak"
+    },
+    "default_models": [
+      {
+        "model": "minimax-m3",
+        "provider": "minimax",
+        "path": "astrbot/core/provider/sources/openai_source.py",
+        "line": "and model == \"minimaxai/minimax-m3\"",
+        "strength": "weak"
+      }
+    ],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "dependency",
+        "value": "anthropic",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "anthropic",
+        "path": "requirements.txt",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.deepseek.com",
+        "path": "astrbot/core/provider/sources/openai_source.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.deepseek.com",
+        "path": "astrbot/core/config/default.py",
+        "strength": "weak"
+      },
+      {
+        "kind": "dependency",
+        "value": "google-genai",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "google-genai",
+        "path": "requirements.txt",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "requirements.txt",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "astrbot/core/provider/func_tool_manager.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "astrbot/core/provider/sources/gemini_source.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "dashscope",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "dashscope",
+        "path": "requirements.txt",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-07-26T08:53:06Z",
+    "files_examined": 66,
+    "detected_at": "2026-08-07T04:39:10.124Z",
+    "detection_version": "1"
+  }
 }

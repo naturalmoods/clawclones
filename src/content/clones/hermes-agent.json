@@ -81,5 +81,254 @@
     "date": "2026-08-03T16:57:52Z",
     "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.3"
   },
-  "last_updated": "2026-08-07T02:00:21.506Z"
+  "last_updated": "2026-08-07T02:00:21.506Z",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "fireworks",
+      "google",
+      "groq",
+      "litellm",
+      "minimax",
+      "mistral",
+      "moonshot",
+      "ollama",
+      "openai",
+      "openai-compatible",
+      "openrouter",
+      "xai",
+      "zhipu"
+    ],
+    "provider_count": 10,
+    "local_capable": true,
+    "aggregator_capable": true,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": {
+      "model": "claude-opus-4.6",
+      "provider": "anthropic",
+      "path": ".env.example",
+      "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
+      "strength": "strong"
+    },
+    "default_models": [
+      {
+        "model": "claude-opus-4.6",
+        "provider": "anthropic",
+        "path": ".env.example",
+        "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
+        "strength": "strong"
+      },
+      {
+        "model": "glm-5.2",
+        "provider": "zhipu",
+        "path": "hermes_cli/models.py",
+        "line": "PREFERRED_SILENT_DEFAULT_MODEL = \"z-ai/glm-5.2\"",
+        "strength": "strong"
+      },
+      {
+        "model": "grok-build-0.1",
+        "provider": "xai",
+        "path": "plugins/web/xai/provider.py",
+        "line": "DEFAULT_MODEL = \"grok-build-0.1\"",
+        "strength": "strong"
+      },
+      {
+        "model": "claude-sonnet-4",
+        "provider": "anthropic",
+        "path": "hermes_cli/config.py",
+        "line": "\"    model: anthropic/claude-sonnet-4\",",
+        "strength": "weak"
+      },
+      {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "path": "hermes_cli/config.py",
+        "line": "# (e.g. ``model: gpt-4o``).  Without this _set_nested replaces the",
+        "strength": "weak"
+      },
+      {
+        "model": "minimax-m2.7",
+        "provider": "minimax",
+        "path": "hermes_cli/model_switch.py",
+        "line": "model: \"minimax-m2.7\"",
+        "strength": "weak"
+      }
+    ],
+    "default_model_ambiguous": true,
+    "evidence": [
+      {
+        "kind": "dependency",
+        "value": "anthropic",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.anthropic.com",
+        "path": "agent/account_usage.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "FIREWORKS_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "FIREWORKS_API_KEY",
+        "path": "hermes_cli/providers.py",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
+        "value": "GEMINI_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "GOOGLE_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "groq",
+        "path": "hermes_cli/setup.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "GROQ_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "litellm",
+        "path": "hermes_cli/model_normalize.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "litellm",
+        "path": "hermes_cli/config.py",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
+        "value": "MINIMAX_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "MINIMAX_API_KEY",
+        "path": "hermes_cli/setup.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "mistralai",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "MISTRAL_API_KEY",
+        "path": "hermes_cli/setup.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "KIMI_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.moonshot.cn",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OLLAMA_BASE_URL",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OLLAMA_BASE_URL",
+        "path": "hermes_cli/models.py",
+        "strength": "weak"
+      },
+      {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "hermes_cli/setup.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "model_tools.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "hermes_cli/model_cost_guard.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openrouter",
+        "path": "hermes_cli/setup.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openrouter",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "XAI_API_KEY",
+        "path": "hermes_cli/setup.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "XAI_API_KEY",
+        "path": "plugins/web/xai/provider.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "GLM_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "open.bigmodel.cn",
+        "path": ".env.example",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-07-14T18:39:24Z",
+    "files_examined": 110,
+    "detected_at": "2026-08-07T04:41:27.137Z",
+    "detection_version": "1"
+  }
 }

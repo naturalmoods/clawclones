@@ -75,5 +75,111 @@
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "memUBot is presented as the enterprise-ready alternative to OpenClaw, built on the open-source memU memory framework. It is a proactive, 24/7 AI assistant designed for team-scale usage, emphasizing persistent memory, security, and cost-efficiency. The architecture leverages TypeScript with an Electron-style desktop shell (evident from preload scripts) and integrates local-first secure storage using scrypt and AES-256-GCM for API keys and MCP environment variables.\n\nRecent development activity shows a focus on enterprise requirements: merged support for SKILL_ENV, secure storage with OS-level encryption and backup/restore UI, and an observability system with traces, metrics, and structured logging. These additions aim to close the gap between personal AI assistants and production deployments, offering multi-user collaboration, SOC2-friendly data handling, and intelligent memory caching that reduces token consumption.\n\nCompared to OpenClaw, memUBot prioritizes memory-first architecture and proactive execution, targeting organizations rather than individual hobbyists. While it inherits the OpenClaw spirit, its heavier stack and enterprise features may introduce complexity not needed for simple personal use.",
-  "last_updated": "2026-08-07T02:00:20.503Z"
+  "last_updated": "2026-08-07T02:00:20.503Z",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "google",
+      "minimax",
+      "ollama",
+      "openai"
+    ],
+    "provider_count": 4,
+    "local_capable": true,
+    "aggregator_capable": false,
+    "byo_endpoint": false,
+    "provider_lock": null,
+    "default_model": {
+      "model": "claude-opus-4-5",
+      "provider": "anthropic",
+      "path": "src/main/config/settings.config.ts",
+      "line": "defaultModel: 'claude-opus-4-5'",
+      "strength": "strong"
+    },
+    "default_models": [
+      {
+        "model": "claude-opus-4-5",
+        "provider": "anthropic",
+        "path": "src/main/config/settings.config.ts",
+        "line": "defaultModel: 'claude-opus-4-5'",
+        "strength": "strong"
+      },
+      {
+        "model": "MiniMax-M2.1",
+        "provider": "minimax",
+        "path": "src/main/config/settings.config.ts",
+        "line": "defaultModel: 'MiniMax-M2.1'",
+        "strength": "strong"
+      },
+      {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "path": "src/main/config/settings.config.ts",
+        "line": "defaultModel: 'gpt-4o'",
+        "strength": "strong"
+      },
+      {
+        "model": "gemini-2.5-pro",
+        "provider": "google",
+        "path": "src/main/config/settings.config.ts",
+        "line": "defaultModel: 'gemini-2.5-pro'",
+        "strength": "strong"
+      }
+    ],
+    "default_model_ambiguous": true,
+    "evidence": [
+      {
+        "kind": "dependency",
+        "value": "@anthropic-ai/sdk",
+        "path": "package.json",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "@google/generative-ai",
+        "path": "package.json",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.minimaxi.com",
+        "path": "src/main/config/settings.config.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.minimaxi.com",
+        "path": "src/main/services/agent/utils.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "src/main/config/settings.config.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "src/main/services/agent/utils.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "package.json",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.openai.com",
+        "path": "src/main/ipc/settings.handlers.ts",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-03-21T07:52:13Z",
+    "files_examined": 39,
+    "detected_at": "2026-08-07T04:41:07.187Z",
+    "detection_version": "1"
+  }
 }

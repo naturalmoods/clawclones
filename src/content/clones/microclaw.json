@@ -81,5 +81,137 @@
     "date": "2026-08-01T21:26:19Z",
     "url": "https://github.com/microclaw/microclaw/releases/tag/v0.3.5"
   },
-  "last_updated": "2026-08-07T02:00:17.869Z"
+  "last_updated": "2026-08-07T02:00:17.869Z",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "deepseek",
+      "ollama",
+      "openai",
+      "openai-compatible"
+    ],
+    "provider_count": 3,
+    "local_capable": true,
+    "aggregator_capable": false,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": {
+      "model": "gemini-2.5-pro",
+      "provider": "google",
+      "path": "src/config.rs",
+      "line": "default_model: gemini-2.5-pro",
+      "strength": "strong"
+    },
+    "default_models": [
+      {
+        "model": "gemini-2.5-pro",
+        "provider": "google",
+        "path": "src/config.rs",
+        "line": "default_model: gemini-2.5-pro",
+        "strength": "strong"
+      },
+      {
+        "model": "claude-sonnet-4-5-20250929",
+        "provider": "anthropic",
+        "path": "microclaw.config.example.yaml",
+        "line": "#   - model: \"claude-sonnet-4-5-20250929\"",
+        "strength": "strong"
+      },
+      {
+        "model": "gpt-5.2",
+        "provider": "openai",
+        "path": "src/chat_commands.rs",
+        "line": "default_model: Some(\"gpt-5.2\".to_string()),",
+        "strength": "strong"
+      },
+      {
+        "model": "glm-4.7-flash",
+        "provider": "zhipu",
+        "path": "src/chat_commands.rs",
+        "line": "default_model: \"@cf/zai-org/glm-4.7-flash\"",
+        "strength": "strong"
+      },
+      {
+        "model": "claude-haiku-4-5",
+        "provider": "anthropic",
+        "path": "src/config.rs",
+        "line": "let yaml = \"telegram_bot_token: tok\\nbot_username: bot\\napi_key: key\\naux_models:\\n  compaction: claude-haiku-4-5\\n  reflector: claude-haiku-4-5\\n\";",
+        "strength": "weak"
+      },
+      {
+        "model": "gemini-2.5-flash",
+        "provider": "google",
+        "path": "src/llm.rs",
+        "line": "let mut body = json!({\"model\":\"gemini-2.5-flash\",\"messages\":[]});",
+        "strength": "weak"
+      }
+    ],
+    "default_model_ambiguous": true,
+    "evidence": [
+      {
+        "kind": "endpoint",
+        "value": "api.anthropic.com",
+        "path": "src/chat_commands.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.anthropic.com",
+        "path": "src/llm.rs",
+        "strength": "weak"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.deepseek.com",
+        "path": "src/chat_commands.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.deepseek.com",
+        "path": "src/llm.rs",
+        "strength": "weak"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "src/config.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "src/embedding.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "microclaw.config.example.yaml",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "src/config.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "src/web/config.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "crates/microclaw-clawhub/src/client.rs",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-07-27T04:16:49Z",
+    "files_examined": 69,
+    "detected_at": "2026-08-07T04:40:11.850Z",
+    "detection_version": "1"
+  }
 }

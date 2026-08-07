@@ -82,5 +82,170 @@
     "date": "2026-06-15T08:59:44Z",
     "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
   },
-  "last_updated": "2026-08-07T02:00:20.954Z"
+  "last_updated": "2026-08-07T02:00:20.954Z",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "google",
+      "ollama",
+      "openai",
+      "openai-compatible",
+      "qwen",
+      "vertex",
+      "zhipu"
+    ],
+    "provider_count": 6,
+    "local_capable": true,
+    "aggregator_capable": false,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": {
+      "model": "MiniMax-M3",
+      "provider": "minimax",
+      "path": "internal/store/provider_store.go",
+      "line": "MiniMaxDefaultModel   = \"MiniMax-M3\"",
+      "strength": "strong"
+    },
+    "default_models": [
+      {
+        "model": "MiniMax-M3",
+        "provider": "minimax",
+        "path": "internal/store/provider_store.go",
+        "line": "MiniMaxDefaultModel   = \"MiniMax-M3\"",
+        "strength": "strong"
+      },
+      {
+        "model": "glm-5.2",
+        "provider": "zhipu",
+        "path": "internal/store/provider_store.go",
+        "line": "ZaiDefaultModel         = \"glm-5.2\"",
+        "strength": "strong"
+      },
+      {
+        "model": "kimi-k2.5",
+        "provider": "moonshot",
+        "path": "internal/store/provider_store.go",
+        "line": "NovitaDefaultModel   = \"moonshotai/kimi-k2.5\"",
+        "strength": "strong"
+      },
+      {
+        "model": "kimi-k2-turbo-preview",
+        "provider": "moonshot",
+        "path": "internal/store/provider_store.go",
+        "line": "KimiCodingDefaultModel      = \"kimi-k2-turbo-preview\"",
+        "strength": "strong"
+      },
+      {
+        "model": "gemini-2.0-flash-001",
+        "provider": "google",
+        "path": "internal/providers/vertex.go",
+        "line": "VertexDefaultModel = \"google/gemini-2.0-flash-001\"",
+        "strength": "strong"
+      },
+      {
+        "model": "gpt-5-chat",
+        "provider": "openai",
+        "path": "internal/providers/aimlapi.go",
+        "line": "AIMLAPIDefaultModel   = \"openai/gpt-5-chat\"",
+        "strength": "strong"
+      }
+    ],
+    "default_model_ambiguous": true,
+    "evidence": [
+      {
+        "kind": "dependency",
+        "value": "anthropic",
+        "path": "docker/requirements-skills.txt",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "anthropic.go",
+        "path": "internal/providers/anthropic.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "generativelanguage.googleapis.com",
+        "path": "internal/http/provider_models_fetch.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "GEMINI_API_KEY",
+        "path": "internal/config/config_load.go",
+        "strength": "weak"
+      },
+      {
+        "kind": "dependency",
+        "value": "ollama",
+        "path": "go.mod",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "ollama.go",
+        "path": "internal/providers/ollama.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "openai.go",
+        "path": "internal/oauth/openai.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "openai.go",
+        "path": "internal/providers/openai.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "internal/http/provider_models.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "internal/store/provider_store.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "dashscope.go",
+        "path": "internal/providers/dashscope.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "dashscope.aliyuncs.com",
+        "path": "internal/http/providers.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "vertex.go",
+        "path": "internal/providers/vertex.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "aiplatform.googleapis.com",
+        "path": "internal/providers/vertex.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.z.ai",
+        "path": "internal/store/provider_store.go",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-07-19T18:38:15Z",
+    "files_examined": 99,
+    "detected_at": "2026-08-07T04:41:13.180Z",
+    "detection_version": "1"
+  }
 }

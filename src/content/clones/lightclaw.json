@@ -82,5 +82,102 @@
     "date": "2026-02-18T23:15:03Z",
     "url": "https://github.com/enzofrasca/lightclaw/releases/tag/v0.2.1"
   },
-  "last_updated": "2026-08-07T02:00:34.908Z"
+  "last_updated": "2026-08-07T02:00:34.908Z",
+  "model_support": {
+    "providers": [
+      "mistral",
+      "ollama",
+      "openai",
+      "openai-compatible",
+      "openrouter"
+    ],
+    "provider_count": 2,
+    "local_capable": true,
+    "aggregator_capable": true,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": {
+      "model": "claude-opus-4-5",
+      "provider": "anthropic",
+      "path": "src/config.rs",
+      "line": "model: \"anthropic/claude-opus-4-5\".to_string(),",
+      "strength": "weak"
+    },
+    "default_models": [
+      {
+        "model": "claude-opus-4-5",
+        "provider": "anthropic",
+        "path": "src/config.rs",
+        "line": "model: \"anthropic/claude-opus-4-5\".to_string(),",
+        "strength": "weak"
+      }
+    ],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "env_key",
+        "value": "MISTRAL_API_KEY",
+        "path": "src/transcription.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.mistral.ai",
+        "path": "src/configure.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "src/configure.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OLLAMA_BASE_URL",
+        "path": "src/config.rs",
+        "strength": "weak"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.openai.com",
+        "path": "src/configure.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "src/config.rs",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "src/memory/smart/client.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "src/transcription.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "openrouter.ai/api",
+        "path": "src/configure.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "openrouter.ai/api",
+        "path": "scripts/install.sh",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-02-18T22:33:34Z",
+    "files_examined": 35,
+    "detected_at": "2026-08-07T04:44:02.696Z",
+    "detection_version": "1"
+  }
 }
