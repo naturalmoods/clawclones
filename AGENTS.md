@@ -174,6 +174,9 @@ If a required secret is missing, many scripts warn and skip that provider rather
 - `model_support` is measured data: `normalizeCloneData` reads it from `measured` and never from the AI response. Do not let a generated field write into it.
 - Empty `providers` means detection found nothing, which is not the same as the project supporting nothing. Keep that distinction in any UI that consumes the field.
 - Adding a provider means adding an entry to `PROVIDER_RULES`; prefer a dependency name or env key over a bare endpoint string, since endpoints also appear in documentation and router tables.
+- Model age comes from `scripts/lib/model-catalogue.ts`: the date inside the model id when it has one, otherwise OpenRouter's public catalogue (`created`). No hand-maintained release table — it would rot, and it would be authored rather than measured.
+- `normalizeModelId` may only restore identities (`claude-sonnet-4-5` = `claude-sonnet-4.5`), never approximate a near match. Dating a pin from a different model is worse than leaving it null.
+- The catalogue cannot date a model its providers have retired, so unknown ages skew toward the oldest pins. The bias runs toward under-reporting staleness, which is the safe direction; do not add fallbacks that guess.
 
 ## Cloudflare function conventions
 - Files in `functions/api/` export `onRequest` handlers.
