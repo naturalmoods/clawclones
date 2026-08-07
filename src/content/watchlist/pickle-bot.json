@@ -40,13 +40,14 @@
   "open_issues_count": null,
   "release_cadence_days": null,
   "operational_risk": "unknown",
+  "model_support": null,
   "openclaw_advantages": [],
   "openclaw_disadvantages": [],
   "confidence_summary": "Watchlist profiles use lightweight signals until a full AI analysis is available.",
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:24.325Z",
-    "last_reviewed_at": "2026-08-06T08:12:59.117Z",
+    "last_reviewed_at": "2026-08-07T06:58:25.687Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -58,7 +59,7 @@
     "date": "2026-04-26T00:29:08Z",
     "url": "https://github.com/czl9707/pickle-bot/releases/tag/v1.0.5"
   },
-  "last_updated": "2026-08-06T08:12:59.117Z",
+  "last_updated": "2026-08-07T06:58:25.687Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }

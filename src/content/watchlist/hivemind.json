@@ -40,13 +40,14 @@
   "open_issues_count": null,
   "release_cadence_days": null,
   "operational_risk": "unknown",
+  "model_support": null,
   "openclaw_advantages": [],
   "openclaw_disadvantages": [],
   "confidence_summary": "Watchlist profiles use lightweight signals until a full AI analysis is available.",
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:28.381Z",
-    "last_reviewed_at": "2026-08-06T08:12:59.904Z",
+    "last_reviewed_at": "2026-08-07T06:58:26.586Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -58,7 +59,7 @@
     "date": "2026-07-10T23:35:35Z",
     "url": "https://github.com/hivementality-ai/hivemind/releases/tag/2026.07.01"
   },
-  "last_updated": "2026-08-06T08:12:59.904Z",
+  "last_updated": "2026-08-07T06:58:26.586Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }
