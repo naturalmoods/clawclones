@@ -24,7 +24,9 @@ import {
 import { getDisplayName } from "../../lib/clone-format";
 import {
     accessSummary,
+    dateSourceLabel,
     groupProviders,
+    modelAge,
     modelDateHint,
     pinAge,
     providerLabel,
@@ -187,10 +189,16 @@ const pinnedModels: DefaultModel[] = modelSupport?.default_models ?? [];
 // Evidence is capped on the page, not in the data, so the JSON stays checkable.
 const shownEvidence: ProviderSignal[] = modelSupport ? modelSupport.evidence.slice(0, 8) : [];
 const modelPinAge = modelSupport ? pinAge(modelSupport) : null;
-const pinAgeTone =
-    modelPinAge?.tone === "stale"
+const pinnedModelAge = modelSupport ? modelAge(modelSupport) : null;
+const releaseSource = modelSupport ? dateSourceLabel(modelSupport) : null;
+// Only the model's own age earns a warning colour. The file-edit date is
+// context, and colouring it too would imply the two carry equal weight.
+const modelAgeTone =
+    pinnedModelAge?.tone === "stale"
         ? "text-amber-700 dark:text-amber-400"
-        : "text-pale-slate-500";
+        : pinnedModelAge?.tone === "aging"
+          ? "text-pale-slate-600 dark:text-pale-slate-300"
+          : "text-pale-slate-500";
 
 // The four protection axes score safety directly; shell access is stored as a
 // RISK, so it reads in the opposite direction and has to be labelled as such.
@@ -453,10 +461,17 @@ const totalBattles = (allClones.length * (allClones.length - 1)) / 2;
                                         </div>
                                     ))
                                 )}
+                                {pinnedModelAge && modelSupport.default_model && (
+                                    <p class={`mt-3 font-mono text-[10px] leading-relaxed ${modelAgeTone}`}>
+                                        {modelSupport.default_model.model} released{" "}
+                                        {modelSupport.default_model_released_at} —{" "}
+                                        {pinnedModelAge.label} old
+                                        {releaseSource ? ` (${releaseSource})` : ""}
+                                    </p>
+                                )}
                                 {modelPinAge && (
-                                    <p class={`mt-3 font-mono text-[10px] ${pinAgeTone}`}>
-                                        Pin untouched for {modelPinAge.label}
-                                        {modelPinAge.tone === "stale" ? " — several model generations" : ""}
+                                    <p class="mt-1.5 font-mono text-[10px] text-pale-slate-500">
+                                        Pin last edited {modelPinAge.label} ago
                                     </p>
                                 )}
                                 {modelSupport.default_model_ambiguous && (
