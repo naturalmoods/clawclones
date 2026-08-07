@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A Dockerized full-Linux-desktop agent framework that gives AI a real GUI, browser with DOM annotation, and live document cowork instead of just chat. Mature, plugin-rich, and actively maintained with a polished launcher experience.",
   "health_status": "healthy",
-  "github_stars": 18755,
+  "github_stars": 18767,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 80,
@@ -53,7 +53,7 @@
   "license_type": "NOASSERTION",
   "last_commit_at": "2026-08-01T14:52:48Z",
   "contributors_count": 57,
-  "open_issues_count": 202,
+  "open_issues_count": 200,
   "release_cadence_days": 6,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -86,7 +86,7 @@
     "date": "2026-08-01T15:50:00Z",
     "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.8"
   },
-  "last_updated": "2026-08-07T02:00:10.491Z",
+  "last_updated": "2026-08-07T12:48:36.840Z",
   "model_support": {
     "providers": [
       "anthropic",
