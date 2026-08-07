@@ -116,45 +116,70 @@ export function modelDateHint(model: string): string | null {
 
 const DAY_IN_MS = 1000 * 60 * 60 * 24;
 /**
- * Where a pin stops looking current. A frontier model generation currently runs
- * four to six months, so six months is roughly one generation behind and twelve
- * is two or more. The thresholds are stated in generations rather than fitted to
- * the current field, which is small and moves quickly.
+ * Where a pinned model stops looking current. A frontier generation currently
+ * runs four to six months, so six months is roughly one generation behind and
+ * twelve is two or more. Stated in generations rather than fitted to the current
+ * field, which is small and moves quickly.
  */
 const AGING_DAYS = 180;
 const STALE_DAYS = 365;
 
-export interface PinAge {
+export type AgeTone = 'neutral' | 'aging' | 'stale';
+
+export interface Age {
     /** Human phrasing of the interval, e.g. "17 months". */
     label: string;
     days: number;
-    tone: 'neutral' | 'aging' | 'stale';
+    tone: AgeTone;
 }
 
-/**
- * How long the project's model pin has sat untouched.
- *
- * This is deliberately a fact about the repository, not a judgement about the
- * model: a project can pin an old model on purpose. The page reports the
- * interval and lets the reader decide what it means.
- */
-export function pinAge(support: ModelSupport, now: Date = new Date()): PinAge | null {
-    if (!support.default_model_last_touched) return null;
+function measureAge(from: string | null | undefined, now: Date): Age | null {
+    if (!from) return null;
 
-    const touched = new Date(support.default_model_last_touched);
-    if (Number.isNaN(touched.getTime())) return null;
+    const start = new Date(from);
+    if (Number.isNaN(start.getTime())) return null;
 
-    const days = Math.max(0, Math.round((now.getTime() - touched.getTime()) / DAY_IN_MS));
+    const days = Math.max(0, Math.round((now.getTime() - start.getTime()) / DAY_IN_MS));
     const months = Math.round(days / 30);
-
     const label =
-        days < 45 ? `${days} days` : months < 24 ? `${months} months` : `${Math.floor(months / 12)} years`;
+        days < 45 ? `${days} days` : months < 24 ? `${months} months` : `${Math.floor(days / 365)} years`;
 
     return {
         label,
         days,
         tone: days >= STALE_DAYS ? 'stale' : days >= AGING_DAYS ? 'aging' : 'neutral',
     };
+}
+
+/**
+ * How old the pinned model itself is.
+ *
+ * This is the honest staleness signal. The file-edit date below answers a
+ * different and weaker question — several projects here edit the file that holds
+ * their pin without ever changing the model, so by that measure they look
+ * current while running a model two years old.
+ */
+export function modelAge(support: ModelSupport, now: Date = new Date()): Age | null {
+    return measureAge(support.default_model_released_at, now);
+}
+
+/**
+ * How long the project's model pin has sat untouched.
+ *
+ * Secondary to `modelAge`: a fact about the repository rather than about the
+ * model. Read together the two are more informative than either alone — a
+ * recently edited file holding an old model means the pin is a choice, not
+ * neglect.
+ */
+export function pinAge(support: ModelSupport, now: Date = new Date()): Age | null {
+    return measureAge(support.default_model_last_touched, now);
+}
+
+/** Where the release date came from, for the reader who wants to check it. */
+export function dateSourceLabel(support: ModelSupport): string | null {
+    if (support.default_model_date_source === 'model_id') return 'dated in the model id';
+    if (support.default_model_date_source === 'catalogue') return 'from the public model catalogue';
+    return null;
 }
 
 export function defaultModelLabel(support: ModelSupport): string {
