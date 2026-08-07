@@ -103,8 +103,10 @@
       }
     ],
     "default_model_last_touched": null,
+    "default_model_released_at": null,
+    "default_model_date_source": null,
     "files_examined": 5,
-    "detected_at": "2026-08-07T05:30:50.653Z",
+    "detected_at": "2026-08-07T07:30:34.980Z",
     "detection_version": "1"
   }
 }
