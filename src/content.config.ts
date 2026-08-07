@@ -40,6 +40,8 @@ const modelSupportSchema = z.object({
     default_model_ambiguous: z.boolean().default(false),
     evidence: z.array(providerSignalSchema).default([]),
     default_model_last_touched: z.string().nullable().default(null),
+    default_model_released_at: z.string().nullable().default(null),
+    default_model_date_source: z.enum(['model_id', 'catalogue']).nullable().default(null),
     files_examined: z.number().int().nonnegative(),
     detected_at: z.string(),
     detection_version: z.string(),

@@ -65,7 +65,7 @@ npm run astro -- check # types and content-schema validation on its own
 | `npm run update-data` | Full ecosystem pass: repos, community signals, AI copy |
 | `npm run update-data -- --repos=owner/repo` | A single project |
 | `npm run update-github` | GitHub metadata only, no AI calls |
-| `npm run update-model-support` | Which LLM providers each project reaches, and the models it pins |
+| `npm run update-model-support` | Which LLM providers each project reaches, the models it pins, and how old they are |
 | `npm run update-watchlist` | The radar list of unverified newcomers |
 | `npm run update-analysis` | The weekly ecosystem report narrative |
 | `npm run fetch-analytics` | Cloudflare page analytics |

@@ -1,6 +1,20 @@
 import { detectModelSupport, publishModelSupport } from './model-support';
 import type { PublishedModelSupport } from './model-support';
+import { fetchModelCatalogue, resolveModelDate } from './model-catalogue';
+import type { ModelCatalogue } from './model-catalogue';
 import { GitHubRepoSource } from './repo-source';
+
+/**
+ * The catalogue is the same for every repo in a run, so it is fetched once and
+ * held for the process. A pipeline run is a single process; nothing here is
+ * meant to outlive it.
+ */
+let cataloguePromise: Promise<ModelCatalogue> | null = null;
+
+function getCatalogue(): Promise<ModelCatalogue> {
+    if (!cataloguePromise) cataloguePromise = fetchModelCatalogue();
+    return cataloguePromise;
+}
 
 /**
  * Runs the provider detector against a repo on GitHub.
@@ -19,11 +33,17 @@ export async function fetchModelSupport(repo: string): Promise<PublishedModelSup
             console.warn(`  ! ${repo}: file tree was truncated, provider coverage may be partial`);
         }
 
-        const lastTouched = support.default_model
-            ? await source.lastCommitDate(support.default_model.path)
-            : null;
+        if (!support.default_model) return publishModelSupport(support);
 
-        return publishModelSupport(support, lastTouched);
+        const [lastTouched, catalogue] = await Promise.all([
+            source.lastCommitDate(support.default_model.path),
+            getCatalogue(),
+        ]);
+
+        return publishModelSupport(support, {
+            lastTouched,
+            released: resolveModelDate(support.default_model.model, catalogue),
+        });
     } catch (error) {
         console.warn(`  ! ${repo}: model support detection failed - ${(error as Error).message}`);
         return undefined;

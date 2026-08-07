@@ -108,6 +108,12 @@ export interface PublishedModelSupport {
      * current when it was written. Null when the lookup was unavailable.
      */
     default_model_last_touched: string | null;
+    /**
+     * When the pinned model was released, from the id's own date or the public
+     * model catalogue. Null when neither could date it.
+     */
+    default_model_released_at: string | null;
+    default_model_date_source: 'model_id' | 'catalogue' | null;
     files_examined: number;
     detected_at: string;
     detection_version: string;
@@ -115,13 +121,20 @@ export interface PublishedModelSupport {
 
 const EVIDENCE_PER_PROVIDER = 2;
 
+export interface PublishOptions {
+    /** Last commit touching the file that pins the default model. */
+    lastTouched?: string | null;
+    /** Release date of the pinned model, and where that date came from. */
+    released?: { released_at: string; source: 'model_id' | 'catalogue' } | null;
+}
+
 /**
  * Drops the full signal set down to what a profile page needs. Keeping every
  * signal would roughly double the size of a clone's JSON for no reader benefit.
  */
 export function publishModelSupport(
     support: ModelSupport,
-    lastTouched?: string | null,
+    options: PublishOptions = {},
 ): PublishedModelSupport {
     const evidence = support.findings
         .filter(finding => finding.strength === 'strong')
@@ -142,7 +155,9 @@ export function publishModelSupport(
         default_models: support.default_models,
         default_model_ambiguous: support.default_model_ambiguous,
         evidence,
-        default_model_last_touched: lastTouched ?? null,
+        default_model_last_touched: options.lastTouched ?? null,
+        default_model_released_at: options.released?.released_at ?? null,
+        default_model_date_source: options.released?.source ?? null,
         files_examined: support.files_examined,
         detected_at: support.detected_at,
         detection_version: support.detection_version,
