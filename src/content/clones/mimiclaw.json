@@ -4,7 +4,7 @@
   "language": "C",
   "vibe_summary": "Runs OpenClaw-style agent loop on a $5 ESP32-S3 chip with pure C, no OS or Node.js. Tiny hardware assistant with Telegram UI, local flash memory, and 0.5W draw.",
   "health_status": "healthy",
-  "github_stars": 5595,
+  "github_stars": 5596,
   "metrics": {
     "boot_time_ms": 5,
     "memory_mb": 1.5,
@@ -50,7 +50,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-03-17T04:02:14Z",
   "contributors_count": 6,
-  "open_issues_count": 113,
+  "open_issues_count": 114,
   "release_cadence_days": 36,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -80,7 +80,7 @@
     "date": "2026-03-17T04:25:41Z",
     "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
   },
-  "last_updated": "2026-08-07T12:48:45.152Z",
+  "last_updated": "2026-08-08T00:42:54.947Z",
   "model_support": {
     "providers": [
       "anthropic",
