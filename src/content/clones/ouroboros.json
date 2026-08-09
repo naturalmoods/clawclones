@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-modifying AI agent that rewrites its own mind and evolves autonomously with a constitution and persistent identity. Ships as a native desktop app with local model support, layered safety, and a community skills marketplace.",
   "health_status": "healthy",
-  "github_stars": 1004,
+  "github_stars": 1013,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -48,9 +48,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-07T09:30:59Z",
-  "contributors_count": 22,
-  "open_issues_count": 58,
+  "last_commit_at": "2026-08-08T18:46:43Z",
+  "contributors_count": 24,
+  "open_issues_count": 80,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -77,11 +77,11 @@
   },
   "overview_markdown": "Ouroboros is a self-modifying AI agent implemented in Python that autonomously writes and rewrites its own code, maintaining a persistent identity and background consciousness across restarts. Unlike a typical coding assistant, it operates as a native desktop application for macOS, Linux, and Windows with a web UI, local model support, and a layered safety system combining a hardcoded sandbox with policy-based LLM safety checks.\n\nArchitecturally, Ouroboros emphasizes autonomous evolution: it includes a constitution, reusable live cards for background tasks, and an idempotent scratch workspace for safe file operations. Recent commits show robust engineering for benchmark harnesses (GAIA, SWE-Pro) with bwrap filesystem isolation to prevent answer leakage, cost hard-stop budgets, and protected-artifact policies. A companion skills marketplace, OuroborosHub, allows community distribution of transport bridges and tools.\n\nCompared to OpenClaw—a personal AI assistant focused on multi-channel communication and ease of use—Ouroboros leans into self-evolution and local-first desktop autonomy. It lacks OpenClaw’s broad chat-platform integrations and enterprise multi-user story, but offers stronger experimental isolation for agent safety and a unique self-improving codebase.",
   "latest_release": {
-    "version": "v6.90.1",
-    "date": "2026-08-07T10:11:13Z",
-    "url": "https://github.com/razzant/ouroboros/releases/tag/v6.90.1"
+    "version": "v6.92.1",
+    "date": "2026-08-08T19:27:38Z",
+    "url": "https://github.com/razzant/ouroboros/releases/tag/v6.92.1"
   },
-  "last_updated": "2026-08-08T12:34:48.040Z",
+  "last_updated": "2026-08-09T00:45:56.526Z",
   "model_support": {
     "providers": [
       "anthropic",

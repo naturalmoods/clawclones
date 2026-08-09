@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "ZeroClaw is a Rust-written, fully autonomous AI assistant runtime that boots in milliseconds with a tiny memory footprint, giving users complete ownership of their agent, data, and hardware. Its vibrant development pace shows constant channel i18n, identity binding, and quickstart auth improvements, signaling a mature yet lean OpenClaw alternative.",
   "health_status": "healthy",
-  "github_stars": 32530,
+  "github_stars": 32538,
   "metrics": {
     "boot_time_ms": 5,
     "memory_mb": 1.5,
@@ -82,7 +82,7 @@
     "date": "2026-08-02T21:00:00Z",
     "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.4"
   },
-  "last_updated": "2026-08-08T12:34:53.553Z",
+  "last_updated": "2026-08-09T00:46:02.945Z",
   "model_support": {
     "providers": [
       "anthropic",

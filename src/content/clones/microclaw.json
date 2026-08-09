@@ -49,10 +49,10 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-04T16:34:35Z",
+  "last_commit_at": "2026-08-08T17:21:42Z",
   "contributors_count": 25,
-  "open_issues_count": 1,
-  "release_cadence_days": 7,
+  "open_issues_count": 0,
+  "release_cadence_days": 6,
   "operational_risk": "medium",
   "openclaw_advantages": [
     "Rust-native performance and low memory footprint (micro-optimized)",
@@ -77,11 +77,11 @@
   },
   "overview_markdown": "MicroClaw is a Rust-built, channel-agnostic agent runtime that unifies Telegram, Discord, Slack, Feishu, IRC, and web interfaces under a single persistent agent loop. It emphasizes agentic execution with multi-step tool use, sub-agents, scheduled tasks, skills, and MCP support, while providing a local web control plane for governance and task management.\n\nRecent development focuses heavily on reliability and security: completion contracts verify task outcomes with machine-checkable evidence, a tool-policy gate enforces pre-call restrictions, ClawHub installs are tree-pinned and injection-scanned, and provider circuit breakers with fallback models improve resilience. The architecture includes delivery outboxes for guaranteed message delivery, interrupted-turn recovery, and supervised background loops with restart backoff.\n\nCompared to OpenClaw, MicroClaw prioritizes a lightweight Rust footprint (micro-optimized memory/boot) and operational rigor, but trades off a smaller community, less mobile-native support, and a rapidly changing main branch that recommends using the stable branch for production.",
   "latest_release": {
-    "version": "v0.3.5",
-    "date": "2026-08-01T21:26:19Z",
-    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.3.5"
+    "version": "v0.4.0",
+    "date": "2026-08-08T18:19:01Z",
+    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.4.0"
   },
-  "last_updated": "2026-08-08T12:34:38.886Z",
+  "last_updated": "2026-08-09T00:45:45.005Z",
   "model_support": {
     "providers": [
       "anthropic",

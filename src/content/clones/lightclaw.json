@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A single-binary Rust AI assistant inspired by OpenClaw, prioritizing near-instant startup and ~15MB footprint for low-power devices. It brings agentic tools, local memory, and chat integrations without heavy runtimes.",
   "health_status": "healthy",
-  "github_stars": 225,
+  "github_stars": 224,
   "metrics": {
     "boot_time_ms": 20,
     "memory_mb": 15,
@@ -82,7 +82,7 @@
     "date": "2026-02-18T23:15:03Z",
     "url": "https://github.com/enzofrasca/lightclaw/releases/tag/v0.2.1"
   },
-  "last_updated": "2026-08-08T12:34:54.245Z",
+  "last_updated": "2026-08-09T00:46:03.798Z",
   "model_support": {
     "providers": [
       "mistral",
