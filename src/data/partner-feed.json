@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 956697,
-    "total_stars_formatted": "956.7k",
+    "total_stars": 957229,
+    "total_stars_formatted": "957.2k",
     "most_active_language": "Python",
     "language_breakdown": {
       "TypeScript": 10,
@@ -24,15 +24,15 @@
     "avg_sentiment": 38,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 385701,
+      "stars": 385760,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 227935,
-    "stars_growth_7d": 3217,
+    "stars": 228217,
+    "stars_growth_7d": 3499,
     "language": "Python",
     "sentiment": 85,
     "vibe_summary": "Self-improving agent that spins up skills from its own experience and meets you on every chat app from one gateway. Explosive growth and weekly releases make it the most talked-about personal AI companion of 2026.",
@@ -47,16 +47,16 @@
     "url": "https://clawclones.com/compare/hermes-agent-vs-nullclaw"
   },
   "updated_at": "2026-08-10T23:59:59.999Z",
-  "generated_at": "2026-08-10T00:48:23.530Z",
+  "generated_at": "2026-08-10T12:54:32.579Z",
   "freshness": {
     "updated_at": "2026-08-10T23:59:59.999Z",
-    "generated_at": "2026-08-10T00:48:23.530Z",
+    "generated_at": "2026-08-10T12:54:32.579Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-08-10T00:48:22.759Z",
+        "updated_at": "2026-08-10T12:54:32.218Z",
         "age_hours": 0
       },
       "history": {
