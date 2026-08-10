@@ -47,14 +47,14 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:32.980Z",
-    "last_reviewed_at": "2026-08-09T06:36:26.077Z",
+    "last_reviewed_at": "2026-08-10T07:07:02.166Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "",
-  "last_updated": "2026-08-09T06:36:26.077Z",
+  "last_updated": "2026-08-10T07:07:02.166Z",
   "watchlist_added": "2026-03-13T00:10:01.123Z",
   "promotion_status": "observing"
 }
