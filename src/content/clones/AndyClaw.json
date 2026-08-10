@@ -51,7 +51,7 @@
   "plugin_ecosystem": "emerging",
   "license_type": "GPL-3.0",
   "last_commit_at": "2026-07-27T16:16:53Z",
-  "contributors_count": 4,
+  "contributors_count": 3,
   "open_issues_count": 15,
   "release_cadence_days": 3,
   "operational_risk": "high",
@@ -85,7 +85,7 @@
     "date": "2026-03-16T18:15:59Z",
     "url": "https://github.com/EthereumPhone/AndyClaw/releases/tag/v19"
   },
-  "last_updated": "2026-08-09T12:37:34.259Z",
+  "last_updated": "2026-08-10T00:48:04.189Z",
   "model_support": {
     "providers": [
       "anthropic",

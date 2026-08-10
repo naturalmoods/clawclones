@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "AstrBot is a Python-based AI agent framework with broad IM platform support and a plugin ecosystem, positioning itself as a direct OpenClaw alternative. Recent commits show active development with a focus on stateless API providers, knowledge base retrieval quality, and shell tool refinements.",
   "health_status": "healthy",
-  "github_stars": 38860,
+  "github_stars": 38878,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 75,
@@ -53,7 +53,7 @@
   "license_type": "AGPL-3.0",
   "last_commit_at": "2026-08-08T09:10:04Z",
   "contributors_count": 337,
-  "open_issues_count": 1368,
+  "open_issues_count": 1371,
   "release_cadence_days": 4,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -86,7 +86,7 @@
     "date": "2026-08-05T03:22:07Z",
     "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.27.2"
   },
-  "last_updated": "2026-08-09T12:37:33.475Z",
+  "last_updated": "2026-08-10T00:48:03.730Z",
   "model_support": {
     "providers": [
       "anthropic",
