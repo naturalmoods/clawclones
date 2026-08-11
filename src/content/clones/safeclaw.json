@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A zero-cost, LLM-optional OpenClaw alternative that uses ML intent detection for offline-first assistant tasks. It boasts minimal attack surface, deterministic output, and no mandatory API bills while retaining core features like TTS and research.",
   "health_status": "healthy",
-  "github_stars": 281,
+  "github_stars": 280,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 60,
@@ -81,7 +81,7 @@
     "date": "2026-05-09T13:40:00Z",
     "url": "https://github.com/princezuda/safestclaw/releases/tag/4.2.4"
   },
-  "last_updated": "2026-08-10T12:54:23.284Z",
+  "last_updated": "2026-08-11T00:47:31.495Z",
   "model_support": {
     "providers": [
       "google"
