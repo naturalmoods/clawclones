@@ -219,13 +219,13 @@
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "nanobot/providers/azure_openai_provider.py",
+        "path": "nanobot/webui/settings_system.py",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "nanobot/agent/tools/web.py",
+        "path": "nanobot/providers/azure_openai_provider.py",
         "strength": "strong"
       },
       {
@@ -244,8 +244,8 @@
     "default_model_last_touched": "2026-07-29T13:37:11Z",
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
-    "files_examined": 61,
-    "detected_at": "2026-08-09T04:55:30.293Z",
+    "files_examined": 66,
+    "detected_at": "2026-08-11T04:58:11.657Z",
     "detection_version": "1"
   }
 }

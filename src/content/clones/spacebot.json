@@ -95,57 +95,50 @@
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "claude-sonnet-4",
-      "provider": "anthropic",
-      "path": "interface/src/components/settings/constants.ts",
-      "line": "defaultModel: \"openrouter/anthropic/claude-sonnet-4\",",
-      "strength": "strong"
+      "model": "gpt-5.3-codex",
+      "provider": "openai",
+      "path": "src/llm/routing.rs",
+      "line": "\"The model `gpt-5.3-codex` does not exist or you do not have access to it.\"",
+      "strength": "weak"
     },
     "default_models": [
       {
+        "model": "gpt-5.3-codex",
+        "provider": "openai",
+        "path": "src/llm/routing.rs",
+        "line": "\"The model `gpt-5.3-codex` does not exist or you do not have access to it.\"",
+        "strength": "weak"
+      },
+      {
+        "model": "claude-sonnet-9",
+        "provider": "anthropic",
+        "path": "src/llm/routing.rs",
+        "line": "\"not_found_error: model: claude-sonnet-9\"",
+        "strength": "weak"
+      },
+      {
         "model": "claude-sonnet-4",
         "provider": "anthropic",
-        "path": "interface/src/components/settings/constants.ts",
-        "line": "defaultModel: \"openrouter/anthropic/claude-sonnet-4\",",
-        "strength": "strong"
+        "path": "src/agent/status.rs",
+        "line": "channel_model: \"anthropic/claude-sonnet-4\".into(),",
+        "strength": "weak"
       },
       {
-        "model": "claude-sonnet-4.5",
+        "model": "claude-haiku-35",
         "provider": "anthropic",
-        "path": "interface/src/components/settings/constants.ts",
-        "line": "defaultModel: \"kilo/anthropic/claude-sonnet-4.5\",",
-        "strength": "strong"
+        "path": "src/agent/status.rs",
+        "line": "worker_model: \"anthropic/claude-haiku-35\".into(),",
+        "strength": "weak"
       },
       {
-        "model": "kimi-k2.5",
-        "provider": "moonshot",
-        "path": "interface/src/components/settings/constants.ts",
-        "line": "defaultModel: \"opencode-zen/kimi-k2.5\",",
-        "strength": "strong"
-      },
-      {
-        "model": "gpt-4.1",
-        "provider": "openai",
-        "path": "interface/src/components/settings/constants.ts",
-        "line": "defaultModel: \"openai/gpt-4.1\",",
-        "strength": "strong"
-      },
-      {
-        "model": "glm-4-plus",
-        "provider": "zhipu",
-        "path": "interface/src/components/settings/constants.ts",
-        "line": "defaultModel: \"zhipu/glm-4-plus\",",
-        "strength": "strong"
-      },
-      {
-        "model": "llama-3.3-70b-versatile",
-        "provider": null,
-        "path": "interface/src/components/settings/constants.ts",
-        "line": "defaultModel: \"groq/llama-3.3-70b-versatile\",",
-        "strength": "strong"
+        "model": "claude-opus-4",
+        "provider": "anthropic",
+        "path": "src/agent/status.rs",
+        "line": "channel_model: \"anthropic/claude-opus-4\".into(),",
+        "strength": "weak"
       }
     ],
-    "default_model_ambiguous": true,
+    "default_model_ambiguous": false,
     "evidence": [
       {
         "kind": "adapter_file",
@@ -168,19 +161,19 @@
       {
         "kind": "endpoint",
         "value": "openai.azure.com",
-        "path": "interface/src/routes/Settings.tsx",
+        "path": "src/cli/provider.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "src/cli/provider.rs",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "configurable base URL",
         "path": "interface/src/routes/Settings.tsx",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "configurable base URL",
-        "path": "src/llm/anthropic/cache.rs",
         "strength": "strong"
       },
       {
@@ -196,11 +189,11 @@
         "strength": "weak"
       }
     ],
-    "default_model_last_touched": "2026-04-08T19:14:39Z",
-    "default_model_released_at": "2025-05-22",
+    "default_model_last_touched": "2026-08-10T01:45:32Z",
+    "default_model_released_at": "2026-02-24",
     "default_model_date_source": "catalogue",
-    "files_examined": 62,
-    "detected_at": "2026-08-09T04:58:10.660Z",
+    "files_examined": 72,
+    "detected_at": "2026-08-11T05:01:09.672Z",
     "detection_version": "1"
   }
 }
