@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "Lilium AI: The ultimate personal AI agent framework for autonomous computer control. Featuring browser automation, shell execution, and multi-channel integration (WeChat/Telegram/Discord).",
   "health_status": "warning",
-  "github_stars": 95,
+  "github_stars": 96,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:30.495Z",
-    "last_reviewed_at": "2026-08-11T06:45:08.008Z",
+    "last_reviewed_at": "2026-08-12T07:05:42.759Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,7 +55,7 @@
   },
   "overview_markdown": "",
   "latest_release": null,
-  "last_updated": "2026-08-11T06:45:08.008Z",
+  "last_updated": "2026-08-12T07:05:42.759Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }
