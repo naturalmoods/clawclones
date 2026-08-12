@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A hardened Rust rewrite of OpenClaw that prioritizes security defaults and signed WASM plugins. It positions itself as the 'hard shell' alternative for users wary of the January 2026 OpenClaw disclosures.",
   "health_status": "healthy",
-  "github_stars": 46,
+  "github_stars": 47,
   "metrics": {
     "boot_time_ms": 30,
     "memory_mb": 15,
@@ -81,7 +81,7 @@
     "date": "2026-05-01T22:18:48Z",
     "url": "https://github.com/puremachinery/carapace/releases/tag/v0.8.0"
   },
-  "last_updated": "2026-08-12T00:55:18.392Z",
+  "last_updated": "2026-08-12T12:55:23.763Z",
   "model_support": {
     "providers": [
       "anthropic",

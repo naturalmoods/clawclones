@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "An ultra-lightweight (~4K lines) Python AI agent framework from HKU that packs WebUI, MCP, multi-agent workflows, and memory into a single self-hosted binary. It positions itself as a dramatically leaner OpenClaw alternative with a focus on readability and fast local iteration.",
   "health_status": "healthy",
-  "github_stars": 46859,
+  "github_stars": 46887,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 60,
@@ -51,9 +51,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-11T15:12:46Z",
+  "last_commit_at": "2026-08-12T11:54:02Z",
   "contributors_count": 419,
-  "open_issues_count": 701,
+  "open_issues_count": 706,
   "release_cadence_days": 15,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -86,7 +86,7 @@
     "date": "2026-07-25T08:08:47Z",
     "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0"
   },
-  "last_updated": "2026-08-12T00:55:05.509Z",
+  "last_updated": "2026-08-12T12:55:05.621Z",
   "model_support": {
     "providers": [
       "anthropic",
