@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "AionUi is a feature-packed, Electron-based desktop cowork app that wraps 20+ CLI coding agents (including OpenClaw) in a unified GUI with multi-agent orchestration, remote access, and 24/7 automation. It's aggressively iterating with near-daily releases, a strong plugin/skills ecosystem, and a growing contributor community fueled by partnership perks.",
   "health_status": "healthy",
-  "github_stars": 31857,
+  "github_stars": 31879,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -50,9 +50,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-11T11:33:32Z",
+  "last_commit_at": "2026-08-11T12:50:07Z",
   "contributors_count": 111,
-  "open_issues_count": 771,
+  "open_issues_count": 774,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -85,7 +85,7 @@
     "date": "2026-08-10T13:46:26Z",
     "url": "https://github.com/iOfficeAI/AionUi/releases/tag/v2.1.53"
   },
-  "last_updated": "2026-08-11T12:49:44.595Z",
+  "last_updated": "2026-08-12T00:55:05.971Z",
   "model_support": {
     "providers": [
       "anthropic",
