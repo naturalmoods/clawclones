@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A Dockerized full-Linux-desktop agent framework that gives AI a real GUI, browser with DOM annotation, and live document cowork instead of just chat. Mature, plugin-rich, and actively maintained with a polished launcher experience.",
   "health_status": "healthy",
-  "github_stars": 18848,
+  "github_stars": 18851,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 80,
@@ -51,10 +51,10 @@
   "multi_user": false,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-08-12T03:49:25Z",
-  "contributors_count": 58,
-  "open_issues_count": 157,
-  "release_cadence_days": 6,
+  "last_commit_at": "2026-08-12T12:51:19Z",
+  "contributors_count": 62,
+  "open_issues_count": 156,
+  "release_cadence_days": 5,
   "operational_risk": "medium",
   "openclaw_advantages": [
     "Full Linux desktop with GUI app control — OpenClaw is CLI/chat-focused",
@@ -82,11 +82,11 @@
   },
   "overview_markdown": "Agent Zero is an open-source AI agent framework that takes a fundamentally different approach from chat-centric assistants: it provisions a full Dockerized Linux desktop environment (XFCE) where the agent can interact with real GUI applications, terminals, file systems, and browsers. The framework is built in Python and orchestrated through Docker, making it portable across macOS, Linux, and Windows via the A0 Launcher desktop app. Its core differentiator is the **browser DOM annotation** system, which lets users click page elements and convert them into structured instructions (inspect, change, lift, review) — bridging the gap between visual web interaction and programmatic agent control.\n\nThe architecture is organized around **Projects** that isolate files, secrets, memories, repositories, and model-preset choices. A **Plugin Hub** with 100+ community extensions provides extension points for tools, skills, and integrations. The framework supports **multi-agent cooperation** where a primary agent can delegate research, coding, analysis, or review tasks to focused sub-agents. A **host-machine bridge** (A0 CLI) allows the containerized agent to work in real local repositories, blurring the line between sandboxed and host environments.\n\nCompared to OpenClaw, Agent Zero trades multi-channel messaging breadth for depth in desktop and browser automation. Where OpenClaw excels at being a personal assistant across WhatsApp, Telegram, Discord, and other channels, Agent Zero excels at being a power-user workstation agent that can drive Blender, edit spreadsheets, browse the web with visual context, and collaborate on documents in real time. The recent v2.8 release and active commit history (icon unification, drag-and-drop file browser, native Responses tooling, provider routing fixes) indicate a mature, actively maintained project with a clear product vision.",
   "latest_release": {
-    "version": "v2.8",
-    "date": "2026-08-01T15:50:00Z",
-    "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.8"
+    "version": "v2.9",
+    "date": "2026-08-12T13:58:33Z",
+    "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.9"
   },
-  "last_updated": "2026-08-12T12:55:01.512Z",
+  "last_updated": "2026-08-13T00:56:36.546Z",
   "model_support": {
     "providers": [
       "anthropic",
