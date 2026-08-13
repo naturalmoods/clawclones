@@ -244,8 +244,8 @@
     "default_model_last_touched": "2026-07-29T13:37:11Z",
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
-    "files_examined": 66,
-    "detected_at": "2026-08-11T04:58:11.657Z",
+    "files_examined": 72,
+    "detected_at": "2026-08-13T05:28:48.428Z",
     "detection_version": "1"
   }
 }

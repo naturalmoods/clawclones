@@ -269,11 +269,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-08-08T12:28:43Z",
+    "default_model_last_touched": "2026-08-12T10:54:11Z",
     "default_model_released_at": "2025-06-17",
     "default_model_date_source": "catalogue",
     "files_examined": 141,
-    "detected_at": "2026-08-11T04:59:09.314Z",
+    "detected_at": "2026-08-13T05:31:21.889Z",
     "detection_version": "1"
   }
 }
