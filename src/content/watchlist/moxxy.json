@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:22.265Z",
-    "last_reviewed_at": "2026-08-12T07:05:48.776Z",
+    "last_reviewed_at": "2026-08-13T07:09:32.825Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,11 +55,11 @@
   },
   "overview_markdown": "",
   "latest_release": {
-    "version": "@moxxy/plugin-tts-openai@0.37.0",
-    "date": "2026-08-10T17:02:22Z",
-    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-tts-openai%400.37.0"
+    "version": "@moxxy/plugin-provider-google@0.37.2",
+    "date": "2026-08-12T14:48:55Z",
+    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-provider-google%400.37.2"
   },
-  "last_updated": "2026-08-12T07:05:48.776Z",
+  "last_updated": "2026-08-13T07:09:32.825Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }

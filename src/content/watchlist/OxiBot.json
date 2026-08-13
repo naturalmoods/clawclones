@@ -3,7 +3,7 @@
   "name": "OxiBot",
   "language": "Rust",
   "vibe_summary": " 🦀 Secure, fast and Ultra-lightweight personal AI assistant in Rust. Alternative to OpenClaw",
-  "health_status": "warning",
+  "health_status": "abandoned",
   "github_stars": 4,
   "metrics": {
     "boot_time_ms": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:28.879Z",
-    "last_reviewed_at": "2026-08-12T07:05:44.576Z",
+    "last_reviewed_at": "2026-08-13T07:09:28.151Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,7 +55,7 @@
   },
   "overview_markdown": "",
   "latest_release": null,
-  "last_updated": "2026-08-12T07:05:44.576Z",
+  "last_updated": "2026-08-13T07:09:28.151Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }
