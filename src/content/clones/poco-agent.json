@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "Poco wraps a Claude Code–based agent in a polished web UI with sandboxed execution and team channels. It leans into collaboration and IM integrations while keeping one-click Docker self-hosting.",
   "health_status": "healthy",
-  "github_stars": 1347,
+  "github_stars": 1348,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -81,7 +81,7 @@
     "date": "2026-06-18T02:32:30Z",
     "url": "https://github.com/poco-ai/poco-claw/releases/tag/0.5.7"
   },
-  "last_updated": "2026-08-13T12:56:04.328Z",
+  "last_updated": "2026-08-14T00:56:04.247Z",
   "model_support": {
     "providers": [
       "anthropic",

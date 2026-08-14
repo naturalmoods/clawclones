@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-09T02:29:09Z",
   "contributors_count": 25,
-  "open_issues_count": 0,
+  "open_issues_count": 1,
   "release_cadence_days": 6,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -81,7 +81,7 @@
     "date": "2026-08-08T18:19:01Z",
     "url": "https://github.com/microclaw/microclaw/releases/tag/v0.4.0"
   },
-  "last_updated": "2026-08-13T12:55:55.060Z",
+  "last_updated": "2026-08-14T00:55:57.438Z",
   "model_support": {
     "providers": [
       "anthropic",

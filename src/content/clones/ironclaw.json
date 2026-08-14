@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A Rust rewrite of OpenClaw engineered for hardcore security with WASM sandboxing and capability-based permissions. The 'Reborn' runtime migration is active, showing a privacy-first agent OS with a passionate NEAR-aligned community.",
   "health_status": "healthy",
-  "github_stars": 12605,
+  "github_stars": 12608,
   "metrics": {
     "boot_time_ms": 30,
     "memory_mb": 15,
@@ -49,10 +49,10 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-13T12:34:10Z",
+  "last_commit_at": "2026-08-13T22:05:44Z",
   "contributors_count": 119,
-  "open_issues_count": 1482,
-  "release_cadence_days": 10,
+  "open_issues_count": 1507,
+  "release_cadence_days": 9,
   "operational_risk": "low",
   "openclaw_advantages": [
     "Rust memory safety with WASM sandbox isolation",
@@ -76,11 +76,11 @@
   },
   "overview_markdown": "IronClaw is an Agent OS written in Rust by NEAR AI, positioned as a security-hardened alternative to OpenClaw. Its architecture emphasizes privacy and extensibility through WASM sandbox isolation, capability-based permission models, and prompt-injection defenses, as noted in external summaries. The project is undergoing a significant transition with the 'Reborn' standalone runtime (on the `reborn-integration` branch) that introduces a separate `ironclaw-reborn` binary, isolated state roots, and CLI-native model route configuration.\n\nRecent commit activity shows heavy investment in test coverage, CI stability, and migration of core commands (`doctor`, `status`, `config`) to the Reborn framework, indicating a healthy, fast-moving codebase. Features include multi-provider LLM routing (OpenAI, local near.ai endpoints), Slack/Telegram integrations, and a skill/extension system. Compared to OpenClaw, IronClaw trades a larger plug-and-play ecosystem for stronger isolation guarantees and a memory-safe Rust foundation, targeting users who prioritize local-first operation and adversarial robustness.",
   "latest_release": {
-    "version": "ironclaw-v1.1.0",
-    "date": "2026-08-06T08:39:11Z",
-    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.1.0"
+    "version": "ironclaw-v1.2.0",
+    "date": "2026-08-13T23:30:51Z",
+    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.2.0"
   },
-  "last_updated": "2026-08-13T12:55:56.815Z",
+  "last_updated": "2026-08-14T00:55:58.737Z",
   "model_support": {
     "providers": [
       "anthropic",
