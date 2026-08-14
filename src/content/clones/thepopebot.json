@@ -4,7 +4,7 @@
   "language": "JavaScript",
   "vibe_summary": "Unifies chat, live coding workspaces, and background agent jobs in a self-hosted Docker-backed brain that works with any LLM or coding agent. Recent commits show active hardening of config caching and Telegram webhook flexibility.",
   "health_status": "healthy",
-  "github_stars": 1851,
+  "github_stars": 1852,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 80,
@@ -82,7 +82,7 @@
     "date": "2026-05-13T20:49:05Z",
     "url": "https://github.com/stephengpope/thepopebot/releases/tag/v1.2.82"
   },
-  "last_updated": "2026-08-14T00:56:09.523Z",
+  "last_updated": "2026-08-14T12:52:23.622Z",
   "model_support": {
     "providers": [
       "anthropic",

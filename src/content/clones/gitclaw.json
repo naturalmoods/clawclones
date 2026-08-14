@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-09T16:09:41Z",
   "contributors_count": 8,
-  "open_issues_count": 48,
+  "open_issues_count": 49,
   "release_cadence_days": 18,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -82,7 +82,7 @@
     "date": "2026-08-09T16:27:01Z",
     "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.1.0"
   },
-  "last_updated": "2026-08-14T00:56:02.001Z",
+  "last_updated": "2026-08-14T12:52:09.710Z",
   "model_support": {
     "providers": [
       "anthropic",
