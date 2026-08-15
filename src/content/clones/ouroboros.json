@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-modifying AI agent that rewrites its own mind and evolves autonomously with a constitution and persistent identity. Ships as a native desktop app with local model support, layered safety, and a community skills marketplace.",
   "health_status": "healthy",
-  "github_stars": 1150,
+  "github_stars": 1154,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -81,7 +81,7 @@
     "date": "2026-08-12T22:09:39Z",
     "url": "https://github.com/razzant/ouroboros/releases/tag/v6.100.0"
   },
-  "last_updated": "2026-08-14T12:52:20.144Z",
+  "last_updated": "2026-08-15T00:32:50.780Z",
   "model_support": {
     "providers": [
       "anthropic",

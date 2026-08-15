@@ -82,7 +82,7 @@
     "date": "2026-08-09T16:27:01Z",
     "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.1.0"
   },
-  "last_updated": "2026-08-14T12:52:09.710Z",
+  "last_updated": "2026-08-15T00:32:45.383Z",
   "model_support": {
     "providers": [
       "anthropic",

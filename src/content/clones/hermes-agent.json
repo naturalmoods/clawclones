@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "Self-improving agent that spins up skills from its own experience and meets you on every chat app from one gateway. Explosive growth and weekly releases make it the most talked-about personal AI companion of 2026.",
   "health_status": "healthy",
-  "github_stars": 230445,
+  "github_stars": 230642,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-14T11:26:26Z",
-  "contributors_count": 2717,
-  "open_issues_count": 32015,
+  "last_commit_at": "2026-08-15T00:07:02Z",
+  "contributors_count": 2736,
+  "open_issues_count": 32262,
   "release_cadence_days": 8,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -81,7 +81,7 @@
     "date": "2026-08-13T20:37:37Z",
     "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.13"
   },
-  "last_updated": "2026-08-14T12:52:07.648Z",
+  "last_updated": "2026-08-15T00:32:44.132Z",
   "model_support": {
     "providers": [
       "anthropic",

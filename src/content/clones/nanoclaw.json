@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-14T08:50:58Z",
   "contributors_count": 150,
-  "open_issues_count": 877,
+  "open_issues_count": 882,
   "release_cadence_days": 18,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -82,7 +82,7 @@
     "date": "2026-08-13T20:43:27Z",
     "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2.2.0"
   },
-  "last_updated": "2026-08-14T12:52:19.191Z",
+  "last_updated": "2026-08-15T00:32:50.294Z",
   "model_support": {
     "providers": [
       "anthropic"

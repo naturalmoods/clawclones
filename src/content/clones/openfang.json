@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "OpenFang is a Rust-built Agent OS shipping as a single 32MB binary with autonomous 'Hands' that run scheduled tasks without prompting. It's pre-1.0 but battle-tested with 2,696+ passing tests and active security audits, aiming to be an autonomous agent platform rather than a chatbot.",
   "health_status": "healthy",
-  "github_stars": 18113,
+  "github_stars": 18115,
   "metrics": {
     "boot_time_ms": 30,
     "memory_mb": 15,
@@ -51,7 +51,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-05-12T18:42:08Z",
   "contributors_count": 76,
-  "open_issues_count": 118,
+  "open_issues_count": 115,
   "release_cadence_days": 3,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -81,7 +81,7 @@
     "date": "2026-05-12T18:42:42Z",
     "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.9"
   },
-  "last_updated": "2026-08-14T12:52:20.998Z",
+  "last_updated": "2026-08-15T00:32:51.312Z",
   "model_support": {
     "providers": [
       "anthropic",
