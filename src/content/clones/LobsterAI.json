@@ -181,11 +181,11 @@
         "strength": "weak"
       }
     ],
-    "default_model_last_touched": "2026-08-10T14:08:03Z",
+    "default_model_last_touched": "2026-08-14T09:08:49Z",
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 100,
-    "detected_at": "2026-08-13T05:32:02.758Z",
+    "detected_at": "2026-08-15T04:21:59.805Z",
     "detection_version": "1"
   }
 }
