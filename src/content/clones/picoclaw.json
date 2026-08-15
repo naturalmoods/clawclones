@@ -4,7 +4,7 @@
   "language": "Go",
   "vibe_summary": "A from-scratch Go rewrite of the personal AI assistant concept, boasting <10MB RAM footprint on $10 hardware. Recently shipped v0.3.1 with active AI-assisted development and multi-arch edge focus.",
   "health_status": "healthy",
-  "github_stars": 29856,
+  "github_stars": 29858,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.9,
@@ -81,7 +81,7 @@
     "date": "2026-07-03T07:37:06Z",
     "url": "https://github.com/sipeed/picoclaw/releases/tag/v0.3.1"
   },
-  "last_updated": "2026-08-15T00:32:52.492Z",
+  "last_updated": "2026-08-15T12:25:01.849Z",
   "model_support": {
     "providers": [
       "anthropic",

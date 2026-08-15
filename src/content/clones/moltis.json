@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A secure, auditable Rust-native personal agent server that positions itself as a hardened alternative to OpenClaw. Ships as one binary with sandboxed execution, multi-channel messaging, and built-in voice/MCP tooling.",
   "health_status": "healthy",
-  "github_stars": 2818,
+  "github_stars": 2820,
   "metrics": {
     "boot_time_ms": 30,
     "memory_mb": 15,
@@ -52,7 +52,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-08T19:02:44Z",
   "contributors_count": 57,
-  "open_issues_count": 105,
+  "open_issues_count": 109,
   "release_cadence_days": 7,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -82,7 +82,7 @@
     "date": "2026-07-23T21:24:17Z",
     "url": "https://github.com/moltis-org/moltis/releases/tag/20260723.03"
   },
-  "last_updated": "2026-08-15T00:32:41.794Z",
+  "last_updated": "2026-08-15T12:24:46.978Z",
   "model_support": {
     "providers": [
       "anthropic",
