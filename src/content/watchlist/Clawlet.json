@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:20.786Z",
-    "last_reviewed_at": "2026-08-15T06:18:13.545Z",
+    "last_reviewed_at": "2026-08-16T06:20:32.491Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-02-22T05:50:06Z",
     "url": "https://github.com/Kxrbx/Clawlet/releases/tag/v.0.2.5"
   },
-  "last_updated": "2026-08-15T06:18:13.545Z",
+  "last_updated": "2026-08-16T06:20:32.491Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
