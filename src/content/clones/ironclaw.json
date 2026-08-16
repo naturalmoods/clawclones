@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A Rust rewrite of OpenClaw engineered for hardcore security with WASM sandboxing and capability-based permissions. The 'Reborn' runtime migration is active, showing a privacy-first agent OS with a passionate NEAR-aligned community.",
   "health_status": "healthy",
-  "github_stars": 12602,
+  "github_stars": 12604,
   "metrics": {
     "boot_time_ms": 30,
     "memory_mb": 15,
@@ -51,7 +51,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-08-15T12:55:38Z",
   "contributors_count": 119,
-  "open_issues_count": 1496,
+  "open_issues_count": 1499,
   "release_cadence_days": 9,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -80,7 +80,7 @@
     "date": "2026-08-13T23:30:51Z",
     "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.2.0"
   },
-  "last_updated": "2026-08-16T00:33:20.978Z",
+  "last_updated": "2026-08-16T12:26:07.929Z",
   "model_support": {
     "providers": [
       "anthropic",

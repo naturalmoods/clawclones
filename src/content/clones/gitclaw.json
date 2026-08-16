@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A git-native AI agent framework where identity, rules, memory, and tools are version-controlled files. Recently refactored to split voice into an optional package, shrinking core for sandboxed CI use.",
   "health_status": "healthy",
-  "github_stars": 648,
+  "github_stars": 649,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -82,7 +82,7 @@
     "date": "2026-08-09T16:27:01Z",
     "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.1.0"
   },
-  "last_updated": "2026-08-16T00:33:24.304Z",
+  "last_updated": "2026-08-16T12:26:11.224Z",
   "model_support": {
     "providers": [
       "anthropic",

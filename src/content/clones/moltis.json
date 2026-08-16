@@ -50,9 +50,9 @@
   "multi_user": null,
   "plugin_ecosystem": "limited",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-16T00:32:55Z",
-  "contributors_count": 57,
-  "open_issues_count": 105,
+  "last_commit_at": "2026-08-16T00:59:28Z",
+  "contributors_count": 60,
+  "open_issues_count": 95,
   "release_cadence_days": 7,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -82,7 +82,7 @@
     "date": "2026-07-23T21:24:17Z",
     "url": "https://github.com/moltis-org/moltis/releases/tag/20260723.03"
   },
-  "last_updated": "2026-08-16T00:33:20.432Z",
+  "last_updated": "2026-08-16T12:26:07.391Z",
   "model_support": {
     "providers": [
       "anthropic",
