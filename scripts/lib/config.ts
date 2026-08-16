@@ -24,5 +24,5 @@ export const AI_PROVIDER: AIProvider = (process.env.AI_PROVIDER as AIProvider) |
 
 export const OPENROUTER_MODEL =
     process.env.OPENROUTER_MODEL || '~deepseek/deepseek-v4-flash-latest';
-export const NVIDIA_MODEL = process.env.NVIDIA_MODEL || 'meta/llama-3.3-70b-instruct';
+export const NVIDIA_MODEL = process.env.NVIDIA_MODEL || 'z-ai/glm-5.2';
 export const NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1";
