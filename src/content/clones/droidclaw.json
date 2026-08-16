@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "Turns old Android phones into LLM-powered agents that tap and type through apps via ADB, no API keys required. Recently shipped v0.5.3 with fixed device-web session sync and QStash scheduling.",
   "health_status": "healthy",
-  "github_stars": 1562,
+  "github_stars": 1560,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -80,7 +80,7 @@
     "date": "2026-02-25T14:48:02Z",
     "url": "https://github.com/unitedbyai/droidclaw/releases/tag/v0.5.3"
   },
-  "last_updated": "2026-08-15T12:25:06.209Z",
+  "last_updated": "2026-08-16T00:33:33.674Z",
   "model_support": {
     "providers": [
       "bedrock",

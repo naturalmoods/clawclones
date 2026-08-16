@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 961323,
-    "total_stars_formatted": "961.3k",
+    "total_stars": 961673,
+    "total_stars_formatted": "961.7k",
     "most_active_language": "Python",
     "language_breakdown": {
       "TypeScript": 10,
@@ -24,15 +24,15 @@
     "avg_sentiment": 38,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 386360,
+      "stars": 386404,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 230866,
-    "stars_growth_7d": 3567,
+    "stars": 231080,
+    "stars_growth_7d": 3331,
     "language": "Python",
     "sentiment": 85,
     "vibe_summary": "Self-improving agent that spins up skills from its own experience and meets you on every chat app from one gateway. Explosive growth and weekly releases make it the most talked-about personal AI companion of 2026.",
@@ -46,25 +46,25 @@
     "visits": 4,
     "url": "https://clawclones.com/compare/ironclaw-vs-openclaw"
   },
-  "updated_at": "2026-08-15T23:59:59.999Z",
-  "generated_at": "2026-08-15T12:25:09.691Z",
+  "updated_at": "2026-08-16T23:59:59.999Z",
+  "generated_at": "2026-08-16T00:33:36.622Z",
   "freshness": {
-    "updated_at": "2026-08-15T23:59:59.999Z",
-    "generated_at": "2026-08-15T12:25:09.691Z",
+    "updated_at": "2026-08-16T23:59:59.999Z",
+    "generated_at": "2026-08-16T00:33:36.622Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-08-15T12:25:09.308Z",
+        "updated_at": "2026-08-16T00:33:35.856Z",
         "age_hours": 0
       },
       "history": {
-        "updated_at": "2026-08-15T23:59:59.999Z",
+        "updated_at": "2026-08-16T23:59:59.999Z",
         "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-08-15T23:59:59.999Z",
+        "updated_at": "2026-08-16T23:59:59.999Z",
         "age_hours": 0
       }
     }

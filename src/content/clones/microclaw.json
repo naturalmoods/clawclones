@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A Rust-native, channel-agnostic agent runtime focused on rock-solid reliability and verified task completion. Aggressive active development with strong emphasis on sandboxing, governance, and operational resilience.",
   "health_status": "healthy",
-  "github_stars": 730,
+  "github_stars": 731,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.5,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-14T02:26:58Z",
+  "last_commit_at": "2026-08-15T20:53:50Z",
   "contributors_count": 26,
-  "open_issues_count": 0,
+  "open_issues_count": 1,
   "release_cadence_days": 6,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -81,7 +81,7 @@
     "date": "2026-08-08T18:19:01Z",
     "url": "https://github.com/microclaw/microclaw/releases/tag/v0.4.0"
   },
-  "last_updated": "2026-08-15T12:24:46.001Z",
+  "last_updated": "2026-08-16T00:33:19.688Z",
   "model_support": {
     "providers": [
       "anthropic",
