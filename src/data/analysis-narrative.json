@@ -1,17 +1,18 @@
 {
-  "generated_at": "2026-08-02",
-  "data_as_of": "2026-08-02",
-  "model": "deepseek-ai/deepseek-v4-pro",
+  "generated_at": "2026-08-16",
+  "data_as_of": "2026-08-16",
+  "model": "z-ai/glm-5.2",
   "tldr": [
-    "QwenPaw added 4,669 stars this week, the largest absolute gain across all 43 tracked projects.",
-    "Ouroboros grew 21.1% week-over-week, the fastest relative mover in the ecosystem.",
-    "14 projects were flat or declining, signaling that attention is concentrating among fewer names.",
-    "Edge & minimalist runtimes now account for 20 projects with a median boot time of just 22.5 ms.",
-    "34 projects are local-first, and 30 support cloud-optional operation, giving teams real deployment choice."
+    "Hermes Agent pulled most of this cycle's new stars, but OpenClaw still holds the largest total.",
+    "Twelve projects were flat or declining, so growth is concentrated in a few names.",
+    "Edge and minimalist runtimes are the largest cohort and carry the highest median security score.",
+    "Compiled runtimes sandbox better than scripting ones, which matters if you run untrusted tool calls.",
+    "Most projects are local-first with optional cloud, and MIT remains the most common license."
   ],
   "sections": {
-    "movement": "Star movement this week was dominated by a handful of projects pulling far ahead. QwenPaw and Hermes Agent together accounted for more than 8,000 new stars, while the median project saw far smaller gains. Fourteen projects were flat or declining, which suggests that developer attention is consolidating around a narrower set of tools. For someone choosing a framework today, the widening gap between the fastest-growing projects and the rest means community momentum and ecosystem support are increasingly uneven across the landscape.",
-    "security": "The security picture splits cleanly along runtime lines. Compiled runtimes, 19 projects, average a security score of 79 with stronger sandboxing and lower shell risk. Scripting runtimes, 24 projects, average 68 with weaker sandboxing and higher shell risk. Eight projects still allow unsupervised shell access, which is a concrete operational risk for anyone running agent code in production. The practical cost of choosing a scripting runtime is not just a lower score but a measurably wider attack surface that teams must compensate for with external controls.",
-    "posture": "Local-first operation is the norm, with 34 of 43 projects supporting it, and 30 projects offer cloud-optional deployment. Only 10 projects require a cloud connection, which means most tools in this space respect data locality and offline capability. Licensing is heavily permissive: MIT leads with 20 projects, Apache-2.0 covers another 10, and copyleft licenses like AGPL-3.0 and GPL-3.0 appear in just 3 projects combined. Ten projects have unknown licenses, which is a due-diligence gap worth closing before integration."
+    "movement": "Most of this cycle's star growth went to Hermes Agent, with OpenClaw still holding the largest total count by a wide margin. Twelve projects were flat or declining, so attention is concentrating rather than lifting the whole field. Smaller projects like Ouroboros and Carapace moved fastest by percentage, which can signal niche adoption rather than broad momentum. If you are picking a tool with a community behind it, the gap between the top names and the long tail is widening.",
+    "architecture": "Edge and minimalist runtimes form the largest cohort at 20 projects, with low memory and fast boot times, and they carry the highest median security score. Team and multi-tenant options are fewer but suit collaborative setups where multi-user isolation matters. Full-runtime assistants sit between the two, offering broader capability at higher footprint. If you want something small and embeddable, the edge cohort is where to look; if you need multi-user support, the team cohort is thinner but purpose-built.",
+    "security": "Compiled runtimes average a higher security score than scripting runtimes, with better sandboxing and lower shell risk across the median. Scripting runtimes show higher shell risk and weaker sandboxing, which matters when agents execute tool calls without supervision. Nine projects still allow unsupervised shell access, so reviewing that capability before deployment is worthwhile. Hardened projects are a minority, so if runtime isolation is a hard requirement, the compiled cohort is the safer place to start.",
+    "posture": "Thirty-four of the tracked projects are local-first, and thirty make cloud optional, so most of the ecosystem works without external dependencies. Ten projects require cloud connectivity, which limits where they can be deployed. MIT is the most common license at twenty projects, followed by Apache-2.0, with a few copyleft options and ten under unknown terms. For developers who need self-hosted or air-gapped deployment, the majority of the field supports that posture without much friction."
   }
 }
