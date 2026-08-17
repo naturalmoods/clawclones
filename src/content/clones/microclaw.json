@@ -85,31 +85,22 @@
   "model_support": {
     "providers": [
       "anthropic",
-      "deepseek",
-      "ollama",
       "openai",
       "openai-compatible"
     ],
-    "provider_count": 3,
-    "local_capable": true,
+    "provider_count": 2,
+    "local_capable": false,
     "aggregator_capable": false,
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "gemini-2.5-pro",
-      "provider": "google",
-      "path": "src/config.rs",
-      "line": "default_model: gemini-2.5-pro",
+      "model": "claude-sonnet-4-5-20250929",
+      "provider": "anthropic",
+      "path": "microclaw.config.example.yaml",
+      "line": "#   - model: \"claude-sonnet-4-5-20250929\"",
       "strength": "strong"
     },
     "default_models": [
-      {
-        "model": "gemini-2.5-pro",
-        "provider": "google",
-        "path": "src/config.rs",
-        "line": "default_model: gemini-2.5-pro",
-        "strength": "strong"
-      },
       {
         "model": "claude-sonnet-4-5-20250929",
         "provider": "anthropic",
@@ -120,68 +111,51 @@
       {
         "model": "gpt-5.2",
         "provider": "openai",
-        "path": "src/chat_commands.rs",
-        "line": "default_model: Some(\"gpt-5.2\".to_string()),",
-        "strength": "strong"
-      },
-      {
-        "model": "glm-4.7-flash",
-        "provider": "zhipu",
-        "path": "src/chat_commands.rs",
-        "line": "default_model: \"@cf/zai-org/glm-4.7-flash\"",
-        "strength": "strong"
-      },
-      {
-        "model": "claude-haiku-4-5",
-        "provider": "anthropic",
-        "path": "src/config.rs",
-        "line": "let yaml = \"telegram_bot_token: tok\\nbot_username: bot\\napi_key: key\\naux_models:\\n  compaction: claude-haiku-4-5\\n  reflector: claude-haiku-4-5\\n\";",
+        "path": "src/llm/mod.rs",
+        "line": "config.model = \"gpt-5.2\".into();",
         "strength": "weak"
       },
       {
         "model": "gemini-2.5-flash",
         "provider": "google",
-        "path": "src/llm.rs",
+        "path": "src/llm/openai.rs",
         "line": "let mut body = json!({\"model\":\"gemini-2.5-flash\",\"messages\":[]});",
+        "strength": "weak"
+      },
+      {
+        "model": "qwen-plus",
+        "provider": "qwen",
+        "path": "src/llm/openai.rs",
+        "line": "let mut body = json!({\"model\":\"qwen-plus\",\"messages\":[]});",
+        "strength": "weak"
+      },
+      {
+        "model": "MiniMax-M2.5",
+        "provider": "minimax",
+        "path": "src/llm/openai.rs",
+        "line": "let mut body = json!({\"model\":\"MiniMax-M2.5\",\"messages\":[]});",
+        "strength": "weak"
+      },
+      {
+        "model": "gemini-3-flash-preview",
+        "provider": "google",
+        "path": "src/llm/openai.rs",
+        "line": "config.model = \"gemini-3-flash-preview\".into();",
         "strength": "weak"
       }
     ],
-    "default_model_ambiguous": true,
+    "default_model_ambiguous": false,
     "evidence": [
       {
-        "kind": "endpoint",
-        "value": "api.anthropic.com",
-        "path": "src/chat_commands.rs",
+        "kind": "adapter_file",
+        "value": "anthropic.rs",
+        "path": "src/llm/anthropic.rs",
         "strength": "strong"
       },
       {
         "kind": "endpoint",
         "value": "api.anthropic.com",
-        "path": "src/llm.rs",
-        "strength": "weak"
-      },
-      {
-        "kind": "endpoint",
-        "value": "api.deepseek.com",
-        "path": "src/chat_commands.rs",
-        "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "api.deepseek.com",
-        "path": "src/llm.rs",
-        "strength": "weak"
-      },
-      {
-        "kind": "endpoint",
-        "value": "11434",
-        "path": "src/config.rs",
-        "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "11434",
-        "path": "src/embedding.rs",
+        "path": "src/llm/anthropic.rs",
         "strength": "strong"
       },
       {
@@ -191,9 +165,9 @@
         "strength": "strong"
       },
       {
-        "kind": "env_key",
-        "value": "OPENAI_API_KEY",
-        "path": "src/config.rs",
+        "kind": "endpoint",
+        "value": "api.openai.com",
+        "path": "microclaw.config.example.yaml",
         "strength": "strong"
       },
       {
@@ -205,15 +179,15 @@
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "crates/microclaw-clawhub/src/client.rs",
+        "path": "web/src/lib/config-model.ts",
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-08-13T16:51:30Z",
-    "default_model_released_at": "2025-06-05",
-    "default_model_date_source": "catalogue",
-    "files_examined": 69,
-    "detected_at": "2026-08-15T04:21:19.110Z",
+    "default_model_last_touched": "2026-08-13T17:10:39Z",
+    "default_model_released_at": "2025-09-29",
+    "default_model_date_source": "model_id",
+    "files_examined": 33,
+    "detected_at": "2026-08-17T04:33:51.317Z",
     "detection_version": "1"
   }
 }

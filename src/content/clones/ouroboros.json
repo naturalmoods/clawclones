@@ -119,16 +119,16 @@
         "strength": "strong"
       },
       {
-        "kind": "env_key",
-        "value": "MINIMAX_API_KEY",
-        "path": "ouroboros/gateway/settings.py",
-        "strength": "strong"
-      },
-      {
         "kind": "endpoint",
         "value": "api.minimaxi.com",
         "path": "ouroboros/gateway/settings.py",
         "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "MINIMAX_API_KEY",
+        "path": "ouroboros/config.py",
+        "strength": "weak"
       },
       {
         "kind": "dependency",
@@ -143,15 +143,15 @@
         "strength": "strong"
       },
       {
-        "kind": "env_key",
-        "value": "configurable base URL",
-        "path": "web/modules/chat.js",
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "devtools/benchmarks/swe_bench_pro/e1v2/_run_settings.example.json",
         "strength": "strong"
       },
       {
         "kind": "prose",
         "value": "openai-compatible",
-        "path": "devtools/benchmarks/swe_bench_pro/e1v2/_run_settings.example.json",
+        "path": "web/modules/settings.js",
         "strength": "strong"
       },
       {
@@ -171,7 +171,7 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 20,
-    "detected_at": "2026-08-15T04:23:42.065Z",
+    "detected_at": "2026-08-17T04:38:11.095Z",
     "detection_version": "1"
   }
 }
