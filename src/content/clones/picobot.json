@@ -4,7 +4,7 @@
   "language": "Go",
   "vibe_summary": "A featherweight Go-based AI agent that mirrors OpenClaw's capabilities in a ~9MB single binary, booting instantly on cheap hardware like $5 VPS or Raspberry Pi. It strips away Python/Node bloat for extreme efficiency without sacrificing persistent memory and tool calling.",
   "health_status": "healthy",
-  "github_stars": 1308,
+  "github_stars": 1309,
   "metrics": {
     "boot_time_ms": 9,
     "memory_mb": 1.9,
@@ -82,7 +82,7 @@
     "date": "2026-03-18T18:34:38Z",
     "url": "https://github.com/louisho5/picobot/releases/tag/v0.2.0"
   },
-  "last_updated": "2026-08-16T12:26:05.568Z",
+  "last_updated": "2026-08-17T00:32:03.482Z",
   "model_support": {
     "providers": [
       "openai",

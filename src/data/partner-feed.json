@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 962001,
-    "total_stars_formatted": "962.0k",
+    "total_stars": 962292,
+    "total_stars_formatted": "962.3k",
     "most_active_language": "Python",
     "language_breakdown": {
       "TypeScript": 10,
@@ -24,20 +24,20 @@
     "avg_sentiment": 38,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 386430,
+      "stars": 386470,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 231289,
-    "stars_growth_7d": 3540,
+    "stars": 231500,
+    "stars_growth_7d": 3283,
     "language": "Python",
     "sentiment": 85,
     "vibe_summary": "Self-improving agent that spins up skills from its own experience and meets you on every chat app from one gateway. Explosive growth and weekly releases make it the most talked-about personal AI companion of 2026.",
     "health": "healthy",
-    "latest_version": "v2026.8.13",
+    "latest_version": "v2026.8.16",
     "url": "https://clawclones.com/clones/NousResearch/hermes-agent"
   },
   "hot_vs": {
@@ -46,26 +46,26 @@
     "visits": 4,
     "url": "https://clawclones.com/compare/ironclaw-vs-openclaw"
   },
-  "updated_at": "2026-08-16T23:59:59.999Z",
-  "generated_at": "2026-08-17T00:28:10.202Z",
+  "updated_at": "2026-08-17T23:59:59.999Z",
+  "generated_at": "2026-08-17T00:32:25.710Z",
   "freshness": {
-    "updated_at": "2026-08-16T23:59:59.999Z",
-    "generated_at": "2026-08-17T00:28:10.202Z",
-    "source_age_hours": 0.5,
+    "updated_at": "2026-08-17T23:59:59.999Z",
+    "generated_at": "2026-08-17T00:32:25.710Z",
+    "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-08-16T12:26:23.334Z",
-        "age_hours": 12
+        "updated_at": "2026-08-17T00:32:24.962Z",
+        "age_hours": 0
       },
       "history": {
-        "updated_at": "2026-08-16T23:59:59.999Z",
-        "age_hours": 0.5
+        "updated_at": "2026-08-17T23:59:59.999Z",
+        "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-08-16T23:59:59.999Z",
-        "age_hours": 0.5
+        "updated_at": "2026-08-17T23:59:59.999Z",
+        "age_hours": 0
       }
     }
   }
