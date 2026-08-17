@@ -86,7 +86,7 @@
     "date": "2026-05-28T20:05:30Z",
     "url": "https://github.com/5unnykum4r/grip-ai/releases/tag/v1.6.1"
   },
-  "last_updated": "2026-08-17T00:31:56.070Z",
+  "last_updated": "2026-08-17T12:30:59.593Z",
   "model_support": {
     "providers": [
       "litellm",
