@@ -47,25 +47,25 @@
     "url": "https://clawclones.com/compare/ironclaw-vs-openclaw"
   },
   "updated_at": "2026-08-16T23:59:59.999Z",
-  "generated_at": "2026-08-16T12:26:23.656Z",
+  "generated_at": "2026-08-17T00:28:10.202Z",
   "freshness": {
     "updated_at": "2026-08-16T23:59:59.999Z",
-    "generated_at": "2026-08-16T12:26:23.656Z",
-    "source_age_hours": 0,
+    "generated_at": "2026-08-17T00:28:10.202Z",
+    "source_age_hours": 0.5,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
         "updated_at": "2026-08-16T12:26:23.334Z",
-        "age_hours": 0
+        "age_hours": 12
       },
       "history": {
         "updated_at": "2026-08-16T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 0.5
       },
       "analytics": {
         "updated_at": "2026-08-16T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 0.5
       }
     }
   }
