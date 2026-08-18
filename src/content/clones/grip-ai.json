@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A Python-native OpenClaw alternative that bridges Claude Agent SDK with LiteLLM for 15+ providers, offering real cross-provider failover and a unified 31-tool surface. Actively maintained with 882 tests, mypy-clean code, and a pragmatic 'dual-engine' architecture that prioritizes reliability over novelty.",
   "health_status": "healthy",
-  "github_stars": 10,
+  "github_stars": 11,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 75,
@@ -86,7 +86,7 @@
     "date": "2026-05-28T20:05:30Z",
     "url": "https://github.com/5unnykum4r/grip-ai/releases/tag/v1.6.1"
   },
-  "last_updated": "2026-08-17T12:30:59.593Z",
+  "last_updated": "2026-08-18T00:31:32.554Z",
   "model_support": {
     "providers": [
       "litellm",

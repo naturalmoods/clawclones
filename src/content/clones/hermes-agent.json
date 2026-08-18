@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "Self-improving agent that spins up skills from its own experience and meets you on every chat app from one gateway. Explosive growth and weekly releases make it the most talked-about personal AI companion of 2026.",
   "health_status": "healthy",
-  "github_stars": 231792,
+  "github_stars": 232026,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -49,10 +49,10 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-17T12:11:44Z",
-  "contributors_count": 2882,
-  "open_issues_count": 32558,
-  "release_cadence_days": 8,
+  "last_commit_at": "2026-05-17T05:00:53Z",
+  "contributors_count": 2891,
+  "open_issues_count": 32733,
+  "release_cadence_days": 7,
   "operational_risk": "medium",
   "openclaw_advantages": [
     "Built-in self-improving learning loop with autonomous skill creation",
@@ -77,11 +77,11 @@
   },
   "overview_markdown": "Hermes Agent is a self-improving AI agent framework built by Nous Research that emphasizes continuous learning through a closed feedback loop. Its core architecture separates a terminal UI, a messaging gateway (supporting Telegram, Discord, Slack, WhatsApp, Signal, and CLI), and an agent conversation loop recently refactored from a 16k-line monolith into modular components under `agent/`. Unique features include autonomous skill creation after complex tasks, FTS5 session search with LLM summarization, and Honcho-based user modeling that deepens across sessions.\n\nUnlike OpenClaw, Hermes ships a built-in learning loop that curates memory and nudges itself to persist knowledge, plus compatibility with the agentskills.io open standard for portable skills. The project is highly active with frequent releases (v2026.7.7.2) and a large community, offering deployment flexibility from a $5 VPS to GPU clusters or serverless. While it requires Python and some setup, its `hermes setup` wizard and migration tool (`hermes claw migrate`) ease adoption for those coming from OpenClaw.",
   "latest_release": {
-    "version": "v2026.8.16",
-    "date": "2026-08-16T17:33:22Z",
-    "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16"
+    "version": "v2026.8.16.2",
+    "date": "2026-08-17T18:43:27Z",
+    "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.16.2"
   },
-  "last_updated": "2026-08-17T12:31:13.553Z",
+  "last_updated": "2026-08-18T00:31:45.956Z",
   "model_support": {
     "providers": [
       "anthropic",
