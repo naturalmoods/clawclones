@@ -54,7 +54,7 @@
   "last_commit_at": "2026-08-17T07:00:12Z",
   "contributors_count": 5,
   "open_issues_count": 0,
-  "release_cadence_days": 6,
+  "release_cadence_days": 7,
   "operational_risk": "medium",
   "openclaw_advantages": [
     "Native Kafka protocol support enables enterprise-grade distributed agent swarms out of the box",
@@ -86,7 +86,7 @@
     "date": "2026-06-17T15:05:13Z",
     "url": "https://github.com/KafClaw/KafClaw/releases/tag/v1.0.0"
   },
-  "last_updated": "2026-08-18T00:31:38.545Z",
+  "last_updated": "2026-08-18T12:33:11.836Z",
   "model_support": {
     "providers": [
       "google",

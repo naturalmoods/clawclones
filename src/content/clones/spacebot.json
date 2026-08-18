@@ -48,9 +48,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-08-15T09:27:58Z",
+  "last_commit_at": "2026-08-18T00:55:48Z",
   "contributors_count": 69,
-  "open_issues_count": 190,
+  "open_issues_count": 189,
   "release_cadence_days": 8,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -81,7 +81,7 @@
     "date": "2026-05-07T06:55:33Z",
     "url": "https://github.com/spacedriveapp/spacebot/releases/tag/v0.5.0"
   },
-  "last_updated": "2026-08-18T00:31:55.550Z",
+  "last_updated": "2026-08-18T12:33:27.402Z",
   "model_support": {
     "providers": [
       "anthropic",
