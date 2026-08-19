@@ -49,9 +49,9 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-09T16:09:41Z",
+  "last_commit_at": "2026-08-19T11:17:16Z",
   "contributors_count": 8,
-  "open_issues_count": 49,
+  "open_issues_count": 48,
   "release_cadence_days": 18,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -82,7 +82,7 @@
     "date": "2026-08-09T16:27:01Z",
     "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.1.0"
   },
-  "last_updated": "2026-08-19T00:32:32.002Z",
+  "last_updated": "2026-08-19T12:33:51.576Z",
   "model_support": {
     "providers": [
       "anthropic",

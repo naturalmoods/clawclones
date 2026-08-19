@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "Spacebot is an opinionated agent harness that splits monolithic LLM loops into specialized processes for true multi-user concurrency. Its typed graph memory in SQLite and automatic skill capture make it smarter the more teams use it.",
   "health_status": "healthy",
-  "github_stars": 2360,
+  "github_stars": 2361,
   "metrics": {
     "boot_time_ms": 30,
     "memory_mb": 15,
@@ -81,7 +81,7 @@
     "date": "2026-05-07T06:55:33Z",
     "url": "https://github.com/spacedriveapp/spacebot/releases/tag/v0.5.0"
   },
-  "last_updated": "2026-08-19T00:32:41.030Z",
+  "last_updated": "2026-08-19T12:34:01.971Z",
   "model_support": {
     "providers": [
       "anthropic",
