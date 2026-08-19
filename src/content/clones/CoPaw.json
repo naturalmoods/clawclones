@@ -88,7 +88,6 @@
   "last_updated": "2026-08-19T00:32:19.527Z",
   "model_support": {
     "providers": [
-      "anthropic",
       "azure-openai",
       "google",
       "litellm",
@@ -98,7 +97,7 @@
       "openai-compatible",
       "qwen"
     ],
-    "provider_count": 5,
+    "provider_count": 4,
     "local_capable": true,
     "aggregator_capable": true,
     "byo_endpoint": true,
@@ -117,57 +116,10 @@
         "path": "src/qwenpaw/providers/anthropic_provider.py",
         "line": "model = self.models[0].id if self.models else \"claude-opus-4-5\"",
         "strength": "weak"
-      },
-      {
-        "model": "deepseek-v3.2",
-        "provider": "deepseek",
-        "path": "src/qwenpaw/providers/capability_baseline.py",
-        "line": "model_id=\"deepseek-v3.2\",",
-        "strength": "weak"
-      },
-      {
-        "model": "glm-4.7",
-        "provider": "zhipu",
-        "path": "src/qwenpaw/providers/capability_baseline.py",
-        "line": "model_id=\"glm-4.7\",",
-        "strength": "weak"
-      },
-      {
-        "model": "MiniMax-M2.5",
-        "provider": "minimax",
-        "path": "src/qwenpaw/providers/capability_baseline.py",
-        "line": "model_id=\"MiniMax-M2.5\",",
-        "strength": "weak"
-      },
-      {
-        "model": "kimi-k2.5",
-        "provider": "moonshot",
-        "path": "src/qwenpaw/providers/capability_baseline.py",
-        "line": "model_id=\"kimi-k2.5\",",
-        "strength": "weak"
-      },
-      {
-        "model": "glm-5v-turbo",
-        "provider": "zhipu",
-        "path": "src/qwenpaw/providers/capability_baseline.py",
-        "line": "model_id=\"glm-5v-turbo\",",
-        "strength": "weak"
       }
     ],
     "default_model_ambiguous": false,
     "evidence": [
-      {
-        "kind": "env_key",
-        "value": "ANTHROPIC_MODEL",
-        "path": "src/qwenpaw/providers/capability_baseline.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "ANTHROPIC_MODEL",
-        "path": "src/qwenpaw/providers/provider_manager.py",
-        "strength": "weak"
-      },
       {
         "kind": "endpoint",
         "value": "openai.azure.com",
@@ -183,7 +135,7 @@
       {
         "kind": "env_key",
         "value": "GEMINI_MODEL",
-        "path": "src/qwenpaw/providers/provider_manager.py",
+        "path": "src/qwenpaw/providers/provider_catalog.py",
         "strength": "weak"
       },
       {
@@ -219,7 +171,7 @@
       {
         "kind": "env_key",
         "value": "OPENAI_MODEL",
-        "path": "src/qwenpaw/providers/provider_manager.py",
+        "path": "src/qwenpaw/providers/provider_catalog.py",
         "strength": "weak"
       },
       {
@@ -231,7 +183,7 @@
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "src/qwenpaw/providers/provider.py",
+        "path": "src/qwenpaw/providers/provider_manager_persistence.py",
         "strength": "strong"
       },
       {
@@ -247,11 +199,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-07-28T11:37:47Z",
+    "default_model_last_touched": "2026-08-18T08:47:41Z",
     "default_model_released_at": "2025-11-24",
     "default_model_date_source": "catalogue",
-    "files_examined": 111,
-    "detected_at": "2026-08-17T04:31:59.674Z",
+    "files_examined": 113,
+    "detected_at": "2026-08-19T04:27:02.216Z",
     "detection_version": "1"
   }
 }
