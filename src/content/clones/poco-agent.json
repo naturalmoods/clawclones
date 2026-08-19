@@ -50,7 +50,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-06T05:55:44Z",
   "contributors_count": 9,
-  "open_issues_count": 2,
+  "open_issues_count": 3,
   "release_cadence_days": 9,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -81,7 +81,7 @@
     "date": "2026-06-18T02:32:30Z",
     "url": "https://github.com/poco-ai/poco-claw/releases/tag/0.5.7"
   },
-  "last_updated": "2026-08-18T12:33:22.070Z",
+  "last_updated": "2026-08-19T00:32:35.186Z",
   "model_support": {
     "providers": [
       "anthropic",
