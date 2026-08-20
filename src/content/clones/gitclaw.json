@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A git-native AI agent framework where identity, rules, memory, and tools are version-controlled files. Recently refactored to split voice into an optional package, shrinking core for sandboxed CI use.",
   "health_status": "healthy",
-  "github_stars": 653,
+  "github_stars": 654,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -49,10 +49,10 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-19T11:17:16Z",
+  "last_commit_at": "2026-08-20T06:35:52Z",
   "contributors_count": 8,
   "open_issues_count": 48,
-  "release_cadence_days": 18,
+  "release_cadence_days": 19,
   "operational_risk": "medium",
   "openclaw_advantages": [
     "Agent config fully version-controlled in git (diff/branch personalities)",
@@ -78,11 +78,11 @@
   },
   "overview_markdown": "GitClaw (formerly GitAgent) is a universal git-native AI agent framework that treats the agent itself as a version-controlled repository. Core identity, rules, memory, tools, and skills are stored as files (`agent.yaml`, `SOUL.md`, `RULES.md`, `memory/`, `tools/`, `skills/`, `hooks/`), enabling developers to fork, branch, and diff agent personalities and behaviors using standard git workflows.\n\nThe architecture emphasizes modularity and supply-chain safety. Following version 2.0, the project split its voice UI into an optional `@open-gitagent/voice` package, reducing the core tarball by 52% and removing unused dependencies to pass strict sandbox scanners. The framework provides a CLI and SDK, supports multiple LLM providers (OpenAI, Gemini), declarative tools with image output, and lifecycle hooks (pre_query, post_tool_failure, file_changed).\n\nCompared to OpenClaw, GitClaw leans into developer-centric git workflows rather than broad OS/mobile integration. It offers strong version control of agent state but lacks native mobile clients and has a smaller community footprint. The slim install mode makes it suitable for CI environments, while the full install adds a browser-based voice UI.",
   "latest_release": {
-    "version": "v2.1.0",
-    "date": "2026-08-09T16:27:01Z",
-    "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.1.0"
+    "version": "v2.2.0",
+    "date": "2026-08-20T06:54:09Z",
+    "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.2.0"
   },
-  "last_updated": "2026-08-20T00:32:01.035Z",
+  "last_updated": "2026-08-20T12:35:14.563Z",
   "model_support": {
     "providers": [
       "anthropic",

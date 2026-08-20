@@ -49,8 +49,8 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-08-15T21:46:01Z",
-  "contributors_count": 102,
+  "last_commit_at": "2026-08-20T10:48:34Z",
+  "contributors_count": 103,
   "open_issues_count": 267,
   "release_cadence_days": 2,
   "operational_risk": "medium",
@@ -82,7 +82,7 @@
     "date": "2026-06-15T08:59:44Z",
     "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
   },
-  "last_updated": "2026-08-20T00:31:59.174Z",
+  "last_updated": "2026-08-20T12:35:12.621Z",
   "model_support": {
     "providers": [
       "anthropic",
