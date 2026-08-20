@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A multi-agent, multi-team orchestrator for solo founders, shipping a browser-based TinyOffice and 24/7 channel bots. Currently experimental but rapidly iterating with Claude-assisted commits.",
   "health_status": "healthy",
-  "github_stars": 3608,
+  "github_stars": 3607,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 80,
@@ -82,7 +82,7 @@
     "date": "2026-03-26T17:23:07Z",
     "url": "https://github.com/TinyAGI/tinyagi/releases/tag/v0.0.20"
   },
-  "last_updated": "2026-08-19T12:34:03.773Z",
+  "last_updated": "2026-08-20T00:32:09.615Z",
   "model_support": {
     "providers": [
       "anthropic",

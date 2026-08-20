@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A secure, auditable Rust-native personal agent server that positions itself as a hardened alternative to OpenClaw. Ships as one binary with sandboxed execution, multi-channel messaging, and built-in voice/MCP tooling.",
   "health_status": "healthy",
-  "github_stars": 2827,
+  "github_stars": 2828,
   "metrics": {
     "boot_time_ms": 30,
     "memory_mb": 15,
@@ -50,10 +50,10 @@
   "multi_user": null,
   "plugin_ecosystem": "limited",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-19T12:23:22Z",
+  "last_commit_at": "2026-08-19T14:02:59Z",
   "contributors_count": 64,
-  "open_issues_count": 83,
-  "release_cadence_days": 8,
+  "open_issues_count": 87,
+  "release_cadence_days": 4,
   "operational_risk": "low",
   "openclaw_advantages": [
     "Single Rust binary with no Node.js/runtime dependencies",
@@ -78,11 +78,11 @@
   },
   "overview_markdown": "Moltis is a secure persistent personal agent server written entirely in Rust, distributed as a single binary that runs on user-owned hardware such as Mac Mini, Raspberry Pi, or any server. Its architecture splits the agent runner and model interface into a ~7.5K-line core with providers adding ~19K more, organized as a 59-crate workspace of ~270K lines, making it independently auditable. Unsafe code is confined to FFI and precompiled runtime boundaries, not the core agent loop, and every command executes inside a sandboxed container rather than on the host.\n\nUnique features include built-in voice I/O, cross-session memory with automatic edit checkpoints, scheduling, and multi-channel connectivity (Telegram, WhatsApp, Discord, Teams, Signal) plus MCP servers and browser automation. The web UI provides managed deploy keys with host pinning, a live Tools inventory, and context-file threat scanning to prevent supply-chain risks. Unlike OpenClaw’s TypeScript + Swift/Kotlin companion app stack, Moltis deliberately avoids a plugin marketplace and Node.js runtime, emphasizing a minimal, hardened footprint.\n\nRecent commits show active maintenance with fixes for Telegram streaming, WhatsApp LID-native addressing, and continuous documentation improvements. The project explicitly compares itself to OpenClaw and Hermes Agent, positioning as a Rust-native, security-first alternative for self-hosters who value auditability and local-first operation.",
   "latest_release": {
-    "version": "20260818.08",
-    "date": "2026-08-18T23:38:50Z",
-    "url": "https://github.com/moltis-org/moltis/releases/tag/20260818.08"
+    "version": "20260818.10",
+    "date": "2026-08-19T14:02:38Z",
+    "url": "https://github.com/moltis-org/moltis/releases/tag/20260818.10"
   },
-  "last_updated": "2026-08-19T12:33:45.957Z",
+  "last_updated": "2026-08-20T00:31:57.320Z",
   "model_support": {
     "providers": [
       "anthropic",

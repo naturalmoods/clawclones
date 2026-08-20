@@ -49,9 +49,9 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-19T11:36:34Z",
+  "last_commit_at": "2026-08-20T00:15:57Z",
   "contributors_count": 119,
-  "open_issues_count": 1504,
+  "open_issues_count": 1507,
   "release_cadence_days": 3,
   "operational_risk": "low",
   "openclaw_advantages": [
@@ -76,11 +76,11 @@
   },
   "overview_markdown": "IronClaw is an Agent OS written in Rust by NEAR AI, positioned as a security-hardened alternative to OpenClaw. Its architecture emphasizes privacy and extensibility through WASM sandbox isolation, capability-based permission models, and prompt-injection defenses, as noted in external summaries. The project is undergoing a significant transition with the 'Reborn' standalone runtime (on the `reborn-integration` branch) that introduces a separate `ironclaw-reborn` binary, isolated state roots, and CLI-native model route configuration.\n\nRecent commit activity shows heavy investment in test coverage, CI stability, and migration of core commands (`doctor`, `status`, `config`) to the Reborn framework, indicating a healthy, fast-moving codebase. Features include multi-provider LLM routing (OpenAI, local near.ai endpoints), Slack/Telegram integrations, and a skill/extension system. Compared to OpenClaw, IronClaw trades a larger plug-and-play ecosystem for stronger isolation guarantees and a memory-safe Rust foundation, targeting users who prioritize local-first operation and adversarial robustness.",
   "latest_release": {
-    "version": "ironclaw-v1.2.0",
-    "date": "2026-08-13T23:30:51Z",
-    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.2.0"
+    "version": "ironclaw-v1.3.0",
+    "date": "2026-08-19T23:17:37Z",
+    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.3.0"
   },
-  "last_updated": "2026-08-19T12:33:46.719Z",
+  "last_updated": "2026-08-20T00:31:57.869Z",
   "model_support": {
     "providers": [
       "anthropic",
