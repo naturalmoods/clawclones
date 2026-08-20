@@ -4,7 +4,7 @@
   "language": "C",
   "vibe_summary": "subzeroclaw - a new project under observation.",
   "health_status": "healthy",
-  "github_stars": 127,
+  "github_stars": 129,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:21.252Z",
-    "last_reviewed_at": "2026-08-19T06:23:27.241Z",
+    "last_reviewed_at": "2026-08-20T06:24:56.701Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,7 +55,7 @@
   },
   "overview_markdown": "",
   "latest_release": null,
-  "last_updated": "2026-08-19T06:23:27.241Z",
+  "last_updated": "2026-08-20T06:24:56.701Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
