@@ -196,15 +196,15 @@
         "strength": "strong"
       },
       {
-        "kind": "dependency",
-        "value": "ollama",
-        "path": "crates/robot-kit/Cargo.toml",
-        "strength": "strong"
-      },
-      {
         "kind": "adapter_file",
         "value": "ollama.rs",
         "path": "crates/zeroclaw-providers/src/ollama.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "dev/config.template.toml",
         "strength": "strong"
       },
       {
@@ -253,8 +253,8 @@
     "default_model_last_touched": "2026-08-17T22:36:09Z",
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 104,
-    "detected_at": "2026-08-19T04:32:22.567Z",
+    "files_examined": 103,
+    "detected_at": "2026-08-21T04:33:52.907Z",
     "detection_version": "1"
   }
 }

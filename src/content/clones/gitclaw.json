@@ -87,11 +87,12 @@
     "providers": [
       "anthropic",
       "google",
+      "ollama",
       "openai",
       "openai-compatible"
     ],
     "provider_count": 3,
-    "local_capable": false,
+    "local_capable": true,
     "aggregator_capable": false,
     "byo_endpoint": true,
     "provider_lock": null,
@@ -130,14 +131,14 @@
       {
         "kind": "env_key",
         "value": "ANTHROPIC_API_KEY",
-        "path": "install.sh",
+        "path": "rust/gitagent-rs/src/pi/provider.rs",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "ANTHROPIC_API_KEY",
-        "path": "src/index.ts",
-        "strength": "weak"
+        "path": "install.sh",
+        "strength": "strong"
       },
       {
         "kind": "env_key",
@@ -152,15 +153,27 @@
         "strength": "weak"
       },
       {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "rust/gitagent-rs/src/pi/provider.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "rust/gitagent-rs/src/pi/provider.rs",
+        "strength": "strong"
+      },
+      {
         "kind": "env_key",
         "value": "OPENAI_API_KEY",
         "path": "install.sh",
         "strength": "strong"
       },
       {
-        "kind": "env_key",
-        "value": "OPENAI_API_KEY",
-        "path": "src/loader.ts",
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "rust/gitagent-rs/src/pi/provider.rs",
         "strength": "strong"
       },
       {
@@ -168,19 +181,13 @@
         "value": "openai-compatible",
         "path": "src/loader.ts",
         "strength": "strong"
-      },
-      {
-        "kind": "prose",
-        "value": "openai-compatible",
-        "path": "README.md",
-        "strength": "weak"
       }
     ],
-    "default_model_last_touched": "2026-07-24T13:19:26Z",
+    "default_model_last_touched": "2026-08-19T11:17:16Z",
     "default_model_released_at": "2024-07-18",
     "default_model_date_source": "catalogue",
-    "files_examined": 53,
-    "detected_at": "2026-08-19T04:30:01.074Z",
+    "files_examined": 57,
+    "detected_at": "2026-08-21T04:31:34.125Z",
     "detection_version": "1"
   }
 }
