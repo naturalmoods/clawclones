@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-modifying AI agent that rewrites its own mind and evolves autonomously with a constitution and persistent identity. Ships as a native desktop app with local model support, layered safety, and a community skills marketplace.",
   "health_status": "healthy",
-  "github_stars": 1195,
+  "github_stars": 1198,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -50,7 +50,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-18T17:13:07Z",
   "contributors_count": 29,
-  "open_issues_count": 100,
+  "open_issues_count": 98,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -81,7 +81,7 @@
     "date": "2026-08-18T19:48:04Z",
     "url": "https://github.com/razzant/ouroboros/releases/tag/v6.105.1"
   },
-  "last_updated": "2026-08-20T12:35:20.860Z",
+  "last_updated": "2026-08-21T00:34:18.170Z",
   "model_support": {
     "providers": [
       "anthropic",
