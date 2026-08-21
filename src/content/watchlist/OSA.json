@@ -4,7 +4,7 @@
   "language": "Elixir",
   "vibe_summary": "OSA: the Optimal System Agent. One AI that maximizes signal, eliminates noise, and finds the optimal path — across code, work, and life. Elixir/OTP. Runs locally. Open-source OpenClaw alternative.",
   "health_status": "healthy",
-  "github_stars": 44,
+  "github_stars": 46,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:26.370Z",
-    "last_reviewed_at": "2026-08-20T06:24:59.667Z",
+    "last_reviewed_at": "2026-08-21T06:25:37.736Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,11 +55,11 @@
   },
   "overview_markdown": "",
   "latest_release": {
-    "version": "v1.0.121",
-    "date": "2026-08-19T05:45:46Z",
-    "url": "https://github.com/Miosa-osa/OSA/releases/tag/v1.0.121"
+    "version": "v1.0.122",
+    "date": "2026-08-20T23:18:54Z",
+    "url": "https://github.com/Miosa-osa/OSA/releases/tag/v1.0.122"
   },
-  "last_updated": "2026-08-20T06:24:59.667Z",
+  "last_updated": "2026-08-21T06:25:37.736Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }

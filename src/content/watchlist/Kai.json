@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:24.813Z",
-    "last_reviewed_at": "2026-08-20T06:25:02.078Z",
+    "last_reviewed_at": "2026-08-21T06:25:40.577Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-08-02T19:58:03Z",
     "url": "https://github.com/SimonSchubert/Kai/releases/tag/v3.0.0"
   },
-  "last_updated": "2026-08-20T06:25:02.078Z",
+  "last_updated": "2026-08-21T06:25:40.577Z",
   "watchlist_added": "2026-03-06T05:16:19.597Z",
   "promotion_status": "observing"
 }
