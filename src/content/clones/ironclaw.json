@@ -49,7 +49,7 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-21T21:26:50Z",
+  "last_commit_at": "2026-08-22T10:20:54Z",
   "contributors_count": 119,
   "open_issues_count": 1523,
   "release_cadence_days": 3,
@@ -80,7 +80,7 @@
     "date": "2026-08-19T23:17:37Z",
     "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.3.0"
   },
-  "last_updated": "2026-08-22T00:31:31.575Z",
+  "last_updated": "2026-08-22T12:25:39.791Z",
   "model_support": {
     "providers": [
       "anthropic",
