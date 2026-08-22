@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:21.775Z",
-    "last_reviewed_at": "2026-08-21T06:25:30.688Z",
+    "last_reviewed_at": "2026-08-22T06:19:47.108Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-08-03T16:52:43Z",
     "url": "https://github.com/crystal-autobot/autobot/releases/tag/v0.7.1"
   },
-  "last_updated": "2026-08-21T06:25:30.688Z",
+  "last_updated": "2026-08-22T06:19:47.108Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
