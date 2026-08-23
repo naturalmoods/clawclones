@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "AutoClaw is a hyper-lightweight AI agent designed to live inside Docker containers. Unlike heavy, GUI-dependent agents, AutoClaw is built for headless, massive-scale concurrency.",
   "health_status": "warning",
-  "github_stars": 262,
+  "github_stars": 263,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:32.428Z",
-    "last_reviewed_at": "2026-08-22T06:19:53.994Z",
+    "last_reviewed_at": "2026-08-23T06:21:26.653Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,7 +55,7 @@
   },
   "overview_markdown": "",
   "latest_release": null,
-  "last_updated": "2026-08-22T06:19:53.994Z",
+  "last_updated": "2026-08-23T06:21:26.653Z",
   "watchlist_added": "2026-03-12T19:50:19.124Z",
   "promotion_status": "observing"
 }

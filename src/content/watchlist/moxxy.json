@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:22.265Z",
-    "last_reviewed_at": "2026-08-22T06:19:51.822Z",
+    "last_reviewed_at": "2026-08-23T06:21:24.142Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,11 +55,11 @@
   },
   "overview_markdown": "",
   "latest_release": {
-    "version": "@moxxy/plugin-provider-google@0.37.2",
-    "date": "2026-08-12T14:48:55Z",
-    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-provider-google%400.37.2"
+    "version": "@moxxy/plugin-stt-whisper-codex@0.38.0",
+    "date": "2026-08-22T06:26:02Z",
+    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-stt-whisper-codex%400.38.0"
   },
-  "last_updated": "2026-08-22T06:19:51.822Z",
+  "last_updated": "2026-08-23T06:21:24.142Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
