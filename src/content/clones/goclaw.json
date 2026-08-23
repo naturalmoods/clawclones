@@ -4,7 +4,7 @@
   "language": "Go",
   "vibe_summary": "A production-tested, multi-tenant AI agent gateway rebuilt from OpenClaw in Go, emphasizing safety and native concurrency. Ships as a single binary with PostgreSQL-backed isolation for deploying agent teams at scale.",
   "health_status": "healthy",
-  "github_stars": 3551,
+  "github_stars": 3553,
   "metrics": {
     "boot_time_ms": 25,
     "memory_mb": 18,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-08-20T10:48:34Z",
-  "contributors_count": 103,
-  "open_issues_count": 267,
+  "last_commit_at": "2026-08-22T13:57:05Z",
+  "contributors_count": 104,
+  "open_issues_count": 265,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -82,7 +82,7 @@
     "date": "2026-06-15T08:59:44Z",
     "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
   },
-  "last_updated": "2026-08-22T12:25:41.687Z",
+  "last_updated": "2026-08-23T00:34:38.585Z",
   "model_support": {
     "providers": [
       "anthropic",

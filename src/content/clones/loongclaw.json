@@ -77,7 +77,7 @@
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "LoongClaw (Loong) is a lightweight, Rust-based infrastructure for building vertical AI agents. It emphasizes a secure and controlled base that supports longer-horizon workflow construction, compound task execution, and closed-loop improvement, enabling human-AI collaboration in real-world scenarios.\n\nThe project is actively developed, with recent commits refactoring the tools module layout and introducing an observability-otel feature that gates OpenTelemetry behind a flag with no-op stubs when disabled. This allows developers to capture telemetry content in a feature-aware manner while keeping the core lean.\n\nUnlike OpenClaw, which appears as a turnkey personal AI assistant (likely TypeScript/Node based), LoongClaw targets developers who want to customize and extend agent behavior from a Rust foundation. Its MIT license and extensible architecture make it suitable for embedding into specialized vertical solutions, though it lacks a mature plugin ecosystem and official release.",
-  "last_updated": "2026-08-22T12:25:36.290Z",
+  "last_updated": "2026-08-23T00:34:34.384Z",
   "model_support": {
     "providers": [
       "anthropic",
