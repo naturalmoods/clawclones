@@ -50,9 +50,9 @@
   "multi_user": null,
   "plugin_ecosystem": "strong",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-23T00:34:19Z",
+  "last_commit_at": "2026-08-23T02:20:30Z",
   "contributors_count": 416,
-  "open_issues_count": 789,
+  "open_issues_count": 783,
   "release_cadence_days": 12,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -82,7 +82,7 @@
     "date": "2026-08-02T21:00:00Z",
     "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.4"
   },
-  "last_updated": "2026-08-23T00:34:52.626Z",
+  "last_updated": "2026-08-23T12:26:57.059Z",
   "model_support": {
     "providers": [
       "anthropic",
