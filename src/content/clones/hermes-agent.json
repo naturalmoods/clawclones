@@ -148,10 +148,10 @@
         "strength": "weak"
       },
       {
-        "model": "minimax-m2.7",
-        "provider": "minimax",
-        "path": "hermes_cli/model_switch.py",
-        "line": "model: \"minimax-m2.7\"",
+        "model": "deepseek-v4-flash-20260423",
+        "provider": "deepseek",
+        "path": "hermes_cli/model_normalize.py",
+        "line": "# ``provider: DeepSeek`` / ``model: deepseek-v4-flash-20260423`` when called",
         "strength": "weak"
       }
     ],
@@ -326,11 +326,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-07-14T18:39:24Z",
+    "default_model_last_touched": "2026-08-21T07:24:32Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 111,
-    "detected_at": "2026-08-21T04:31:13.478Z",
+    "files_examined": 97,
+    "detected_at": "2026-08-23T04:29:29.263Z",
     "detection_version": "1"
   }
 }
