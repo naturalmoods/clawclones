@@ -63,7 +63,7 @@ jobs:
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL || '~deepseek/deepseek-v4-flash-latest' }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
           AI_PROVIDER: ${{ vars.AI_PROVIDER || 'nvidia' }}
-          NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL || 'z-ai/glm-5.2' }}
+          NVIDIA_MODEL: ${{ vars.NVIDIA_MODEL || 'moonshotai/kimi-k3' }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
           TARGET_REPOS: ${{ steps.promoted.outputs.target_repos }}
