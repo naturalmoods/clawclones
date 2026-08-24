@@ -2,16 +2,16 @@
   "id": "zofrasca/lightclaw",
   "name": "LightClaw",
   "language": "Rust",
-  "vibe_summary": "A single-binary Rust AI assistant inspired by OpenClaw, prioritizing near-instant startup and ~15MB footprint for low-power devices. It brings agentic tools, local memory, and chat integrations without heavy runtimes.",
+  "vibe_summary": "A single-binary Rust reimagining of OpenClaw with near-instant startup and a ~15MB footprint. It targets users who want agentic tooling, memory, and Telegram/Discord integration without a heavy runtime.",
   "health_status": "healthy",
   "github_stars": 223,
   "metrics": {
-    "boot_time_ms": 20,
+    "boot_time_ms": 25,
     "memory_mb": 15,
-    "security_score": 70
+    "security_score": 62
   },
   "radar_chart": {
-    "sandboxing": 5,
+    "sandboxing": 4,
     "api_security": 6,
     "network_isolation": 4,
     "telemetry_safety": 8,
@@ -19,23 +19,23 @@
   },
   "tags": [
     "rust",
-    "local-first",
     "single-binary",
-    "ai-assistant",
-    "openclaw-alternative"
+    "local-first",
+    "telegram",
+    "lightweight"
   ],
-  "community_sentiment": 0,
+  "community_sentiment": 55,
   "reddit_mentions": 0,
-  "web_mentions": 0,
+  "web_mentions": 7,
   "best_for": [
-    "Low-power ARM devices (Raspberry Pi)",
-    "Users wanting a lightweight OpenClaw alternative",
-    "Self-hosted Telegram/Discord bots"
+    "Users wanting a minimal single-binary OpenClaw alternative",
+    "Raspberry Pi and low-resource ARM deployments",
+    "Telegram/Discord-native personal assistants"
   ],
   "avoid_if": [
-    "Windows-only users (less stable)",
-    "Those needing heavy enterprise features",
-    "Users requiring extensive plugin ecosystem"
+    "You need Windows as a primary platform",
+    "You require a mature plugin ecosystem",
+    "You want strong sandboxing around shell tools"
   ],
   "deployment_target": [
     "edge",
@@ -46,43 +46,14 @@
   "cloud_dependency": "optional",
   "setup_difficulty": "low",
   "privacy_posture": "strong",
-  "multi_user": null,
+  "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": null,
   "last_commit_at": "2026-02-18T23:05:01Z",
   "contributors_count": 2,
   "open_issues_count": 4,
   "release_cadence_days": 4,
-  "operational_risk": "low",
-  "openclaw_advantages": [
-    "Single ~15MB binary vs heavy OpenClaw runtime",
-    "Near-instant startup on ARM devices",
-    "Local-first memory without external DB",
-    "Simpler config for self-hosting"
-  ],
-  "openclaw_disadvantages": [
-    "Smaller community and plugin ecosystem",
-    "Less multi-channel support (no native mobile/canvas)",
-    "Windows support unstable",
-    "Fewer advanced features like Canvas/Control UI"
-  ],
-  "confidence_summary": "Evidence from README and commits shows active Rust project inspired by OpenClaw; community sentiment data is unrelated to this repo, creating uncertainty in popularity metrics.",
-  "evidence_confidence": 80,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:20:34.646Z",
-    "last_reviewed_at": "2026-08-02T15:53:42.793Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "LightClaw is a fast, local-first AI assistant implemented in Rust as a single ~15MB binary, explicitly inspired by OpenClaw and Nanobot. Its core architecture leverages the Rig framework for LLM orchestration and stores memories locally via SQLite with vector embeddings, eliminating the need for external vector databases. The project targets low-resource environments such as Raspberry Pi and ARM servers, providing near-instant startup and tool-capable agents with file, shell, web, and scheduling actions.\n\nUnique features include OpenClaw-style `SKILL.md` skill activation, built-in high-performance Telegram/Discord polling, and XDG base directory support for configuration portability. Recent commits show active maintenance: ARMv7 builds, shell guard refinements, and Firecrawl config options. Compared to OpenClaw, LightClaw trades a rich multi-channel UI and larger plugin ecosystem for a minimal footprint and operational simplicity, making it a pragmatic alternative for self-hosters on constrained hardware.",
-  "latest_release": {
-    "version": "v0.2.1",
-    "date": "2026-02-18T23:15:03Z",
-    "url": "https://github.com/enzofrasca/lightclaw/releases/tag/v0.2.1"
-  },
-  "last_updated": "2026-08-24T00:34:13.560Z",
+  "operational_risk": "medium",
   "model_support": {
     "providers": [
       "mistral",
@@ -179,7 +150,36 @@
     "default_model_released_at": "2025-11-24",
     "default_model_date_source": "catalogue",
     "files_examined": 35,
-    "detected_at": "2026-08-23T04:31:39.850Z",
+    "detected_at": "2026-08-24T12:23:08.874Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Single ~15MB binary with no runtime dependencies",
+    "Near-instant startup versus OpenClaw's heavier boot",
+    "Broad platform support including ARMv7 and Raspberry Pi",
+    "Local SQLite memory with no external vector DB"
+  ],
+  "openclaw_disadvantages": [
+    "Much smaller community and ecosystem",
+    "Windows support is unstable",
+    "Fewer integrations and skills than OpenClaw",
+    "Early-stage project with limited security hardening"
+  ],
+  "confidence_summary": "README and commit evidence are solid for architecture and footprint claims, but there is zero Reddit discussion and minimal independent web coverage, so community sentiment and long-term viability are uncertain.",
+  "evidence_confidence": 62,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T12:23:15.278Z",
+    "last_reviewed_at": "2026-08-24T12:23:15.278Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "LightClaw is a Rust-based, single-binary AI assistant inspired by OpenClaw and nanobot, built on the Rig framework. It ships as a ~15MB executable with no Python runtime or virtual environment, targeting near-instant startup and a low memory footprint across Linux (x86_64, ARM64, ARMv7) and macOS, with a less-stable Windows build.\n\nArchitecturally, it provides a tool-capable agent with file, shell, web, and scheduling actions, plus Telegram and Discord interfaces via high-performance polling. Its memory system combines short-term session history, periodic summarization, and semantic retrieval over locally stored vectors in SQLite, keeping data privacy-first with no external vector database. It also supports OpenClaw-style `SKILL.md` skills through an `activate_skill` mechanism, and recent commits show active work on XDG config support, ARMv7 builds, and shell guard refinements.\n\nCompared to OpenClaw, LightClaw trades ecosystem breadth and maturity for radical simplicity: one binary, one config file, and local-first storage. It is best suited for personal, single-user deployments on desktops or low-power edge devices rather than multi-tenant or heavily integrated setups.",
+  "latest_release": {
+    "version": "v0.2.1",
+    "date": "2026-02-18T23:15:03Z",
+    "url": "https://github.com/enzofrasca/lightclaw/releases/tag/v0.2.1"
+  },
+  "last_updated": "2026-08-24T12:23:15.278Z"
 }

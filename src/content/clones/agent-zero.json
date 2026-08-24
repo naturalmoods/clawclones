@@ -2,53 +2,53 @@
   "id": "agent0ai/agent-zero",
   "name": "Agent Zero",
   "language": "Python",
-  "vibe_summary": "A Dockerized full-Linux-desktop agent framework that gives AI a real GUI, browser with DOM annotation, and live document cowork instead of just chat. Mature, plugin-rich, and actively maintained with a polished launcher experience.",
+  "vibe_summary": "Agent Zero gives your agent a full Dockerized Linux desktop with GUI apps, browser DOM annotation, and live document coworking. It's a mature, heavily-featured open agent framework with a thriving plugin hub and multi-agent delegation.",
   "health_status": "healthy",
-  "github_stars": 18946,
+  "github_stars": 18950,
   "metrics": {
-    "boot_time_ms": 180,
-    "memory_mb": 80,
-    "security_score": 65
+    "boot_time_ms": 250,
+    "memory_mb": 90,
+    "security_score": 72
   },
   "radar_chart": {
     "sandboxing": 8,
-    "api_security": 6,
-    "network_isolation": 7,
-    "telemetry_safety": 5,
-    "shell_access_risk": 9
+    "api_security": 7,
+    "network_isolation": 6,
+    "telemetry_safety": 7,
+    "shell_access_risk": 8
   },
   "tags": [
-    "ai-agent",
-    "docker-desktop",
-    "browser-automation",
+    "agent-framework",
+    "docker",
+    "computer-use",
     "multi-agent",
-    "plugin-ecosystem"
+    "plugins"
   ],
-  "community_sentiment": 72,
-  "reddit_mentions": 14,
+  "community_sentiment": 62,
+  "reddit_mentions": 19,
   "web_mentions": 10,
   "best_for": [
-    "Teams needing GUI-driven agent workflows (browser, desktop apps, documents)",
-    "Developers who want a Docker-isolated agent with full Linux tooling",
-    "Users who value plugin extensibility and multi-agent delegation",
-    "Self-hosted setups on VPS, Raspberry Pi, or local workstations"
+    "Users who want an agent with a full GUI Linux desktop",
+    "Developers needing browser automation with DOM annotation",
+    "Teams wanting per-project isolation of files, secrets, and memory",
+    "Tinkerers who want 100+ community plugins"
   ],
   "avoid_if": [
-    "You need a lightweight, edge-deployable agent (Docker + desktop GUI is heavy)",
-    "You require strict shell isolation — the agent gets a full Linux terminal",
-    "You want a pure chat/API agent without desktop or browser overhead",
-    "You're on a platform without Docker support"
+    "You need a lightweight or edge-deployable agent",
+    "You cannot run Docker on your machine",
+    "You want minimal shell-access risk without hardening",
+    "You need a managed, zero-setup cloud service"
   ],
   "deployment_target": [
     "self-hosted",
-    "cloud",
-    "desktop"
+    "desktop",
+    "cloud"
   ],
   "local_first": true,
-  "cloud_dependency": "none",
+  "cloud_dependency": "optional",
   "setup_difficulty": "medium",
-  "privacy_posture": "mixed",
-  "multi_user": false,
+  "privacy_posture": "strong",
+  "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
   "last_commit_at": "2026-08-19T19:22:17Z",
@@ -56,37 +56,6 @@
   "open_issues_count": 162,
   "release_cadence_days": 6,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Full Linux desktop with GUI app control — OpenClaw is CLI/chat-focused",
-    "Built-in browser with DOM annotation for visual element inspection",
-    "Live document cowork (Markdown, spreadsheets, presentations) instead of chat-only output",
-    "100+ community plugin hub with published extension points",
-    "Docker-native sandboxing with isolated per-project files, secrets, and memory"
-  ],
-  "openclaw_disadvantages": [
-    "Heavier resource footprint — requires Docker and a full desktop environment",
-    "No multi-channel messaging support (WhatsApp, Telegram, Discord, etc.)",
-    "Smaller community and ecosystem compared to OpenClaw's 385k+ stars",
-    "Python runtime is slower and more memory-hungry than OpenClaw's optimized stack",
-    "Less mature multi-platform deployment story outside Docker"
-  ],
-  "confidence_summary": "High confidence based on detailed README, recent commit activity, and release history. Reddit and web search results contain mostly noise from unrelated topics, so community sentiment is estimated from the project's own visible engagement signals.",
-  "evidence_confidence": 82,
-  "content_ops": {
-    "last_generated_at": "2026-08-02T15:24:40.186Z",
-    "last_reviewed_at": "2026-08-02T15:24:40.186Z",
-    "refresh_mode": "rewrite",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "Agent Zero is an open-source AI agent framework that takes a fundamentally different approach from chat-centric assistants: it provisions a full Dockerized Linux desktop environment (XFCE) where the agent can interact with real GUI applications, terminals, file systems, and browsers. The framework is built in Python and orchestrated through Docker, making it portable across macOS, Linux, and Windows via the A0 Launcher desktop app. Its core differentiator is the **browser DOM annotation** system, which lets users click page elements and convert them into structured instructions (inspect, change, lift, review) — bridging the gap between visual web interaction and programmatic agent control.\n\nThe architecture is organized around **Projects** that isolate files, secrets, memories, repositories, and model-preset choices. A **Plugin Hub** with 100+ community extensions provides extension points for tools, skills, and integrations. The framework supports **multi-agent cooperation** where a primary agent can delegate research, coding, analysis, or review tasks to focused sub-agents. A **host-machine bridge** (A0 CLI) allows the containerized agent to work in real local repositories, blurring the line between sandboxed and host environments.\n\nCompared to OpenClaw, Agent Zero trades multi-channel messaging breadth for depth in desktop and browser automation. Where OpenClaw excels at being a personal assistant across WhatsApp, Telegram, Discord, and other channels, Agent Zero excels at being a power-user workstation agent that can drive Blender, edit spreadsheets, browse the web with visual context, and collaborate on documents in real time. The recent v2.8 release and active commit history (icon unification, drag-and-drop file browser, native Responses tooling, provider routing fixes) indicate a mature, actively maintained project with a clear product vision.",
-  "latest_release": {
-    "version": "v2.10",
-    "date": "2026-08-19T12:30:34Z",
-    "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.10"
-  },
-  "last_updated": "2026-08-24T00:33:47.226Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -210,7 +179,37 @@
     "default_model_released_at": "2026-04-24",
     "default_model_date_source": "catalogue",
     "files_examined": 70,
-    "detected_at": "2026-08-23T04:27:17.939Z",
+    "detected_at": "2026-08-24T10:19:47.767Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Full Dockerized Linux desktop with real GUI app control",
+    "Built-in browser DOM annotation for precise web automation",
+    "Large plugin hub with 100+ community extensions",
+    "Per-project isolation of memory, secrets, and model presets",
+    "Multi-agent subordinate delegation with persisted lifecycle"
+  ],
+  "openclaw_disadvantages": [
+    "Heavier footprint; requires Docker and significant resources",
+    "No native multi-channel messaging (WhatsApp/Telegram/Slack) like OpenClaw",
+    "Higher shell-access risk surface due to full computer use",
+    "Setup is more involved than single-binary alternatives"
+  ],
+  "confidence_summary": "Strong evidence from a detailed README, active recent commits, and a recent v2.10 release. Reddit matches are mostly unrelated noise, so community sentiment is inferred mainly from stars and project maturity rather than discussion quality.",
+  "evidence_confidence": 78,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T10:20:02.443Z",
+    "last_reviewed_at": "2026-08-24T10:20:02.443Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "Agent Zero is an open agent framework built around the idea of giving an LLM agent a complete computer: a Dockerized Linux desktop (XFCE via Xpra), a browser with DOM annotation, live document coworking for Markdown/Writer/Spreadsheet/Presentation files, and a host-machine bridge via the A0 CLI. It supports projects with isolated files, secrets, memories, and model presets, plus multi-agent cooperation where agents delegate research, coding, or review tasks to focused subagents through a unified, persisted child-context lifecycle.\n\nArchitecturally it is Python-based and runs anywhere Docker runs, from a Raspberry Pi or cheap VPS to a GPU server, with a guided A0 Launcher desktop app for setup. Its Plugin Hub offers 100+ community extensions, and internals (prompts, tools, skills, settings) are transparent and editable. Recent commits show active hardening work: pinned Docker desktop package versions, authenticated and path-traversal-safe WebUI asset routes, scoped plugin cache invalidation, and backup restore origin fixes.\n\nCompared to OpenClaw, Agent Zero trades lightweight multi-channel messaging for deep computer-use capability: it excels at GUI automation, document collaboration, and extensibility, but carries a heavier resource footprint and a larger shell-access risk surface that operators must sandbox deliberately.",
+  "latest_release": {
+    "version": "v2.10",
+    "date": "2026-08-19T12:30:34Z",
+    "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.10"
+  },
+  "last_updated": "2026-08-24T10:20:02.443Z"
 }

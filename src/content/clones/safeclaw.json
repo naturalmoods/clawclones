@@ -2,86 +2,57 @@
   "id": "princezuda/safeclaw",
   "name": "SafestClaw",
   "language": "Python",
-  "vibe_summary": "A zero-cost, LLM-optional OpenClaw alternative that uses ML intent detection for offline-first assistant tasks. It boasts minimal attack surface, deterministic output, and no mandatory API bills while retaining core features like TTS and research.",
+  "vibe_summary": "A zero-cost, LLM-optional OpenClaw alternative that leans on classic ML intent matching and deterministic actions instead of language models. Its pitch is minimal prompt-injection surface, offline-first operation, and auditable actions with optional LLM, voice, Telegram, and web UI add-ons.",
   "health_status": "healthy",
   "github_stars": 279,
   "metrics": {
-    "boot_time_ms": 150,
-    "memory_mb": 60,
-    "security_score": 85
+    "boot_time_ms": 180,
+    "memory_mb": 80,
+    "security_score": 78
   },
   "radar_chart": {
     "sandboxing": 6,
     "api_security": 7,
     "network_isolation": 8,
     "telemetry_safety": 9,
-    "shell_access_risk": 2
+    "shell_access_risk": 4
   },
   "tags": [
     "openclaw-alternative",
-    "offline-first",
     "llm-optional",
-    "privacy-focused",
-    "local-assistant"
+    "offline-first",
+    "privacy",
+    "deterministic"
   ],
-  "community_sentiment": 10,
-  "reddit_mentions": 0,
-  "web_mentions": 0,
+  "community_sentiment": 55,
+  "reddit_mentions": 1,
+  "web_mentions": 10,
   "best_for": [
-    "users wanting zero-cost AI assistant",
-    "privacy-conscious offline use",
-    "deterministic task automation without LLM"
+    "Users who want OpenClaw-style features without LLM API bills",
+    "Privacy-conscious users needing offline, deterministic actions",
+    "Tinkerers comfortable learning command documentation instead of free-form chat"
   ],
   "avoid_if": [
-    "need advanced generative AI chat",
-    "require heavy plugin ecosystem",
-    "want cloud-scale multi-user deployment"
+    "You expect polished free-form conversational AI out of the box",
+    "You need a mature plugin ecosystem or multi-user deployment",
+    "You want a battle-tested project with broad community support"
   ],
   "deployment_target": [
     "desktop",
-    "self-hosted",
-    "edge"
+    "self-hosted"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "low",
+  "setup_difficulty": "medium",
   "privacy_posture": "strong",
   "multi_user": false,
-  "plugin_ecosystem": "limited",
+  "plugin_ecosystem": "emerging",
   "license_type": "MIT",
   "last_commit_at": "2026-05-09T13:43:34Z",
   "contributors_count": 3,
   "open_issues_count": 2,
   "release_cadence_days": 6,
-  "operational_risk": "low",
-  "openclaw_advantages": [
-    "$0 default cost with no required LLM",
-    "Minimal prompt injection risk",
-    "Works offline with deterministic output",
-    "Runs on low-power hardware"
-  ],
-  "openclaw_disadvantages": [
-    "Lacks advanced free-form LLM chat by default",
-    "Smaller community and plugin ecosystem",
-    "Less multi-channel integration maturity"
-  ],
-  "confidence_summary": "Evidence from README and commits shows active development and clear positioning as OpenClaw alternative; however, external community feedback is sparse (zero Reddit, no direct web mentions) leading to lower sentiment confidence.",
-  "evidence_confidence": 80,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:08:20.017Z",
-    "last_reviewed_at": "2026-08-02T15:53:33.635Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "SafestClaw is positioned as a zero-cost, LLM-optional alternative to OpenClaw, written in Python and installable via `pip install safestclaw`. Its core architecture relies on ML-based intent detection and deterministic rule/action mappings for tasks like weather queries, news summarization, research, blogging, and code security audits, thereby avoiding the recurring API costs and prompt-injection surface associated with language-model-dependent assistants. Optional LLM integration (via `setup ai`) is available for free-form chat, but the system is designed so that most features work fully offline and locally.\n\nRecent development activity shows a focus on robustness: commits address configuration path stability across systemd/launchd/cron contexts, improved Telegram bot error surfacing, and ensuring NLU enablement persists correctly. The project emphasizes privacy (local-by-default, external calls only on explicit user request) and minimal attack surface. Compared to OpenClaw, SafestClaw trades generative flexibility for cost-free, deterministic, and auditable operations on modest hardware.",
-  "latest_release": {
-    "version": "4.2.4",
-    "date": "2026-05-09T13:40:00Z",
-    "url": "https://github.com/princezuda/safestclaw/releases/tag/4.2.4"
-  },
-  "last_updated": "2026-08-24T00:34:03.204Z",
+  "operational_risk": "medium",
   "model_support": {
     "providers": [
       "google"
@@ -106,7 +77,37 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 5,
-    "detected_at": "2026-08-23T04:30:30.267Z",
+    "detected_at": "2026-08-24T11:43:44.419Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Zero default cost with no required LLM API keys",
+    "Works offline for most default features",
+    "Minimal prompt-injection surface via deterministic ML intent routing",
+    "Deterministic, auditable actions instead of variable LLM output",
+    "Runs on modest hardware across Linux, macOS, and Windows"
+  ],
+  "openclaw_disadvantages": [
+    "Free-form chat quality depends on optional LLM setup that has had config bugs",
+    "Smaller community and ecosystem than OpenClaw",
+    "Requires learning /help documentation when running LLM-free",
+    "Single-maintainer project with higher bus-factor risk"
+  ],
+  "confidence_summary": "Evidence is solid from the README and detailed recent commits, but community sentiment data is thin (one irrelevant Reddit match, no direct web reviews). Ratings for ecosystem and sentiment carry moderate uncertainty.",
+  "evidence_confidence": 68,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:43:46.308Z",
+    "last_reviewed_at": "2026-08-24T11:43:46.308Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "SafestClaw positions itself as the zero-cost, security-minded alternative to OpenClaw. Its core architectural bet is that most assistant tasks — weather lookups, news summaries from 50+ sources, blogging, code security audits, research queries against arXiv or WolframAlpha — can be handled by established ML intent/semantics matching and deterministic actions rather than an LLM. An LLM is strictly optional, pluggable via `setup ai`, which keeps the default attack surface small and prompt-injection risk minimal.\n\nThe project ships as a pip-installable Python package (`pip install safestclaw`, run via `python -m safestclaw`) with a CLI, localhost web UI, Telegram integration, MCP support, and TTS/voice-to-text. Recent commits show active hardening: a stable home-based config path (`~/.safestclaw/config.yaml`) so settings survive across systemd/launchd/cron launches, unconditional NLU enablement when a provider is configured, and better surfacing of LLM provider errors instead of silent canned fallbacks.\n\nCompared to OpenClaw, SafestClaw trades conversational polish and ecosystem breadth for determinism, offline capability, and $0 default operating cost. It is local-first and privacy-forward — external calls only happen when explicitly requested (e.g., weather) or when the user configures an LLM. The trade-off is a steeper learning curve in LLM-free mode and a smaller, single-maintainer community.",
+  "latest_release": {
+    "version": "4.2.4",
+    "date": "2026-05-09T13:40:00Z",
+    "url": "https://github.com/princezuda/safestclaw/releases/tag/4.2.4"
+  },
+  "last_updated": "2026-08-24T11:43:46.308Z"
 }

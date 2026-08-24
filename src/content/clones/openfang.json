@@ -2,40 +2,40 @@
   "id": "RightNow-AI/openfang",
   "name": "OpenFang",
   "language": "Rust",
-  "vibe_summary": "OpenFang is a Rust-built Agent OS shipping as a single 32MB binary with autonomous 'Hands' that run scheduled tasks without prompting. It's pre-1.0 but battle-tested with 2,696+ passing tests and active security audits, aiming to be an autonomous agent platform rather than a chatbot.",
+  "vibe_summary": "A Rust-built 'Agent Operating System' shipping as a single ~32MB binary with autonomous scheduled agents ('Hands') instead of chat-driven prompts. Pre-1.0 but heavily tested (2,696+ tests, zero clippy warnings) and shipping fast.",
   "health_status": "healthy",
-  "github_stars": 18130,
+  "github_stars": 18135,
   "metrics": {
-    "boot_time_ms": 30,
+    "boot_time_ms": 35,
     "memory_mb": 15,
-    "security_score": 85
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 7,
-    "api_security": 8,
-    "network_isolation": 6,
-    "telemetry_safety": 5,
+    "sandboxing": 6,
+    "api_security": 7,
+    "network_isolation": 5,
+    "telemetry_safety": 7,
     "shell_access_risk": 7
   },
   "tags": [
-    "agent-os",
     "rust",
+    "agent-os",
     "autonomous-agents",
     "single-binary",
-    "scheduling"
+    "self-hosted"
   ],
-  "community_sentiment": 0,
+  "community_sentiment": 55,
   "reddit_mentions": 0,
-  "web_mentions": 10,
+  "web_mentions": 8,
   "best_for": [
-    "autonomous 24/7 agent workflows",
-    "self-hosted agent infrastructure",
-    "rust enthusiasts wanting single-binary deploy"
+    "Users wanting always-on scheduled autonomous agents",
+    "Rust shops wanting a single-binary agent runtime",
+    "Self-hosters running lead-gen, monitoring, or research agents"
   ],
   "avoid_if": [
-    "need stable v1.0 api",
-    "want chat-based assistant like openclaw",
-    "require extensive plugin marketplace"
+    "You need a stable 1.0 API for production",
+    "You want a chat-first assistant like OpenClaw",
+    "You need a mature plugin/skill ecosystem"
   ],
   "deployment_target": [
     "self-hosted",
@@ -43,9 +43,9 @@
     "cloud"
   ],
   "local_first": true,
-  "cloud_dependency": "unknown",
+  "cloud_dependency": "optional",
   "setup_difficulty": "low",
-  "privacy_posture": "mixed",
+  "privacy_posture": "strong",
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
@@ -54,34 +54,6 @@
   "open_issues_count": 116,
   "release_cadence_days": 3,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "single 32mb rust binary with no runtime deps",
-    "autonomous scheduled agents (hands) vs reactive assistant",
-    "high test coverage and clippy clean",
-    "built-in dashboard and knowledge graph"
-  ],
-  "openclaw_disadvantages": [
-    "openclaw has larger community and plugin ecosystem (clawhub)",
-    "openclaw supports more platforms/channels natively",
-    "openfang pre-1.0 breaking changes risk"
-  ],
-  "confidence_summary": "Evidence from README and commits shows active Rust agent OS, but web search returned only OpenClaw results, so community sentiment for OpenFang is uncertain. License discrepancy (Apache-2.0 vs README MIT badge) adds minor uncertainty.",
-  "evidence_confidence": 70,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:16:01.110Z",
-    "last_reviewed_at": "2026-08-02T15:53:36.478Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "OpenFang is an open-source Agent Operating System written from scratch in Rust, compiling to a single ~32MB binary that runs autonomous agents called 'Hands' on schedules without user prompting. Its architecture spans 14 crates and 137K LOC, with 2,696+ passing tests and zero clippy warnings, emphasizing reliability and a small footprint for self-hosted deployments.\n\nRecent commit activity shows a focus on security hardening (audit fixes, codex hardening, toctou staging, endpoint audits) and continuous releases, with v0.6.9 published in May 2026. Unlike OpenClaw's personal assistant model that reacts to user channels, OpenFang positions itself as a background agent OS that builds knowledge graphs, monitors targets, and reports to a local dashboard at port 4200.\n\nWhile pre-1.0 and subject to breaking changes, OpenFang's Rust foundation and single-binary distribution offer a lightweight alternative for users wanting always-on autonomous workflows rather than conversational interactions. Its privacy posture is mixed due to likely cloud LLM dependencies, but local-first execution and active audits mitigate some risks.",
-  "latest_release": {
-    "version": "v0.6.9",
-    "date": "2026-05-12T18:42:42Z",
-    "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.9"
-  },
-  "last_updated": "2026-08-24T00:34:06.510Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -350,7 +322,36 @@
     "default_model_released_at": "2025-05-14",
     "default_model_date_source": "model_id",
     "files_examined": 41,
-    "detected_at": "2026-08-23T04:30:46.332Z",
+    "detected_at": "2026-08-24T11:58:11.549Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Single ~32MB Rust binary vs heavier runtime",
+    "Autonomous scheduled 'Hands' agents that work without prompting",
+    "Strong test discipline: 2,696+ tests, zero clippy warnings",
+    "Built-in dashboard and knowledge-graph capabilities"
+  ],
+  "openclaw_disadvantages": [
+    "Pre-1.0 with breaking changes between minor versions",
+    "Far smaller community and ecosystem than OpenClaw",
+    "No multi-channel messaging integrations (WhatsApp, Telegram, etc.)",
+    "Zero Reddit presence and thin third-party validation"
+  ],
+  "confidence_summary": "Evidence is solid on architecture and activity from the README and commits, but community sentiment is weakly evidenced (0 Reddit matches, few web snippets). Pre-1.0 status adds uncertainty about stability claims.",
+  "evidence_confidence": 62,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:58:19.053Z",
+    "last_reviewed_at": "2026-08-24T11:58:19.053Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "OpenFang positions itself not as a chatbot framework but as an **Agent Operating System** written from scratch in Rust — roughly 137K LOC across 14 crates, compiling to a single ~32MB binary. Its core differentiator is **Hands**: pre-built autonomous capability packages that run on schedules, 24/7, without user prompting — researching competitors, building knowledge graphs, monitoring targets, and reporting to a built-in dashboard at localhost:4200.\n\nThe project emphasizes engineering rigor: 2,696+ passing tests, zero clippy warnings, and recent commits focused on security hardening (TOCTOU fixes, endpoint audits, 'codex hardening'). Installation is a one-line curl script with `openfang init && openfang start`, making setup notably easy for a Rust system of this scope.\n\nCompared to OpenClaw, OpenFang trades OpenClaw's massive multi-channel messaging ecosystem and community for a leaner, local-first, autonomy-first design. However, it is explicitly pre-1.0 (v0.6.9), warns of breaking changes between minor versions, and recommends pinning commits for production — so it suits early adopters more than conservative production deployments.",
+  "latest_release": {
+    "version": "v0.6.9",
+    "date": "2026-05-12T18:42:42Z",
+    "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.9"
+  },
+  "last_updated": "2026-08-24T11:58:19.053Z"
 }

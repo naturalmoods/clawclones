@@ -1,41 +1,41 @@
 {
   "id": "stephengpope/thepopebot",
-  "name": "The Pope Bot",
+  "name": "thepopebot",
   "language": "JavaScript",
-  "vibe_summary": "Unifies chat, live coding workspaces, and background agent jobs in a self-hosted Docker-backed brain that works with any LLM or coding agent. Recent commits show active hardening of config caching and Telegram webhook flexibility.",
+  "vibe_summary": "A self-hosted personal agent platform that unifies chat (Telegram/web), live coding workspaces, and background agent jobs into one app. Works with any LLM and any coding agent, with Docker-isolated background jobs that open PRs and DM you when done.",
   "health_status": "healthy",
-  "github_stars": 1855,
+  "github_stars": 1854,
   "metrics": {
-    "boot_time_ms": 150,
+    "boot_time_ms": 180,
     "memory_mb": 80,
-    "security_score": 75
+    "security_score": 72
   },
   "radar_chart": {
     "sandboxing": 7,
     "api_security": 7,
     "network_isolation": 6,
-    "telemetry_safety": 9,
-    "shell_access_risk": 5
+    "telemetry_safety": 8,
+    "shell_access_risk": 7
   },
   "tags": [
     "ai-agent",
-    "coding-assistant",
     "self-hosted",
-    "telegram",
-    "docker"
+    "telegram-bot",
+    "coding-agent",
+    "automation"
   ],
-  "community_sentiment": 30,
+  "community_sentiment": 55,
   "reddit_mentions": 0,
-  "web_mentions": 10,
+  "web_mentions": 6,
   "best_for": [
-    "self-hosters wanting unified chat and coding",
-    "teams using Telegram for AI ops",
-    "users needing background PR automation"
+    "Solo devs wanting a 24/7 personal coding agent",
+    "Users who want Telegram-driven agent workflows",
+    "Self-hosters who want PR automation with DM notifications"
   ],
   "avoid_if": [
-    "those needing Slack/Discord (coming soon)",
-    "users wanting minimal resource footprint",
-    "enterprises requiring SSO"
+    "You need multi-user team collaboration features",
+    "You want a mature plugin/skill ecosystem",
+    "You need Slack/Discord integrations today (still coming soon)"
   ],
   "deployment_target": [
     "self-hosted",
@@ -46,7 +46,7 @@
   "cloud_dependency": "optional",
   "setup_difficulty": "medium",
   "privacy_posture": "strong",
-  "multi_user": null,
+  "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
   "last_commit_at": "2026-05-13T20:16:48Z",
@@ -54,35 +54,6 @@
   "open_issues_count": 48,
   "release_cadence_days": 1,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Native Docker-backed coding workspaces with live terminal",
-    "Supports any coding agent interchangeably (Claude Code, Codex, etc)",
-    "Background agent jobs that open PRs and auto-merge",
-    "Built-in admin UI for token/config management"
-  ],
-  "openclaw_disadvantages": [
-    "No native mobile/voice support like OpenClaw",
-    "Limited chat integrations (Slack/Discord pending)",
-    "Smaller community footprint (0 Reddit mentions)",
-    "Less cross-platform OS integration"
-  ],
-  "confidence_summary": "README and commit history provide clear architecture and active maintenance signals, but external community feedback is absent (0 Reddit, web results unrelated to this repo), creating moderate uncertainty in sentiment scoring.",
-  "evidence_confidence": 70,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:05:13.559Z",
-    "last_reviewed_at": "2026-08-02T15:53:38.723Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "The Pope Bot is a self-hosted autonomous AI agent platform that merges communication, coding environments, and automation into a single application. Its architecture is described as 'three doors, one brain': a browser chat, Telegram integration (with Slack/Discord planned), and a live coding workspace that can attach a terminal session to the same agent handling your chat. The 'brain' is a configurable event handler that selects any LLM (Anthropic, OpenAI, Google, etc.) and any coding agent (Claude Code, Codex, Gemini, etc.), running either in-process for live chat or in a fresh Docker container for background agent jobs that open pull requests and notify via DM.\n\nRecent development activity (up to v1.2.82) shows a focus on security and correctness: stale config caches were removed to prevent cross-user token leakage, and Telegram webhook overrides were added for flexible deployments. The project emphasizes user ownership—running on your hardware, your repo, your tokens—with AES-encrypted configuration stored in SQLite. Compared to OpenClaw, it leans heavily into developer workflows and containerized code execution rather than cross-OS personal assistant features.",
-  "latest_release": {
-    "version": "v1.2.82",
-    "date": "2026-05-13T20:49:05Z",
-    "url": "https://github.com/stephengpope/thepopebot/releases/tag/v1.2.82"
-  },
-  "last_updated": "2026-08-24T00:34:08.817Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -192,7 +163,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 63,
-    "detected_at": "2026-08-23T04:31:07.439Z",
+    "detected_at": "2026-08-24T12:04:47.272Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Unified chat + live terminal + background jobs in one app",
+    "LLM- and coding-agent-agnostic (Claude Code, Codex, Gemini, etc.)",
+    "Docker-isolated background jobs with PR auto-merge flow",
+    "Runs fully on your own hardware and tokens"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller community and near-zero Reddit discussion",
+    "Fewer chat integrations (Telegram only; Slack/Discord pending)",
+    "Single-maintainer project with higher bus-factor risk",
+    "Less mature skill/plugin ecosystem than OpenClaw"
+  ],
+  "confidence_summary": "Evidence is solid from the README and active commit history, but community sentiment is thin — zero Reddit matches and only indirect web mentions. Ratings for ecosystem and sentiment carry moderate uncertainty.",
+  "evidence_confidence": 68,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T12:04:57.275Z",
+    "last_reviewed_at": "2026-08-24T12:04:57.275Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "## Overview\n\nthepopebot is a self-hosted personal AI agent platform that combines a chat interface, a live coding environment, and a background job runner into a single application. It is deliberately model- and agent-agnostic: you can plug in Anthropic, OpenAI, Google, DeepSeek, Mistral, xAI, OpenRouter, or any OpenAI-compatible endpoint, and pair it with coding agents like Claude Code, Codex, Gemini, OpenCode, or Kimi.\n\nArchitecturally, it follows a \"three doors, one brain\" model: a browser chat, a Telegram integration (with per-user verification), and a code workspace all feed into a central event handler that picks the right coding agent, remembers sessions, and orchestrates Docker. Quick questions run in-process as live chat with streaming output, while heavier tasks (\"build it, DM me when done\") run as background jobs in fresh Docker containers that open PRs, auto-merge, and notify you via DM.\n\nCompared to OpenClaw, thepopebot emphasizes a unified, batteries-included app experience — chat, terminal, and agent jobs in one place — rather than a skill-extension ecosystem. Recent commits show active maintenance with attention to operational correctness (removing stale config caches, flexible Telegram webhook configuration), though the project remains largely single-maintainer with a smaller community footprint.",
+  "latest_release": {
+    "version": "v1.2.82",
+    "date": "2026-05-13T20:49:05Z",
+    "url": "https://github.com/stephengpope/thepopebot/releases/tag/v1.2.82"
+  },
+  "last_updated": "2026-08-24T12:04:57.275Z"
 }

@@ -2,160 +2,93 @@
   "id": "NousResearch/hermes-agent",
   "name": "Hermes Agent",
   "language": "Python",
-  "vibe_summary": "Self-improving agent that spins up skills from its own experience and meets you on every chat app from one gateway. Explosive growth and weekly releases make it the most talked-about personal AI companion of 2026.",
+  "vibe_summary": "A self-improving, always-on agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It positions itself as the closest direct competitor to OpenClaw, with multi-platform messaging gateways and cross-session memory.",
   "health_status": "healthy",
-  "github_stars": 234983,
+  "github_stars": 235411,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
-    "security_score": 75
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 6,
+    "sandboxing": 5,
     "api_security": 7,
-    "network_isolation": 4,
-    "telemetry_safety": 8,
-    "shell_access_risk": 6
+    "network_isolation": 5,
+    "telemetry_safety": 6,
+    "shell_access_risk": 8
   },
   "tags": [
+    "ai-agent",
     "self-improving",
-    "multi-channel",
-    "agent-framework",
-    "skills",
-    "self-hosted"
+    "memory",
+    "messaging-gateway",
+    "openclaw-alternative"
   ],
-  "community_sentiment": 85,
-  "reddit_mentions": 0,
+  "community_sentiment": 82,
+  "reddit_mentions": 20,
   "web_mentions": 10,
   "best_for": [
-    "self-hosters wanting a learning agent",
-    "multi-platform personal assistant",
-    "teams needing scheduled automations"
+    "Users wanting an always-on agent reachable via Telegram/Discord/Slack",
+    "Self-hosters who want persistent cross-session memory and skill learning",
+    "Tinkerers who want model-agnostic providers with no lock-in"
   ],
   "avoid_if": [
-    "users wanting zero-config cloud-only SaaS",
-    "those averse to Python CLI setup",
-    "strictly isolated sandbox requirements"
+    "You need strict sandboxing of tool/shell execution",
+    "You want a minimal, low-complexity single-purpose agent",
+    "You are unwilling to manage a long-running gateway process"
   ],
   "deployment_target": [
-    "desktop",
+    "self-hosted",
     "cloud",
-    "self-hosted"
+    "desktop"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
   "setup_difficulty": "medium",
-  "privacy_posture": "strong",
+  "privacy_posture": "mixed",
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-24T00:33:12Z",
-  "contributors_count": 2983,
-  "open_issues_count": 35189,
+  "last_commit_at": "2026-08-24T10:57:46Z",
+  "contributors_count": 3028,
+  "open_issues_count": 35126,
   "release_cadence_days": 5,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Built-in self-improving learning loop with autonomous skill creation",
-    "Honcho dialectic user modeling for cross-session personalization",
-    "Broad multi-channel gateway (WhatsApp, Signal, Telegram, Discord, Slack)",
-    "Model-agnostic provider switching with no code changes"
-  ],
-  "openclaw_disadvantages": [
-    "OpenClaw may offer more polished native OS integration",
-    "OpenClaw could be simpler for non-Python users",
-    "OpenClaw's ecosystem may have longer track record for stability"
-  ],
-  "confidence_summary": "Strong signals from active commits, README, and 19 Reddit threads; limited direct OpenClaw comparison data introduces minor uncertainty in relative disadvantages.",
-  "evidence_confidence": 80,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:46:30.473Z",
-    "last_reviewed_at": "2026-08-02T15:53:29.267Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "Hermes Agent is a self-improving AI agent framework built by Nous Research that emphasizes continuous learning through a closed feedback loop. Its core architecture separates a terminal UI, a messaging gateway (supporting Telegram, Discord, Slack, WhatsApp, Signal, and CLI), and an agent conversation loop recently refactored from a 16k-line monolith into modular components under `agent/`. Unique features include autonomous skill creation after complex tasks, FTS5 session search with LLM summarization, and Honcho-based user modeling that deepens across sessions.\n\nUnlike OpenClaw, Hermes ships a built-in learning loop that curates memory and nudges itself to persist knowledge, plus compatibility with the agentskills.io open standard for portable skills. The project is highly active with frequent releases (v2026.7.7.2) and a large community, offering deployment flexibility from a $5 VPS to GPU clusters or serverless. While it requires Python and some setup, its `hermes setup` wizard and migration tool (`hermes claw migrate`) ease adoption for those coming from OpenClaw.",
-  "latest_release": {
-    "version": "v2026.8.19",
-    "date": "2026-08-21T12:16:39Z",
-    "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.19"
-  },
-  "last_updated": "2026-08-24T00:33:58.147Z",
   "model_support": {
     "providers": [
       "anthropic",
-      "fireworks",
       "google",
       "groq",
-      "litellm",
       "minimax",
       "mistral",
-      "moonshot",
-      "ollama",
       "openai",
       "openai-compatible",
       "openrouter",
       "xai",
       "zhipu"
     ],
-    "provider_count": 10,
-    "local_capable": true,
+    "provider_count": 8,
+    "local_capable": false,
     "aggregator_capable": true,
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "claude-opus-4.6",
-      "provider": "anthropic",
-      "path": ".env.example",
-      "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
-      "strength": "strong"
+      "model": "gpt-4o-mini",
+      "provider": "openai",
+      "path": "agent/plugin_llm.py",
+      "line": "allowed_models:    [openai/gpt-4o-mini]       # optional",
+      "strength": "weak"
     },
     "default_models": [
       {
-        "model": "claude-opus-4.6",
-        "provider": "anthropic",
-        "path": ".env.example",
-        "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
-        "strength": "strong"
-      },
-      {
-        "model": "glm-5.2",
-        "provider": "zhipu",
-        "path": "hermes_cli/models.py",
-        "line": "PREFERRED_SILENT_DEFAULT_MODEL = \"z-ai/glm-5.2\"",
-        "strength": "strong"
-      },
-      {
-        "model": "grok-build-0.1",
-        "provider": "xai",
-        "path": "plugins/web/xai/provider.py",
-        "line": "DEFAULT_MODEL = \"grok-build-0.1\"",
-        "strength": "strong"
-      },
-      {
-        "model": "claude-sonnet-4",
-        "provider": "anthropic",
-        "path": "hermes_cli/config.py",
-        "line": "\"    model: anthropic/claude-sonnet-4\",",
-        "strength": "weak"
-      },
-      {
-        "model": "gpt-4o",
+        "model": "gpt-4o-mini",
         "provider": "openai",
-        "path": "hermes_cli/config.py",
-        "line": "# (e.g. ``model: gpt-4o``).  Without this _set_nested replaces the",
-        "strength": "weak"
-      },
-      {
-        "model": "deepseek-v4-flash-20260423",
-        "provider": "deepseek",
-        "path": "hermes_cli/model_normalize.py",
-        "line": "# ``provider: DeepSeek`` / ``model: deepseek-v4-flash-20260423`` when called",
+        "path": "agent/plugin_llm.py",
+        "line": "allowed_models:    [openai/gpt-4o-mini]       # optional",
         "strength": "weak"
       }
     ],
-    "default_model_ambiguous": true,
+    "default_model_ambiguous": false,
     "evidence": [
       {
         "kind": "dependency",
@@ -171,26 +104,14 @@
       },
       {
         "kind": "env_key",
-        "value": "FIREWORKS_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "FIREWORKS_API_KEY",
-        "path": "hermes_cli/providers.py",
-        "strength": "weak"
-      },
-      {
-        "kind": "env_key",
         "value": "GEMINI_API_KEY",
-        "path": ".env.example",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "GOOGLE_API_KEY",
-        "path": ".env.example",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
@@ -202,25 +123,7 @@
       {
         "kind": "env_key",
         "value": "GROQ_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "litellm",
-        "path": "hermes_cli/model_normalize.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "litellm",
-        "path": "hermes_cli/config.py",
-        "strength": "weak"
-      },
-      {
-        "kind": "env_key",
-        "value": "MINIMAX_API_KEY",
-        "path": ".env.example",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
@@ -242,95 +145,95 @@
         "strength": "strong"
       },
       {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "hermes_cli/setup.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
         "kind": "env_key",
-        "value": "KIMI_API_KEY",
-        "path": ".env.example",
+        "value": "configurable base URL",
+        "path": "agent/curator.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "agent/insights.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openrouter",
+        "path": "hermes_cli/setup.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openrouter",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "XAI_API_KEY",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
         "kind": "endpoint",
-        "value": "api.moonshot.cn",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "OLLAMA_BASE_URL",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "OLLAMA_HOST",
-        "path": "hermes_cli/models.py",
+        "value": "api.x.ai",
+        "path": "agent/agent_init.py",
         "strength": "weak"
       },
       {
-        "kind": "dependency",
-        "value": "openai",
-        "path": "hermes_cli/setup.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "dependency",
-        "value": "openai",
-        "path": "pyproject.toml",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "configurable base URL",
-        "path": "model_tools.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "configurable base URL",
-        "path": "hermes_cli/model_cost_guard.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "dependency",
-        "value": "openrouter",
-        "path": "hermes_cli/setup.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "dependency",
-        "value": "openrouter",
-        "path": "pyproject.toml",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "XAI_API_KEY",
-        "path": "hermes_cli/setup.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "XAI_API_KEY",
-        "path": "plugins/web/xai/provider.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "GLM_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
         "kind": "endpoint",
-        "value": "open.bigmodel.cn",
-        "path": ".env.example",
+        "value": "api.z.ai",
+        "path": "agent/retry_utils.py",
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-08-21T07:24:32Z",
-    "default_model_released_at": "2026-02-04",
+    "default_model_last_touched": "2026-08-12T23:25:20Z",
+    "default_model_released_at": "2024-07-18",
     "default_model_date_source": "catalogue",
-    "files_examined": 97,
-    "detected_at": "2026-08-23T04:29:29.263Z",
+    "files_examined": 44,
+    "detected_at": "2026-08-24T11:21:42.280Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Built-in learning loop with autonomous skill creation and self-improvement",
+    "Honcho dialectic user modeling and FTS5 session search for deep recall",
+    "Broad messaging gateway support (Telegram, Discord, Slack, WhatsApp, Signal)",
+    "Model-agnostic provider switching with a single CLI command",
+    "Dedicated OpenClaw migration path (hermes claw migrate)"
+  ],
+  "openclaw_disadvantages": [
+    "Heavier Python runtime footprint than leaner OpenClaw deployments",
+    "Untrusted-input pairing and hardening story less emphasized than OpenClaw's",
+    "Large feature surface increases operational complexity",
+    "Shell/tool access risk is high without additional sandboxing"
+  ],
+  "confidence_summary": "Strong evidence from an active README, frequent recent commits, a recent release, and substantial Reddit/web discussion. Security posture details are inferred rather than explicitly documented, so those scores carry moderate uncertainty.",
+  "evidence_confidence": 85,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:23:17.082Z",
+    "last_reviewed_at": "2026-08-24T11:23:17.082Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "Hermes Agent is Nous Research's flagship open-source, self-improving AI agent and the closest direct competitor to OpenClaw. Its defining feature is a closed learning loop: it autonomously creates skills after complex tasks, improves them during use, nudges itself to persist knowledge, and searches past conversations via FTS5 with LLM summarization for cross-session recall. It also integrates Honcho for dialectic user modeling and supports the agentskills.io open standard.\n\nArchitecturally, it runs as a gateway process reachable from Telegram, Discord, Slack, WhatsApp, Signal, and CLI, with a full TUI featuring multiline editing, slash-command autocomplete, and streaming tool output. It is model-agnostic — Nous Portal, OpenRouter, OpenAI, or custom endpoints — switchable via `hermes model`. Recent commits show active hardening of the WebSocket gateway (heartbeat contracts, bounded reconnect, socket leases for group-chat turns) and cron liveness surfacing, indicating a mature, actively maintained codebase. It even ships an OpenClaw migration command (`hermes claw migrate`), explicitly courting OpenClaw users.\n\nCompared to OpenClaw, Hermes leans harder into memory, skill self-improvement, and multi-platform presence, while OpenClaw emphasizes a tighter untrusted-input security posture. Hermes runs anywhere from a $5 VPS to GPU clusters or serverless, making it flexible but operationally heavier than minimal agent setups.",
+  "latest_release": {
+    "version": "v2026.8.19",
+    "date": "2026-08-21T12:16:39Z",
+    "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.19"
+  },
+  "last_updated": "2026-08-24T11:23:17.082Z"
 }

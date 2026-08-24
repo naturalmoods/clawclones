@@ -2,45 +2,47 @@
   "id": "zeroclaw-labs/zeroclaw",
   "name": "ZeroClaw",
   "language": "Rust",
-  "vibe_summary": "ZeroClaw is a Rust-written, fully autonomous AI assistant runtime that boots in milliseconds with a tiny memory footprint, giving users complete ownership of their agent, data, and hardware. Its vibrant development pace shows constant channel i18n, identity binding, and quickstart auth improvements, signaling a mature yet lean OpenClaw alternative.",
+  "vibe_summary": "A single-binary Rust agent runtime that positions itself as the fast, tiny, fully autonomous OpenClaw alternative — any OS, any platform, swap any provider. Massive community traction (32k+ stars) with extremely active development and a 'you own the agent, data, and machine' philosophy.",
   "health_status": "healthy",
-  "github_stars": 32639,
+  "github_stars": 32643,
   "metrics": {
-    "boot_time_ms": 5,
-    "memory_mb": 1.5,
-    "security_score": 85
+    "boot_time_ms": 8,
+    "memory_mb": 1.8,
+    "security_score": 82
   },
   "radar_chart": {
     "sandboxing": 6,
     "api_security": 8,
-    "network_isolation": 5,
+    "network_isolation": 6,
     "telemetry_safety": 9,
-    "shell_access_risk": 8
+    "shell_access_risk": 7
   },
   "tags": [
     "rust",
-    "ai-agent",
+    "agent-runtime",
     "local-first",
-    "self-hosted",
-    "autonomous"
+    "multi-channel",
+    "openclaw-alternative"
   ],
-  "community_sentiment": 82,
-  "reddit_mentions": 0,
+  "community_sentiment": 84,
+  "reddit_mentions": 8,
   "web_mentions": 10,
   "best_for": [
-    "Privacy-focused users wanting local AI control",
-    "Rust enthusiasts needing lightweight agent runtime",
-    "Self-hosted multi-channel assistant deployments"
+    "Users wanting a lightweight, single-binary agent runtime",
+    "Self-hosters who want local keys and local data",
+    "Multi-channel assistant deployments (Discord, Telegram, Matrix, email)",
+    "Rust shops that want hackable, auditable infrastructure"
   ],
   "avoid_if": [
-    "Teams needing enterprise managed cloud SaaS",
-    "Users uncomfortable with CLI configuration",
-    "Those requiring guaranteed multi-tenant support"
+    "You need a managed, hosted agent platform",
+    "You want a mature plugin marketplace out of the box",
+    "You are uncomfortable running agents with shell access on your own machine",
+    "You need enterprise support SLAs"
   ],
   "deployment_target": [
+    "self-hosted",
     "desktop",
     "edge",
-    "self-hosted",
     "cloud"
   ],
   "local_first": true,
@@ -48,41 +50,13 @@
   "setup_difficulty": "low",
   "privacy_posture": "strong",
   "multi_user": null,
-  "plugin_ecosystem": "strong",
+  "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-23T20:22:24Z",
-  "contributors_count": 417,
-  "open_issues_count": 786,
+  "last_commit_at": "2026-08-24T09:42:23Z",
+  "contributors_count": 420,
+  "open_issues_count": 785,
   "release_cadence_days": 12,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Rust binary with <10ms boot and <2MB memory",
-    "Strong local-first privacy by design",
-    "Operator-bind identities without round-trip codes",
-    "Broad LLM provider and channel support"
-  ],
-  "openclaw_disadvantages": [
-    "Smaller community than original OpenClaw (32k vs 382k stars)",
-    "Fork maturity and third-party plugin count lagging",
-    "Documentation translation relies on submodules, possibly fragmented"
-  ],
-  "confidence_summary": "Evidence from README, commit history, and search snippets shows active Rust development and clear local-first stance; uncertainty persists on multi-user readiness and precise sandboxing defaults.",
-  "evidence_confidence": 85,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T01:51:07.283Z",
-    "last_reviewed_at": "2026-08-02T15:53:42.074Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "ZeroClaw is an agent runtime distributed as a single Rust binary that users configure and run on their own machines, embodying a local-first philosophy where the operator owns the agent, the data, and the hardware. It connects to a wide range of LLM providers—including Anthropic, OpenAI, Ollama, and roughly twenty others—and exposes the assistant through over thirty channels such as Discord, Telegram, Matrix, email, voice, and webhooks, while executing actions via tools like shell, browser, HTTP, hardware, and custom MCP servers.\n\nArchitecturally, ZeroClaw emphasizes minimal footprint and high performance, leveraging Rust's edition 2024 to achieve boot times under ten milliseconds and memory usage below two megabytes, a stark contrast to heavier Node or Python-based assistants. Recent commit activity reveals a focus on internationalization of channel replies, inline subscription authentication in the quickstart flow, and operator-bind identity mechanisms that remove the need for bind-code round-trips, alongside test coverage for channel bind auth and phantom-alias trust boundaries.\n\nCompared to OpenClaw, ZeroClaw trades some ecosystem size for a compiled, security-minded, and resource-efficient core that still mirrors the multi-channel, tool-using autonomy of the original. Its documentation and submodule-based translation system show a commitment to maintainability, while release cadence (v0.8.2) and active Discord indicate a healthy, evolving project.",
-  "latest_release": {
-    "version": "v0.8.4",
-    "date": "2026-08-02T21:00:00Z",
-    "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.4"
-  },
-  "last_updated": "2026-08-24T00:34:12.677Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -250,11 +224,41 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-08-17T22:36:09Z",
+    "default_model_last_touched": "2026-08-24T08:05:36Z",
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 105,
-    "detected_at": "2026-08-23T04:31:31.411Z",
+    "detected_at": "2026-08-24T12:21:37.582Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Single static Rust binary with near-instant startup and minimal memory footprint",
+    "Runs on any OS/platform including constrained edge devices",
+    "~20 LLM providers and 30+ channels with swappable components",
+    "Local-first key and data ownership with no required cloud dependency",
+    "Very active commit cadence and large community"
+  ],
+  "openclaw_disadvantages": [
+    "Younger ecosystem with fewer battle-tested skills/plugins",
+    "Shell and browser tool access increases host risk if misconfigured",
+    "Documentation and stability still maturing relative to OpenClaw's install base",
+    "Sandboxing story is less explicit than container-based alternatives"
+  ],
+  "confidence_summary": "Strong evidence from README, release data, and very active recent commits; community sentiment is positive but Reddit discussion volume is still modest. Sandboxing and multi-user capabilities are not clearly documented, so those fields carry uncertainty.",
+  "evidence_confidence": 82,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T12:21:54.530Z",
+    "last_reviewed_at": "2026-08-24T12:21:54.530Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "ZeroClaw is an agent runtime written in Rust, distributed as a single binary you configure and run. It connects to roughly 20 LLM providers (Anthropic, OpenAI, Ollama, and others), reaches the world through 30+ channels (Discord, Telegram, Matrix, email, voice, webhooks, CLI), and acts through tools including shell, browser, HTTP, hardware, and custom MCP servers. Everything runs on your machine with your keys in your workspace — the project's stated philosophy is that you own the agent, the data, and the machine.\n\nArchitecturally, ZeroClaw emphasizes speed and footprint: as a Rust binary it starts in milliseconds and sips memory, making it viable on laptops, edge devices, and servers alike. Installation is a one-line curl script on Unix or a prebuilt PowerShell path on Windows, with a `quickstart` command to bootstrap configuration. The project is dual-licensed MIT/Apache-2.0 and shows an extremely active commit cadence, with recent work spanning provider error handling, Telegram channel reliability, config robustness, and CI security scanning (CodeQL).\n\nCompared to OpenClaw, ZeroClaw trades ecosystem maturity for performance, portability, and a leaner operational model. It lacks OpenClaw's large skills registry and established plugin marketplace, but offers a more resource-efficient, fully local-first alternative for users who want to self-host an autonomous assistant without heavy infrastructure. Its shell and browser tool access is powerful but means operators should apply their own sandboxing discipline.",
+  "latest_release": {
+    "version": "v0.8.4",
+    "date": "2026-08-02T21:00:00Z",
+    "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.4"
+  },
+  "last_updated": "2026-08-24T12:21:54.530Z"
 }

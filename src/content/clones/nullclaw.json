@@ -2,87 +2,61 @@
   "id": "nullclaw/nullclaw",
   "name": "NullClaw",
   "language": "Zig",
-  "vibe_summary": "NullClaw is the fastest and smallest OpenClaw-compatible AI agent, compiled as a 678KB static Zig binary that boots in under 2ms with ~1MB RAM. Its vibe is lean, security-hardened, and rapidly iterated, with recent commits focusing on sandboxing and failure-path privacy.",
+  "vibe_summary": "A 678 KB static Zig binary that delivers a full autonomous AI assistant stack with ~1 MB RAM and sub-2ms boot. It's the extreme-minimalist, runs-on-anything answer to heavyweight agent frameworks.",
   "health_status": "healthy",
-  "github_stars": 8043,
+  "github_stars": 8045,
   "metrics": {
     "boot_time_ms": 2,
     "memory_mb": 1,
-    "security_score": 95
+    "security_score": 88
   },
   "radar_chart": {
     "sandboxing": 9,
     "api_security": 8,
     "network_isolation": 8,
-    "telemetry_safety": 8,
-    "shell_access_risk": 2
+    "telemetry_safety": 9,
+    "shell_access_risk": 4
   },
   "tags": [
     "zig",
-    "edge",
     "lightweight",
-    "autonomous",
-    "sandbox"
+    "edge",
+    "autonomous-agent",
+    "static-binary"
   ],
-  "community_sentiment": 70,
-  "reddit_mentions": 0,
-  "web_mentions": 0,
+  "community_sentiment": 72,
+  "reddit_mentions": 1,
+  "web_mentions": 10,
   "best_for": [
-    "edge and IoT deployments",
-    "resource-constrained SBCs",
-    "privacy-focused autonomous agents"
+    "Running agents on $5 SBCs and constrained edge hardware",
+    "Users who want a single dependency-free static binary",
+    "Security-conscious self-hosters wanting layered sandboxing",
+    "Tinkerers who value instant startup and minimal footprint"
   ],
   "avoid_if": [
-    "need rich UI without nullhub",
-    "prefer large plugin ecosystem",
-    "want mainstream community support"
+    "You need a mature GUI or managed cloud offering",
+    "You want a large plugin marketplace and community templates",
+    "You prefer mainstream languages with bigger contributor pools",
+    "You need enterprise support or long-term stability guarantees"
   ],
   "deployment_target": [
     "edge",
+    "desktop",
     "self-hosted",
-    "desktop"
+    "cloud"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "low",
+  "setup_difficulty": "medium",
   "privacy_posture": "strong",
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
   "last_commit_at": "2026-07-13T00:54:36Z",
-  "contributors_count": 102,
-  "open_issues_count": 89,
+  "contributors_count": 103,
+  "open_issues_count": 91,
   "release_cadence_days": 8,
-  "operational_risk": "low",
-  "openclaw_advantages": [
-    "678KB static binary vs heavier OpenClaw runtime",
-    "Sub-2ms boot enables instant edge response",
-    "~1MB RAM allows microcontroller deployment",
-    "Zig memory safety without GC overhead"
-  ],
-  "openclaw_disadvantages": [
-    "Smaller community and plugin ecosystem than OpenClaw",
-    "No native UI without separate nullhub beta",
-    "Fewer integrations (18 channels vs OpenClaw's many)",
-    "Less documented outside GitHub"
-  ],
-  "confidence_summary": "Evidence from README and recent commits is strong for technical claims, but community sentiment is limited by zero Reddit mentions and only web directory listings. Uncertainty remains on multi-user support and real-world plugin maturity.",
-  "evidence_confidence": 85,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T01:59:22.728Z",
-    "last_reviewed_at": "2026-08-02T15:53:29.695Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "NullClaw is an OpenClaw-compatible autonomous AI assistant infrastructure written entirely in Zig, compiling to a 678 KB static binary that boots in under 2 ms and consumes roughly 1 MB of RAM. Its core architecture relies on vtable interfaces for providers, channels, tools, memory, and tunnels, making every subsystem pluggable while maintaining zero runtime overhead, no garbage collector, and true portability across ARM, x86, and RISC-V.\n\nRecent development activity shows a focus on hardening: commits suppress stderr leakage to channels, enforce public-host rejection before socket side effects, and make queue-mode configuration fail-closed on typos. Security features include multi-layer sandboxing (landlock, firejail, bubblewrap, docker), encrypted secrets, workspace scoping, and explicit allowlists, positioning NullClaw as a privacy-strong edge agent.\n\nCompared to OpenClaw, NullClaw trades breadth of community and UI polish for extreme efficiency and deterministic resource usage, targeting $5 boards and microcontrollers rather than full desktop or cloud suites. The accompanying nullhub project (beta) provides a UI layer, but the base binary remains deliberately minimal.",
-  "latest_release": {
-    "version": "v2026.5.29",
-    "date": "2026-05-29T13:41:10Z",
-    "url": "https://github.com/nullclaw/nullclaw/releases/tag/v2026.5.29"
-  },
-  "last_updated": "2026-08-24T00:33:58.759Z",
+  "operational_risk": "medium",
   "model_support": {
     "providers": [
       "anthropic",
@@ -279,7 +253,37 @@
     "default_model_released_at": "2025-12-22",
     "default_model_date_source": "catalogue",
     "files_examined": 51,
-    "detected_at": "2026-08-23T04:29:40.490Z",
+    "detected_at": "2026-08-24T11:23:47.004Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Orders of magnitude smaller footprint: 678 KB binary, ~1 MB RAM",
+    "Sub-2ms cold start versus typical runtime-heavy stacks",
+    "True portability across ARM, x86, and RISC-V with no runtime deps",
+    "Multi-layer sandboxing (landlock, firejail, bubblewrap, docker) built in",
+    "Vtable-based swappable providers, channels, memory, and tunnels"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller community and ecosystem than OpenClaw",
+    "Zig toolchain narrows the contributor and hiring pool",
+    "UI layer (nullhub) is still in beta",
+    "Less third-party documentation, tutorials, and skill registries"
+  ],
+  "confidence_summary": "Strong evidence from a detailed README, active recent commits, and a current release supports the performance and security claims. Community sentiment evidence is thin (1 Reddit match), so sentiment and ecosystem maturity scores carry more uncertainty.",
+  "evidence_confidence": 82,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:23:55.611Z",
+    "last_reviewed_at": "2026-08-24T11:23:55.611Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "NullClaw is a fully autonomous AI assistant infrastructure written entirely in Zig, shipping as a single 678 KB static binary with ~1 MB peak RSS and sub-2ms startup on modern hardware. Despite its size, it is feature-complete: 50+ providers, 19 channels, 35+ tools, 10 memory engines, MCP support, subagents, streaming, voice, tunnels, and hardware peripherals — all behind pluggable vtable interfaces so every core system is swappable.\n\nSecurity is a first-class design goal: pairing-based access, multi-layer sandboxing via landlock, firejail, bubblewrap, or Docker, explicit allowlists, workspace scoping, and encrypted secrets. Recent commits show active hardening work — stderr isolation for agent runners, allocation-free gateway bind paths, and config validation to prevent silent message drops — backed by 5,300+ tests and CI/nightly pipelines.\n\nCompared to OpenClaw, NullClaw trades ecosystem breadth for extreme minimalism and portability: it runs on anything with a CPU, from Apple Silicon to 0.8 GHz edge cores and RISC-V boards, with zero runtime dependencies. The companion nullhub UI (beta) plus nullboiler, nullwatch, and nulltickets round out an emerging ecosystem for orchestration, observability, and task tracking.",
+  "latest_release": {
+    "version": "v2026.5.29",
+    "date": "2026-05-29T13:41:10Z",
+    "url": "https://github.com/nullclaw/nullclaw/releases/tag/v2026.5.29"
+  },
+  "last_updated": "2026-08-24T11:23:55.611Z"
 }

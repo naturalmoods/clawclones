@@ -2,45 +2,45 @@
   "id": "PhantomReaper2025/titanclaw",
   "name": "TitanClaw",
   "language": "Rust",
-  "vibe_summary": "A security-hardened Rust reimplementation of OpenClaw/IronClaw with WASM sandboxes, swarm mesh, and AGI ambitions. Currently pushing rapid feature parity including canvas, agents, and approvals CLI.",
+  "vibe_summary": "A security-first Rust reimplementation of OpenClaw/IronClaw with hardened sandboxes, WASM tools, and a distributed swarm mesh. Ambitious 'AGI assistant' positioning backed by an unusually active feature roadmap.",
   "health_status": "healthy",
   "github_stars": 25,
   "metrics": {
-    "boot_time_ms": 30,
+    "boot_time_ms": 35,
     "memory_mb": 15,
-    "security_score": 85
+    "security_score": 82
   },
   "radar_chart": {
     "sandboxing": 9,
     "api_security": 8,
-    "network_isolation": 8,
-    "telemetry_safety": 9,
-    "shell_access_risk": 3
+    "network_isolation": 7,
+    "telemetry_safety": 8,
+    "shell_access_risk": 6
   },
   "tags": [
     "rust",
     "openclaw-alternative",
-    "security",
-    "sandbox",
-    "agi"
+    "sandboxing",
+    "privacy-first",
+    "agent-runtime"
   ],
-  "community_sentiment": 5,
-  "reddit_mentions": 0,
-  "web_mentions": 0,
+  "community_sentiment": 45,
+  "reddit_mentions": 3,
+  "web_mentions": 7,
   "best_for": [
-    "privacy-focused self-hosters",
-    "developers wanting rust agent runtime",
-    "multi-provider inference users"
+    "Security-conscious users wanting a Rust-based OpenClaw alternative",
+    "Self-hosters needing sandboxed tool execution and multi-provider inference",
+    "Tinkerers interested in distributed agent mesh experiments"
   ],
   "avoid_if": [
-    "users needing mature community support",
-    "those averse to rapid breaking changes",
-    "non-technical users"
+    "You need a mature, battle-tested ecosystem with community support",
+    "You want simple setup with minimal configuration flags",
+    "You require proven production stability over rapid feature churn"
   ],
   "deployment_target": [
     "self-hosted",
-    "cloud",
-    "desktop"
+    "desktop",
+    "cloud"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
@@ -54,34 +54,6 @@
   "open_issues_count": 0,
   "release_cadence_days": 1,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Rust memory safety and performance",
-    "Built-in WASM sandboxing for tools",
-    "Distributed swarm mesh for task offload",
-    "Hardened approval and auth flows"
-  ],
-  "openclaw_disadvantages": [
-    "Smaller community and stars (26 vs OpenClaw large)",
-    "Less mature plugin ecosystem",
-    "Rapid version bumps may cause instability"
-  ],
-  "confidence_summary": "Evidence from README and commits shows active Rust reimplementation with security focus; however external sentiment is absent (Reddit/Brave mentions unrelated), creating uncertainty in community adoption metrics.",
-  "evidence_confidence": 75,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:03:39.359Z",
-    "last_reviewed_at": "2026-08-02T15:53:32.266Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "TitanClaw is a Rust-based AI agent runtime explicitly inspired by OpenClaw and IronClaw, positioning itself as a security-first, privacy-preserving alternative with ambitions toward AGI assistance. Its architecture leverages hardened Docker sandboxes, a WASM tool execution system, and a distributed swarm mesh to enable concurrent, isolated job processing across multiple provider backends (NEAR AI, OpenAI-compatible, Ollama, Tinfoil). Recent development has focused on achieving feature parity with OpenClaw through CLI commands for canvas, agents, approvals, backup, browser, cron, and channels, alongside continuous runtime hardening of approval flows and sandbox jobs.\n\nUnlike OpenClaw's likely TypeScript/Node foundation, TitanClaw's Rust core targets lower memory footprint and stronger memory safety, while integrating local-first inference and tree-sitter based context indexing via a memory graph. The project is in active Phase 0-2 completion with version 1.2.0 in progress, though its community footprint remains minimal compared to the original OpenClaw ecosystem. This makes it a compelling experimental choice for developers prioritizing sandboxing and multi-provider control, but less suitable for those relying on broad community support.",
-  "latest_release": {
-    "version": "v1.1.2",
-    "date": "2026-03-02T22:20:48Z",
-    "url": "https://github.com/PhantomReaper2025/titanclaw/releases/tag/v1.1.2"
-  },
-  "last_updated": "2026-08-24T00:34:01.386Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -233,7 +205,36 @@
     "default_model_released_at": "2024-10-22",
     "default_model_date_source": "model_id",
     "files_examined": 71,
-    "detected_at": "2026-08-23T04:30:17.683Z",
+    "detected_at": "2026-08-24T11:39:20.544Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Rust performance and memory safety versus OpenClaw's runtime",
+    "Hardened Docker sandboxing and WASM tool isolation by default",
+    "Local inference support via Ollama and Tinfoil with provider failover",
+    "Distributed swarm mesh for multi-node task offloading"
+  ],
+  "openclaw_disadvantages": [
+    "Far smaller community and skill/plugin ecosystem",
+    "Rapid feature churn suggests less stability testing",
+    "Thin third-party validation; Reddit mentions are irrelevant matches",
+    "Documentation and onboarding less polished than OpenClaw"
+  ],
+  "confidence_summary": "README and commit evidence is rich and shows active development, but community sentiment data is essentially noise (Reddit matches are unrelated gaming posts). Confidence in architecture claims is moderate; real-world adoption is unverified.",
+  "evidence_confidence": 62,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:39:31.618Z",
+    "last_reviewed_at": "2026-08-24T11:39:31.618Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "TitanClaw is a Rust-based, security-first AI agent runtime inspired by OpenClaw and IronClaw, positioning itself as an 'AGI assistant' upgrade. Its core architecture emphasizes hardened Docker sandboxes for tool execution, a WASM-based dynamic tool system, multi-provider inference (NEAR AI, OpenAI-compatible, Ollama, Tinfoil) with failover, and streaming-first I/O including live shell output and early piped execution.\n\nBeyond the baseline, TitanClaw has shipped an aggressive roadmap: tree-sitter AST context indexing with a queryable memory graph, a distributed swarm mesh for offloading subtasks to capability-matching peers, a deterministic reflex fast-path that routes recurring prompts to compiled tools, and a full CLI surface covering cron, channels, backups, browser automation, approvals, subagents, and canvas UI rendering. Recent commits show active hardening of approval flows, OAuth state verification, and supervised background loops.\n\nCompared to OpenClaw, TitanClaw trades ecosystem maturity for performance, memory safety, and a stronger default security posture. It is best suited for privacy-focused self-hosters comfortable with a fast-moving, single-maintainer-style project rather than users who need a proven, widely adopted platform.",
+  "latest_release": {
+    "version": "v1.1.2",
+    "date": "2026-03-02T22:20:48Z",
+    "url": "https://github.com/PhantomReaper2025/titanclaw/releases/tag/v1.1.2"
+  },
+  "last_updated": "2026-08-24T11:39:31.618Z"
 }

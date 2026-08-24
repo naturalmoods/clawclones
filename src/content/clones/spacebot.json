@@ -2,40 +2,42 @@
   "id": "spacedriveapp/spacebot",
   "name": "Spacebot",
   "language": "Rust",
-  "vibe_summary": "Spacebot is an opinionated agent harness that splits monolithic LLM loops into specialized processes for true multi-user concurrency. Its typed graph memory in SQLite and automatic skill capture make it smarter the more teams use it.",
+  "vibe_summary": "An opinionated Rust agent harness built for teams and communities, splitting the monolithic agent loop into specialized processes with typed graph memory in SQLite. It emphasizes durable state, multi-user concurrency, and self-improving skills over markdown-file memory hacks.",
   "health_status": "healthy",
   "github_stars": 2370,
   "metrics": {
-    "boot_time_ms": 30,
+    "boot_time_ms": 35,
     "memory_mb": 15,
-    "security_score": 75
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 7,
-    "api_security": 8,
-    "network_isolation": 6,
-    "telemetry_safety": 5,
-    "shell_access_risk": 3
+    "sandboxing": 6,
+    "api_security": 7,
+    "network_isolation": 5,
+    "telemetry_safety": 7,
+    "shell_access_risk": 6
   },
   "tags": [
-    "ai-agent",
+    "agent-harness",
     "multi-user",
     "rust",
-    "team-collaboration",
-    "agent-harness"
+    "discord-bot",
+    "memory-graph"
   ],
-  "community_sentiment": 0,
-  "reddit_mentions": 0,
-  "web_mentions": 0,
+  "community_sentiment": 45,
+  "reddit_mentions": 8,
+  "web_mentions": 6,
   "best_for": [
-    "Discord/Slack communities needing shared AI agent",
-    "Teams wanting persistent typed memory across channels",
-    "Multi-user autonomous task execution"
+    "Teams running agents across Discord, Slack, or Telegram",
+    "Communities needing concurrent multi-user conversations",
+    "Users wanting structured, durable agent memory instead of markdown files",
+    "Operators who prefer one-click hosted deployment"
   ],
   "avoid_if": [
-    "Solo users wanting minimal setup without team features",
-    "Those requiring fully local-only offline operation (cloud deploy emphasized)",
-    "Projects needing extensive third-party plugin ecosystem"
+    "You need a permissive open-source license (FSL, not OSI-approved)",
+    "You want a lightweight single-user personal assistant",
+    "You require a mature plugin ecosystem",
+    "You need fully offline local-first operation with no cloud option"
   ],
   "deployment_target": [
     "cloud",
@@ -53,35 +55,6 @@
   "open_issues_count": 188,
   "release_cadence_days": 8,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Native multi-user concurrency across chat platforms",
-    "Typed graph memory in SQLite vs markdown files",
-    "Automatic skill capture from completed tasks",
-    "Process-separated architecture avoids blocked LLM loops"
-  ],
-  "openclaw_disadvantages": [
-    "Less mature single-user personal assistant focus",
-    "No clear mobile/local-first offline mode",
-    "Smaller community footprint compared to OpenClaw",
-    "Licensing not fully open-source (FSL)"
-  ],
-  "confidence_summary": "Evidence from README and commits shows active Rust development with team features, but provided Reddit/Web mentions are unrelated to Spacebot, causing low confidence in community sentiment.",
-  "evidence_confidence": 70,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:45:01.405Z",
-    "last_reviewed_at": "2026-08-02T15:53:38.235Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "Spacebot is an opinionated AI agent harness built in Rust, designed for teams, communities, and multi-user environments. Unlike monolithic agent loops, it splits conversation, reasoning, tool execution, and memory into specialized processes, enabling true concurrent multi-user interactions across Discord, Slack, Telegram, and Twitch without blocking.\n\nIts core architecture stores state in a typed graph within SQLite rather than markdown files, and autonomy is driven by a task state machine linked to goals. After complex tasks or idle conversations, a background process captures learned skills and memories, making the system progressively smarter with zero user action. Recent commits (v0.5.0) introduce per-agent secret isolation, dormant cortex, and structured worker outcomes, indicating a focus on security and scalable backend readiness.\n\nCompared to OpenClaw's personal assistant focus, Spacebot prioritizes shared memory across channels and process-level concurrency for organizations. While it offers one-click cloud deployment via spacebot.sh, Docker builds allow self-hosting, though its FSL license and emerging plugin ecosystem differentiate it from fully open-source alternatives.",
-  "latest_release": {
-    "version": "v0.5.0",
-    "date": "2026-05-07T06:55:33Z",
-    "url": "https://github.com/spacedriveapp/spacebot/releases/tag/v0.5.0"
-  },
-  "last_updated": "2026-08-24T00:34:08.252Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -193,7 +166,37 @@
     "default_model_released_at": "2026-02-24",
     "default_model_date_source": "catalogue",
     "files_examined": 73,
-    "detected_at": "2026-08-23T04:31:01.242Z",
+    "detected_at": "2026-08-24T12:03:04.755Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "True multi-user concurrency across channels and communities",
+    "Typed graph memory in SQLite instead of LLM-managed markdown files",
+    "Process-level separation of conversation, compaction, and memory retrieval",
+    "Automatic skill capture and background memory persistence",
+    "One-click hosted deployment via spacebot.sh"
+  ],
+  "openclaw_disadvantages": [
+    "Younger project with smaller ecosystem and fewer integrations",
+    "FSL license is not fully open source until conversion",
+    "Less proven for single-user personal assistant workflows",
+    "Smaller community and thinner third-party documentation"
+  ],
+  "confidence_summary": "Strong evidence from a detailed README and very active, high-quality commit history, but community sentiment data is essentially noise — the Reddit matches are unrelated and web results barely mention Spacebot directly.",
+  "evidence_confidence": 68,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T12:03:16.815Z",
+    "last_reviewed_at": "2026-08-24T12:03:16.815Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "Spacebot is an opinionated AI agent harness written in Rust, designed from the ground up for teams, communities, and multi-user environments. Its core architectural bet is that agent state belongs in structured storage, not markdown files the LLM manages: memory lives in a typed graph in SQLite, conversation history compacts into durable navigable 'chronicles,' and autonomy runs on a task state machine linked to goals rather than a heartbeat file. The system splits the monolithic agent loop into specialized processes — conversation, compaction, memory retrieval, and execution each run independently, so the agent never goes dark while doing background work.\n\nA standout feature is continuous self-improvement: after complex tasks, the agent captures reusable skills, and a background process silently persists worthwhile memories when conversations idle. Recent development shows serious engineering rigor — a prompt inspector that records and decomposes every LLM request into block maps, per-model context ceiling enforcement with learned refusals, and careful handling of fallback model routing. It ships with one-click hosted deployment via spacebot.sh connecting Discord, Slack, Telegram, and Twitch, while remaining self-hostable.\n\nCompared to OpenClaw, Spacebot targets a different niche: true concurrent multi-user operation with shared memory across channels, versus OpenClaw's personal-assistant focus. It is licensed under FSL-1.1-ALv2 (a delayed open-source license), which may matter for some adopters. The project is young but backed by the Spacedrive team with very active, disciplined development.",
+  "latest_release": {
+    "version": "v0.5.0",
+    "date": "2026-05-07T06:55:33Z",
+    "url": "https://github.com/spacedriveapp/spacebot/releases/tag/v0.5.0"
+  },
+  "last_updated": "2026-08-24T12:03:16.815Z"
 }

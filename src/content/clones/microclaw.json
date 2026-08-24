@@ -2,40 +2,40 @@
   "id": "microclaw/microclaw",
   "name": "MicroClaw",
   "language": "Rust",
-  "vibe_summary": "A Rust-native, channel-agnostic agent runtime focused on rock-solid reliability and verified task completion. Aggressive active development with strong emphasis on sandboxing, governance, and operational resilience.",
+  "vibe_summary": "A self-hosted Rust agent runtime inspired by nanoclaw, unifying one agent loop across Telegram, Discord, Slack, Feishu, and web. Fresh off a v0.5.0 monolith-decomposition sweep with a React 19/Vite 8 operator console.",
   "health_status": "healthy",
   "github_stars": 732,
   "metrics": {
     "boot_time_ms": 8,
-    "memory_mb": 1.5,
-    "security_score": 88
+    "memory_mb": 1.8,
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 8,
-    "api_security": 8,
+    "sandboxing": 6,
+    "api_security": 7,
     "network_isolation": 6,
-    "telemetry_safety": 7,
-    "shell_access_risk": 4
+    "telemetry_safety": 8,
+    "shell_access_risk": 6
   },
   "tags": [
     "rust",
     "agent-runtime",
-    "chat-agents",
     "self-hosted",
-    "mcp"
+    "multi-channel",
+    "openclaw-alternative"
   ],
-  "community_sentiment": 50,
+  "community_sentiment": 55,
   "reddit_mentions": 0,
-  "web_mentions": 0,
+  "web_mentions": 9,
   "best_for": [
-    "Self-hosters wanting a Rust-based multi-channel agent",
-    "Teams needing verified task completion and governance",
-    "Users wanting extensible skills/MCP with local control plane"
+    "Self-hosters wanting one agent runtime across many chat surfaces",
+    "Rust shops needing durable sessions and scheduled tasks",
+    "Operators who want a local control plane with governed extensions"
   ],
   "avoid_if": [
-    "Those needing a stable production release (main is volatile)",
-    "Users wanting extensive community plugins (ecosystem emerging)",
-    "Non-technical users uncomfortable with CLI/config"
+    "You need a battle-tested stable API (main moves fast, pre-1.0)",
+    "You want a large plugin ecosystem and community",
+    "You prefer managed cloud hosting over self-hosting"
   ],
   "deployment_target": [
     "self-hosted",
@@ -44,7 +44,7 @@
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "medium",
+  "setup_difficulty": "low",
   "privacy_posture": "strong",
   "multi_user": true,
   "plugin_ecosystem": "emerging",
@@ -54,34 +54,6 @@
   "open_issues_count": 0,
   "release_cadence_days": 7,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Rust-native performance and low memory footprint (micro-optimized)",
-    "Built-in verified completion contracts with evidence stamping",
-    "Strong governance: tool policy gates, token budgets, editable config",
-    "Resilient provider fallback and DLQ auto-replay"
-  ],
-  "openclaw_disadvantages": [
-    "Smaller community and plugin ecosystem vs OpenClaw",
-    "Main branch unstable; stable branch lags",
-    "Less cross-platform mobile support (no native Android/iOS apps mentioned)"
-  ],
-  "confidence_summary": "Evidence from README and recent commits is strong for architecture and security, but community sentiment is uncertain due to zero Reddit mentions and weak web footprint specific to MicroClaw.",
-  "evidence_confidence": 80,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:36:44.014Z",
-    "last_reviewed_at": "2026-08-02T15:53:25.363Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "MicroClaw is a Rust-built, channel-agnostic agent runtime that unifies Telegram, Discord, Slack, Feishu, IRC, and web interfaces under a single persistent agent loop. It emphasizes agentic execution with multi-step tool use, sub-agents, scheduled tasks, skills, and MCP support, while providing a local web control plane for governance and task management.\n\nRecent development focuses heavily on reliability and security: completion contracts verify task outcomes with machine-checkable evidence, a tool-policy gate enforces pre-call restrictions, ClawHub installs are tree-pinned and injection-scanned, and provider circuit breakers with fallback models improve resilience. The architecture includes delivery outboxes for guaranteed message delivery, interrupted-turn recovery, and supervised background loops with restart backoff.\n\nCompared to OpenClaw, MicroClaw prioritizes a lightweight Rust footprint (micro-optimized memory/boot) and operational rigor, but trades off a smaller community, less mobile-native support, and a rapidly changing main branch that recommends using the stable branch for production.",
-  "latest_release": {
-    "version": "v0.5.0",
-    "date": "2026-08-16T06:30:01Z",
-    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.5.0"
-  },
-  "last_updated": "2026-08-24T00:33:54.690Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -187,7 +159,36 @@
     "default_model_released_at": "2025-09-29",
     "default_model_date_source": "model_id",
     "files_examined": 33,
-    "detected_at": "2026-08-23T04:28:31.085Z",
+    "detected_at": "2026-08-24T11:05:34.355Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Rust single-binary runtime with very low resource footprint",
+    "Channel-independent agent loop avoids per-adapter duplication",
+    "Built-in durable delivery, resumable sessions, and scheduled tasks",
+    "Local operator console and governance features out of the box"
+  ],
+  "openclaw_disadvantages": [
+    "Much smaller community and skill ecosystem",
+    "Pre-1.0 with breaking changes on main branch",
+    "No Reddit presence and thin third-party coverage",
+    "Younger project with less production hardening evidence"
+  ],
+  "confidence_summary": "Strong evidence from README, releases, and detailed commit history confirms active development and architecture. Community sentiment is uncertain due to zero Reddit matches and only indirect web mentions.",
+  "evidence_confidence": 72,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:05:40.439Z",
+    "last_reviewed_at": "2026-08-24T11:05:40.439Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "MicroClaw is a self-hosted agentic AI runtime written in Rust, inspired by nanoclaw's design. Its core architectural bet is a single channel-independent agent loop paired with a provider-independent LLM layer, so Telegram, Discord, Slack, Feishu/Lark, web, and other adapters all share the same behavior without duplicated boundary logic. It targets long-running work: multi-step tool use, resumable sessions, durable delivery, persistent memory, scheduled tasks, MCP, subagents, and governed skill extensions all live in one runtime, fronted by a local control plane at 127.0.0.1:10961.\n\nThe recent v0.5.0 release shows serious engineering momentum: a monolith decomposition sweep split multi-thousand-line files (config.rs, db/learning.rs) into domain modules, the web stack moved to React 19/Vite 8, and the operator console got a visual refresh. Commits show disciplined practices—clippy -D warnings gates, blame-ignore revs for large moves, and a stable branch recommended for production while main moves fast.\n\nCompared to OpenClaw, MicroClaw trades ecosystem breadth for a leaner, single-binary Rust footprint and a more opinionated unified runtime. It has a Discord, its own subreddit, and broad i18n docs, but with 732 stars and no independent Reddit discussion, its community and plugin ecosystem remain early-stage.",
+  "latest_release": {
+    "version": "v0.5.0",
+    "date": "2026-08-16T06:30:01Z",
+    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.5.0"
+  },
+  "last_updated": "2026-08-24T11:05:40.439Z"
 }

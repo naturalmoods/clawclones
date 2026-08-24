@@ -2,7 +2,7 @@
   "id": "letta-ai/lettabot",
   "name": "LettaBot",
   "language": "TypeScript",
-  "vibe_summary": "A now-deprecated multi-channel AI assistant with persistent unified memory across Telegram, Slack, Discord, WhatsApp, and Signal. All active development has moved into Letta Code's Channels and Remote Environments.",
+  "vibe_summary": "A multi-channel personal AI assistant with unified persistent memory across Telegram, Slack, Discord, WhatsApp, and Signal. Now officially deprecated and archived, replaced by Letta Code's Channels and Remote Environments.",
   "health_status": "abandoned",
   "github_stars": 327,
   "metrics": {
@@ -12,37 +12,38 @@
   },
   "radar_chart": {
     "sandboxing": 3,
-    "api_security": 5,
-    "network_isolation": 3,
-    "telemetry_safety": 4,
+    "api_security": 6,
+    "network_isolation": 4,
+    "telemetry_safety": 5,
     "shell_access_risk": 8
   },
   "tags": [
     "deprecated",
     "multi-channel",
-    "ai-assistant",
-    "letta-platform",
-    "typescript"
+    "personal-assistant",
+    "persistent-memory",
+    "letta"
   ],
-  "community_sentiment": 0,
+  "community_sentiment": 45,
   "reddit_mentions": 0,
-  "web_mentions": 10,
+  "web_mentions": 6,
   "best_for": [
-    "Existing LettaBot users maintaining legacy deployments",
-    "Studying the architecture of a multi-channel agent before migrating to Letta Code Channels",
-    "Reference for Bluesky Jetstream feed ingestion patterns"
+    "Existing deployments that still work and need short-term continuity",
+    "Developers studying a hackable multi-channel agent reference implementation",
+    "Users planning migration to Letta Code Channels"
   ],
   "avoid_if": [
-    "Starting any new project — officially deprecated and replaced by Letta Code Channels",
-    "You need active maintenance, security patches, or community support",
-    "You want a production-ready, always-on agent with modern scheduling (use Letta Code Remote Environments instead)"
+    "You are starting a new project (use Letta Code Channels instead)",
+    "You need active maintenance and security patches",
+    "You want a supported long-term deployment"
   ],
   "deployment_target": [
     "self-hosted",
-    "cloud"
+    "cloud",
+    "desktop"
   ],
   "local_first": false,
-  "cloud_dependency": "required",
+  "cloud_dependency": "optional",
   "setup_difficulty": "medium",
   "privacy_posture": "mixed",
   "multi_user": true,
@@ -53,37 +54,6 @@
   "open_issues_count": 84,
   "release_cadence_days": 3,
   "operational_risk": "high",
-  "openclaw_advantages": [
-    "Unified persistent memory across five chat platforms in a single agent instance",
-    "Built-in Bluesky Jetstream feed ingestion for social media monitoring",
-    "Voice message transcription via OpenAI Whisper out of the box",
-    "Heartbeat and scheduling features for periodic agent check-ins",
-    "One-click Railway deploy for rapid cloud setup"
-  ],
-  "openclaw_disadvantages": [
-    "Officially deprecated — no new features, bug fixes, or security patches",
-    "Requires a Letta API key or self-hosted Letta server (platform lock-in)",
-    "Node.js/TypeScript stack has higher memory footprint than OpenClaw's Rust/Go alternatives",
-    "Shell access risk is high — agent can run arbitrary commands on the host machine",
-    "No sandboxing or network isolation controls documented"
-  ],
-  "confidence_summary": "High confidence in deprecation status based on explicit README warning and archived repo state. Low community sentiment due to zero Reddit mentions and minimal web footprint beyond directory listings. Evidence is strong from primary sources (README, commits, release tags) but thin on community validation.",
-  "evidence_confidence": 85,
-  "content_ops": {
-    "last_generated_at": "2026-08-02T15:50:10.868Z",
-    "last_reviewed_at": "2026-08-02T15:50:10.868Z",
-    "refresh_mode": "rewrite",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "LettaBot is a TypeScript-based personal AI assistant that connects a single Letta agent to multiple messaging platforms — Telegram, Slack, Discord, WhatsApp, and Signal — while maintaining unified persistent memory across all channels. Built on the Letta Code SDK, it also supports Bluesky Jetstream feed ingestion for social media monitoring, voice message transcription via OpenAI Whisper, and local tool execution including file reading, code search, and shell command execution on the host machine. The architecture is designed around a single agent ID that persists across sessions, with streaming responses and periodic heartbeat check-ins.\n\nAs of early 2026, LettaBot has been officially deprecated and archived. All active development has moved into Letta Code's native Channels feature (for messaging platform integration) and Remote Environments (for always-on server deployments). The deprecation commit (#702) explicitly redirects users to these newer, more integrated alternatives. Existing deployments continue to function, but the project will receive no further updates, security patches, or community support.\n\nCompared to OpenClaw, LettaBot was more narrowly focused on the Letta platform ecosystem rather than being a general-purpose, platform-agnostic assistant framework. Its multi-channel memory unification was a standout feature, but the deprecation means it now serves primarily as a reference architecture rather than a viable production tool. The migration path to Letta Code Channels is documented as straightforward (~20 minutes), making the codebase useful for understanding patterns but not for new deployments.",
-  "latest_release": {
-    "version": "v0.2.0-alpha.12",
-    "date": "2026-03-10T22:43:22Z",
-    "url": "https://github.com/letta-ai/lettabot/releases/tag/v0.2.0-alpha.12"
-  },
-  "last_updated": "2026-08-24T00:33:52.187Z",
   "model_support": {
     "providers": [
       "mistral",
@@ -154,7 +124,36 @@
     "default_model_released_at": "2025-05-14",
     "default_model_date_source": "model_id",
     "files_examined": 60,
-    "detected_at": "2026-08-23T04:28:09.748Z",
+    "detected_at": "2026-08-24T10:56:52.075Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Unified memory across five chat platforms plus Bluesky ingestion",
+    "Built-in voice transcription via Whisper",
+    "One-click Railway deployment template",
+    "Backed by Letta's mature memory/agent infrastructure"
+  ],
+  "openclaw_disadvantages": [
+    "Officially deprecated and archived with no future development",
+    "No active skill/plugin ecosystem comparable to ClawHub",
+    "Local shell access with limited sandboxing",
+    "Migration path pushes users to a different product entirely"
+  ],
+  "confidence_summary": "Evidence is strong that this project is deprecated: the README explicitly marks it archived and points to Letta Code replacements. Web footprint is thin (no Reddit mentions), so community sentiment is inferred mostly from the deprecation notice and awesome-list references.",
+  "evidence_confidence": 85,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T10:57:01.616Z",
+    "last_reviewed_at": "2026-08-24T10:57:01.616Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "LettaBot was a personal AI assistant built on the Letta Code SDK, designed to live across Telegram, Slack, Discord, WhatsApp, and Signal with a single unified agent memory. It supported persistent long-term memory across sessions, local tool execution (file reads, code search, shell commands), voice message transcription via OpenAI Whisper, heartbeat check-ins, scheduling, and read-only Bluesky Jetstream feed ingestion. Deployment was streamlined via a Railway template and YAML configuration.\n\nThe project is now **officially deprecated and archived**. The maintainers direct all new users to Letta Code's Channels (for messaging integrations), Remote Environments (for always-on VPS agents via outbound WebSocket), and `letta cron` (for scheduling). Existing deployments continue to function, and migration is described as taking roughly 20 minutes.\n\nCompared to OpenClaw, LettaBot offered a polished multi-channel memory-centric experience backed by Letta's agent infrastructure, but it lacked a community skill registry and is no longer maintained. It is best treated as a reference implementation or a migration starting point rather than a viable OpenClaw alternative going forward.",
+  "latest_release": {
+    "version": "v0.2.0-alpha.12",
+    "date": "2026-03-10T22:43:22Z",
+    "url": "https://github.com/letta-ai/lettabot/releases/tag/v0.2.0-alpha.12"
+  },
+  "last_updated": "2026-08-24T10:57:01.616Z"
 }

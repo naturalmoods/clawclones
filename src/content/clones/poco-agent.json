@@ -2,48 +2,51 @@
   "id": "poco-ai/poco-agent",
   "name": "Poco",
   "language": "Python",
-  "vibe_summary": "Poco wraps a Claude Code–based agent in a polished web UI with sandboxed execution and team channels. It leans into collaboration and IM integrations while keeping one-click Docker self-hosting.",
+  "vibe_summary": "Poco is a polished, team-oriented OpenClaw alternative built on a Claude Code–powered agent with a slick Next.js UI. It leans hard into collaboration: servers, channels, IM integrations, and sandboxed execution with one-click Docker self-hosting.",
   "health_status": "healthy",
   "github_stars": 1351,
   "metrics": {
-    "boot_time_ms": 200,
-    "memory_mb": 80,
-    "security_score": 85
+    "boot_time_ms": 220,
+    "memory_mb": 90,
+    "security_score": 78
   },
   "radar_chart": {
     "sandboxing": 9,
-    "api_security": 8,
+    "api_security": 7,
     "network_isolation": 7,
     "telemetry_safety": 6,
-    "shell_access_risk": 3
+    "shell_access_risk": 4
   },
   "tags": [
     "openclaw-alternative",
-    "sandbox",
     "claude-code",
+    "sandboxed-agent",
     "team-collaboration",
-    "web-ui"
+    "self-hosted"
   ],
-  "community_sentiment": 15,
-  "reddit_mentions": 0,
+  "community_sentiment": 45,
+  "reddit_mentions": 21,
   "web_mentions": 10,
   "best_for": [
-    "Teams wanting channel-based AI collaboration with sandboxed execution",
-    "Self-hosters needing polished web UI and IM integration",
-    "Users who like Claude Code experience with project management"
+    "Teams wanting channel-based agent collaboration",
+    "Users who want a polished web UI over a CLI",
+    "Self-hosters needing sandboxed Claude Code workflows",
+    "IM-centric workflows via DingTalk, Feishu, or Telegram"
   ],
   "avoid_if": [
-    "Those needing ultra-lightweight runtime on edge devices",
-    "Users avoiding cloud dependency or subscription models",
-    "Environments requiring strict no-network isolation"
+    "You need a lightweight single-binary agent",
+    "You want a large, mature plugin ecosystem",
+    "You prefer fully offline local-first operation",
+    "You need proven multi-tenant enterprise hardening"
   ],
   "deployment_target": [
     "self-hosted",
-    "cloud"
+    "cloud",
+    "desktop"
   ],
-  "local_first": true,
+  "local_first": false,
   "cloud_dependency": "optional",
-  "setup_difficulty": "low",
+  "setup_difficulty": "medium",
   "privacy_posture": "mixed",
   "multi_user": true,
   "plugin_ecosystem": "emerging",
@@ -53,35 +56,6 @@
   "open_issues_count": 1,
   "release_cadence_days": 9,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Polished web UI with artifacts/playback views",
-    "Built-in IM integrations and mobile support",
-    "Secure sandboxed runtime with local directory mounting",
-    "Channel-based team collaboration with persistent agents"
-  ],
-  "openclaw_disadvantages": [
-    "Heavier resource usage (Python/Next.js) vs leaner OpenClaw",
-    "Less mature ecosystem (fewer stars, newer release)",
-    "Cloud subscription may introduce telemetry tradeoffs",
-    "No ultra-lightweight edge deployment"
-  ],
-  "confidence_summary": "README and commit history show active development and clear OpenClaw alternative positioning, but provided Reddit/Brave mentions are unrelated, reducing community sentiment confidence.",
-  "evidence_confidence": 80,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:43:11.977Z",
-    "last_reviewed_at": "2026-08-02T15:53:32.960Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "Poco (poco-ai/poco-agent) is an open-source AI agent framework positioned as a safer, more beautiful, and easier-to-use alternative to OpenClaw. It wraps a Claude Code–based agent inside a FastAPI backend and a Next.js web UI, providing a polished collaborative environment with servers, channels, DMs, and reply threads where persistent agents can be mentioned, tasked, and monitored.\n\nCore architecture emphasizes security and productivity: all tasks execute inside isolated containers (sandboxes) with optional local directory mounts for self-hosted deployments, while the frontend offers artifacts preview, execution playback, and light/dark modes. Recent commits show rapid iteration on capability grouping, skill references, shared session mobile views, and workspace streaming via signed routes, indicating a focus on team features and UX refinement.\n\nCompared to OpenClaw’s lobster-way terminal/messaging-centric approach, Poco differentiates with built-in IM integrations (DingTalk, Feishu, Telegram), project management, and background cloud execution. It targets groups wanting a self-hosted or cloud AI coworker with strong sandboxing, but trades ultra-lightweight edge efficiency for a richer full-stack experience.",
-  "latest_release": {
-    "version": "0.5.7",
-    "date": "2026-06-18T02:32:30Z",
-    "url": "https://github.com/poco-ai/poco-claw/releases/tag/0.5.7"
-  },
-  "last_updated": "2026-08-24T00:34:02.272Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -198,7 +172,37 @@
     "default_model_released_at": "2025-05-14",
     "default_model_date_source": "model_id",
     "files_examined": 77,
-    "detected_at": "2026-08-23T04:30:23.522Z",
+    "detected_at": "2026-08-24T11:40:15.628Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Container-sandboxed execution by default",
+    "Built-in server/channel team collaboration model",
+    "Polished Next.js UI with artifacts and playback views",
+    "Native IM integrations and mobile support",
+    "One-click Docker deployment"
+  ],
+  "openclaw_disadvantages": [
+    "Much smaller community and ecosystem",
+    "Heavier stack (Python + FastAPI + Next.js) to operate",
+    "Tied to Claude Code runtime rather than model-agnostic core",
+    "Younger project with less battle-tested security history"
+  ],
+  "confidence_summary": "README and commit evidence is strong and recent, showing active development and real sandboxing work. However, Reddit matches are almost entirely unrelated Spanish-language noise ('poco'), so community sentiment is highly uncertain.",
+  "evidence_confidence": 62,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:40:28.306Z",
+    "last_reviewed_at": "2026-08-24T11:40:28.306Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "Poco positions itself as a safer, more beautiful, and easier-to-use OpenClaw alternative, built around a Claude Code–powered agent runtime. The architecture pairs a FastAPI (Python 3.12+) backend with a Next.js 16 frontend, and every task executes inside an isolated container sandbox — users can install dependencies, modify files, and run commands without touching the host. Self-hosters can optionally mount local directories into the sandbox so the agent works directly on real project files.\n\nWhere Poco differentiates itself is collaboration and product polish. It introduces long-lived servers with channels, DMs, and reply threads where persistent agents can be mentioned, messages become trackable tasks, and outputs publish into shared files. The UI includes an artifacts viewer (HTML, PDF, Markdown, Excalidraw, Drawio, and more), a playback view for replaying command I/O, browser sessions, and MCP/tool calls, plus light/dark mode and mobile support. IM integrations with DingTalk, Feishu, and Telegram, background execution, and scheduled triggers round out the 'pocket coworker' pitch.\n\nCompared to OpenClaw, Poco trades raw ecosystem size and minimalism for a managed, team-first experience: preset runtime configs, project-level defaults, MCP & Skills extensibility, GitHub repo integration, and one-click Docker deployment (plus an optional cloud subscription). Recent commits show active hardening — auth redirect fixes, visibility-aware service paths, signed workspace file streaming, and iframe sandbox tuning — suggesting a maturing but still young project.",
+  "latest_release": {
+    "version": "0.5.7",
+    "date": "2026-06-18T02:32:30Z",
+    "url": "https://github.com/poco-ai/poco-claw/releases/tag/0.5.7"
+  },
+  "last_updated": "2026-08-24T11:40:28.306Z"
 }

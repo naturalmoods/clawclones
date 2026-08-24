@@ -6,36 +6,36 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 968336,
-    "total_stars_formatted": "968.3k",
-    "most_active_language": "Python",
+    "total_stars": 968912,
+    "total_stars_formatted": "968.9k",
+    "most_active_language": "Rust",
     "language_breakdown": {
-      "TypeScript": 10,
+      "TypeScript": 9,
       "Kotlin": 1,
       "Python": 11,
       "Go": 4,
       "Shell": 1,
-      "Rust": 11,
+      "Rust": 12,
       "C": 2,
-      "JSON": 1,
+      "n8n Workflow (JSON)": 1,
       "Zig": 1,
       "JavaScript": 1
     },
-    "avg_sentiment": 38,
+    "avg_sentiment": 54,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 387270,
+      "stars": 387294,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 234983,
-    "stars_growth_7d": 3191,
+    "stars": 235411,
+    "stars_growth_7d": 3619,
     "language": "Python",
-    "sentiment": 85,
-    "vibe_summary": "Self-improving agent that spins up skills from its own experience and meets you on every chat app from one gateway. Explosive growth and weekly releases make it the most talked-about personal AI companion of 2026.",
+    "sentiment": 82,
+    "vibe_summary": "A self-improving, always-on agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It positions itself as the closest direct competitor to OpenClaw, with multi-platform messaging gateways and cross-session memory.",
     "health": "healthy",
     "latest_version": "v2026.8.19",
     "url": "https://clawclones.com/clones/NousResearch/hermes-agent"
@@ -47,17 +47,17 @@
     "url": "https://clawclones.com/compare/hermes-agent-vs-zeroclaw"
   },
   "updated_at": "2026-08-24T23:59:59.999Z",
-  "generated_at": "2026-08-24T00:34:14.150Z",
+  "generated_at": "2026-08-24T12:27:20.545Z",
   "freshness": {
     "updated_at": "2026-08-24T23:59:59.999Z",
-    "generated_at": "2026-08-24T00:34:14.150Z",
+    "generated_at": "2026-08-24T12:27:20.545Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-08-24T00:34:13.560Z",
-        "age_hours": 0
+        "updated_at": "2026-08-24T12:23:15.278Z",
+        "age_hours": 0.1
       },
       "history": {
         "updated_at": "2026-08-24T23:59:59.999Z",

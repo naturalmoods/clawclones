@@ -2,40 +2,42 @@
   "id": "XposeMarket/SmallClaw",
   "name": "SmallClaw",
   "language": "TypeScript",
-  "vibe_summary": "A local-first AI agent framework optimized for small models with hybrid cloud fallback, emphasizing zero API cost and on-device privacy. Recent v1.1 overhaul adds sub-agents, security hardening, and Docker improvements while keeping a single-pass chat handler for low latency.",
+  "vibe_summary": "A local-first, chat-first AI agent framework tuned for small local models, with a single-pass architecture that skips multi-agent planning overhead. It positions itself as a free, no-API-cost OpenClaw alternative with optional hybrid cloud support.",
   "health_status": "healthy",
   "github_stars": 258,
   "metrics": {
-    "boot_time_ms": 150,
+    "boot_time_ms": 180,
     "memory_mb": 80,
-    "security_score": 70
+    "security_score": 62
   },
   "radar_chart": {
-    "sandboxing": 6,
-    "api_security": 7,
-    "network_isolation": 5,
-    "telemetry_safety": 8,
-    "shell_access_risk": 6
+    "sandboxing": 5,
+    "api_security": 6,
+    "network_isolation": 6,
+    "telemetry_safety": 7,
+    "shell_access_risk": 7
   },
   "tags": [
     "local-first",
     "ai-agent",
-    "typescript",
+    "ollama",
     "small-models",
-    "hybrid-cloud"
+    "openclaw-alternative"
   ],
-  "community_sentiment": 10,
-  "reddit_mentions": 0,
-  "web_mentions": 0,
+  "community_sentiment": 35,
+  "reddit_mentions": 15,
+  "web_mentions": 8,
   "best_for": [
-    "Users wanting free local AI agents on consumer hardware",
-    "Developers needing small-model orchestration with optional cloud",
-    "Privacy-focused individuals avoiding cloud AI"
+    "Users wanting a free local agent with no API costs",
+    "Running small local models via Ollama or llama.cpp",
+    "Privacy-conscious users who want data on-device",
+    "Tinkerers who like drop-in SKILL.md extensions"
   ],
   "avoid_if": [
-    "Teams requiring enterprise-grade multi-user support",
-    "Those needing extensive prebuilt plugin ecosystem",
-    "Users wanting proven community traction (low sentiment)"
+    "You need a proven, audited security model",
+    "You want a large established community and plugin registry",
+    "You need multi-user or team deployments",
+    "You require a clear open-source license"
   ],
   "deployment_target": [
     "desktop",
@@ -43,7 +45,7 @@
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "low",
+  "setup_difficulty": "medium",
   "privacy_posture": "strong",
   "multi_user": null,
   "plugin_ecosystem": "emerging",
@@ -53,30 +55,6 @@
   "open_issues_count": 4,
   "release_cadence_days": null,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Optimized for small local models with single-pass low latency",
-    "Built-in browser automation via Playwright",
-    "Free forever with no API costs",
-    "Hybrid local/cloud provider flexibility"
-  ],
-  "openclaw_disadvantages": [
-    "Limited community sentiment and unknown license",
-    "No official release packaging yet",
-    "Less mature multi-agent orchestration compared to OpenClaw",
-    "Uncertain multi-user and enterprise features"
-  ],
-  "confidence_summary": "Evidence from README and commit history indicates active development but community feedback is absent (Reddit/Brave matches are unrelated to SmallClaw). Uncertainty remains on license, multi-user, and exact security posture.",
-  "evidence_confidence": 70,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:14:22.133Z",
-    "last_reviewed_at": "2026-08-02T15:53:41.535Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "SmallClaw is a local-first AI agent framework written in TypeScript, designed to run small language models on user hardware with optional hybrid cloud support. It provides a chat-first web UI and integrates multiple local providers (Ollama, llama.cpp, LM Studio) as well as cloud APIs (OpenAI, Codex OAuth). Core capabilities include file operations, multi-provider web search, Playwright browser automation, and sandboxed terminal access, all manageable through a drop-in SKILL.md skills system.\n\nArchitecturally, SmallClaw v1.1 employs a single-pass chat handler where one LLM call decides responses or tool use, reducing latency for small models. Recent commits show a system overhaul (v1.1) with security hardening, Docker improvements, background tasks, sub-agents, and Telegram file browser, indicating active iteration. Unlike OpenClaw's broader multi-agent and cross-platform push, SmallClaw focuses on lightweight local execution and zero API cost.\n\nWhile the project claims strong privacy via local-first design, its license is unspecified and community traction is currently low (search results conflate with unrelated 'claw' topics). It positions itself as a free, self-hosted alternative for privacy-conscious users, but lacks official release packaging and mature plugin ecosystem compared to OpenClaw.",
-  "last_updated": "2026-08-24T00:34:12.097Z",
   "model_support": {
     "providers": [
       "ollama",
@@ -141,7 +119,31 @@
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
     "files_examined": 17,
-    "detected_at": "2026-08-23T04:31:29.590Z",
+    "detected_at": "2026-08-24T12:20:09.468Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Single-pass chat handler reduces latency on small models",
+    "Explicitly optimized for small local models",
+    "No API costs with fully local provider support",
+    "Simple chat-first UX with web UI dashboard"
+  ],
+  "openclaw_disadvantages": [
+    "Much smaller community and ecosystem",
+    "License unclear; copyright notice suggests proprietary terms",
+    "Fewer channels and integrations than OpenClaw",
+    "Less mature security track record"
+  ],
+  "confidence_summary": "README and commit history give a decent picture of architecture and features, but the license is ambiguous and community sentiment data is essentially noise (no genuine Reddit discussion found). Confidence in decision fields is moderate.",
+  "evidence_confidence": 55,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T12:20:13.027Z",
+    "last_reviewed_at": "2026-08-24T12:20:13.027Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "SmallClaw is a local-first AI agent framework from Xpose Market, built in TypeScript and designed specifically to work well with small local models. It supports multiple providers — Ollama, llama.cpp, LM Studio, OpenAI API, and OpenAI Codex OAuth — allowing fully local or hybrid cloud setups, and ships with a web UI dashboard for chat-first interaction.\n\nIts core architectural bet is a single-pass chat handler: one LLM call decides whether to respond conversationally or invoke tools, rather than running separate planning, execution, and verification agents. This reduces latency and plays to the strengths of small models that struggle with complex multi-agent coordination. Tooling includes file operations with line-level edits, multi-provider web search (Tavily, Google, Brave, DuckDuckGo), Playwright browser automation, terminal access, persistent session memory, and a drop-in SKILL.md skills system.\n\nCompared to OpenClaw, SmallClaw trades ecosystem breadth for simplicity and local-model efficiency. Recent commits show active development — v1.1 brought a system overhaul, and v1.0.4 added security hardening, Docker improvements, background tasks, sub-agents, and a Telegram file browser. However, the license situation is unclear (the description asserts 'All rights reserved'), and there is little genuine community discussion, so prospective users should verify terms and security posture before adopting it for sensitive workflows.",
+  "last_updated": "2026-08-24T12:20:13.027Z"
 }

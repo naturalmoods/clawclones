@@ -2,42 +2,40 @@
   "id": "HKUDS/nanobot",
   "name": "nanobot",
   "language": "Python",
-  "vibe_summary": "An ultra-lightweight (~4K lines) Python AI agent framework from HKU that packs WebUI, MCP, multi-agent workflows, and memory into a single self-hosted binary. It positions itself as a dramatically leaner OpenClaw alternative with a focus on readability and fast local iteration.",
+  "vibe_summary": "An ultra-lightweight, self-hosted personal AI agent framework from HKUDS with a readable Python core, WebUI/TUI, memory, MCP, and multi-agent workflows. It positions itself as the lean, hackable alternative to heavier agent harnesses like OpenClaw.",
   "health_status": "healthy",
-  "github_stars": 47312,
+  "github_stars": 47342,
   "metrics": {
-    "boot_time_ms": 150,
-    "memory_mb": 60,
+    "boot_time_ms": 8,
+    "memory_mb": 1.5,
     "security_score": 62
   },
   "radar_chart": {
-    "sandboxing": 3,
-    "api_security": 5,
+    "sandboxing": 4,
+    "api_security": 6,
     "network_isolation": 4,
-    "telemetry_safety": 7,
+    "telemetry_safety": 8,
     "shell_access_risk": 7
   },
   "tags": [
-    "ai-agent",
+    "python",
     "self-hosted",
-    "openclaw-alternative",
+    "personal-agent",
     "mcp",
-    "multi-agent"
+    "lightweight"
   ],
   "community_sentiment": 72,
   "reddit_mentions": 1,
   "web_mentions": 10,
   "best_for": [
-    "Developers who want a readable, hackable Python agent they can fully audit",
-    "Teams needing quick local prototyping with WebUI, MCP, and multi-agent delegation",
-    "Users migrating from OpenClaw who prefer a lighter, single-service architecture",
-    "Self-hosters comfortable with Python who want scheduled automation and memory out of the box"
+    "Users wanting a small, readable Python agent core to hack on",
+    "Self-hosters running personal assistants via WebUI, terminal, or chat apps",
+    "Builders needing MCP integrations and multi-agent delegation without heavy infra"
   ],
   "avoid_if": [
-    "You need strong container sandboxing or network isolation by default",
-    "You require production-grade multi-user auth and RBAC",
-    "You depend on a mature plugin ecosystem with community extensions",
-    "You want a non-Python runtime (Go/Rust) for lower resource overhead"
+    "You need strong container-level sandboxing out of the box",
+    "You want a mature plugin marketplace and large ecosystem",
+    "You require enterprise-grade multi-user access controls"
   ],
   "deployment_target": [
     "self-hosted",
@@ -51,42 +49,11 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-23T15:53:40Z",
+  "last_commit_at": "2026-08-24T07:08:22Z",
   "contributors_count": 426,
-  "open_issues_count": 724,
+  "open_issues_count": 723,
   "release_cadence_days": 15,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Dramatically smaller codebase (~4K lines vs OpenClaw's much larger surface) for easier auditing",
-    "Faster local iteration with Python's ecosystem and simpler dependency tree",
-    "Built-in WebUI eliminates need for separate frontend setup",
-    "Native MCP support and multi-agent delegation without additional plugins",
-    "MIT license with no organizational governance overhead"
-  ],
-  "openclaw_disadvantages": [
-    "No container-native sandboxing or security scanning patterns (unlike nanoclaw/RustyClaw)",
-    "Lacks OpenClaw's broader messaging platform integrations (WhatsApp, Telegram, Slack, Discord, Gmail)",
-    "Smaller community and contributor base compared to OpenClaw's established ecosystem",
-    "Python runtime carries higher memory footprint and slower cold start than Rust/Go alternatives",
-    "No non-profit foundation governance model for long-term stewardship"
-  ],
-  "confidence_summary": "Evidence is strong from the README, recent commits, and web search results confirming nanobot as a direct OpenClaw alternative. Reddit signal is weak (1 match, unrelated gaming subreddit), but Brave search and GitHub ecosystem references provide solid corroboration. Confidence is tempered by limited independent community reviews.",
-  "evidence_confidence": 78,
-  "content_ops": {
-    "last_generated_at": "2026-08-02T15:40:19.993Z",
-    "last_reviewed_at": "2026-08-02T15:40:19.993Z",
-    "refresh_mode": "rewrite",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "nanobot is an ultra-lightweight, self-hosted personal AI agent framework developed at the University of Hong Kong (HKUDS). Written in Python and distributed under the MIT license, it compresses the core agent loop, tool execution, long-term memory, MCP (Model Context Protocol) integration, model routing, multi-agent delegation, and scheduled automation into approximately 4,000 lines of code — roughly 99% fewer than OpenClaw. It ships with a built-in WebUI, a terminal CLI, and an OpenAI-compatible API, making it accessible across multiple interfaces without additional frontend tooling.\n\nThe architecture centers on a single gateway process that manages sessions, tool execution, memory consolidation, and provider routing. Recent commits show active hardening: a provider routing fix prevents local Ollama from hijacking cloud-namespaced models (e.g., NVIDIA NIM), memory compaction now tolerates malformed persisted summaries, and cron jobs preserve completion state during manual execution. The project supports multi-agent workflows where a primary agent can delegate subtasks to specialized sub-agents, and includes scheduled automation for recurring tasks.\n\nCompared to OpenClaw, nanobot prioritizes codebase minimalism and auditability over breadth of integrations. It lacks OpenClaw's extensive messaging platform connectors (WhatsApp, Telegram, Slack, Discord, Gmail) and its plugin ecosystem is still emerging. However, for teams that value transparency, fast local iteration, and a Python-native stack, nanobot delivers the core agent experience with significantly lower operational complexity. The project is actively maintained with frequent commits, a growing documentation wiki in multiple languages, and a PyPI package (`nanobot-ai`) for straightforward pip installation.",
-  "latest_release": {
-    "version": "v0.3.0",
-    "date": "2026-07-25T08:08:47Z",
-    "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0"
-  },
-  "last_updated": "2026-08-24T00:33:50.355Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -245,7 +212,36 @@
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
     "files_examined": 73,
-    "detected_at": "2026-08-23T04:27:52.262Z",
+    "detected_at": "2026-08-24T10:42:51.219Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Much smaller, more readable codebase that is easy to audit and modify",
+    "Lower resource footprint and faster startup for personal use",
+    "Simple pip install with WebUI, TUI, and gateway modes out of the box",
+    "OpenAI-compatible API and model routing built in"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller ecosystem and fewer community skills/integrations",
+    "Weaker sandboxing and isolation guarantees than container-based setups",
+    "Less proven at scale for long-running production deployments",
+    "Younger project with a rapidly changing TUI/WebUI surface"
+  ],
+  "confidence_summary": "Strong evidence from the README, PyPI packaging, CI, and active commit history confirms an actively maintained, lightweight agent framework. Sentiment evidence is thin (only one irrelevant Reddit match), so community and security scores carry moderate uncertainty.",
+  "evidence_confidence": 78,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T10:43:06.702Z",
+    "last_reviewed_at": "2026-08-24T10:43:06.702Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "**nanobot** is an ultra-lightweight, open-source personal AI agent framework from HKUDS, written in Python (3.11+) and distributed via PyPI as `nanobot-ai`. It runs as a WebUI, terminal UI, or chat-app gateway and packs tools, long-term memory, MCP integrations, model routing, multi-agent delegation, scheduled automation, and an OpenAI-compatible API into a deliberately small and readable core. It is MIT-licensed, ships with CI, multilingual docs, and an active Discord community.\n\nCompared to OpenClaw, nanobot trades ecosystem breadth and hardened isolation for simplicity and hackability: installation is a single pip command, the gateway can run as a long-lived service (`nanobot gateway`), and the codebase is small enough for a single developer to audit. Recent commits show heavy investment in the TUI experience (session states, draft preservation, Ctrl+C handling) and execution safeguards (command guard toggles in full-access mode), indicating rapid but somewhat fluid development. It is best suited to self-hosters and tinkerers who want a lean personal agent they can fully understand, rather than a batteries-included platform.",
+  "latest_release": {
+    "version": "v0.3.0",
+    "date": "2026-07-25T08:08:47Z",
+    "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0"
+  },
+  "last_updated": "2026-08-24T10:43:06.702Z"
 }

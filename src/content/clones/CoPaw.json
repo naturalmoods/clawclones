@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A polished, multi-chat-app personal AI assistant from the AgentScope ecosystem with strong local-first deployment and a rapidly iterating codebase. Recent commits show active hardening of memory, sandboxing, and console UX—signaling a maturing product rather than a toy prototype.",
   "health_status": "healthy",
-  "github_stars": 34359,
+  "github_stars": 34392,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 75,
@@ -25,7 +25,7 @@
     "agent-framework"
   ],
   "community_sentiment": 0,
-  "reddit_mentions": 14,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Users wanting a self-hosted AI assistant that plugs into multiple chat apps (Discord, DingTalk, etc.)",
@@ -51,41 +51,11 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-21T10:29:58Z",
-  "contributors_count": 226,
-  "open_issues_count": 917,
+  "last_commit_at": "2026-08-24T09:53:06Z",
+  "contributors_count": 227,
+  "open_issues_count": 903,
   "release_cadence_days": 3,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Native DingTalk integration for Chinese enterprise users — OpenClaw lacks this",
-    "AgentScope ecosystem alignment gives it a distinct agent-orchestration pedigree",
-    "Apache-2.0 license is more permissive than some OpenClaw components",
-    "Active sandbox hardening in recent commits suggests stronger execution isolation focus"
-  ],
-  "openclaw_disadvantages": [
-    "Python runtime means higher memory usage and slower boot vs OpenClaw's Rust/Go options",
-    "Smaller plugin ecosystem — OpenClaw has 86+ repos and a broader skill marketplace",
-    "No evidence of edge-optimized variants (no 'pico'/'nano' tier like picoclaw)",
-    "Community is heavily Chinese-platform focused (DingTalk, Discord CN) — less Western community gravity",
-    "Telemetry and data safety posture is undocumented compared to OpenClaw's explicit guardrail projects"
-  ],
-  "confidence_summary": "Evidence is moderate: README and commit history are rich and recent, confirming active development, but Reddit results are entirely noise (pet/cat posts matching 'paw'), and web search results are thin beyond GitHub listings. Community sentiment cannot be reliably scored from the provided data.",
-  "evidence_confidence": 62,
-  "content_ops": {
-    "last_generated_at": "2026-08-02T15:27:39.197Z",
-    "last_reviewed_at": "2026-08-02T15:27:39.197Z",
-    "refresh_mode": "rewrite",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "QwenPaw is a personal AI assistant framework developed under the AgentScope-AI organization, designed for easy installation and deployment on local machines or in the cloud. It supports multiple chat applications — including Discord and DingTalk — and emphasizes extensibility through a Python-based plugin architecture. The project is licensed under Apache-2.0 and targets Python 3.11 through 3.14, with a codebase that enforces Black formatting and maintains active CI/CD via PyPI releases.\n\nArchitecturally, QwenPaw appears to follow a modular agent design pattern common in the AgentScope ecosystem. Recent commits reveal a sophisticated memory subsystem (Auto-Memory with Scroll context eviction and a ReMe knowledge base), sandbox mode with auto-downgrade safety, ACP protocol support for session management, and git identity injection for coding workflows. The v2.0.1 release and the rapid cadence of fixes (audio transcription, console session integrity, skill injection) suggest a project in active hardening — moving from feature velocity toward production reliability.\n\nCompared to OpenClaw, QwenPaw differentiates through its AgentScope lineage and Chinese-platform integrations (DingTalk), but shares the same core vision of a self-hosted, multi-channel AI assistant. Where OpenClaw has diversified into Rust-based edge variants (picoclaw) and safety guardrails (NemoClaw), QwenPaw remains a Python-first monolith with an emerging plugin ecosystem. Its sandboxing and memory work are notable strengths, but the Python runtime imposes inherent latency and memory tradeoffs versus OpenClaw's compiled-language options.",
-  "latest_release": {
-    "version": "v2.1.0",
-    "date": "2026-08-13T12:43:27Z",
-    "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.1.0"
-  },
-  "last_updated": "2026-08-24T00:33:48.199Z",
   "model_support": {
     "providers": [
       "azure-openai",
@@ -203,7 +173,37 @@
     "default_model_released_at": "2025-11-24",
     "default_model_date_source": "catalogue",
     "files_examined": 114,
-    "detected_at": "2026-08-23T04:27:26.591Z",
+    "detected_at": "2026-08-24T10:23:54.912Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Native DingTalk integration for Chinese enterprise users — OpenClaw lacks this",
+    "AgentScope ecosystem alignment gives it a distinct agent-orchestration pedigree",
+    "Apache-2.0 license is more permissive than some OpenClaw components",
+    "Active sandbox hardening in recent commits suggests stronger execution isolation focus"
+  ],
+  "openclaw_disadvantages": [
+    "Python runtime means higher memory usage and slower boot vs OpenClaw's Rust/Go options",
+    "Smaller plugin ecosystem — OpenClaw has 86+ repos and a broader skill marketplace",
+    "No evidence of edge-optimized variants (no 'pico'/'nano' tier like picoclaw)",
+    "Community is heavily Chinese-platform focused (DingTalk, Discord CN) — less Western community gravity",
+    "Telemetry and data safety posture is undocumented compared to OpenClaw's explicit guardrail projects"
+  ],
+  "confidence_summary": "Evidence is moderate: README and commit history are rich and recent, confirming active development, but Reddit results are entirely noise (pet/cat posts matching 'paw'), and web search results are thin beyond GitHub listings. Community sentiment cannot be reliably scored from the provided data.",
+  "evidence_confidence": 62,
+  "content_ops": {
+    "last_generated_at": "2026-08-02T15:27:39.197Z",
+    "last_reviewed_at": "2026-08-24T10:24:16.267Z",
+    "refresh_mode": "refresh",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "QwenPaw is a personal AI assistant framework developed under the AgentScope-AI organization, designed for easy installation and deployment on local machines or in the cloud. It supports multiple chat applications — including Discord and DingTalk — and emphasizes extensibility through a Python-based plugin architecture. The project is licensed under Apache-2.0 and targets Python 3.11 through 3.14, with a codebase that enforces Black formatting and maintains active CI/CD via PyPI releases.\n\nArchitecturally, QwenPaw appears to follow a modular agent design pattern common in the AgentScope ecosystem. Recent commits reveal a sophisticated memory subsystem (Auto-Memory with Scroll context eviction and a ReMe knowledge base), sandbox mode with auto-downgrade safety, ACP protocol support for session management, and git identity injection for coding workflows. The v2.0.1 release and the rapid cadence of fixes (audio transcription, console session integrity, skill injection) suggest a project in active hardening — moving from feature velocity toward production reliability.\n\nCompared to OpenClaw, QwenPaw differentiates through its AgentScope lineage and Chinese-platform integrations (DingTalk), but shares the same core vision of a self-hosted, multi-channel AI assistant. Where OpenClaw has diversified into Rust-based edge variants (picoclaw) and safety guardrails (NemoClaw), QwenPaw remains a Python-first monolith with an emerging plugin ecosystem. Its sandboxing and memory work are notable strengths, but the Python runtime imposes inherent latency and memory tradeoffs versus OpenClaw's compiled-language options.",
+  "latest_release": {
+    "version": "v2.1.0",
+    "date": "2026-08-13T12:43:27Z",
+    "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.1.0"
+  },
+  "last_updated": "2026-08-24T10:24:16.267Z"
 }

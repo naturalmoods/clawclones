@@ -1,41 +1,41 @@
 {
   "id": "shabbirun/n8nclaw",
   "name": "n8nClaw",
-  "language": "JSON",
-  "vibe_summary": "A visual, no-code reinterpretation of OpenClaw that runs entirely inside n8n workflows. It wires Telegram, WhatsApp, Gmail, and an hourly heartbeat into a Claude-powered agent with Postgres memory and Supabase RAG.",
+  "language": "n8n Workflow (JSON)",
+  "vibe_summary": "A lightweight OpenClaw-inspired assistant built entirely as a single n8n visual workflow, with Telegram, WhatsApp, and Gmail channels plus tiered worker sub-agents. It trades code for drag-and-drop automation, leaning on Claude Sonnet 4.5 via OpenRouter and Supabase vector memory.",
   "health_status": "warning",
   "github_stars": 228,
   "metrics": {
-    "boot_time_ms": 150,
-    "memory_mb": 80,
-    "security_score": 30
+    "boot_time_ms": 250,
+    "memory_mb": 90,
+    "security_score": 45
   },
   "radar_chart": {
-    "sandboxing": 2,
+    "sandboxing": 3,
     "api_security": 4,
     "network_isolation": 3,
     "telemetry_safety": 5,
-    "shell_access_risk": 2
+    "shell_access_risk": 4
   },
   "tags": [
     "n8n",
-    "openclaw-clone",
-    "no-code",
+    "workflow-automation",
+    "self-hosted",
     "multi-channel",
-    "self-hosted"
+    "openclaw-alternative"
   ],
   "community_sentiment": 40,
   "reddit_mentions": 0,
-  "web_mentions": 0,
+  "web_mentions": 10,
   "best_for": [
-    "No-code enthusiasts wanting OpenClaw-like assistant",
-    "Self-hosters already running n8n",
-    "Teams needing multi-channel (Telegram/WhatsApp/Gmail) bots"
+    "n8n users who want an OpenClaw-style assistant without writing code",
+    "Self-hosters who prefer visual, editable workflows",
+    "Tinkerers wanting multi-channel messaging with minimal setup"
   ],
   "avoid_if": [
-    "Users wanting compiled binary or low-memory edge deploy",
-    "Those needing strong sandboxing/security defaults",
-    "Projects requiring official releases/long-term support"
+    "You need strong sandboxing or hardened security controls",
+    "You want a mature plugin ecosystem or active community",
+    "You need production-grade reliability and official releases"
   ],
   "deployment_target": [
     "self-hosted",
@@ -46,36 +46,13 @@
   "setup_difficulty": "medium",
   "privacy_posture": "mixed",
   "multi_user": true,
-  "plugin_ecosystem": "limited",
+  "plugin_ecosystem": "emerging",
   "license_type": null,
   "last_commit_at": "2026-02-10T13:21:28Z",
   "contributors_count": 2,
   "open_issues_count": 0,
   "release_cadence_days": null,
-  "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Visual workflow editing in n8n lowers coding barrier",
-    "Leverages existing n8n integrations for channels",
-    "Easy to audit logic as flowchart rather than code"
-  ],
-  "openclaw_disadvantages": [
-    "No compiled binary; requires running n8n stack",
-    "Less secure isolation than containerized alternatives",
-    "No plugin/skill ecosystem like OpenClaw",
-    "Dependent on external AI APIs and vector DB setup"
-  ],
-  "confidence_summary": "Evidence limited to README and initial commits; no releases or community discussion directly about n8nClaw. Web mentions refer to OpenClaw generically, creating uncertainty about project maturity.",
-  "evidence_confidence": 30,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:10:09.304Z",
-    "last_reviewed_at": "2026-08-02T15:53:36.925Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "n8nClaw is a lightweight alternative to OpenClaw implemented entirely as an n8n workflow export. Instead of a compiled agent runtime, it uses n8n's visual automation canvas to connect Telegram, WhatsApp (via Evolution API), Gmail, and an hourly schedule trigger into a central Claude Sonnet 4.5 agent powered by OpenRouter. The agent maintains short-term context in Postgres chat memory (15 messages) and offloads long-term recall to a Supabase vector store via a scheduled summarization pipeline using Haiku.\n\nThe architecture emphasizes no-code customization: users edit fields like 'soul' for personality, and tiered worker sub-agents handle research, email, and document tasks. Unlike OpenClaw's native multi-platform binaries, n8nClaw requires a self-hosted or cloud n8n instance with associated Postgres and Supabase credentials, making it accessible to those already in the n8n ecosystem but heavier to bootstrap for newcomers.\n\nCompared to OpenClaw, n8nClaw trades standalone efficiency and a dedicated skill registry for visual transparency and reuse of n8n's integration library. It currently lacks official releases, security hardening, and community traction beyond its GitHub stars.",
-  "last_updated": "2026-08-24T00:34:07.074Z",
+  "operational_risk": "high",
   "model_support": {
     "providers": [],
     "provider_count": 0,
@@ -91,7 +68,31 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 1,
-    "detected_at": "2026-08-23T04:30:49.516Z",
+    "detected_at": "2026-08-24T11:59:42.531Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "No-code visual workflow makes customization accessible to non-developers",
+    "Single-file n8n workflow is easy to import and inspect",
+    "Built-in multi-channel triggers (Telegram, WhatsApp, Gmail) via n8n nodes",
+    "Tiered worker sub-agents and scheduled memory pipeline included out of the box"
+  ],
+  "openclaw_disadvantages": [
+    "Depends on external services (OpenRouter, Supabase, Evolution API) rather than local-first",
+    "No sandboxing or security hardening comparable to OpenClaw's ecosystem",
+    "Very young project with only initial commits and no releases",
+    "No community discussion or Reddit presence to validate reliability"
+  ],
+  "confidence_summary": "Evidence is limited to the README, a handful of initial commits, and zero Reddit mentions; web results are mostly about other OpenClaw clones. Assessments of security, stability, and community traction carry high uncertainty.",
+  "evidence_confidence": 45,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:59:43.293Z",
+    "last_reviewed_at": "2026-08-24T11:59:43.293Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "n8nClaw reimagines OpenClaw as a single, self-hosted n8n workflow rather than a traditional codebase. It wires together Telegram, WhatsApp (via Evolution API), Gmail polling, and an hourly heartbeat trigger into a central AI agent node powered by Claude Sonnet 4.5 through OpenRouter, with Postgres-backed chat memory holding a 15-message context window.\n\nThe architecture includes tiered worker sub-agents, task and subtask databases, a configurable 'soul' personality field, and a scheduled memory pipeline that aggregates chat history, summarizes it with Haiku 4.5, embeds it via OpenAI, and stores it in a Supabase vector database for long-term RAG. Replies are routed back through the originating channel via a switch on the normalized message context.\n\nCompared to OpenClaw, n8nClaw sacrifices local-first operation, sandboxing, and a mature skill ecosystem in exchange for approachability: everything is a visual, editable workflow that non-developers can import and modify. However, the project is extremely young — only initial commits exist, there are no official releases, and there is no measurable community discussion yet, so production readiness is unproven.",
+  "last_updated": "2026-08-24T11:59:43.293Z"
 }

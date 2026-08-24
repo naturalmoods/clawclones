@@ -2,48 +2,47 @@
   "id": "nextlevelbuilder/goclaw",
   "name": "GoClaw",
   "language": "Go",
-  "vibe_summary": "A production-tested, multi-tenant AI agent gateway rebuilt from OpenClaw in Go, emphasizing safety and native concurrency. Ships as a single binary with PostgreSQL-backed isolation for deploying agent teams at scale.",
+  "vibe_summary": "A production-grade Go rewrite of OpenClaw focused on multi-tenant isolation and 5-layer security for deploying agent teams at scale. Ships as a single binary with 20+ LLM providers, 7 channels, and PostgreSQL-backed tenancy.",
   "health_status": "healthy",
-  "github_stars": 3554,
+  "github_stars": 3556,
   "metrics": {
-    "boot_time_ms": 25,
-    "memory_mb": 18,
-    "security_score": 85
+    "boot_time_ms": 35,
+    "memory_mb": 15,
+    "security_score": 82
   },
   "radar_chart": {
-    "sandboxing": 8,
+    "sandboxing": 7,
     "api_security": 8,
     "network_isolation": 7,
     "telemetry_safety": 6,
-    "shell_access_risk": 4
+    "shell_access_risk": 5
   },
   "tags": [
-    "openclaw-clone",
     "go",
     "multi-tenant",
-    "ai-agent",
-    "gateway"
+    "ai-agents",
+    "gateway",
+    "self-hosted"
   ],
-  "community_sentiment": 55,
-  "reddit_mentions": 0,
-  "web_mentions": 0,
+  "community_sentiment": 62,
+  "reddit_mentions": 1,
+  "web_mentions": 10,
   "best_for": [
-    "Teams needing multi-tenant AI agent deployment",
-    "Organizations wanting OpenClaw features with Go performance",
-    "Self-hosted scalable agent gateways"
+    "Teams deploying multi-tenant AI agent platforms",
+    "Operators wanting a single Go binary with PostgreSQL",
+    "Users needing many LLM providers and chat channels"
   ],
   "avoid_if": [
-    "Solo users wanting a simple local assistant",
-    "Projects requiring permissive open-source license (CC BY-NC is non-commercial)",
-    "Those avoiding PostgreSQL dependency"
+    "You need a permissive open-source license (CC BY-NC)",
+    "You want a lightweight single-user local assistant",
+    "You prefer minimal infrastructure without PostgreSQL"
   ],
   "deployment_target": [
     "cloud",
-    "self-hosted",
-    "desktop"
+    "self-hosted"
   ],
   "local_first": false,
-  "cloud_dependency": "required",
+  "cloud_dependency": "optional",
   "setup_difficulty": "medium",
   "privacy_posture": "mixed",
   "multi_user": true,
@@ -51,38 +50,9 @@
   "license_type": "NOASSERTION",
   "last_commit_at": "2026-08-22T13:57:05Z",
   "contributors_count": 104,
-  "open_issues_count": 266,
+  "open_issues_count": 268,
   "release_cadence_days": 2,
   "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Compiled Go binary offers lower memory and faster boot than Node/TS OpenClaw",
-    "Built-in multi-tenant isolation for team deployments",
-    "Explicit 5-layer security model for safer agent execution",
-    "Native concurrency handles many agents simultaneously"
-  ],
-  "openclaw_disadvantages": [
-    "Non-commercial CC BY-NC license limits enterprise adoption",
-    "Requires PostgreSQL, adding infrastructure overhead vs local-first OpenClaw",
-    "Smaller community (no Reddit mentions) vs OpenClaw's established ecosystem",
-    "Less focus on personal/local assistant use cases"
-  ],
-  "confidence_summary": "Evidence from README and recent commits shows active development and clear OpenClaw lineage, but limited external sentiment (0 Reddit, sparse web) reduces confidence in community traction.",
-  "evidence_confidence": 75,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:48:09.613Z",
-    "last_reviewed_at": "2026-08-02T15:53:28.615Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "GoClaw is a multi-tenant AI agent platform that reimplements the OpenClaw assistant gateway in Go. It provides a single-binary, production-tested service connecting to 20+ LLM providers across 7 communication channels (including Telegram, WhatsApp, Discord, Bitrix24), with multi-tenant PostgreSQL backing for isolation. Recent commits show active maintenance, with fixes for channel webhooks, i18n expansions (Russian, etc.), and memory search improvements.\n\nArchitecturally, GoClaw emphasizes safety via a claimed 5-layer security model and native concurrency for scaling agent teams. Unlike the original OpenClaw which is local-first and personal, GoClaw targets organizational deployments requiring tenant isolation and centralized management. It includes OpenTelemetry instrumentation, Docker deployment, and a web/desktop UI with extensive localization.\n\nCompared to OpenClaw, GoClaw trades local-first simplicity for multi-tenant scalability and Go performance, but adopts a non-commercial CC BY-NC 4.0 license and depends on external PostgreSQL and LLM APIs. Its plugin/skill ecosystem is emerging, mirroring OpenClaw's channels but with less community footprint so far.",
-  "latest_release": {
-    "version": "v3.14.0",
-    "date": "2026-06-15T08:59:44Z",
-    "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
-  },
-  "last_updated": "2026-08-24T00:33:57.636Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -247,7 +217,36 @@
     "default_model_released_at": "2026-05-31",
     "default_model_date_source": "catalogue",
     "files_examined": 99,
-    "detected_at": "2026-08-23T04:29:17.630Z",
+    "detected_at": "2026-08-24T11:20:51.296Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Native multi-tenant isolation with PostgreSQL",
+    "Single static Go binary, easy deployment",
+    "5-layer security model and native concurrency",
+    "20+ LLM providers and 7 messaging channels"
+  ],
+  "openclaw_disadvantages": [
+    "Non-commercial license restricts business use",
+    "Smaller community and ecosystem than OpenClaw",
+    "Heavier infrastructure requirements (PostgreSQL, Docker)",
+    "Less local-first, personal-assistant oriented"
+  ],
+  "confidence_summary": "Strong evidence from README, active commits, and release history confirms an actively maintained multi-tenant platform. Community sentiment data is thin (1 Reddit mention), so popularity and user satisfaction scores carry uncertainty.",
+  "evidence_confidence": 78,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:21:10.865Z",
+    "last_reviewed_at": "2026-08-24T11:21:10.865Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "GoClaw is a ground-up Go reimplementation of OpenClaw positioned as a **multi-tenant AI agent platform** rather than a personal assistant. It ships as a single binary backed by PostgreSQL 18, with support for 20+ LLM providers (Anthropic, OpenAI-compatible, Ollama, and more) and 7 messaging channels, plus WebSocket and OpenTelemetry instrumentation for production observability.\n\nIts headline differentiators are multi-tenant isolation, a 5-layer security model, and Go's native concurrency for orchestrating agent teams at scale. Recent commits show active hardening: Docker localhost rewrites for embedding providers, transactional archiving of channel message buffers, and media deduplication in the delivery pipeline — signs of a maturing production codebase with real operational users.\n\nCompared to OpenClaw, GoClaw trades the local-first, single-user experience for team-scale deployment and tenancy. The CC BY-NC 4.0 license is a notable constraint: commercial use requires caution, unlike more permissively licensed alternatives.",
+  "latest_release": {
+    "version": "v3.14.0",
+    "date": "2026-06-15T08:59:44Z",
+    "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
+  },
+  "last_updated": "2026-08-24T11:21:10.865Z"
 }

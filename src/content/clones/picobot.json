@@ -2,44 +2,44 @@
   "id": "louisho5/picobot",
   "name": "Picobot",
   "language": "Go",
-  "vibe_summary": "A featherweight Go-based AI agent that mirrors OpenClaw's capabilities in a ~9MB single binary, booting instantly on cheap hardware like $5 VPS or Raspberry Pi. It strips away Python/Node bloat for extreme efficiency without sacrificing persistent memory and tool calling.",
+  "vibe_summary": "An ultra-lightweight OpenClaw-inspired AI agent that ships as a single ~9MB Go binary with persistent memory, tool calling, and Telegram/Discord/Slack integration. Built to run on a $5 VPS, Raspberry Pi, or even an old Android phone via Termux.",
   "health_status": "healthy",
   "github_stars": 1340,
   "metrics": {
-    "boot_time_ms": 9,
-    "memory_mb": 1.9,
-    "security_score": 65
+    "boot_time_ms": 8,
+    "memory_mb": 10,
+    "security_score": 62
   },
   "radar_chart": {
-    "sandboxing": 3,
+    "sandboxing": 4,
     "api_security": 6,
     "network_isolation": 4,
     "telemetry_safety": 8,
-    "shell_access_risk": 5
+    "shell_access_risk": 7
   },
   "tags": [
     "go",
-    "self-hosted",
     "lightweight",
-    "ai-agent",
-    "openclaw-alternative"
+    "self-hosted",
+    "telegram-bot",
+    "single-binary"
   ],
-  "community_sentiment": 45,
-  "reddit_mentions": 0,
-  "web_mentions": 0,
+  "community_sentiment": 68,
+  "reddit_mentions": 6,
+  "web_mentions": 7,
   "best_for": [
-    "self-hosters on tiny VPS or Raspberry Pi",
-    "users wanting OpenClaw-like features without Python/Node",
-    "Telegram/Discord/Slack bot builders"
+    "Self-hosters wanting a minimal agent on cheap VPS or Raspberry Pi",
+    "Users who want Telegram/Discord/Slack bots without Python/Node bloat",
+    "Tinkerers who value a single-binary, zero-dependency deployment"
   ],
   "avoid_if": [
-    "need heavy enterprise sandboxing",
-    "require large plugin ecosystem like OpenClaw",
-    "want polished GUI/canvas like OpenClaw"
+    "You need a mature plugin/skill ecosystem or large community",
+    "You require strong sandboxing for untrusted tool execution",
+    "You want a battle-tested project with a long release history"
   ],
   "deployment_target": [
-    "edge",
     "self-hosted",
+    "edge",
     "cloud"
   ],
   "local_first": true,
@@ -53,36 +53,7 @@
   "contributors_count": 8,
   "open_issues_count": 20,
   "release_cadence_days": 4,
-  "operational_risk": "low",
-  "openclaw_advantages": [
-    "Runs in ~9MB binary with ~10MB RAM vs OpenClaw's heavier stack",
-    "Boots in milliseconds on $5 VPS or Raspberry Pi",
-    "Zero dependency single Go binary simplifies deployment",
-    "Lower attack surface due to minimal deps"
-  ],
-  "openclaw_disadvantages": [
-    "Smaller plugin/skills ecosystem than OpenClaw",
-    "No native GUI/Canvas or mobile apps like OpenClaw",
-    "Less community mindshare (fewer relevant Reddit mentions)",
-    "Limited enterprise sandboxing features"
-  ],
-  "confidence_summary": "Evidence from README and commits shows active development and clear OpenClaw alternative positioning, but Reddit/Web mentions refer to unrelated projects, causing uncertainty in community sentiment.",
-  "evidence_confidence": 80,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:11:25.979Z",
-    "last_reviewed_at": "2026-08-02T15:53:24.256Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "Picobot is a lightweight, self-hosted AI agent written entirely in Go, distributed as a single ~9MB binary with zero external dependencies. It provides persistent memory, tool calling, skills, and integrations with Telegram, Discord, and Slack, directly positioning itself as a lean alternative to OpenClaw. Recent commits show active development with added MCP server integration, Slack support, and configuration improvements, alongside a v0.2.0 release.\n\nArchitecturally, Picobot uses a simple config file and local filesystem persistence (`.picobot` directory) for memory and skills, enabling cold starts in milliseconds and idle RAM around 10MB (estimated highly optimized per naming). This contrasts with typical agent frameworks that require Python/Node environments and large containers. While it lacks the extensive plugin registry and graphical interfaces of OpenClaw, its minimal footprint makes it ideal for edge devices, cheap VPS, and Raspberry Pi deployments where resource constraints are paramount.",
-  "latest_release": {
-    "version": "v0.2.0",
-    "date": "2026-03-18T18:34:38Z",
-    "url": "https://github.com/louisho5/picobot/releases/tag/v0.2.0"
-  },
-  "last_updated": "2026-08-24T00:33:53.649Z",
+  "operational_risk": "medium",
   "model_support": {
     "providers": [
       "openai",
@@ -153,7 +124,36 @@
     "default_model_released_at": "2025-06-17",
     "default_model_date_source": "catalogue",
     "files_examined": 27,
-    "detected_at": "2026-08-23T04:28:22.796Z",
+    "detected_at": "2026-08-24T10:59:25.491Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "~9MB single binary vs heavyweight runtime stacks",
+    "~10MB idle RAM and near-instant cold start",
+    "Runs on extremely constrained hardware (Pi, Termux, $5 VPS)",
+    "Zero-dependency Docker image around 29MB"
+  ],
+  "openclaw_disadvantages": [
+    "Much smaller ecosystem of skills and integrations",
+    "Younger project with limited production track record",
+    "Fewer guardrails and sandboxing features documented",
+    "Single-maintainer risk compared to OpenClaw's community"
+  ],
+  "confidence_summary": "Evidence is solid on architecture and footprint from the README and releases, but community sentiment data is thin and partly off-topic (several Reddit matches are unrelated). Security and multi-user capabilities are inferred, not documented.",
+  "evidence_confidence": 62,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T10:59:30.622Z",
+    "last_reviewed_at": "2026-08-24T10:59:30.622Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "Picobot is a Go-based, single-binary AI agent explicitly positioned as a lightweight alternative to OpenClaw. It bundles persistent memory, tool calling, skills, and channel integrations (Telegram, Discord, Slack) into a ~9MB binary with ~10MB idle RAM usage, targeting deployments on $5 VPS instances, Raspberry Pis, or Android phones via Termux. Configuration, memory, and skills persist in a simple host-mounted data directory, and setup is a single `docker run` or `go build` away.\n\nRecent development is active: the v0.2.0 release added MCP server integration, a tool activity indicator, and hardened JSON error handling, suggesting the project is maturing its tool-calling surface. Compared to OpenClaw, Picobot trades ecosystem breadth and guardrails for radical simplicity — no Python, no Node, no heavy containers — making it one of the most resource-efficient entries in the OpenClaw-alternative landscape.",
+  "latest_release": {
+    "version": "v0.2.0",
+    "date": "2026-03-18T18:34:38Z",
+    "url": "https://github.com/louisho5/picobot/releases/tag/v0.2.0"
+  },
+  "last_updated": "2026-08-24T10:59:30.622Z"
 }

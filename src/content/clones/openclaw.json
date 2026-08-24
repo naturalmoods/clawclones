@@ -2,44 +2,43 @@
   "id": "openclaw/openclaw",
   "name": "OpenClaw",
   "language": "TypeScript",
-  "vibe_summary": "The original lobster-themed personal AI assistant that runs on your own devices across any OS and channel. Recent commits show relentless focus on trimming dead code, speeding up gateway startup, and polishing multi-channel UX.",
+  "vibe_summary": "The canonical personal AI assistant gateway: runs on your own devices and meets you in the chat channels you already use. Massive community momentum (387k stars) with extremely active development focused on UI performance, reliability, and multi-channel integrations.",
   "health_status": "healthy",
-  "github_stars": 387270,
+  "github_stars": 387294,
   "metrics": {
-    "boot_time_ms": 150,
-    "memory_mb": 80,
-    "security_score": 75
+    "boot_time_ms": 250,
+    "memory_mb": 90,
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 6,
+    "sandboxing": 5,
     "api_security": 7,
-    "network_isolation": 4,
+    "network_isolation": 5,
     "telemetry_safety": 7,
-    "shell_access_risk": 7
+    "shell_access_risk": 8
   },
   "tags": [
-    "personal-ai",
-    "assistant",
-    "local-first",
-    "multi-channel",
-    "typescript"
+    "personal-assistant",
+    "ai-agent",
+    "gateway",
+    "self-hosted",
+    "multi-channel"
   ],
-  "community_sentiment": 82,
-  "reddit_mentions": 0,
-  "web_mentions": 0,
+  "community_sentiment": 62,
+  "reddit_mentions": 21,
+  "web_mentions": 10,
   "best_for": [
-    "Users wanting a personal local AI assistant on any OS",
-    "Those needing broad chat channel integration (WhatsApp, Slack, etc)",
-    "Hobbyists building Jarvis-like setups"
+    "Power users wanting a single-operator AI assistant across devices",
+    "Users who want the assistant inside existing chat channels (Discord, Telegram, etc.)",
+    "Self-hosters comfortable running a Node.js gateway daemon"
   ],
   "avoid_if": [
-    "Enterprises needing multi-user RBAC",
-    "Users opposed to TypeScript/node runtime overhead",
-    "Those wanting a fully sandboxed zero-shell agent"
+    "You need a hardened multi-tenant or team deployment",
+    "You want a fully sandboxed agent with no direct shell/device access",
+    "You need guaranteed release stability; users report regressions between versions"
   ],
   "deployment_target": [
     "desktop",
-    "mobile",
     "self-hosted",
     "cloud"
   ],
@@ -50,38 +49,11 @@
   "multi_user": false,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-08-24T00:29:57Z",
-  "contributors_count": 3128,
-  "open_issues_count": 5982,
-  "release_cadence_days": 3,
-  "operational_risk": "low",
-  "openclaw_advantages": [
-    "Largest community and official support",
-    "Broadest channel support out of the box",
-    "First-party mobile apps (iOS/Android)",
-    "Extensive skill registry via ClawHub"
-  ],
-  "openclaw_disadvantages": [
-    "Heavier Node/TS runtime than pico/nano alternatives",
-    "Single-user focus limits team deployments"
-  ],
-  "confidence_summary": "Strong evidence from README, recent high-frequency commits, and widespread Reddit/Brave mentions; minor uncertainty on exact security posture due to limited explicit docs.",
-  "evidence_confidence": 92,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T01:49:57.901Z",
-    "last_reviewed_at": "2026-08-02T15:53:31.057Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "OpenClaw is a personal AI assistant framework designed to run locally on user-owned devices across macOS, Linux, Windows, iOS, and Android. Its architecture separates a lightweight Gateway control plane from the assistant product itself, enabling seamless integration with over 20 messaging channels including WhatsApp, Slack, Discord, and Matrix, while supporting voice, live Canvas rendering, and skill extensions via the ClawHub registry.\n\nRecent development activity shows a strong emphasis on performance and code hygiene: commits streamline cold startup and first agent turn latency, make gateway hot reload transactional, and aggressively trim dead exports across UI, Slack, browser, and plugin modules. This indicates a mature, actively maintained project focused on reliability and developer experience.\n\nUnlike many minimalist clones, OpenClaw prioritizes breadth of channel support, native mobile presence, and a rich plugin ecosystem, making it the reference implementation for local-first personal AI assistants, though its Node/TypeScript baseline implies higher resource usage than pico-scale alternatives.",
-  "latest_release": {
-    "version": "v2026.7.1-2",
-    "date": "2026-08-04T00:41:26Z",
-    "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-2"
-  },
-  "last_updated": "2026-08-24T00:34:00.226Z",
+  "last_commit_at": "2026-08-24T10:55:37Z",
+  "contributors_count": 3139,
+  "open_issues_count": 5866,
+  "release_cadence_days": 4,
+  "operational_risk": "medium",
   "model_support": {
     "providers": [
       "anthropic",
@@ -298,8 +270,36 @@
     "default_model_last_touched": "2026-07-11T13:30:57Z",
     "default_model_released_at": "2026-07-09",
     "default_model_date_source": "catalogue",
-    "files_examined": 278,
-    "detected_at": "2026-08-23T04:29:52.788Z",
+    "files_examined": 277,
+    "detected_at": "2026-08-24T11:31:20.293Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "This is the reference OpenClaw implementation itself",
+    "Largest community, skill registry (ClawHub), and ecosystem of any clone",
+    "Cross-platform installers and polished onboarding wizard",
+    "Very active development with frequent performance and reliability fixes"
+  ],
+  "openclaw_disadvantages": [
+    "Heavier Node.js runtime footprint than Go/Rust micro-clones",
+    "Broad device/shell access increases operational risk versus sandboxed alternatives",
+    "Community reports of version-to-version regressions and reliability complaints"
+  ],
+  "confidence_summary": "Strong evidence from the README, very recent commits, and release data confirms this is the actively maintained canonical OpenClaw project. Sentiment is mixed on Reddit (some 'is it dead' and reliability threads), so community_sentiment carries moderate uncertainty.",
+  "evidence_confidence": 90,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:32:03.621Z",
+    "last_reviewed_at": "2026-08-24T11:32:03.621Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "OpenClaw is the canonical open-source personal AI assistant gateway, written in TypeScript and designed for a single operator. It runs on your own devices (macOS, Linux, Windows) and connects models, tools, messaging channels (Discord, Telegram, and more), and optional companion apps through one central Gateway, with a web-based Control UI dashboard for management.\n\nArchitecturally it is a Node.js daemon (Node 22.22.3+/24.15+/25.9+) installed via curl/PowerShell installers or npm, with onboarding that verifies model access, provisions a workspace, and configures the Gateway. The ecosystem includes ClawHub, a public skill and plugin registry with thousands of community skills, plus companion projects and third-party harnesses that integrate with or import from OpenClaw.\n\nRecent development is heavily focused on polish and performance: the latest commits consolidate the Control UI boot chunk graph (cutting chat interactivity from ~1600ms to ~575ms at 50ms RTT), fix lazy-loading replay loops, and harden CI and dependency contracts. Compared to lightweight clones (e.g., Go-based PicoClaw), OpenClaw trades a heavier runtime footprint for the most complete feature set, largest community, and richest skill ecosystem in the space.",
+  "latest_release": {
+    "version": "v2026.7.1-2",
+    "date": "2026-08-04T00:41:26Z",
+    "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-2"
+  },
+  "last_updated": "2026-08-24T11:32:03.621Z"
 }

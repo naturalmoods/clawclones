@@ -25,7 +25,7 @@
     "local-first"
   ],
   "community_sentiment": 55,
-  "reddit_mentions": 0,
+  "reddit_mentions": 7,
   "web_mentions": 10,
   "best_for": [
     "Hobbyists wanting AI on tiny hardware",
@@ -53,34 +53,6 @@
   "open_issues_count": 111,
   "release_cadence_days": 36,
   "operational_risk": "low",
-  "openclaw_advantages": [
-    "Runs on $5 chip with 0.5W power",
-    "No OS overhead, pure C bare metal",
-    "Tiny footprint, physically portable"
-  ],
-  "openclaw_disadvantages": [
-    "Limited tooling vs full OpenClaw",
-    "No rich plugin/skill ecosystem",
-    "Requires flashing firmware, less accessible",
-    "Same cloud LLM dependency but less flexible"
-  ],
-  "confidence_summary": "README and commits confirm active OpenClaw-compatible embedded clone, but Reddit hits are unrelated game mentions, creating uncertainty in community sentiment.",
-  "evidence_confidence": 80,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T01:58:48.757Z",
-    "last_reviewed_at": "2026-08-02T15:53:24.773Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "MimiClaw is a hardware-native AI assistant that ports the OpenClaw concept onto a $5 ESP32-S3 microcontroller, running entirely in pure C without any operating system, Node.js, or external server. Its core architecture consists of a lightweight agent loop that receives Telegram messages over WiFi, queries Anthropic or OpenAI models, executes local tools, and persists session memory on onboard SPIFFS flash storage.\n\nRecent commits show active development: USB-JTAG console switching, SPIFFS binary inclusion in releases, GPIO skill support, and captive portal WiFi onboarding. Unlike OpenClaw which targets desktops, mobile, and cloud with a rich plugin ecosystem, MimiClaw prioritizes physical portability, 0.5W power draw, and a minimal attack surface on edge silicon.\n\nThe project is best suited for makers and embedded enthusiasts who want a pocket-sized, always-on assistant, but it lacks the multi-channel integrations, skill registry, and user-friendly setup of the parent OpenClaw project.",
-  "latest_release": {
-    "version": "v0.1.1",
-    "date": "2026-03-17T04:25:41Z",
-    "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
-  },
-  "last_updated": "2026-08-24T00:33:54.113Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -138,7 +110,35 @@
     "default_model_released_at": "2025-11-24",
     "default_model_date_source": "catalogue",
     "files_examined": 52,
-    "detected_at": "2026-08-23T04:28:26.627Z",
+    "detected_at": "2026-08-24T11:02:12.500Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Runs on $5 chip with 0.5W power",
+    "No OS overhead, pure C bare metal",
+    "Tiny footprint, physically portable"
+  ],
+  "openclaw_disadvantages": [
+    "Limited tooling vs full OpenClaw",
+    "No rich plugin/skill ecosystem",
+    "Requires flashing firmware, less accessible",
+    "Same cloud LLM dependency but less flexible"
+  ],
+  "confidence_summary": "README and commits confirm active OpenClaw-compatible embedded clone, but Reddit hits are unrelated game mentions, creating uncertainty in community sentiment.",
+  "evidence_confidence": 80,
+  "content_ops": {
+    "last_generated_at": "2026-07-13T01:58:48.757Z",
+    "last_reviewed_at": "2026-08-24T11:02:22.205Z",
+    "refresh_mode": "refresh",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "MimiClaw is a hardware-native AI assistant that ports the OpenClaw concept onto a $5 ESP32-S3 microcontroller, running entirely in pure C without any operating system, Node.js, or external server. Its core architecture consists of a lightweight agent loop that receives Telegram messages over WiFi, queries Anthropic or OpenAI models, executes local tools, and persists session memory on onboard SPIFFS flash storage.\n\nRecent commits show active development: USB-JTAG console switching, SPIFFS binary inclusion in releases, GPIO skill support, and captive portal WiFi onboarding. Unlike OpenClaw which targets desktops, mobile, and cloud with a rich plugin ecosystem, MimiClaw prioritizes physical portability, 0.5W power draw, and a minimal attack surface on edge silicon.\n\nThe project is best suited for makers and embedded enthusiasts who want a pocket-sized, always-on assistant, but it lacks the multi-channel integrations, skill registry, and user-friendly setup of the parent OpenClaw project.",
+  "latest_release": {
+    "version": "v0.1.1",
+    "date": "2026-03-17T04:25:41Z",
+    "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
+  },
+  "last_updated": "2026-08-24T11:02:22.205Z"
 }

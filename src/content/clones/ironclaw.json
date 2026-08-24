@@ -2,40 +2,40 @@
   "id": "nearai/ironclaw",
   "name": "IronClaw",
   "language": "Rust",
-  "vibe_summary": "A Rust rewrite of OpenClaw engineered for hardcore security with WASM sandboxing and capability-based permissions. The 'Reborn' runtime migration is active, showing a privacy-first agent OS with a passionate NEAR-aligned community.",
+  "vibe_summary": "A security-first Agent OS in Rust from NEAR AI that keeps all data local and encrypted with zero telemetry. Heavy investment in sandboxing, a polished WebUI, and an extension ecosystem make it one of the most production-grade OpenClaw alternatives.",
   "health_status": "healthy",
   "github_stars": 12602,
   "metrics": {
-    "boot_time_ms": 30,
+    "boot_time_ms": 35,
     "memory_mb": 15,
-    "security_score": 90
+    "security_score": 92
   },
   "radar_chart": {
     "sandboxing": 9,
-    "api_security": 8,
-    "network_isolation": 7,
-    "telemetry_safety": 8,
+    "api_security": 9,
+    "network_isolation": 8,
+    "telemetry_safety": 10,
     "shell_access_risk": 3
   },
   "tags": [
     "rust",
     "agent-os",
-    "privacy",
-    "security",
-    "openclaw-alternative"
+    "privacy-first",
+    "self-hosted",
+    "sandboxed"
   ],
-  "community_sentiment": 85,
-  "reddit_mentions": 0,
+  "community_sentiment": 78,
+  "reddit_mentions": 21,
   "web_mentions": 10,
   "best_for": [
-    "Privacy-focused users wanting a local AI assistant",
-    "Rust developers needing extensible agent framework",
-    "Web3/NEAR ecosystem automation tasks"
+    "Privacy-conscious users wanting a local-first assistant",
+    "Teams needing encrypted credential storage and auditability",
+    "Rust shops wanting a production-grade agent runtime"
   ],
   "avoid_if": [
-    "Want zero-build plug-and-play setup",
-    "Need massive mature plugin registry like ClawHub",
-    "Non-technical users uncomfortable with CLI and cargo"
+    "You want a zero-setup hosted SaaS assistant",
+    "You need a huge third-party plugin marketplace today",
+    "You are on unsupported platforms without WSL"
   ],
   "deployment_target": [
     "desktop",
@@ -44,43 +44,16 @@
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "medium",
+  "setup_difficulty": "low",
   "privacy_posture": "strong",
-  "multi_user": null,
+  "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-23T04:57:42Z",
+  "last_commit_at": "2026-08-24T08:02:28Z",
   "contributors_count": 119,
-  "open_issues_count": 1536,
+  "open_issues_count": 1541,
   "release_cadence_days": 3,
   "operational_risk": "low",
-  "openclaw_advantages": [
-    "Rust memory safety with WASM sandbox isolation",
-    "Capability-based permissions mitigate prompt injection",
-    "Privacy-first local execution, no mandatory cloud telemetry"
-  ],
-  "openclaw_disadvantages": [
-    "Smaller skill/plugin ecosystem than OpenClaw's ClawHub",
-    "Requires Rust toolchain build, less beginner-friendly",
-    "Reborn branch migration may cause transitional instability"
-  ],
-  "confidence_summary": "Strong evidence from README, commits, and search indicates active secure development; uncertainty remains on multi-user support and exact telemetry defaults.",
-  "evidence_confidence": 90,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T01:57:37.371Z",
-    "last_reviewed_at": "2026-08-02T15:53:27.105Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "IronClaw is an Agent OS written in Rust by NEAR AI, positioned as a security-hardened alternative to OpenClaw. Its architecture emphasizes privacy and extensibility through WASM sandbox isolation, capability-based permission models, and prompt-injection defenses, as noted in external summaries. The project is undergoing a significant transition with the 'Reborn' standalone runtime (on the `reborn-integration` branch) that introduces a separate `ironclaw-reborn` binary, isolated state roots, and CLI-native model route configuration.\n\nRecent commit activity shows heavy investment in test coverage, CI stability, and migration of core commands (`doctor`, `status`, `config`) to the Reborn framework, indicating a healthy, fast-moving codebase. Features include multi-provider LLM routing (OpenAI, local near.ai endpoints), Slack/Telegram integrations, and a skill/extension system. Compared to OpenClaw, IronClaw trades a larger plug-and-play ecosystem for stronger isolation guarantees and a memory-safe Rust foundation, targeting users who prioritize local-first operation and adversarial robustness.",
-  "latest_release": {
-    "version": "ironclaw-v1.3.0",
-    "date": "2026-08-19T23:17:37Z",
-    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.3.0"
-  },
-  "last_updated": "2026-08-24T00:33:56.147Z",
   "model_support": {
     "providers": [
       "anthropic",
@@ -273,7 +246,35 @@
     "default_model_released_at": "2025-06-17",
     "default_model_date_source": "catalogue",
     "files_examined": 143,
-    "detected_at": "2026-08-23T04:28:54.304Z",
+    "detected_at": "2026-08-24T11:10:56.398Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Rust core with stronger memory safety and lower footprint",
+    "Encrypted local credential store and no telemetry by design",
+    "Guided onboarding installer with background service setup",
+    "Active NEAR AI backing with very high commit velocity"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller skill/plugin ecosystem than OpenClaw's registry",
+    "Younger project with less third-party documentation",
+    "Some features tied to NEAR ecosystem incentives"
+  ],
+  "confidence_summary": "Strong evidence from README, release cadence, and dense recent commit history showing active, security-conscious development. Community sentiment is positive but partly self-hosted on its own subreddit, so independent validation is thinner.",
+  "evidence_confidence": 82,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T11:11:20.886Z",
+    "last_reviewed_at": "2026-08-24T11:11:20.886Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "IronClaw is an Agent OS written in Rust by NEAR AI, positioning itself as a security- and privacy-first personal AI assistant. Its core philosophy is that your assistant works for you: all data is stored locally and encrypted, credentials live in an encrypted store, and there is no hidden telemetry or data harvesting. Installation is streamlined via a tagged installer script and an `ironclaw onboard` guided setup that provisions configuration, LLM provider keys, and a WebUI login token, with background service support on macOS and Linux.\n\nArchitecturally, IronClaw is a multi-crate Rust workspace with a React/TypeScript WebUI, a durable per-recipient notification inbox, sandboxed execution (including Docker-based user sandboxes with egress controls), and an extension system for channels like Telegram. Recent commits show heavy investment in design-system tooling (Storybook), notification reliability, and rigorous CI gates, indicating mature engineering discipline.\n\nCompared to OpenClaw, IronClaw trades ecosystem breadth for a hardened, auditable core: it emphasizes sandboxing, encrypted local state, and transparency over a large skill marketplace. It is a strong fit for users and teams who prioritize data sovereignty and want a polished, actively maintained self-hosted agent platform.",
+  "latest_release": {
+    "version": "ironclaw-v1.3.0",
+    "date": "2026-08-19T23:17:37Z",
+    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.3.0"
+  },
+  "last_updated": "2026-08-24T11:11:20.886Z"
 }

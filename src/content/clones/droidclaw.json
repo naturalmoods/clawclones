@@ -2,47 +2,47 @@
   "id": "unitedbyai/droidclaw",
   "name": "DroidClaw",
   "language": "TypeScript",
-  "vibe_summary": "Turns old Android phones into LLM-powered agents that tap and type through apps via ADB, no API keys required. Recently shipped v0.5.3 with fixed device-web session sync and QStash scheduling.",
+  "vibe_summary": "DroidClaw turns old Android phones into autonomous AI agents that read the screen via accessibility trees and tap/type through ADB. Its standout trick is delegating tasks to on-device apps like ChatGPT or Gemini without needing API keys.",
   "health_status": "healthy",
   "github_stars": 1561,
   "metrics": {
-    "boot_time_ms": 200,
+    "boot_time_ms": 180,
     "memory_mb": 80,
-    "security_score": 50
+    "security_score": 45
   },
   "radar_chart": {
     "sandboxing": 3,
-    "api_security": 5,
-    "network_isolation": 6,
+    "api_security": 4,
+    "network_isolation": 3,
     "telemetry_safety": 5,
     "shell_access_risk": 8
   },
   "tags": [
     "android",
-    "ai-agent",
-    "automation",
     "adb",
-    "llm"
+    "mobile-agent",
+    "ui-automation",
+    "llm-agent"
   ],
-  "community_sentiment": 50,
+  "community_sentiment": 55,
   "reddit_mentions": 0,
-  "web_mentions": 0,
+  "web_mentions": 6,
   "best_for": [
-    "Repurposing old Android devices as autonomous agents",
-    "Non-technical users wanting app automation via plain English",
-    "Tasks requiring UI interaction without APIs"
+    "Repurposing old Android phones as AI agents",
+    "Automating mobile apps without APIs or integrations",
+    "Delegating tasks to on-device apps like ChatGPT or Gemini"
   ],
   "avoid_if": [
-    "Need strict security sandboxing",
-    "Require multi-user cloud deployment",
-    "Want deep OpenClaw plugin ecosystem"
+    "You need desktop or server-side automation",
+    "You require strong sandboxing or enterprise security controls",
+    "You want a mature, stable release (still pre-1.0)"
   ],
   "deployment_target": [
-    "android",
-    "cloud",
-    "self-hosted"
+    "edge",
+    "self-hosted",
+    "cloud"
   ],
-  "local_first": null,
+  "local_first": false,
   "cloud_dependency": "optional",
   "setup_difficulty": "medium",
   "privacy_posture": "mixed",
@@ -53,34 +53,7 @@
   "contributors_count": 2,
   "open_issues_count": 19,
   "release_cadence_days": 1,
-  "operational_risk": "medium",
-  "openclaw_advantages": [
-    "Direct control of Android apps via accessibility/ADB without API integrations",
-    "Repurposes idle hardware (old phones) as agents",
-    "Plain-English goals executed as tap/type/swipe sequences"
-  ],
-  "openclaw_disadvantages": [
-    "Lacks cross-platform support (desktop/OS-wide) that OpenClaw has",
-    "No plugin/skill ecosystem like OpenClaw's ClawHub",
-    "Less mature multi-channel communication (e.g., Slack, voice)"
-  ],
-  "confidence_summary": "README and commit history indicate active development, but community sentiment is inferred from absence of direct mentions; security and privacy practices are not detailed.",
-  "evidence_confidence": 70,
-  "content_ops": {
-    "last_generated_at": "2026-07-13T02:34:58.373Z",
-    "last_reviewed_at": "2026-08-02T15:53:40.385Z",
-    "refresh_mode": "refresh",
-    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
-    "generation_version": "clawclones-v2-decision-support"
-  },
-  "overview_markdown": "DroidClaw is an AI agent framework that transforms Android devices—particularly older phones—into autonomous agents capable of executing high-level goals expressed in natural language. Its core architecture implements a perception → reasoning → action loop: it dumps the accessibility tree via ADB, parses interactive UI elements, diffs screen changes, and optionally captures screenshots, then leverages an LLM to decide taps, types, and swipes until the objective is met or step limit reached.\n\nUnlike OpenClaw, which is a cross-platform personal assistant with a growing plugin ecosystem and multi-channel communication, DroidClaw focuses exclusively on device-level UI automation without requiring API keys or custom integrations. Recent commits show active maintenance: fixes for session mapping between device and web dashboard, idempotent database migrations, and QStash scheduling support indicate a maturing server component alongside the Android APK.\n\nThe project’s unique value lies in its ability to delegate tasks to existing apps (e.g., ChatGPT, Gemini, Google Search) by simulating human interaction, effectively turning any installed app into a tool for the agent. This makes it ideal for repurposing hardware, though it sacrifices the broad platform support and extensibility that OpenClaw provides.",
-  "latest_release": {
-    "version": "v0.5.3",
-    "date": "2026-02-25T14:48:02Z",
-    "url": "https://github.com/unitedbyai/droidclaw/releases/tag/v0.5.3"
-  },
-  "last_updated": "2026-08-24T00:34:10.794Z",
+  "operational_risk": "high",
   "model_support": {
     "providers": [
       "bedrock",
@@ -198,7 +171,36 @@
     "default_model_released_at": "2024-12-06",
     "default_model_date_source": "catalogue",
     "files_examined": 29,
-    "detected_at": "2026-08-23T04:31:23.424Z",
+    "detected_at": "2026-08-24T12:14:39.649Z",
     "detection_version": "1"
-  }
+  },
+  "openclaw_advantages": [
+    "Controls real Android devices via accessibility tree and ADB",
+    "Uses installed apps like a human, avoiding API key requirements",
+    "Web dashboard with scheduled goals and remote device pairing",
+    "Runs on cheap, retired phone hardware"
+  ],
+  "openclaw_disadvantages": [
+    "Narrower scope: Android UI automation only, not a general assistant",
+    "Early-stage (v0.5.x) with active bug fixes in core session handling",
+    "No skill/plugin registry comparable to OpenClaw's ecosystem",
+    "Unrestricted device control raises higher operational risk"
+  ],
+  "confidence_summary": "Evidence is solid for architecture and activity from the README and recent commits, but community sentiment is thin with zero Reddit matches and only indirect web results. Security and privacy assessments are inferred rather than documented.",
+  "evidence_confidence": 62,
+  "content_ops": {
+    "last_generated_at": "2026-08-24T12:14:45.795Z",
+    "last_reviewed_at": "2026-08-24T12:14:45.795Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "DroidClaw is a TypeScript-based AI agent that controls Android phones through a perception → reasoning → action loop. It dumps the accessibility tree via ADB, parses interactive UI elements, diffs screens to detect changes, and lets an LLM decide the next tap, type, or swipe — repeating until the goal is complete or the step budget runs out. The project ships an Android APK, a web dashboard, and a Bun-run kernel, with recent work adding scheduled goals via QStash and a shared session module for web-started goals.\n\nIts most distinctive capability is API-free delegation: the agent can open apps like ChatGPT, Gemini, or Google Search on the device itself, submit requests, and bring results back — using apps exactly as a human would. This makes it a compelling way to repurpose old Android hardware into useful agents without building integrations.\n\nCompared to OpenClaw, DroidClaw is narrower and more specialized: it focuses on mobile UI automation rather than general local assistance, and it lacks a skill registry or plugin ecosystem. It is also early-stage (v0.5.3) with active fixes around session management and scheduling, so expect rough edges. Security posture is a concern — the agent has broad control over the device, and no sandboxing model is documented.",
+  "latest_release": {
+    "version": "v0.5.3",
+    "date": "2026-02-25T14:48:02Z",
+    "url": "https://github.com/unitedbyai/droidclaw/releases/tag/v0.5.3"
+  },
+  "last_updated": "2026-08-24T12:14:45.795Z"
 }
