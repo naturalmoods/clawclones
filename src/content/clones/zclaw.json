@@ -4,7 +4,7 @@
   "language": "C",
   "vibe_summary": "zclaw crams a personal AI assistant into an 888 KiB ESP32 firmware, bringing LLM control to GPIO and sensors. It's a hacker-friendly, ultra-light alternative to OpenClaw for the physical world.",
   "health_status": "healthy",
-  "github_stars": 2218,
+  "github_stars": 2219,
   "metrics": {
     "boot_time_ms": 5,
     "memory_mb": 0.9,
@@ -81,7 +81,7 @@
     "date": "2026-03-22T07:08:28Z",
     "url": "https://github.com/tnm/zclaw/releases/tag/v2.13.0"
   },
-  "last_updated": "2026-08-23T12:26:54.793Z",
+  "last_updated": "2026-08-24T00:34:10.275Z",
   "model_support": {
     "providers": [
       "anthropic",

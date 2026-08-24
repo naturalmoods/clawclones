@@ -51,7 +51,7 @@
   "license_type": null,
   "last_commit_at": "2026-02-28T05:51:17Z",
   "contributors_count": 2,
-  "open_issues_count": 18,
+  "open_issues_count": 19,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "openclaw_advantages": [
@@ -80,7 +80,7 @@
     "date": "2026-02-25T14:48:02Z",
     "url": "https://github.com/unitedbyai/droidclaw/releases/tag/v0.5.3"
   },
-  "last_updated": "2026-08-23T12:26:55.364Z",
+  "last_updated": "2026-08-24T00:34:10.794Z",
   "model_support": {
     "providers": [
       "bedrock",
