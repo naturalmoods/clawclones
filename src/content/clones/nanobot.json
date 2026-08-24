@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-24T07:08:22Z",
   "contributors_count": 426,
-  "open_issues_count": 723,
+  "open_issues_count": 724,
   "release_cadence_days": 15,
   "operational_risk": "medium",
   "model_support": {
@@ -243,5 +243,5 @@
     "date": "2026-07-25T08:08:47Z",
     "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0"
   },
-  "last_updated": "2026-08-24T10:43:06.702Z"
+  "last_updated": "2026-08-24T12:36:05.618Z"
 }

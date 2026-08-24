@@ -53,7 +53,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-08-24T09:53:06Z",
   "contributors_count": 227,
-  "open_issues_count": 903,
+  "open_issues_count": 904,
   "release_cadence_days": 3,
   "operational_risk": "medium",
   "model_support": {
@@ -205,5 +205,5 @@
     "date": "2026-08-13T12:43:27Z",
     "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.1.0"
   },
-  "last_updated": "2026-08-24T10:24:16.267Z"
+  "last_updated": "2026-08-24T12:36:02.663Z"
 }
