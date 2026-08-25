@@ -57,38 +57,77 @@
   "model_support": {
     "providers": [
       "anthropic",
+      "fireworks",
       "google",
       "groq",
+      "litellm",
       "minimax",
       "mistral",
+      "moonshot",
+      "ollama",
       "openai",
       "openai-compatible",
       "openrouter",
       "xai",
       "zhipu"
     ],
-    "provider_count": 8,
-    "local_capable": false,
+    "provider_count": 10,
+    "local_capable": true,
     "aggregator_capable": true,
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "gpt-4o-mini",
-      "provider": "openai",
-      "path": "agent/plugin_llm.py",
-      "line": "allowed_models:    [openai/gpt-4o-mini]       # optional",
-      "strength": "weak"
+      "model": "claude-opus-4.6",
+      "provider": "anthropic",
+      "path": ".env.example",
+      "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
+      "strength": "strong"
     },
     "default_models": [
       {
-        "model": "gpt-4o-mini",
+        "model": "claude-opus-4.6",
+        "provider": "anthropic",
+        "path": ".env.example",
+        "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
+        "strength": "strong"
+      },
+      {
+        "model": "glm-5.2",
+        "provider": "zhipu",
+        "path": "hermes_cli/models.py",
+        "line": "PREFERRED_SILENT_DEFAULT_MODEL = \"z-ai/glm-5.2\"",
+        "strength": "strong"
+      },
+      {
+        "model": "grok-build-0.1",
+        "provider": "xai",
+        "path": "plugins/web/xai/provider.py",
+        "line": "DEFAULT_MODEL = \"grok-build-0.1\"",
+        "strength": "strong"
+      },
+      {
+        "model": "claude-sonnet-4",
+        "provider": "anthropic",
+        "path": "hermes_cli/config.py",
+        "line": "\"    model: anthropic/claude-sonnet-4\",",
+        "strength": "weak"
+      },
+      {
+        "model": "gpt-4o",
         "provider": "openai",
-        "path": "agent/plugin_llm.py",
-        "line": "allowed_models:    [openai/gpt-4o-mini]       # optional",
+        "path": "hermes_cli/config.py",
+        "line": "# (e.g. ``model: gpt-4o``).  Without this _set_nested replaces the",
+        "strength": "weak"
+      },
+      {
+        "model": "minimax-m2.7",
+        "provider": "minimax",
+        "path": "hermes_cli/model_switch.py",
+        "line": "model: \"minimax-m2.7\"",
         "strength": "weak"
       }
     ],
-    "default_model_ambiguous": false,
+    "default_model_ambiguous": true,
     "evidence": [
       {
         "kind": "dependency",
@@ -104,14 +143,26 @@
       },
       {
         "kind": "env_key",
+        "value": "FIREWORKS_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "FIREWORKS_API_KEY",
+        "path": "hermes_cli/providers.py",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
         "value": "GEMINI_API_KEY",
-        "path": "hermes_cli/setup.py",
+        "path": ".env.example",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "GOOGLE_API_KEY",
-        "path": "hermes_cli/setup.py",
+        "path": ".env.example",
         "strength": "strong"
       },
       {
@@ -123,7 +174,25 @@
       {
         "kind": "env_key",
         "value": "GROQ_API_KEY",
-        "path": "hermes_cli/setup.py",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "litellm",
+        "path": "hermes_cli/model_normalize.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "litellm",
+        "path": "hermes_cli/config.py",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
+        "value": "MINIMAX_API_KEY",
+        "path": ".env.example",
         "strength": "strong"
       },
       {
@@ -145,6 +214,30 @@
         "strength": "strong"
       },
       {
+        "kind": "env_key",
+        "value": "KIMI_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.moonshot.cn",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OLLAMA_BASE_URL",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OLLAMA_HOST",
+        "path": "hermes_cli/models.py",
+        "strength": "weak"
+      },
+      {
         "kind": "dependency",
         "value": "openai",
         "path": "hermes_cli/setup.py",
@@ -159,13 +252,13 @@
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "agent/curator.py",
+        "path": "model_tools.py",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "agent/insights.py",
+        "path": "hermes_cli/model_cost_guard.py",
         "strength": "strong"
       },
       {
@@ -187,23 +280,29 @@
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "api.x.ai",
-        "path": "agent/agent_init.py",
-        "strength": "weak"
+        "kind": "env_key",
+        "value": "XAI_API_KEY",
+        "path": "plugins/web/xai/provider.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "GLM_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
       },
       {
         "kind": "endpoint",
-        "value": "api.z.ai",
-        "path": "agent/retry_utils.py",
+        "value": "open.bigmodel.cn",
+        "path": ".env.example",
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-08-12T23:25:20Z",
-    "default_model_released_at": "2024-07-18",
+    "default_model_last_touched": "2026-08-21T07:24:32Z",
+    "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 44,
-    "detected_at": "2026-08-24T11:21:42.280Z",
+    "files_examined": 111,
+    "detected_at": "2026-08-25T04:33:21.947Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

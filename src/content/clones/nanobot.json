@@ -117,7 +117,7 @@
         "model": "gpt-4.1",
         "provider": "openai",
         "path": "nanobot/providers/github_copilot_provider.py",
-        "line": "def __init__(self, default_model: str = \"github-copilot/gpt-4.1\"):",
+        "line": "default_model: str = \"github-copilot/gpt-4.1\",",
         "strength": "strong"
       }
     ],
@@ -208,11 +208,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-07-29T13:37:11Z",
+    "default_model_last_touched": "2026-08-24T17:04:25Z",
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
-    "files_examined": 73,
-    "detected_at": "2026-08-24T10:42:51.219Z",
+    "files_examined": 74,
+    "detected_at": "2026-08-25T04:30:26.912Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
