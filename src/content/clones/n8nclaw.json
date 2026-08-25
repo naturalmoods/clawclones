@@ -94,5 +94,5 @@
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "n8nClaw reimagines OpenClaw as a single, self-hosted n8n workflow rather than a traditional codebase. It wires together Telegram, WhatsApp (via Evolution API), Gmail polling, and an hourly heartbeat trigger into a central AI agent node powered by Claude Sonnet 4.5 through OpenRouter, with Postgres-backed chat memory holding a 15-message context window.\n\nThe architecture includes tiered worker sub-agents, task and subtask databases, a configurable 'soul' personality field, and a scheduled memory pipeline that aggregates chat history, summarizes it with Haiku 4.5, embeds it via OpenAI, and stores it in a Supabase vector database for long-term RAG. Replies are routed back through the originating channel via a switch on the normalized message context.\n\nCompared to OpenClaw, n8nClaw sacrifices local-first operation, sandboxing, and a mature skill ecosystem in exchange for approachability: everything is a visual, editable workflow that non-developers can import and modify. However, the project is extremely young — only initial commits exist, there are no official releases, and there is no measurable community discussion yet, so production readiness is unproven.",
-  "last_updated": "2026-08-24T12:36:27.313Z"
+  "last_updated": "2026-08-25T00:32:55.751Z"
 }

@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 968968,
-    "total_stars_formatted": "969.0k",
+    "total_stars": 969508,
+    "total_stars_formatted": "969.5k",
     "most_active_language": "Rust",
     "language_breakdown": {
       "TypeScript": 9,
@@ -24,15 +24,15 @@
     "avg_sentiment": 54,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 387304,
+      "stars": 387436,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 235449,
-    "stars_growth_7d": 3657,
+    "stars": 235792,
+    "stars_growth_7d": 3461,
     "language": "Python",
     "sentiment": 82,
     "vibe_summary": "A self-improving, always-on agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It positions itself as the closest direct competitor to OpenClaw, with multi-platform messaging gateways and cross-session memory.",
@@ -46,25 +46,25 @@
     "visits": 4,
     "url": "https://clawclones.com/compare/hermes-agent-vs-zeroclaw"
   },
-  "updated_at": "2026-08-24T23:59:59.999Z",
-  "generated_at": "2026-08-24T12:36:34.798Z",
+  "updated_at": "2026-08-25T23:59:59.999Z",
+  "generated_at": "2026-08-25T00:33:01.627Z",
   "freshness": {
-    "updated_at": "2026-08-24T23:59:59.999Z",
-    "generated_at": "2026-08-24T12:36:34.798Z",
+    "updated_at": "2026-08-25T23:59:59.999Z",
+    "generated_at": "2026-08-25T00:33:01.627Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-08-24T12:36:34.503Z",
+        "updated_at": "2026-08-25T00:33:00.862Z",
         "age_hours": 0
       },
       "history": {
-        "updated_at": "2026-08-24T23:59:59.999Z",
+        "updated_at": "2026-08-25T23:59:59.999Z",
         "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-08-24T23:59:59.999Z",
+        "updated_at": "2026-08-25T23:59:59.999Z",
         "age_hours": 0
       }
     }
