@@ -3,7 +3,7 @@
   "name": "Coworker",
   "language": "TypeScript",
   "vibe_summary": "Open-source AI agent with MCP UI, app builder, A2A protocol, skills marketplace, and multi-provider chat. Built with Mastra. Alternative to OpenClaw.",
-  "health_status": "warning",
+  "health_status": "abandoned",
   "github_stars": 41,
   "metrics": {
     "boot_time_ms": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:26.849Z",
-    "last_reviewed_at": "2026-08-24T06:33:53.805Z",
+    "last_reviewed_at": "2026-08-25T06:25:11.453Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-02-23T06:54:57Z",
     "url": "https://github.com/Array-Ventures/coworker/releases/tag/v0.1.6"
   },
-  "last_updated": "2026-08-24T06:33:53.805Z",
+  "last_updated": "2026-08-25T06:25:11.453Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }
