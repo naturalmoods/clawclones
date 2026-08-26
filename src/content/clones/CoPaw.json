@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A polished, multi-chat-app personal AI assistant from the AgentScope ecosystem with strong local-first deployment and a rapidly iterating codebase. Recent commits show active hardening of memory, sandboxing, and console UX—signaling a maturing product rather than a toy prototype.",
   "health_status": "healthy",
-  "github_stars": 34462,
+  "github_stars": 34491,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 75,
@@ -51,9 +51,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-25T23:18:11Z",
-  "contributors_count": 228,
-  "open_issues_count": 908,
+  "last_commit_at": "2026-08-26T11:17:25Z",
+  "contributors_count": 229,
+  "open_issues_count": 902,
   "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
@@ -205,5 +205,5 @@
     "date": "2026-08-13T12:43:27Z",
     "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.1.0"
   },
-  "last_updated": "2026-08-26T00:33:41.186Z"
+  "last_updated": "2026-08-26T12:39:03.709Z"
 }
