@@ -183,9 +183,9 @@
   },
   "overview_markdown": "LobsterAI is an open-source, desktop-grade AI agent built by NetEase Youdao, leveraging OpenClaw as its underlying runtime and gateway. The project splits responsibilities: Cowork serves as the desktop session and product layer (handling UI, persistence, permissions, artifacts, memory, and IM bindings), while OpenClaw executes agent tasks. This architecture allows LobsterAI to operate directly on a user's real desktop environment—local files, terminal, browser, and office documents—while maintaining cross-platform support for macOS and Windows via Electron and React.\n\nUnique features include Desktop Cowork Sessions with approval-gated sensitive actions, Multi-Agent Workflows with custom identities and IM bindings, and scenario-oriented Expert Kits for repeatable office roles. Recent commits show active maintenance, with fixes for Windows title bar, queued follow-up coordination, and WeCom/DingTalk notification reliability. Compared to vanilla OpenClaw, LobsterAI provides a richer graphical interface, deeper integration with Chinese IM platforms (WeChat, Feishu, DingTalk), and packaged business workflows, but at the cost of a heavier Electron footprint and less minimalism.",
   "latest_release": {
-    "version": "2026.8.18",
-    "date": "2026-08-18T12:31:16Z",
-    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.8.18"
+    "version": "2026.8.25",
+    "date": "2026-08-25T13:45:21Z",
+    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.8.25"
   },
-  "last_updated": "2026-08-25T12:35:50.099Z"
+  "last_updated": "2026-08-26T00:33:49.265Z"
 }
