@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A desktop-grade AI agent from NetEase Youdao that wraps OpenClaw with a polished Electron UI and deep Chinese IM integrations. Actively shipped with frequent releases, it targets real-world office automation on your local machine.",
   "health_status": "healthy",
-  "github_stars": 5954,
+  "github_stars": 5957,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -50,7 +50,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-26T09:53:43Z",
   "contributors_count": 59,
-  "open_issues_count": 654,
+  "open_issues_count": 648,
   "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
@@ -183,9 +183,9 @@
   },
   "overview_markdown": "LobsterAI is an open-source, desktop-grade AI agent built by NetEase Youdao, leveraging OpenClaw as its underlying runtime and gateway. The project splits responsibilities: Cowork serves as the desktop session and product layer (handling UI, persistence, permissions, artifacts, memory, and IM bindings), while OpenClaw executes agent tasks. This architecture allows LobsterAI to operate directly on a user's real desktop environment—local files, terminal, browser, and office documents—while maintaining cross-platform support for macOS and Windows via Electron and React.\n\nUnique features include Desktop Cowork Sessions with approval-gated sensitive actions, Multi-Agent Workflows with custom identities and IM bindings, and scenario-oriented Expert Kits for repeatable office roles. Recent commits show active maintenance, with fixes for Windows title bar, queued follow-up coordination, and WeCom/DingTalk notification reliability. Compared to vanilla OpenClaw, LobsterAI provides a richer graphical interface, deeper integration with Chinese IM platforms (WeChat, Feishu, DingTalk), and packaged business workflows, but at the cost of a heavier Electron footprint and less minimalism.",
   "latest_release": {
-    "version": "2026.8.25",
-    "date": "2026-08-25T13:45:21Z",
-    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.8.25"
+    "version": "2026.8.26",
+    "date": "2026-08-27T11:34:52Z",
+    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.8.26"
   },
-  "last_updated": "2026-08-27T05:25:54.150Z"
+  "last_updated": "2026-08-27T21:35:10.212Z"
 }
