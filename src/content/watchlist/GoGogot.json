@@ -3,8 +3,8 @@
   "name": "GoGogot",
   "language": "Go",
   "vibe_summary": "Lightweight self-hosted AI agent. Open-source OpenClaw alternative in Go.",
-  "health_status": "warning",
-  "github_stars": 298,
+  "health_status": "healthy",
+  "github_stars": 286,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:25.278Z",
-    "last_reviewed_at": "2026-08-26T06:27:08.745Z",
+    "last_reviewed_at": "2026-08-27T17:00:33.727Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-03-21T17:27:11Z",
     "url": "https://github.com/aspasskiy/GoGogot/releases/tag/v0.1.0"
   },
-  "last_updated": "2026-08-26T06:27:08.745Z",
+  "last_updated": "2026-08-27T17:00:33.727Z",
   "watchlist_added": "2026-03-06T05:16:19.598Z",
   "promotion_status": "observing"
 }

@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:26.370Z",
-    "last_reviewed_at": "2026-08-26T06:27:16.641Z",
+    "last_reviewed_at": "2026-08-27T17:00:42.609Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,11 +55,11 @@
   },
   "overview_markdown": "",
   "latest_release": {
-    "version": "v1.0.145",
-    "date": "2026-08-25T02:41:26Z",
-    "url": "https://github.com/Miosa-osa/OSA/releases/tag/v1.0.145"
+    "version": "v1.0.151",
+    "date": "2026-08-27T10:17:04Z",
+    "url": "https://github.com/Miosa-osa/OSA/releases/tag/v1.0.151"
   },
-  "last_updated": "2026-08-26T06:27:16.641Z",
+  "last_updated": "2026-08-27T17:00:42.609Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }

@@ -4,7 +4,7 @@
   "language": "Astro",
   "vibe_summary": "pycoclaw - a new project under observation.",
   "health_status": "warning",
-  "github_stars": 162,
+  "github_stars": 164,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,14 +47,14 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:32.980Z",
-    "last_reviewed_at": "2026-08-26T06:27:12.640Z",
+    "last_reviewed_at": "2026-08-27T17:00:38.044Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "",
-  "last_updated": "2026-08-26T06:27:12.640Z",
+  "last_updated": "2026-08-27T17:00:38.044Z",
   "watchlist_added": "2026-03-13T00:10:01.123Z",
   "promotion_status": "observing"
 }
