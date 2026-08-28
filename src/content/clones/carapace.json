@@ -51,7 +51,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-08-24T03:30:43Z",
   "contributors_count": 5,
-  "open_issues_count": 19,
+  "open_issues_count": 20,
   "release_cadence_days": 7,
   "operational_risk": "low",
   "model_support": {
@@ -250,5 +250,5 @@
     "date": "2026-05-01T22:18:48Z",
     "url": "https://github.com/puremachinery/carapace/releases/tag/v0.8.0"
   },
-  "last_updated": "2026-08-27T21:35:16.427Z"
+  "last_updated": "2026-08-28T07:22:33.085Z"
 }
