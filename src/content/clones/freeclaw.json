@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A minimal Python CLI alternative to OpenClaw that wires up NVIDIA NIM, OpenRouter, and Groq with multi-agent Discord bots. Early-stage but pragmatic for self-hosters who want a lightweight, hackable assistant core.",
   "health_status": "warning",
-  "github_stars": 60,
+  "github_stars": 61,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 60,
@@ -153,5 +153,5 @@
     "date": "2026-02-22T17:20:21Z",
     "url": "https://github.com/openconstruct/freeclaw/releases/tag/0.1.0"
   },
-  "last_updated": "2026-08-28T07:22:30.354Z"
+  "last_updated": "2026-08-28T21:39:09.359Z"
 }

@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A security-first Agent OS in Rust from NEAR AI that keeps all data local and encrypted with zero telemetry. Heavy investment in sandboxing, a polished WebUI, and an extension ecosystem make it one of the most production-grade OpenClaw alternatives.",
   "health_status": "healthy",
-  "github_stars": 12604,
+  "github_stars": 12603,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 15,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-28T04:44:17Z",
+  "last_commit_at": "2026-08-28T16:56:34Z",
   "contributors_count": 119,
-  "open_issues_count": 1475,
+  "open_issues_count": 1479,
   "release_cadence_days": 2,
   "operational_risk": "low",
   "model_support": {
@@ -272,9 +272,9 @@
   },
   "overview_markdown": "IronClaw is an Agent OS written in Rust by NEAR AI, positioning itself as a security- and privacy-first personal AI assistant. Its core philosophy is that your assistant works for you: all data is stored locally and encrypted, credentials live in an encrypted store, and there is no hidden telemetry or data harvesting. Installation is streamlined via a tagged installer script and an `ironclaw onboard` guided setup that provisions configuration, LLM provider keys, and a WebUI login token, with background service support on macOS and Linux.\n\nArchitecturally, IronClaw is a multi-crate Rust workspace with a React/TypeScript WebUI, a durable per-recipient notification inbox, sandboxed execution (including Docker-based user sandboxes with egress controls), and an extension system for channels like Telegram. Recent commits show heavy investment in design-system tooling (Storybook), notification reliability, and rigorous CI gates, indicating mature engineering discipline.\n\nCompared to OpenClaw, IronClaw trades ecosystem breadth for a hardened, auditable core: it emphasizes sandboxing, encrypted local state, and transparency over a large skill marketplace. It is a strong fit for users and teams who prioritize data sovereignty and want a polished, actively maintained self-hosted agent platform.",
   "latest_release": {
-    "version": "ironclaw-v1.3.0",
-    "date": "2026-08-19T23:17:37Z",
-    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.3.0"
+    "version": "ironclaw-v1.4.0",
+    "date": "2026-08-28T11:19:24Z",
+    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.4.0"
   },
-  "last_updated": "2026-08-28T07:22:25.879Z"
+  "last_updated": "2026-08-28T21:39:04.922Z"
 }
