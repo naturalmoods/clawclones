@@ -4,7 +4,7 @@
   "language": "Zig",
   "vibe_summary": "A 678 KB static Zig binary that delivers a full autonomous AI assistant stack with ~1 MB RAM and sub-2ms boot. It's the extreme-minimalist, runs-on-anything answer to heavyweight agent frameworks.",
   "health_status": "healthy",
-  "github_stars": 8051,
+  "github_stars": 8052,
   "metrics": {
     "boot_time_ms": 2,
     "memory_mb": 1,
@@ -285,5 +285,5 @@
     "date": "2026-05-29T13:41:10Z",
     "url": "https://github.com/nullclaw/nullclaw/releases/tag/v2026.5.29"
   },
-  "last_updated": "2026-08-29T04:33:29.169Z"
+  "last_updated": "2026-08-29T16:03:17.044Z"
 }

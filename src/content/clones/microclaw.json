@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A self-hosted Rust agent runtime inspired by nanoclaw, unifying one agent loop across Telegram, Discord, Slack, Feishu, and web. Fresh off a v0.5.0 monolith-decomposition sweep with a React 19/Vite 8 operator console.",
   "health_status": "healthy",
-  "github_stars": 730,
+  "github_stars": 731,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.8,
@@ -190,5 +190,5 @@
     "date": "2026-08-27T23:17:33Z",
     "url": "https://github.com/microclaw/microclaw/releases/tag/v0.5.4"
   },
-  "last_updated": "2026-08-29T04:33:25.125Z"
+  "last_updated": "2026-08-29T16:03:13.007Z"
 }
