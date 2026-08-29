@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A security-first Agent OS in Rust from NEAR AI that keeps all data local and encrypted with zero telemetry. Heavy investment in sandboxing, a polished WebUI, and an extension ecosystem make it one of the most production-grade OpenClaw alternatives.",
   "health_status": "healthy",
-  "github_stars": 12603,
+  "github_stars": 12602,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 15,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-08-28T16:56:34Z",
+  "last_commit_at": "2026-08-29T03:31:20Z",
   "contributors_count": 119,
-  "open_issues_count": 1479,
+  "open_issues_count": 1477,
   "release_cadence_days": 2,
   "operational_risk": "low",
   "model_support": {
@@ -276,5 +276,5 @@
     "date": "2026-08-28T11:19:24Z",
     "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.4.0"
   },
-  "last_updated": "2026-08-28T21:39:04.922Z"
+  "last_updated": "2026-08-29T04:33:26.640Z"
 }
