@@ -1,17 +1,13 @@
 {
-  "generated_at": "2026-08-24",
-  "data_as_of": "2026-08-24",
+  "generated_at": "2026-08-30",
+  "data_as_of": "2026-08-30",
   "model": "moonshotai/kimi-k3",
   "tldr": [
-    "Hermes Agent gained the most stars in absolute terms; grip-ai grew fastest by percentage.",
-    "Edge and minimalist projects are the largest cohort at 20, with a median security score of 85.",
-    "Compiled runtimes average 79 on security versus 67 for scripting runtimes.",
-    "34 projects are local-first, but 10 require a cloud connection and 10 have unknown licenses."
+    "43 tracked projects added 5637 stars this week, with 18 flat or declining.",
+    "Hermes Agent gained the most stars in absolute terms; Ouroboros grew fastest by percentage.",
+    "22 of 43 projects fit the edge and minimalist profile, the largest single cohort.",
+    "Compiled runtimes average a security score of 75 against 65 for scripting runtimes.",
+    "34 projects are local-first and only 4 require a cloud account to run."
   ],
-  "sections": {
-    "movement": "Star gains this week were broad but uneven. Hermes Agent added the most stars in absolute terms, well ahead of OpenClaw, which still holds the largest total by a wide margin. QwenPaw stands out by appearing on both the absolute and percentage lists, suggesting sustained rather than incidental interest. At the small end, grip-ai's 10% jump shows how quickly a low-base project can move. Meanwhile 12 of the 43 tracked projects were flat or declining, so growth is concentrated rather than universal. For a reader comparing options, raw totals favor incumbents, while percentage movers flag projects worth a closer look before they mature.",
-    "architecture": "The cohorts split cleanly by footprint. The 20 edge and minimalist projects run at a median of 10.5 MB memory and 22.5 ms boot, and they also carry the highest median security score at 85, making them the natural pick for embedded or resource-constrained deployments. The 9 team and multi-tenant projects trade that efficiency for multi-user support, at 80 MB and 200 ms boot with a median security of 65. The 14 full-runtime assistants sit between on footprint at 80 MB and 150 ms. Choose edge for constrained targets, team cohort for shared deployments, full-runtime for general assistant use.",
-    "security": "The runtime split has a measurable cost. The 19 compiled-runtime projects average a security score of 79, with median sandboxing at 7 and shell risk at 4. The 24 scripting-runtime projects average 67, with sandboxing at 5.5 and shell risk at 7, meaning weaker isolation and more exposure to unsupervised shell execution. Across the whole set, only 12 projects qualify as hardened and 9 allow unsupervised shell access. If an agent will run untrusted inputs or execute commands, the compiled cohort is the safer default; scripting-based tools demand more external guardrails before production use.",
-    "posture": "Local control is the norm in this ecosystem: 34 of 43 projects are local-first and 30 treat cloud as optional, while 10 require a cloud connection outright. Multi-user support remains a minority feature at 14 projects, so shared deployments narrow the field quickly. Licensing is permissive overall, led by MIT at 20 projects and Apache-2.0 at 10, with only 2 AGPL-3.0 and 1 GPL-3.0 entries for teams wary of copyleft. The gap to watch is the 10 projects with unknown licenses, which is a real due-diligence item for any commercial adoption regardless of how strong the rest of the profile looks."
-  }
+  "sections": {}
 }
