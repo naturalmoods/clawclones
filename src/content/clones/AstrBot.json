@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A massively popular Python-based AI agent framework that bridges dozens of IM platforms (QQ, WeChat, Telegram, Discord) with pluggable LLMs and tools. It positions itself explicitly as an OpenClaw alternative with a strong plugin ecosystem and web-based management UI.",
   "health_status": "healthy",
-  "github_stars": 39775,
+  "github_stars": 39807,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -50,7 +50,7 @@
   "license_type": "AGPL-3.0",
   "last_commit_at": "2026-08-29T14:40:46Z",
   "contributors_count": 348,
-  "open_issues_count": 1460,
+  "open_issues_count": 1467,
   "release_cadence_days": 5,
   "operational_risk": "medium",
   "model_support": {
@@ -193,5 +193,5 @@
     "date": "2026-08-19T16:53:43Z",
     "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.27.4"
   },
-  "last_updated": "2026-08-30T02:03:05.256Z"
+  "last_updated": "2026-08-30T15:52:14.184Z"
 }

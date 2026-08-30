@@ -4,7 +4,7 @@
   "language": "C",
   "vibe_summary": "An ultra-minimalist AI personal assistant that squeezes onto an ESP32 microcontroller with an all-in firmware budget of 888 KiB. It brings GPIO control, cron scheduling, persistent memory, and custom tools to bare-metal hardware.",
   "health_status": "healthy",
-  "github_stars": 2222,
+  "github_stars": 2223,
   "metrics": {
     "boot_time_ms": 5,
     "memory_mb": 1,
@@ -165,5 +165,5 @@
     "date": "2026-03-22T07:08:28Z",
     "url": "https://github.com/tnm/zclaw/releases/tag/v2.13.0"
   },
-  "last_updated": "2026-08-30T02:03:24.247Z"
+  "last_updated": "2026-08-30T15:52:34.720Z"
 }
