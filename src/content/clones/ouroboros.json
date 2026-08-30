@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-modifying AI agent with persistent identity and durable memory that can rewrite its own code, prompts, and architecture across restarts. Ships as a polished native desktop app with a swarm of specialist agents and a skills marketplace.",
   "health_status": "healthy",
-  "github_stars": 1236,
+  "github_stars": 1239,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -48,10 +48,10 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-27T13:21:45Z",
-  "contributors_count": 31,
-  "open_issues_count": 154,
-  "release_cadence_days": 1,
+  "last_commit_at": "2026-08-29T18:18:09Z",
+  "contributors_count": 33,
+  "open_issues_count": 159,
+  "release_cadence_days": 2,
   "operational_risk": "high",
   "model_support": {
     "providers": [
@@ -169,9 +169,9 @@
   },
   "overview_markdown": "Ouroboros is an open-source, general-purpose AI agent built around a striking premise: it can rewrite the very implementation it runs on. Its identity, durable memory, and history persist across tasks and restarts, and reflection can change how it understands itself without breaking continuity. It coordinates a live swarm of specialist agents and works on external projects, with Claudexor serving as its pinned delegated execution layer for Claude Code, Codex, Cursor, and OpenCode harnesses.\n\nThe runtime keeps its repository, memory, and history on your machine, while inference can use remote APIs you configure or a local GGUF model. It ships as a native desktop app (macOS, Windows, Debian/RPM Linux packages) or a headless CLI, so end users never need to touch Python. A companion OuroborosHub skills marketplace extends its capabilities, and a CONTRIBUTING.md-gated, separate-agent review flow governs changes to its own codebase.\n\nCompared to OpenClaw, Ouroboros pushes further into autonomous self-development and persistent identity, but that power comes with elevated risk: an agent that rewrites its own code and has shell access demands careful supervision. Recent commits show active, disciplined maintenance (cost-tracking honesty fixes, deterministic ordering, frequent releases up to v6.109.0), though community discussion remains thin and most Reddit 'Ouroboros' chatter is unrelated.",
   "latest_release": {
-    "version": "v6.109.0",
-    "date": "2026-08-21T23:01:20Z",
-    "url": "https://github.com/razzant/ouroboros/releases/tag/v6.109.0"
+    "version": "v6.113.1",
+    "date": "2026-08-29T19:05:45Z",
+    "url": "https://github.com/razzant/ouroboros/releases/tag/v6.113.1"
   },
-  "last_updated": "2026-08-29T16:03:23.186Z"
+  "last_updated": "2026-08-30T02:03:20.489Z"
 }
