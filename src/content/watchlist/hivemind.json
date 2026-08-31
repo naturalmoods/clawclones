@@ -4,7 +4,7 @@
   "language": "Ruby",
   "vibe_summary": "Hivemind — Multi-agent AI team platform",
   "health_status": "healthy",
-  "github_stars": 72,
+  "github_stars": 71,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:28.381Z",
-    "last_reviewed_at": "2026-08-30T10:51:48.140Z",
+    "last_reviewed_at": "2026-08-31T12:02:35.004Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-07-10T23:35:35Z",
     "url": "https://github.com/hivementality-ai/hivemind/releases/tag/2026.07.01"
   },
-  "last_updated": "2026-08-30T10:51:48.140Z",
+  "last_updated": "2026-08-31T12:02:35.004Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }
