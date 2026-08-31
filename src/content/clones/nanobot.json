@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "An ultra-lightweight, self-hosted personal AI agent framework from HKUDS with a readable Python core, WebUI/TUI, memory, MCP, and multi-agent workflows. It positions itself as the lean, hackable alternative to heavier agent harnesses like OpenClaw.",
   "health_status": "healthy",
-  "github_stars": 47535,
+  "github_stars": 47543,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.5,
@@ -49,9 +49,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-30T09:48:44Z",
+  "last_commit_at": "2026-08-30T16:06:15Z",
   "contributors_count": 430,
-  "open_issues_count": 761,
+  "open_issues_count": 762,
   "release_cadence_days": 15,
   "operational_risk": "medium",
   "model_support": {
@@ -243,5 +243,5 @@
     "date": "2026-07-25T08:08:47Z",
     "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0"
   },
-  "last_updated": "2026-08-30T15:52:15.258Z"
+  "last_updated": "2026-08-31T01:58:48.630Z"
 }

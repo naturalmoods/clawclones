@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A multi-agent, multi-team orchestrator (formerly TinyClaw) that runs isolated AI agent teams 24/7 with a slick web 'TinyOffice' dashboard. It leans into the 'one person company' fantasy with team chat rooms, task boards, and pixel-office visualizations.",
   "health_status": "healthy",
-  "github_stars": 3609,
+  "github_stars": 3610,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 90,
@@ -136,5 +136,5 @@
     "date": "2026-03-26T17:23:07Z",
     "url": "https://github.com/TinyAGI/tinyagi/releases/tag/v0.0.20"
   },
-  "last_updated": "2026-08-30T15:52:34.215Z"
+  "last_updated": "2026-08-31T01:59:08.691Z"
 }
