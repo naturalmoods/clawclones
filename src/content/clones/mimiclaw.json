@@ -50,7 +50,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-21T14:17:29Z",
   "contributors_count": 7,
-  "open_issues_count": 111,
+  "open_issues_count": 112,
   "release_cadence_days": 36,
   "operational_risk": "low",
   "model_support": {
@@ -140,5 +140,5 @@
     "date": "2026-03-17T04:25:41Z",
     "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
   },
-  "last_updated": "2026-08-31T01:58:52.643Z"
+  "last_updated": "2026-08-31T18:36:18.760Z"
 }

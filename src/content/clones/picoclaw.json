@@ -4,7 +4,7 @@
   "language": "Go",
   "vibe_summary": "An ultra-lightweight Go rewrite of the personal AI assistant concept, built from scratch by Sipeed to run on $10 boards with ~10MB RAM. Massive community traction and rapid commit velocity make it the flagship 'tiny claw' for edge and embedded deployments.",
   "health_status": "healthy",
-  "github_stars": 29919,
+  "github_stars": 29917,
   "metrics": {
     "boot_time_ms": 5,
     "memory_mb": 2,
@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-19T09:17:32Z",
   "contributors_count": 237,
-  "open_issues_count": 35,
+  "open_issues_count": 36,
   "release_cadence_days": 13,
   "operational_risk": "medium",
   "model_support": {
@@ -262,5 +262,5 @@
     "date": "2026-07-03T07:37:06Z",
     "url": "https://github.com/sipeed/picoclaw/releases/tag/v0.3.1"
   },
-  "last_updated": "2026-08-31T01:59:06.793Z"
+  "last_updated": "2026-08-31T18:36:32.639Z"
 }

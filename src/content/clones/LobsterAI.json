@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A desktop-grade AI agent from NetEase Youdao that wraps OpenClaw with a polished Electron UI and deep Chinese IM integrations. Actively shipped with frequent releases, it targets real-world office automation on your local machine.",
   "health_status": "healthy",
-  "github_stars": 5962,
+  "github_stars": 5967,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -50,7 +50,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-28T15:20:26Z",
   "contributors_count": 60,
-  "open_issues_count": 628,
+  "open_issues_count": 626,
   "release_cadence_days": 3,
   "operational_risk": "medium",
   "model_support": {
@@ -187,5 +187,5 @@
     "date": "2026-08-28T15:13:46Z",
     "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.8.28"
   },
-  "last_updated": "2026-08-31T01:58:55.391Z"
+  "last_updated": "2026-08-31T18:36:21.478Z"
 }
