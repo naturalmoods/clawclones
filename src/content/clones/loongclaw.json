@@ -55,21 +55,37 @@
   "release_cadence_days": 17,
   "operational_risk": "medium",
   "model_support": {
-    "providers": [],
-    "provider_count": 0,
+    "providers": [
+      "openai",
+      "openai-compatible"
+    ],
+    "provider_count": 1,
     "local_capable": false,
     "aggregator_capable": false,
-    "byo_endpoint": false,
+    "byo_endpoint": true,
     "provider_lock": null,
     "default_model": null,
     "default_models": [],
     "default_model_ambiguous": false,
-    "evidence": [],
+    "evidence": [
+      {
+        "kind": "endpoint",
+        "value": "api.openai.com",
+        "path": "crates/provider-openai/src/client.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "crates/provider-openai/src/client.rs",
+        "strength": "strong"
+      }
+    ],
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 19,
-    "detected_at": "2026-08-29T10:35:10.507Z",
+    "files_examined": 25,
+    "detected_at": "2026-08-31T10:16:20.301Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
