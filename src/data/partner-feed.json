@@ -47,25 +47,25 @@
     "url": "https://clawclones.com/compare/hermes-agent-vs-nanobot"
   },
   "updated_at": "2026-08-30T23:59:59.999Z",
-  "generated_at": "2026-08-30T15:52:38.150Z",
+  "generated_at": "2026-08-31T01:50:33.004Z",
   "freshness": {
     "updated_at": "2026-08-30T23:59:59.999Z",
-    "generated_at": "2026-08-30T15:52:38.150Z",
-    "source_age_hours": 0,
+    "generated_at": "2026-08-31T01:50:33.004Z",
+    "source_age_hours": 1.8,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
         "updated_at": "2026-08-30T15:52:37.791Z",
-        "age_hours": 0
+        "age_hours": 10
       },
       "history": {
         "updated_at": "2026-08-30T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 1.8
       },
       "analytics": {
         "updated_at": "2026-08-30T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 1.8
       }
     }
   }
