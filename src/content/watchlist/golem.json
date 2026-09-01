@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:30.967Z",
-    "last_reviewed_at": "2026-08-31T12:02:38.757Z",
+    "last_reviewed_at": "2026-09-01T10:41:28.218Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-03-19T09:55:10Z",
     "url": "https://github.com/MEKXH/golem/releases/tag/v0.7.1"
   },
-  "last_updated": "2026-08-31T12:02:38.757Z",
+  "last_updated": "2026-09-01T10:41:28.218Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }
