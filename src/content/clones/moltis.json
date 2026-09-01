@@ -49,9 +49,9 @@
   "multi_user": null,
   "plugin_ecosystem": "limited",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-31T18:03:14Z",
+  "last_commit_at": "2026-08-31T20:35:48Z",
   "contributors_count": 68,
-  "open_issues_count": 79,
+  "open_issues_count": 80,
   "release_cadence_days": 4,
   "operational_risk": "low",
   "model_support": {
@@ -230,9 +230,9 @@
   },
   "overview_markdown": "Moltis is a security-first personal agent server written in Rust, positioned explicitly as a hardened alternative to OpenClaw. It ships as a single self-contained binary — no Node.js, no npm, no external runtime — and is designed to run on hardware you own, from a Mac Mini to a Raspberry Pi. The core value proposition is 'secure by design': API keys never leave your machine, and every command the agent executes runs inside a sandboxed container rather than directly on the host.\n\nFeature-wise it is batteries-included rather than plugin-driven: voice, persistent memory with cross-session recall, automatic edit checkpoints, scheduling/cron, browser automation (with stealth mode), MCP server support, SSH or node-backed remote execution, and integrations for Telegram, Signal, WhatsApp, Discord, and Teams are all built into the core. The author deliberately avoids a plugin marketplace to eliminate supply-chain attack surface, which is the sharpest architectural divergence from OpenClaw's skills ecosystem.\n\nThe codebase emphasizes auditability: the agent runner and model interface fit in roughly 7.5K lines, with ~270K lines across 59 modular crates and 470+ test files, and unsafe code is confined to FFI boundaries. Recent commits show active maintenance across WhatsApp media handling, cron delivery, browser container support, and i18n. Compared to OpenClaw, Moltis trades ecosystem breadth and community size for a smaller, auditable, memory-safe core with stronger default isolation.",
   "latest_release": {
-    "version": "20260830.01",
-    "date": "2026-08-31T04:19:30Z",
-    "url": "https://github.com/moltis-org/moltis/releases/tag/20260830.01"
+    "version": "20260831.01",
+    "date": "2026-08-31T20:35:26Z",
+    "url": "https://github.com/moltis-org/moltis/releases/tag/20260831.01"
   },
-  "last_updated": "2026-08-31T18:36:20.350Z"
+  "last_updated": "2026-09-01T02:20:48.223Z"
 }

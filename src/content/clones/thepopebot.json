@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-05-13T20:16:48Z",
   "contributors_count": 5,
-  "open_issues_count": 48,
+  "open_issues_count": 49,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "model_support": {
@@ -194,5 +194,5 @@
     "date": "2026-05-13T20:49:05Z",
     "url": "https://github.com/stephengpope/thepopebot/releases/tag/v1.2.82"
   },
-  "last_updated": "2026-08-31T18:36:33.655Z"
+  "last_updated": "2026-09-01T02:21:12.756Z"
 }
