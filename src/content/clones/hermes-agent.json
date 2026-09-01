@@ -57,40 +57,30 @@
   "model_support": {
     "providers": [
       "anthropic",
-      "fireworks",
       "google",
       "groq",
       "litellm",
       "minimax",
       "mistral",
-      "moonshot",
-      "ollama",
       "openai",
       "openai-compatible",
       "openrouter",
       "xai",
       "zhipu"
     ],
-    "provider_count": 10,
-    "local_capable": true,
+    "provider_count": 8,
+    "local_capable": false,
     "aggregator_capable": true,
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "claude-opus-4.6",
-      "provider": "anthropic",
-      "path": ".env.example",
-      "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
+      "model": "glm-5.2",
+      "provider": "zhipu",
+      "path": "hermes_cli/models.py",
+      "line": "PREFERRED_SILENT_DEFAULT_MODEL = \"z-ai/glm-5.2\"",
       "strength": "strong"
     },
     "default_models": [
-      {
-        "model": "claude-opus-4.6",
-        "provider": "anthropic",
-        "path": ".env.example",
-        "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
-        "strength": "strong"
-      },
       {
         "model": "glm-5.2",
         "provider": "zhipu",
@@ -125,6 +115,13 @@
         "path": "hermes_cli/model_switch.py",
         "line": "model: \"minimax-m2.7\"",
         "strength": "weak"
+      },
+      {
+        "model": "deepseek-v4-flash-20260423",
+        "provider": "deepseek",
+        "path": "hermes_cli/model_normalize.py",
+        "line": "# ``provider: DeepSeek`` / ``model: deepseek-v4-flash-20260423`` when called",
+        "strength": "weak"
       }
     ],
     "default_model_ambiguous": true,
@@ -143,26 +140,14 @@
       },
       {
         "kind": "env_key",
-        "value": "FIREWORKS_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "FIREWORKS_API_KEY",
-        "path": "hermes_cli/providers.py",
-        "strength": "weak"
-      },
-      {
-        "kind": "env_key",
         "value": "GEMINI_API_KEY",
-        "path": ".env.example",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "GOOGLE_API_KEY",
-        "path": ".env.example",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
@@ -174,7 +159,7 @@
       {
         "kind": "env_key",
         "value": "GROQ_API_KEY",
-        "path": ".env.example",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
@@ -192,14 +177,14 @@
       {
         "kind": "env_key",
         "value": "MINIMAX_API_KEY",
-        "path": ".env.example",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "MINIMAX_API_KEY",
-        "path": "hermes_cli/setup.py",
-        "strength": "strong"
+        "path": "hermes_cli/config.py",
+        "strength": "weak"
       },
       {
         "kind": "dependency",
@@ -212,30 +197,6 @@
         "value": "MISTRAL_API_KEY",
         "path": "hermes_cli/setup.py",
         "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "KIMI_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "api.moonshot.cn",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "OLLAMA_BASE_URL",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "OLLAMA_HOST",
-        "path": "hermes_cli/models.py",
-        "strength": "weak"
       },
       {
         "kind": "dependency",
@@ -286,23 +247,23 @@
         "strength": "strong"
       },
       {
-        "kind": "env_key",
-        "value": "GLM_API_KEY",
-        "path": ".env.example",
+        "kind": "endpoint",
+        "value": "api.z.ai",
+        "path": "agent/retry_utils.py",
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "open.bigmodel.cn",
-        "path": ".env.example",
-        "strength": "strong"
+        "kind": "env_key",
+        "value": "GLM_API_KEY",
+        "path": "hermes_cli/providers.py",
+        "strength": "weak"
       }
     ],
-    "default_model_last_touched": "2026-08-29T15:21:17Z",
-    "default_model_released_at": "2026-02-04",
+    "default_model_last_touched": "2026-08-31T18:19:26Z",
+    "default_model_released_at": "2026-06-16",
     "default_model_date_source": "catalogue",
-    "files_examined": 111,
-    "detected_at": "2026-08-31T10:18:31.790Z",
+    "files_examined": 110,
+    "detected_at": "2026-09-01T09:04:19.780Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
