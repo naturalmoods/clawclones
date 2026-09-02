@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A git-native agent framework where identity, rules, memory, tools, and skills are all version-controlled files — fork an agent, branch a personality, git log its memory. Recently hardened with security fixes and a Rust port (ira) powering a Tauri desktop app.",
   "health_status": "healthy",
-  "github_stars": 665,
+  "github_stars": 667,
   "metrics": {
     "boot_time_ms": 40,
     "memory_mb": 18,
@@ -189,5 +189,5 @@
     "date": "2026-08-20T06:54:09Z",
     "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.2.0"
   },
-  "last_updated": "2026-09-02T01:42:09.138Z"
+  "last_updated": "2026-09-02T15:47:59.868Z"
 }

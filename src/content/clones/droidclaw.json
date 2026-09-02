@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "DroidClaw turns old Android phones into autonomous AI agents that read the screen via accessibility trees and tap/type through ADB. Its standout trick is delegating tasks to on-device apps like ChatGPT or Gemini without needing API keys.",
   "health_status": "healthy",
-  "github_stars": 1559,
+  "github_stars": 1558,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 80,
@@ -202,5 +202,5 @@
     "date": "2026-02-25T14:48:02Z",
     "url": "https://github.com/unitedbyai/droidclaw/releases/tag/v0.5.3"
   },
-  "last_updated": "2026-09-02T01:42:21.086Z"
+  "last_updated": "2026-09-02T15:48:12.204Z"
 }
