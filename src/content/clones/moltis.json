@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A security-first Rust reimplementation of the OpenClaw personal agent concept, shipping as a single auditable binary with sandboxed execution. It trades plugin-marketplace breadth for a hardened, batteries-included core with voice, memory, and multi-channel messaging built in.",
   "health_status": "healthy",
-  "github_stars": 2841,
+  "github_stars": 2840,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 18,
@@ -49,9 +49,9 @@
   "multi_user": null,
   "plugin_ecosystem": "limited",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-01T06:19:03Z",
+  "last_commit_at": "2026-09-01T16:58:21Z",
   "contributors_count": 68,
-  "open_issues_count": 80,
+  "open_issues_count": 79,
   "release_cadence_days": 4,
   "operational_risk": "low",
   "model_support": {
@@ -234,5 +234,5 @@
     "date": "2026-08-31T20:35:26Z",
     "url": "https://github.com/moltis-org/moltis/releases/tag/20260831.01"
   },
-  "last_updated": "2026-09-01T15:55:22.431Z"
+  "last_updated": "2026-09-02T01:42:04.483Z"
 }

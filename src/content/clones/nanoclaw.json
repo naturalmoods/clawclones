@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A security-first, radically minimal OpenClaw alternative that isolates each agent in its own Linux container instead of relying on app-level permission checks. It pairs a tiny auditable codebase with multi-channel messaging (Slack, Telegram, Discord, WhatsApp, Gmail) on Anthropic's Agents SDK.",
   "health_status": "healthy",
-  "github_stars": 30674,
+  "github_stars": 30677,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.8,
@@ -51,9 +51,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-31T22:54:56Z",
+  "last_commit_at": "2026-09-01T18:29:33Z",
   "contributors_count": 166,
-  "open_issues_count": 1076,
+  "open_issues_count": 1078,
   "release_cadence_days": 17,
   "operational_risk": "low",
   "model_support": {
@@ -118,5 +118,5 @@
     "date": "2026-08-24T11:45:32Z",
     "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2.3.0"
   },
-  "last_updated": "2026-09-01T15:55:32.657Z"
+  "last_updated": "2026-09-02T01:42:15.146Z"
 }

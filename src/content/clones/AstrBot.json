@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A massively popular Python-based AI agent framework that bridges dozens of IM platforms (QQ, WeChat, Telegram, Discord) with pluggable LLMs and tools. It positions itself explicitly as an OpenClaw alternative with a strong plugin ecosystem and web-based management UI.",
   "health_status": "healthy",
-  "github_stars": 39905,
+  "github_stars": 39906,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -48,9 +48,9 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "AGPL-3.0",
-  "last_commit_at": "2026-09-01T15:48:12Z",
+  "last_commit_at": "2026-09-01T17:11:58Z",
   "contributors_count": 351,
-  "open_issues_count": 1462,
+  "open_issues_count": 1464,
   "release_cadence_days": 6,
   "operational_risk": "medium",
   "model_support": {
@@ -189,9 +189,9 @@
   },
   "overview_markdown": "AstrBot is a Python 3.12+ AI agent assistant and development framework focused on bridging large language models with a wide array of instant messaging platforms, including QQ, WeChat/WeCom, Telegram, and Discord. It ships with a web-based management UI, a plugin marketplace, and support for many LLM providers (OpenAI, Anthropic, NVIDIA, and more), making it one of the most popular open-source IM-bot agent frameworks with nearly 40k stars.\n\nArchitecturally, it uses an async Python core with SQLite-backed persistence, pluggable provider adapters, and an event pipeline for message handling. Recent commits show active maintenance: memory optimizations in the preferences store, SDK compatibility fixes for Anthropic 1.0, and platform-specific webhook fixes. Compared to OpenClaw, AstrBot is more of a multi-platform chatbot framework than a local-first personal agent — it excels at IM integration and plugin extensibility but offers weaker sandboxing and a heavier runtime footprint.",
   "latest_release": {
-    "version": "v4.27.5",
-    "date": "2026-08-31T17:14:36Z",
-    "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.27.5"
+    "version": "v4.28.0-beta.1",
+    "date": "2026-09-01T17:15:22Z",
+    "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.28.0-beta.1"
   },
-  "last_updated": "2026-09-01T15:55:15.849Z"
+  "last_updated": "2026-09-02T01:41:57.583Z"
 }
