@@ -57,12 +57,11 @@
     "providers": [
       "anthropic",
       "llamacpp",
-      "minimax",
       "openai",
       "openai-compatible",
       "openrouter"
     ],
-    "provider_count": 3,
+    "provider_count": 2,
     "local_capable": true,
     "aggregator_capable": true,
     "byo_endpoint": true,
@@ -88,18 +87,6 @@
         "value": "llama-cpp-python",
         "path": "pyproject.toml",
         "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "api.minimaxi.com",
-        "path": "ouroboros/gateway/settings.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "MINIMAX_API_KEY",
-        "path": "ouroboros/config.py",
-        "strength": "weak"
       },
       {
         "kind": "dependency",
@@ -142,7 +129,7 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 22,
-    "detected_at": "2026-09-01T09:07:27.766Z",
+    "detected_at": "2026-09-03T08:33:51.629Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
