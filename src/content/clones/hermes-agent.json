@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-improving, always-on agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It positions itself as the closest direct competitor to OpenClaw, with multi-platform messaging gateways and cross-session memory.",
   "health_status": "healthy",
-  "github_stars": 239912,
+  "github_stars": 240150,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-01T15:09:07Z",
-  "contributors_count": 3278,
-  "open_issues_count": 38469,
+  "last_commit_at": "2026-09-02T22:30:56Z",
+  "contributors_count": 3291,
+  "open_issues_count": 38602,
   "release_cadence_days": 5,
   "operational_risk": "medium",
   "model_support": {
@@ -295,5 +295,5 @@
     "date": "2026-08-31T19:29:49Z",
     "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31"
   },
-  "last_updated": "2026-09-02T15:47:58.266Z"
+  "last_updated": "2026-09-03T01:47:53.650Z"
 }
