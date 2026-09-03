@@ -4,7 +4,7 @@
   "language": "Kotlin",
   "vibe_summary": "OpenClaw alternative in your pocket",
   "health_status": "healthy",
-  "github_stars": 1211,
+  "github_stars": 1218,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:24.813Z",
-    "last_reviewed_at": "2026-09-02T10:07:05.480Z",
+    "last_reviewed_at": "2026-09-03T10:18:05.219Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-08-30T10:05:20Z",
     "url": "https://github.com/SimonSchubert/Kai/releases/tag/v3.1.0"
   },
-  "last_updated": "2026-09-02T10:07:05.480Z",
+  "last_updated": "2026-09-03T10:18:05.219Z",
   "watchlist_added": "2026-03-06T05:16:19.597Z",
   "promotion_status": "observing"
 }
