@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A polished, multi-chat-app personal AI assistant from the AgentScope ecosystem with strong local-first deployment and a rapidly iterating codebase. Recent commits show active hardening of memory, sandboxing, and console UX—signaling a maturing product rather than a toy prototype.",
   "health_status": "healthy",
-  "github_stars": 34809,
+  "github_stars": 34849,
   "metrics": {
     "boot_time_ms": 150,
     "memory_mb": 75,
@@ -51,9 +51,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-09-02T08:48:07Z",
+  "last_commit_at": "2026-09-03T08:57:48Z",
   "contributors_count": 232,
-  "open_issues_count": 920,
+  "open_issues_count": 931,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "model_support": {
@@ -201,9 +201,9 @@
   },
   "overview_markdown": "QwenPaw is a personal AI assistant framework developed under the AgentScope-AI organization, designed for easy installation and deployment on local machines or in the cloud. It supports multiple chat applications — including Discord and DingTalk — and emphasizes extensibility through a Python-based plugin architecture. The project is licensed under Apache-2.0 and targets Python 3.11 through 3.14, with a codebase that enforces Black formatting and maintains active CI/CD via PyPI releases.\n\nArchitecturally, QwenPaw appears to follow a modular agent design pattern common in the AgentScope ecosystem. Recent commits reveal a sophisticated memory subsystem (Auto-Memory with Scroll context eviction and a ReMe knowledge base), sandbox mode with auto-downgrade safety, ACP protocol support for session management, and git identity injection for coding workflows. The v2.0.1 release and the rapid cadence of fixes (audio transcription, console session integrity, skill injection) suggest a project in active hardening — moving from feature velocity toward production reliability.\n\nCompared to OpenClaw, QwenPaw differentiates through its AgentScope lineage and Chinese-platform integrations (DingTalk), but shares the same core vision of a self-hosted, multi-channel AI assistant. Where OpenClaw has diversified into Rust-based edge variants (picoclaw) and safety guardrails (NemoClaw), QwenPaw remains a Python-first monolith with an emerging plugin ecosystem. Its sandboxing and memory work are notable strengths, but the Python runtime imposes inherent latency and memory tradeoffs versus OpenClaw's compiled-language options.",
   "latest_release": {
-    "version": "v2.1.0",
-    "date": "2026-08-13T12:43:27Z",
-    "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.1.0"
+    "version": "v2.2.0",
+    "date": "2026-09-03T03:25:04Z",
+    "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.0"
   },
-  "last_updated": "2026-09-03T01:47:44.770Z"
+  "last_updated": "2026-09-03T15:37:16.532Z"
 }

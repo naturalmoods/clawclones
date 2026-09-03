@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "The canonical personal AI assistant gateway: runs on your own devices and meets you in the chat channels you already use. Massive community momentum (387k stars) with extremely active development focused on UI performance, reliability, and multi-channel integrations.",
   "health_status": "healthy",
-  "github_stars": 388664,
+  "github_stars": 388734,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -49,9 +49,9 @@
   "multi_user": false,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-09-03T01:47:18Z",
-  "contributors_count": 3247,
-  "open_issues_count": 6081,
+  "last_commit_at": "2026-09-03T15:16:24Z",
+  "contributors_count": 3257,
+  "open_issues_count": 6108,
   "release_cadence_days": 3,
   "operational_risk": "medium",
   "model_support": {
@@ -301,5 +301,5 @@
     "date": "2026-09-01T16:00:56Z",
     "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.8.2"
   },
-  "last_updated": "2026-09-03T01:47:55.416Z"
+  "last_updated": "2026-09-03T15:37:31.429Z"
 }

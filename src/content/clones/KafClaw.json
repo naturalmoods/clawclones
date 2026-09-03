@@ -48,7 +48,7 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-09-01T14:30:12Z",
+  "last_commit_at": "2026-09-03T07:30:11Z",
   "contributors_count": 5,
   "open_issues_count": 0,
   "release_cadence_days": 5,
@@ -188,5 +188,5 @@
     "date": "2026-06-17T15:05:13Z",
     "url": "https://github.com/KafClaw/KafClaw/releases/tag/v1.0.0"
   },
-  "last_updated": "2026-09-03T01:47:47.813Z"
+  "last_updated": "2026-09-03T15:37:20.977Z"
 }
