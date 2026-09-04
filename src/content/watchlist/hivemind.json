@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:28.381Z",
-    "last_reviewed_at": "2026-09-03T10:17:58.151Z",
+    "last_reviewed_at": "2026-09-04T10:11:06.562Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-07-10T23:35:35Z",
     "url": "https://github.com/hivementality-ai/hivemind/releases/tag/2026.07.01"
   },
-  "last_updated": "2026-09-03T10:17:58.151Z",
+  "last_updated": "2026-09-04T10:11:06.562Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }

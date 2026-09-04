@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:29.839Z",
-    "last_reviewed_at": "2026-09-03T10:18:04.260Z",
+    "last_reviewed_at": "2026-09-04T10:11:12.369Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-03-16T10:47:15Z",
     "url": "https://github.com/oujingzhou/openmozi/releases/tag/1.11.1"
   },
-  "last_updated": "2026-09-03T10:18:04.260Z",
+  "last_updated": "2026-09-04T10:11:12.369Z",
   "watchlist_added": "2026-03-09T00:10:49.059Z",
   "promotion_status": "observing"
 }
