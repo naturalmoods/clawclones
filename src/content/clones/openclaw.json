@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "The canonical personal AI assistant gateway: runs on your own devices and meets you in the chat channels you already use. Massive community momentum (387k stars) with extremely active development focused on UI performance, reliability, and multi-channel integrations.",
   "health_status": "healthy",
-  "github_stars": 388789,
+  "github_stars": 388831,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -49,9 +49,9 @@
   "multi_user": false,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-09-04T01:40:16Z",
-  "contributors_count": 3257,
-  "open_issues_count": 6284,
+  "last_commit_at": "2026-09-04T15:25:12Z",
+  "contributors_count": 3260,
+  "open_issues_count": 6263,
   "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
@@ -297,9 +297,9 @@
   },
   "overview_markdown": "OpenClaw is the canonical open-source personal AI assistant gateway, written in TypeScript and designed for a single operator. It runs on your own devices (macOS, Linux, Windows) and connects models, tools, messaging channels (Discord, Telegram, and more), and optional companion apps through one central Gateway, with a web-based Control UI dashboard for management.\n\nArchitecturally it is a Node.js daemon (Node 22.22.3+/24.15+/25.9+) installed via curl/PowerShell installers or npm, with onboarding that verifies model access, provisions a workspace, and configures the Gateway. The ecosystem includes ClawHub, a public skill and plugin registry with thousands of community skills, plus companion projects and third-party harnesses that integrate with or import from OpenClaw.\n\nRecent development is heavily focused on polish and performance: the latest commits consolidate the Control UI boot chunk graph (cutting chat interactivity from ~1600ms to ~575ms at 50ms RTT), fix lazy-loading replay loops, and harden CI and dependency contracts. Compared to lightweight clones (e.g., Go-based PicoClaw), OpenClaw trades a heavier runtime footprint for the most complete feature set, largest community, and richest skill ecosystem in the space.",
   "latest_release": {
-    "version": "v2026.8.2",
-    "date": "2026-09-01T16:00:56Z",
-    "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.8.2"
+    "version": "v2026.9.1",
+    "date": "2026-09-03T18:31:33Z",
+    "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.1"
   },
-  "last_updated": "2026-09-04T01:44:07.785Z"
+  "last_updated": "2026-09-04T15:35:44.569Z"
 }

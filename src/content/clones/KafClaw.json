@@ -4,7 +4,7 @@
   "language": "Go",
   "vibe_summary": "An enterprise-grade multi-agent coordination framework that uses Apache Kafka as its messaging backbone for distributed agent swarms. It targets infrastructure-heavy teams rather than personal-assistant users, with typed envelopes, tracing, and audit topics built in.",
   "health_status": "healthy",
-  "github_stars": 20,
+  "github_stars": 21,
   "metrics": {
     "boot_time_ms": 40,
     "memory_mb": 18,
@@ -51,7 +51,7 @@
   "last_commit_at": "2026-09-03T07:30:11Z",
   "contributors_count": 5,
   "open_issues_count": 0,
-  "release_cadence_days": 5,
+  "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -188,5 +188,5 @@
     "date": "2026-06-17T15:05:13Z",
     "url": "https://github.com/KafClaw/KafClaw/releases/tag/v1.0.0"
   },
-  "last_updated": "2026-09-04T01:43:58.057Z"
+  "last_updated": "2026-09-04T15:35:35.602Z"
 }
