@@ -84,8 +84,8 @@
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 25,
-    "detected_at": "2026-09-03T08:26:03.541Z",
+    "files_examined": 27,
+    "detected_at": "2026-09-05T07:56:40.614Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

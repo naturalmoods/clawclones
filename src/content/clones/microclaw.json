@@ -83,35 +83,35 @@
       {
         "model": "gpt-5.2",
         "provider": "openai",
-        "path": "src/llm/mod.rs",
+        "path": "crates/microclaw-engine/src/llm/mod.rs",
         "line": "config.model = \"gpt-5.2\".into();",
         "strength": "weak"
       },
       {
         "model": "gemini-2.5-flash",
         "provider": "google",
-        "path": "src/llm/openai.rs",
+        "path": "crates/microclaw-engine/src/llm/openai.rs",
         "line": "let mut body = json!({\"model\":\"gemini-2.5-flash\",\"messages\":[]});",
         "strength": "weak"
       },
       {
         "model": "qwen-plus",
         "provider": "qwen",
-        "path": "src/llm/openai.rs",
+        "path": "crates/microclaw-engine/src/llm/openai.rs",
         "line": "let mut body = json!({\"model\":\"qwen-plus\",\"messages\":[]});",
         "strength": "weak"
       },
       {
         "model": "MiniMax-M2.5",
         "provider": "minimax",
-        "path": "src/llm/openai.rs",
+        "path": "crates/microclaw-engine/src/llm/openai.rs",
         "line": "let mut body = json!({\"model\":\"MiniMax-M2.5\",\"messages\":[]});",
         "strength": "weak"
       },
       {
         "model": "gemini-3-flash-preview",
         "provider": "google",
-        "path": "src/llm/openai.rs",
+        "path": "crates/microclaw-engine/src/llm/openai.rs",
         "line": "config.model = \"gemini-3-flash-preview\".into();",
         "strength": "weak"
       }
@@ -121,13 +121,13 @@
       {
         "kind": "adapter_file",
         "value": "anthropic.rs",
-        "path": "src/llm/anthropic.rs",
+        "path": "crates/microclaw-engine/src/llm/anthropic.rs",
         "strength": "strong"
       },
       {
         "kind": "endpoint",
         "value": "api.anthropic.com",
-        "path": "src/llm/anthropic.rs",
+        "path": "crates/microclaw-engine/src/llm/anthropic.rs",
         "strength": "strong"
       },
       {
@@ -158,8 +158,8 @@
     "default_model_last_touched": "2026-08-13T17:10:39Z",
     "default_model_released_at": "2025-09-29",
     "default_model_date_source": "model_id",
-    "files_examined": 37,
-    "detected_at": "2026-09-03T08:26:46.919Z",
+    "files_examined": 34,
+    "detected_at": "2026-09-05T07:56:58.751Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
