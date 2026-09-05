@@ -50,7 +50,7 @@
   "license_type": "GPL-3.0",
   "last_commit_at": "2026-08-24T14:24:20Z",
   "contributors_count": 4,
-  "open_issues_count": 13,
+  "open_issues_count": 15,
   "release_cadence_days": 3,
   "operational_risk": "high",
   "model_support": {
@@ -161,5 +161,5 @@
     "date": "2026-03-16T18:15:59Z",
     "url": "https://github.com/EthereumPhone/AndyClaw/releases/tag/v19"
   },
-  "last_updated": "2026-09-05T01:42:45.467Z"
+  "last_updated": "2026-09-05T14:23:30.485Z"
 }
