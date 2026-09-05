@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A multi-channel personal AI assistant with unified persistent memory across Telegram, Slack, Discord, WhatsApp, and Signal. Now officially deprecated and archived, replaced by Letta Code's Channels and Remote Environments.",
   "health_status": "abandoned",
-  "github_stars": 327,
+  "github_stars": 326,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -155,5 +155,5 @@
     "date": "2026-03-10T22:43:22Z",
     "url": "https://github.com/letta-ai/lettabot/releases/tag/v0.2.0-alpha.12"
   },
-  "last_updated": "2026-09-04T15:35:36.131Z"
+  "last_updated": "2026-09-05T01:42:48.863Z"
 }

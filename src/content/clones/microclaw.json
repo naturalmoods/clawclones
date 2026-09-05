@@ -49,10 +49,10 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-04T07:22:04Z",
+  "last_commit_at": "2026-09-05T01:31:57Z",
   "contributors_count": 27,
   "open_issues_count": 1,
-  "release_cadence_days": 4,
+  "release_cadence_days": 1,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -186,9 +186,9 @@
   },
   "overview_markdown": "MicroClaw is a self-hosted agentic AI runtime written in Rust, inspired by nanoclaw's design. Its core architectural bet is a single channel-independent agent loop paired with a provider-independent LLM layer, so Telegram, Discord, Slack, Feishu/Lark, web, and other adapters all share the same behavior without duplicated boundary logic. It targets long-running work: multi-step tool use, resumable sessions, durable delivery, persistent memory, scheduled tasks, MCP, subagents, and governed skill extensions all live in one runtime, fronted by a local control plane at 127.0.0.1:10961.\n\nThe recent v0.5.0 release shows serious engineering momentum: a monolith decomposition sweep split multi-thousand-line files (config.rs, db/learning.rs) into domain modules, the web stack moved to React 19/Vite 8, and the operator console got a visual refresh. Commits show disciplined practices—clippy -D warnings gates, blame-ignore revs for large moves, and a stable branch recommended for production while main moves fast.\n\nCompared to OpenClaw, MicroClaw trades ecosystem breadth for a leaner, single-binary Rust footprint and a more opinionated unified runtime. It has a Discord, its own subreddit, and broad i18n docs, but with 732 stars and no independent Reddit discussion, its community and plugin ecosystem remain early-stage.",
   "latest_release": {
-    "version": "sdk-v0.4.0",
-    "date": "2026-09-04T07:23:49Z",
-    "url": "https://github.com/microclaw/microclaw/releases/tag/sdk-v0.4.0"
+    "version": "v0.6.1",
+    "date": "2026-09-05T01:25:50Z",
+    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.6.1"
   },
-  "last_updated": "2026-09-04T15:35:38.558Z"
+  "last_updated": "2026-09-05T01:42:51.782Z"
 }
