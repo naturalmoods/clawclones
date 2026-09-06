@@ -1,13 +1,12 @@
 {
-  "generated_at": "2026-08-30",
-  "data_as_of": "2026-08-30",
+  "generated_at": "2026-09-06",
+  "data_as_of": "2026-09-06",
   "model": "moonshotai/kimi-k3",
   "tldr": [
-    "43 tracked projects added 5637 stars this week, with 18 flat or declining.",
-    "Hermes Agent gained the most stars in absolute terms; Ouroboros grew fastest by percentage.",
-    "22 of 43 projects fit the edge and minimalist profile, the largest single cohort.",
-    "Compiled runtimes average a security score of 75 against 65 for scripting runtimes.",
-    "34 projects are local-first and only 4 require a cloud account to run."
+    "Hermes Agent gained the most stars in absolute terms; KafClaw grew fastest by percentage.",
+    "22 of 43 projects fit the edge and minimalist cohort, the largest single group.",
+    "Compiled runtimes average a security score of 75 versus 65 for scripting runtimes.",
+    "34 projects are local-first and only 4 require a cloud connection."
   ],
   "sections": {}
 }
