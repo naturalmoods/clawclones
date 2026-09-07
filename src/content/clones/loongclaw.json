@@ -1,59 +1,58 @@
 {
   "id": "loongclaw-ai/loongclaw",
-  "name": "LoongClaw",
+  "name": "Loong",
   "language": "Rust",
-  "vibe_summary": "A Rust-based agent infrastructure for building vertical AI agents with a focus on security, extensibility, and long-horizon workflows. Active development with recent observability and tooling refactors, but still pre-release.",
+  "vibe_summary": "A Rust foundation for vertical AI agents with an architecture-first, policy-authorized action model. Currently an early-stage skeleton rewrite — promising design, but not yet a usable agent product.",
   "health_status": "healthy",
   "github_stars": 639,
   "metrics": {
-    "boot_time_ms": 35,
+    "boot_time_ms": 30,
     "memory_mb": 15,
     "security_score": 72
   },
   "radar_chart": {
     "sandboxing": 6,
-    "api_security": 6,
+    "api_security": 7,
     "network_isolation": 5,
-    "telemetry_safety": 7,
-    "shell_access_risk": 6
+    "telemetry_safety": 8,
+    "shell_access_risk": 4
   },
   "tags": [
     "rust",
     "agent-framework",
-    "vertical-agents",
-    "extensible",
-    "openclaw-alternative"
+    "policy-authorization",
+    "actor-runtime",
+    "early-stage"
   ],
-  "community_sentiment": 45,
+  "community_sentiment": 40,
   "reddit_mentions": 0,
-  "web_mentions": 7,
+  "web_mentions": 10,
   "best_for": [
     "Rust developers building custom vertical AI agents",
-    "Teams wanting a hackable, extensible agent base",
-    "Users who prefer self-hosted infrastructure with observability hooks"
+    "Teams wanting policy-first action authorization",
+    "Contributors interested in agent runtime design"
   ],
   "avoid_if": [
-    "You need a stable, released product with versioning",
-    "You want a large plugin ecosystem out of the box",
-    "You rely on community support and documented troubleshooting"
+    "You need a working agent product today",
+    "You want a mature plugin or skill ecosystem",
+    "You need documented deployment and ops tooling"
   ],
   "deployment_target": [
     "self-hosted",
-    "cloud",
     "desktop"
   ],
   "local_first": true,
-  "cloud_dependency": "optional",
-  "setup_difficulty": "medium",
-  "privacy_posture": "mixed",
+  "cloud_dependency": "unknown",
+  "setup_difficulty": "high",
+  "privacy_posture": "strong",
   "multi_user": null,
-  "plugin_ecosystem": "emerging",
+  "plugin_ecosystem": "limited",
   "license_type": "MIT",
   "last_commit_at": "2026-09-06T03:22:31Z",
   "contributors_count": 1,
   "open_issues_count": 47,
   "release_cadence_days": 17,
-  "operational_risk": "medium",
+  "operational_risk": "high",
   "model_support": {
     "providers": [
       "openai",
@@ -85,31 +84,31 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 27,
-    "detected_at": "2026-09-05T07:56:40.614Z",
+    "detected_at": "2026-09-07T01:46:34.982Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Rust implementation offers lower memory footprint and faster startup",
-    "Explicit focus on vertical agent customization and extensibility",
-    "Optional OpenTelemetry observability with feature-gated no-op stub",
-    "MIT license with active refactoring toward cleaner module layout"
+    "Rust core with predictable performance and low overhead",
+    "Explicit Action authorization model before execution",
+    "Clean actor runtime with defined lifecycle management",
+    "Small, auditable foundation designed for long-term evolution"
   ],
   "openclaw_disadvantages": [
-    "No official release yet, signaling early maturity",
-    "Zero Reddit mentions and minimal independent community discussion",
-    "Smaller ecosystem of skills and integrations compared to OpenClaw",
-    "Documentation and onboarding likely less polished"
+    "Not a usable product yet — skeleton only",
+    "No channel integrations, skills, or UI",
+    "No releases, benchmarks, or production docs",
+    "Tiny community compared to OpenClaw's ecosystem"
   ],
-  "confidence_summary": "Evidence is moderate: the README and recent commits show active, security-aware Rust development, but there is no release, no Reddit discussion, and web mentions are mostly about OpenClaw rather than this project. Maturity and community health assessments carry meaningful uncertainty.",
-  "evidence_confidence": 55,
+  "confidence_summary": "The README is explicit that this is an early foundation-stage rewrite, so capability assessments are reliable but forward-looking claims are uncertain. No Reddit presence and minimal independent coverage limit sentiment confidence.",
+  "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-08-24T10:58:33.607Z",
-    "last_reviewed_at": "2026-08-24T10:58:33.607Z",
+    "last_generated_at": "2026-09-07T01:46:39.158Z",
+    "last_reviewed_at": "2026-09-07T01:46:39.158Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "LoongClaw (Loong) is a Rust-based agent base for building vertical AI agents, positioning itself as a secure, extensible, and sustainably evolvable alternative in the OpenClaw ecosystem. It targets longer-horizon workflow construction, compound task execution, and closed-loop improvement, with an emphasis on letting developers learn the codebase easily and customize anything.\n\nArchitecturally, it is built on Rust edition 2024 with a modular tools system (recently refactored for cleaner layout), a TUI, and feature-gated OpenTelemetry observability — including a no-op stub when the feature is disabled and configurable content capture. Recent commits show active work on deployment observability (Jaeger v2 migration, OTLP collector wiring) and build hygiene around the tool-shell feature.\n\nCompared to OpenClaw, LoongClaw trades ecosystem maturity for a leaner, Rust-native foundation with explicit security and control goals. However, it has no official release yet, minimal third-party discussion, and an emerging plugin story, making it better suited to developers comfortable building on early-stage infrastructure.",
-  "last_updated": "2026-09-07T01:35:01.165Z"
+  "overview_markdown": "Loong is a Rust-based foundation for building vertical AI agents, positioning itself as an architecture-first alternative in the OpenClaw-adjacent ecosystem. Its core design principle is **architecture-governed safety**: outbound effects are modeled as `Action`s that must be authorized by policy before execution, with sandboxes and model review serving as defense-in-depth rather than the primary boundary.\n\nThe project is built on a custom Actor runtime (`loac` / `loac-macros`) with a well-defined lifetime model, making components easy to run, stop, restart, and extend. Recent commits show active refinement of the message-handling API — converging on `Handler`/`StreamHandler` shapes, adding a `SyncHandler` for ready replies, and building agents from serializable `AgentConfig`. Extensibility is planned along two paths: compile-time Rust integrations for performance-sensitive work, and runtime-loaded scripts for faster iteration, both under the same security expectations.\n\nCritically, Loong is transparent about its maturity: this is an independent-history rewrite that currently contains an architecture and contract skeleton, **not a usable agent product**. Unlike OpenClaw's massive ecosystem of channels, skills, and a control UI, Loong offers no end-user functionality yet. It is best understood as a bet on a secure, evolvable Rust core that may grow into a serious OpenClaw alternative — worth watching and contributing to, but not deploying today.",
+  "last_updated": "2026-09-07T01:46:39.158Z"
 }

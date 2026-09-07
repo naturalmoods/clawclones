@@ -2,7 +2,7 @@
   "id": "XposeMarket/SmallClaw",
   "name": "SmallClaw",
   "language": "TypeScript",
-  "vibe_summary": "A local-first, chat-first AI agent framework tuned for small local models, with a single-pass architecture that skips multi-agent planning overhead. It positions itself as a free, no-API-cost OpenClaw alternative with optional hybrid cloud support.",
+  "vibe_summary": "A local-first, chat-first AI agent framework tuned for small local models, with a single-pass architecture that skips multi-agent planning overhead. Positions itself as a lightweight OpenClaw alternative with optional hybrid cloud providers.",
   "health_status": "healthy",
   "github_stars": 259,
   "metrics": {
@@ -13,8 +13,8 @@
   "radar_chart": {
     "sandboxing": 5,
     "api_security": 6,
-    "network_isolation": 6,
-    "telemetry_safety": 7,
+    "network_isolation": 7,
+    "telemetry_safety": 8,
     "shell_access_risk": 7
   },
   "tags": [
@@ -24,20 +24,18 @@
     "small-models",
     "openclaw-alternative"
   ],
-  "community_sentiment": 35,
+  "community_sentiment": 45,
   "reddit_mentions": 15,
-  "web_mentions": 8,
+  "web_mentions": 10,
   "best_for": [
-    "Users wanting a free local agent with no API costs",
-    "Running small local models via Ollama or llama.cpp",
-    "Privacy-conscious users who want data on-device",
-    "Tinkerers who like drop-in SKILL.md extensions"
+    "Users running small local models via Ollama or llama.cpp",
+    "Privacy-conscious users wanting a zero-API-cost assistant",
+    "Tinkerers who want a simple single-pass agent with a web UI"
   ],
   "avoid_if": [
-    "You need a proven, audited security model",
-    "You want a large established community and plugin registry",
-    "You need multi-user or team deployments",
-    "You require a clear open-source license"
+    "You need a mature plugin ecosystem or large community",
+    "You require multi-channel messaging integrations at OpenClaw scale",
+    "You want a verified open-source license and formal releases"
   ],
   "deployment_target": [
     "desktop",
@@ -119,31 +117,31 @@
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
     "files_examined": 17,
-    "detected_at": "2026-09-05T08:02:09.180Z",
+    "detected_at": "2026-09-07T02:51:28.443Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Single-pass chat handler reduces latency on small models",
+    "Single-pass chat handler reduces latency vs multi-agent pipelines",
     "Explicitly optimized for small local models",
-    "No API costs with fully local provider support",
-    "Simple chat-first UX with web UI dashboard"
+    "Simple web UI with no mandatory cloud dependency",
+    "Lightweight footprint compared to OpenClaw's gateway architecture"
   ],
   "openclaw_disadvantages": [
-    "Much smaller community and ecosystem",
-    "License unclear; copyright notice suggests proprietary terms",
-    "Fewer channels and integrations than OpenClaw",
-    "Less mature security track record"
+    "Far smaller community and ecosystem (259 stars vs 300k+)",
+    "No verified license; copyright notice suggests proprietary terms",
+    "Lacks OpenClaw's extensive channel integrations and skills registry",
+    "No formal releases; versioning only via README bumps"
   ],
-  "confidence_summary": "README and commit history give a decent picture of architecture and features, but the license is ambiguous and community sentiment data is essentially noise (no genuine Reddit discussion found). Confidence in decision fields is moderate.",
+  "confidence_summary": "README and commit history give a clear picture of architecture and features, but the license is ambiguous, there are no formal releases, and Reddit/web mentions are almost entirely unrelated noise, so community sentiment is highly uncertain.",
   "evidence_confidence": 55,
   "content_ops": {
-    "last_generated_at": "2026-08-24T12:20:13.027Z",
-    "last_reviewed_at": "2026-08-24T12:20:13.027Z",
+    "last_generated_at": "2026-09-07T02:51:31.585Z",
+    "last_reviewed_at": "2026-09-07T02:51:31.585Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "SmallClaw is a local-first AI agent framework from Xpose Market, built in TypeScript and designed specifically to work well with small local models. It supports multiple providers — Ollama, llama.cpp, LM Studio, OpenAI API, and OpenAI Codex OAuth — allowing fully local or hybrid cloud setups, and ships with a web UI dashboard for chat-first interaction.\n\nIts core architectural bet is a single-pass chat handler: one LLM call decides whether to respond conversationally or invoke tools, rather than running separate planning, execution, and verification agents. This reduces latency and plays to the strengths of small models that struggle with complex multi-agent coordination. Tooling includes file operations with line-level edits, multi-provider web search (Tavily, Google, Brave, DuckDuckGo), Playwright browser automation, terminal access, persistent session memory, and a drop-in SKILL.md skills system.\n\nCompared to OpenClaw, SmallClaw trades ecosystem breadth for simplicity and local-model efficiency. Recent commits show active development — v1.1 brought a system overhaul, and v1.0.4 added security hardening, Docker improvements, background tasks, sub-agents, and a Telegram file browser. However, the license situation is unclear (the description asserts 'All rights reserved'), and there is little genuine community discussion, so prospective users should verify terms and security posture before adopting it for sensitive workflows.",
-  "last_updated": "2026-09-07T01:35:20.948Z"
+  "overview_markdown": "SmallClaw is a local-first AI agent framework built in TypeScript, designed specifically to work well with small local models via Ollama, llama.cpp, and LM Studio, with optional hybrid support for OpenAI API and Codex OAuth. It provides a chat-first web UI where the agent gets real tools: file operations with line-level edits, multi-provider web search (Tavily, Google, Brave, DuckDuckGo), Playwright-powered browser automation, terminal access, persistent session memory, and a drop-in SKILL.md skills system.\n\nIts key architectural differentiator is a single-pass chat handler: one LLM call decides whether to respond conversationally or invoke tools, avoiding the separate planning/execution/verification agent loops that small models handle poorly. This reduces latency and cost compared to heavier multi-agent frameworks. Recent commits show active development including a v1.1 system overhaul, security hardening, Docker improvements, background tasks, sub-agents, and a Telegram file browser.\n\nCompared to OpenClaw, SmallClaw trades ecosystem breadth for simplicity and small-model efficiency. However, its licensing is unclear (the description asserts 'All rights reserved' while the README links a LICENSE file), there are no formal GitHub releases, and community traction is modest at 259 stars. It is best suited for individual users who want a free, private, local assistant without OpenClaw's operational complexity.",
+  "last_updated": "2026-09-07T02:51:31.585Z"
 }

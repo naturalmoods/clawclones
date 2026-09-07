@@ -2,49 +2,49 @@
   "id": "nextlevelbuilder/goclaw",
   "name": "GoClaw",
   "language": "Go",
-  "vibe_summary": "A production-grade Go rewrite of OpenClaw focused on multi-tenant isolation and 5-layer security for deploying agent teams at scale. Ships as a single binary with 20+ LLM providers, 7 channels, and PostgreSQL-backed tenancy.",
+  "vibe_summary": "OpenClaw rebuilt in Go as a multi-tenant AI agent gateway with 5-layer security, PostgreSQL isolation, and 20+ LLM providers. A production-oriented, single-binary platform aimed at deploying agent teams at scale rather than a personal assistant.",
   "health_status": "healthy",
   "github_stars": 3590,
   "metrics": {
     "boot_time_ms": 35,
-    "memory_mb": 15,
+    "memory_mb": 18,
     "security_score": 82
   },
   "radar_chart": {
-    "sandboxing": 7,
+    "sandboxing": 8,
     "api_security": 8,
     "network_isolation": 7,
-    "telemetry_safety": 6,
+    "telemetry_safety": 7,
     "shell_access_risk": 5
   },
   "tags": [
     "go",
     "multi-tenant",
-    "ai-agents",
-    "gateway",
+    "agent-gateway",
+    "openclaw-clone",
     "self-hosted"
   ],
   "community_sentiment": 62,
-  "reddit_mentions": 1,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Teams deploying multi-tenant AI agent platforms",
-    "Operators wanting a single Go binary with PostgreSQL",
-    "Users needing many LLM providers and chat channels"
+    "Operators wanting a single Go binary with PostgreSQL isolation",
+    "Users needing many LLM providers and channels behind one gateway"
   ],
   "avoid_if": [
-    "You need a permissive open-source license (CC BY-NC)",
-    "You want a lightweight single-user local assistant",
-    "You prefer minimal infrastructure without PostgreSQL"
+    "You need a permissive license for commercial use (CC BY-NC 4.0)",
+    "You want a lightweight personal assistant rather than a platform",
+    "You prefer the original OpenClaw ecosystem and its skill registry"
   ],
   "deployment_target": [
-    "cloud",
-    "self-hosted"
+    "self-hosted",
+    "cloud"
   ],
   "local_first": false,
   "cloud_dependency": "optional",
   "setup_difficulty": "medium",
-  "privacy_posture": "mixed",
+  "privacy_posture": "strong",
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "NOASSERTION",
@@ -217,36 +217,36 @@
     "default_model_released_at": "2026-05-31",
     "default_model_date_source": "catalogue",
     "files_examined": 99,
-    "detected_at": "2026-09-05T07:58:21.553Z",
+    "detected_at": "2026-09-07T02:03:56.337Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Native multi-tenant isolation with PostgreSQL",
-    "Single static Go binary, easy deployment",
-    "5-layer security model and native concurrency",
-    "20+ LLM providers and 7 messaging channels"
+    "Native multi-tenant isolation with PostgreSQL row-level separation",
+    "Go single binary with fast startup and low memory footprint",
+    "5-layer security model with per-agent tool grants and deny policies",
+    "Built-in team orchestration and multi-agent dispatch"
   ],
   "openclaw_disadvantages": [
     "Non-commercial license restricts business use",
-    "Smaller community and ecosystem than OpenClaw",
-    "Heavier infrastructure requirements (PostgreSQL, Docker)",
-    "Less local-first, personal-assistant oriented"
+    "Far smaller community and skill ecosystem than OpenClaw",
+    "Heavier operational footprint (PostgreSQL required)",
+    "Less mature channel and device coverage"
   ],
-  "confidence_summary": "Strong evidence from README, active commits, and release history confirms an actively maintained multi-tenant platform. Community sentiment data is thin (1 Reddit mention), so popularity and user satisfaction scores carry uncertainty.",
-  "evidence_confidence": 78,
+  "confidence_summary": "Strong evidence from README, active commit history, and recent releases; security architecture is well documented. Community sentiment is thin (zero Reddit matches), so adoption and real-world stability signals are uncertain.",
+  "evidence_confidence": 74,
   "content_ops": {
-    "last_generated_at": "2026-08-24T11:21:10.865Z",
-    "last_reviewed_at": "2026-08-24T11:21:10.865Z",
+    "last_generated_at": "2026-09-07T02:04:13.938Z",
+    "last_reviewed_at": "2026-09-07T02:04:13.938Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "GoClaw is a ground-up Go reimplementation of OpenClaw positioned as a **multi-tenant AI agent platform** rather than a personal assistant. It ships as a single binary backed by PostgreSQL 18, with support for 20+ LLM providers (Anthropic, OpenAI-compatible, Ollama, and more) and 7 messaging channels, plus WebSocket and OpenTelemetry instrumentation for production observability.\n\nIts headline differentiators are multi-tenant isolation, a 5-layer security model, and Go's native concurrency for orchestrating agent teams at scale. Recent commits show active hardening: Docker localhost rewrites for embedding providers, transactional archiving of channel message buffers, and media deduplication in the delivery pipeline — signs of a maturing production codebase with real operational users.\n\nCompared to OpenClaw, GoClaw trades the local-first, single-user experience for team-scale deployment and tenancy. The CC BY-NC 4.0 license is a notable constraint: commercial use requires caution, unlike more permissively licensed alternatives.",
+  "overview_markdown": "GoClaw is a ground-up Go reimplementation of OpenClaw, repositioned as a multi-tenant AI agent gateway rather than a personal assistant. It ships as a single binary backed by PostgreSQL 18, supports 20+ LLM providers and 7 messaging channels, and exposes WebSocket APIs with OpenTelemetry tracing built in. The core pitch is deploying teams of agents at scale with tenant isolation and a 5-layer security model.\n\nThe recent commit history shows serious security and reliability engineering: subagent tool policies now inherit the parent's exec/read/write deny rules (closing a sandbox-escape path), skill slash commands are filtered by per-agent grants, skill archive imports sanitize paths against traversal, and team task dispatch deadlocks were fixed. This suggests an actively hardened codebase with real production usage.\n\nCompared to OpenClaw, GoClaw trades the massive skill ecosystem and permissive licensing for stronger multi-tenancy, native concurrency, and lower resource usage. Its CC BY-NC 4.0 license is the biggest caveat — commercial deployments require caution. It fits operators building internal agent platforms more than hobbyists wanting a personal lobster assistant.",
   "latest_release": {
     "version": "v3.14.0",
     "date": "2026-06-15T08:59:44Z",
     "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
   },
-  "last_updated": "2026-09-07T01:35:06.142Z"
+  "last_updated": "2026-09-07T02:04:13.938Z"
 }

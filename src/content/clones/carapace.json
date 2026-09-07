@@ -2,7 +2,7 @@
   "id": "puremachinery/carapace",
   "name": "Carapace",
   "language": "Rust",
-  "vibe_summary": "A security-hardened Rust reimagining of OpenClaw built explicitly to counter its January 2026 vulnerability disclosures. It pairs multi-channel messaging and multi-provider LLM support with signed WASM plugins, OS-level sandboxing, and encrypted secret storage.",
+  "vibe_summary": "A security-hardened Rust rewrite of the OpenClaw personal assistant concept, built explicitly to counter the January 2026 OpenClaw vulnerability disclosures. It pairs a signed WASM plugin runtime with OS-level sandboxing and encrypted secret storage for a genuinely locked-down local agent.",
   "health_status": "healthy",
   "github_stars": 47,
   "metrics": {
@@ -20,27 +20,27 @@
   "tags": [
     "rust",
     "security-focused",
-    "multi-channel",
+    "local-first",
     "wasm-plugins",
-    "local-first"
+    "multi-channel"
   ],
-  "community_sentiment": 35,
-  "reddit_mentions": 20,
-  "web_mentions": 7,
+  "community_sentiment": 30,
+  "reddit_mentions": 18,
+  "web_mentions": 10,
   "best_for": [
-    "Security-conscious users replacing OpenClaw",
-    "Self-hosters wanting encrypted secrets and sandboxed tools",
-    "Rust shops needing auditable, signed plugin runtimes"
+    "Security-conscious users who want an OpenClaw-style assistant without its exposed attack surface",
+    "Self-hosters who want multi-channel messaging (Matrix, Signal, Telegram, Discord, Slack) with local-first defaults",
+    "Rust developers who want a signed, sandboxed WASM plugin model"
   ],
   "avoid_if": [
-    "You need a large existing plugin/skill ecosystem",
-    "You want a mature community and lots of third-party guides",
-    "You need features still marked partial in feature-status.yaml"
+    "You need a large plugin/skill ecosystem like OpenClaw's 5,000+ skills registry",
+    "You want a mature community, mobile apps, or a polished control UI",
+    "You need features still marked partial in its feature-status docs"
   ],
   "deployment_target": [
-    "desktop",
     "self-hosted",
-    "cloud"
+    "desktop",
+    "edge"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
@@ -218,37 +218,37 @@
     "default_model_released_at": "2026-04-24",
     "default_model_date_source": "catalogue",
     "files_examined": 46,
-    "detected_at": "2026-09-05T08:00:29.953Z",
+    "detected_at": "2026-09-07T02:22:58.114Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "OS-level subprocess sandboxing with fail-closed behavior",
-    "Ed25519-signed WASM plugins with capability limits",
-    "OS credential store with AES-256-GCM fallback for secrets",
-    "Localhost-only binding and SSRF/DNS-rebinding defenses by default",
-    "Explicit verified-vs-partial feature status documentation"
+    "OS-level subprocess sandboxing with fail-closed behavior on unsupported paths",
+    "Ed25519-signed WASM plugins with capability sandboxing and resource limits",
+    "Secrets in OS credential stores with AES-256-GCM fallback instead of plaintext",
+    "Localhost-only binding, CSRF protection, and SSRF/DNS-rebinding defenses by default",
+    "Rust memory safety plus active fuzzing and cargo audit hygiene"
   ],
   "openclaw_disadvantages": [
-    "Far smaller community and star count (47 stars)",
-    "No comparable third-party skill registry",
-    "Younger project with some in-progress feature areas",
-    "Less real-world battle testing outside verified stable paths"
+    "Tiny community (47 stars) versus OpenClaw's massive user base and skill registry",
+    "No mobile apps, Canvas, or polished Control UI",
+    "Some features explicitly marked partial or in-progress",
+    "No third-party security audit evidence beyond self-published docs"
   ],
-  "confidence_summary": "README and commit evidence for the security architecture is strong and detailed, but community sentiment data is essentially absent — all Reddit matches are unrelated uses of the word 'carapace'. Confidence is high on technical claims, low on adoption signals.",
+  "confidence_summary": "README and commit history give strong evidence of active, security-focused engineering, but community sentiment is essentially unmeasurable — all 18 Reddit matches are unrelated uses of the word 'carapace'. Feature-completeness claims rely on the project's own status docs.",
   "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-08-24T11:44:42.024Z",
-    "last_reviewed_at": "2026-08-24T11:44:42.024Z",
+    "last_generated_at": "2026-09-07T02:23:06.556Z",
+    "last_reviewed_at": "2026-09-07T02:23:06.556Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "Carapace is a security-first, Rust-written personal AI assistant positioned as a hardened alternative to OpenClaw/clawdbot. It supports a broad set of LLM providers (Anthropic, OpenAI, Codex, Ollama, Gemini, Vertex AI, Bedrock, NEAR AI Cloud, Venice AI, local Claude CLI) and channels (Matrix, Signal, Telegram, Discord, Slack, webhooks, console), with streaming, cancellation, and provider-aware tool paths.\n\nIts defining trait is a threat-model-driven architecture that directly answers the January 2026 OpenClaw security disclosures: localhost-only binding, CSRF-protected control endpoints, OS credential-store secret storage with AES-256-GCM fallback, Ed25519-signed WASM plugins running under capability sandboxes and resource limits, prompt-injection defenses (prompt guard, inbound classifier, exec approval flow), OS-level subprocess sandboxing that fails closed on unsupported paths, and SSRF/DNS-rebinding mitigations. Infrastructure extras include TLS/mTLS, mDNS discovery, Tailscale integration, Prometheus metrics, and audit logging.\n\nCompared to OpenClaw, Carapace trades ecosystem breadth for assurance: it publishes verified-vs-partial feature status (docs/feature-status.yaml) and a threat-by-threat security comparison, and recent commits show disciplined maintenance (Dependabot cargo/GitHub Actions updates, CodeQL scanning, CI performance work). The project is young with a small community, so users should expect a thinner plugin ecosystem and fewer third-party resources than OpenClaw.",
+  "overview_markdown": "Carapace is a security-first, Rust-based personal AI assistant positioned as a hardened alternative to OpenClaw/Clawdbot. It supports a broad multi-provider LLM engine (Anthropic, OpenAI, Codex, Ollama, Gemini, Vertex AI, Bedrock, NEAR AI, Venice AI, and local Claude CLI) and connects to Matrix, Signal, Telegram, Discord, Slack, webhooks, and console channels, with per-channel typing indicators and read receipts.\n\nIts defining trait is the security architecture, designed threat-by-threat against the January 2026 OpenClaw disclosures: localhost-only binding, CSRF-protected control endpoints, OS credential-store secret storage with AES-256-GCM fallback, Ed25519-signed WASM plugins running under capability sandboxes with resource limits, prompt-injection defenses (prompt guard, inbound classifier, exec approval flow), OS-level subprocess sandboxing that fails closed on unsupported paths, and SSRF/DNS-rebinding mitigation. Infrastructure extras include TLS/mTLS, mDNS discovery, Tailscale integration, Prometheus metrics, and audit logging.\n\nCompared to OpenClaw, Carapace trades ecosystem breadth for rigor: there is no giant skill registry, mobile app, or Control UI, and the project transparently tracks verified-vs-partial features in docs/feature-status.yaml. Recent commits show disciplined maintenance — grouped Dependabot updates, fuzz-lock hygiene, RUSTSEC advisory remediation, and a 4,900+ test suite — suggesting a small but serious engineering effort rather than a vibe-coded fork.",
   "latest_release": {
     "version": "v0.8.0",
     "date": "2026-05-01T22:18:48Z",
     "url": "https://github.com/puremachinery/carapace/releases/tag/v0.8.0"
   },
-  "last_updated": "2026-09-07T01:35:12.710Z"
+  "last_updated": "2026-09-07T02:23:06.556Z"
 }

@@ -2,9 +2,9 @@
   "id": "qwibitai/nanoclaw",
   "name": "NanoClaw",
   "language": "TypeScript",
-  "vibe_summary": "A security-first, radically minimal OpenClaw alternative that isolates each agent in its own Linux container instead of relying on app-level permission checks. It pairs a tiny auditable codebase with multi-channel messaging (Slack, Telegram, Discord, WhatsApp, Gmail) on Anthropic's Agents SDK.",
+  "vibe_summary": "A security-first, radically minimal OpenClaw alternative that runs each agent in its own Linux container with real OS-level isolation. Built on Anthropic's Agents SDK with multi-channel messaging, memory, and scheduled jobs in a codebase small enough to actually read.",
   "health_status": "healthy",
-  "github_stars": 30711,
+  "github_stars": 30712,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.8,
@@ -15,29 +15,29 @@
     "api_security": 8,
     "network_isolation": 8,
     "telemetry_safety": 8,
-    "shell_access_risk": 3
+    "shell_access_risk": 4
   },
   "tags": [
     "openclaw-alternative",
     "container-sandbox",
-    "multi-channel",
-    "anthropic-sdk",
-    "self-hosted"
+    "agents",
+    "security-first",
+    "typescript"
   ],
   "community_sentiment": 82,
-  "reddit_mentions": 12,
-  "web_mentions": 8,
+  "reddit_mentions": 9,
+  "web_mentions": 10,
   "best_for": [
     "Security-conscious users who want OS-level agent isolation",
-    "Developers who want a small, fully auditable codebase",
-    "Teams spawning per-agent Slack bots with separate identities",
-    "Self-hosters connecting agents to WhatsApp/Telegram/Discord/Gmail"
+    "Developers who want a small, auditable codebase",
+    "Teams deploying per-agent Slack bots with separate identities",
+    "Users already invested in Anthropic's Agents SDK"
   ],
   "avoid_if": [
-    "You need OpenClaw's full feature breadth and large skill ecosystem",
-    "You can't run Docker/Linux containers on your host",
-    "You want a managed cloud service rather than self-hosting",
-    "You need Windows-native deployment"
+    "You need model-provider flexibility beyond Anthropic-first design",
+    "You want a large plugin ecosystem and mature community tooling",
+    "You can't run Docker/containers on your host",
+    "You need OpenClaw's breadth of integrations and UI features"
   ],
   "deployment_target": [
     "self-hosted",
@@ -85,38 +85,39 @@
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 26,
-    "detected_at": "2026-09-05T08:00:47.216Z",
+    "files_examined": 35,
+    "detected_at": "2026-09-07T02:27:42.023Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "True OS-level container isolation vs app-level allowlists",
-    "Codebase small enough to read and fully understand",
-    "Hardened container images with active CVE elimination",
-    "Guided setup script with automatic failure diagnosis",
-    "Per-agent Slack apps with separate bot identities and memory"
+    "True container-level isolation instead of application-level permission checks",
+    "Dramatically smaller codebase that one person can fully audit",
+    "Fewer dependencies and config files means smaller attack surface",
+    "Per-agent Slack apps with isolated identities, containers, and memory",
+    "Guided setup script with automatic failure diagnosis"
   ],
   "openclaw_disadvantages": [
-    "Far smaller feature surface and skill ecosystem",
-    "Requires Docker/container runtime on the host",
-    "Younger project with less battle-testing at scale",
-    "Tied closely to Anthropic's Agents SDK"
+    "Far fewer integrations, skills, and community extensions",
+    "Smaller community and shorter track record",
+    "Tightly coupled to Anthropic's Agents SDK and Claude",
+    "Lacks OpenClaw's Control UI and broader platform polish",
+    "Container requirement adds host prerequisites OpenClaw doesn't have"
   ],
-  "confidence_summary": "Strong evidence from a detailed README, active v2.3.0 release, and security-focused commit history; community sentiment is positive but Reddit discussion volume is moderate, so long-term ecosystem strength is less certain.",
+  "confidence_summary": "Strong evidence from a detailed README, active recent commits, a recent v2.3.0 release, and multiple independent web mentions. Some uncertainty remains around real-world plugin ecosystem maturity and long-term maintenance.",
   "evidence_confidence": 85,
   "content_ops": {
-    "last_generated_at": "2026-08-24T11:49:12.853Z",
-    "last_reviewed_at": "2026-08-24T11:49:12.853Z",
+    "last_generated_at": "2026-09-07T02:27:48.234Z",
+    "last_reviewed_at": "2026-09-07T02:27:48.234Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "NanoClaw is a lightweight, security-first alternative to OpenClaw built around one core idea: agents should run in their own Linux containers with real filesystem isolation, not behind application-level permission checks. The author explicitly frames it as a reaction to OpenClaw's scale — nearly half a million lines of code, 53 config files, and 70+ dependencies all sharing one Node process — and instead delivers the same core functionality in a codebase small enough for one person to read and understand.\n\nArchitecturally, it runs directly on Anthropic's Agents SDK and connects to WhatsApp, Telegram, Slack, Discord, Gmail, iMessage, and a local CLI, with persistent memory and scheduled jobs. A standout feature is the Slack integration: setup provisions each agent its own Slack app with manifest, avatar, and workspace install, so every spawned teammate gets a distinct bot identity, container, and memory. The `nanoclaw.sh` bootstrap script handles the entire install — Node, pnpm, Docker, credential registration via OneCLI, container build, and channel pairing — and even invokes Claude Code to auto-diagnose failed steps.\n\nRecent development shows a mature security posture: hardened container image pins, a publicized effort that eliminated 1,400 CVEs from images, and careful multi-instance channel support (e.g., multiple Telegram bots on one install). Compared to OpenClaw, NanoClaw trades feature breadth and ecosystem size for auditability, isolation, and operational simplicity — a compelling pick for users who want an agent they can actually verify.",
+  "overview_markdown": "NanoClaw is a security-first rethinking of OpenClaw built around one core idea: agents should run in their own Linux containers with filesystem isolation, not behind application-level allowlists in a shared Node process. Where OpenClaw has grown to nearly half a million lines with 53 config files and 70+ dependencies, NanoClaw deliberately stays small — one process and a handful of files — so a single operator can read and understand everything it does before trusting it with their accounts.\n\nArchitecturally it runs directly on Anthropic's Agents SDK and connects to Slack, Telegram, Discord, WhatsApp, iMessage, Gmail, and a local CLI, with persistent memory, scheduled jobs, and per-agent group configuration (model, effort, and speed tiers). A standout feature is its Slack integration: setup provisions each agent its own Slack app with a manifest, avatar, and workspace install, so spawned teammates get distinct bot identities, containers, and memory. Recent commits show an active refactor toward a formal provider contract system — runtime, host, and setup seams are now declared as executable contracts verified by an install-time verifier, suggesting the project is hardening its extension points for multi-provider support beyond Claude.\n\nCompared to OpenClaw, NanoClaw trades breadth for trust: you give up the massive integration ecosystem, Control UI, and model flexibility in exchange for a codebase you can audit in an afternoon and isolation enforced by the OS rather than by convention. The `nanoclaw.sh` quick-start script handles dependency installation, credential registration via OneCLI, container builds, and channel pairing — even invoking Claude Code to self-diagnose failed steps — making it one of the more approachable secure agent setups available.",
   "latest_release": {
     "version": "v2.3.0",
     "date": "2026-08-24T11:45:32Z",
     "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2.3.0"
   },
-  "last_updated": "2026-09-07T01:35:14.232Z"
+  "last_updated": "2026-09-07T02:27:48.234Z"
 }

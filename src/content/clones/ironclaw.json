@@ -2,7 +2,7 @@
   "id": "nearai/ironclaw",
   "name": "IronClaw",
   "language": "Rust",
-  "vibe_summary": "A security-first Agent OS in Rust from NEAR AI that keeps all data local and encrypted with zero telemetry. Heavy investment in sandboxing, a polished WebUI, and an extension ecosystem make it one of the most production-grade OpenClaw alternatives.",
+  "vibe_summary": "A Rust-based Agent OS from NEAR AI that positions itself as a privacy-first, security-hardened personal AI assistant with encrypted local storage and no telemetry. Its extremely rigorous commit culture (contract tests, architecture gates, fail-closed design) signals a production-grade, security-obsessed engineering ethos.",
   "health_status": "healthy",
   "github_stars": 12607,
   "metrics": {
@@ -11,31 +11,33 @@
     "security_score": 92
   },
   "radar_chart": {
-    "sandboxing": 9,
+    "sandboxing": 8,
     "api_security": 9,
-    "network_isolation": 8,
-    "telemetry_safety": 10,
-    "shell_access_risk": 3
+    "network_isolation": 7,
+    "telemetry_safety": 9,
+    "shell_access_risk": 4
   },
   "tags": [
     "rust",
     "agent-os",
     "privacy-first",
     "self-hosted",
-    "sandboxed"
+    "security"
   ],
   "community_sentiment": 78,
-  "reddit_mentions": 21,
+  "reddit_mentions": 22,
   "web_mentions": 10,
   "best_for": [
     "Privacy-conscious users wanting a local-first assistant",
-    "Teams needing encrypted credential storage and auditability",
-    "Rust shops wanting a production-grade agent runtime"
+    "Teams needing auditable, fail-closed agent security",
+    "Rust developers extending a typed agent platform",
+    "Users managing credentials/OAuth integrations safely"
   ],
   "avoid_if": [
-    "You want a zero-setup hosted SaaS assistant",
-    "You need a huge third-party plugin marketplace today",
-    "You are on unsupported platforms without WSL"
+    "You want the largest possible skill/plugin ecosystem",
+    "You need a mature, battle-tested community at OpenClaw scale",
+    "You prefer zero-config consumer-grade setup",
+    "You rely on niche chat channels not yet supported"
   ],
   "deployment_target": [
     "desktop",
@@ -44,7 +46,7 @@
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "low",
+  "setup_difficulty": "medium",
   "privacy_posture": "strong",
   "multi_user": true,
   "plugin_ecosystem": "emerging",
@@ -246,35 +248,38 @@
     "default_model_released_at": "2025-06-17",
     "default_model_date_source": "catalogue",
     "files_examined": 143,
-    "detected_at": "2026-09-05T07:57:40.375Z",
+    "detected_at": "2026-09-07T01:56:49.599Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Rust core with stronger memory safety and lower footprint",
-    "Encrypted local credential store and no telemetry by design",
-    "Guided onboarding installer with background service setup",
-    "Active NEAR AI backing with very high commit velocity"
+    "Encrypted local credential store with secrets kept out of LLM context",
+    "Fail-closed pairing/binding model with contract-tested security gates",
+    "Rust performance and memory safety versus OpenClaw's runtime",
+    "No telemetry and explicit anti-data-harvesting design",
+    "Rigorous architecture gates and contract tests reduce regression risk"
   ],
   "openclaw_disadvantages": [
-    "Smaller skill/plugin ecosystem than OpenClaw's registry",
-    "Younger project with less third-party documentation",
-    "Some features tied to NEAR ecosystem incentives"
+    "Far smaller community and mindshare (12.6k vs 300k+ stars)",
+    "Much smaller skills/plugin ecosystem",
+    "Fewer supported chat channels and integrations",
+    "Heavier conceptual complexity (contracts, gates) for casual users",
+    "Younger project with less third-party documentation and tutorials"
   ],
-  "confidence_summary": "Strong evidence from README, release cadence, and dense recent commit history showing active, security-conscious development. Community sentiment is positive but partly self-hosted on its own subreddit, so independent validation is thinner.",
+  "confidence_summary": "Strong evidence from README, license, release metadata, and highly detailed recent commits supports the security and privacy assessments. Community sentiment is positive but drawn mostly from the project's own subreddit, so independent validation is thinner.",
   "evidence_confidence": 82,
   "content_ops": {
-    "last_generated_at": "2026-08-24T11:11:20.886Z",
-    "last_reviewed_at": "2026-08-24T11:11:20.886Z",
+    "last_generated_at": "2026-09-07T01:57:07.822Z",
+    "last_reviewed_at": "2026-09-07T01:57:07.822Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "IronClaw is an Agent OS written in Rust by NEAR AI, positioning itself as a security- and privacy-first personal AI assistant. Its core philosophy is that your assistant works for you: all data is stored locally and encrypted, credentials live in an encrypted store, and there is no hidden telemetry or data harvesting. Installation is streamlined via a tagged installer script and an `ironclaw onboard` guided setup that provisions configuration, LLM provider keys, and a WebUI login token, with background service support on macOS and Linux.\n\nArchitecturally, IronClaw is a multi-crate Rust workspace with a React/TypeScript WebUI, a durable per-recipient notification inbox, sandboxed execution (including Docker-based user sandboxes with egress controls), and an extension system for channels like Telegram. Recent commits show heavy investment in design-system tooling (Storybook), notification reliability, and rigorous CI gates, indicating mature engineering discipline.\n\nCompared to OpenClaw, IronClaw trades ecosystem breadth for a hardened, auditable core: it emphasizes sandboxing, encrypted local state, and transparency over a large skill marketplace. It is a strong fit for users and teams who prioritize data sovereignty and want a polished, actively maintained self-hosted agent platform.",
+  "overview_markdown": "IronClaw is an Agent OS written in Rust by NEAR AI, built around the principle that your AI assistant should work for you, not against you. All data is stored locally and encrypted, credentials live in an encrypted store kept out of the LLM's context, and the project explicitly rejects telemetry and data harvesting. It ships with a guided onboarding flow (`ironclaw onboard`), a background service, and a WebUI, with installers for macOS, Linux, and Windows/WSL.\n\nArchitecturally, IronClaw is unusually rigorous for an agent project: recent commits show contract-tier and e2e-tier tests, fail-closed pairing and device-link flows, architecture gates that pin crate size ceilings, and careful privacy work such as hashing thread IDs before they leave the process as OpenAI prompt-cache keys. It supports multiple LLM providers (Anthropic, OpenAI Responses and chat-completions paths, GitHub Copilot, NEAR AI), subagent orchestration with approval/auth gates surfaced to a human owner's inbox, and channel integrations like Telegram and Slack.\n\nCompared to OpenClaw, IronClaw trades ecosystem size for security posture: it has a fraction of OpenClaw's stars, skills, and channel breadth, but offers a hardened, auditable Rust core with encrypted local state and a privacy-first philosophy. It is best suited to users and teams who prioritize verifiable security and data sovereignty over the largest possible plugin catalog.",
   "latest_release": {
     "version": "ironclaw-v1.4.0",
     "date": "2026-08-28T11:19:24Z",
     "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.4.0"
   },
-  "last_updated": "2026-09-07T01:35:04.558Z"
+  "last_updated": "2026-09-07T01:57:07.822Z"
 }

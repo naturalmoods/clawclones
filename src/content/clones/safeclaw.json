@@ -2,7 +2,7 @@
   "id": "princezuda/safeclaw",
   "name": "SafestClaw",
   "language": "Python",
-  "vibe_summary": "A zero-cost, LLM-optional OpenClaw alternative that leans on classic ML intent matching and deterministic actions instead of language models. Its pitch is minimal prompt-injection surface, offline-first operation, and auditable actions with optional LLM, voice, Telegram, and web UI add-ons.",
+  "vibe_summary": "A zero-cost, LLM-optional OpenClaw alternative that leans on classic ML intent-matching and deterministic actions instead of language models. Its pitch is minimal prompt-injection surface, offline-first operation, and $0 monthly cost.",
   "health_status": "healthy",
   "github_stars": 279,
   "metrics": {
@@ -14,7 +14,7 @@
     "sandboxing": 6,
     "api_security": 7,
     "network_isolation": 8,
-    "telemetry_safety": 9,
+    "telemetry_safety": 8,
     "shell_access_risk": 4
   },
   "tags": [
@@ -22,20 +22,20 @@
     "llm-optional",
     "offline-first",
     "privacy",
-    "deterministic"
+    "python"
   ],
   "community_sentiment": 55,
   "reddit_mentions": 1,
   "web_mentions": 10,
   "best_for": [
     "Users who want OpenClaw-style features without LLM API bills",
-    "Privacy-conscious users needing offline, deterministic actions",
+    "Privacy-conscious users wanting offline, deterministic actions",
     "Tinkerers comfortable learning command documentation instead of free-form chat"
   ],
   "avoid_if": [
-    "You expect polished free-form conversational AI out of the box",
-    "You need a mature plugin ecosystem or multi-user deployment",
-    "You want a battle-tested project with broad community support"
+    "You need robust free-form conversational AI out of the box",
+    "You want a large plugin ecosystem and community support",
+    "You need battle-tested multi-user or team deployments"
   ],
   "deployment_target": [
     "desktop",
@@ -46,7 +46,7 @@
   "setup_difficulty": "medium",
   "privacy_posture": "strong",
   "multi_user": false,
-  "plugin_ecosystem": "emerging",
+  "plugin_ecosystem": "limited",
   "license_type": "MIT",
   "last_commit_at": "2026-05-09T13:43:34Z",
   "contributors_count": 3,
@@ -77,37 +77,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 5,
-    "detected_at": "2026-09-05T08:00:28.362Z",
+    "detected_at": "2026-09-07T02:20:29.167Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Zero default cost with no required LLM API keys",
-    "Works offline for most default features",
-    "Minimal prompt-injection surface via deterministic ML intent routing",
-    "Deterministic, auditable actions instead of variable LLM output",
+    "No LLM required for most features, so $0 default operating cost",
+    "Minimal prompt-injection surface due to deterministic intent matching",
+    "Works offline for default features",
     "Runs on modest hardware across Linux, macOS, and Windows"
   ],
   "openclaw_disadvantages": [
+    "Far smaller community, stars, and ecosystem than OpenClaw",
     "Free-form chat quality depends on optional LLM setup that has had config bugs",
-    "Smaller community and ecosystem than OpenClaw",
-    "Requires learning /help documentation when running LLM-free",
+    "Requires learning documentation/commands when running LLM-free",
     "Single-maintainer project with higher bus-factor risk"
   ],
-  "confidence_summary": "Evidence is solid from the README and detailed recent commits, but community sentiment data is thin (one irrelevant Reddit match, no direct web reviews). Ratings for ecosystem and sentiment carry moderate uncertainty.",
-  "evidence_confidence": 68,
+  "confidence_summary": "Evidence is solid from the README and detailed recent commits, but community sentiment is thin — the single Reddit match is irrelevant and web results mostly reference OpenClaw itself. Ratings for ecosystem and sentiment carry meaningful uncertainty.",
+  "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-08-24T11:43:46.308Z",
-    "last_reviewed_at": "2026-08-24T11:43:46.308Z",
+    "last_generated_at": "2026-09-07T02:20:30.700Z",
+    "last_reviewed_at": "2026-09-07T02:20:30.700Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "SafestClaw positions itself as the zero-cost, security-minded alternative to OpenClaw. Its core architectural bet is that most assistant tasks — weather lookups, news summaries from 50+ sources, blogging, code security audits, research queries against arXiv or WolframAlpha — can be handled by established ML intent/semantics matching and deterministic actions rather than an LLM. An LLM is strictly optional, pluggable via `setup ai`, which keeps the default attack surface small and prompt-injection risk minimal.\n\nThe project ships as a pip-installable Python package (`pip install safestclaw`, run via `python -m safestclaw`) with a CLI, localhost web UI, Telegram integration, MCP support, and TTS/voice-to-text. Recent commits show active hardening: a stable home-based config path (`~/.safestclaw/config.yaml`) so settings survive across systemd/launchd/cron launches, unconditional NLU enablement when a provider is configured, and better surfacing of LLM provider errors instead of silent canned fallbacks.\n\nCompared to OpenClaw, SafestClaw trades conversational polish and ecosystem breadth for determinism, offline capability, and $0 default operating cost. It is local-first and privacy-forward — external calls only happen when explicitly requested (e.g., weather) or when the user configures an LLM. The trade-off is a steeper learning curve in LLM-free mode and a smaller, single-maintainer community.",
+  "overview_markdown": "SafestClaw positions itself as the zero-cost, security-minded alternative to OpenClaw. Its core architectural bet is that most assistant tasks — weather lookups, news summaries from 50+ sources, research queries against arXiv/WolframAlpha, blogging, code security audits — don't actually need a large language model. Instead it uses classic ML intent and semantic matching to route commands to deterministic, auditable actions, with an LLM (Anthropic, Ollama, etc.) as an optional layer for free-form chat.\n\nThe project ships as a pip-installable Python package (`pip install safestclaw`, run via `python -m safestclaw`) with a CLI, localhost web UI, Telegram integration, and optional MCP support. It runs offline by default, stores config in `~/.safestclaw/config.yaml`, and works across Linux, macOS, and Windows — including auto-start via systemd, launchd, Task Scheduler, or cron.\n\nRecent commits show active maintenance focused on reliability: fixing config-path bugs that caused state loss across service launches, ensuring `setup ai` reliably enables the NLU layer, surfacing LLM provider errors to users instead of silently falling back to canned replies, and tightening intent regexes that misrouted chat. Compared to OpenClaw, it trades the massive ecosystem and polished agent experience for determinism, privacy, and zero API cost.",
   "latest_release": {
     "version": "4.2.4",
     "date": "2026-05-09T13:40:00Z",
     "url": "https://github.com/princezuda/safestclaw/releases/tag/4.2.4"
   },
-  "last_updated": "2026-09-07T01:35:12.117Z"
+  "last_updated": "2026-09-07T02:20:30.700Z"
 }

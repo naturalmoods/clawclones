@@ -2,7 +2,7 @@
   "id": "TinyAGI/tinyclaw",
   "name": "TinyAGI",
   "language": "TypeScript",
-  "vibe_summary": "A multi-agent, multi-team orchestrator (formerly TinyClaw) that runs isolated AI agent teams 24/7 with a slick web 'TinyOffice' dashboard. It leans into the 'one person company' fantasy with team chat rooms, task boards, and pixel-office visualizations.",
+  "vibe_summary": "A multi-agent, multi-team orchestrator (formerly TinyClaw) aimed at running a 'one person company' of AI agents with isolated workspaces. Ships a polished web portal (TinyOffice), team chat rooms, and Linear-style task management on top of Claude Code and Codex CLIs.",
   "health_status": "healthy",
   "github_stars": 3611,
   "metrics": {
@@ -12,7 +12,7 @@
   },
   "radar_chart": {
     "sandboxing": 5,
-    "api_security": 6,
+    "api_security": 5,
     "network_isolation": 4,
     "telemetry_safety": 6,
     "shell_access_risk": 8
@@ -26,16 +26,16 @@
   ],
   "community_sentiment": 45,
   "reddit_mentions": 0,
-  "web_mentions": 5,
+  "web_mentions": 10,
   "best_for": [
-    "Solo founders wanting multiple agent teams with isolated workspaces",
-    "Users who want a visual dashboard (TinyOffice) for agent management",
-    "Teams needing Discord/WhatsApp/Telegram agent channels"
+    "Solo founders wanting a team of coordinated AI agents",
+    "Users who want a visual dashboard for agent teams",
+    "People already using Claude Code or Codex CLIs"
   ],
   "avoid_if": [
-    "You need production-stable software (flagged experimental)",
-    "You want strong sandboxing without configuring gVisor yourself",
-    "You prefer a single lightweight assistant over a heavy orchestrator"
+    "You need production-stable software (marked experimental)",
+    "You want strong sandboxing without extra infra (relies on gVisor)",
+    "You prefer a single lightweight assistant over multi-agent orchestration"
   ],
   "deployment_target": [
     "self-hosted",
@@ -105,36 +105,36 @@
     "default_model_released_at": "2026-02-24",
     "default_model_date_source": "catalogue",
     "files_examined": 32,
-    "detected_at": "2026-09-05T08:01:43.044Z",
+    "detected_at": "2026-09-07T02:45:02.426Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
     "Native multi-team orchestration with agent hand-offs and fan-out",
-    "Polished web UI with task boards, org charts, and live team visualizer",
-    "SQLite-backed queue with retry and dead-letter handling",
-    "One-line install with zero-config first run"
+    "Built-in web portal with task/project management and live dashboards",
+    "One-command install with zero-config first run",
+    "Persistent team chat rooms and SQLite-backed task queue"
   ],
   "openclaw_disadvantages": [
-    "Experimental stability vs OpenClaw's more mature single-assistant core",
-    "Fewer messaging channels (3 vs OpenClaw's 8+)",
+    "Far smaller community and ecosystem than OpenClaw",
+    "Experimental stability flag vs OpenClaw's maturity",
     "Docker runs as root; sandboxing delegated to external gVisor",
-    "Smaller plugin ecosystem and community footprint"
+    "Fewer messaging channels (Discord/WhatsApp/Telegram vs OpenClaw's wider set)"
   ],
-  "confidence_summary": "Evidence is solid from README and recent commits showing active development, but there is zero Reddit discussion and minimal independent web coverage, so community sentiment is largely inferred from stars alone.",
+  "confidence_summary": "README and commit history give solid evidence of features and active development, but there are zero Reddit mentions and web sentiment is mostly about OpenClaw itself, so community and security assessments carry real uncertainty.",
   "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-08-24T12:08:00.628Z",
-    "last_reviewed_at": "2026-08-24T12:08:00.628Z",
+    "last_generated_at": "2026-09-07T02:45:08.039Z",
+    "last_reviewed_at": "2026-09-07T02:45:08.039Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "TinyAGI (formerly TinyClaw) is a TypeScript-based multi-agent orchestrator aimed at the 'one person company' use case: you run multiple teams of AI agents, each with isolated workspaces and specialized roles, collaborating via chain execution and fan-out. It supports Anthropic Claude and OpenAI Codex providers (plus any compatible endpoint), persists sessions across restarts, and uses a SQLite queue with atomic transactions, retries, and dead-letter management.\n\nIts standout feature is TinyOffice, a browser-based control plane with a pixel-office scene, team chat rooms, Linear-style task/project management with comments, and a live TUI dashboard. Agents connect to Discord, WhatsApp, and Telegram, and a plugin system allows custom message hooks and event listeners. Recent commits show heavy investment in the office UI, task management, and daemon control-plane features like restart loops and pairing APIs.\n\nCompared to OpenClaw, TinyAGI trades single-assistant maturity and channel breadth for team orchestration and visualization. Security is a mixed bag: it passes IS_SANDBOX env vars and relies on gVisor for container isolation, but the Docker image runs as root and agents invoke CLI tools with broad shell access. It is explicitly flagged experimental, so expect rapid change and occasional breakage.",
+  "overview_markdown": "TinyAGI (formerly TinyClaw) is a TypeScript-based multi-agent orchestrator positioned as an 'agent teams' platform for the one-person company. It runs multiple isolated AI agents with specialized roles that collaborate via chain execution and fan-out, coordinated through a SQLite-backed queue with retry and dead-letter handling. Agents are powered by external CLIs — Claude Code for Anthropic and Codex CLI for OpenAI — plus any OpenAI/Anthropic-compatible custom endpoint, with per-provider API key management built in.\n\nIts standout differentiator versus OpenClaw is the team-of-agents model paired with a rich control surface: TinyOffice, a browser portal with a pixel-office visualization, team chat rooms, a live TUI dashboard, and a recently added Linear-style task/project system with comments and sequential task IDs. Messaging channels include Discord, WhatsApp, and Telegram, and a plugin system supports message hooks and event listeners.\n\nThe project is explicitly experimental and moving fast — recent commits show heavy UI reorganization, a control plane with daemon restart and pairing APIs, and Docker hardening changes (including running as root in-container while delegating isolation to gVisor). Compared to OpenClaw's massive ecosystem and channel breadth, TinyAGI trades maturity and community for a more opinionated, team-oriented orchestration experience with a very low-friction install.",
   "latest_release": {
     "version": "v0.0.20",
     "date": "2026-03-26T17:23:07Z",
     "url": "https://github.com/TinyAGI/tinyagi/releases/tag/v0.0.20"
   },
-  "last_updated": "2026-09-07T01:35:18.739Z"
+  "last_updated": "2026-09-07T02:45:08.039Z"
 }

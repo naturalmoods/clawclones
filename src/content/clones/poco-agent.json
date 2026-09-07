@@ -2,18 +2,18 @@
   "id": "poco-ai/poco-agent",
   "name": "Poco",
   "language": "Python",
-  "vibe_summary": "Poco is a polished, team-oriented OpenClaw alternative built on a Claude Code–powered agent with a slick Next.js UI. It leans hard into collaboration: servers, channels, IM integrations, and sandboxed execution with one-click Docker self-hosting.",
+  "vibe_summary": "A polished, team-oriented OpenClaw alternative with a slick Next.js UI, sandboxed execution, and Slack-style server/channel collaboration. Powered by a Claude Code-based agent runtime with built-in IM integrations for DingTalk, Feishu, and Telegram.",
   "health_status": "healthy",
   "github_stars": 1352,
   "metrics": {
-    "boot_time_ms": 220,
+    "boot_time_ms": 250,
     "memory_mb": 90,
-    "security_score": 78
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 9,
-    "api_security": 7,
-    "network_isolation": 7,
+    "sandboxing": 8,
+    "api_security": 6,
+    "network_isolation": 6,
     "telemetry_safety": 6,
     "shell_access_risk": 4
   },
@@ -24,20 +24,18 @@
     "team-collaboration",
     "self-hosted"
   ],
-  "community_sentiment": 45,
-  "reddit_mentions": 21,
+  "community_sentiment": 35,
+  "reddit_mentions": 20,
   "web_mentions": 10,
   "best_for": [
     "Teams wanting channel-based agent collaboration",
-    "Users who want a polished web UI over a CLI",
-    "Self-hosters needing sandboxed Claude Code workflows",
-    "IM-centric workflows via DingTalk, Feishu, or Telegram"
+    "Users who prefer a polished web UI over terminal-first tools",
+    "Self-hosters needing IM integration (DingTalk, Feishu, Telegram)"
   ],
   "avoid_if": [
-    "You need a lightweight single-binary agent",
-    "You want a large, mature plugin ecosystem",
-    "You prefer fully offline local-first operation",
-    "You need proven multi-tenant enterprise hardening"
+    "You want a massive plugin ecosystem and community",
+    "You need a lightweight single-binary local assistant",
+    "You rely on English-first community support and docs"
   ],
   "deployment_target": [
     "self-hosted",
@@ -172,37 +170,36 @@
     "default_model_released_at": "2025-05-14",
     "default_model_date_source": "model_id",
     "files_examined": 77,
-    "detected_at": "2026-09-05T08:00:15.193Z",
+    "detected_at": "2026-09-07T02:17:37.449Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Container-sandboxed execution by default",
-    "Built-in server/channel team collaboration model",
-    "Polished Next.js UI with artifacts and playback views",
-    "Native IM integrations and mobile support",
-    "One-click Docker deployment"
+    "Container-sandboxed task execution by default",
+    "Built-in multi-user servers, channels, and task tracking",
+    "More polished web UI with artifacts and playback views",
+    "Native IM integrations for DingTalk, Feishu, and Telegram"
   ],
   "openclaw_disadvantages": [
-    "Much smaller community and ecosystem",
-    "Heavier stack (Python + FastAPI + Next.js) to operate",
-    "Tied to Claude Code runtime rather than model-agnostic core",
-    "Younger project with less battle-tested security history"
+    "Far smaller community and ecosystem (1.3k vs 300k+ stars)",
+    "Heavier stack (Python/FastAPI/Next.js/Docker) vs lightweight gateway",
+    "Fewer messaging platform integrations overall",
+    "Younger project with less battle-tested security posture"
   ],
-  "confidence_summary": "README and commit evidence is strong and recent, showing active development and real sandboxing work. However, Reddit matches are almost entirely unrelated Spanish-language noise ('poco'), so community sentiment is highly uncertain.",
+  "confidence_summary": "README and commit evidence is strong and shows active development, but Reddit matches are almost entirely unrelated Spanish-language noise, so community sentiment is highly uncertain.",
   "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-08-24T11:40:28.306Z",
-    "last_reviewed_at": "2026-08-24T11:40:28.306Z",
+    "last_generated_at": "2026-09-07T02:17:48.704Z",
+    "last_reviewed_at": "2026-09-07T02:17:48.704Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "Poco positions itself as a safer, more beautiful, and easier-to-use OpenClaw alternative, built around a Claude Code–powered agent runtime. The architecture pairs a FastAPI (Python 3.12+) backend with a Next.js 16 frontend, and every task executes inside an isolated container sandbox — users can install dependencies, modify files, and run commands without touching the host. Self-hosters can optionally mount local directories into the sandbox so the agent works directly on real project files.\n\nWhere Poco differentiates itself is collaboration and product polish. It introduces long-lived servers with channels, DMs, and reply threads where persistent agents can be mentioned, messages become trackable tasks, and outputs publish into shared files. The UI includes an artifacts viewer (HTML, PDF, Markdown, Excalidraw, Drawio, and more), a playback view for replaying command I/O, browser sessions, and MCP/tool calls, plus light/dark mode and mobile support. IM integrations with DingTalk, Feishu, and Telegram, background execution, and scheduled triggers round out the 'pocket coworker' pitch.\n\nCompared to OpenClaw, Poco trades raw ecosystem size and minimalism for a managed, team-first experience: preset runtime configs, project-level defaults, MCP & Skills extensibility, GitHub repo integration, and one-click Docker deployment (plus an optional cloud subscription). Recent commits show active hardening — auth redirect fixes, visibility-aware service paths, signed workspace file streaming, and iframe sandbox tuning — suggesting a maturing but still young project.",
+  "overview_markdown": "## Overview\n\nPoco positions itself as a safer, more beautiful, and easier-to-use alternative to OpenClaw. Instead of a lightweight gateway bridging chat apps to agents, Poco is a full-stack product: a FastAPI (Python 3.12+) backend, a Next.js 16 frontend, and a Claude Code–powered agent runtime, all deployable via one-click Docker self-hosting or a managed cloud subscription.\n\nIts standout differentiator is **team collaboration**: long-lived servers with channels, DMs, threads, and mentionable persistent agents, plus project management with per-project model, preset, Git repo, and mount defaults. All task execution happens inside an isolated container sandbox, with optional host directory mounting for self-hosted deployments — a meaningfully safer default than running agents directly on the host.\n\nThe agentic experience mirrors Claude Code (slash commands, Plan Mode, sub-agents) and adds MCP/Skills extensibility, a built-in browser, background execution with scheduled triggers, and IM integration with DingTalk, Feishu, and Telegram. Recent commits show active hardening — auth redirect fixes, signed workspace file streaming, and visibility-aware access control — though the project is still young (v0.5.7) with a much smaller community than OpenClaw.",
   "latest_release": {
     "version": "0.5.7",
     "date": "2026-06-18T02:32:30Z",
     "url": "https://github.com/poco-ai/poco-claw/releases/tag/0.5.7"
   },
-  "last_updated": "2026-09-07T01:35:11.318Z"
+  "last_updated": "2026-09-07T02:17:48.704Z"
 }

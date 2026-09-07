@@ -2,11 +2,11 @@
   "id": "open-gitagent/gitclaw",
   "name": "Gitagent",
   "language": "Rust",
-  "vibe_summary": "A git-native agent framework where identity, rules, memory, tools, and skills are all version-controlled files — fork an agent, branch a personality, git log its memory. Recently hardened with security fixes and a Rust port (ira) powering a Tauri desktop app.",
+  "vibe_summary": "A git-native agent framework where your agent's identity, rules, memory, and skills are all version-controlled files — fork an agent, branch a personality, git log its memory. Recently hardened with a Rust engine port (ira) and a Tauri desktop app, plus serious security fixes for RCE and tool races.",
   "health_status": "healthy",
   "github_stars": 674,
   "metrics": {
-    "boot_time_ms": 40,
+    "boot_time_ms": 45,
     "memory_mb": 18,
     "security_score": 78
   },
@@ -21,32 +21,32 @@
     "git-native",
     "agent-framework",
     "rust",
-    "version-controlled-memory",
-    "mcp"
+    "versioned-memory",
+    "desktop"
   ],
   "community_sentiment": 45,
   "reddit_mentions": 0,
-  "web_mentions": 6,
+  "web_mentions": 10,
   "best_for": [
     "Developers who want agent config and memory as auditable git history",
     "Teams forking and diffing agent personalities like code",
-    "Users wanting a local desktop agent app with model management"
+    "Users wanting a desktop app with local model management via Ollama"
   ],
   "avoid_if": [
-    "You need a large, battle-tested community and plugin registry",
-    "You want zero shell/CLI tool exposure by default",
-    "You need proven multi-tenant or team collaboration features"
+    "You need a large, proven community and plugin ecosystem",
+    "You want zero-setup hosted agents with no git knowledge required",
+    "You need battle-tested multi-user deployment at scale"
   ],
   "deployment_target": [
     "desktop",
     "self-hosted",
-    "cloud"
+    "edge"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
   "setup_difficulty": "low",
-  "privacy_posture": "mixed",
-  "multi_user": null,
+  "privacy_posture": "strong",
+  "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
   "last_commit_at": "2026-08-20T06:35:52Z",
@@ -158,36 +158,36 @@
     "default_model_released_at": "2024-07-18",
     "default_model_date_source": "catalogue",
     "files_examined": 57,
-    "detected_at": "2026-09-05T07:59:03.255Z",
+    "detected_at": "2026-09-07T02:09:35.991Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Agent state is fully version-controlled — memory, rules, and identity are diffable git files",
-    "Recent security hardening closed load-time RCE and tool race conditions",
-    "Rust port with embedded UI and Tauri desktop app for lower footprint",
-    "MCP client support for stdio and HTTP/SSE tool servers"
+    "Agent state is fully version-controlled — diff, branch, and roll back memory and rules",
+    "Rust engine port offers lower resource footprint than OpenClaw's Node stack",
+    "Recent hardening commits closed RCE and race-condition gaps proactively",
+    "Bundled Tauri desktop app with onboarding wizard and model management"
   ],
   "openclaw_disadvantages": [
-    "Much smaller community and zero Reddit presence",
-    "Plugin and skill ecosystem is young compared to OpenClaw's registry",
-    "Shell/CLI tool access remains a meaningful risk surface",
-    "Telemetry and auth (Memberstack) add external dependencies"
+    "Far smaller community (674 stars vs OpenClaw's massive base) and zero Reddit presence",
+    "No multi-channel messaging (WhatsApp/Telegram/Discord) like OpenClaw",
+    "Plugin and skills ecosystem is nascent compared to OpenClaw's 5,400+ skills",
+    "Shell access risk remains high for autonomous CLI tool use"
   ],
-  "confidence_summary": "Evidence is moderate: the README and detailed commit history show active, security-conscious development, but there is no Reddit discussion and only indirect web mentions, so community sentiment is largely inferred.",
+  "confidence_summary": "Evidence is moderate: README and commit history are detailed and show active, security-conscious development, but there is zero Reddit discussion and web sentiment is entirely about OpenClaw rather than this project. Community and ecosystem maturity assessments carry real uncertainty.",
   "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-08-24T11:27:34.269Z",
-    "last_reviewed_at": "2026-08-24T11:27:34.269Z",
+    "last_generated_at": "2026-09-07T02:09:46.284Z",
+    "last_reviewed_at": "2026-09-07T02:09:46.284Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "Gitagent reimagines the AI agent as a git repository: `agent.yaml` holds model and runtime config, `SOUL.md` defines personality, `RULES.md` sets behavioral constraints, and `memory/`, `tools/`, `skills/`, and `hooks/` are all version-controlled files. This makes agents forkable, branchable, and auditable — you can `git log` an agent's memory or diff its rules like any codebase. Distribution is via npm with a one-command installer that launches a voice-enabled web UI on localhost:3333.\n\nArchitecturally, the project is transitioning from its TypeScript/Node core to a Rust rewrite ('ira') that ships as a Tauri desktop app (Lyzr Edgespace) with an embedded single-file web UI, Ollama model management with auto-install, and an onboarding wizard. It supports MCP clients (stdio and HTTP/SSE), declarative YAML tools, lifecycle hooks, and an OpenAI-compatible API surface for edge agents.\n\nCompared to OpenClaw, Gitagent's differentiator is its git-native state model and recent security hardening — commits show fixes for a load-time RCE via shell-interpolated git clone, tool concurrency races, and resource leaks. However, its community and plugin ecosystem are far smaller, telemetry/session tracing is built in, and CLI tool access means shell risk remains a consideration.",
+  "overview_markdown": "Gitagent reimagines the AI agent as a git repository: `agent.yaml` holds model and runtime config, `SOUL.md` defines personality, `RULES.md` sets behavioral constraints, and `memory/`, `tools/`, `skills/`, and `hooks/` are all version-controlled files. This makes agent behavior auditable and collaborative — you can fork an agent, branch a personality, diff its rules, and `git log` its memory. Distribution is via npm with a one-command installer that launches a voice-enabled web UI on localhost:3333.\n\nArchitecturally, the project is in transition from its TypeScript/Node core to a Rust engine ('ira') paired with a Tauri desktop app (Lyzr Edgespace branding) featuring an embedded web UI, VS Code-style agent editor, Ollama-based local model management with download progress and self-healing serve, and a first-run onboarding wizard. It supports MCP servers (stdio + http/sse), an OpenAI-compatible API surface, and SDK-level tool definitions.\n\nNotably, recent commits show serious security hardening: closing a load-time RCE via shell-interpolated `git clone` in agent.yaml, fixing concurrent tool-write races, wiring real abort/steer semantics, and preventing sandbox/e2b VM leaks. Compared to OpenClaw, Gitagent trades OpenClaw's massive multi-channel messaging ecosystem for a developer-centric, git-auditable agent model with a lighter Rust runtime — but its community and plugin ecosystem remain far smaller.",
   "latest_release": {
     "version": "v2.2.0",
     "date": "2026-08-20T06:54:09Z",
     "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.2.0"
   },
-  "last_updated": "2026-09-07T01:35:08.344Z"
+  "last_updated": "2026-09-07T02:09:46.284Z"
 }

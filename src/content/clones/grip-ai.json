@@ -2,18 +2,18 @@
   "id": "5unnykum4r/grip-ai",
   "name": "grip-ai",
   "language": "Python",
-  "vibe_summary": "A self-hostable Python agent platform built on the Claude Agent SDK with LiteLLM fallback across 15+ providers. Impressively engineered for a small project — 882 tests, mypy-clean CI, and real cross-provider failover — but still early with minimal community traction.",
+  "vibe_summary": "A self-hostable Python agent platform built on the Claude Agent SDK with LiteLLM fallback across 15+ providers. Impressively engineered for a tiny project — 882 tests, mypy-clean CI, and real cross-provider failover — but with near-zero community traction.",
   "health_status": "healthy",
   "github_stars": 11,
   "metrics": {
-    "boot_time_ms": 220,
-    "memory_mb": 85,
+    "boot_time_ms": 250,
+    "memory_mb": 120,
     "security_score": 62
   },
   "radar_chart": {
     "sandboxing": 4,
     "api_security": 6,
-    "network_isolation": 3,
+    "network_isolation": 4,
     "telemetry_safety": 7,
     "shell_access_risk": 8
   },
@@ -25,17 +25,17 @@
     "multi-channel"
   ],
   "community_sentiment": 30,
-  "reddit_mentions": 18,
-  "web_mentions": 9,
+  "reddit_mentions": 19,
+  "web_mentions": 10,
   "best_for": [
-    "Python developers wanting a self-hosted Claude SDK agent",
-    "Users needing multi-provider LLM failover with cost tracking",
-    "Telegram/Discord/Slack chatbot automation with browser control"
+    "Python developers wanting a hackable Claude SDK-based agent",
+    "Users needing multi-provider failover via LiteLLM",
+    "Self-hosters wanting Telegram/Discord/Slack chat channels"
   ],
   "avoid_if": [
-    "You need a mature, battle-tested community and plugin ecosystem",
-    "You want strong sandboxing around shell and browser tools",
-    "You prefer a single-maintainer risk-free dependency"
+    "You need a large community or ecosystem support",
+    "You want battle-tested sandboxing for shell/browser tools",
+    "You prefer a mature project with many production deployments"
   ],
   "deployment_target": [
     "self-hosted",
@@ -146,36 +146,36 @@
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
     "files_examined": 15,
-    "detected_at": "2026-09-05T07:55:04.821Z",
+    "detected_at": "2026-09-07T01:28:01.935Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Dual-engine design: Claude Agent SDK primary with LiteLLM fallback to 15+ providers",
-    "Real cross-provider failover via litellm.Router with per-call USD cost tracking",
-    "Strong code hygiene: 882 tests, mypy-clean tree enforced in CI",
-    "Built-in Playwright browser automation and 31 tools out of the box"
+    "Dual-engine design with real cross-provider failover via litellm.Router",
+    "Strong code hygiene: 882 tests, mypy-clean tree, CI type enforcement",
+    "Built-in USD cost tracking per call",
+    "Single pip-installable Python package with onboarding wizard"
   ],
   "openclaw_disadvantages": [
-    "Tiny community (11 stars) versus OpenClaw's large ecosystem",
-    "No container sandboxing for shell/browser tools — higher host risk",
-    "Single-maintainer project with uncertain long-term maintenance",
-    "No documented skill/plugin registry comparable to OpenClaw's"
+    "Tiny community (11 stars) vs OpenClaw's massive ecosystem",
+    "No comparable skills registry or plugin marketplace",
+    "Shell and browser automation exposed without documented sandboxing",
+    "Single-maintainer bus factor and unproven production track record"
   ],
-  "confidence_summary": "README and commit history give strong evidence of engineering quality and architecture, but there is essentially zero independent community discussion — all Reddit matches are unrelated keyword noise. Sentiment, adoption, and security posture scores are low-confidence inferences.",
+  "confidence_summary": "README and commit history give strong evidence of engineering quality and architecture, but there is essentially no independent community feedback — all 19 Reddit matches are unrelated word collisions on 'grip'. Adoption, security posture, and real-world reliability remain uncertain.",
   "evidence_confidence": 55,
   "content_ops": {
-    "last_generated_at": "2026-08-24T10:15:35.581Z",
-    "last_reviewed_at": "2026-08-24T10:15:35.581Z",
+    "last_generated_at": "2026-09-07T01:28:04.807Z",
+    "last_reviewed_at": "2026-09-07T01:28:04.807Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "grip-ai is a self-hostable AI agent platform written in Python (~24,000 lines, 120+ modules) that positions itself as a lightweight OpenClaw alternative. Its core architecture is a dual-engine design: the **Claude Agent SDK** serves as the primary engine for Claude models, while a **LiteLLM engine** provides fallback to 15+ providers (OpenAI, DeepSeek, Groq, Gemini, Ollama, vLLM, LM Studio, and any OpenAI-compatible API). Notably, grip bridges its own 31-tool registry into the SDK engine as in-process MCP tools, so both engines expose the same tool surface — a fix for the common dual-engine fragmentation problem.\n\nFeature-wise it covers the modern agent platform checklist: Telegram/Discord/Slack channels, Playwright-based headless browser automation, cron scheduling, multi-agent orchestration, document conversion via MarkItDown, and a REST API — all from a single `grip gateway` process. Reliability work is a clear focus: automatic retries with exponential backoff, true cross-provider failover via `litellm.Router`, and per-call USD cost tracking. The project maintains unusually strong engineering hygiene for its size, with 882 tests, ruff linting, and a mypy-clean tree enforced in CI as of v1.6.1.\n\nCompared to OpenClaw, grip trades ecosystem maturity for a leaner, Python-native stack with broader out-of-the-box provider support. However, it lacks OpenClaw's container-style sandboxing — shell execution and browser automation run with host-level access, making it riskier for untrusted workloads. With only 11 stars and no measurable community discussion, it remains a promising but unproven single-maintainer project.",
+  "overview_markdown": "grip-ai is a self-hostable AI agent platform written in Python (~24k lines, 120+ modules) that positions itself as a lightweight OpenClaw alternative. Its core architecture is a dual-engine design: the Claude Agent SDK serves as the primary engine for Claude models, while a LiteLLM engine provides access to 15+ other providers (OpenAI, DeepSeek, Groq, Gemini, Ollama, vLLM, LM Studio, etc.). Notably, grip bridges its full 31-tool registry into the SDK engine as in-process MCP tools, so both engines expose the same tool surface — filesystem, shell, web search, Playwright browser automation, document conversion, and more.\n\nReliability is a clear focus: it implements real cross-provider failover via litellm.Router with per-deployment credentials, exponential-backoff retries, and per-call USD cost tracking. A single `grip gateway` process serves Telegram, Discord, and Slack channels, cron scheduling, multi-agent orchestration, and a REST API. The project ships via PyPI with an onboarding wizard that verifies API keys and fetches live model lists.\n\nCompared to OpenClaw, grip is far smaller and younger — 11 stars, a single visible maintainer, and no community footprint (all Reddit 'grip' matches are unrelated). However, its engineering discipline is unusually strong for its size: 882 tests, a mypy-clean tree enforced in CI, and detailed changelogs. The main risks are the lack of documented sandboxing around its shell and browser tools, and the absence of any proven production user base.",
   "latest_release": {
     "version": "v1.6.1",
     "date": "2026-05-28T20:05:30Z",
     "url": "https://github.com/5unnykum4r/grip-ai/releases/tag/v1.6.1"
   },
-  "last_updated": "2026-09-07T01:34:54.385Z"
+  "last_updated": "2026-09-07T01:28:04.807Z"
 }

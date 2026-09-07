@@ -2,48 +2,47 @@
   "id": "netease-youdao/LobsterAI",
   "name": "LobsterAI",
   "language": "TypeScript",
-  "vibe_summary": "A desktop-grade AI agent from NetEase Youdao that wraps OpenClaw with a polished Electron UI and deep Chinese IM integrations. Actively shipped with frequent releases, it targets real-world office automation on your local machine.",
+  "vibe_summary": "A polished Electron desktop agent from NetEase Youdao that layers a Cowork session UI on top of OpenClaw as its runtime. It targets real office work — docs, slides, data analysis — with phone-based control via WeChat, Feishu, DingTalk, and Telegram.",
   "health_status": "healthy",
   "github_stars": 5985,
   "metrics": {
     "boot_time_ms": 250,
-    "memory_mb": 90,
-    "security_score": 75
+    "memory_mb": 350,
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 4,
+    "sandboxing": 5,
     "api_security": 6,
-    "network_isolation": 3,
+    "network_isolation": 4,
     "telemetry_safety": 5,
     "shell_access_risk": 7
   },
   "tags": [
     "desktop-agent",
+    "electron",
     "openclaw-based",
-    "multi-agent",
-    "im-integration",
-    "electron"
+    "office-automation",
+    "im-integration"
   ],
-  "community_sentiment": 70,
+  "community_sentiment": 45,
   "reddit_mentions": 19,
-  "web_mentions": 7,
+  "web_mentions": 10,
   "best_for": [
-    "Desktop power users needing local file/terminal automation",
-    "Chinese tech ecosystem with WeChat/Feishu/DingTalk workflows",
-    "Teams wanting multi-agent office task automation"
+    "Chinese-market office workers wanting IM-driven agent control",
+    "Users who want a GUI desktop app instead of OpenClaw's CLI-first setup",
+    "Teams needing document, slide, and data-analysis automation"
   ],
   "avoid_if": [
-    "Users wanting lightweight or browser-only agent",
-    "Privacy purists avoiding desktop-wide permissions",
-    "Those needing heavy sandboxing or cloud-only deployment"
+    "You want a lightweight or headless deployment",
+    "You distrust vendor-tied desktop apps with server-side config endpoints",
+    "You need Linux support (macOS/Windows only)"
   ],
   "deployment_target": [
-    "desktop",
-    "self-hosted"
+    "desktop"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "medium",
+  "setup_difficulty": "low",
   "privacy_posture": "mixed",
   "multi_user": false,
   "plugin_ecosystem": "emerging",
@@ -156,36 +155,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 100,
-    "detected_at": "2026-09-05T07:58:00.030Z",
+    "detected_at": "2026-09-07T01:59:31.984Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Desktop-grade UI with Electron for visual session management",
-    "Deep IM integration (WeChat, Feishu, DingTalk, Telegram) for mobile commands",
-    "Prebuilt Expert Kits and multi-agent workflows for office tasks",
-    "Local file and terminal execution with approval gates"
+    "Full desktop GUI with session history, artifact rendering, and approval prompts",
+    "Native bindings for Chinese IM platforms (WeChat, Feishu, DingTalk)",
+    "Multi-agent configuration with per-agent models, skills, and working directories",
+    "Backed by a major company with frequent structured releases"
   ],
   "openclaw_disadvantages": [
-    "Heavier footprint (Electron) vs OpenClaw's lean runtime",
-    "Less cross-platform/OS-agnostic; focused on macOS/Windows desktop",
-    "More complex setup with IM bot configurations",
-    "Tighter coupling to NetEase Youdao ecosystem"
+    "Heavier Electron footprint vs OpenClaw's lean runtime",
+    "macOS/Windows only; no Linux or headless server mode",
+    "Smaller community and ecosystem than OpenClaw core",
+    "Some server-side config dependencies reduce full self-hosting control"
   ],
-  "confidence_summary": "Evidence from README and recent commits shows active development and clear OpenClaw derivation; however, limited Reddit sentiment and security details introduce some uncertainty.",
-  "evidence_confidence": 80,
+  "confidence_summary": "Strong evidence from README, commits, and release data that this is an actively maintained OpenClaw-based desktop product. Reddit matches are almost entirely unrelated 'lobster' noise, so community sentiment is uncertain.",
+  "evidence_confidence": 78,
   "content_ops": {
-    "last_generated_at": "2026-07-13T02:30:52.191Z",
-    "last_reviewed_at": "2026-08-24T11:14:30.745Z",
-    "refresh_mode": "refresh",
+    "last_generated_at": "2026-09-07T01:59:44.238Z",
+    "last_reviewed_at": "2026-09-07T01:59:44.238Z",
+    "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "LobsterAI is an open-source, desktop-grade AI agent built by NetEase Youdao, leveraging OpenClaw as its underlying runtime and gateway. The project splits responsibilities: Cowork serves as the desktop session and product layer (handling UI, persistence, permissions, artifacts, memory, and IM bindings), while OpenClaw executes agent tasks. This architecture allows LobsterAI to operate directly on a user's real desktop environment—local files, terminal, browser, and office documents—while maintaining cross-platform support for macOS and Windows via Electron and React.\n\nUnique features include Desktop Cowork Sessions with approval-gated sensitive actions, Multi-Agent Workflows with custom identities and IM bindings, and scenario-oriented Expert Kits for repeatable office roles. Recent commits show active maintenance, with fixes for Windows title bar, queued follow-up coordination, and WeCom/DingTalk notification reliability. Compared to vanilla OpenClaw, LobsterAI provides a richer graphical interface, deeper integration with Chinese IM platforms (WeChat, Feishu, DingTalk), and packaged business workflows, but at the cost of a heavier Electron footprint and less minimalism.",
+  "overview_markdown": "LobsterAI is an open-source desktop agent from NetEase Youdao, billed as the first desktop-grade agent open-sourced by a major Chinese tech company. Architecturally, it splits responsibilities: the Cowork layer (Electron 40 + React 18 desktop app) owns local persistence, permissions, UI state, artifacts, agents, memory, and IM bindings, while OpenClaw serves as the underlying agent runtime and gateway.\n\nIts standout features include long-running cowork sessions against local files and projects with approval gates for sensitive actions (file ops, terminal commands, network access), multi-agent workflows with per-agent identity/model/skills, and Expert Kits that package scenario-specific capabilities. A key differentiator is phone-based remote control through WeChat, Feishu, DingTalk, and Telegram — clearly aimed at the Chinese office productivity market.\n\nCompared to running OpenClaw directly, LobsterAI trades leanness for usability: you get a polished GUI, structured releases (currently at 2026.9.4 with active CI maintenance), and desktop-native workflows, but at the cost of an Electron memory footprint, macOS/Windows-only support, and some vendor server-side configuration endpoints that temper its otherwise local-first posture.",
   "latest_release": {
     "version": "2026.9.4",
     "date": "2026-09-04T16:14:12Z",
     "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.9.4"
   },
-  "last_updated": "2026-09-07T01:35:05.110Z"
+  "last_updated": "2026-09-07T01:59:44.238Z"
 }

@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 980449,
-    "total_stars_formatted": "980.4k",
+    "total_stars": 980466,
+    "total_stars_formatted": "980.5k",
     "most_active_language": "Rust",
     "language_breakdown": {
       "TypeScript": 9,
@@ -31,11 +31,11 @@
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 242567,
-    "stars_growth_7d": 3661,
+    "stars": 242583,
+    "stars_growth_7d": 3677,
     "language": "Python",
     "sentiment": 82,
-    "vibe_summary": "A self-improving, always-on agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It positions itself as the closest direct competitor to OpenClaw, with multi-platform messaging gateways and cross-session memory.",
+    "vibe_summary": "A self-improving AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to serverless, with a polished TUI and multi-platform messaging gateway.",
     "health": "healthy",
     "latest_version": "v2026.8.31",
     "url": "https://clawclones.com/clones/NousResearch/hermes-agent"
@@ -47,16 +47,16 @@
     "url": "https://clawclones.com/compare/hermes-agent-vs-zeroclaw"
   },
   "updated_at": "2026-09-07T23:59:59.999Z",
-  "generated_at": "2026-09-07T01:35:23.148Z",
+  "generated_at": "2026-09-07T02:58:16.053Z",
   "freshness": {
     "updated_at": "2026-09-07T23:59:59.999Z",
-    "generated_at": "2026-09-07T01:35:23.148Z",
+    "generated_at": "2026-09-07T02:58:16.053Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-09-07T01:35:22.389Z",
+        "updated_at": "2026-09-07T02:56:14.064Z",
         "age_hours": 0
       },
       "history": {
@@ -64,8 +64,8 @@
         "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-09-07T23:59:59.999Z",
-        "age_hours": 0
+        "updated_at": "2026-09-06T23:59:59.999Z",
+        "age_hours": 3
       }
     }
   }

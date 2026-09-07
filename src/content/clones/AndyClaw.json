@@ -2,18 +2,18 @@
   "id": "EthereumPhone/AndyClaw",
   "name": "AndyClaw",
   "language": "Kotlin",
-  "vibe_summary": "A full OpenClaw-style agentic AI assistant rebuilt as a native Android APK, with deep ethOS/dGEN1 integration for crypto wallets and device control. It runs a local Qwen2.5-1.5B model or BYO API keys, with an autonomous background heartbeat.",
+  "vibe_summary": "A full OpenClaw-style agentic AI assistant packaged as a single Android APK, with deep ethOS/crypto-wallet integration on the dGEN1 phone. It pairs an on-device Qwen2.5-1.5B local model with autonomous heartbeat-driven background operation.",
   "health_status": "healthy",
   "github_stars": 90,
   "metrics": {
-    "boot_time_ms": 250,
-    "memory_mb": 120,
+    "boot_time_ms": 300,
+    "memory_mb": 250,
     "security_score": 62
   },
   "radar_chart": {
     "sandboxing": 4,
     "api_security": 6,
-    "network_isolation": 5,
+    "network_isolation": 3,
     "telemetry_safety": 7,
     "shell_access_risk": 9
   },
@@ -25,17 +25,17 @@
     "ethos"
   ],
   "community_sentiment": 35,
-  "reddit_mentions": 12,
-  "web_mentions": 5,
+  "reddit_mentions": 17,
+  "web_mentions": 10,
   "best_for": [
-    "dGEN1/ethOS owners wanting wallet-integrated AI",
-    "Android users wanting an on-device agent",
-    "Crypto users needing autonomous micro-payments"
+    "dGEN1/ethOS phone owners wanting native wallet-integrated AI",
+    "Android users wanting an on-device agent without a server",
+    "Crypto users who want AI-managed micro-payment wallets"
   ],
   "avoid_if": [
-    "You need strong sandboxing of agent actions",
-    "You are uncomfortable with AI shell/wallet access",
-    "You want a large community or plugin ecosystem"
+    "You need a desktop or server-based assistant",
+    "You are uncomfortable granting an AI shell and device control",
+    "You want a large, mature community and plugin ecosystem"
   ],
   "deployment_target": [
     "edge",
@@ -44,7 +44,7 @@
   "local_first": true,
   "cloud_dependency": "optional",
   "setup_difficulty": "low",
-  "privacy_posture": "mixed",
+  "privacy_posture": "strong",
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "GPL-3.0",
@@ -130,36 +130,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 55,
-    "detected_at": "2026-09-05T07:55:52.881Z",
+    "detected_at": "2026-09-07T01:37:04.962Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Native Android app with deep device control",
-    "Built-in local LLM (Qwen2.5-1.5B) plus BYO-GGUF support",
-    "Crypto wallet and XMTP integration on ethOS",
-    "Autonomous OS-managed heartbeat without foreground service"
+    "Runs natively on Android as a single APK, no server or PC needed",
+    "On-device local LLM (Qwen2.5-1.5B) works fully offline",
+    "Deep crypto wallet and XMTP integration on ethOS",
+    "Autonomous OS-managed heartbeat for background operation"
   ],
   "openclaw_disadvantages": [
-    "Much smaller community and skill ecosystem",
-    "High-risk permissions (shell, wallet, device power) with limited sandboxing",
-    "Android-only; no desktop or multi-channel messaging support",
-    "Local model is small (1.5B) compared to desktop-class models"
+    "Far smaller community and ecosystem (90 stars vs hundreds of thousands)",
+    "Full feature set locked to ethOS/dGEN1 hardware",
+    "High-risk permissions (shell, device control, wallet) with limited sandboxing",
+    "Mobile-only; no desktop or multi-channel support"
   ],
   "confidence_summary": "README and commit history give strong evidence of architecture and activity, but community sentiment data is essentially noise (Reddit matches are unrelated), so popularity and reception scores are uncertain.",
   "evidence_confidence": 70,
   "content_ops": {
-    "last_generated_at": "2026-08-24T10:39:15.706Z",
-    "last_reviewed_at": "2026-08-24T10:39:15.706Z",
+    "last_generated_at": "2026-09-07T01:37:14.614Z",
+    "last_reviewed_at": "2026-09-07T01:37:14.614Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "AndyClaw is a native Android port of the OpenClaw concept, built by Freedom Factory for the dGEN1 phone and ethOS but runnable on any Android device as a single APK. It implements an agentic tool-use loop (up to 20 tool iterations per request) with long-term memory, a background heartbeat for autonomous operation, and ClawHub community skills.\n\nOn ethOS it unlocks a privileged mode authenticated via wallet signature: full device control (WiFi, Bluetooth, power, calls, app management), multi-chain wallet operations, XMTP messaging, and an AI-controlled sub-account wallet for micro-payments and DeFi. On stock Android it runs in open mode with a bundled local Qwen2.5-1.5B model or user-supplied OpenRouter/tinfoil keys, plus Termux integration, SMS, camera, location, and shell access.\n\nCompared to OpenClaw, AndyClaw trades desktop multi-channel breadth for deep mobile and crypto integration. Recent commits show active hardening (atomic backup restores, provider-aware error labeling, local GGUF model management over binder IPC), but the permission surface — unrestricted shell, wallet signing, and device power controls — makes it a high-trust, high-risk deployment best suited to enthusiasts.",
+  "overview_markdown": "AndyClaw is an open-source (GPL-3.0) Android port of the OpenClaw concept, built by Freedom Factory for the dGEN1 phone and ethOS but functional on any Android device. It ships as a single APK with an agentic tool-use loop supporting up to 20 chained tool calls per turn, letting the AI control device hardware, send messages, manage files, run shell commands, and execute multi-step tasks autonomously.\n\nThe app operates in two modes: on ethOS it unlocks a privileged mode with wallet signing authentication, multi-chain transaction support (Ethereum, Optimism, Polygon, Arbitrum, Base), XMTP messaging, full device control, and an AI-controlled sub-account wallet for micro-payments. On stock Android it runs in an open mode with a bundled local Qwen2.5-1.5B model or user-supplied OpenRouter/tinfoil API keys, plus Termux integration and ClawHub community skills.\n\nA distinguishing feature is its heartbeat architecture: the OS (or a foreground service on stock Android) periodically wakes the agent to act autonomously in the background, with persistent heartbeat logging and long-term memory across sessions. Recent commits show active hardening work — atomic backup restores, FTS index rebuilds, and binder IPC fixes — indicating a maturing but still fast-moving codebase. Compared to OpenClaw, it trades ecosystem size and multi-platform reach for deep mobile and crypto-native integration.",
   "latest_release": {
     "version": "v19",
     "date": "2026-03-16T18:15:59Z",
     "url": "https://github.com/EthereumPhone/AndyClaw/releases/tag/v19"
   },
-  "last_updated": "2026-09-07T01:34:57.412Z"
+  "last_updated": "2026-09-07T01:37:14.614Z"
 }
