@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A massively popular (40k+ stars) agentic chatbot framework that bridges dozens of IM platforms with LLMs, plugins, and a web dashboard. It positions itself explicitly as an OpenClaw alternative with a strong plugin marketplace and multi-language community.",
   "health_status": "healthy",
-  "github_stars": 40103,
+  "github_stars": 40164,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "AGPL-3.0",
-  "last_commit_at": "2026-09-07T00:38:04Z",
-  "contributors_count": 355,
-  "open_issues_count": 1483,
+  "last_commit_at": "2026-09-07T16:38:18Z",
+  "contributors_count": 358,
+  "open_issues_count": 1478,
   "release_cadence_days": 6,
   "operational_risk": "medium",
   "model_support": {
@@ -190,9 +190,9 @@
   },
   "overview_markdown": "AstrBot is a Python-based agentic chatbot framework that connects a wide range of IM platforms (QQ, WeChat, Telegram, Discord, and more) to LLM providers through a unified pipeline. It ships with a web dashboard, a plugin marketplace, knowledge base / RAG support, MCP tool integration, and a ChatUI, making it one of the most feature-complete open-source IM bot frameworks available. It explicitly markets itself as an OpenClaw alternative.\n\nArchitecturally, AstrBot is built around an event-driven pipeline with pluggable providers (OpenAI, Gemini, local models via vLLM, etc.), a plugin system with a community market, and a Vue-based admin dashboard. Recent commits show heavy investment in cross-platform CI (Windows/macOS/Linux unit tests), i18n parity across seven languages, and plugin market robustness — signs of a mature, well-maintained project.\n\nCompared to OpenClaw, AstrBot is more chatbot-centric: it excels at multi-platform messaging and plugin extensibility, but is heavier to run (Python runtime, ~90MB+ memory) and offers weaker sandboxing guarantees for autonomous shell execution. Its AGPL-3.0 license is also more restrictive for commercial derivatives. For users whose primary need is a self-hosted, multi-channel AI chat assistant with a rich plugin ecosystem, AstrBot is arguably the stronger choice; for a lean local action agent, OpenClaw retains the edge.",
   "latest_release": {
-    "version": "v4.28.0-beta.1",
-    "date": "2026-09-01T17:15:22Z",
-    "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.28.0-beta.1"
+    "version": "v4.28.0",
+    "date": "2026-09-07T16:43:43Z",
+    "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.28.0"
   },
-  "last_updated": "2026-09-07T01:35:39.327Z"
+  "last_updated": "2026-09-07T17:02:22.063Z"
 }

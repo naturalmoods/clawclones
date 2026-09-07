@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "The canonical self-hosted AI assistant gateway that connects your chat channels to agentic models on your own devices. Massive community, rapid release cadence, and a sprawling skills/plugin ecosystem make it the reference implementation everything else is compared against.",
   "health_status": "healthy",
-  "github_stars": 389058,
+  "github_stars": 389115,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -51,9 +51,9 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-09-07T02:10:41Z",
-  "contributors_count": 3291,
-  "open_issues_count": 6240,
+  "last_commit_at": "2026-09-07T16:59:38Z",
+  "contributors_count": 3296,
+  "open_issues_count": 6311,
   "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
@@ -304,5 +304,5 @@
     "date": "2026-09-05T20:00:07Z",
     "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.2"
   },
-  "last_updated": "2026-09-07T02:11:38.675Z"
+  "last_updated": "2026-09-07T17:02:34.401Z"
 }
