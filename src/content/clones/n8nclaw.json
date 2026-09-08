@@ -4,7 +4,7 @@
   "language": "n8n Workflow (JSON)",
   "vibe_summary": "A lightweight OpenClaw-inspired assistant built entirely as a single n8n visual workflow, with Telegram, WhatsApp, and Gmail channels plus tiered worker agents. It trades OpenClaw's native runtime for n8n's low-code orchestration and a Postgres/Supabase memory pipeline.",
   "health_status": "warning",
-  "github_stars": 228,
+  "github_stars": 229,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 120,
@@ -95,5 +95,5 @@
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "## Overview\n\nn8nClaw is a lightweight, self-hosted AI assistant implemented entirely as an [n8n](https://n8n.io) workflow, explicitly inspired by OpenClaw. Rather than shipping a custom runtime, it composes n8n trigger nodes (Telegram, WhatsApp via Evolution API webhook, Gmail polling, and an hourly heartbeat) into a single visual pipeline that normalizes incoming messages, resolves user profiles, and routes them to a central agent.\n\nThe core agent runs Claude Sonnet 4.5 via OpenRouter with a 15-message Postgres chat memory window and a configurable 'soul' personality field. A switch node routes replies back to the originating channel, while a set of sub-agents and tools — task/subtask databases, research, email and document managers, and tiered worker agents — handle autonomous work. A scheduled memory pipeline aggregates chat history, summarizes it with Haiku 4.5, embeds it via OpenAI, and stores it in a Supabase vector store for long-term RAG.\n\nCompared to OpenClaw, n8nClaw trades a dedicated, hardened agent runtime for the accessibility of low-code orchestration: everything is inspectable and editable in n8n's visual editor. The trade-offs are significant — it depends on multiple external SaaS services (OpenRouter, OpenAI, Supabase, Evolution API), has no sandboxing story, and is a very young project with only initial commits, no releases, and no measurable community discussion yet.",
-  "last_updated": "2026-09-07T17:02:41.253Z"
+  "last_updated": "2026-09-08T01:45:54.018Z"
 }

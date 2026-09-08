@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A massively popular (40k+ stars) agentic chatbot framework that bridges dozens of IM platforms with LLMs, plugins, and a web dashboard. It positions itself explicitly as an OpenClaw alternative with a strong plugin marketplace and multi-language community.",
   "health_status": "healthy",
-  "github_stars": 40164,
+  "github_stars": 40178,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -194,5 +194,5 @@
     "date": "2026-09-07T16:43:43Z",
     "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.28.0"
   },
-  "last_updated": "2026-09-07T17:02:22.063Z"
+  "last_updated": "2026-09-08T01:45:35.259Z"
 }
