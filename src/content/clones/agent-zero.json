@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A mature open agent framework that gives the agent a full Dockerized Linux desktop with GUI apps, browser DOM annotation, and live document cowork. Heavy on transparency and extensibility, with a 100+ plugin hub and multi-agent delegation.",
   "health_status": "healthy",
-  "github_stars": 19124,
+  "github_stars": 19130,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -49,10 +49,10 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-08-27T12:28:01Z",
+  "last_commit_at": "2026-09-09T12:07:58Z",
   "contributors_count": 66,
-  "open_issues_count": 153,
-  "release_cadence_days": 6,
+  "open_issues_count": 154,
+  "release_cadence_days": 7,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -205,9 +205,9 @@
   },
   "overview_markdown": "Agent Zero is an open agent framework built around the idea of giving the agent a full computer rather than a chat box. It runs inside a Dockerized Linux desktop (XFCE) where the agent can drive real GUI applications, terminals, and files, and it adds a browser with DOM annotation so users can turn page elements into actionable instructions. Live document coworking lets users and the agent edit Markdown, Writer, Spreadsheet, and Presentation files together.\n\nArchitecturally it emphasizes transparency and extensibility: prompts, tools, skills, plugins, and settings are all inspectable and editable, and a Plugin Hub offers 100+ community extensions. Projects isolate files, secrets, memories, and model presets, while a host-machine bridge (A0 CLI) lets the same agent work in real local repositories. Multi-agent cooperation allows delegation of research, coding, and review tasks to subagents.\n\nCompared to OpenClaw, Agent Zero is a desktop-computer-use framework rather than a messaging-channel gateway. It trades OpenClaw's lightweight, chat-app-native footprint for a much richer sandboxed computer environment, at the cost of heavier resource usage and a larger shell-access risk surface. Recent commits show active maintenance around model transports, browser keyboard layouts, and UI polish, with release v2.11 shipped in August 2026.",
   "latest_release": {
-    "version": "v2.11",
-    "date": "2026-08-27T14:30:15Z",
-    "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.11"
+    "version": "v2.12",
+    "date": "2026-09-09T13:29:23Z",
+    "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.12"
   },
-  "last_updated": "2026-09-09T01:52:01.516Z"
+  "last_updated": "2026-09-09T15:44:57.332Z"
 }

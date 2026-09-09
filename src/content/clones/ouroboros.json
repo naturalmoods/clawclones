@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-modifying AI agent with persistent identity and memory that can rewrite its own code, prompts, and architecture across restarts. Ships as a polished native desktop app with a swarm of specialist agents and a skills marketplace.",
   "health_status": "healthy",
-  "github_stars": 1283,
+  "github_stars": 1287,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -48,9 +48,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-01T19:37:54Z",
-  "contributors_count": 36,
-  "open_issues_count": 172,
+  "last_commit_at": "2026-09-08T23:03:57Z",
+  "contributors_count": 41,
+  "open_issues_count": 177,
   "release_cadence_days": 1,
   "operational_risk": "high",
   "model_support": {
@@ -160,5 +160,5 @@
     "date": "2026-09-09T00:29:53Z",
     "url": "https://github.com/razzant/ouroboros/releases/tag/v7.0.0"
   },
-  "last_updated": "2026-09-09T01:52:18.648Z"
+  "last_updated": "2026-09-09T15:45:21.457Z"
 }
