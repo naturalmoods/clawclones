@@ -136,12 +136,6 @@
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "openai.azure.com",
-        "path": "agent/agent_init.py",
-        "strength": "weak"
-      },
-      {
         "kind": "env_key",
         "value": "AWS_BEARER_TOKEN_BEDROCK",
         "path": "hermes_cli/model_setup_flows_bedrock.py",
@@ -313,8 +307,8 @@
     "default_model_last_touched": "2026-09-05T21:01:34Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 112,
-    "detected_at": "2026-09-07T08:48:00.662Z",
+    "files_examined": 109,
+    "detected_at": "2026-09-09T08:30:52.033Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
