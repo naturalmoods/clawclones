@@ -52,7 +52,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-09-08T08:23:33Z",
   "contributors_count": 16,
-  "open_issues_count": 59,
+  "open_issues_count": 60,
   "release_cadence_days": 3,
   "operational_risk": "low",
   "model_support": {
@@ -243,5 +243,5 @@
     "date": "2026-04-07T15:45:01Z",
     "url": "https://github.com/qhkm/zeptoclaw/releases/tag/v0.9.2"
   },
-  "last_updated": "2026-09-08T15:49:35.843Z"
+  "last_updated": "2026-09-09T01:52:17.459Z"
 }

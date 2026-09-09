@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A mature open agent framework that gives the agent a full Dockerized Linux desktop with GUI apps, browser DOM annotation, and live document cowork. Heavy on transparency and extensibility, with a 100+ plugin hub and multi-agent delegation.",
   "health_status": "healthy",
-  "github_stars": 19122,
+  "github_stars": 19124,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -51,7 +51,7 @@
   "license_type": "NOASSERTION",
   "last_commit_at": "2026-08-27T12:28:01Z",
   "contributors_count": 66,
-  "open_issues_count": 151,
+  "open_issues_count": 153,
   "release_cadence_days": 6,
   "operational_risk": "medium",
   "model_support": {
@@ -209,5 +209,5 @@
     "date": "2026-08-27T14:30:15Z",
     "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.11"
   },
-  "last_updated": "2026-09-08T15:49:14.908Z"
+  "last_updated": "2026-09-09T01:52:01.516Z"
 }
