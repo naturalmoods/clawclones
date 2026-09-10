@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-20T06:35:52Z",
   "contributors_count": 8,
-  "open_issues_count": 50,
+  "open_issues_count": 51,
   "release_cadence_days": 19,
   "operational_risk": "medium",
   "model_support": {
@@ -189,5 +189,5 @@
     "date": "2026-08-20T06:54:09Z",
     "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.2.0"
   },
-  "last_updated": "2026-09-09T15:45:14.040Z"
+  "last_updated": "2026-09-10T01:48:14.710Z"
 }
