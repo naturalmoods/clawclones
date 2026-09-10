@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A Rust-based Agent OS from NEAR AI that positions itself as a privacy-first, security-hardened personal AI assistant with encrypted local storage and no telemetry. Its extremely rigorous commit culture (contract tests, architecture gates, fail-closed design) signals a production-grade, security-obsessed engineering ethos.",
   "health_status": "healthy",
-  "github_stars": 12612,
+  "github_stars": 12611,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 15,
@@ -53,7 +53,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-09-05T00:25:36Z",
   "contributors_count": 120,
-  "open_issues_count": 1519,
+  "open_issues_count": 1521,
   "release_cadence_days": 2,
   "operational_risk": "low",
   "model_support": {
@@ -281,5 +281,5 @@
     "date": "2026-08-28T11:19:24Z",
     "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.4.0"
   },
-  "last_updated": "2026-09-10T01:48:11.601Z"
+  "last_updated": "2026-09-10T15:40:28.540Z"
 }
