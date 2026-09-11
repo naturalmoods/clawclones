@@ -4,7 +4,7 @@
   "language": "C",
   "vibe_summary": "An ultra-minimalist OpenClaw-style AI assistant squeezed into 888KiB of firmware running on ESP32 microcontrollers. It brings GPIO control, cron scheduling, and persistent memory to bare-metal hardware with a hacker-friendly C codebase.",
   "health_status": "healthy",
-  "github_stars": 2225,
+  "github_stars": 2227,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1,
@@ -167,5 +167,5 @@
     "date": "2026-03-22T07:08:28Z",
     "url": "https://github.com/tnm/zclaw/releases/tag/v2.13.0"
   },
-  "last_updated": "2026-09-10T15:40:42.631Z"
+  "last_updated": "2026-09-11T01:47:18.342Z"
 }
