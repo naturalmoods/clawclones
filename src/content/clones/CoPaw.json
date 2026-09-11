@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A personal AI assistant from the AgentScope team that deploys locally or in the cloud and bridges into multiple chat apps. It emphasizes easy installation, extensible skills, and pluggable long-term memory backends.",
   "health_status": "healthy",
-  "github_stars": 34758,
+  "github_stars": 34795,
   "metrics": {
     "boot_time_ms": 220,
     "memory_mb": 85,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-09-10T08:49:53Z",
+  "last_commit_at": "2026-09-11T09:43:38Z",
   "contributors_count": 236,
-  "open_issues_count": 946,
+  "open_issues_count": 955,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "model_support": {
@@ -198,9 +198,9 @@
   },
   "overview_markdown": "CoPaw (published as QwenPaw on PyPI) is a personal AI assistant from the AgentScope team, written in Python and licensed Apache-2.0. It is designed for easy installation and flexible deployment, either on your own machine or in the cloud, and connects to multiple chat applications so the assistant is reachable wherever you already message.\n\nArchitecturally, it leans on the AgentScope ecosystem and emphasizes extensibility: a skills system with preload configuration, MCP tool integration with per-tool whitelists enforced at the agent runtime path, and pluggable long-term memory backends including PowerContext and an upgraded ReMe. Recent commits show active governance work — approval requirements for critical findings, hardened memory boundaries, and console improvements — indicating a maturing security posture rather than a weekend project.\n\nCompared to OpenClaw, CoPaw trades ecosystem size for tighter integration with the AgentScope/Qwen stack and a more modular memory architecture. OpenClaw remains the larger community with a far bigger skills registry, but CoPaw's recent hardening commits and multi-channel design make it a credible alternative for users already invested in that ecosystem.",
   "latest_release": {
-    "version": "v2.2.0",
-    "date": "2026-09-03T03:25:04Z",
-    "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.0"
+    "version": "v2.2.1",
+    "date": "2026-09-11T04:19:23Z",
+    "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.1"
   },
-  "last_updated": "2026-09-11T01:46:54.871Z"
+  "last_updated": "2026-09-11T15:41:38.765Z"
 }
