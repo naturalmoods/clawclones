@@ -106,17 +106,17 @@
         "strength": "strong"
       },
       {
+        "model": "gpt-5.4-mini",
+        "provider": "openai",
+        "path": "internal/store/provider_store.go",
+        "line": "APIRouteDefaultModel   = \"gpt-5.4-mini\"",
+        "strength": "strong"
+      },
+      {
         "model": "gemini-2.0-flash-001",
         "provider": "google",
         "path": "internal/providers/vertex.go",
         "line": "VertexDefaultModel = \"google/gemini-2.0-flash-001\"",
-        "strength": "strong"
-      },
-      {
-        "model": "gpt-5-chat",
-        "provider": "openai",
-        "path": "internal/providers/aimlapi.go",
-        "line": "AIMLAPIDefaultModel   = \"openai/gpt-5-chat\"",
         "strength": "strong"
       }
     ],
@@ -213,11 +213,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-07-19T18:38:15Z",
+    "default_model_last_touched": "2026-09-07T12:49:55Z",
     "default_model_released_at": "2026-05-31",
     "default_model_date_source": "catalogue",
     "files_examined": 99,
-    "detected_at": "2026-09-09T08:30:39.723Z",
+    "detected_at": "2026-09-11T08:27:56.314Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

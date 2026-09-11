@@ -56,12 +56,14 @@
   "model_support": {
     "providers": [
       "anthropic",
+      "deepseek",
       "llamacpp",
+      "minimax",
       "openai",
       "openai-compatible",
       "openrouter"
     ],
-    "provider_count": 2,
+    "provider_count": 4,
     "local_capable": true,
     "aggregator_capable": true,
     "byo_endpoint": true,
@@ -83,10 +85,34 @@
         "strength": "strong"
       },
       {
+        "kind": "env_key",
+        "value": "DEEPSEEK_API_KEY",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "DEEPSEEK_API_KEY",
+        "path": "ouroboros/provider_models.py",
+        "strength": "weak"
+      },
+      {
         "kind": "dependency",
         "value": "llama-cpp-python",
         "path": "pyproject.toml",
         "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "MINIMAX_API_KEY",
+        "path": "pyproject.toml",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "MINIMAX_API_KEY",
+        "path": "ouroboros/provider_models.py",
+        "strength": "weak"
       },
       {
         "kind": "dependency",
@@ -128,8 +154,8 @@
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 22,
-    "detected_at": "2026-09-09T08:32:48.553Z",
+    "files_examined": 29,
+    "detected_at": "2026-09-11T08:30:52.555Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
