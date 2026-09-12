@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "An OpenClaw-adjacent agent layer that meta-learns and evolves skills from every conversation, no GPU cluster required. It pairs a persistent cross-session memory layer with scheduled RL training (via Tinker) for a self-improving personal agent.",
   "health_status": "healthy",
-  "github_stars": 3495,
+  "github_stars": 3494,
   "metrics": {
     "boot_time_ms": 220,
     "memory_mb": 90,
@@ -155,5 +155,5 @@
     "date": "2026-04-11T20:04:14Z",
     "url": "https://github.com/aiming-lab/MetaClaw/releases/tag/v0.4.1"
   },
-  "last_updated": "2026-09-12T01:52:29.571Z"
+  "last_updated": "2026-09-12T14:49:08.920Z"
 }
