@@ -4,7 +4,7 @@
   "language": "C",
   "vibe_summary": "A bare-metal OpenClaw-style agent that runs entirely on a $5 ESP32-S3 chip — no Linux, no Node.js, just pure C. You talk to it over Telegram and it runs an LLM agent loop with local flash memory, sipping 0.5W of USB power.",
   "health_status": "healthy",
-  "github_stars": 5749,
+  "github_stars": 5748,
   "metrics": {
     "boot_time_ms": 5,
     "memory_mb": 2,
@@ -141,5 +141,5 @@
     "date": "2026-03-17T04:25:41Z",
     "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
   },
-  "last_updated": "2026-09-11T15:41:46.856Z"
+  "last_updated": "2026-09-12T01:52:37.368Z"
 }

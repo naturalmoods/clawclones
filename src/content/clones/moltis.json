@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A security-first, single-binary Rust agent server that positions itself as the hardened alternative to OpenClaw. Sandboxed execution, auditable codebase, and no plugin marketplace supply-chain risk.",
   "health_status": "healthy",
-  "github_stars": 2850,
+  "github_stars": 2851,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 15,
@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-09-10T06:22:56Z",
   "contributors_count": 69,
-  "open_issues_count": 85,
+  "open_issues_count": 86,
   "release_cadence_days": 2,
   "operational_risk": "low",
   "model_support": {
@@ -235,5 +235,5 @@
     "date": "2026-09-02T20:35:54Z",
     "url": "https://github.com/moltis-org/moltis/releases/tag/20260902.03"
   },
-  "last_updated": "2026-09-11T15:41:48.641Z"
+  "last_updated": "2026-09-12T01:52:38.684Z"
 }
