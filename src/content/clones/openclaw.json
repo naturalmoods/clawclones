@@ -80,18 +80,18 @@
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "gpt-5.6-sol",
+      "model": "gpt-6-astra",
       "provider": "openai",
       "path": "src/agents/defaults.ts",
-      "line": "export const DEFAULT_MODEL = \"gpt-5.6-sol\";",
+      "line": "export const DEFAULT_MODEL = \"gpt-6-astra\";",
       "strength": "strong"
     },
     "default_models": [
       {
-        "model": "gpt-5.6-sol",
+        "model": "gpt-6-astra",
         "provider": "openai",
         "path": "src/agents/defaults.ts",
-        "line": "export const DEFAULT_MODEL = \"gpt-5.6-sol\";",
+        "line": "export const DEFAULT_MODEL = \"gpt-6-astra\";",
         "strength": "strong"
       },
       {
@@ -269,11 +269,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-07-11T13:30:57Z",
-    "default_model_released_at": "2026-07-09",
+    "default_model_last_touched": "2026-09-12T07:34:25Z",
+    "default_model_released_at": "2026-09-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 286,
-    "detected_at": "2026-09-11T08:29:04.728Z",
+    "files_examined": 289,
+    "detected_at": "2026-09-13T08:40:23.212Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
