@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A security-first, single-binary Rust agent server that positions itself as the hardened alternative to OpenClaw. Sandboxed execution, auditable codebase, and no plugin marketplace supply-chain risk.",
   "health_status": "healthy",
-  "github_stars": 2858,
+  "github_stars": 2859,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 15,
@@ -49,10 +49,10 @@
   "multi_user": null,
   "plugin_ecosystem": "limited",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-13T05:18:27Z",
+  "last_commit_at": "2026-09-14T00:44:46Z",
   "contributors_count": 70,
   "open_issues_count": 83,
-  "release_cadence_days": 2,
+  "release_cadence_days": 3,
   "operational_risk": "low",
   "model_support": {
     "providers": [
@@ -231,9 +231,9 @@
   },
   "overview_markdown": "Moltis is a security-first personal agent server written in Rust, distributed as a single binary with no Node.js or npm runtime. It explicitly positions itself against OpenClaw with a comparison table, emphasizing sandboxed container execution for every command, keys that never leave the host, and an auditable architecture: a ~7.5K-line agent runner and model interface, ~19K lines of providers, and a ~270K-line workspace across 59 modular crates with 470+ test files. Unsafe code is confined to FFI and precompiled runtime boundaries.\n\nFeature-wise it is broad: multi-provider LLMs, voice, persistent memory with cross-session recall, edit checkpoints, scheduling, Telegram/Signal/Discord/WhatsApp/Teams channels, browser automation, MCP servers, SSH or node-backed remote execution, and managed deploy keys with host pinning. Notably, it deliberately avoids a plugin marketplace, framing that as a supply-chain security decision rather than a gap.\n\nRecent commits show an active and serious security posture: fixes for sandbox session-ID collisions that could alias containers across sessions, and a hardening of remote node execution (versioned argv protocol, default-deny allowlists, admin gating, credential binding) with credited responsible disclosure. Compared to OpenClaw, Moltis trades ecosystem size and community momentum for a hardened, minimal-trust architecture aimed at self-hosters who prioritize auditability.",
   "latest_release": {
-    "version": "20260902.03",
-    "date": "2026-09-02T20:35:54Z",
-    "url": "https://github.com/moltis-org/moltis/releases/tag/20260902.03"
+    "version": "20260913.02",
+    "date": "2026-09-14T00:44:24Z",
+    "url": "https://github.com/moltis-org/moltis/releases/tag/20260913.02"
   },
-  "last_updated": "2026-09-13T15:27:08.617Z"
+  "last_updated": "2026-09-14T02:01:55.165Z"
 }

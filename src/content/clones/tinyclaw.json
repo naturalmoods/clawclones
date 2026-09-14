@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-03-30T12:30:14Z",
   "contributors_count": 10,
-  "open_issues_count": 75,
+  "open_issues_count": 76,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "model_support": {
@@ -136,5 +136,5 @@
     "date": "2026-03-26T17:23:07Z",
     "url": "https://github.com/TinyAGI/tinyagi/releases/tag/v0.0.20"
   },
-  "last_updated": "2026-09-13T15:27:21.063Z"
+  "last_updated": "2026-09-14T02:02:08.058Z"
 }
