@@ -58,13 +58,14 @@
   "operational_risk": "low",
   "model_support": {
     "providers": [
-      "anthropic"
+      "anthropic",
+      "openai-compatible"
     ],
     "provider_count": 1,
     "local_capable": false,
     "aggregator_capable": false,
-    "byo_endpoint": false,
-    "provider_lock": "anthropic",
+    "byo_endpoint": true,
+    "provider_lock": null,
     "default_model": null,
     "default_models": [],
     "default_model_ambiguous": false,
@@ -80,13 +81,19 @@
         "value": "@anthropic-ai/claude-agent-sdk",
         "path": "container/agent-runner/package.json",
         "strength": "strong"
+      },
+      {
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": ".claude/skills/add-opencode/payload/container/agent-runner/src/providers/opencode-config.ts",
+        "strength": "strong"
       }
     ],
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 35,
-    "detected_at": "2026-09-13T08:41:30.008Z",
+    "files_examined": 44,
+    "detected_at": "2026-09-15T09:07:13.276Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

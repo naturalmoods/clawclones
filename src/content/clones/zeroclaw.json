@@ -102,35 +102,29 @@
         "strength": "weak"
       },
       {
-        "model": "claude-3-opus",
+        "model": "claude-haiku-4-5",
         "provider": "anthropic",
-        "path": "crates/zeroclaw-providers/src/anthropic.rs",
-        "line": "model: \"claude-3-opus\".to_string(),",
+        "path": "crates/zeroclaw-providers/src/openrouter.rs",
+        "line": "model: \"anthropic/claude-haiku-4-5\".into(),",
         "strength": "weak"
       },
       {
-        "model": "claude-opus-4-7",
-        "provider": "anthropic",
-        "path": "crates/zeroclaw-providers/src/anthropic.rs",
-        "line": "model: \"claude-opus-4-7\".to_string(),",
+        "model": "gemini-2.5-pro",
+        "provider": "google",
+        "path": "crates/zeroclaw-providers/src/openrouter.rs",
+        "line": "model: \"google/gemini-2.5-pro\".into(),",
         "strength": "weak"
       },
       {
-        "model": "claude-sonnet-4-6",
+        "model": "claude-sonnet-4",
         "provider": "anthropic",
-        "path": "crates/zeroclaw-providers/src/anthropic.rs",
-        "line": "model: \"claude-sonnet-4-6\".to_string(),",
+        "path": "crates/zeroclaw-providers/src/openrouter.rs",
+        "line": "model: \"anthropic/claude-sonnet-4\".into(),",
         "strength": "weak"
       }
     ],
     "default_model_ambiguous": false,
     "evidence": [
-      {
-        "kind": "adapter_file",
-        "value": "anthropic.rs",
-        "path": "crates/zeroclaw-providers/src/anthropic.rs",
-        "strength": "strong"
-      },
       {
         "kind": "env_key",
         "value": "ANTHROPIC_API_KEY",
@@ -225,8 +219,8 @@
     "default_model_last_touched": "2026-09-12T17:01:22Z",
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 112,
-    "detected_at": "2026-09-13T08:42:37.741Z",
+    "files_examined": 111,
+    "detected_at": "2026-09-15T09:08:11.216Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
