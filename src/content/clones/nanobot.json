@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "An ultra-lightweight (~4,000-line) Python rewrite of OpenClaw with WebUI, memory, MCP, and multi-agent workflows. It trades OpenClaw's sprawling feature surface for a small, readable, hackable core.",
   "health_status": "healthy",
-  "github_stars": 48186,
+  "github_stars": 48196,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.5,
@@ -49,10 +49,10 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-15T08:09:56Z",
+  "last_commit_at": "2026-09-15T18:28:32Z",
   "contributors_count": 452,
-  "open_issues_count": 782,
-  "release_cadence_days": 15,
+  "open_issues_count": 778,
+  "release_cadence_days": 19,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -239,9 +239,9 @@
   },
   "overview_markdown": "**nanobot** is an ultra-lightweight, open-source, self-hosted personal AI agent framework written in Python by the HKUDS lab. Positioned explicitly as a lean OpenClaw alternative (~4,000 lines of readable core), it ships a WebUI, terminal UI, and chat-app integrations alongside tools, long-term memory, MCP support, model routing, multi-agent delegation, scheduled automation, and an OpenAI-compatible API.\n\nArchitecturally, it emphasizes a small, auditable core: recent commits show active refactoring toward a unified message bus for runtime events, context compaction visibility, and TUI polish, plus CI parallelization—signs of a maturing but fast-moving codebase. Installation is a simple `pip install nanobot-ai`, with documentation aimed at both non-technical users and operators running it as a long-lived gateway service.\n\nCompared to OpenClaw, nanobot trades ecosystem breadth (fewer channels, skills, and companion apps) for approachability and hackability. It's a strong pick for developers who want to understand and modify every line of their agent stack, while those needing OpenClaw's mature multi-channel surface and hardening may find it lean to a fault.",
   "latest_release": {
-    "version": "v0.3.0",
-    "date": "2026-07-25T08:08:47Z",
-    "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.0"
+    "version": "v0.3.5",
+    "date": "2026-09-15T19:05:37Z",
+    "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.5"
   },
-  "last_updated": "2026-09-15T16:02:25.946Z"
+  "last_updated": "2026-09-16T02:01:44.661Z"
 }

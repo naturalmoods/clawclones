@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A polished, team-oriented OpenClaw alternative with a slick Next.js UI, sandboxed execution, and Slack-style server/channel collaboration. Powered by a Claude Code-based agent runtime with built-in IM integrations for DingTalk, Feishu, and Telegram.",
   "health_status": "healthy",
-  "github_stars": 1353,
+  "github_stars": 1354,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -201,5 +201,5 @@
     "date": "2026-06-18T02:32:30Z",
     "url": "https://github.com/poco-ai/poco-claw/releases/tag/0.5.7"
   },
-  "last_updated": "2026-09-15T16:02:39.457Z"
+  "last_updated": "2026-09-16T02:01:55.758Z"
 }
