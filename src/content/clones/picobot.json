@@ -49,9 +49,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-03-28T15:42:52Z",
-  "contributors_count": 8,
-  "open_issues_count": 20,
+  "last_commit_at": "2026-09-17T15:23:26Z",
+  "contributors_count": 9,
+  "open_issues_count": 19,
   "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
@@ -155,5 +155,5 @@
     "date": "2026-03-18T18:34:38Z",
     "url": "https://github.com/louisho5/picobot/releases/tag/v0.2.0"
   },
-  "last_updated": "2026-09-17T02:05:42.421Z"
+  "last_updated": "2026-09-17T16:02:31.899Z"
 }
