@@ -49,10 +49,10 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-17T15:23:26Z",
+  "last_commit_at": "2026-09-17T18:22:15Z",
   "contributors_count": 9,
-  "open_issues_count": 19,
-  "release_cadence_days": 4,
+  "open_issues_count": 18,
+  "release_cadence_days": 24,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -151,9 +151,9 @@
   },
   "overview_markdown": "Picobot is a lightweight, self-hosted AI agent written in Go, explicitly positioned as a lean alternative to OpenClaw. It ships as a single ~9MB binary with zero runtime dependencies — no Python, no Node, no 500MB containers — and idles at roughly 10MB of RAM, making it viable on a $5 VPS, a Raspberry Pi, or even an Android phone via Termux.\n\nDespite its size, it packs the core agent feature set: persistent memory, tool calling, skills, MCP server integration, and channel support for Telegram, Discord, and Slack. Configuration is handled via environment variables and a simple `picobot onboard` flow, with all state persisted to a local data directory. Recent commits show active development, including MCP integration, error-handling improvements, and a v0.2.0 release.\n\nCompared to OpenClaw, Picobot trades ecosystem breadth and security hardening for radical simplicity and resource efficiency. It's a strong fit for solo users who want a private, chat-driven agent on minimal hardware, but it lacks OpenClaw's massive community, skill registry, and multi-platform maturity.",
   "latest_release": {
-    "version": "v0.2.0",
-    "date": "2026-03-18T18:34:38Z",
-    "url": "https://github.com/louisho5/picobot/releases/tag/v0.2.0"
+    "version": "v0.3.0",
+    "date": "2026-09-17T18:11:38Z",
+    "url": "https://github.com/louisho5/picobot/releases/tag/v0.3.0"
   },
-  "last_updated": "2026-09-17T16:02:31.899Z"
+  "last_updated": "2026-09-18T01:53:02.165Z"
 }

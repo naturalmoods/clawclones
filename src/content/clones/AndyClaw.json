@@ -4,7 +4,7 @@
   "language": "Kotlin",
   "vibe_summary": "A full OpenClaw-style agentic AI assistant packaged as a single Android APK, with deep ethOS/crypto-wallet integration on the dGEN1 phone. It pairs an on-device Qwen2.5-1.5B local model with autonomous heartbeat-driven background operation.",
   "health_status": "healthy",
-  "github_stars": 91,
+  "github_stars": 92,
   "metrics": {
     "boot_time_ms": 300,
     "memory_mb": 250,
@@ -50,7 +50,7 @@
   "license_type": "GPL-3.0",
   "last_commit_at": "2026-09-08T11:06:58Z",
   "contributors_count": 4,
-  "open_issues_count": 15,
+  "open_issues_count": 17,
   "release_cadence_days": 3,
   "operational_risk": "high",
   "model_support": {
@@ -161,5 +161,5 @@
     "date": "2026-03-16T18:15:59Z",
     "url": "https://github.com/EthereumPhone/AndyClaw/releases/tag/v19"
   },
-  "last_updated": "2026-09-17T16:02:27.230Z"
+  "last_updated": "2026-09-18T01:52:58.578Z"
 }

@@ -50,9 +50,9 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-09-14T04:47:55Z",
+  "last_commit_at": "2026-09-17T18:23:30Z",
   "contributors_count": 16,
-  "open_issues_count": 59,
+  "open_issues_count": 54,
   "release_cadence_days": 3,
   "operational_risk": "low",
   "model_support": {
@@ -243,5 +243,5 @@
     "date": "2026-04-07T15:45:01Z",
     "url": "https://github.com/qhkm/zeptoclaw/releases/tag/v0.9.2"
   },
-  "last_updated": "2026-09-17T16:02:43.712Z"
+  "last_updated": "2026-09-18T01:53:11.839Z"
 }
