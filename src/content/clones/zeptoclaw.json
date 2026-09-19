@@ -180,7 +180,7 @@
       {
         "kind": "prose",
         "value": "openai-compatible",
-        "path": "src/api/routes/openai.rs",
+        "path": "src/providers/types.rs",
         "strength": "strong"
       },
       {
@@ -212,7 +212,7 @@
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
     "files_examined": 54,
-    "detected_at": "2026-09-17T09:04:30.764Z",
+    "detected_at": "2026-09-19T08:25:49.139Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
