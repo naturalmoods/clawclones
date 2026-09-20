@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 988287,
-    "total_stars_formatted": "988.3k",
+    "total_stars": 988471,
+    "total_stars_formatted": "988.5k",
     "most_active_language": "Rust",
     "language_breakdown": {
       "TypeScript": 9,
@@ -24,15 +24,15 @@
     "avg_sentiment": 54,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 390080,
+      "stars": 390103,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 247073,
-    "stars_growth_7d": 2269,
+    "stars": 247173,
+    "stars_growth_7d": 2098,
     "language": "Python",
     "sentiment": 82,
     "vibe_summary": "A self-improving AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to serverless, with a polished TUI and multi-platform messaging gateway.",
@@ -43,28 +43,28 @@
   "hot_vs": {
     "clone_a": "hermes-agent",
     "clone_b": "nanobot",
-    "visits": 9,
+    "visits": 10,
     "url": "https://clawclones.com/compare/hermes-agent-vs-nanobot"
   },
-  "updated_at": "2026-09-19T23:59:59.999Z",
-  "generated_at": "2026-09-19T15:11:05.538Z",
+  "updated_at": "2026-09-20T23:59:59.999Z",
+  "generated_at": "2026-09-20T02:01:36.863Z",
   "freshness": {
-    "updated_at": "2026-09-19T23:59:59.999Z",
-    "generated_at": "2026-09-19T15:11:05.538Z",
+    "updated_at": "2026-09-20T23:59:59.999Z",
+    "generated_at": "2026-09-20T02:01:36.863Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-09-19T15:11:05.150Z",
+        "updated_at": "2026-09-20T02:01:36.261Z",
         "age_hours": 0
       },
       "history": {
-        "updated_at": "2026-09-19T23:59:59.999Z",
+        "updated_at": "2026-09-20T23:59:59.999Z",
         "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-09-19T23:59:59.999Z",
+        "updated_at": "2026-09-20T23:59:59.999Z",
         "age_hours": 0
       }
     }

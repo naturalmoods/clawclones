@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-09-14T00:44:46Z",
   "contributors_count": 70,
-  "open_issues_count": 90,
+  "open_issues_count": 92,
   "release_cadence_days": 3,
   "operational_risk": "low",
   "model_support": {
@@ -235,5 +235,5 @@
     "date": "2026-09-14T00:44:24Z",
     "url": "https://github.com/moltis-org/moltis/releases/tag/20260913.02"
   },
-  "last_updated": "2026-09-19T15:10:50.409Z"
+  "last_updated": "2026-09-20T02:01:21.520Z"
 }
