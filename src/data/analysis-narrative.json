@@ -1,14 +1,13 @@
 {
-  "generated_at": "2026-09-13",
-  "data_as_of": "2026-09-13",
+  "generated_at": "2026-09-20",
+  "data_as_of": "2026-09-20",
   "model": "moonshotai/kimi-k3",
   "tldr": [
-    "Hermes Agent led absolute gains with +2592 stars; Ouroboros grew fastest at +2.4%.",
-    "Compiled runtimes average a security score of 76 versus 64 for scripting runtimes.",
-    "37 projects are local-first and only 4 require cloud; 10 have unknown licenses."
+    "43 tracked projects added 3964 stars this week, with 13 flat or declining.",
+    "Hermes Agent gained the most stars in absolute terms; Ouroboros grew fastest by percentage.",
+    "22 of 43 projects fit the edge and minimalist profile, the largest cohort.",
+    "Compiled runtimes average a security score of 76 against 64 for scripting runtimes.",
+    "37 projects are local-first and only 4 require a cloud account."
   ],
-  "sections": {
-    "security": "The runtime split is the clearest security signal in the data. The 20 compiled-runtime projects average a security score of 76, with median sandboxing at 7 and shell risk at 5.5. The 23 scripting-runtime projects average 64, with sandboxing at 5 and shell risk at 7. Across all 43 projects only 5 count as hardened while 10 run unsupervised shells. The practical cost: choosing a scripting-runtime agent means you are more likely to need your own sandboxing layer, while compiled options more often ship containment built in. Check the shell-risk flag before deploying anything with tool access.",
-    "posture": "The ecosystem leans strongly local: 37 of 43 projects are local-first, 38 treat cloud as optional, and only 4 require it, so self-hosting is the norm rather than the exception. 19 projects declare multi-user support, which matters if you need shared deployments. Licensing is mostly permissive, with MIT covering 20 projects and Apache-2.0 another 10, but 2 use AGPL-3.0 and 1 uses GPL-3.0, which can constrain commercial or SaaS use. Notably 10 projects have unknown licenses, and shipping against an unlicensed dependency is a real legal risk worth checking before adoption."
-  }
+  "sections": {}
 }
