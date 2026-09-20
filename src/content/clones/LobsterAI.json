@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A polished Electron desktop agent from NetEase Youdao that layers a Cowork session UI on top of OpenClaw as its runtime. It targets real office work — docs, slides, data analysis — with phone-based control via WeChat, Feishu, DingTalk, and Telegram.",
   "health_status": "healthy",
-  "github_stars": 6048,
+  "github_stars": 6055,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 350,
@@ -47,9 +47,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-18T10:42:37Z",
+  "last_commit_at": "2026-09-20T11:09:06Z",
   "contributors_count": 62,
-  "open_issues_count": 578,
+  "open_issues_count": 579,
   "release_cadence_days": 3,
   "operational_risk": "medium",
   "model_support": {
@@ -182,9 +182,9 @@
   },
   "overview_markdown": "LobsterAI is an open-source desktop agent from NetEase Youdao, billed as the first desktop-grade agent open-sourced by a major Chinese tech company. Architecturally, it splits responsibilities: the Cowork layer (Electron 40 + React 18 desktop app) owns local persistence, permissions, UI state, artifacts, agents, memory, and IM bindings, while OpenClaw serves as the underlying agent runtime and gateway.\n\nIts standout features include long-running cowork sessions against local files and projects with approval gates for sensitive actions (file ops, terminal commands, network access), multi-agent workflows with per-agent identity/model/skills, and Expert Kits that package scenario-specific capabilities. A key differentiator is phone-based remote control through WeChat, Feishu, DingTalk, and Telegram — clearly aimed at the Chinese office productivity market.\n\nCompared to running OpenClaw directly, LobsterAI trades leanness for usability: you get a polished GUI, structured releases (currently at 2026.9.4 with active CI maintenance), and desktop-native workflows, but at the cost of an Electron memory footprint, macOS/Windows-only support, and some vendor server-side configuration endpoints that temper its otherwise local-first posture.",
   "latest_release": {
-    "version": "2026.9.4",
-    "date": "2026-09-04T16:14:12Z",
-    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.9.4"
+    "version": "2026.9.20",
+    "date": "2026-09-20T13:30:58Z",
+    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.9.20"
   },
-  "last_updated": "2026-09-20T02:01:22.648Z"
+  "last_updated": "2026-09-20T15:15:43.231Z"
 }

@@ -198,7 +198,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 390103
+      "stars": 390141
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -400,7 +400,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 32842
+      "stars": 32845
     }
   ],
   "qwibitai/nanoclaw": [
@@ -602,7 +602,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 30805
+      "stars": 30808
     }
   ],
   "HKUDS/nanobot": [
@@ -804,7 +804,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 48367
+      "stars": 48403
     }
   ],
   "sipeed/picoclaw": [
@@ -1214,7 +1214,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 12621
+      "stars": 12623
     }
   ],
   "memovai/mimiclaw": [
@@ -1416,7 +1416,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 5755
+      "stars": 5757
     }
   ],
   "TinyAGI/tinyclaw": [
@@ -1820,7 +1820,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 8101
+      "stars": 8102
     }
   ],
   "tnm/zclaw": [
@@ -3858,7 +3858,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 18204
+      "stars": 18205
     }
   ],
   "EthereumPhone/AndyClaw": [
@@ -4262,7 +4262,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 1349
+      "stars": 1356
     }
   ],
   "zofrasca/lightclaw": [
@@ -4666,7 +4666,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 32962
+      "stars": 32982
     }
   ],
   "NevaMind-AI/memUBot": [
@@ -5878,7 +5878,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 35124
+      "stars": 35154
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -6080,7 +6080,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 6048
+      "stars": 6055
     }
   ],
   "open-gitagent/gitclaw": [
@@ -6484,7 +6484,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 40711
+      "stars": 40733
     }
   ],
   "unitedbyai/droidclaw": [
@@ -6686,7 +6686,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 1563
+      "stars": 1564
     }
   ],
   "microclaw/microclaw": [
@@ -6888,7 +6888,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 736
+      "stars": 737
     }
   ],
   "letta-ai/lettabot": [
@@ -7898,7 +7898,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 247173
+      "stars": 247383
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -8706,7 +8706,7 @@
     },
     {
       "date": "2026-09-20",
-      "stars": 19212
+      "stars": 19216
     }
   ]
 }
