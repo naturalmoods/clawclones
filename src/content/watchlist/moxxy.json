@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "Moxxy Personal Assistant",
   "health_status": "healthy",
-  "github_stars": 2,
+  "github_stars": 3,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:22.265Z",
-    "last_reviewed_at": "2026-09-20T10:14:46.738Z",
+    "last_reviewed_at": "2026-09-21T11:19:42.270Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,11 +55,11 @@
   },
   "overview_markdown": "",
   "latest_release": {
-    "version": "@moxxy/plugin-voice-admin@0.41.0",
-    "date": "2026-09-19T10:03:37Z",
-    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-voice-admin%400.41.0"
+    "version": "@moxxy/plugin-voice-admin@0.41.1",
+    "date": "2026-09-20T10:28:46Z",
+    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-voice-admin%400.41.1"
   },
-  "last_updated": "2026-09-20T10:14:46.738Z",
+  "last_updated": "2026-09-21T11:19:42.270Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
