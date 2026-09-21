@@ -4,7 +4,7 @@
   "language": "C",
   "vibe_summary": "An OpenClaw-style AI assistant squeezed onto a $5 ESP32-S3 chip with no OS, no Node.js, and pure C. It talks over Telegram, keeps local memory on flash, and sips 0.5W of power.",
   "health_status": "healthy",
-  "github_stars": 5757,
+  "github_stars": 5758,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1,
@@ -140,5 +140,5 @@
     "date": "2026-03-17T04:25:41Z",
     "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
   },
-  "last_updated": "2026-09-21T02:27:44.804Z"
+  "last_updated": "2026-09-21T17:39:23.270Z"
 }

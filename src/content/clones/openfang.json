@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A full 'Agent Operating System' in Rust shipping as a single ~32MB binary, focused on autonomous scheduled agents ('Hands') rather than chat. Pre-1.0 with fast shipping cadence, heavy test coverage, and active security hardening commits.",
   "health_status": "healthy",
-  "github_stars": 18208,
+  "github_stars": 18209,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 18,
@@ -353,5 +353,5 @@
     "date": "2026-05-12T18:42:42Z",
     "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.9"
   },
-  "last_updated": "2026-09-21T03:23:57.485Z"
+  "last_updated": "2026-09-21T17:39:37.100Z"
 }
