@@ -2,7 +2,7 @@
   "id": "tnm/zclaw",
   "name": "zclaw",
   "language": "C",
-  "vibe_summary": "An ultra-minimalist OpenClaw-style AI assistant squeezed into 888KiB of firmware running on ESP32 microcontrollers. It brings GPIO control, cron scheduling, and persistent memory to bare-metal hardware with a hacker-friendly C codebase.",
+  "vibe_summary": "An ultra-minimalist AI personal assistant that squeezes onto an ESP32 microcontroller with an all-in firmware budget of 888 KiB. It trades heavyweight agent frameworks for bare-metal C, GPIO control, cron scheduling, and Telegram/web relay chat.",
   "health_status": "healthy",
   "github_stars": 2229,
   "metrics": {
@@ -11,33 +11,31 @@
     "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 7,
-    "api_security": 6,
-    "network_isolation": 6,
-    "telemetry_safety": 9,
+    "sandboxing": 6,
+    "api_security": 7,
+    "network_isolation": 5,
+    "telemetry_safety": 8,
     "shell_access_risk": 3
   },
   "tags": [
     "esp32",
     "embedded",
-    "firmware",
     "c",
-    "edge-ai"
+    "tinyml",
+    "personal-assistant"
   ],
   "community_sentiment": 55,
   "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Makers wanting an AI assistant on ESP32 hardware",
-    "GPIO and sensor automation via natural language",
-    "Ultra-low-power always-on edge deployments",
-    "Learning embedded AI agent architecture in C"
+    "Developers who want GPIO/sensor control via natural language",
+    "Users who value extreme footprint constraints over feature breadth"
   ],
   "avoid_if": [
-    "You need rich chat-channel integrations beyond Telegram/web relay",
-    "You want a mature plugin ecosystem",
-    "You are uncomfortable flashing firmware and provisioning devices",
-    "You need multi-user or team features"
+    "You need a rich plugin ecosystem or multi-agent routing",
+    "You want a desktop/cloud assistant without flashing firmware",
+    "You need strong community support and third-party integrations"
   ],
   "deployment_target": [
     "edge",
@@ -48,7 +46,7 @@
   "setup_difficulty": "medium",
   "privacy_posture": "strong",
   "multi_user": false,
-  "plugin_ecosystem": "emerging",
+  "plugin_ecosystem": "limited",
   "license_type": "MIT",
   "last_commit_at": "2026-05-17T03:43:36Z",
   "contributors_count": 4,
@@ -134,38 +132,36 @@
     "default_model_released_at": "2026-02-17",
     "default_model_date_source": "catalogue",
     "files_examined": 57,
-    "detected_at": "2026-09-19T08:26:32.827Z",
+    "detected_at": "2026-09-21T03:39:02.746Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Runs on $5 ESP32 hardware with an 888KiB all-in firmware budget",
-    "Direct GPIO, I2C, and DHT sensor control from natural language",
-    "Extremely low power footprint for always-on deployments",
-    "No desktop OS or server required; fully self-contained firmware",
+    "Runs on a $5 ESP32 with an 888 KiB all-in firmware budget",
+    "Direct GPIO, I2C, and DHT sensor control via natural language tools",
+    "No server, Node runtime, or heavy dependencies required",
     "Encrypted credential storage in flash with secure flash mode"
   ],
   "openclaw_disadvantages": [
-    "Far fewer chat channels (Telegram/web relay vs. OpenClaw's broad channel support)",
-    "Much smaller community and ecosystem",
-    "Requires hardware flashing and serial provisioning workflow",
-    "Constrained by MCU memory and rate limits for LLM calls",
-    "No desktop or mobile app experience"
+    "Far smaller ecosystem and no multi-channel/agent routing depth",
+    "Requires embedded toolchain setup and hardware flashing",
+    "Limited LLM throughput due to rate limits and device constraints",
+    "No desktop UI dashboard or Canvas-style features"
   ],
-  "confidence_summary": "Strong evidence from README, docs, and recent commits about architecture and features; community sentiment is uncertain due to zero Reddit matches and web results mostly referencing OpenClaw itself rather than zclaw.",
+  "confidence_summary": "Strong evidence from README, docs, and recent commits for architecture and features; community sentiment is uncertain due to zero Reddit matches and only indirect web mentions.",
   "evidence_confidence": 78,
   "content_ops": {
-    "last_generated_at": "2026-09-07T02:47:37.762Z",
-    "last_reviewed_at": "2026-09-07T02:47:37.762Z",
+    "last_generated_at": "2026-09-21T03:39:10.754Z",
+    "last_reviewed_at": "2026-09-21T03:39:10.754Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "zclaw is a radically minimal take on the OpenClaw personal-AI-assistant concept, written in C and targeting ESP32 microcontrollers (e.g., Seeed Studio XIAO ESP32-C3). The entire firmware — including ESP-IDF/FreeRTOS runtime, Wi-Fi, TLS/crypto, and certificate bundles — is capped at 888KiB, with only ~35KB of application code. Despite the tiny footprint, it supports natural-language chat via Telegram or a hosted web relay, timezone-aware cron-style scheduling (daily, periodic, one-shot), persistent memory, and composable custom tools.\n\nWhere OpenClaw runs as a gateway process on desktops and servers bridging many chat platforms, zclaw pushes the assistant to the edge: it can directly drive GPIO pins, read DHT sensors, and talk to I2C hardware, making it a physical-world agent rather than a pure software one. Recent releases (v2.13.0) added DHT and generic I2C hardware tools, hardened tool schemas, and kept firmware size in check, showing active, disciplined maintenance.\n\nSecurity-conscious touches include encrypted credential storage in flash via a secure flash mode, bootstrap script integrity verification (SHA256), LLM rate limits (100/hour, 1000/day by default), and Telegram chat-ID allowlists. It supports both cloud LLM backends and local models via Ollama, making it a strong fit for privacy-focused, low-power, always-on deployments — at the cost of OpenClaw's rich channel ecosystem and desktop-class capabilities.",
+  "overview_markdown": "zclaw is a radically minimal take on the personal AI assistant: instead of a Node.js or Python runtime, it is written in C and targets ESP32 microcontrollers with a strict all-in firmware budget of 888 KiB — including the ESP-IDF/FreeRTOS runtime, Wi-Fi, TLS, and certificate bundles, with only ~35 KB of actual application code. Despite the tiny footprint, it supports scheduled tasks (daily, periodic, one-shot), persistent memory, GPIO control, and user-defined tools composed through natural language.\n\nUsers interact with zclaw via Telegram or a hosted web relay, and credentials (Wi-Fi, LLM API keys, Telegram allowlists) are provisioned via scripts and can be stored encrypted in flash using a secure flash mode. It supports both cloud LLM backends and local Ollama endpoints, with compile-time rate limits (default 100/hour, 1000/day). Recent releases added hardware-oriented tools like DHT sensors and generic I2C, reinforcing its identity as a bridge between LLM agents and physical computing.\n\nCompared to OpenClaw, zclaw sacrifices the rich multi-channel routing, dashboards, and plugin ecosystems for extreme portability and hackability. It is best understood as the embedded edge node of the Claw ecosystem: a fun, hackable assistant you can solder onto a board rather than a full-featured agent platform.",
   "latest_release": {
     "version": "v2.13.0",
     "date": "2026-03-22T07:08:28Z",
     "url": "https://github.com/tnm/zclaw/releases/tag/v2.13.0"
   },
-  "last_updated": "2026-09-21T02:02:27.160Z"
+  "last_updated": "2026-09-21T03:39:10.754Z"
 }

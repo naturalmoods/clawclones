@@ -2,44 +2,43 @@
   "id": "memovai/mimiclaw",
   "name": "MimiClaw",
   "language": "C",
-  "vibe_summary": "A bare-metal OpenClaw-style agent that runs entirely on a $5 ESP32-S3 chip — no Linux, no Node.js, just pure C. You talk to it over Telegram and it runs an LLM agent loop with local flash memory, sipping 0.5W of USB power.",
+  "vibe_summary": "An OpenClaw-style AI assistant squeezed onto a $5 ESP32-S3 chip with no OS, no Node.js, and pure C. It talks over Telegram, keeps local memory on flash, and sips 0.5W of power.",
   "health_status": "healthy",
   "github_stars": 5757,
   "metrics": {
-    "boot_time_ms": 5,
-    "memory_mb": 2,
-    "security_score": 62
+    "boot_time_ms": 8,
+    "memory_mb": 1,
+    "security_score": 55
   },
   "radar_chart": {
-    "sandboxing": 7,
+    "sandboxing": 6,
     "api_security": 5,
-    "network_isolation": 6,
-    "telemetry_safety": 9,
-    "shell_access_risk": 2
+    "network_isolation": 4,
+    "telemetry_safety": 8,
+    "shell_access_risk": 3
   },
   "tags": [
     "esp32",
-    "bare-metal",
-    "edge-ai",
+    "embedded",
     "telegram-bot",
-    "embedded-c"
+    "bare-metal",
+    "edge-ai"
   ],
-  "community_sentiment": 72,
-  "reddit_mentions": 2,
-  "web_mentions": 10,
+  "community_sentiment": 62,
+  "reddit_mentions": 0,
+  "web_mentions": 9,
   "best_for": [
     "Hobbyists wanting a $5 always-on AI gadget",
-    "Edge/embedded developers exploring LLM agents on MCUs",
-    "Users who want a low-power, local-data Telegram assistant"
+    "Makers comfortable with ESP-IDF firmware flashing",
+    "Users who want a Telegram assistant with local flash memory"
   ],
   "avoid_if": [
-    "You need multi-channel support beyond Telegram/Feishu",
-    "You want a rich skill/plugin ecosystem",
-    "You are uncomfortable flashing firmware and managing ESP-IDF toolchains"
+    "You need a rich plugin ecosystem or desktop integrations",
+    "You want multi-channel support beyond Telegram/Feishu",
+    "You are not comfortable flashing embedded firmware"
   ],
   "deployment_target": [
-    "edge",
-    "embedded"
+    "edge"
   ],
   "local_first": true,
   "cloud_dependency": "required",
@@ -110,36 +109,36 @@
     "default_model_released_at": "2025-11-24",
     "default_model_date_source": "catalogue",
     "files_examined": 52,
-    "detected_at": "2026-09-19T08:23:32.131Z",
+    "detected_at": "2026-09-21T02:27:39.741Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Runs on a $5 chip with no OS, Node.js, or server required",
-    "0.5W power draw enables true 24/7 always-on operation",
+    "Runs on $5 hardware with 0.5W power draw",
+    "No OS or runtime dependencies — pure C bare metal",
     "All data stored locally on device flash",
-    "Tiny pure-C codebase that is easy to audit"
+    "Extremely fast boot and tiny footprint"
   ],
   "openclaw_disadvantages": [
-    "Only Telegram/Feishu channels versus OpenClaw's 30+ integrations",
-    "Requires cloud LLM APIs (Anthropic/OpenAI); no local model option",
-    "Constrained by ESP32-S3 memory and single-user design",
-    "Much smaller ecosystem, skills library, and community"
+    "Requires purchasing and flashing ESP32-S3 hardware",
+    "Far fewer channels, tools, and integrations",
+    "Constrained by 8MB PSRAM and 16MB flash limits",
+    "Still depends on cloud LLM APIs for inference"
   ],
-  "confidence_summary": "Strong evidence from a detailed README, active recent commits, and a v0.1.1 release; community sentiment data is thin (only 2 Reddit matches), so popularity signals rely mostly on GitHub stars and web coverage.",
-  "evidence_confidence": 78,
+  "confidence_summary": "Strong evidence from README, commits, and release data for architecture and activity; community sentiment is uncertain due to zero Reddit matches and only indirect web mentions.",
+  "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-09-07T01:50:29.273Z",
-    "last_reviewed_at": "2026-09-07T01:50:29.273Z",
+    "last_generated_at": "2026-09-21T02:27:44.804Z",
+    "last_reviewed_at": "2026-09-21T02:27:44.804Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "MimiClaw is a bare-metal reimagining of the OpenClaw personal AI assistant, built to run entirely on a $5 ESP32-S3 microcontroller. Written in pure C on top of ESP-IDF, it eliminates Linux, Node.js, and any server infrastructure — the chip itself is the whole deployment. You message it via Telegram, and the onboard agent loop calls an LLM (Anthropic Claude or OpenAI GPT, switchable at runtime), invokes tools, reads from local flash memory, and replies, all while drawing roughly 0.5W from a USB port.\n\nIts standout trait is persistence and frugality: memory survives reboots on SPIFFS flash, and the device can run 24/7 for pennies. Recent development is active, with fixes for group-chat mention filtering (to avoid burning tokens on unaddressed messages), SPIFFS filename limits, GPIO skill support, and CI releases shipping prebuilt firmware images. Compared to OpenClaw, MimiClaw trades the rich multi-channel gateway and skills ecosystem for radical minimalism — it is a single-user, single-chip appliance rather than a full assistant platform, and it still depends on cloud LLM APIs for inference.",
+  "overview_markdown": "MimiClaw is a bare-metal reimagining of the OpenClaw personal AI assistant, running entirely on a $5 ESP32-S3 microcontroller with no operating system, no Node.js, and no Linux — just pure C built on ESP-IDF. You message it via Telegram (or Feishu), the chip polls over WiFi, runs an agent loop against Anthropic Claude or OpenAI GPT (switchable at runtime), calls tools, reads memory, and replies — all while drawing about 0.5W from a USB port.\n\nIts architecture is strikingly minimal: session memory persists on local SPIFFS flash, the firmware ships as a single merged image with CI-built releases, and recent work added GPIO skill support, group-chat mention filtering to avoid wasted LLM calls, and USB-JTAG console access for web-based serial monitoring. Compared to OpenClaw's full desktop/server stack with a control UI and dozens of integrations, MimiClaw trades ecosystem breadth for radical portability, cost, and energy efficiency — a genuinely 'hardware agent OS' for the edge.",
   "latest_release": {
     "version": "v0.1.1",
     "date": "2026-03-17T04:25:41Z",
     "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
   },
-  "last_updated": "2026-09-21T02:02:10.950Z"
+  "last_updated": "2026-09-21T02:27:44.804Z"
 }

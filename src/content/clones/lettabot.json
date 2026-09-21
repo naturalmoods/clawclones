@@ -2,7 +2,7 @@
   "id": "letta-ai/lettabot",
   "name": "LettaBot",
   "language": "TypeScript",
-  "vibe_summary": "A multi-channel personal AI assistant with unified persistent memory across Telegram, Slack, Discord, WhatsApp, and Signal, built on the Letta platform. Officially deprecated and archived — the team has moved all development to Letta Code's Channels and Remote Environments.",
+  "vibe_summary": "A multi-channel personal AI assistant with unified persistent memory across Telegram, Slack, Discord, WhatsApp, and Signal, built on the Letta platform. Now officially deprecated in favor of Letta Code's Channels and Remote Environments.",
   "health_status": "abandoned",
   "github_stars": 326,
   "metrics": {
@@ -14,28 +14,28 @@
     "sandboxing": 3,
     "api_security": 6,
     "network_isolation": 4,
-    "telemetry_safety": 5,
+    "telemetry_safety": 6,
     "shell_access_risk": 8
   },
   "tags": [
-    "deprecated",
+    "personal-assistant",
     "multi-channel",
     "persistent-memory",
-    "letta",
-    "chatbot"
+    "deprecated",
+    "letta"
   ],
   "community_sentiment": 45,
   "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
-    "Existing LettaBot deployments that still function",
-    "Developers studying multi-channel agent architecture",
-    "Letta platform users evaluating migration paths"
+    "Existing LettaBot deployments that still work",
+    "Users wanting unified memory across many chat platforms",
+    "Letta platform users exploring legacy integrations"
   ],
   "avoid_if": [
-    "You are starting any new project",
-    "You need active maintenance and security patches",
-    "You want a self-contained agent without a Letta backend dependency"
+    "Starting any new project (officially deprecated)",
+    "You need long-term maintenance and security patches",
+    "You want a self-contained local-first assistant without a Letta backend"
   ],
   "deployment_target": [
     "self-hosted",
@@ -123,35 +123,36 @@
     "default_model_released_at": "2025-05-14",
     "default_model_date_source": "model_id",
     "files_examined": 60,
-    "detected_at": "2026-09-19T08:23:20.700Z",
+    "detected_at": "2026-09-21T02:18:58.971Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Unified persistent memory across channels via Letta's memory architecture",
-    "Built-in scheduling, heartbeats, and voice transcription out of the box",
-    "Hackable codebase designed to be modified by AI coding agents"
+    "Unified persistent memory across five messaging platforms",
+    "Backed by the Letta stateful agent platform with managed memory",
+    "Voice transcription and Bluesky feed ingestion built in",
+    "One-click Railway deployment template"
   ],
   "openclaw_disadvantages": [
-    "Officially deprecated and no longer maintained",
-    "Requires a Letta API key or Letta server — not standalone",
-    "Far smaller community and ecosystem than OpenClaw",
-    "No active skill/plugin registry"
+    "Officially deprecated and unmaintained",
+    "Requires a Letta API key or Letta server dependency",
+    "Local shell/file tool execution with limited sandboxing",
+    "No active community momentum compared to OpenClaw"
   ],
-  "confidence_summary": "High confidence in the deprecation status and architecture since the README explicitly announces archival and replacement by Letta Code. Community sentiment is uncertain due to zero Reddit matches and search results dominated by OpenClaw content rather than LettaBot discussion.",
+  "confidence_summary": "Evidence is strong that the project is deprecated (explicit README warning and archive notice), but community sentiment data is thin with zero Reddit matches and only indirect web mentions.",
   "evidence_confidence": 85,
   "content_ops": {
-    "last_generated_at": "2026-09-07T01:44:42.593Z",
-    "last_reviewed_at": "2026-09-07T01:44:42.593Z",
+    "last_generated_at": "2026-09-21T02:19:04.862Z",
+    "last_reviewed_at": "2026-09-21T02:19:04.862Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "LettaBot was a personal AI assistant built on the Letta platform that unified conversations across Telegram, Slack, Discord, WhatsApp, and Signal into a single agent with persistent, cross-session memory. It also supported Bluesky Jetstream feed ingestion, voice message transcription via Whisper, heartbeat check-ins, scheduled reminders, and local tool execution (file reads, code search, shell commands) on the host machine.\n\nArchitecturally, it relied on the Letta Code SDK and required either a Letta cloud API key or a self-hosted Letta Docker server, making the agent's memory and reasoning backend externally managed rather than fully local. Configuration was YAML-driven, and the codebase was explicitly designed to be 'hackable' by AI coding agents.\n\n**Critically, LettaBot is deprecated.** The maintainers have archived the project and direct all new users to Letta Code's Channels (for messaging integrations), Remote Environments (for always-on agents via outbound WebSocket), and `letta cron` (for scheduling). Existing deployments still function, but compared to OpenClaw's actively developed, massively adopted ecosystem, LettaBot is a legacy reference implementation rather than a viable alternative for new projects.",
+  "overview_markdown": "LettaBot is a personal AI assistant built on the Letta platform that connects a single stateful agent to Telegram, Slack, Discord, WhatsApp, and Signal, with read-only Bluesky Jetstream feed ingestion. Its standout feature is unified persistent memory: one agent remembers conversations across all channels and across sessions spanning days or months, powered by the Letta Code SDK. It also supports local tool execution (file reads, code search, shell commands), voice message transcription via OpenAI Whisper, heartbeat check-ins, and agent-created scheduled reminders.\n\nArchitecturally, it is a Node.js/TypeScript application that requires either a Letta cloud API key or a self-hosted Letta Docker server, making it dependent on the Letta backend rather than fully local-first. Configuration is YAML-driven, and a Railway one-click deploy template lowers the barrier for always-on hosting.\n\nCritically, LettaBot is **officially deprecated**. The maintainers have archived the project and direct all new development to Letta Code's Channels (for messaging integrations) and Remote Environments (for always-on agents via outbound WebSocket). Existing deployments continue to function, and migration is described as taking roughly 20 minutes, but anyone evaluating OpenClaw alternatives should treat this as a legacy reference implementation rather than a going concern.",
   "latest_release": {
     "version": "v0.2.0-alpha.12",
     "date": "2026-03-10T22:43:22Z",
     "url": "https://github.com/letta-ai/lettabot/releases/tag/v0.2.0-alpha.12"
   },
-  "last_updated": "2026-09-21T02:02:09.283Z"
+  "last_updated": "2026-09-21T02:19:04.862Z"
 }

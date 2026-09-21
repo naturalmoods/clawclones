@@ -19,28 +19,28 @@
   },
   "tags": [
     "rust",
-    "security-focused",
+    "security-hardened",
     "local-first",
     "wasm-plugins",
     "multi-channel"
   ],
-  "community_sentiment": 30,
-  "reddit_mentions": 18,
+  "community_sentiment": 35,
+  "reddit_mentions": 17,
   "web_mentions": 10,
   "best_for": [
-    "Security-conscious users who want an OpenClaw-style assistant without its exposed attack surface",
-    "Self-hosters who want multi-channel messaging (Matrix, Signal, Telegram, Discord, Slack) with local-first defaults",
-    "Rust developers who want a signed, sandboxed WASM plugin model"
+    "Security-conscious users who want an OpenClaw-style assistant without its disclosed vulnerabilities",
+    "Self-hosters needing multi-channel messaging (Matrix, Signal, Telegram, Discord, Slack)",
+    "Operators who want signed, sandboxed WASM plugins instead of unvetted skills"
   ],
   "avoid_if": [
-    "You need a large plugin/skill ecosystem like OpenClaw's 5,000+ skills registry",
-    "You want a mature community, mobile apps, or a polished control UI",
-    "You need features still marked partial in its feature-status docs"
+    "You need a large, mature plugin ecosystem and community",
+    "You want a battle-tested project with broad third-party audits",
+    "You prefer a simple setup over configuring hardened auth and sandboxing"
   ],
   "deployment_target": [
     "self-hosted",
     "desktop",
-    "edge"
+    "cloud"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
@@ -218,37 +218,37 @@
     "default_model_released_at": "2026-04-24",
     "default_model_date_source": "catalogue",
     "files_examined": 46,
-    "detected_at": "2026-09-19T08:25:43.373Z",
+    "detected_at": "2026-09-21T03:12:25.488Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
+    "Directly mitigates the January 2026 OpenClaw vulnerability classes (SSRF, plaintext secrets, unauthenticated access)",
+    "Ed25519-signed WASM plugins with capability sandboxing vs. OpenClaw's unvetted skills supply chain",
     "OS-level subprocess sandboxing with fail-closed behavior on unsupported paths",
-    "Ed25519-signed WASM plugins with capability sandboxing and resource limits",
-    "Secrets in OS credential stores with AES-256-GCM fallback instead of plaintext",
-    "Localhost-only binding, CSRF protection, and SSRF/DNS-rebinding defenses by default",
-    "Rust memory safety plus active fuzzing and cargo audit hygiene"
+    "Rust memory safety plus encrypted secret storage via OS credential stores",
+    "Localhost-only binding and private-IP blocking by default"
   ],
   "openclaw_disadvantages": [
-    "Tiny community (47 stars) versus OpenClaw's massive user base and skill registry",
-    "No mobile apps, Canvas, or polished Control UI",
-    "Some features explicitly marked partial or in-progress",
-    "No third-party security audit evidence beyond self-published docs"
+    "Far smaller community and ecosystem (47 stars vs. OpenClaw's scale)",
+    "Some features are explicitly partial or in-progress per its own feature-status docs",
+    "No comparable Control UI dashboard or Canvas-style tooling",
+    "Less real-world operational history and fewer third-party integrations"
   ],
-  "confidence_summary": "README and commit history give strong evidence of active, security-focused engineering, but community sentiment is essentially unmeasurable — all 18 Reddit matches are unrelated uses of the word 'carapace'. Feature-completeness claims rely on the project's own status docs.",
-  "evidence_confidence": 72,
+  "confidence_summary": "Strong evidence from a detailed README, explicit security model docs, and active recent commits; however, community sentiment is essentially unmeasurable since all Reddit matches are unrelated gaming posts, so adoption signals are thin.",
+  "evidence_confidence": 78,
   "content_ops": {
-    "last_generated_at": "2026-09-07T02:23:06.556Z",
-    "last_reviewed_at": "2026-09-07T02:23:06.556Z",
+    "last_generated_at": "2026-09-21T03:12:33.036Z",
+    "last_reviewed_at": "2026-09-21T03:12:33.036Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "Carapace is a security-first, Rust-based personal AI assistant positioned as a hardened alternative to OpenClaw/Clawdbot. It supports a broad multi-provider LLM engine (Anthropic, OpenAI, Codex, Ollama, Gemini, Vertex AI, Bedrock, NEAR AI, Venice AI, and local Claude CLI) and connects to Matrix, Signal, Telegram, Discord, Slack, webhooks, and console channels, with per-channel typing indicators and read receipts.\n\nIts defining trait is the security architecture, designed threat-by-threat against the January 2026 OpenClaw disclosures: localhost-only binding, CSRF-protected control endpoints, OS credential-store secret storage with AES-256-GCM fallback, Ed25519-signed WASM plugins running under capability sandboxes with resource limits, prompt-injection defenses (prompt guard, inbound classifier, exec approval flow), OS-level subprocess sandboxing that fails closed on unsupported paths, and SSRF/DNS-rebinding mitigation. Infrastructure extras include TLS/mTLS, mDNS discovery, Tailscale integration, Prometheus metrics, and audit logging.\n\nCompared to OpenClaw, Carapace trades ecosystem breadth for rigor: there is no giant skill registry, mobile app, or Control UI, and the project transparently tracks verified-vs-partial features in docs/feature-status.yaml. Recent commits show disciplined maintenance — grouped Dependabot updates, fuzz-lock hygiene, RUSTSEC advisory remediation, and a 4,900+ test suite — suggesting a small but serious engineering effort rather than a vibe-coded fork.",
+  "overview_markdown": "Carapace is a security-first, Rust-based reimplementation of the OpenClaw personal AI assistant concept, explicitly positioned as a hardened alternative in the wake of the January 2026 OpenClaw security disclosures. It supports the same broad shape of functionality — multi-provider LLM access (Anthropic, OpenAI, Codex, Ollama, Gemini, Vertex, Bedrock, and more) and multi-channel messaging across Matrix, Signal, Telegram, Discord, Slack, webhooks, and console — but rebuilds the trust model from the ground up.\n\nIts differentiators are architectural: plugins are Ed25519-signed and run in a WASM capability sandbox with resource limits; secrets live in the OS credential store with AES-256-GCM fallback; filesystem access is root-scoped and guarded; and subprocess execution uses OS-level sandboxing on macOS, Linux, and Windows with fail-closed behavior. Network posture is equally strict — localhost-only binding, CSRF-protected control endpoints, private-IP blocking, and post-resolution DNS validation to counter SSRF and rebinding attacks. Infrastructure extras include TLS/mTLS, mDNS discovery, Tailscale integration, Prometheus metrics, and audit logging.\n\nCompared to OpenClaw, Carapace trades ecosystem breadth for assurance. It transparently documents verified-vs-partial feature status (docs/feature-status.yaml), maintains a healthy CI pipeline with ~4900 tests, fuzz targets, and active dependency hygiene, and shipped a stable v0.8.0 release in May 2026. The trade-off is a small community (47 stars) and a younger plugin ecosystem, making it best suited for security-conscious self-hosters rather than users who need OpenClaw's mature tooling and community support.",
   "latest_release": {
     "version": "v0.8.0",
     "date": "2026-05-01T22:18:48Z",
     "url": "https://github.com/puremachinery/carapace/releases/tag/v0.8.0"
   },
-  "last_updated": "2026-09-21T02:02:20.171Z"
+  "last_updated": "2026-09-21T03:12:33.036Z"
 }

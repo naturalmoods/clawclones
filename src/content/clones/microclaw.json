@@ -2,19 +2,19 @@
   "id": "microclaw/microclaw",
   "name": "MicroClaw",
   "language": "Rust",
-  "vibe_summary": "A Rust-native agentic assistant inspired by nanoclaw, shipping as a server, a native GPUI desktop app, and an embeddable SDK from one agent core. It targets durable, long-running agent work with persistent memory, scheduling, and governed extensions.",
+  "vibe_summary": "A Rust-native agentic assistant inspired by nanoclaw, shipping as a server, a native GPUI desktop app, and an embeddable SDK from one agent core. It targets durable, long-running agent work with resumable sessions, persistent memory, and governed extensions.",
   "health_status": "healthy",
   "github_stars": 738,
   "metrics": {
     "boot_time_ms": 8,
-    "memory_mb": 1.8,
+    "memory_mb": 2,
     "security_score": 72
   },
   "radar_chart": {
     "sandboxing": 6,
     "api_security": 7,
     "network_isolation": 6,
-    "telemetry_safety": 8,
+    "telemetry_safety": 7,
     "shell_access_risk": 6
   },
   "tags": [
@@ -24,18 +24,18 @@
     "sdk",
     "desktop-app"
   ],
-  "community_sentiment": 45,
+  "community_sentiment": 55,
   "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
-    "Rust developers embedding an agent engine via SDK",
-    "Self-hosters wanting always-on chat and scheduled agents",
-    "macOS users wanting a native desktop agent app"
+    "Rust developers wanting an embeddable agent engine",
+    "Self-hosters needing always-on chat and scheduled agents",
+    "Users wanting a native desktop agent workspace"
   ],
   "avoid_if": [
-    "You need a large, mature plugin ecosystem",
-    "You want zero-setup hosted SaaS",
-    "You rely on community support at OpenClaw scale"
+    "You need a mature, battle-tested ecosystem",
+    "You want zero-config setup with hosted options",
+    "You rely on a large plugin marketplace"
   ],
   "deployment_target": [
     "self-hosted",
@@ -159,36 +159,36 @@
     "default_model_released_at": "2025-09-29",
     "default_model_date_source": "model_id",
     "files_examined": 34,
-    "detected_at": "2026-09-19T08:23:36.485Z",
+    "detected_at": "2026-09-21T02:30:30.086Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
     "Rust core with very low resource footprint",
-    "Embeddable SDK for use inside other Rust apps",
-    "Native GPUI desktop app alongside the server",
-    "Durable sessions, scheduling, and persistent memory built in"
+    "Embeddable SDK for building custom Rust agent apps",
+    "Native GPUI desktop app for local workspace work",
+    "Explicit stable branch for production use"
   ],
   "openclaw_disadvantages": [
-    "Far smaller community and skill ecosystem",
-    "Fewer chat channel integrations",
-    "Early-stage releases with breaking changes on main",
-    "Minimal third-party documentation and tutorials"
+    "Smaller community and fewer integrations",
+    "Younger project with breaking changes on main",
+    "Less documentation and third-party tooling",
+    "No Reddit presence or measurable community discussion"
   ],
-  "confidence_summary": "Evidence is solid for architecture and release activity from the README and commits, but community sentiment is weakly evidenced with zero Reddit matches and web results mostly about OpenClaw itself.",
+  "confidence_summary": "Evidence is solid from the README and active release history, but there is zero Reddit discussion and web mentions are mostly about the broader ecosystem rather than MicroClaw itself. Community sentiment and adoption signals remain uncertain.",
   "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-09-07T01:52:23.702Z",
-    "last_reviewed_at": "2026-09-07T01:52:23.702Z",
+    "last_generated_at": "2026-09-21T02:30:34.080Z",
+    "last_reviewed_at": "2026-09-21T02:30:34.080Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "MicroClaw is a self-hosted agentic AI platform written in Rust, inspired by nanoclaw and positioned as a lightweight alternative in the OpenClaw ecosystem. It ships three entry points from a single agent core: **MicroClaw Server** for always-on chat channels, web/API access, scheduling, and automation; **MicroClaw Work**, a native GPUI desktop app for local workspace-centered agent sessions; and **microclaw-sdk**, which lets other Rust applications embed the same channel-independent Agent Engine with tools, policy, memory, skills, and runtime events.\n\nArchitecturally, it is designed for work that outlasts a single request: multi-step tool use, resumable sessions, durable delivery, persistent memory, scheduled tasks, and governed extensions all run in one runtime. The SDK offers tiered feature sets (`minimal`, `standard`, `full`, `remote-worker`), making it attractive for developers who want agent capabilities inside their own Rust services rather than a monolithic gateway.\n\nCompared to OpenClaw, MicroClaw trades ecosystem breadth for footprint and embeddability. OpenClaw offers a massive skills registry, dozens of chat channel plugins, and a huge community, while MicroClaw is earlier-stage (v0.6.x) with a smaller community, a stable branch recommended over a fast-moving main, and active release discipline visible in recent commits. It is best suited to Rust-centric teams and self-hosters who value a lean, native, local-first agent runtime.",
+  "overview_markdown": "MicroClaw is a self-hosted agentic AI platform written in Rust, inspired by nanoclaw and positioned as a lightweight alternative in the OpenClaw ecosystem. Its architecture centers on a single embeddable agent core that powers three surfaces: **MicroClaw Server** for always-on chat channels, APIs, scheduling, and automation; **MicroClaw Work**, a native GPUI desktop app for local workspace-centered agent sessions; and **`microclaw-sdk`**, which lets other Rust applications embed the same channel-independent Agent Engine with tools, policy, memory, skills, and runtime events.\n\nThe project is designed for work that outlasts a single request: multi-step tool use, resumable sessions, durable delivery, persistent memory, scheduled tasks, and governed extensions all run in one runtime. Compared to OpenClaw, MicroClaw trades ecosystem breadth for a lean Rust foundation, a native desktop experience, and an SDK-first embedding story. Development is active — the v0.6.1 release shipped recently with SDK 0.5.1 adding skill and delegation APIs — though the maintainers caution that `main` moves fast and production users should pin to the `stable` branch.",
   "latest_release": {
     "version": "v0.6.1",
     "date": "2026-09-05T01:25:50Z",
     "url": "https://github.com/microclaw/microclaw/releases/tag/v0.6.1"
   },
-  "last_updated": "2026-09-21T02:02:11.457Z"
+  "last_updated": "2026-09-21T02:30:34.080Z"
 }

@@ -2,12 +2,12 @@
   "id": "AstrBotDevs/AstrBot",
   "name": "AstrBot",
   "language": "Python",
-  "vibe_summary": "A massively popular (40k+ stars) agentic chatbot framework that bridges dozens of IM platforms with LLMs, plugins, and a web dashboard. It positions itself explicitly as an OpenClaw alternative with a strong plugin marketplace and multi-language community.",
+  "vibe_summary": "A massively popular Python-based AI agent framework that bridges dozens of IM platforms (QQ, WeChat, Telegram, Discord) with LLMs and a rich plugin ecosystem. It positions itself explicitly as an OpenClaw alternative with a polished web dashboard and one-click deployment.",
   "health_status": "healthy",
   "github_stars": 40743,
   "metrics": {
     "boot_time_ms": 250,
-    "memory_mb": 90,
+    "memory_mb": 180,
     "security_score": 62
   },
   "radar_chart": {
@@ -19,23 +19,23 @@
   },
   "tags": [
     "chatbot",
-    "multi-platform",
-    "llm-framework",
-    "plugins",
+    "llm",
+    "im-integration",
+    "plugin-framework",
     "self-hosted"
   ],
   "community_sentiment": 72,
-  "reddit_mentions": 7,
+  "reddit_mentions": 1,
   "web_mentions": 10,
   "best_for": [
-    "Teams wanting one bot across many IM platforms (QQ, WeChat, Telegram, Discord)",
-    "Users who want a plugin marketplace and web dashboard out of the box",
-    "Self-hosters who prefer Python and easy Docker deployment"
+    "Users wanting a chatbot across QQ/WeChat/Telegram/Discord",
+    "Self-hosters who want a web dashboard for agent management",
+    "Developers building plugins on a mature Python framework"
   ],
   "avoid_if": [
-    "You need a lightweight single-binary agent with minimal footprint",
-    "You require strong sandboxing for untrusted tool/shell execution",
-    "You dislike AGPL licensing for commercial derivative work"
+    "You need strong sandboxing for untrusted tool execution",
+    "You want a lightweight single-binary deployment",
+    "You require English-first community support"
   ],
   "deployment_target": [
     "self-hosted",
@@ -163,36 +163,36 @@
     "default_model_released_at": "2026-05-31",
     "default_model_date_source": "catalogue",
     "files_examined": 66,
-    "detected_at": "2026-09-19T08:22:46.732Z",
+    "detected_at": "2026-09-21T02:05:09.216Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Broader IM platform coverage, especially Chinese platforms like QQ and WeChat",
-    "Mature plugin marketplace with web-based management UI",
-    "Very active development with frequent releases and cross-platform CI",
-    "Large multilingual community and documentation"
+    "Far broader IM platform coverage out of the box",
+    "Much larger user base and plugin marketplace",
+    "Polished web dashboard lowers setup friction",
+    "Multi-language docs and active release cadence"
   ],
   "openclaw_disadvantages": [
-    "Heavier Python runtime versus OpenClaw's leaner footprint",
-    "Weaker sandboxing story for autonomous shell/tool execution",
-    "AGPL license is more restrictive for commercial forks",
-    "Chatbot-centric design rather than a general local action agent"
+    "Heavier Python runtime with higher resource footprint",
+    "Weaker sandboxing and shell-access isolation",
+    "AGPL license may restrict some commercial uses",
+    "Community and docs skew toward Chinese-speaking users"
   ],
-  "confidence_summary": "Strong evidence from README, active commit history, and release data confirms a healthy, feature-rich project. Reddit matches provided are irrelevant noise, so community sentiment relies mostly on web search footprint and star count.",
-  "evidence_confidence": 78,
+  "confidence_summary": "Strong evidence from README, stars, and very recent commits confirms an active, mature project. Security posture and sandboxing details are inferred rather than explicitly documented, so those scores carry moderate uncertainty.",
+  "evidence_confidence": 82,
   "content_ops": {
-    "last_generated_at": "2026-09-07T01:35:39.327Z",
-    "last_reviewed_at": "2026-09-07T01:35:39.327Z",
+    "last_generated_at": "2026-09-21T02:05:15.848Z",
+    "last_reviewed_at": "2026-09-21T02:05:15.848Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "AstrBot is a Python-based agentic chatbot framework that connects a wide range of IM platforms (QQ, WeChat, Telegram, Discord, and more) to LLM providers through a unified pipeline. It ships with a web dashboard, a plugin marketplace, knowledge base / RAG support, MCP tool integration, and a ChatUI, making it one of the most feature-complete open-source IM bot frameworks available. It explicitly markets itself as an OpenClaw alternative.\n\nArchitecturally, AstrBot is built around an event-driven pipeline with pluggable providers (OpenAI, Gemini, local models via vLLM, etc.), a plugin system with a community market, and a Vue-based admin dashboard. Recent commits show heavy investment in cross-platform CI (Windows/macOS/Linux unit tests), i18n parity across seven languages, and plugin market robustness — signs of a mature, well-maintained project.\n\nCompared to OpenClaw, AstrBot is more chatbot-centric: it excels at multi-platform messaging and plugin extensibility, but is heavier to run (Python runtime, ~90MB+ memory) and offers weaker sandboxing guarantees for autonomous shell execution. Its AGPL-3.0 license is also more restrictive for commercial derivatives. For users whose primary need is a self-hosted, multi-channel AI chat assistant with a rich plugin ecosystem, AstrBot is arguably the stronger choice; for a lean local action agent, OpenClaw retains the edge.",
+  "overview_markdown": "AstrBot is a Python 3.12+ AI agent assistant and development framework that connects a wide range of IM platforms (QQ, WeChat, Telegram, Discord, and more) to LLM providers through a unified pipeline. It ships with a web-based management dashboard, a plugin marketplace, knowledge-base/RAG support, and scheduled reminders, making it one of the most feature-complete self-hosted chatbot frameworks available.\n\nArchitecturally, it uses an event-driven pipeline with pluggable providers for LLMs, rerankers (e.g., Xinference, TEI), and messaging adapters such as OneBot. Recent commits show active hardening: network policy notices moved into system prompts, file-editing tool escape handling fixes, and rerank failure propagation—evidence of a mature maintenance culture with frequent releases (v4.28.1 as of September 2026).\n\nCompared to OpenClaw, AstrBot trades a lean, security-first footprint for breadth: more IM integrations, a bigger plugin ecosystem, and a friendlier dashboard, but with a heavier Python runtime, AGPL licensing, and less emphasis on sandboxed tool execution. It is best suited for users who prioritize multi-platform reach and extensibility over minimal resource use.",
   "latest_release": {
     "version": "v4.28.1",
     "date": "2026-09-14T15:14:30Z",
     "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.28.1"
   },
-  "last_updated": "2026-09-21T02:02:06.477Z"
+  "last_updated": "2026-09-21T02:05:15.848Z"
 }

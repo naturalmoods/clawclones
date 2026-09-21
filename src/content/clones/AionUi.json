@@ -2,9 +2,9 @@
   "id": "iOfficeAI/AionUi",
   "name": "AionUi",
   "language": "TypeScript",
-  "vibe_summary": "A polished cross-platform desktop 'cowork' app that wraps OpenClaw, Claude Code, Codex, and 20+ other CLI agents into one 24/7 multi-agent workspace. Its vibe is a VS Code-style mission control for agent teams, with remote WebUI access and heavy i18n polish.",
+  "vibe_summary": "A polished cross-platform desktop 'cowork' app that wraps OpenClaw, Claude Code, Codex, and 20+ other CLI agents in one GUI with multi-agent teaming and 24/7 automation. It's the most popular GUI front-end in the OpenClaw ecosystem, with very active development and strong i18n support.",
   "health_status": "healthy",
-  "github_stars": 32989,
+  "github_stars": 32990,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 180,
@@ -14,38 +14,37 @@
     "sandboxing": 4,
     "api_security": 6,
     "network_isolation": 4,
-    "telemetry_safety": 5,
+    "telemetry_safety": 6,
     "shell_access_risk": 8
   },
   "tags": [
-    "agent-orchestration",
     "desktop-app",
     "multi-agent",
-    "openclaw",
-    "electron"
+    "gui",
+    "electron",
+    "openclaw-frontend"
   ],
-  "community_sentiment": 68,
-  "reddit_mentions": 19,
+  "community_sentiment": 72,
+  "reddit_mentions": 17,
   "web_mentions": 10,
   "best_for": [
-    "Users juggling multiple CLI coding agents who want one GUI",
-    "Teams wanting 24/7 agent automation with remote access",
-    "Non-CLI-fluent users who want a zero-setup agent front-end"
+    "Non-technical users who want a GUI for CLI coding agents",
+    "Users juggling multiple agents (Claude Code, Codex, OpenClaw) in one window",
+    "Teams wanting 24/7 agent automation with remote access"
   ],
   "avoid_if": [
-    "You want a single tightly-integrated agent rather than a wrapper",
-    "You need strong sandboxing around agent shell execution",
-    "You prefer minimal resource usage over an Electron-style desktop app"
+    "You need strong sandboxing or isolated agent execution",
+    "You prefer lightweight terminal-native workflows",
+    "You want a self-hosted server rather than an Electron desktop app"
   ],
   "deployment_target": [
-    "desktop",
-    "self-hosted"
+    "desktop"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
   "setup_difficulty": "low",
   "privacy_posture": "mixed",
-  "multi_user": true,
+  "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-09-09T07:56:13Z",
@@ -122,36 +121,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 76,
-    "detected_at": "2026-09-19T08:23:11.829Z",
+    "detected_at": "2026-09-21T02:13:56.282Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Unified GUI for 20+ CLI agents including OpenClaw itself",
-    "Multi-agent teaming and parallel session management",
-    "Remote WebUI access from phone/browser with session refresh",
-    "Polished UX: notifications, i18n in 13 locales, VS Code-style explorer"
+    "Friendly GUI for users who won't touch a terminal",
+    "Unified management of 20+ CLI agents in one window",
+    "Zero-setup onboarding with any API key",
+    "Cross-platform installers for macOS, Windows, Linux"
   ],
   "openclaw_disadvantages": [
-    "It is a wrapper, not an agent — depends on OpenClaw/others for actual capability",
-    "Heavier Electron-style footprint vs OpenClaw's lean core",
-    "Less mature skills/plugin ecosystem than OpenClaw's registry",
-    "Shell access risk is inherited and amplified across multiple agents"
+    "Heavier Electron runtime vs OpenClaw's leaner footprint",
+    "Acts as a wrapper—depends on underlying agents for core capability",
+    "Desktop-focused; weaker for headless/server deployments",
+    "Shell access risk inherited from every agent it orchestrates"
   ],
-  "confidence_summary": "Strong evidence from README, release cadence, and detailed commit history that this is an actively maintained OpenClaw-compatible cowork app. Reddit sentiment is noisy (many irrelevant 'Aion' MMORPG matches), so community sentiment confidence is moderate.",
-  "evidence_confidence": 78,
+  "confidence_summary": "Strong evidence from README, release cadence, and third-party listings that this is an active, popular OpenClaw companion GUI. Security and sandboxing posture is inferred rather than documented, so those scores carry uncertainty.",
+  "evidence_confidence": 80,
   "content_ops": {
-    "last_generated_at": "2026-09-07T01:40:33.701Z",
-    "last_reviewed_at": "2026-09-07T01:40:33.701Z",
+    "last_generated_at": "2026-09-21T02:14:03.519Z",
+    "last_reviewed_at": "2026-09-21T02:14:03.519Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "AionUi is a free, open-source (Apache-2.0) desktop 'cowork' application that acts as a unified front-end for OpenClaw, Hermes, Claude Code, Codex, OpenCode, and 20+ other CLI agents. Rather than being an agent itself, it provides a VS Code-style workspace — file explorer, SCM/changes panel, conversation sidebar — where multiple agents can run in parallel, be customized, and be teamed up for 24/7 automation. It ships cross-platform builds for macOS, Windows, and Linux, supports any API key, and offers a remote WebUI so agents can be monitored from a phone browser.\n\nArchitecturally it is a TypeScript/Electron-style app backed by an 'aioncore' service, with recent engineering focused on robustness: tab-scoped explorer refresh with repository re-discovery, websocket reconnect backoff fixes, silent session refresh on 401s for the remote WebUI, and richer notification states that distinguish 'waiting for user confirmation' from active generation. Security posture is middling — it orchestrates agents with shell access and mentions permission/confirmation flows, but there is no evidence of strong sandboxing.\n\nCompared to OpenClaw itself, AionUi is complementary rather than competitive: OpenClaw is one of the agents it hosts. Its differentiators are the multi-agent GUI, team orchestration, remote access, and polish (13 locales, desktop notifications), while OpenClaw remains stronger as a standalone assistant with a large skills ecosystem.",
+  "overview_markdown": "AionUi is a free, open-source (Apache-2.0) Electron desktop application that positions itself as a 24/7 'cowork' app for AI coding agents. Rather than being an agent itself, it provides a unified GUI on top of OpenClaw, Hermes, Claude Code, Codex, OpenCode, and 20+ other CLI agents, letting users customize assistants, team multiple agents together, and run them continuously with remote access. It ships cross-platform builds for macOS, Windows, and Linux with 13-language localization.\n\nArchitecturally, it pairs a TypeScript/Electron front end with a companion 'aioncore' backend, integrating agents via ACP and MCP protocols. Recent commits show mature product engineering: tab-scoped explorer refresh with repository re-discovery, VS Code-style collapse-all, distinct waiting-for-user conversation states with desktop notifications, and websocket reconnection hardening—signs of an actively maintained, production-grade codebase at v2.2.2.\n\nCompared to OpenClaw itself, AionUi is a complement and alternative front-end rather than a competing agent runtime: it trades OpenClaw's lean, hackable footprint for accessibility, multi-agent orchestration UI, and zero-setup onboarding. Its 33k stars and frequent release cadence make it the most visible GUI in the OpenClaw ecosystem, though users needing strong sandboxing or headless server deployment should look elsewhere.",
   "latest_release": {
     "version": "v2.2.2",
     "date": "2026-09-09T11:29:49Z",
     "url": "https://github.com/iOfficeAI/AionUi/releases/tag/v2.2.2"
   },
-  "last_updated": "2026-09-21T02:02:08.091Z"
+  "last_updated": "2026-09-21T02:14:03.519Z"
 }

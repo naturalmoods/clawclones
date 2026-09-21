@@ -2,7 +2,7 @@
   "id": "razzant/ouroboros",
   "name": "Ouroboros",
   "language": "Python",
-  "vibe_summary": "A self-modifying AI agent with persistent identity and memory that can rewrite its own code, prompts, and architecture across restarts. Ships as a polished native desktop app with a swarm of specialist agents and a skills marketplace.",
+  "vibe_summary": "A self-creating AI agent that can rewrite its own code, architecture, prompts, and tools while preserving identity and durable memory across restarts. Ships as a polished native desktop app with a swarm of specialist sub-agents and a skills marketplace.",
   "health_status": "healthy",
   "github_stars": 1359,
   "metrics": {
@@ -11,31 +11,31 @@
     "security_score": 55
   },
   "radar_chart": {
-    "sandboxing": 4,
-    "api_security": 5,
-    "network_isolation": 5,
+    "sandboxing": 3,
+    "api_security": 6,
+    "network_isolation": 4,
     "telemetry_safety": 6,
     "shell_access_risk": 9
   },
   "tags": [
     "self-modifying",
     "autonomous-agent",
-    "persistent-memory",
     "desktop-app",
-    "agent-swarm"
+    "agent-swarm",
+    "python"
   ],
-  "community_sentiment": 35,
-  "reddit_mentions": 17,
+  "community_sentiment": 45,
+  "reddit_mentions": 21,
   "web_mentions": 10,
   "best_for": [
     "Researchers exploring self-modifying agent architectures",
-    "Power users wanting a persistent-identity desktop agent",
+    "Power users wanting a persistent, memory-continuous desktop agent",
     "Experimenters comfortable with high-autonomy local agents"
   ],
   "avoid_if": [
-    "You need a hardened, sandboxed agent for production use",
-    "You want a large community and mature plugin ecosystem",
-    "You are uncomfortable with an agent rewriting its own code"
+    "You need a sandboxed or tightly permissioned agent runtime",
+    "You want a mature, battle-tested ecosystem like OpenClaw",
+    "You are uncomfortable with software that rewrites its own code"
   ],
   "deployment_target": [
     "desktop",
@@ -155,36 +155,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 41,
-    "detected_at": "2026-09-19T08:25:57.443Z",
+    "detected_at": "2026-09-21T03:20:42.679Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Unique self-rewriting architecture with durable cross-session identity",
+    "Unique self-rewriting architecture with persistent identity across restarts",
     "Native desktop installers for macOS, Windows, and Linux — no Python setup needed",
-    "Local GGUF model support alongside remote APIs",
-    "Accompanying technical report and rigorous CI discipline (3-OS test matrix)"
+    "Built-in specialist agent swarm and OuroborosHub skills marketplace",
+    "Supports fully local GGUF inference for offline operation"
   ],
   "openclaw_disadvantages": [
-    "Far smaller community (1.3k stars vs OpenClaw's hundreds of thousands)",
-    "Self-modification dramatically increases operational and security risk",
-    "No multi-channel messaging integrations (WhatsApp/Telegram/Discord) like OpenClaw",
-    "Single-maintainer project with unproven long-term stability"
+    "Self-modifying code path is a major security and stability risk",
+    "Far smaller community and ecosystem than OpenClaw",
+    "No multi-channel messaging integrations (WhatsApp/Slack/Discord)",
+    "Young project with limited third-party security review"
   ],
-  "confidence_summary": "README and commit evidence is strong for architecture and activity, but Reddit matches are almost entirely unrelated (symbol/tattoo/gaming posts), so community sentiment is inferred mostly from web presence. Security posture is estimated, not audited.",
-  "evidence_confidence": 62,
+  "confidence_summary": "Strong evidence from a detailed README, active releases, and meticulous commit history, but Reddit mentions are almost entirely unrelated (the name 'Ouroboros' is generic), so community sentiment is inferred mostly from web presence and GitHub traction.",
+  "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-09-07T02:29:27.601Z",
-    "last_reviewed_at": "2026-09-07T02:29:27.601Z",
+    "last_generated_at": "2026-09-21T03:20:46.983Z",
+    "last_reviewed_at": "2026-09-21T03:20:46.983Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "Ouroboros is an open-source, general-purpose AI agent built around a radical premise: the agent's identity, durable memory, and history persist across tasks and restarts, and it can rewrite the very implementation it runs on — its code, architecture, prompts, tools, and dependencies. It coordinates a live swarm of specialist agents and works on external projects, with reflection that can change how it understands itself without breaking continuity. A companion skills marketplace (OuroborosHub) and an arXiv technical report round out the project.\n\nUnlike OpenClaw's channel-centric personal-assistant model, Ouroboros ships as a native desktop app (macOS, Windows, Debian/RPM Linux packages) or headless CLI, keeping its repository, memory, and history on your machine while inference runs against remote APIs you configure or a local GGUF model. Recent releases show unusually disciplined engineering for an agent project: capability preservation as a first-class invariant, a green 3-OS CI matrix, and co-authored commits from the agent itself.\n\nThe trade-off is risk. A self-modifying agent with shell access and no emphasized sandboxing story is inherently high-risk operationally, and the community (1.3k stars, single maintainer) is tiny compared to OpenClaw's ecosystem. It is best treated as a fascinating research-grade artifact rather than a production assistant.",
+  "overview_markdown": "Ouroboros is an open-source, general-purpose AI agent whose defining trait is *self-modification*: it can rewrite the very implementation it runs on — code, architecture, prompts, tools, and dependencies — while preserving a continuous identity, durable memory, and history across tasks and restarts. It coordinates a live swarm of specialist sub-agents and works on external projects, positioning itself as an experiment in genuinely autonomous, self-evolving software.\n\nArchitecturally, it runs as a native desktop app (macOS, Windows, Debian/RPM Linux packages) or a headless CLI, keeping its repository, memory, and history on the local machine. Model inference is flexible: remote APIs you configure, or a fully local GGUF model for offline use. An accompanying OuroborosHub acts as a skills marketplace, and the project maintains unusually rigorous engineering hygiene — the commit log shows typed tool-argument refusals, trace-based self-check evidence, plan-review honesty gates, and a CONTRIBUTING.md that mandates a separate-agent review flow for any changes.\n\nCompared to OpenClaw, Ouroboros trades ecosystem breadth and multi-channel messaging for a singular focus on persistent identity and self-improvement. It is arguably the more ambitious research artifact (with an arXiv technical report), but its self-rewriting nature makes it inherently higher-risk to run unsupervised, and its community and plugin ecosystem remain far smaller than OpenClaw's.",
   "latest_release": {
     "version": "v7.2.1",
     "date": "2026-09-19T14:27:36Z",
     "url": "https://github.com/razzant/ouroboros/releases/tag/v7.2.1"
   },
-  "last_updated": "2026-09-21T02:02:23.029Z"
+  "last_updated": "2026-09-21T03:20:46.983Z"
 }

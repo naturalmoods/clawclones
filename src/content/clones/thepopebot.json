@@ -2,12 +2,12 @@
   "id": "stephengpope/thepopebot",
   "name": "thepopebot",
   "language": "JavaScript",
-  "vibe_summary": "A self-hosted personal agent platform that unifies chat, coding agents, and live terminal workspaces in one app. It emphasizes running any LLM or coding agent on your own hardware with Telegram integration and background PR workflows.",
+  "vibe_summary": "A self-hosted personal agent platform that unifies chat (Telegram/web), any LLM, and any coding agent into one app with live browser terminals and background Docker jobs. It leans hard into 'real work, not just chat' — agents open PRs, auto-merge, and DM you when done.",
   "health_status": "healthy",
   "github_stars": 1861,
   "metrics": {
     "boot_time_ms": 180,
-    "memory_mb": 80,
+    "memory_mb": 90,
     "security_score": 72
   },
   "radar_chart": {
@@ -18,7 +18,7 @@
     "shell_access_risk": 7
   },
   "tags": [
-    "ai-agent",
+    "personal-agent",
     "self-hosted",
     "telegram-bot",
     "coding-agent",
@@ -28,14 +28,14 @@
   "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
-    "Developers wanting a self-hosted agent with Telegram chat",
-    "Users who want background coding jobs that open PRs automatically",
-    "Tinkerers who want to swap between multiple LLMs and coding agents"
+    "Solo devs wanting a 24/7 autonomous coding agent",
+    "Users who want Telegram-driven agent workflows",
+    "Self-hosters who want PR-open/auto-merge automation"
   ],
   "avoid_if": [
-    "You need a large plugin ecosystem or community support",
-    "You want a managed, zero-maintenance hosted solution",
-    "You need multi-user team features out of the box"
+    "You need multi-user team collaboration features",
+    "You want a managed cloud service with zero ops",
+    "You need Slack/Discord integrations today (still coming soon)"
   ],
   "deployment_target": [
     "self-hosted",
@@ -47,7 +47,7 @@
   "setup_difficulty": "medium",
   "privacy_posture": "strong",
   "multi_user": false,
-  "plugin_ecosystem": "limited",
+  "plugin_ecosystem": "emerging",
   "license_type": "MIT",
   "last_commit_at": "2026-05-13T20:16:48Z",
   "contributors_count": 5,
@@ -163,36 +163,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 63,
-    "detected_at": "2026-09-19T08:26:24.803Z",
+    "detected_at": "2026-09-21T03:33:54.660Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Unified chat + live terminal workspace in one app",
-    "Explicit background agent jobs that open and auto-merge PRs",
-    "Works with many coding agents (Claude Code, Codex, Gemini, etc.)",
-    "Simple single-app deployment model"
+    "Unified chat + live terminal + background job model in one app",
+    "Works with any coding agent (Claude Code, Codex, Gemini, etc.) out of the box",
+    "Docker-isolated background jobs with PR auto-merge workflow",
+    "Simple single-maintainer codebase, easy to audit and modify"
   ],
   "openclaw_disadvantages": [
-    "Far smaller community and ecosystem than OpenClaw",
-    "Fewer messaging platform integrations (Telegram only today)",
-    "No Reddit presence and minimal third-party discussion",
-    "Single-maintainer project risk"
+    "Smaller ecosystem and fewer integrations than OpenClaw",
+    "Only Telegram supported today; Slack/Discord not shipped",
+    "Single-maintainer project with bus-factor risk",
+    "No Reddit community presence or independent reviews"
   ],
-  "confidence_summary": "Evidence is solid from the README and active commit history, but there is zero Reddit discussion and web mentions are mostly about OpenClaw rather than this project, so community sentiment is uncertain.",
+  "confidence_summary": "Evidence is solid from README, commits, and release history showing active development, but there is zero Reddit discussion and web sentiment is indirect (mostly about OpenClaw generally), so community and security assessments carry moderate uncertainty.",
   "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-09-07T02:41:02.701Z",
-    "last_reviewed_at": "2026-09-07T02:41:02.701Z",
+    "last_generated_at": "2026-09-21T03:34:00.192Z",
+    "last_reviewed_at": "2026-09-21T03:34:00.192Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "## Overview\n\nthepopebot is a self-hosted personal AI agent platform that combines chat, coding agents, and live terminal workspaces into a single application. It positions itself as 'your personal agent, coding environment, and communication platform — all in one app,' supporting any LLM (Anthropic, OpenAI, Google, DeepSeek, and any OpenAI-compatible endpoint) and any coding agent (Claude Code, Codex, Gemini, OpenCode, and more).\n\nThe architecture centers on a 'Brain' event handler with three entry points: a browser-based chat, Telegram integration (with per-user verification), and live coding workspaces where you can attach a terminal to a running container. It distinguishes between **live chat** (quick questions, streaming responses in-process) and **agent jobs** (background workers that run in fresh Docker containers, open PRs, auto-merge, and DM you when done). Configuration is stored in SQLite with AES-encrypted secrets, and recent commits show active hardening — removing stale config caches and adding flexible Telegram webhook overrides.\n\nCompared to OpenClaw, thepopebot is a much smaller, single-maintainer project with a narrower integration surface (Telegram today, Slack/Discord promised) but a focused, opinionated workflow around coding agents and PR automation. It runs entirely on your own hardware with your own tokens, making it a privacy-friendly option for developers who want a simple, unified agent environment without the scale or ecosystem of OpenClaw.",
+  "overview_markdown": "## Overview\n\nthepopebot is a self-hosted personal AI agent platform that combines a chat interface, a live coding environment, and a background job runner into a single Node.js application. Its core architecture is described as 'three doors, one brain': browser chat, Telegram (with per-user verification), and code workspaces all feed into a central event handler that picks the coding agent, manages sessions, and orchestrates Docker containers. It is LLM-agnostic (Anthropic, OpenAI, Google, DeepSeek, OpenRouter, and any OpenAI-compatible endpoint) and agent-agnostic (Claude Code, Codex, Gemini, OpenCode, and others).\n\nThe standout differentiator is the split between **live chat** (agent runs in-process or in a headless container, streaming to your screen) and **agent jobs** (background workers that spin up fresh Docker containers, open PRs, auto-merge, and DM you on completion). This makes it closer to an autonomous junior developer than a chatbot. Recent commits show active, careful maintenance — fixing stale config caches that served outdated bot tokens, adding Telegram webhook URL overrides for proxied deployments, and tightening the admin UI.\n\nCompared to OpenClaw, thepopebot is narrower but more opinionated: it focuses on the coding-agent-plus-chat loop rather than broad multi-channel assistant features. Everything runs on your hardware with your tokens, giving it a strong privacy posture, though unrestricted shell access via live terminals and Docker jobs means operational risk is non-trivial. Slack and Discord integrations are promised but not yet shipped.",
   "latest_release": {
     "version": "v1.2.82",
     "date": "2026-05-13T20:49:05Z",
     "url": "https://github.com/stephengpope/thepopebot/releases/tag/v1.2.82"
   },
-  "last_updated": "2026-09-21T02:02:26.067Z"
+  "last_updated": "2026-09-21T03:34:00.192Z"
 }

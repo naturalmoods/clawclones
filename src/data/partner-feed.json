@@ -6,13 +6,13 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 989046,
-    "total_stars_formatted": "989.0k",
+    "total_stars": 989072,
+    "total_stars_formatted": "989.1k",
     "most_active_language": "Rust",
     "language_breakdown": {
-      "TypeScript": 9,
+      "TypeScript": 10,
       "Kotlin": 1,
-      "Python": 11,
+      "Python": 10,
       "Go": 4,
       "Shell": 1,
       "Rust": 12,
@@ -21,21 +21,21 @@
       "Zig": 1,
       "JavaScript": 1
     },
-    "avg_sentiment": 54,
+    "avg_sentiment": 58,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 390158,
+      "stars": 390156,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 247488,
-    "stars_growth_7d": 2074,
+    "stars": 247506,
+    "stars_growth_7d": 2092,
     "language": "Python",
     "sentiment": 82,
-    "vibe_summary": "A self-improving AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to serverless, with a polished TUI and multi-platform messaging gateway.",
+    "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to a GPU cluster and reaches you via Telegram, Discord, Slack, WhatsApp, Signal, or CLI.",
     "health": "healthy",
     "latest_version": "v2026.9.14",
     "url": "https://clawclones.com/clones/NousResearch/hermes-agent"
@@ -47,16 +47,16 @@
     "url": "https://clawclones.com/compare/hermes-agent-vs-nanobot"
   },
   "updated_at": "2026-09-21T23:59:59.999Z",
-  "generated_at": "2026-09-21T02:02:30.386Z",
+  "generated_at": "2026-09-21T03:56:03.125Z",
   "freshness": {
     "updated_at": "2026-09-21T23:59:59.999Z",
-    "generated_at": "2026-09-21T02:02:30.386Z",
+    "generated_at": "2026-09-21T03:56:03.125Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-09-21T02:02:29.600Z",
+        "updated_at": "2026-09-21T03:53:39.129Z",
         "age_hours": 0
       },
       "history": {
@@ -64,8 +64,8 @@
         "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-09-21T23:59:59.999Z",
-        "age_hours": 0
+        "updated_at": "2026-09-20T23:59:59.999Z",
+        "age_hours": 3.9
       }
     }
   }
