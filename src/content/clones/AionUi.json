@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A polished cross-platform desktop 'cowork' app that wraps OpenClaw, Claude Code, Codex, and 20+ other CLI agents in one GUI with multi-agent teaming and 24/7 automation. It's the most popular GUI front-end in the OpenClaw ecosystem, with very active development and strong i18n support.",
   "health_status": "healthy",
-  "github_stars": 33024,
+  "github_stars": 33037,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 180,
@@ -49,7 +49,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-09-09T07:56:13Z",
   "contributors_count": 115,
-  "open_issues_count": 921,
+  "open_issues_count": 923,
   "release_cadence_days": 3,
   "operational_risk": "medium",
   "model_support": {
@@ -152,5 +152,5 @@
     "date": "2026-09-09T11:29:49Z",
     "url": "https://github.com/iOfficeAI/AionUi/releases/tag/v2.2.2"
   },
-  "last_updated": "2026-09-22T02:08:29.939Z"
+  "last_updated": "2026-09-22T16:05:36.451Z"
 }

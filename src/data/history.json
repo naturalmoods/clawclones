@@ -206,7 +206,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 390227
+      "stars": 390253
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -416,7 +416,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 32854
+      "stars": 32860
     }
   ],
   "qwibitai/nanoclaw": [
@@ -626,7 +626,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 30818
+      "stars": 30827
     }
   ],
   "HKUDS/nanobot": [
@@ -836,7 +836,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 48463
+      "stars": 48487
     }
   ],
   "sipeed/picoclaw": [
@@ -1046,7 +1046,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 30010
+      "stars": 30009
     }
   ],
   "hesreallyhim/awesome-claude-code": [
@@ -1472,7 +1472,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 5759
+      "stars": 5764
     }
   ],
   "TinyAGI/tinyclaw": [
@@ -2738,7 +2738,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 2867
+      "stars": 2869
     }
   ],
   "ruvnet/ruvector": [
@@ -4430,7 +4430,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 1365
+      "stars": 1369
     }
   ],
   "zofrasca/lightclaw": [
@@ -4850,7 +4850,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 33024
+      "stars": 33037
     }
   ],
   "NevaMind-AI/memUBot": [
@@ -6110,7 +6110,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 35191
+      "stars": 35213
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -6320,7 +6320,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 6060
+      "stars": 6063
     }
   ],
   "open-gitagent/gitclaw": [
@@ -6530,7 +6530,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 700
+      "stars": 701
     }
   ],
   "AstrBotDevs/AstrBot": [
@@ -6740,7 +6740,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 40794
+      "stars": 40846
     }
   ],
   "unitedbyai/droidclaw": [
@@ -8210,7 +8210,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 247798
+      "stars": 248010
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -8420,7 +8420,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 3607
+      "stars": 3609
     }
   ],
   "aiming-lab/MetaClaw": [
@@ -8630,7 +8630,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 3492
+      "stars": 3493
     }
   ],
   "loongclaw-ai/loongclaw": [
@@ -9050,7 +9050,7 @@
     },
     {
       "date": "2026-09-22",
-      "stars": 19232
+      "stars": 19235
     }
   ]
 }
