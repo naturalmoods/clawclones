@@ -48,10 +48,10 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-05-09T13:43:34Z",
+  "last_commit_at": "2026-09-22T17:33:41Z",
   "contributors_count": 3,
   "open_issues_count": 2,
-  "release_cadence_days": 6,
+  "release_cadence_days": 20,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -105,9 +105,9 @@
   },
   "overview_markdown": "SafestClaw positions itself as the zero-cost, security-minded alternative to OpenClaw. Instead of routing everything through a paid LLM, it uses classic ML intent and semantic matching to handle common tasks — weather, news summaries from 50+ sources, research lookups (arXiv, WolframAlpha), blogging, and even code security audits — deterministically and offline. An LLM is strictly optional and can be enabled via `setup ai` for free-form chat, keeping the default attack surface and prompt-injection risk minimal.\n\nThe project is distributed via pip (`pip install safestclaw`) and runs as a CLI, a localhost web UI, or a Telegram bot, with optional MCP support. Recent commits show active maintenance: fixes to config path resolution so settings persist across systemd/launchd/cron launches, better LLM error surfacing so users see real provider failures instead of canned replies, and tightened intent regexes to avoid misrouting chat. Voice (TTS and speech-to-text) is included, rounding out a feature set that covers most of what casual OpenClaw users want at zero recurring cost.\n\nCompared to OpenClaw, SafestClaw trades conversational polish and ecosystem breadth for determinism, privacy, and cost. It is local-first by default, only reaching out externally when the user explicitly asks (e.g., weather APIs) or configures an LLM. The trade-off is a smaller community, a single-maintainer bus factor, and a steeper learning curve for users who skip the LLM and must learn the documented command surface.",
   "latest_release": {
-    "version": "4.2.4",
-    "date": "2026-05-09T13:40:00Z",
-    "url": "https://github.com/princezuda/safestclaw/releases/tag/4.2.4"
+    "version": "4.2.5",
+    "date": "2026-09-22T17:36:08Z",
+    "url": "https://github.com/princezuda/safestclaw/releases/tag/4.2.5"
   },
-  "last_updated": "2026-09-22T16:05:49.679Z"
+  "last_updated": "2026-09-23T02:08:04.510Z"
 }

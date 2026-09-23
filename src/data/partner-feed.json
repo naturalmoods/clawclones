@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 43,
-    "total_stars": 990020,
-    "total_stars_formatted": "990.0k",
+    "total_stars": 990211,
+    "total_stars_formatted": "990.2k",
     "most_active_language": "Rust",
     "language_breakdown": {
       "TypeScript": 10,
@@ -24,15 +24,15 @@
     "avg_sentiment": 58,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 390253,
+      "stars": 390266,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 248010,
-    "stars_growth_7d": 2229,
+    "stars": 248125,
+    "stars_growth_7d": 2030,
     "language": "Python",
     "sentiment": 82,
     "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to a GPU cluster and reaches you via Telegram, Discord, Slack, WhatsApp, Signal, or CLI.",
@@ -43,28 +43,28 @@
   "hot_vs": {
     "clone_a": "hermes-agent",
     "clone_b": "nanobot",
-    "visits": 8,
+    "visits": 7,
     "url": "https://clawclones.com/compare/hermes-agent-vs-nanobot"
   },
-  "updated_at": "2026-09-22T23:59:59.999Z",
-  "generated_at": "2026-09-22T16:05:59.470Z",
+  "updated_at": "2026-09-23T23:59:59.999Z",
+  "generated_at": "2026-09-23T02:08:15.299Z",
   "freshness": {
-    "updated_at": "2026-09-22T23:59:59.999Z",
-    "generated_at": "2026-09-22T16:05:59.470Z",
+    "updated_at": "2026-09-23T23:59:59.999Z",
+    "generated_at": "2026-09-23T02:08:15.299Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-09-22T16:05:59.100Z",
+        "updated_at": "2026-09-23T02:08:14.536Z",
         "age_hours": 0
       },
       "history": {
-        "updated_at": "2026-09-22T23:59:59.999Z",
+        "updated_at": "2026-09-23T23:59:59.999Z",
         "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-09-22T23:59:59.999Z",
+        "updated_at": "2026-09-23T23:59:59.999Z",
         "age_hours": 0
       }
     }
