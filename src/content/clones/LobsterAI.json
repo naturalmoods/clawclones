@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A polished, corporate-backed desktop agent from NetEase Youdao that layers a full Cowork product experience on top of OpenClaw. Its standout angle is phone-based remote control via WeChat, Feishu, DingTalk, and Telegram aimed at office productivity.",
   "health_status": "healthy",
-  "github_stars": 6064,
+  "github_stars": 6065,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 350,
@@ -47,7 +47,7 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-22T11:42:19Z",
+  "last_commit_at": "2026-09-23T12:21:32Z",
   "contributors_count": 62,
   "open_issues_count": 577,
   "release_cadence_days": 3,
@@ -182,9 +182,9 @@
   },
   "overview_markdown": "LobsterAI is an open-source desktop agent built by NetEase Youdao, positioned as an all-scenario office assistant. Architecturally it splits into two layers: Cowork, the product/session layer handling local persistence, permissions, UI state, artifacts, agents, memory, and IM bindings; and OpenClaw, which serves as the underlying runtime and gateway for agent execution. It ships as an Electron 43 + React 18 app for macOS and Windows with downloadable installers.\n\nIts differentiators are desktop-grade tool use (local files, terminal, browser workflows, documents, spreadsheets, slides) with approval prompts before sensitive actions, multi-agent workflows with per-agent identity/model/skills, Expert Kits for scenario-specific capabilities, and remote control from a phone via WeChat, Feishu, DingTalk, and Telegram. Recent work shows active hardening: passkey/WebAuthn support in the in-app browser, scheduled-task fixes for Weixin delivery, and removal of the background jobs feature.\n\nCompared to running OpenClaw directly, LobsterAI trades leanness for usability — a full GUI, installers, and IM integrations — but adds commercial elements like subscription trials and quota tracking, and remains desktop-only. It is best viewed as a polished OpenClaw distribution for office productivity rather than an independent agent framework.",
   "latest_release": {
-    "version": "2026.9.22",
-    "date": "2026-09-22T15:39:44Z",
-    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.9.22"
+    "version": "2026.9.23",
+    "date": "2026-09-23T14:29:57Z",
+    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.9.23"
   },
-  "last_updated": "2026-09-23T02:07:57.570Z"
+  "last_updated": "2026-09-23T15:55:55.784Z"
 }
