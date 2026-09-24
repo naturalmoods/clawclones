@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to a GPU cluster and reaches you via Telegram, Discord, Slack, WhatsApp, Signal, or CLI.",
   "health_status": "healthy",
-  "github_stars": 248423,
+  "github_stars": 248639,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-20T21:27:16Z",
-  "contributors_count": 3939,
-  "open_issues_count": 44035,
+  "last_commit_at": "2026-09-24T14:54:51Z",
+  "contributors_count": 3953,
+  "open_issues_count": 43725,
   "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
@@ -349,9 +349,9 @@
   },
   "overview_markdown": "Hermes Agent is Nous Research's flagship open-source personal AI agent, marketed as 'the agent that grows with you.' Its defining feature is a closed learning loop: the agent autonomously creates skills after complex tasks, improves those skills during use, nudges itself to persist knowledge, and searches its own past conversations via FTS5 with LLM summarization. It also integrates Honcho for dialectic user modeling, building a deepening profile of the user across sessions, and is compatible with the agentskills.io open standard.\n\nArchitecturally, Hermes is model-agnostic — it works with Nous Portal, OpenRouter, OpenAI, or any custom endpoint, switchable at runtime with `hermes model`. A single gateway process connects the agent to Telegram, Discord, Slack, WhatsApp, Signal, and CLI, with voice memo transcription and cross-platform conversation continuity. It ships a full terminal UI, a desktop Electron app, scheduled automations, and deployment options ranging from a $5 VPS to serverless or GPU clusters. Recent commits show heavy investment in desktop stability, credential resolution correctness, and safe file-path handling for chat attachments.\n\nCompared to OpenClaw, Hermes positions itself as the user-facing assistant with memory and self-improvement as first-class features, even shipping a `hermes claw migrate` command for OpenClaw refugees. It is reportedly the #1 tracked app on OpenRouter by token volume, and its subreddit shows an active community sharing real-world automations, cost lessons, and third-party clients for iOS and Android.",
   "latest_release": {
-    "version": "v2026.9.21",
-    "date": "2026-09-21T18:10:55Z",
-    "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.21"
+    "version": "v2026.9.24",
+    "date": "2026-09-24T10:09:38Z",
+    "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24"
   },
-  "last_updated": "2026-09-24T01:55:20.818Z"
+  "last_updated": "2026-09-24T16:18:37.953Z"
 }

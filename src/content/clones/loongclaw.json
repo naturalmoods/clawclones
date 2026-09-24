@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A Rust-native foundation for vertical AI agents with an architecture-first, policy-authorized security model. Currently an early skeleton rewrite — promising design, but not yet a usable agent product.",
   "health_status": "healthy",
-  "github_stars": 641,
+  "github_stars": 640,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 15,
@@ -110,5 +110,5 @@
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Loong is a Rust-based foundation for building vertical AI agents, positioning itself as a security- and performance-first alternative in the OpenClaw ecosystem. Its core architectural idea is **architecture-governed safety**: outbound effects are modeled as `Action`s that must be authorized by policy before execution, with sandboxes and model review treated as defense-in-depth rather than the primary boundary.\n\nUnder the hood, Loong builds on its own actor runtime, [loac](https://github.com/InuDial/loac), which provides a lifetime model making components easy to run, extend, stop, and restart. Recent commits show heavy investment in converging the actor message API (reply/stream shapes, sync handlers, dispatch strategies) and building agents from serializable `AgentConfig`, indicating the framework plumbing is maturing even though product features are not.\n\nCompared to OpenClaw, Loong is explicitly **not ready to install or use** — the maintainers describe it as an independent-history rewrite containing an architecture and contract skeleton. Its long-term bet is that a small, well-governed Rust core with dual extension paths (compiled Rust integrations plus runtime scripts) will out-evolve larger but less disciplined codebases. For now, it is best suited to contributors and Rust developers who want to shape an agent framework from the ground up rather than end users seeking a working assistant.",
-  "last_updated": "2026-09-24T01:55:15.043Z"
+  "last_updated": "2026-09-24T16:18:31.370Z"
 }

@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-09-17T18:22:15Z",
   "contributors_count": 9,
-  "open_issues_count": 18,
+  "open_issues_count": 19,
   "release_cadence_days": 24,
   "operational_risk": "low",
   "model_support": {
@@ -155,5 +155,5 @@
     "date": "2026-09-17T18:11:38Z",
     "url": "https://github.com/louisho5/picobot/releases/tag/v0.3.0"
   },
-  "last_updated": "2026-09-24T01:55:15.591Z"
+  "last_updated": "2026-09-24T16:18:32.090Z"
 }

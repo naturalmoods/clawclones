@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A Rust-native agentic assistant inspired by nanoclaw, shipping as a server, a native GPUI desktop app, and an embeddable SDK from one agent core. It targets durable, long-running agent work with resumable sessions, persistent memory, and governed extensions.",
   "health_status": "healthy",
-  "github_stars": 739,
+  "github_stars": 740,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 2,
@@ -190,5 +190,5 @@
     "date": "2026-09-05T01:25:50Z",
     "url": "https://github.com/microclaw/microclaw/releases/tag/v0.6.1"
   },
-  "last_updated": "2026-09-24T01:55:16.812Z"
+  "last_updated": "2026-09-24T16:18:33.534Z"
 }

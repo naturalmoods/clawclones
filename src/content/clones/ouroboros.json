@@ -50,7 +50,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-09-21T14:43:48Z",
   "contributors_count": 43,
-  "open_issues_count": 247,
+  "open_issues_count": 254,
   "release_cadence_days": 2,
   "operational_risk": "high",
   "model_support": {
@@ -182,9 +182,9 @@
   },
   "overview_markdown": "Ouroboros is an open-source, general-purpose AI agent whose defining trait is *self-modification*: it can rewrite the very implementation it runs on — code, architecture, prompts, tools, and dependencies — while preserving a continuous identity, durable memory, and history across tasks and restarts. It coordinates a live swarm of specialist sub-agents and works on external projects, positioning itself as an experiment in genuinely autonomous, self-evolving software.\n\nArchitecturally, it runs as a native desktop app (macOS, Windows, Debian/RPM Linux packages) or a headless CLI, keeping its repository, memory, and history on the local machine. Model inference is flexible: remote APIs you configure, or a fully local GGUF model for offline use. An accompanying OuroborosHub acts as a skills marketplace, and the project maintains unusually rigorous engineering hygiene — the commit log shows typed tool-argument refusals, trace-based self-check evidence, plan-review honesty gates, and a CONTRIBUTING.md that mandates a separate-agent review flow for any changes.\n\nCompared to OpenClaw, Ouroboros trades ecosystem breadth and multi-channel messaging for a singular focus on persistent identity and self-improvement. It is arguably the more ambitious research artifact (with an arXiv technical report), but its self-rewriting nature makes it inherently higher-risk to run unsupervised, and its community and plugin ecosystem remain far smaller than OpenClaw's.",
   "latest_release": {
-    "version": "v7.4.4",
-    "date": "2026-09-21T16:51:29Z",
-    "url": "https://github.com/razzant/ouroboros/releases/tag/v7.4.4"
+    "version": "v7.4.7",
+    "date": "2026-09-24T04:29:53Z",
+    "url": "https://github.com/razzant/ouroboros/releases/tag/v7.4.7"
   },
-  "last_updated": "2026-09-24T01:55:28.926Z"
+  "last_updated": "2026-09-24T16:18:46.903Z"
 }
