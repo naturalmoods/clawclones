@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A radically minimal OpenClaw alternative that runs each agent in its own Linux container for true OS-level isolation. Small enough to read end-to-end, with first-class Slack multi-agent support and Anthropic Agents SDK under the hood.",
   "health_status": "healthy",
-  "github_stars": 30838,
+  "github_stars": 30840,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.8,
@@ -49,10 +49,10 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-23T14:13:24Z",
+  "last_commit_at": "2026-09-23T16:48:57Z",
   "contributors_count": 170,
-  "open_issues_count": 1065,
-  "release_cadence_days": 17,
+  "open_issues_count": 1063,
+  "release_cadence_days": 19,
   "operational_risk": "low",
   "model_support": {
     "providers": [
@@ -118,9 +118,9 @@
   },
   "overview_markdown": "NanoClaw is a deliberately minimal rethinking of OpenClaw: instead of a half-million-line monolith with application-level permission checks, it runs each agent inside its own Linux container with real filesystem isolation. The entire system is one process and a handful of files, built directly on Anthropic's Agents SDK, so a single developer can read and audit the whole codebase before trusting it with their accounts.\n\nIt connects to WhatsApp, Telegram, Slack, Discord, Gmail, iMessage, and a local CLI, with persistent memory and scheduled jobs. A standout feature is its Slack integration: setup provisions each agent its own Slack app (manifest, avatar, workspace install) with no manual token pasting, and you can spawn new teammates from chat, each with its own bot identity, container, and memory.\n\nThe `nanoclaw.sh` bootstrap walks a fresh machine from zero to a paired, named agent — installing Node, pnpm, and Docker, registering Anthropic credentials via OneCLI, and even invoking Claude Code to auto-diagnose failed steps. Recent commits show active maintenance focused on setup robustness (user-owned npm prefix fallbacks, corepack EACCES handling). Compared to OpenClaw, it trades feature breadth and ecosystem maturity for auditability, isolation, and operational simplicity.",
   "latest_release": {
-    "version": "v2.3.0",
-    "date": "2026-08-24T11:45:32Z",
-    "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2.3.0"
+    "version": "v2.4.0",
+    "date": "2026-09-23T17:15:13Z",
+    "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2.4.0"
   },
-  "last_updated": "2026-09-23T15:56:05.909Z"
+  "last_updated": "2026-09-24T01:55:28.293Z"
 }

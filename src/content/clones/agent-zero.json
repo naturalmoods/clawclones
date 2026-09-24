@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "Agent Zero gives your agent a full Dockerized Linux desktop with GUI apps, browser DOM annotation, and live document coworking. It's a mature, heavily-starred open agent framework with a strong plugin hub and active security hardening.",
   "health_status": "healthy",
-  "github_stars": 19246,
+  "github_stars": 19252,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -52,10 +52,10 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-09-09T12:07:58Z",
-  "contributors_count": 66,
+  "last_commit_at": "2026-09-23T17:39:16Z",
+  "contributors_count": 67,
   "open_issues_count": 141,
-  "release_cadence_days": 7,
+  "release_cadence_days": 8,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -208,9 +208,9 @@
   },
   "overview_markdown": "Agent Zero is an open agent framework built around the idea of giving an AI a complete computer rather than a chat box. It ships a Dockerized Linux desktop (XFCE) where the agent can drive real GUI applications like Blender, use terminals, manage files, and browse the web with DOM annotation that turns page elements into actionable instructions. Live document coworking lets users edit Markdown, Writer, Spreadsheet, and Presentation files alongside the agent instead of losing work in chat threads.\n\nArchitecturally, it emphasizes transparency and extensibility: prompts, tools, skills, plugins, and settings are all inspectable and editable, and a Plugin Hub offers 100+ community extensions. Projects isolate files, secrets, memories, and model presets, while multi-agent cooperation lets agents delegate research, coding, or review tasks to subagents. The A0 CLI bridges back to the host machine so the same agent can operate in real local repositories, and the A0 Launcher simplifies setup across macOS, Linux, and Windows.\n\nCompared to OpenClaw, Agent Zero leans harder into the 'full computer' paradigm with its GUI desktop and document coworking, at the cost of a heavier Python/Docker footprint and inherently risky unrestricted shell access. Recent commits show a healthy security posture with fixes for IMAP sender spoofing, Telegram webhook auth bypass, and WhatsApp path traversal, suggesting active maintenance and maturing operational discipline.",
   "latest_release": {
-    "version": "v2.12",
-    "date": "2026-09-09T13:29:23Z",
-    "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.12"
+    "version": "v2.13",
+    "date": "2026-09-23T18:47:44Z",
+    "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.13"
   },
-  "last_updated": "2026-09-23T15:55:44.629Z"
+  "last_updated": "2026-09-24T01:55:08.640Z"
 }
