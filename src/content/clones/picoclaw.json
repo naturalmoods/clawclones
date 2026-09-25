@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-08-19T09:17:32Z",
   "contributors_count": 238,
-  "open_issues_count": 38,
+  "open_issues_count": 40,
   "release_cadence_days": 13,
   "operational_risk": "medium",
   "model_support": {
@@ -262,5 +262,5 @@
     "date": "2026-07-03T07:37:06Z",
     "url": "https://github.com/sipeed/picoclaw/releases/tag/v0.3.1"
   },
-  "last_updated": "2026-09-25T02:12:27.062Z"
+  "last_updated": "2026-09-25T16:19:10.381Z"
 }

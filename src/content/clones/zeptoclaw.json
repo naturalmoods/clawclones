@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A single ~6MB Rust binary that packs tools, memory, channels, 18 providers, and sandboxed autonomy into a 50ms-startup personal AI assistant. It positions itself as the synthesis of OpenClaw's integrations, NanoClaw's isolation, NemoClaw's guardrails, and PicoClaw's edge efficiency — without their tradeoffs.",
   "health_status": "healthy",
-  "github_stars": 653,
+  "github_stars": 651,
   "metrics": {
     "boot_time_ms": 50,
     "memory_mb": 6,
@@ -247,5 +247,5 @@
     "date": "2026-04-07T15:45:01Z",
     "url": "https://github.com/qhkm/zeptoclaw/releases/tag/v0.9.2"
   },
-  "last_updated": "2026-09-25T02:12:22.696Z"
+  "last_updated": "2026-09-25T16:19:06.670Z"
 }
