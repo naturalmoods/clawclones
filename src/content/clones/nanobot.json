@@ -60,7 +60,6 @@
       "azure-openai",
       "bedrock",
       "groq",
-      "litellm",
       "openai",
       "openai-compatible",
       "openrouter"
@@ -166,12 +165,6 @@
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "litellm",
-        "path": "nanobot/cli/models.py",
-        "strength": "strong"
-      },
-      {
         "kind": "dependency",
         "value": "openai",
         "path": "pyproject.toml",
@@ -212,7 +205,7 @@
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
     "files_examined": 82,
-    "detected_at": "2026-09-23T08:55:59.084Z",
+    "detected_at": "2026-09-25T09:12:03.577Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

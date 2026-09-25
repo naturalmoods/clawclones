@@ -58,11 +58,9 @@
     "providers": [
       "anthropic",
       "azure-openai",
-      "bedrock",
       "fireworks",
       "google",
       "groq",
-      "litellm",
       "minimax",
       "mistral",
       "moonshot",
@@ -70,10 +68,10 @@
       "openai",
       "openai-compatible",
       "openrouter",
-      "vertex",
+      "together",
       "zhipu"
     ],
-    "provider_count": 12,
+    "provider_count": 11,
     "local_capable": true,
     "aggregator_capable": true,
     "byo_endpoint": true,
@@ -113,13 +111,6 @@
         "path": "agent/model_metadata.py",
         "line": "# (\"Unsupported parameter: 'reasoning.effort' is not supported with this model\"): gpt-3.5,",
         "strength": "weak"
-      },
-      {
-        "model": "grok-4.6",
-        "provider": "xai",
-        "path": "hermes_cli/model_setup_flows.py",
-        "line": "selected = _prompt_model_selection(models, current_model=current_model or (models[0] if models else \"grok-4.6\"))",
-        "strength": "weak"
       }
     ],
     "default_model_ambiguous": true,
@@ -147,18 +138,6 @@
         "value": "openai.azure.com",
         "path": "agent/agent_init.py",
         "strength": "weak"
-      },
-      {
-        "kind": "env_key",
-        "value": "AWS_BEARER_TOKEN_BEDROCK",
-        "path": "hermes_cli/model_setup_flows_bedrock.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "bedrock-runtime",
-        "path": "hermes_cli/model_setup_flows_bedrock.py",
-        "strength": "strong"
       },
       {
         "kind": "env_key",
@@ -195,18 +174,6 @@
         "value": "GROQ_MODEL",
         "path": ".env.example",
         "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "litellm",
-        "path": "hermes_cli/model_normalize.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "litellm",
-        "path": "hermes_cli/config.py",
-        "strength": "weak"
       },
       {
         "kind": "env_key",
@@ -293,16 +260,10 @@
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "aiplatform.googleapis.com",
-        "path": "hermes_cli/model_setup_flows.py",
+        "kind": "dependency",
+        "value": "together",
+        "path": "pyproject.toml",
         "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "VERTEX_PROJECT_ID",
-        "path": "hermes_cli/config_defaults.py",
-        "strength": "weak"
       },
       {
         "kind": "env_key",
@@ -320,8 +281,8 @@
     "default_model_last_touched": "2026-09-18T10:10:37Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 111,
-    "detected_at": "2026-09-23T08:58:12.392Z",
+    "files_examined": 103,
+    "detected_at": "2026-09-25T09:13:38.796Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
