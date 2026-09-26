@@ -4,7 +4,7 @@
   "language": "C",
   "vibe_summary": "An ultra-minimalist AI personal assistant that squeezes onto an ESP32 microcontroller with an all-in firmware budget of 888 KiB. It trades heavyweight agent frameworks for bare-metal C, GPIO control, cron scheduling, and Telegram/web relay chat.",
   "health_status": "healthy",
-  "github_stars": 2229,
+  "github_stars": 2230,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1,
@@ -163,5 +163,5 @@
     "date": "2026-03-22T07:08:28Z",
     "url": "https://github.com/tnm/zclaw/releases/tag/v2.13.0"
   },
-  "last_updated": "2026-09-25T16:19:13.287Z"
+  "last_updated": "2026-09-26T02:17:41.709Z"
 }
