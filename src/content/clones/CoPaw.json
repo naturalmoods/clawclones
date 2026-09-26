@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A high-velocity personal AI assistant from the AgentScope team, positioned as an easy-to-install, self-hostable alternative in the OpenClaw ecosystem. It emphasizes multi-channel chat app support, a console UI, and an extensible plugin/skill architecture backed by a very active development team.",
   "health_status": "healthy",
-  "github_stars": 35263,
+  "github_stars": 35272,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 85,
@@ -51,7 +51,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-09-24T09:50:31Z",
   "contributors_count": 240,
-  "open_issues_count": 966,
+  "open_issues_count": 968,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "model_support": {
@@ -209,5 +209,5 @@
     "date": "2026-09-11T04:19:23Z",
     "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.1"
   },
-  "last_updated": "2026-09-26T02:17:18.907Z"
+  "last_updated": "2026-09-26T15:32:30.625Z"
 }

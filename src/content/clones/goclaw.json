@@ -4,7 +4,7 @@
   "language": "Go",
   "vibe_summary": "A full Go rewrite of OpenClaw aimed at production multi-tenant deployments, with PostgreSQL-backed tenant isolation and a 5-layer security model. It trades OpenClaw's personal-assistant simplicity for a single-binary gateway that orchestrates agent teams at scale.",
   "health_status": "healthy",
-  "github_stars": 3618,
+  "github_stars": 3620,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 18,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "NOASSERTION",
-  "last_commit_at": "2026-09-25T21:33:50Z",
-  "contributors_count": 124,
-  "open_issues_count": 265,
+  "last_commit_at": "2026-09-26T11:32:22Z",
+  "contributors_count": 126,
+  "open_issues_count": 263,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "model_support": {
@@ -249,5 +249,5 @@
     "date": "2026-06-15T08:59:44Z",
     "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
   },
-  "last_updated": "2026-09-26T02:17:28.948Z"
+  "last_updated": "2026-09-26T15:32:40.226Z"
 }
