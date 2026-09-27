@@ -1,13 +1,12 @@
 {
-  "generated_at": "2026-09-20",
-  "data_as_of": "2026-09-20",
+  "generated_at": "2026-09-27",
+  "data_as_of": "2026-09-27",
   "model": "moonshotai/kimi-k3",
   "tldr": [
-    "43 tracked projects added 3964 stars this week, with 13 flat or declining.",
-    "Hermes Agent gained the most stars in absolute terms; Ouroboros grew fastest by percentage.",
-    "22 of 43 projects fit the edge and minimalist profile, the largest cohort.",
-    "Compiled runtimes average a security score of 76 against 64 for scripting runtimes.",
-    "37 projects are local-first and only 4 require a cloud account."
+    "Hermes Agent led absolute gains at +1870; OpenClaw added +458 to 390599.",
+    "Edge and minimalist tools are the largest cohort at 22 projects with a median 12.5 MB footprint.",
+    "Compiled runtimes average a security score of 78 versus 66 for scripting runtimes.",
+    "36 projects are local-first and only 4 require a cloud account."
   ],
   "sections": {}
 }
