@@ -114,10 +114,10 @@
         "strength": "strong"
       },
       {
-        "model": "gemini-2.0-flash-001",
-        "provider": "google",
-        "path": "internal/providers/vertex.go",
-        "line": "VertexDefaultModel = \"google/gemini-2.0-flash-001\"",
+        "model": "gpt-4o-mini",
+        "provider": "openai",
+        "path": "internal/store/provider_store.go",
+        "line": "RequestyDefaultModel   = \"openai/gpt-4o-mini\"",
         "strength": "strong"
       }
     ],
@@ -214,11 +214,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-09-07T12:49:55Z",
+    "default_model_last_touched": "2026-09-25T20:33:33Z",
     "default_model_released_at": "2026-05-31",
     "default_model_date_source": "catalogue",
-    "files_examined": 99,
-    "detected_at": "2026-09-25T09:13:27.098Z",
+    "files_examined": 101,
+    "detected_at": "2026-09-27T09:41:10.219Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
