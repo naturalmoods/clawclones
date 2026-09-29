@@ -49,10 +49,10 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-05T05:50:30Z",
-  "contributors_count": 27,
-  "open_issues_count": 6,
-  "release_cadence_days": 1,
+  "last_commit_at": "2026-09-29T12:35:16Z",
+  "contributors_count": 28,
+  "open_issues_count": 3,
+  "release_cadence_days": 3,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -186,9 +186,9 @@
   },
   "overview_markdown": "MicroClaw is a self-hosted agentic AI platform written in Rust, inspired by nanoclaw and positioned as a lightweight alternative in the OpenClaw ecosystem. Its architecture centers on a single embeddable agent core that powers three surfaces: **MicroClaw Server** for always-on chat channels, APIs, scheduling, and automation; **MicroClaw Work**, a native GPUI desktop app for local workspace-centered agent sessions; and **`microclaw-sdk`**, which lets other Rust applications embed the same channel-independent Agent Engine with tools, policy, memory, skills, and runtime events.\n\nThe project is designed for work that outlasts a single request: multi-step tool use, resumable sessions, durable delivery, persistent memory, scheduled tasks, and governed extensions all run in one runtime. Compared to OpenClaw, MicroClaw trades ecosystem breadth for a lean Rust foundation, a native desktop experience, and an SDK-first embedding story. Development is active — the v0.6.1 release shipped recently with SDK 0.5.1 adding skill and delegation APIs — though the maintainers caution that `main` moves fast and production users should pin to the `stable` branch.",
   "latest_release": {
-    "version": "v0.6.1",
-    "date": "2026-09-05T01:25:50Z",
-    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.6.1"
+    "version": "v0.7.0",
+    "date": "2026-09-29T06:18:19Z",
+    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.7.0"
   },
-  "last_updated": "2026-09-29T03:01:15.291Z"
+  "last_updated": "2026-09-29T17:27:51.616Z"
 }
