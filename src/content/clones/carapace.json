@@ -49,9 +49,9 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-09-28T18:56:17Z",
+  "last_commit_at": "2026-09-29T01:08:08Z",
   "contributors_count": 5,
-  "open_issues_count": 17,
+  "open_issues_count": 14,
   "release_cadence_days": 7,
   "operational_risk": "low",
   "model_support": {
@@ -250,5 +250,5 @@
     "date": "2026-05-01T22:18:48Z",
     "url": "https://github.com/puremachinery/carapace/releases/tag/v0.8.0"
   },
-  "last_updated": "2026-09-28T19:06:16.128Z"
+  "last_updated": "2026-09-29T03:01:23.603Z"
 }
