@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A security-first Agent OS in Rust that treats your assistant as a local, encrypted, auditable service rather than a cloud product. Its vibe is paranoid-in-a-good-way: restricted egress, fail-closed pairing, and prompt-injection defenses baked into the runtime.",
   "health_status": "healthy",
-  "github_stars": 12633,
+  "github_stars": 12637,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 18,
@@ -51,7 +51,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-09-10T18:55:51Z",
   "contributors_count": 120,
-  "open_issues_count": 1538,
+  "open_issues_count": 1537,
   "release_cadence_days": 5,
   "operational_risk": "low",
   "model_support": {
@@ -273,9 +273,9 @@
   },
   "overview_markdown": "IronClaw is a Rust-based Agent OS from NEAR AI positioned as a secure, personal AI assistant that runs as a local background service with an encrypted credential store and a WebUI. Its philosophy is explicit: data stays local, there is no hidden telemetry, and the system is auditable open source under MIT/Apache-2.0. Onboarding is guided via `ironclaw onboard`, with installers for macOS, Linux, and Windows/WSL.\n\nArchitecturally, IronClaw emphasizes fail-closed security: channel extensions (e.g., Telegram) declare egress allowlists, pairing/binding is checked before command admission, and recent commits show deep investment in prompt-injection defenses, restricted egress lifecycles, subagent approval gates surfaced to owners, and careful handling of LLM cache keys (hashed before leaving the process). The commit history shows a mature engineering culture with contract tests, architecture gates, and performance work like streamed-text coalescing.\n\nCompared to OpenClaw, IronClaw trades ecosystem breadth for a hardened, privacy-first runtime with a smaller footprint and stricter network isolation. It fits users who prioritize control and auditability over plugin variety, though some community reports note onboarding friction and occasional task-execution hiccups.",
   "latest_release": {
-    "version": "ironclaw-v1.4.0",
-    "date": "2026-08-28T11:19:24Z",
-    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.4.0"
+    "version": "ironclaw-v1.4.1",
+    "date": "2026-09-29T20:40:32Z",
+    "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.4.1"
   },
-  "last_updated": "2026-09-29T17:27:54.142Z"
+  "last_updated": "2026-09-30T02:43:06.494Z"
 }
