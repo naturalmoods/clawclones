@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:22.265Z",
-    "last_reviewed_at": "2026-09-29T11:44:17.378Z",
+    "last_reviewed_at": "2026-09-30T11:30:46.629Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,11 +55,11 @@
   },
   "overview_markdown": "",
   "latest_release": {
-    "version": "@moxxy/plugin-voice-admin@0.41.1",
-    "date": "2026-09-20T10:28:46Z",
-    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-voice-admin%400.41.1"
+    "version": "@moxxy/reflector-default@0.27.24",
+    "date": "2026-09-29T11:54:22Z",
+    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/reflector-default%400.27.24"
   },
-  "last_updated": "2026-09-29T11:44:17.378Z",
+  "last_updated": "2026-09-30T11:30:46.629Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
