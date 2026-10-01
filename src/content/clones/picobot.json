@@ -4,7 +4,7 @@
   "language": "Go",
   "vibe_summary": "A single-binary Go rewrite of the OpenClaw concept that boots in milliseconds and idles on ~10MB of RAM. It trades ecosystem breadth for extreme minimalism — persistent memory, tools, and chat channels on a $5 VPS.",
   "health_status": "healthy",
-  "github_stars": 1341,
+  "github_stars": 1342,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 10,
@@ -155,5 +155,5 @@
     "date": "2026-09-17T18:11:38Z",
     "url": "https://github.com/louisho5/picobot/releases/tag/v0.3.0"
   },
-  "last_updated": "2026-09-30T17:25:31.236Z"
+  "last_updated": "2026-10-01T02:48:02.611Z"
 }
