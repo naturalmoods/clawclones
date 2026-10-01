@@ -56,6 +56,7 @@
   "model_support": {
     "providers": [
       "anthropic",
+      "litellm",
       "llamacpp",
       "ollama",
       "openai",
@@ -75,6 +76,12 @@
         "kind": "endpoint",
         "value": "api.anthropic.com",
         "path": "app/src/main/java/org/ethereumphone/andyclaw/llm/ClaudeOauthClient.kt",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "litellm",
+        "path": "app/src/main/java/org/ethereumphone/andyclaw/llm/OpenAiStreamAccumulator.kt",
         "strength": "strong"
       },
       {
@@ -130,7 +137,7 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 55,
-    "detected_at": "2026-09-29T10:14:25.263Z",
+    "detected_at": "2026-10-01T10:34:22.657Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

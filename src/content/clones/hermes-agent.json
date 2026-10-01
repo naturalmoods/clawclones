@@ -69,10 +69,9 @@
       "openai-compatible",
       "openrouter",
       "together",
-      "vertex",
       "zhipu"
     ],
-    "provider_count": 11,
+    "provider_count": 10,
     "local_capable": true,
     "aggregator_capable": true,
     "byo_endpoint": true,
@@ -111,13 +110,6 @@
         "provider": "openai",
         "path": "agent/model_metadata.py",
         "line": "# (\"Unsupported parameter: 'reasoning.effort' is not supported with this model\"): gpt-3.5,",
-        "strength": "weak"
-      },
-      {
-        "model": "grok-4.6",
-        "provider": "xai",
-        "path": "hermes_cli/model_setup_flows.py",
-        "line": "selected = _prompt_model_selection(models, current_model=current_model or (models[0] if models else \"grok-4.6\"))",
         "strength": "weak"
       }
     ],
@@ -274,18 +266,6 @@
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "aiplatform.googleapis.com",
-        "path": "hermes_cli/model_setup_flows.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "VERTEX_PROJECT_ID",
-        "path": "hermes_cli/config_defaults.py",
-        "strength": "weak"
-      },
-      {
         "kind": "env_key",
         "value": "GLM_API_KEY",
         "path": ".env.example",
@@ -301,8 +281,8 @@
     "default_model_last_touched": "2026-09-18T10:10:37Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 112,
-    "detected_at": "2026-09-29T10:16:43.200Z",
+    "files_examined": 79,
+    "detected_at": "2026-10-01T10:37:22.146Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

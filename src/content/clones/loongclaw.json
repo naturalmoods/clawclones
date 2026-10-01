@@ -55,36 +55,169 @@
   "operational_risk": "high",
   "model_support": {
     "providers": [
+      "anthropic",
+      "bedrock",
+      "deepseek",
+      "litellm",
+      "minimax",
       "openai",
-      "openai-compatible"
+      "openai-compatible",
+      "zhipu"
     ],
-    "provider_count": 1,
+    "provider_count": 6,
     "local_capable": false,
-    "aggregator_capable": false,
+    "aggregator_capable": true,
     "byo_endpoint": true,
     "provider_lock": null,
-    "default_model": null,
-    "default_models": [],
+    "default_model": {
+      "model": "deepseek-chat",
+      "provider": "deepseek",
+      "path": "crates/app/src/chat.rs",
+      "line": "deepseek.model = \"deepseek-chat\".to_owned();",
+      "strength": "weak"
+    },
+    "default_models": [
+      {
+        "model": "deepseek-chat",
+        "provider": "deepseek",
+        "path": "crates/app/src/chat.rs",
+        "line": "deepseek.model = \"deepseek-chat\".to_owned();",
+        "strength": "weak"
+      },
+      {
+        "model": "MiniMax-M2.5",
+        "provider": "minimax",
+        "path": "crates/app/src/provider/model_candidate_resolver_runtime.rs",
+        "line": "model: \"MiniMax-M2.5\".to_owned(),",
+        "strength": "weak"
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "provider": "anthropic",
+        "path": "crates/app/src/provider/tests.rs",
+        "line": "model: \"claude-sonnet-4-6\".to_owned(),",
+        "strength": "weak"
+      },
+      {
+        "model": "gpt-5-pro",
+        "provider": "openai",
+        "path": "crates/app/src/provider/tests.rs",
+        "line": "\"message\": \"The model `gpt-5-pro` only supports /v1/responses and not this endpoint.\"",
+        "strength": "weak"
+      },
+      {
+        "model": "gemini-3.1-pro",
+        "provider": "google",
+        "path": "crates/app/src/provider/tests.rs",
+        "line": "model: \"gemini-3.1-pro\".to_owned(),",
+        "strength": "weak"
+      },
+      {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "path": "crates/app/src/provider/failover.rs",
+        "line": "model: \"openai/gpt-4o\".to_owned(),",
+        "strength": "weak"
+      }
+    ],
     "default_model_ambiguous": false,
     "evidence": [
       {
-        "kind": "endpoint",
-        "value": "api.openai.com",
-        "path": "crates/provider-openai/src/client.rs",
+        "kind": "env_key",
+        "value": "ANTHROPIC_API_KEY",
+        "path": "crates/daemon/src/provider_presentation.rs",
         "strength": "strong"
       },
       {
-        "kind": "prose",
-        "value": "openai-compatible",
-        "path": "crates/provider-openai/src/client.rs",
+        "kind": "env_key",
+        "value": "ANTHROPIC_API_KEY",
+        "path": "crates/daemon/src/provider_credential_policy.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "bedrock-runtime",
+        "path": "crates/app/src/provider/transport.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "AWS_BEARER_TOKEN_BEDROCK",
+        "path": "crates/app/src/config/provider.rs",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
+        "value": "DEEPSEEK_API_KEY",
+        "path": "crates/daemon/src/migration/provider_selection.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "DEEPSEEK_API_KEY",
+        "path": "crates/app/src/config/provider.rs",
+        "strength": "weak"
+      },
+      {
+        "kind": "endpoint",
+        "value": "litellm",
+        "path": "crates/app/src/provider/copilot_auth.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.minimaxi.com",
+        "path": "crates/app/src/provider/catalog_executor.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.minimaxi.com",
+        "path": "crates/app/src/provider/request_executor.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "crates/daemon/src/provider_credential_policy.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "crates/daemon/src/migration/provider_selection.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "crates/daemon/src/migration/provider_transport.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "crates/daemon/src/gateway/client.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "open.bigmodel.cn",
+        "path": "crates/app/src/provider/request_executor.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.z.ai",
+        "path": "crates/app/src/provider/request_executor.rs",
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": null,
-    "default_model_released_at": null,
-    "default_model_date_source": null,
-    "files_examined": 24,
-    "detected_at": "2026-09-29T10:15:06.504Z",
+    "default_model_last_touched": "2026-04-19T11:08:39Z",
+    "default_model_released_at": "2024-12-26",
+    "default_model_date_source": "catalogue",
+    "files_examined": 69,
+    "detected_at": "2026-10-01T10:35:19.547Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

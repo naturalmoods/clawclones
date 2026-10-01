@@ -57,11 +57,12 @@
   "model_support": {
     "providers": [
       "anthropic",
+      "ollama",
       "openai",
       "openai-compatible"
     ],
     "provider_count": 2,
-    "local_capable": false,
+    "local_capable": true,
     "aggregator_capable": false,
     "byo_endpoint": true,
     "provider_lock": null,
@@ -82,6 +83,12 @@
         "strength": "strong"
       },
       {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": ".claude/skills/add-iron-proxy/scripts/provider-credentials.ts",
+        "strength": "strong"
+      },
+      {
         "kind": "env_key",
         "value": "OPENAI_API_KEY",
         "path": ".claude/skills/add-onecli/scripts/provider-credentials.ts",
@@ -98,7 +105,7 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 49,
-    "detected_at": "2026-09-29T10:18:29.161Z",
+    "detected_at": "2026-10-01T10:41:57.954Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
