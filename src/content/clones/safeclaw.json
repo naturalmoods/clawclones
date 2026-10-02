@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A zero-cost, LLM-optional OpenClaw alternative that leans on classic ML intent matching and deterministic actions instead of paying for language model calls. Its pitch is minimal prompt-injection surface, offline-first operation, and auditable actions with optional LLM, voice, Telegram, and web UI add-ons.",
   "health_status": "healthy",
-  "github_stars": 280,
+  "github_stars": 281,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 80,
@@ -109,5 +109,5 @@
     "date": "2026-09-22T17:36:08Z",
     "url": "https://github.com/princezuda/safestclaw/releases/tag/4.2.5"
   },
-  "last_updated": "2026-10-01T17:52:02.773Z"
+  "last_updated": "2026-10-02T02:51:31.515Z"
 }

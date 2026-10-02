@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A security-first Agent OS in Rust that treats your assistant as a local, encrypted, auditable service rather than a cloud product. Its vibe is paranoid-in-a-good-way: restricted egress, fail-closed pairing, and prompt-injection defenses baked into the runtime.",
   "health_status": "healthy",
-  "github_stars": 12636,
+  "github_stars": 12637,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 18,
@@ -277,5 +277,5 @@
     "date": "2026-09-29T20:40:32Z",
     "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.4.1"
   },
-  "last_updated": "2026-10-01T17:51:53.754Z"
+  "last_updated": "2026-10-02T02:51:23.618Z"
 }
