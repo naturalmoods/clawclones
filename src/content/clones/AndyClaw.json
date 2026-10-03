@@ -4,7 +4,7 @@
   "language": "Kotlin",
   "vibe_summary": "A full OpenClaw-style autonomous agent packed into a single Android APK, with deep ethOS/crypto-wallet integration and a local Qwen fallback. Its recent work on provenance gating, tamper-evident ledgers, and compiled UI flows shows unusually serious security engineering for a mobile agent.",
   "health_status": "healthy",
-  "github_stars": 94,
+  "github_stars": 95,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 300,
@@ -168,5 +168,5 @@
     "date": "2026-03-16T18:15:59Z",
     "url": "https://github.com/EthereumPhone/AndyClaw/releases/tag/v19"
   },
-  "last_updated": "2026-10-02T17:14:59.671Z"
+  "last_updated": "2026-10-03T02:38:09.083Z"
 }
