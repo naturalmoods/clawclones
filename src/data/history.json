@@ -250,7 +250,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 391197
+      "stars": 391230
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -504,7 +504,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 32925
+      "stars": 32924
     }
   ],
   "qwibitai/nanoclaw": [
@@ -758,7 +758,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 30861
+      "stars": 30868
     }
   ],
   "HKUDS/nanobot": [
@@ -1012,7 +1012,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 48746
+      "stars": 48758
     }
   ],
   "sipeed/picoclaw": [
@@ -1526,7 +1526,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 12634
+      "stars": 12635
     }
   ],
   "memovai/mimiclaw": [
@@ -1780,7 +1780,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 5777
+      "stars": 5778
     }
   ],
   "TinyAGI/tinyclaw": [
@@ -5354,7 +5354,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 1405
+      "stars": 1406
     }
   ],
   "zofrasca/lightclaw": [
@@ -5862,7 +5862,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 33289
+      "stars": 33291
     }
   ],
   "NevaMind-AI/memUBot": [
@@ -7386,7 +7386,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 35412
+      "stars": 35425
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -7640,7 +7640,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 6082
+      "stars": 6084
     }
   ],
   "open-gitagent/gitclaw": [
@@ -8148,7 +8148,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 41312
+      "stars": 41338
     }
   ],
   "unitedbyai/droidclaw": [
@@ -8656,7 +8656,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 743
+      "stars": 744
     }
   ],
   "letta-ai/lettabot": [
@@ -9418,7 +9418,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 2401
+      "stars": 2402
     }
   ],
   "poco-ai/poco-agent": [
@@ -9926,7 +9926,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 250790
+      "stars": 250925
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -10180,7 +10180,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 3637
+      "stars": 3639
     }
   ],
   "aiming-lab/MetaClaw": [
@@ -10942,7 +10942,7 @@
     },
     {
       "date": "2026-10-03",
-      "stars": 19362
+      "stars": 19363
     }
   ]
 }
