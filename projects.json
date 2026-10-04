@@ -20,6 +20,18 @@
     "status": "tracked"
   },
   {
+    "repo": "ClawRunr/JavaClaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "dataelement/Clawith",
+    "status": "tracked"
+  },
+  {
+    "repo": "espressif/esp-claw",
+    "status": "tracked"
+  },
+  {
     "repo": "EthereumPhone/AndyClaw",
     "status": "tracked"
   },
@@ -53,6 +65,10 @@
   },
   {
     "repo": "microclaw/microclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "ModalityDance/PalmClaw",
     "status": "tracked"
   },
   {
@@ -140,7 +156,15 @@
     "status": "tracked"
   },
   {
+    "repo": "spinabot/brigade",
+    "status": "tracked"
+  },
+  {
     "repo": "stephengpope/thepopebot",
+    "status": "tracked"
+  },
+  {
+    "repo": "the-open-agent/openagent",
     "status": "tracked"
   },
   {
@@ -165,6 +189,10 @@
   },
   {
     "repo": "zeroclaw-labs/zeroclaw",
+    "status": "tracked"
+  },
+  {
+    "repo": "zhayujie/CowAgent",
     "status": "tracked"
   },
   {
@@ -285,6 +313,11 @@
     "repo": "oujingzhou/openmozi",
     "status": "watching",
     "since": "2026-03-09T00:10:49.059Z"
+  },
+  {
+    "repo": "ownpilot/OwnPilot",
+    "status": "watching",
+    "since": "2026-10-04T15:57:39.087Z"
   },
   {
     "repo": "SawyerHood/gitclaw",
