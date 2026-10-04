@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:22.265Z",
-    "last_reviewed_at": "2026-10-03T10:46:12.753Z",
+    "last_reviewed_at": "2026-10-04T11:28:03.412Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-09-30T11:42:16Z",
     "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/reflector-default%400.27.25"
   },
-  "last_updated": "2026-10-03T10:46:12.753Z",
+  "last_updated": "2026-10-04T11:28:03.412Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
