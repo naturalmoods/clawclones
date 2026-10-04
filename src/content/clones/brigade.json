@@ -1,0 +1,218 @@
+{
+  "id": "spinabot/brigade",
+  "name": "Brigade",
+  "language": "TypeScript",
+  "vibe_summary": "Brigade is an enterprise-grade personal AI agent framework that eliminates API key juggling by reusing your existing Claude, ChatGPT, or Copilot subscriptions. Its standout feature is B³ (Brigade Bloody Benchmark), which exposes your agents to the open internet via tunnels to stress-test them against real-world strangers.",
+  "health_status": "healthy",
+  "github_stars": 11250,
+  "metrics": {
+    "boot_time_ms": 180,
+    "memory_mb": 80,
+    "security_score": 78
+  },
+  "radar_chart": {
+    "sandboxing": 5,
+    "api_security": 8,
+    "network_isolation": 4,
+    "telemetry_safety": 9,
+    "shell_access_risk": 6
+  },
+  "tags": [
+    "ai-agent",
+    "personal-assistant",
+    "typescript",
+    "cli",
+    "multi-provider"
+  ],
+  "community_sentiment": 35,
+  "reddit_mentions": 20,
+  "web_mentions": 10,
+  "best_for": [
+    "Users who want to reuse existing Claude/ChatGPT/Copilot subscriptions without managing API keys",
+    "Developers stress-testing agents against real internet traffic",
+    "Teams needing durable multi-user collaboration mode"
+  ],
+  "avoid_if": [
+    "You need a lightweight or minimal-footprint agent runtime",
+    "You want a mature plugin/skill ecosystem like OpenClaw's",
+    "You prefer avoiding tunnel-based public exposure features"
+  ],
+  "deployment_target": [
+    "desktop",
+    "self-hosted",
+    "cloud"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "strong",
+  "multi_user": true,
+  "plugin_ecosystem": "emerging",
+  "license_type": "MIT",
+  "last_commit_at": "2026-09-15T14:44:13Z",
+  "contributors_count": 10,
+  "open_issues_count": 20,
+  "release_cadence_days": 2,
+  "operational_risk": "medium",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "google",
+      "groq",
+      "minimax",
+      "ollama",
+      "openai",
+      "openai-compatible",
+      "openrouter"
+    ],
+    "provider_count": 5,
+    "local_capable": true,
+    "aggregator_capable": true,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": {
+      "model": "gpt-5.4-mini",
+      "provider": "openai",
+      "path": "src/agents/slash-commands.ts",
+      "line": "// must produce provider=`openrouter`, modelId=`openai/gpt-5.4-mini`.",
+      "strength": "weak"
+    },
+    "default_models": [
+      {
+        "model": "gpt-5.4-mini",
+        "provider": "openai",
+        "path": "src/agents/slash-commands.ts",
+        "line": "// must produce provider=`openrouter`, modelId=`openai/gpt-5.4-mini`.",
+        "strength": "weak"
+      }
+    ],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "env_key",
+        "value": "ANTHROPIC_API_KEY",
+        "path": "src/agents/media-understanding/config.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "ANTHROPIC_API_KEY",
+        "path": "src/agents/agent-loop.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "GEMINI_API_KEY",
+        "path": "src/agents/media-understanding/config.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "GOOGLE_API_KEY",
+        "path": "src/agents/media-understanding/config.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.groq.com",
+        "path": "src/integrations/provider-discovery.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "GROQ_API_KEY",
+        "path": "src/providers/catalog.ts",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
+        "value": "MINIMAX_API_KEY",
+        "path": "src/agents/media-understanding/config.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "ollama",
+        "path": "package.json",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "ollama.ts",
+        "path": "src/integrations/ollama.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "package.json",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": ".env.example",
+        "strength": "strong"
+      },
+      {
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "src/core/model-caps.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "src/agents/model-resolution.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "OPENROUTER_MODEL",
+        "path": "src/integrations/provider-discovery.ts",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "openrouter.ai/api",
+        "path": "src/integrations/provider-discovery.ts",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-05-07T00:23:38Z",
+    "default_model_released_at": "2026-03-17",
+    "default_model_date_source": "catalogue",
+    "files_examined": 67,
+    "detected_at": "2026-10-04T17:43:12.567Z",
+    "detection_version": "1"
+  },
+  "openclaw_advantages": [
+    "Subscription-based auth removes API key management entirely",
+    "Built-in internet exposure benchmarking (B³) for real-world agent testing",
+    "No telemetry and keys stay local by design",
+    "Durable team collaboration mode added in recent releases"
+  ],
+  "openclaw_disadvantages": [
+    "Smaller skill/plugin ecosystem compared to OpenClaw's 5,400+ skills",
+    "Fewer messaging channel integrations documented",
+    "Younger project with less battle-tested stability",
+    "Public exposure features increase attack surface if misused"
+  ],
+  "confidence_summary": "Strong evidence from README and active commit history (v1.39.0, frequent releases), but Reddit mentions are entirely unrelated noise (real estate, military brigades), so community sentiment is highly uncertain.",
+  "evidence_confidence": 62,
+  "content_ops": {
+    "last_generated_at": "2026-10-04T17:43:23.787Z",
+    "last_reviewed_at": "2026-10-04T17:43:23.787Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "Brigade positions itself as an enterprise-grade personal intelligence ecosystem rather than a single app. Its core differentiator is frictionless authentication: instead of juggling API keys, users sign in with existing Claude, ChatGPT, or Copilot subscriptions, or reuse active Claude Code / Codex CLI sessions. API keys remain on the local machine with no telemetry and no middleman proxying.\n\nThe headline feature is B³ (Brigade Bloody Benchmark), introduced in v1.9.0, which exposes your agent crew to the open internet through HTTPS tunnels (Cloudflare by default, or self-hosted bore/frp/sish relays) with an invisible secret key gating access. The philosophy is that the only benchmark that matters is real strangers probing your agents at 3 a.m. Recent releases (v1.38–1.39) added a durable team collaboration mode and hardened runtime message pagination, showing active, disciplined engineering with release-please automation and PR-gated main branch.\n\nCompared to OpenClaw, Brigade trades ecosystem breadth for auth simplicity and adversarial testing tooling. OpenClaw offers thousands of community skills and broad messaging-channel coverage, while Brigade focuses on a polished CLI experience, subscription reuse, and real-world exposure benchmarking. Its TypeScript stack means moderate resource footprint, and its tunnel-exposure features, while gated, warrant careful operational review.",
+  "latest_release": {
+    "version": "brigade-v1.39.0",
+    "date": "2026-09-15T14:44:28Z",
+    "url": "https://github.com/spinabot/brigade/releases/tag/brigade-v1.39.0"
+  },
+  "last_updated": "2026-10-04T17:43:23.787Z"
+}

@@ -1,0 +1,142 @@
+{
+  "id": "ClawRunr/JavaClaw",
+  "name": "JavaClaw",
+  "language": "Java",
+  "vibe_summary": "A Java/Spring Boot reimplementation of OpenClaw built as a showcase for JobRunr background jobs and Spring AI. It targets the JVM enterprise crowd with a modular plugin architecture, guided onboarding, and local-first privacy.",
+  "health_status": "healthy",
+  "github_stars": 755,
+  "metrics": {
+    "boot_time_ms": 3500,
+    "memory_mb": 400,
+    "security_score": 55
+  },
+  "radar_chart": {
+    "sandboxing": 3,
+    "api_security": 5,
+    "network_isolation": 4,
+    "telemetry_safety": 8,
+    "shell_access_risk": 9
+  },
+  "tags": [
+    "java",
+    "spring-boot",
+    "jobrunr",
+    "local-first",
+    "ai-agent"
+  ],
+  "community_sentiment": 45,
+  "reddit_mentions": 14,
+  "web_mentions": 10,
+  "best_for": [
+    "Java/Spring developers wanting an OpenClaw-style agent on the JVM",
+    "Teams already using JobRunr or Spring AI",
+    "Self-hosters who want guided onboarding and a web dashboard"
+  ],
+  "avoid_if": [
+    "You need a lightweight, fast-booting agent (JVM startup is heavy)",
+    "You want a mature plugin ecosystem and large community",
+    "You need strong sandboxing around shell/file access"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "desktop",
+    "cloud"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "medium",
+  "privacy_posture": "strong",
+  "multi_user": false,
+  "plugin_ecosystem": "emerging",
+  "license_type": "LGPL-3.0",
+  "last_commit_at": "2026-09-15T12:54:43Z",
+  "contributors_count": 10,
+  "open_issues_count": 25,
+  "release_cadence_days": null,
+  "operational_risk": "medium",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "ollama",
+      "openai"
+    ],
+    "provider_count": 2,
+    "local_capable": true,
+    "aggregator_capable": false,
+    "byo_endpoint": false,
+    "provider_lock": null,
+    "default_model": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "path": "base/src/main/java/ai/javaclaw/llm/LlmProviderProperties.java",
+      "line": "*         model: gpt-4o",
+      "strength": "weak"
+    },
+    "default_models": [
+      {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "path": "base/src/main/java/ai/javaclaw/llm/LlmProviderProperties.java",
+        "line": "*         model: gpt-4o",
+        "strength": "weak"
+      }
+    ],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "dependency",
+        "value": "anthropic",
+        "path": "app/build.gradle",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "ollama",
+        "path": "app/build.gradle",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "base/src/main/java/ai/javaclaw/llm/LlmProviderProperties.java",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "openai",
+        "path": "app/build.gradle",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-09-15T12:54:43Z",
+    "default_model_released_at": "2024-05-13",
+    "default_model_date_source": "catalogue",
+    "files_examined": 63,
+    "detected_at": "2026-10-04T17:38:08.839Z",
+    "detection_version": "1"
+  },
+  "openclaw_advantages": [
+    "Native JVM/Spring stack fits enterprise Java shops",
+    "JobRunr-powered durable background jobs with built-in dashboard",
+    "Enforced module boundaries via Spring Modulith and ArchUnit tests",
+    "Guided onboarding UI with pluggable LLM providers including Ollama"
+  ],
+  "openclaw_disadvantages": [
+    "Far smaller community and channel/skill ecosystem",
+    "Heavy JVM footprint versus OpenClaw's leaner runtime",
+    "No official releases yet; early-stage project started as a demo",
+    "Fewer communication channels than OpenClaw's 20+ catalog"
+  ],
+  "confidence_summary": "Evidence is solid from the README and detailed recent commits showing active development, but community sentiment data is thin — the Reddit matches are unrelated noise, so sentiment and adoption signals are uncertain.",
+  "evidence_confidence": 70,
+  "content_ops": {
+    "last_generated_at": "2026-10-04T17:38:22.856Z",
+    "last_reviewed_at": "2026-10-04T17:38:22.856Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "JavaClaw is a Java 25 / Spring Boot 4 reimplementation of the OpenClaw personal AI assistant, originally created as a demo for JobRunr and now positioned as a community-driven Java agent platform. It acts as a local control plane: a Spring Modulith core (`base/` and `app/`) handles the agent loop, task management, and configuration, while channel plugins (Telegram, Discord, WhatsApp via wacli, WebSocket chat) and tool plugins (Brave search, Playwright browser automation) self-register via Spring Boot auto-configuration. LLM access goes through Spring AI with pluggable providers — OpenAI, Anthropic (including Claude Code OAuth), Google GenAI, and local Ollama — selectable during a guided onboarding flow.\n\nIts standout differentiator is durable background job processing via JobRunr (with a dashboard on :8081), letting the agent schedule one-off, delayed, and cron-recurring tasks stored as human-readable Markdown files. Recent commits show active hardening: ArchUnit-enforced module boundaries, token-by-token WebSocket streaming, multi-model provider support with an agents management page, and careful security fixes like refusing WhatsApp group chats to prevent group members from instructing a shell-capable agent.\n\nCompared to OpenClaw, JavaClaw trades ecosystem breadth and runtime lightness for JVM familiarity and enterprise-grade structure. It keeps data local (embedded H2, file-backed workspace) with no telemetry, but the agent has unrestricted shell and file access with no sandboxing layer, so it carries the same high shell-risk profile as other local agents. There are no official releases yet, so expect a moving target.",
+  "last_updated": "2026-10-04T17:38:22.856Z"
+}

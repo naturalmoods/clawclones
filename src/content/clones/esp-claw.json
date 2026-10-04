@@ -1,0 +1,117 @@
+{
+  "id": "espressif/esp-claw",
+  "name": "ESP-Claw",
+  "language": "C",
+  "vibe_summary": "Espressif's official C reimplementation of the OpenClaw concept, bringing agent runtimes onto $5 ESP32 chips. It pairs IM chat with dynamic Lua scripting so non-programmers can define device behavior with millisecond local response.",
+  "health_status": "healthy",
+  "github_stars": 2194,
+  "metrics": {
+    "boot_time_ms": 8,
+    "memory_mb": 1.5,
+    "security_score": 72
+  },
+  "radar_chart": {
+    "sandboxing": 6,
+    "api_security": 6,
+    "network_isolation": 7,
+    "telemetry_safety": 7,
+    "shell_access_risk": 4
+  },
+  "tags": [
+    "embedded",
+    "esp32",
+    "iot",
+    "edge-agent",
+    "lua"
+  ],
+  "community_sentiment": 55,
+  "reddit_mentions": 12,
+  "web_mentions": 10,
+  "best_for": [
+    "IoT hobbyists wanting agent behavior on cheap ESP32 hardware",
+    "Edge deployments needing millisecond local decision loops",
+    "Non-programmers defining device logic via chat and Lua"
+  ],
+  "avoid_if": [
+    "You need a desktop or server-based personal assistant",
+    "You require a mature plugin ecosystem or multi-user support",
+    "You want large-context LLM reasoning on-device"
+  ],
+  "deployment_target": [
+    "edge"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "medium",
+  "privacy_posture": "strong",
+  "multi_user": false,
+  "plugin_ecosystem": "emerging",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-09-01T03:26:56Z",
+  "contributors_count": 41,
+  "open_issues_count": 78,
+  "release_cadence_days": null,
+  "operational_risk": "medium",
+  "model_support": {
+    "providers": [
+      "openai-compatible"
+    ],
+    "provider_count": 0,
+    "local_capable": false,
+    "aggregator_capable": false,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": null,
+    "default_models": [],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "components/claw_modules/claw_core/src/llm/claw_llm_runtime.c",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "components/claw_modules/claw_core/src/llm/backends/claw_llm_backend_anthropic.c",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": null,
+    "default_model_released_at": null,
+    "default_model_date_source": null,
+    "files_examined": 24,
+    "detected_at": "2026-10-04T17:40:58.958Z",
+    "detection_version": "1"
+  },
+  "openclaw_advantages": [
+    "Runs on $5 ESP32 chips instead of a full computer",
+    "Millisecond event-driven response times",
+    "Extremely low memory and power footprint",
+    "Local sensing-decision-execution loop without cloud dependency"
+  ],
+  "openclaw_disadvantages": [
+    "Much smaller ecosystem and community than OpenClaw",
+    "Limited to constrained on-device models and Lua scripting",
+    "Requires embedded toolchain knowledge to build from source",
+    "Very early release (v0.1.0) with evolving APIs"
+  ],
+  "confidence_summary": "Strong evidence from the official README and active commit history confirms this is a genuine Espressif-backed OpenClaw reimplementation for ESP32. Community sentiment is uncertain because Reddit matches are mostly unrelated noise and web coverage is thin.",
+  "evidence_confidence": 78,
+  "content_ops": {
+    "last_generated_at": "2026-10-04T17:41:02.728Z",
+    "last_reviewed_at": "2026-10-04T17:41:02.728Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "ESP-Claw is Espressif's official **Chat Coding** AI agent framework for IoT devices, explicitly inspired by the OpenClaw concept and reimplemented in C on top of ESP-IDF. It runs the full agent loop — sensing, decision-making, and execution — locally on ESP32-series chips costing only a few dollars, turning traditionally passive IoT endpoints into active decision-making centers.\n\nIts standout architecture combines IM-style chat interaction with dynamic Lua module loading, letting ordinary users define and update device behavior conversationally without writing firmware. An event-driven runtime allows any hardware or network event to trigger the agent loop with millisecond-level response, and recent commits show active maintenance around CLI stability, flashing tools, Lua module APIs, and a newly added security policy.\n\nCompared to OpenClaw, which targets desktops and servers with large-context models, ESP-Claw trades reasoning depth and ecosystem breadth for extreme footprint efficiency and true edge autonomy. It is best viewed as the embedded frontier of the OpenClaw idea rather than a feature-equivalent alternative.",
+  "latest_release": {
+    "version": "v0.1.0",
+    "date": "2026-06-12T12:11:00Z",
+    "url": "https://github.com/espressif/esp-claw/releases/tag/v0.1.0"
+  },
+  "last_updated": "2026-10-04T17:41:02.728Z"
+}

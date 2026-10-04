@@ -5,23 +5,24 @@
     "description": "Discover, compare and track the open-source OpenClaw AI ecosystem."
   },
   "ecosystem": {
-    "total_clones": 43,
-    "total_stars": 995919,
-    "total_stars_formatted": "995.9k",
-    "most_active_language": "Rust",
+    "total_clones": 49,
+    "total_stars": 1062678,
+    "total_stars_formatted": "1062.7k",
+    "most_active_language": "Python",
     "language_breakdown": {
-      "TypeScript": 10,
-      "Kotlin": 1,
-      "Python": 10,
+      "TypeScript": 11,
+      "Kotlin": 2,
+      "Python": 12,
+      "Java": 1,
       "Go": 4,
       "Shell": 1,
       "Rust": 12,
-      "C": 2,
+      "C": 3,
       "n8n Workflow (JSON)": 1,
       "Zig": 1,
       "JavaScript": 1
     },
-    "avg_sentiment": 58,
+    "avg_sentiment": 56,
     "top_clone": {
       "name": "OpenClaw",
       "stars": 391298,
@@ -47,16 +48,16 @@
     "url": "https://clawclones.com/compare/hermes-agent-vs-nanobot"
   },
   "updated_at": "2026-10-04T23:59:59.999Z",
-  "generated_at": "2026-10-04T16:18:09.901Z",
+  "generated_at": "2026-10-04T17:51:16.550Z",
   "freshness": {
     "updated_at": "2026-10-04T23:59:59.999Z",
-    "generated_at": "2026-10-04T16:18:09.901Z",
+    "generated_at": "2026-10-04T17:51:16.550Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-10-04T16:18:09.495Z",
+        "updated_at": "2026-10-04T17:50:09.520Z",
         "age_hours": 0
       },
       "history": {

@@ -11116,5 +11116,41 @@
       "date": "2026-10-04",
       "stars": 19369
     }
+  ],
+  "ClawRunr/JavaClaw": [
+    {
+      "date": "2026-10-04",
+      "stars": 755
+    }
+  ],
+  "dataelement/Clawith": [
+    {
+      "date": "2026-10-04",
+      "stars": 4167
+    }
+  ],
+  "espressif/esp-claw": [
+    {
+      "date": "2026-10-04",
+      "stars": 2194
+    }
+  ],
+  "ModalityDance/PalmClaw": [
+    {
+      "date": "2026-10-04",
+      "stars": 1166
+    }
+  ],
+  "spinabot/brigade": [
+    {
+      "date": "2026-10-04",
+      "stars": 11250
+    }
+  ],
+  "zhayujie/CowAgent": [
+    {
+      "date": "2026-10-04",
+      "stars": 47227
+    }
   ]
 }

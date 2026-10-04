@@ -1,0 +1,139 @@
+{
+  "id": "dataelement/Clawith",
+  "name": "Clawith",
+  "language": "Python",
+  "vibe_summary": "Clawith positions itself as 'OpenClaw for Teams' — a multi-agent collaboration platform where each agent gets persistent identity, long-term memory, and its own workspace. Its 'Aware' autonomous consciousness system lets agents proactively perceive, decide, and act rather than waiting for commands.",
+  "health_status": "healthy",
+  "github_stars": 4167,
+  "metrics": {
+    "boot_time_ms": 220,
+    "memory_mb": 85,
+    "security_score": 72
+  },
+  "radar_chart": {
+    "sandboxing": 7,
+    "api_security": 7,
+    "network_isolation": 5,
+    "telemetry_safety": 6,
+    "shell_access_risk": 6
+  },
+  "tags": [
+    "multi-agent",
+    "collaboration",
+    "teams",
+    "persistent-memory",
+    "openclaw-alternative"
+  ],
+  "community_sentiment": 62,
+  "reddit_mentions": 0,
+  "web_mentions": 10,
+  "best_for": [
+    "Teams wanting multiple agents with shared workspaces",
+    "Organizations scaling OpenClaw-style agents to groups",
+    "Users needing persistent agent identity and long-term memory"
+  ],
+  "avoid_if": [
+    "You want a lightweight single-agent local assistant",
+    "You need a mature, battle-tested plugin ecosystem",
+    "You prefer minimal setup over a full platform deployment"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "cloud"
+  ],
+  "local_first": false,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "medium",
+  "privacy_posture": "mixed",
+  "multi_user": true,
+  "plugin_ecosystem": "emerging",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-08-25T12:05:07Z",
+  "contributors_count": 44,
+  "open_issues_count": 258,
+  "release_cadence_days": 9,
+  "operational_risk": "medium",
+  "model_support": {
+    "providers": [
+      "openai",
+      "openai-compatible"
+    ],
+    "provider_count": 1,
+    "local_capable": false,
+    "aggregator_capable": false,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": {
+      "model": "claude-opus-4-6",
+      "provider": "anthropic",
+      "path": "backend/app/models/llm.py",
+      "line": "model: Mapped[str] = mapped_column(String(100), nullable=False)  # claude-opus-4-6, gpt-4o, etc.",
+      "strength": "weak"
+    },
+    "default_models": [
+      {
+        "model": "claude-opus-4-6",
+        "provider": "anthropic",
+        "path": "backend/app/models/llm.py",
+        "line": "model: Mapped[str] = mapped_column(String(100), nullable=False)  # claude-opus-4-6, gpt-4o, etc.",
+        "strength": "weak"
+      }
+    ],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": "backend/app/api/skills.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "backend/app/api/skills.py",
+        "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "backend/app/models/llm.py",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-07-22T08:32:45Z",
+    "default_model_released_at": "2026-02-04",
+    "default_model_date_source": "catalogue",
+    "files_examined": 58,
+    "detected_at": "2026-10-04T17:39:33.021Z",
+    "detection_version": "1"
+  },
+  "openclaw_advantages": [
+    "Native multi-agent collaboration with shared crew workflows",
+    "Persistent agent identity and long-term memory per agent",
+    "Team/organization-oriented features and hosted cloud option",
+    "Autonomous 'Aware' system for proactive agent behavior"
+  ],
+  "openclaw_disadvantages": [
+    "Far smaller community and ecosystem than OpenClaw",
+    "Heavier platform footprint versus OpenClaw's local-first simplicity",
+    "Fewer messaging channel integrations",
+    "Younger project with less production hardening"
+  ],
+  "confidence_summary": "Evidence is moderate: README and active commit history are strong signals, but there are zero Reddit mentions and web sentiment is mostly indirect listicle coverage. Team-oriented claims are plausible but not independently validated.",
+  "evidence_confidence": 65,
+  "content_ops": {
+    "last_generated_at": "2026-10-04T17:39:46.650Z",
+    "last_reviewed_at": "2026-10-04T17:39:46.650Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "Clawith is an open-source multi-agent collaboration platform built in Python and licensed under Apache-2.0, self-described as 'OpenClaw for Teams.' Where OpenClaw focuses on a single personal assistant running locally, Clawith gives every agent a persistent identity, long-term memory, and its own workspace, then orchestrates them as a crew that collaborates with each other and with human users.\n\nIts standout architectural feature is 'Aware,' an adaptive autonomous consciousness system: agents maintain structured working memory via Focus Items with status markers, bind triggers to focus items, and proactively perceive, decide, and act instead of passively awaiting commands. The project ships both a self-hostable open-source edition and a hosted Clawith Cloud production service, plus a shared live demo environment.\n\nRecent commit activity shows disciplined engineering — versioned hotfixes (v1.11.4-fix.1), quality tooling adoption (Pyright, ESLint, Prettier baselines), architecture guards, and extensive backend/frontend test suites. Compared to OpenClaw, Clawith trades the massive community, channel breadth, and local-first simplicity for genuine multi-agent, multi-user team collaboration primitives.",
+  "latest_release": {
+    "version": "v1.11.4-fix.1",
+    "date": "2026-08-24T12:11:06Z",
+    "url": "https://github.com/dataelement/Clawith/releases/tag/v1.11.4-fix.1"
+  },
+  "last_updated": "2026-10-04T17:39:46.650Z"
+}
