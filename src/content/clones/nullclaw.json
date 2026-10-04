@@ -51,9 +51,9 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-27T06:27:44Z",
+  "last_commit_at": "2026-10-04T09:51:51Z",
   "contributors_count": 108,
-  "open_issues_count": 67,
+  "open_issues_count": 71,
   "release_cadence_days": 8,
   "operational_risk": "medium",
   "model_support": {
@@ -284,5 +284,5 @@
     "date": "2026-05-29T13:41:10Z",
     "url": "https://github.com/nullclaw/nullclaw/releases/tag/v2026.5.29"
   },
-  "last_updated": "2026-10-04T03:09:24.820Z"
+  "last_updated": "2026-10-04T16:17:55.666Z"
 }
