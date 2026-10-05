@@ -141,15 +141,15 @@
         "strength": "strong"
       },
       {
-        "kind": "env_key",
-        "value": "AZURE_OPENAI_API_KEY",
-        "path": "config.example.json",
+        "kind": "endpoint",
+        "value": "openai.azure.com",
+        "path": "src/config.zig",
         "strength": "strong"
       },
       {
         "kind": "endpoint",
         "value": "openai.azure.com",
-        "path": "config.example.json",
+        "path": "src/providers/runtime_bundle.zig",
         "strength": "strong"
       },
       {
@@ -195,9 +195,9 @@
         "strength": "strong"
       },
       {
-        "kind": "env_key",
-        "value": "OPENAI_API_KEY",
-        "path": "config.example.json",
+        "kind": "endpoint",
+        "value": "api.openai.com",
+        "path": "src/config.zig",
         "strength": "strong"
       },
       {
@@ -221,7 +221,7 @@
       {
         "kind": "env_key",
         "value": "OPENROUTER_API_KEY",
-        "path": "config.example.json",
+        "path": "examples/meshrelay/config.example.json",
         "strength": "strong"
       },
       {
@@ -249,11 +249,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-09-27T05:15:25Z",
+    "default_model_last_touched": "2026-10-05T05:56:21Z",
     "default_model_released_at": "2025-12-22",
     "default_model_date_source": "catalogue",
     "files_examined": 51,
-    "detected_at": "2026-10-05T02:58:03.884Z",
+    "detected_at": "2026-10-05T11:02:21.351Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
