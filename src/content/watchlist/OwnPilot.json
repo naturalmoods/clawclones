@@ -1,10 +1,10 @@
 {
-  "id": "yogesharc/babyclaw",
-  "name": "Babyclaw",
-  "language": "JavaScript",
-  "vibe_summary": "A lightweight alternative to OpenClaw built on Claude Agent SDK.",
-  "health_status": "abandoned",
-  "github_stars": 14,
+  "id": "ownpilot/OwnPilot",
+  "name": "OwnPilot",
+  "language": "TypeScript",
+  "vibe_summary": "Privacy-first personal AI assistant platform with autonomous agents, tool orchestration, and multi-provider support.",
+  "health_status": "healthy",
+  "github_stars": 426,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -18,11 +18,11 @@
     "shell_access_risk": 5
   },
   "tags": [
-    "baby",
+    "OwnPilot",
     "watchlist",
     "new"
   ],
-  "community_sentiment": 20,
+  "community_sentiment": 100,
   "reddit_mentions": 0,
   "web_mentions": 0,
   "best_for": [],
@@ -46,16 +46,20 @@
   "confidence_summary": "Watchlist profiles use lightweight signals until a full AI analysis is available.",
   "evidence_confidence": 20,
   "content_ops": {
-    "last_generated_at": "2026-03-13T04:57:19.122Z",
-    "last_reviewed_at": "2026-10-05T12:54:54.553Z",
+    "last_generated_at": "2026-10-05T12:54:50.847Z",
+    "last_reviewed_at": "2026-10-05T12:54:50.847Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "",
-  "latest_release": null,
-  "last_updated": "2026-10-05T12:54:54.553Z",
-  "watchlist_added": "2026-03-05T04:46:03.370Z",
+  "latest_release": {
+    "version": "v0.8.3",
+    "date": "2026-06-23T10:09:24Z",
+    "url": "https://github.com/ownpilot/OwnPilot/releases/tag/v0.8.3"
+  },
+  "last_updated": "2026-10-05T12:54:50.847Z",
+  "watchlist_added": "2026-10-04T15:57:39.087Z",
   "promotion_status": "observing"
 }
