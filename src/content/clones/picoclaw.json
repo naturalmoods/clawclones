@@ -2,12 +2,12 @@
   "id": "sipeed/picoclaw",
   "name": "PicoClaw",
   "language": "Go",
-  "vibe_summary": "An ultra-lightweight Go rewrite of the personal AI assistant concept, built from scratch by Sipeed to run on $10 hardware with under 10MB of RAM. It trades ecosystem breadth for extreme portability across x86, ARM, RISC-V, MIPS, and LoongArch.",
+  "vibe_summary": "An ultra-lightweight Go rewrite of the personal AI assistant concept, built from scratch by Sipeed to run on $10 hardware with under 10MB of RAM. It targets extreme portability across x86, ARM, MIPS, RISC-V, and LoongArch with millisecond boot times.",
   "health_status": "healthy",
   "github_stars": 30017,
   "metrics": {
-    "boot_time_ms": 8,
-    "memory_mb": 2,
+    "boot_time_ms": 5,
+    "memory_mb": 1.5,
     "security_score": 72
   },
   "radar_chart": {
@@ -21,30 +21,30 @@
     "go",
     "edge",
     "lightweight",
-    "embedded",
-    "ai-assistant"
+    "ai-assistant",
+    "embedded"
   ],
-  "community_sentiment": 74,
-  "reddit_mentions": 5,
+  "community_sentiment": 68,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
-    "Running an AI assistant on cheap SBCs and embedded boards",
-    "Users who want minimal RAM and instant startup",
-    "Self-hosters comfortable configuring Go binaries"
+    "Running an AI assistant on cheap SBCs or embedded boards",
+    "Users who want minimal RAM footprint and instant startup",
+    "Self-hosters on RISC-V, MIPS, or other exotic architectures"
   ],
   "avoid_if": [
-    "You need a large plugin/skills ecosystem out of the box",
-    "You want a polished GUI or managed cloud experience",
-    "You require mature multi-user sandboxing"
+    "You need a rich plugin ecosystem or mature integrations",
+    "You want OS-level sandboxing for tool execution",
+    "You rely on niche chat channels that may lag upstream API changes"
   ],
   "deployment_target": [
     "edge",
-    "self-hosted",
-    "desktop"
+    "desktop",
+    "self-hosted"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "medium",
+  "setup_difficulty": "low",
   "privacy_posture": "strong",
   "multi_user": false,
   "plugin_ecosystem": "emerging",
@@ -231,36 +231,36 @@
     "default_model_released_at": "2025-12-22",
     "default_model_date_source": "catalogue",
     "files_examined": 91,
-    "detected_at": "2026-10-03T09:36:32.569Z",
+    "detected_at": "2026-10-05T03:16:50.963Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
     "Runs in under 10MB RAM versus OpenClaw's much heavier footprint",
     "Millisecond boot time on $10 hardware",
     "Single Go binary deployable across many CPU architectures",
-    "Active security maintenance including govulncheck-driven dependency updates"
+    "Smaller codebase is easier to audit and self-modify"
   ],
   "openclaw_disadvantages": [
-    "Smaller community and fewer ready-made skills and integrations",
-    "Less mature sandboxing and multi-tenant isolation",
-    "Younger project with pre-1.0 stability expectations",
-    "Fewer messaging/channel integrations than OpenClaw"
+    "Far fewer integrations, skills, and UI features than OpenClaw",
+    "No true OS-level sandboxing for agent tool execution",
+    "Smaller community and thinner documentation depth",
+    "Some chat-channel integrations lag upstream API changes"
   ],
-  "confidence_summary": "Strong evidence from README, commits, and release data confirms the lightweight Go architecture and active maintenance. Sentiment and security posture are inferred from limited third-party discussion, so those scores carry moderate uncertainty.",
-  "evidence_confidence": 82,
+  "confidence_summary": "Strong evidence from README, license, and active commit history for core claims; sentiment data is thin (no Reddit matches) and mostly from ecosystem digest bots, so community perception is uncertain.",
+  "evidence_confidence": 78,
   "content_ops": {
-    "last_generated_at": "2026-09-21T03:29:27.669Z",
-    "last_reviewed_at": "2026-09-21T03:29:27.669Z",
+    "last_generated_at": "2026-10-05T03:17:03.540Z",
+    "last_reviewed_at": "2026-10-05T03:17:03.540Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "PicoClaw is an independent open-source AI assistant written entirely in Go by Sipeed, inspired by NanoBot but rebuilt from scratch through a self-bootstrapping process where the agent itself drove architecture migration. Its headline claim is extreme efficiency: it runs on $10 hardware with under 10MB of RAM and millisecond boot times, targeting x86_64, ARM64, MIPS, RISC-V, and LoongArch — roughly 99% less memory than OpenClaw.\n\nArchitecturally it is a single static Go binary with a provider abstraction layer supporting multiple LLM backends, configurable model fallback chains, and a tool system with per-agent allowlists. Recent commits show active hardening: govulncheck-driven dependency updates, fixes to Anthropic tool_use serialization for reloaded history, and guardrails that steer the write_file tool away from destructive overwrites toward append/edit alternatives.\n\nCompared to OpenClaw, PicoClaw deliberately sacrifices ecosystem breadth and rich UI for portability and cost. It is best understood as the edge/embedded branch of the Claw family — ideal for SBCs, routers, and always-on low-power deployments, but with a smaller community, fewer integrations, and pre-1.0 maturity.",
+  "overview_markdown": "PicoClaw is an independent open-source personal AI assistant written entirely in Go by Sipeed, inspired by NanoBot but rebuilt from scratch through a self-bootstrapping process where the AI agent itself drove the architecture migration. Its headline claim is extreme efficiency: it runs on $10 hardware with under 10MB of RAM and millisecond boot times, roughly 99% less memory than OpenClaw, and ships as a single binary supporting x86_64, ARM64, MIPS, RISC-V, and LoongArch.\n\nArchitecturally, PicoClaw focuses on a lean core with configurable model provider fallback chains, multi-provider support (Anthropic, Bedrock, OpenAI-compatible), and a tool system with guardrails — for example, recent work steers write_file away from destructive overwrites toward append/edit tools when available. Recent commits show active maintenance including security-driven dependency updates (govulncheck fixes) and provider bug fixes for tool-call history handling.\n\nCompared to OpenClaw, PicoClaw trades feature breadth for footprint: it lacks the full Control UI, extensive skills library, and mature channel integrations, but it is the clear choice for constrained edge devices and users who want an auditable, minimal Go codebase. It is best understood as an edge-first alternative rather than a feature-parity clone.",
   "latest_release": {
     "version": "v0.3.1",
     "date": "2026-07-03T07:37:06Z",
     "url": "https://github.com/sipeed/picoclaw/releases/tag/v0.3.1"
   },
-  "last_updated": "2026-10-05T02:43:18.163Z"
+  "last_updated": "2026-10-05T03:17:03.540Z"
 }

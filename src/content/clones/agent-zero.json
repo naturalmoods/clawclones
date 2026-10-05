@@ -25,7 +25,7 @@
     "plugins"
   ],
   "community_sentiment": 62,
-  "reddit_mentions": 16,
+  "reddit_mentions": 14,
   "web_mentions": 10,
   "best_for": [
     "Users wanting an agent with a full GUI Linux desktop",
@@ -180,7 +180,7 @@
     "default_model_released_at": "2026-04-24",
     "default_model_date_source": "catalogue",
     "files_examined": 75,
-    "detected_at": "2026-10-03T09:30:45.992Z",
+    "detected_at": "2026-10-05T02:35:32.372Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -200,10 +200,10 @@
   "evidence_confidence": 78,
   "content_ops": {
     "last_generated_at": "2026-09-21T01:56:45.773Z",
-    "last_reviewed_at": "2026-09-21T01:56:45.773Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T02:35:42.751Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Agent Zero is an open agent framework built around the idea of giving an AI a complete computer rather than a chat box. It ships a Dockerized Linux desktop (XFCE) where the agent can drive real GUI applications like Blender, use terminals, manage files, and browse the web with DOM annotation that turns page elements into actionable instructions. Live document coworking lets users edit Markdown, Writer, Spreadsheet, and Presentation files alongside the agent instead of losing work in chat threads.\n\nArchitecturally, it emphasizes transparency and extensibility: prompts, tools, skills, plugins, and settings are all inspectable and editable, and a Plugin Hub offers 100+ community extensions. Projects isolate files, secrets, memories, and model presets, while multi-agent cooperation lets agents delegate research, coding, or review tasks to subagents. The A0 CLI bridges back to the host machine so the same agent can operate in real local repositories, and the A0 Launcher simplifies setup across macOS, Linux, and Windows.\n\nCompared to OpenClaw, Agent Zero leans harder into the 'full computer' paradigm with its GUI desktop and document coworking, at the cost of a heavier Python/Docker footprint and inherently risky unrestricted shell access. Recent commits show a healthy security posture with fixes for IMAP sender spoofing, Telegram webhook auth bypass, and WhatsApp path traversal, suggesting active maintenance and maturing operational discipline.",
@@ -212,5 +212,5 @@
     "date": "2026-09-23T18:47:44Z",
     "url": "https://github.com/agent0ai/agent-zero/releases/tag/v2.13"
   },
-  "last_updated": "2026-10-05T02:42:57.639Z"
+  "last_updated": "2026-10-05T02:35:42.751Z"
 }

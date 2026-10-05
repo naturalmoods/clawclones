@@ -2,12 +2,12 @@
   "id": "uraimo/bashobot",
   "name": "BashoBot",
   "language": "Shell",
-  "vibe_summary": "A delightfully absurd OpenClaw-inspired assistant written in ~4k lines of pure Bash, using named pipes and standard Unix tools with zero runtimes. It's the minimalist hacker's take on the personal AI assistant — runs almost anywhere bash 3.2 exists.",
+  "vibe_summary": "A delightfully minimal OpenClaw-inspired assistant written in ~4k lines of pure Bash, using only standard Unix utilities and named pipes. It's a hacker's toy that runs almost anywhere with zero runtime dependencies.",
   "health_status": "healthy",
   "github_stars": 6,
   "metrics": {
     "boot_time_ms": 15,
-    "memory_mb": 8,
+    "memory_mb": 5,
     "security_score": 55
   },
   "radar_chart": {
@@ -15,36 +15,36 @@
     "api_security": 5,
     "network_isolation": 3,
     "telemetry_safety": 8,
-    "shell_access_risk": 8
+    "shell_access_risk": 7
   },
   "tags": [
     "bash",
     "openclaw-clone",
-    "minimalist",
     "telegram-bot",
-    "self-hosted"
+    "minimal",
+    "unix"
   ],
-  "community_sentiment": 45,
+  "community_sentiment": 40,
   "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
-    "Unix purists who want an assistant with zero runtime dependencies",
-    "Low-resource or embedded environments where Node/Python won't fit",
-    "Tinkerers who want a fully auditable ~4k-line codebase"
+    "Bash enthusiasts who want a dependency-free assistant",
+    "Minimal environments without Node.js or Python",
+    "Learning how agent loops work in a readable codebase"
   ],
   "avoid_if": [
-    "You need a polished UI, dashboard, or rich plugin ecosystem",
-    "You want battle-tested sandboxing for tool execution",
-    "You need multi-user or team collaboration features"
+    "You need production-grade reliability or sandboxing",
+    "You want a rich plugin/skills ecosystem",
+    "You need multi-user or team deployments"
   ],
   "deployment_target": [
     "self-hosted",
-    "edge",
-    "desktop"
+    "desktop",
+    "edge"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
-  "setup_difficulty": "medium",
+  "setup_difficulty": "low",
   "privacy_posture": "strong",
   "multi_user": false,
   "plugin_ecosystem": "limited",
@@ -53,7 +53,7 @@
   "contributors_count": 1,
   "open_issues_count": 4,
   "release_cadence_days": 2,
-  "operational_risk": "high",
+  "operational_risk": "medium",
   "model_support": {
     "providers": [
       "anthropic",
@@ -152,36 +152,36 @@
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
     "files_examined": 20,
-    "detected_at": "2026-10-03T09:37:31.660Z",
+    "detected_at": "2026-10-05T03:23:39.526Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "No Node.js or any runtime — pure bash plus standard Unix utilities",
-    "Tiny footprint; runs on virtually any POSIX system including ancient bash 3.2",
-    "Entire codebase is small enough to audit in an afternoon",
-    "No telemetry or external service dependencies beyond chosen LLM providers"
+    "Zero runtime dependencies beyond standard Unix tools",
+    "Tiny auditable codebase (~4k lines of Bash)",
+    "Runs on nearly any POSIX system including ancient bash 3.2",
+    "Extremely low memory and boot footprint"
   ],
   "openclaw_disadvantages": [
-    "Far fewer features, integrations, and UI polish than OpenClaw",
-    "Shell-based tool execution carries higher injection/escape risk",
-    "Tiny community (6 stars) with no Reddit presence or ecosystem support",
-    "Fragile by nature — named pipes and bash parsing are brittle under edge cases"
+    "Far fewer features, channels, and skills than OpenClaw",
+    "Bash implementation limits maintainability and error handling",
+    "No real sandboxing; exec safety relies on an optional whitelist",
+    "Very small community and no Reddit presence"
   ],
-  "confidence_summary": "Evidence is limited to the README, commit history, and release metadata; there is no community discussion to validate real-world usage. Security and reliability assessments are inferred from the architecture rather than independent review.",
-  "evidence_confidence": 55,
+  "confidence_summary": "Evidence is solid for architecture and features from the README and commits, but community sentiment is essentially unknown due to zero Reddit mentions and only indirect web results.",
+  "evidence_confidence": 65,
   "content_ops": {
-    "last_generated_at": "2026-09-21T03:44:30.645Z",
-    "last_reviewed_at": "2026-09-21T03:44:30.645Z",
+    "last_generated_at": "2026-10-05T03:23:43.062Z",
+    "last_reviewed_at": "2026-10-05T03:23:43.062Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "BashoBot is an OpenClaw-inspired personal AI assistant implemented entirely in Bash (3.2+ compatible), totaling roughly 4,000 lines. It eschews Node.js, Python, or any other runtime in favor of standard Unix utilities like `curl`, `jq`, and `base64`, communicating internally through a modular architecture built on named pipes. This makes it runnable on virtually any POSIX system, from routers to ancient macOS installs.\n\nDespite its spartan foundation, it replicates the core OpenClaw feature set: tool calling, markdown-based memory, shared sessions, SOUL.md persona files, multiple LLM providers (including OAuth subscription logins), and both Telegram and CLI interfaces. A daemon mode listens on pipes while clients connect via `-cli` or single-shot `-t` messages, and slash commands handle model switching, memory management, and context compaction.\n\nSecurity is handled pragmatically rather than rigorously: an optional command whitelist with user approval gates the exec tool, and the README suggests running inside a container for real isolation. Compared to OpenClaw, BashoBot trades ecosystem breadth, UI polish, and sandboxing maturity for radical simplicity, auditability, and portability — it's a hacker's homage rather than a production competitor.",
+  "overview_markdown": "BashoBot is a personal AI assistant written entirely in Bash (3.2+ compatible), inspired by OpenClaw. It relies only on standard Unix utilities like `curl`, `jq`, and `base64`, and uses a modular architecture built on named pipes, with a daemon process that serves both a Telegram bot and an interactive CLI client.\n\nDespite its minimalism, it reimplements the core OpenClaw feature set: tool calling, markdown-based memory, shared sessions, SOUL.md persona files, multi-provider support (including OAuth login for subscription providers), and slash commands for model switching, context inspection, and conversation compaction. For safety, the exec tool can be gated behind an optional command whitelist with user approval, and the whole thing is trivial to run inside a container.\n\nCompared to OpenClaw, BashoBot trades ecosystem breadth and polish for radical simplicity and portability — there is no Node.js runtime, no build step, and the entire system is auditable in an afternoon. It's best viewed as a hacker-friendly, ultra-lightweight alternative rather than a full replacement, with recent commits showing active maintenance around tool-calling reliability and provider support.",
   "latest_release": {
     "version": "0.9.0",
     "date": "2026-02-12T17:15:49Z",
     "url": "https://github.com/uraimo/bashobot/releases/tag/0.9.0"
   },
-  "last_updated": "2026-10-05T02:43:21.605Z"
+  "last_updated": "2026-10-05T03:23:43.062Z"
 }

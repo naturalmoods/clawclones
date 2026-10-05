@@ -2,7 +2,7 @@
   "id": "moltis-org/moltis",
   "name": "Moltis",
   "language": "Rust",
-  "vibe_summary": "A security-first personal agent server written as a single Rust binary, with sandboxed execution and no Node.js runtime. It positions itself as the hardened, auditable alternative to OpenClaw with built-in voice, memory, and multi-channel messaging.",
+  "vibe_summary": "A security-first personal agent server written in Rust, shipping as a single sandboxed binary with multi-provider LLMs, voice, memory, and chat integrations. It positions itself as the hardened, auditable alternative to OpenClaw's TypeScript stack.",
   "health_status": "healthy",
   "github_stars": 2885,
   "metrics": {
@@ -14,7 +14,7 @@
     "sandboxing": 9,
     "api_security": 8,
     "network_isolation": 8,
-    "telemetry_safety": 9,
+    "telemetry_safety": 8,
     "shell_access_risk": 3
   },
   "tags": [
@@ -25,17 +25,19 @@
     "security-first"
   ],
   "community_sentiment": 55,
-  "reddit_mentions": 3,
+  "reddit_mentions": 6,
   "web_mentions": 10,
   "best_for": [
     "Security-conscious users wanting sandboxed agent execution",
-    "Self-hosters on low-power hardware like Raspberry Pi or Mac Mini",
-    "Users who want a single auditable Rust binary with no npm supply chain"
+    "Self-hosters on low-power hardware like Raspberry Pi",
+    "Rust developers who want an auditable agent codebase",
+    "Users avoiding Node.js/npm supply-chain risk"
   ],
   "avoid_if": [
-    "You need a large plugin marketplace or extension ecosystem",
-    "You want a mature multi-user or team-oriented platform",
-    "You prefer TypeScript/Python stacks for easy customization"
+    "You need a mature plugin marketplace or large skill ecosystem",
+    "You want mobile companion apps out of the box",
+    "You prefer a larger, more established community",
+    "You need extensive third-party documentation and tutorials"
   ],
   "deployment_target": [
     "self-hosted",
@@ -203,37 +205,38 @@
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
     "files_examined": 175,
-    "detected_at": "2026-10-03T09:32:47.381Z",
+    "detected_at": "2026-10-05T02:50:05.474Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
+    "Single Rust binary with no Node.js runtime dependency",
     "Sandboxed container execution for every command by default",
-    "Single Rust binary with no Node.js/npm supply-chain exposure",
     "Smaller auditable core (~7.5K lines for agent runner and model interface)",
-    "Lower resource footprint suitable for Raspberry Pi-class hardware",
-    "Built-in threat scanning of context files and managed deploy keys with host pinning"
+    "Lower memory footprint suitable for Raspberry Pi-class hardware",
+    "No plugin marketplace, reducing supply-chain attack surface"
   ],
   "openclaw_disadvantages": [
-    "No plugin marketplace; extensibility limited to MCP servers",
-    "Smaller community and slower PR review velocity per ecosystem digests",
-    "Pre-1.0 with date-based versioning; API stability not guaranteed",
-    "Fewer companion apps and mobile surface area than OpenClaw"
+    "Smaller community and ecosystem than OpenClaw",
+    "No official mobile companion apps",
+    "Fewer third-party skills and integrations",
+    "Younger project with less production battle-testing",
+    "Ecosystem digests have flagged it as early-stage or inconsistently active"
   ],
-  "confidence_summary": "Strong evidence from a detailed README, active releases, and CI badges; however, Reddit matches are irrelevant (Italian word 'molti') and web sentiment comes mostly from automated ecosystem digests, so community sentiment is uncertain.",
+  "confidence_summary": "Strong evidence from the README and recent commits shows active development and a clear security-first architecture. Community sentiment is uncertain: Reddit matches are irrelevant Italian-language false positives, and web mentions are mostly automated ecosystem digests with mixed maturity assessments.",
   "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-09-21T02:33:51.066Z",
-    "last_reviewed_at": "2026-09-21T02:33:51.066Z",
+    "last_generated_at": "2026-10-05T02:50:30.087Z",
+    "last_reviewed_at": "2026-10-05T02:50:30.087Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "Moltis is a security-first personal agent server written entirely in Rust, distributed as a single binary with no Node.js or npm runtime dependency. Its core design principle is that every command the agent runs executes inside a sandboxed container rather than on the host, and API keys never leave the user's machine. The workspace spans ~270K lines across 59 modular crates, but the critical agent runner and model interface are kept to roughly 7.5K auditable lines, with unsafe code isolated to FFI boundaries.\n\nFeature-wise it is surprisingly complete: multi-provider LLM support, voice, persistent memory with cross-session recall, automatic edit checkpoints, scheduling, and integrations for Telegram, Signal, WhatsApp, Discord, and Teams, plus MCP tool servers, browser automation, and SSH/node-backed remote execution. It deliberately avoids a plugin marketplace to eliminate supply-chain attack surface, relying instead on built-in capabilities and MCP.\n\nCompared to OpenClaw's TypeScript stack with companion mobile apps, Moltis trades ecosystem breadth for hardening and auditability. It runs comfortably on a Raspberry Pi or Mac Mini, making it a strong fit for privacy-focused self-hosters, though its smaller community and pre-1.0 status mean slower PR review and less extension variety than OpenClaw.",
+  "overview_markdown": "Moltis is a secure, persistent personal agent server written entirely in Rust, distributed as a single self-contained binary with no Node.js or npm runtime dependencies. Its core differentiator is a security-first architecture: every command executes inside a sandboxed container rather than on the host, API keys never leave the local machine, and unsafe code is isolated to FFI and precompiled runtime boundaries. The workspace spans ~270K lines across 59 modular crates, but the agent runner and model interface fit in roughly 7.5K auditable lines, with 470+ test files.\n\nFeature-wise it is surprisingly complete: multi-provider LLM support, voice, cross-session memory and recall, automatic edit checkpoints, scheduling, Telegram/Signal/Discord/WhatsApp/Teams integrations, browser automation, MCP server support, SSH or node-backed remote execution, and managed deploy keys with host pinning. It deliberately avoids a plugin marketplace, framing that as a supply-chain security win rather than a limitation.\n\nCompared to OpenClaw's TypeScript stack with Swift/Kotlin companion apps, Moltis trades ecosystem breadth for auditability, a minimal footprint, and hardened defaults. It runs comfortably on a Mac Mini or Raspberry Pi, installs via a one-liner, Homebrew, Docker, or cargo, and recently hit the Hacker News front page. Recent commits show active release engineering, including macOS notarization hardening and frequent dated releases.",
   "latest_release": {
     "version": "20260913.02",
     "date": "2026-09-14T00:44:24Z",
     "url": "https://github.com/moltis-org/moltis/releases/tag/20260913.02"
   },
-  "last_updated": "2026-10-05T02:43:06.950Z"
+  "last_updated": "2026-10-05T02:50:30.087Z"
 }

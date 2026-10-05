@@ -26,7 +26,7 @@
   ],
   "community_sentiment": 62,
   "reddit_mentions": 0,
-  "web_mentions": 9,
+  "web_mentions": 10,
   "best_for": [
     "Hobbyists wanting a $5 always-on AI gadget",
     "Makers comfortable with ESP-IDF firmware flashing",
@@ -109,7 +109,7 @@
     "default_model_released_at": "2025-11-24",
     "default_model_date_source": "catalogue",
     "files_examined": 52,
-    "detected_at": "2026-10-03T09:32:35.967Z",
+    "detected_at": "2026-10-05T02:47:21.454Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -128,10 +128,10 @@
   "evidence_confidence": 72,
   "content_ops": {
     "last_generated_at": "2026-09-21T02:27:44.804Z",
-    "last_reviewed_at": "2026-09-21T02:27:44.804Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T02:47:29.495Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "MimiClaw is a bare-metal reimagining of the OpenClaw personal AI assistant, running entirely on a $5 ESP32-S3 microcontroller with no operating system, no Node.js, and no Linux — just pure C built on ESP-IDF. You message it via Telegram (or Feishu), the chip polls over WiFi, runs an agent loop against Anthropic Claude or OpenAI GPT (switchable at runtime), calls tools, reads memory, and replies — all while drawing about 0.5W from a USB port.\n\nIts architecture is strikingly minimal: session memory persists on local SPIFFS flash, the firmware ships as a single merged image with CI-built releases, and recent work added GPIO skill support, group-chat mention filtering to avoid wasted LLM calls, and USB-JTAG console access for web-based serial monitoring. Compared to OpenClaw's full desktop/server stack with a control UI and dozens of integrations, MimiClaw trades ecosystem breadth for radical portability, cost, and energy efficiency — a genuinely 'hardware agent OS' for the edge.",
@@ -140,5 +140,5 @@
     "date": "2026-03-17T04:25:41Z",
     "url": "https://github.com/memovai/mimiclaw/releases/tag/v0.1.1"
   },
-  "last_updated": "2026-10-05T02:43:05.192Z"
+  "last_updated": "2026-10-05T02:47:29.495Z"
 }

@@ -2,17 +2,17 @@
   "id": "ModalityDance/PalmClaw",
   "name": "PalmClaw",
   "language": "Kotlin",
-  "vibe_summary": "An academic-grade (EMNLP 2026 demo) OpenClaw-inspired agent framework that runs natively on Android phones with no PC required. It keeps the full agent loop, memory, and skills on-device while delegating inference to a user-configured LLM API.",
+  "vibe_summary": "An academic (EMNLP 2026 demo) OpenClaw-inspired agent framework that runs natively on Android phones with no PC required. It pairs on-device session/memory/tool management with user-configured LLM APIs and a permissions-first security model.",
   "health_status": "healthy",
   "github_stars": 1166,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 120,
-    "security_score": 72
+    "security_score": 78
   },
   "radar_chart": {
     "sandboxing": 7,
-    "api_security": 6,
+    "api_security": 7,
     "network_isolation": 5,
     "telemetry_safety": 7,
     "shell_access_risk": 4
@@ -28,14 +28,14 @@
   "reddit_mentions": 13,
   "web_mentions": 10,
   "best_for": [
-    "Users who want an agent running natively on an Android phone",
-    "Researchers evaluating mobile on-device agent architectures",
-    "Developers building mobile-first agent tools without a PC/server"
+    "Users who want an agent running entirely on an Android phone",
+    "Researchers evaluating mobile-native agent architectures",
+    "Developers building on structured mobile device tools"
   ],
   "avoid_if": [
-    "You need a desktop or server-based agent runtime",
-    "You want a large plugin/skills ecosystem like OpenClaw's",
-    "You need production stability beyond an early v0.3.x release"
+    "You need iOS or desktop support",
+    "You want a fully offline model (inference requires an external LLM API)",
+    "You need a mature plugin ecosystem and production stability"
   ],
   "deployment_target": [
     "edge",
@@ -145,36 +145,36 @@
     "default_model_released_at": "2026-03-17",
     "default_model_date_source": "catalogue",
     "files_examined": 34,
-    "detected_at": "2026-10-04T17:41:57.361Z",
+    "detected_at": "2026-10-05T02:49:14.296Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Runs natively on Android with no PC or server required",
-    "Structured mobile device tools with permissions and confirmations",
-    "Academic backing with a published paper and 769 tests",
+    "Runs natively on Android with no PC or server needed",
+    "Structured device tools expose mobile-specific capabilities",
+    "Permissions, confirmations, and workspace boundaries built in",
     "Simple APK install path for non-technical users"
   ],
   "openclaw_disadvantages": [
-    "Much smaller community and ecosystem (1.1k stars vs OpenClaw's scale)",
-    "Still requires a cloud LLM API for inference",
-    "Early-stage v0.3.x maturity with limited channel integrations",
-    "AGPL-3.0 license is more restrictive than OpenClaw's MIT"
+    "Inference depends on external LLM APIs, not local models",
+    "Much smaller ecosystem and community than OpenClaw",
+    "Early-stage (v0.3.x) with academic-demo maturity",
+    "Android-only; no desktop or multi-channel reach"
   ],
-  "confidence_summary": "README and commit evidence is solid for architecture and activity, but community sentiment is weak — all 13 Reddit matches are unrelated (mouse grip discussions), so real user feedback is essentially absent.",
+  "confidence_summary": "README and release data give solid evidence of architecture and activity, but Reddit matches are unrelated (mouse-grip discussions) and web sentiment is about the broader OpenClaw ecosystem, so community and sentiment scores are low-confidence.",
   "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-10-04T17:42:03.352Z",
-    "last_reviewed_at": "2026-10-04T17:42:03.352Z",
+    "last_generated_at": "2026-10-05T02:49:19.578Z",
+    "last_reviewed_at": "2026-10-05T02:49:19.578Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "PalmClaw is an open-source AI agent framework inspired by OpenClaw, built specifically to run natively on Android phones without requiring a separate PC or server. Presented as an EMNLP 2026 demo with an accompanying arXiv paper, it keeps sessions, context management, memory, skills, tools, and the agent loop entirely on-device, while model inference is delegated to a user-configured LLM API endpoint.\n\nArchitecturally, it is written in Kotlin and distributed as a ready-to-install APK, exposing mobile capabilities through structured device tools governed by schemas, permissions, confirmations, and workspace boundaries. Recent commits show active hardening of the MCP client lifecycle, provider endpoint compatibility, and always-on channel reliability, backed by a reported 769 tests — unusual rigor for a project at v0.3.1.\n\nCompared to OpenClaw, PalmClaw trades ecosystem breadth and multi-channel reach for true mobile-native operation: there is no desktop runtime, no Linux container, and no server component. Its main limitations are the continued dependence on a cloud LLM for inference, an emerging rather than mature skills ecosystem, and a more restrictive AGPL-3.0 license.",
+  "overview_markdown": "PalmClaw is an open-source, EMNLP 2026 demo agent framework explicitly inspired by OpenClaw but re-architected to run natively on Android phones. Instead of requiring a PC or server, it keeps sessions, context management, memory, skills, tools, and the agent loop entirely on the device, while delegating model inference to a user-configured LLM API. It ships as a downloadable APK with 769 tests and active development through v0.3.1.\n\nIts distinguishing features are mobile-native structured device tools and a control-oriented security model: actions are gated by schemas, permissions, confirmations, and workspace boundaries. Recent commits show work on MCP client lifecycle hardening, always-on reliability, and provider endpoint compatibility, suggesting a push toward robustness.\n\nCompared to OpenClaw, PalmClaw trades ecosystem breadth and multi-channel reach for true on-phone operation and a low-friction install. It is best viewed as an early-stage, research-grade mobile alternative rather than a production-ready replacement.",
   "latest_release": {
     "version": "v0.3.1",
     "date": "2026-08-26T15:28:58Z",
     "url": "https://github.com/ModalityDance/PalmClaw/releases/tag/v0.3.1"
   },
-  "last_updated": "2026-10-05T02:43:06.125Z"
+  "last_updated": "2026-10-05T02:49:19.578Z"
 }

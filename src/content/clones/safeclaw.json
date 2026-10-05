@@ -25,7 +25,7 @@
     "python"
   ],
   "community_sentiment": 55,
-  "reddit_mentions": 1,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Users who want OpenClaw-style features without LLM API bills",
@@ -77,7 +77,7 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 5,
-    "detected_at": "2026-10-03T09:35:53.031Z",
+    "detected_at": "2026-10-05T03:09:46.829Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -97,10 +97,10 @@
   "evidence_confidence": 68,
   "content_ops": {
     "last_generated_at": "2026-09-21T03:10:00.158Z",
-    "last_reviewed_at": "2026-09-21T03:10:00.158Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T03:09:48.287Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "SafestClaw positions itself as the zero-cost, security-minded alternative to OpenClaw. Instead of routing everything through a paid LLM, it uses classic ML intent and semantic matching to handle common tasks — weather, news summaries from 50+ sources, research lookups (arXiv, WolframAlpha), blogging, and even code security audits — deterministically and offline. An LLM is strictly optional and can be enabled via `setup ai` for free-form chat, keeping the default attack surface and prompt-injection risk minimal.\n\nThe project is distributed via pip (`pip install safestclaw`) and runs as a CLI, a localhost web UI, or a Telegram bot, with optional MCP support. Recent commits show active maintenance: fixes to config path resolution so settings persist across systemd/launchd/cron launches, better LLM error surfacing so users see real provider failures instead of canned replies, and tightened intent regexes to avoid misrouting chat. Voice (TTS and speech-to-text) is included, rounding out a feature set that covers most of what casual OpenClaw users want at zero recurring cost.\n\nCompared to OpenClaw, SafestClaw trades conversational polish and ecosystem breadth for determinism, privacy, and cost. It is local-first by default, only reaching out externally when the user explicitly asks (e.g., weather APIs) or configures an LLM. The trade-off is a smaller community, a single-maintainer bus factor, and a steeper learning curve for users who skip the LLM and must learn the documented command surface.",
@@ -109,5 +109,5 @@
     "date": "2026-09-22T17:36:08Z",
     "url": "https://github.com/princezuda/safestclaw/releases/tag/4.2.5"
   },
-  "last_updated": "2026-10-05T02:43:13.779Z"
+  "last_updated": "2026-10-05T03:09:48.287Z"
 }

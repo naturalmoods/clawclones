@@ -2,7 +2,7 @@
   "id": "aiming-lab/MetaClaw",
   "name": "MetaClaw",
   "language": "Python",
-  "vibe_summary": "A research-grade OpenClaw companion that meta-learns and evolves skills from every conversation, no GPU cluster required. It layers persistent cross-session memory and scheduled RL training on top of the OpenClaw agent loop.",
+  "vibe_summary": "A research-grade OpenClaw companion that meta-learns and evolves skills from every conversation, no GPU cluster required. It layers cross-session memory and scheduled RL training on top of the OpenClaw agent experience.",
   "health_status": "healthy",
   "github_stars": 3456,
   "metrics": {
@@ -11,10 +11,10 @@
     "security_score": 55
   },
   "radar_chart": {
-    "sandboxing": 4,
+    "sandboxing": 3,
     "api_security": 5,
-    "network_isolation": 4,
-    "telemetry_safety": 6,
+    "network_isolation": 3,
+    "telemetry_safety": 5,
     "shell_access_risk": 7
   },
   "tags": [
@@ -25,17 +25,17 @@
     "openclaw-plugin"
   ],
   "community_sentiment": 62,
-  "reddit_mentions": 14,
+  "reddit_mentions": 12,
   "web_mentions": 10,
   "best_for": [
-    "Researchers experimenting with agent self-improvement and RL",
+    "Researchers experimenting with agent self-improvement",
     "OpenClaw users wanting persistent cross-session memory",
-    "Teams benchmarking skill-evolution approaches without GPU clusters"
+    "Teams benchmarking RL-based skill evolution"
   ],
   "avoid_if": [
-    "You need a hardened, production-ready sandboxed agent",
-    "You want a standalone assistant rather than an OpenClaw add-on",
-    "You are uncomfortable with early-stage research code and frequent breaking changes"
+    "You need a hardened, sandboxed production agent",
+    "You want a mature plugin ecosystem and docs",
+    "You avoid research-stage APIs that change frequently"
   ],
   "deployment_target": [
     "self-hosted",
@@ -124,36 +124,36 @@
     "default_model_released_at": "2025-12-10",
     "default_model_date_source": "catalogue",
     "files_examined": 23,
-    "detected_at": "2026-10-03T09:31:17.775Z",
+    "detected_at": "2026-10-05T02:36:48.458Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Built-in skill evolution and RL training loop (Tinker-based)",
-    "Cross-session memory layer with automatic fact retrieval and injection",
-    "One-command setup wizard and async architecture",
-    "Ships with its own benchmark suite for measuring agent improvement"
+    "Automatic skill evolution from conversations",
+    "Cross-session user/project memory injection",
+    "Optional RL training mode without GPU cluster",
+    "Ships its own benchmark suite for evaluation"
   ],
   "openclaw_disadvantages": [
-    "Depends on OpenClaw as the underlying agent rather than replacing it",
-    "Less mature messaging/channel integrations than core OpenClaw",
-    "Security and sandboxing posture largely undocumented",
-    "Younger project with smaller contributor base and research-grade stability"
+    "Depends on OpenClaw rather than replacing it",
+    "Younger project with research-grade stability",
+    "Less focus on sandboxing and hardening",
+    "Smaller community and plugin ecosystem"
   ],
-  "confidence_summary": "Strong evidence from README, releases, and detailed commit history for architecture and activity claims. Reddit/web matches are mostly noise (unrelated 'meta' hits), so community sentiment is uncertain.",
+  "confidence_summary": "Strong evidence from README, releases, and detailed commit history that this is an active OpenClaw-adjacent project. Community sentiment is thin and partly noisy, so sentiment and risk scores carry moderate uncertainty.",
   "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-09-21T02:02:38.979Z",
-    "last_reviewed_at": "2026-09-21T02:02:38.979Z",
+    "last_generated_at": "2026-10-05T02:36:52.137Z",
+    "last_reviewed_at": "2026-10-05T02:36:52.137Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "MetaClaw is a Python-based meta-learning layer for OpenClaw-style agents, built around the tagline 'just talk to your agent — it learns and evolves.' Its core architecture combines three modes: a Skills mode that extracts reusable skills from conversations, an RL mode that runs scheduled reinforcement training (via Tinker, no GPU cluster required), and an Auto mode that orchestrates both. A 'Contexture' memory layer persists cross-session facts, preferences, and project history, automatically injecting relevant context into prompts, with v0.4.1 adding incremental per-turn memory ingestion to shrink the mid-session memory blackout window.\n\nUnlike a standalone assistant, MetaClaw positions itself as an evolution engine on top of OpenClaw: it ships an OpenClaw memory plugin/sidecar (TypeScript hooks plus a Python memory service), an API proxy, and a full benchmark suite (metaclaw-bench) for measuring agent improvement over multi-day task sequences. Recent commits show active maintenance — Windows cross-platform fixes, config handling improvements, and benchmark data corrections — alongside a technical report on arXiv.\n\nCompared to OpenClaw proper, MetaClaw trades breadth (messaging channels, community plugins, hardened deployment) for depth in self-improvement: skill evolution, scheduled RL, and structured long-term memory. It is best understood as a research-forward companion project rather than a drop-in OpenClaw replacement, and its MIT license and one-command setup (`metaclaw setup && metaclaw start`) make it easy to evaluate.",
+  "overview_markdown": "MetaClaw is a Python-based meta-learning layer for OpenClaw-style agents: you talk to your agent and it learns and evolves skills from every conversation, with no GPU cluster required. It offers three modes — skills-only, RL (via Tinker), and a default auto mode combining skill evolution with scheduled RL training — plus a 'Contexture' memory layer that persists cross-session user and project facts and injects them into prompts.\n\nArchitecturally it ships as a CLI (`metaclaw setup` / `metaclaw start`), an async API server and proxy, and an OpenClaw memory sidecar plugin with endpoints like `/buffer_turn` and `/flush_session` for incremental per-turn memory ingestion (added in v0.4.1). Recent commits show heavy investment in a benchmark suite (metaclaw-bench), Windows cross-platform fixes, and configurable context windows, indicating active, engineering-driven development.\n\nUnlike OpenClaw, which is the canonical personal-assistant runtime, MetaClaw positions itself as a learning/evolution companion rather than a replacement — its value is continual self-improvement and memory, while sandboxing, hardening, and ecosystem breadth remain OpenClaw's strengths.",
   "latest_release": {
     "version": "v0.4.1",
     "date": "2026-04-11T20:04:14Z",
     "url": "https://github.com/aiming-lab/MetaClaw/releases/tag/v0.4.1"
   },
-  "last_updated": "2026-10-05T02:42:58.892Z"
+  "last_updated": "2026-10-05T02:36:52.137Z"
 }

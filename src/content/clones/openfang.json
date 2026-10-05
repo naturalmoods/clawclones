@@ -2,45 +2,45 @@
   "id": "RightNow-AI/openfang",
   "name": "OpenFang",
   "language": "Rust",
-  "vibe_summary": "A full 'Agent Operating System' in Rust shipping as a single ~32MB binary, focused on autonomous scheduled agents ('Hands') rather than chat. Pre-1.0 with fast shipping cadence, heavy test coverage, and active security hardening commits.",
-  "health_status": "healthy",
+  "vibe_summary": "A Rust-built 'Agent Operating System' shipping as a single ~32MB binary with autonomous scheduled agents ('Hands') instead of chat-driven prompts. Ambitious and heavily tested, but pre-1.0 with breaking changes and a release cadence that appears to have stalled since May 2026.",
+  "health_status": "warning",
   "github_stars": 18208,
   "metrics": {
     "boot_time_ms": 35,
-    "memory_mb": 18,
-    "security_score": 78
+    "memory_mb": 15,
+    "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 7,
+    "sandboxing": 6,
     "api_security": 7,
-    "network_isolation": 6,
+    "network_isolation": 5,
     "telemetry_safety": 7,
-    "shell_access_risk": 6
+    "shell_access_risk": 7
   },
   "tags": [
-    "agent-os",
     "rust",
+    "agent-os",
     "autonomous-agents",
-    "self-hosted",
-    "single-binary"
+    "single-binary",
+    "self-hosted"
   ],
-  "community_sentiment": 62,
-  "reddit_mentions": 1,
+  "community_sentiment": 55,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
-    "Developers wanting autonomous scheduled agents, not chatbots",
-    "Self-hosters who prefer a single Rust binary",
-    "Teams needing lead-gen, monitoring, and research automation"
+    "Users wanting autonomous scheduled agents rather than chat-driven assistants",
+    "Rust shops that value a single static binary and strong test coverage",
+    "Self-hosters running 24/7 monitoring, research, or lead-gen agents"
   ],
   "avoid_if": [
-    "You need a stable 1.0 API for production",
-    "You want a large plugin ecosystem today",
-    "You prefer Python/JS-based agent frameworks"
+    "You need a stable 1.0 API — expect breaking changes between minor versions",
+    "You want chat-app integrations (WhatsApp/Telegram/Slack) like OpenClaw offers",
+    "You need an actively maintained project — last release was May 2026"
   ],
   "deployment_target": [
     "self-hosted",
-    "cloud",
-    "desktop"
+    "desktop",
+    "cloud"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
@@ -322,36 +322,36 @@
     "default_model_released_at": "2025-05-14",
     "default_model_date_source": "model_id",
     "files_examined": 41,
-    "detected_at": "2026-10-03T09:36:25.100Z",
+    "detected_at": "2026-10-05T03:14:58.381Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Single ~32MB Rust binary with minimal footprint",
-    "Autonomous scheduled 'Hands' agents that run without prompting",
-    "Large test suite (2,696+ tests) and zero clippy warnings",
-    "Active security hardening (audit fixes, TOCTOU, codex hardening)"
+    "Autonomous scheduled 'Hands' agents that work without prompting",
+    "Single ~32MB Rust binary with fast startup and low memory footprint",
+    "Large test suite (2,696+ tests, zero clippy warnings) suggesting code rigor",
+    "Built-in dashboard and knowledge-graph capabilities out of the box"
   ],
   "openclaw_disadvantages": [
-    "Pre-1.0 with breaking changes between minor versions",
-    "Smaller community footprint and fewer third-party integrations",
-    "Less mature multi-channel/chat assistant features than OpenClaw",
-    "Thin independent community discussion (only 1 Reddit match)"
+    "No multi-channel chat integrations (WhatsApp, Telegram, Slack, etc.)",
+    "Pre-1.0 with breaking changes; OpenClaw is more mature for daily assistant use",
+    "Release activity appears stalled since May 2026 per third-party liveness checks",
+    "Smaller skills/plugin ecosystem compared to OpenClaw's 5,400+ skills registry"
   ],
-  "confidence_summary": "Strong evidence from README and commit history for architecture and activity, but community sentiment data is thin (1 Reddit match, mostly indirect web mentions), so sentiment and ecosystem scores carry uncertainty.",
-  "evidence_confidence": 72,
+  "confidence_summary": "Evidence is moderate: the README and release metadata are detailed, but there are zero Reddit mentions and web sentiment is indirect. The May 2026 last-release flag from a third-party source introduces real uncertainty about current maintenance status.",
+  "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-09-21T03:23:57.485Z",
-    "last_reviewed_at": "2026-09-21T03:23:57.485Z",
+    "last_generated_at": "2026-10-05T03:15:05.494Z",
+    "last_reviewed_at": "2026-10-05T03:15:05.494Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "OpenFang positions itself not as a chatbot framework but as an **Agent Operating System** written from scratch in Rust — roughly 137K LOC across 14 crates, compiling to a single ~32MB binary with a one-command install and a local dashboard at localhost:4200. Its core differentiator is **Hands**: pre-built autonomous capability packages that run on schedules without prompting, handling tasks like competitor research, knowledge-graph building, lead generation, and social media management.\n\nCompared to OpenClaw's chat-centric personal assistant model, OpenFang targets always-on background automation. The project emphasizes engineering rigor — 2,696+ passing tests, zero clippy warnings — and recent commits show active security work (audit fixes, TOCTOU staging, endpoint hardening). However, it is explicitly pre-1.0: the maintainers warn of breaking changes between minor versions and recommend pinning commits for production. The plugin ecosystem and community discussion footprint remain smaller than OpenClaw's, making it a strong pick for Rust-friendly self-hosters who want autonomous agents, but a riskier choice for those needing stability or rich integrations.",
+  "overview_markdown": "OpenFang positions itself not as a chatbot framework but as a full **Agent Operating System** written from scratch in Rust — roughly 137K lines of code across 14 crates, compiling to a single ~32MB binary. Its core differentiator is **Hands**: pre-built autonomous capability packages that run on schedules without user prompting, handling tasks like competitor research, knowledge-graph building, lead generation, and social media management, with results surfaced through a local dashboard on port 4200.\n\nArchitecturally, it contrasts sharply with OpenClaw's chat-centric model. Where OpenClaw is a personal assistant you text through WhatsApp/Telegram/Slack, OpenFang agents run 24/7 in the background and report to a dashboard. The project touts strong engineering hygiene — 2,696+ passing tests and zero clippy warnings — and recent commits show security-focused work (audit fixes, TOCTOU hardening, endpoint audits).\n\nThe main caveats are maturity and momentum. OpenFang is explicitly pre-1.0 with breaking changes between minor versions, and a third-party liveness review flagged its last release as May 2026 (v0.6.9), suggesting development may have slowed. It also lacks OpenClaw's multi-channel messaging integrations and its large community skills registry, making it a better fit for autonomous back-office automation than for conversational personal-assistant use.",
   "latest_release": {
     "version": "v0.6.9",
     "date": "2026-05-12T18:42:42Z",
     "url": "https://github.com/RightNow-AI/openfang/releases/tag/v0.6.9"
   },
-  "last_updated": "2026-10-05T02:43:17.105Z"
+  "last_updated": "2026-10-05T03:15:05.494Z"
 }

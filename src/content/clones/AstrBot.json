@@ -25,7 +25,7 @@
     "self-hosted"
   ],
   "community_sentiment": 72,
-  "reddit_mentions": 1,
+  "reddit_mentions": 5,
   "web_mentions": 10,
   "best_for": [
     "Users wanting a chatbot across QQ/WeChat/Telegram/Discord",
@@ -163,7 +163,7 @@
     "default_model_released_at": "2026-05-31",
     "default_model_date_source": "catalogue",
     "files_examined": 66,
-    "detected_at": "2026-10-03T09:31:21.586Z",
+    "detected_at": "2026-10-05T02:37:47.840Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -182,10 +182,10 @@
   "evidence_confidence": 82,
   "content_ops": {
     "last_generated_at": "2026-09-21T02:05:15.848Z",
-    "last_reviewed_at": "2026-09-21T02:05:15.848Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T02:37:57.120Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "AstrBot is a Python 3.12+ AI agent assistant and development framework that connects a wide range of IM platforms (QQ, WeChat, Telegram, Discord, and more) to LLM providers through a unified pipeline. It ships with a web-based management dashboard, a plugin marketplace, knowledge-base/RAG support, and scheduled reminders, making it one of the most feature-complete self-hosted chatbot frameworks available.\n\nArchitecturally, it uses an event-driven pipeline with pluggable providers for LLMs, rerankers (e.g., Xinference, TEI), and messaging adapters such as OneBot. Recent commits show active hardening: network policy notices moved into system prompts, file-editing tool escape handling fixes, and rerank failure propagation—evidence of a mature maintenance culture with frequent releases (v4.28.1 as of September 2026).\n\nCompared to OpenClaw, AstrBot trades a lean, security-first footprint for breadth: more IM integrations, a bigger plugin ecosystem, and a friendlier dashboard, but with a heavier Python runtime, AGPL licensing, and less emphasis on sandboxed tool execution. It is best suited for users who prioritize multi-platform reach and extensibility over minimal resource use.",
@@ -194,5 +194,5 @@
     "date": "2026-10-01T03:48:14Z",
     "url": "https://github.com/AstrBotDevs/AstrBot/releases/tag/v4.29.0-beta.1"
   },
-  "last_updated": "2026-10-05T02:42:59.380Z"
+  "last_updated": "2026-10-05T02:37:57.120Z"
 }

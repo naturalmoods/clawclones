@@ -25,7 +25,7 @@
     "memory-graph"
   ],
   "community_sentiment": 55,
-  "reddit_mentions": 7,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Teams running agents across Discord, Slack, or Telegram",
@@ -164,7 +164,7 @@
     "default_model_released_at": "2026-02-24",
     "default_model_date_source": "catalogue",
     "files_examined": 73,
-    "detected_at": "2026-10-03T09:36:49.786Z",
+    "detected_at": "2026-10-05T03:17:51.210Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -183,10 +183,10 @@
   "evidence_confidence": 68,
   "content_ops": {
     "last_generated_at": "2026-09-21T03:31:43.852Z",
-    "last_reviewed_at": "2026-09-21T03:31:43.852Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T03:18:02.348Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Spacebot is an opinionated agent harness written in Rust, from the team behind Spacedrive, designed explicitly for teams, communities, and multi-user environments. Its core architectural bet is that agent state belongs in structured storage, not markdown files managed by the LLM: memory lives in a typed graph in SQLite, conversation history compacts into durable navigable 'chronicles,' and autonomy runs on a task state machine linked to goals rather than a heartbeat file.\n\nUnlike monolithic agent loops where one LLM thread handles conversation, tools, memory, and compaction, Spacebot splits work into specialized processes — a cortex, compactor, ingestion, and channel workers — so the agent can keep talking while it thinks. Recent commits show active hardening: a prompt inspector that records and decomposes every LLM request into block maps, and context-ceiling enforcement applied per-model at request time with learned refusals. It also self-improves, capturing reusable skills after complex tasks and persisting memories in the background without user action.\n\nCompared to OpenClaw, Spacebot targets a different center of gravity: concurrent multi-user operation with shared memory across Discord, Slack, Telegram, and Twitch, deployable via one-click hosted setup at spacebot.sh or self-hosted. It trades OpenClaw's larger ecosystem and personal-assistant polish for stronger multi-tenant architecture and structured state, under an FSL-1.1 license that converts to Apache 2.0 but is not OSI-approved today.",
@@ -195,5 +195,5 @@
     "date": "2026-05-07T06:55:33Z",
     "url": "https://github.com/spacedriveapp/spacebot/releases/tag/v0.5.0"
   },
-  "last_updated": "2026-10-05T02:43:18.669Z"
+  "last_updated": "2026-10-05T03:18:02.348Z"
 }

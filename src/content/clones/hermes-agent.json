@@ -2,40 +2,40 @@
   "id": "NousResearch/hermes-agent",
   "name": "Hermes Agent",
   "language": "Python",
-  "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to a GPU cluster and reaches you via Telegram, Discord, Slack, WhatsApp, Signal, or CLI.",
+  "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to serverless, with a polished TUI and multi-platform messaging gateway.",
   "health_status": "healthy",
-  "github_stars": 251255,
+  "github_stars": 251258,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
     "security_score": 72
   },
   "radar_chart": {
-    "sandboxing": 6,
+    "sandboxing": 5,
     "api_security": 7,
-    "network_isolation": 5,
+    "network_isolation": 4,
     "telemetry_safety": 6,
-    "shell_access_risk": 7
+    "shell_access_risk": 8
   },
   "tags": [
-    "ai-agent",
     "self-improving",
-    "multi-channel",
-    "llm-agnostic",
-    "personal-assistant"
+    "personal-agent",
+    "memory",
+    "multi-platform",
+    "python"
   ],
-  "community_sentiment": 82,
-  "reddit_mentions": 21,
+  "community_sentiment": 78,
+  "reddit_mentions": 19,
   "web_mentions": 10,
   "best_for": [
-    "Users wanting a persistent personal agent with long-term memory",
-    "People who chat with their agent over Telegram/Discord while it runs on a VPS",
-    "Tinkerers who want model-agnostic, no-lock-in agent infrastructure"
+    "Users wanting a persistent agent with long-term memory and skill learning",
+    "Self-hosters running agents on cheap VPS or serverless infra",
+    "People who chat via Telegram/Discord/Slack rather than a desktop app"
   ],
   "avoid_if": [
-    "You need strict sandboxing for untrusted tool execution",
-    "You want a minimal, single-purpose CLI without a gateway stack",
-    "You are cost-sensitive and prone to runaway token spend on paid models"
+    "You need strict sandboxing of agent shell access out of the box",
+    "You want a lightweight, minimal-footprint agent",
+    "You prefer fully offline operation with no external model providers"
   ],
   "deployment_target": [
     "self-hosted",
@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-10-05T02:31:20Z",
   "contributors_count": 4270,
-  "open_issues_count": 47993,
+  "open_issues_count": 48001,
   "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
@@ -69,10 +69,9 @@
       "openai-compatible",
       "openrouter",
       "together",
-      "vertex",
       "zhipu"
     ],
-    "provider_count": 11,
+    "provider_count": 10,
     "local_capable": true,
     "aggregator_capable": true,
     "byo_endpoint": true,
@@ -111,13 +110,6 @@
         "provider": "openai",
         "path": "agent/model_metadata.py",
         "line": "# (\"Unsupported parameter: 'reasoning.effort' is not supported with this model\"): gpt-3.5,",
-        "strength": "weak"
-      },
-      {
-        "model": "grok-4.6",
-        "provider": "xai",
-        "path": "hermes_cli/model_setup_flows.py",
-        "line": "selected = _prompt_model_selection(models, current_model=current_model or (models[0] if models else \"grok-4.6\"))",
         "strength": "weak"
       }
     ],
@@ -274,18 +266,6 @@
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "aiplatform.googleapis.com",
-        "path": "hermes_cli/model_setup_flows.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "VERTEX_PROJECT_ID",
-        "path": "hermes_cli/config_defaults.py",
-        "strength": "weak"
-      },
-      {
         "kind": "env_key",
         "value": "GLM_API_KEY",
         "path": ".env.example",
@@ -298,41 +278,41 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-10-02T11:39:28Z",
+    "default_model_last_touched": "2026-10-04T07:09:15Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 112,
-    "detected_at": "2026-10-03T09:34:13.036Z",
+    "files_examined": 93,
+    "detected_at": "2026-10-05T02:55:50.750Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Built-in learning loop with autonomous skill creation and self-improvement",
-    "Native multi-channel messaging gateway (Telegram, Discord, Slack, WhatsApp, Signal)",
+    "Built-in closed learning loop with autonomous skill creation and self-improvement",
+    "Native multi-platform messaging gateway (Telegram, Discord, Slack, WhatsApp, Signal)",
+    "Model-agnostic provider switching with no lock-in",
     "Cross-session memory with FTS5 search and Honcho user modeling",
-    "Massive adoption and #1 OpenRouter token volume among agent apps",
-    "Official OpenClaw migration path via `hermes claw migrate`"
+    "Offers an official OpenClaw migration path (hermes claw migrate)"
   ],
   "openclaw_disadvantages": [
-    "Python runtime is heavier and slower to boot than leaner alternatives",
-    "Broad feature surface increases operational complexity and failure modes",
-    "Security posture relies on path allowlists rather than deep sandboxing",
-    "Rapid release cadence means frequent churn and occasional regressions"
+    "Heavier Python runtime footprint than leaner OpenClaw deployments",
+    "Unrestricted shell access raises operational risk without manual Docker isolation",
+    "Rapid issue/PR velocity strains maintainer throughput per ecosystem digests",
+    "Some community reports of frustrating beginner experience"
   ],
-  "confidence_summary": "Strong evidence from an active README, frequent recent commits, a large Reddit community, and third-party comparisons. Security and sandboxing depth are inferred from commit-level fixes rather than a formal security model, so those scores carry moderate uncertainty.",
+  "confidence_summary": "Strong evidence from an extensive README, very active recent commits, and 19 Reddit threads plus web coverage. Sentiment is mostly positive but mixed on beginner UX and security isolation, so those scores carry moderate uncertainty.",
   "evidence_confidence": 85,
   "content_ops": {
-    "last_generated_at": "2026-09-21T02:49:00.233Z",
-    "last_reviewed_at": "2026-09-21T02:49:00.233Z",
+    "last_generated_at": "2026-10-05T02:57:04.112Z",
+    "last_reviewed_at": "2026-10-05T02:57:04.112Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "Hermes Agent is Nous Research's flagship open-source personal AI agent, marketed as 'the agent that grows with you.' Its defining feature is a closed learning loop: the agent autonomously creates skills after complex tasks, improves those skills during use, nudges itself to persist knowledge, and searches its own past conversations via FTS5 with LLM summarization. It also integrates Honcho for dialectic user modeling, building a deepening profile of the user across sessions, and is compatible with the agentskills.io open standard.\n\nArchitecturally, Hermes is model-agnostic — it works with Nous Portal, OpenRouter, OpenAI, or any custom endpoint, switchable at runtime with `hermes model`. A single gateway process connects the agent to Telegram, Discord, Slack, WhatsApp, Signal, and CLI, with voice memo transcription and cross-platform conversation continuity. It ships a full terminal UI, a desktop Electron app, scheduled automations, and deployment options ranging from a $5 VPS to serverless or GPU clusters. Recent commits show heavy investment in desktop stability, credential resolution correctness, and safe file-path handling for chat attachments.\n\nCompared to OpenClaw, Hermes positions itself as the user-facing assistant with memory and self-improvement as first-class features, even shipping a `hermes claw migrate` command for OpenClaw refugees. It is reportedly the #1 tracked app on OpenRouter by token volume, and its subreddit shows an active community sharing real-world automations, cost lessons, and third-party clients for iOS and Android.",
+  "overview_markdown": "Hermes Agent is Nous Research's flagship personal AI agent, positioned as 'the agent that grows with you.' Its defining feature is a closed learning loop: the agent autonomously creates skills after complex tasks, improves those skills during use, nudges itself to persist knowledge, and searches its own past conversations via FTS5 with LLM summarization. It integrates Honcho for dialectic user modeling and is compatible with the agentskills.io open standard, making memory and skill portability first-class concerns.\n\nArchitecturally, it is a Python application with a full terminal UI (multiline editing, slash-command autocomplete, streaming tool output) plus a single gateway process that bridges Telegram, Discord, Slack, WhatsApp, and Signal with cross-platform conversation continuity and voice memo transcription. It is model-agnostic — Nous Portal, OpenRouter, OpenAI, or custom endpoints — switchable at runtime via `hermes model`. Deployment targets range from a $5 VPS to GPU clusters to scale-to-zero serverless, and it ships scheduled automations and a plugin system with a catalog of model-provider and desktop plugins.\n\nRelative to OpenClaw, Hermes competes directly (it even ships `hermes claw migrate`) and differentiates on its learning loop and messaging-gateway breadth. Recent commits show heavy investment in provider correctness (Anthropic thinking-mode handling), desktop UX polish, and plugin infrastructure. The main caveats are operational: unrestricted shell access means users are advised to run it in Docker, and the project's extremely high inbound issue/PR volume can outpace maintainer throughput.",
   "latest_release": {
     "version": "v2026.9.24",
     "date": "2026-09-24T10:09:38Z",
     "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24"
   },
-  "last_updated": "2026-10-05T02:43:09.532Z"
+  "last_updated": "2026-10-05T02:57:04.112Z"
 }

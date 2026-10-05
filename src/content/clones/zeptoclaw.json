@@ -2,7 +2,7 @@
   "id": "qhkm/zeptoclaw",
   "name": "ZeptoClaw",
   "language": "Rust",
-  "vibe_summary": "A single ~6MB Rust binary that packs tools, memory, channels, 18 providers, and sandboxed autonomy into a 50ms-startup personal AI assistant. It positions itself as the synthesis of OpenClaw's integrations, NanoClaw's isolation, NemoClaw's guardrails, and PicoClaw's edge efficiency — without their tradeoffs.",
+  "vibe_summary": "A single ~6MB Rust binary that packs tools, memory, channels, 18 providers, and sandboxed autonomy into a local-first assistant runtime. It positions itself as the synthesis of OpenClaw's ecosystem, NanoClaw's isolation, NemoClaw's guardrails, and PicoClaw's footprint discipline.",
   "health_status": "healthy",
   "github_stars": 652,
   "metrics": {
@@ -12,32 +12,30 @@
   },
   "radar_chart": {
     "sandboxing": 8,
-    "api_security": 8,
-    "network_isolation": 7,
+    "api_security": 7,
+    "network_isolation": 6,
     "telemetry_safety": 8,
     "shell_access_risk": 5
   },
   "tags": [
     "rust",
     "local-first",
-    "edge",
     "single-binary",
+    "edge",
     "sandboxed-agents"
   ],
-  "community_sentiment": 62,
+  "community_sentiment": 45,
   "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
-    "Edge and low-resource deployments (VPS, $10-class hardware)",
-    "Users wanting OpenClaw-style integrations without the TypeScript footprint",
-    "Local/weak-model setups needing tolerant tool-call handling",
-    "Security-conscious self-hosters wanting sandboxing and injection detection"
+    "Users wanting a tiny single-binary agent runtime on edge or VPS hardware",
+    "Operators running local reasoning models via Ollama or LiteLLM",
+    "Security-conscious users who want container isolation and prompt-injection detection without Docker/k3s overhead"
   ],
   "avoid_if": [
-    "You need a mature plugin/skills ecosystem like OpenClaw's",
+    "You need a mature plugin/skills ecosystem and large community",
     "You require enforced CI gates — the project removed GitHub Actions CI checks",
-    "You want a large community and third-party support",
-    "You need multi-user or team-oriented deployment"
+    "You want production-proven stability; ecosystem digests flag it as low-velocity"
   ],
   "deployment_target": [
     "edge",
@@ -214,38 +212,36 @@
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
     "files_examined": 54,
-    "detected_at": "2026-10-03T09:36:04.053Z",
+    "detected_at": "2026-10-05T03:10:12.515Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "~6MB single Rust binary vs large TypeScript app footprint",
-    "~50ms startup and ~6MB RAM, viable on edge hardware",
-    "Built-in container isolation, prompt injection detection, and circuit-breaker provider stack",
-    "Tolerant tool-schema sanitization and argument coercion for weak local models",
-    "3,900+ tests with strong local validation discipline"
+    "~6MB binary and ~6MB RAM versus OpenClaw's large TypeScript footprint",
+    "~50ms startup suitable for edge and $10-class hardware",
+    "Built-in container isolation, prompt-injection detection, and circuit-breaker provider stack",
+    "Strong local-model support including reasoning_content fallback for Qwen3/DeepSeek-style endpoints"
   ],
   "openclaw_disadvantages": [
-    "Far smaller community and ecosystem (653 stars vs OpenClaw's scale)",
-    "No comparable skills/integrations marketplace",
-    "CI checks were removed from GitHub Actions, relying on local validation",
-    "Younger project with less production battle-testing",
-    "Single-maintainer-driven development risk"
+    "Far smaller community, integrations, and skills ecosystem",
+    "No Reddit presence and mixed ecosystem-digest sentiment labeling it low-velocity",
+    "CI checks were removed from GitHub Actions, weakening automated merge gating",
+    "Younger project with less production hardening and no LTS track"
   ],
-  "confidence_summary": "Strong evidence from a detailed README, active recent commits, and a documented release; however, there is zero Reddit presence and web mentions are mostly automated ecosystem digests, so community sentiment is uncertain.",
+  "confidence_summary": "README and commit history give strong evidence for architecture, performance claims, and security posture. Community sentiment is thin (zero Reddit matches) and web digests conflict with the active commit cadence, so adoption-risk fields carry moderate uncertainty.",
   "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-09-21T03:15:21.406Z",
-    "last_reviewed_at": "2026-09-21T03:15:21.406Z",
+    "last_generated_at": "2026-10-05T03:10:20.214Z",
+    "last_reviewed_at": "2026-10-05T03:10:20.214Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "ZeptoClaw is a fast, small, secure, local-first personal AI assistant infrastructure written in Rust. It ships as a single ~6MB binary that starts in ~50ms and uses ~6MB of RAM, bundling tools, long-term memory, messaging channels, 18 LLM providers, and sandboxed autonomy into one deployable unit. It explicitly positions itself as a synthesis of the Claw ecosystem: OpenClaw's integration breadth without the TypeScript footprint, NanoClaw's container isolation simplicity, NemoClaw's policy-gated guardrails without Docker/k3s overhead, and PicoClaw's edge efficiency with Rust's safety.\n\nArchitecturally, ZeptoClaw emphasizes defense-in-depth for agentic workloads: container isolation, prompt injection detection, a circuit-breaker provider stack, taint labelling, and safety scanning of model output. Recent commits show a strong focus on real-world edge deployment robustness — parsing `reasoning_content` from reasoning models (Qwen3, DeepSeek distills) served via Ollama/LiteLLM, sanitizing third-party MCP tool schemas so strict providers don't reject entire tool arrays, and coercing string-typed tool arguments from weak local models into their declared types. The project maintains rigorous engineering discipline with 3,900+ tests, clippy-clean code, and prompt security patching (e.g., RUSTSEC-2026-0285).\n\nCompared to OpenClaw, ZeptoClaw trades ecosystem breadth for footprint, speed, and deploy-anywhere simplicity. One notable governance concern: the project recently removed its GitHub Actions CI checks in favor of local validation, which shifts trust onto maintainer discipline. It is best suited for individuals self-hosting a personal assistant on edge hardware or a VPS who value security controls and minimal resource usage over a large plugin marketplace.",
+  "overview_markdown": "ZeptoClaw is a personal AI assistant infrastructure written in Rust, shipped as a single ~6MB binary with ~50ms startup and ~6MB RAM usage. It bundles tools, long-term memory, messaging channels, 18 model providers, and sandboxed autonomy, explicitly positioning itself as a synthesis of lessons from OpenClaw (integrations), NanoClaw (container isolation), NemoClaw (policy-gated guardrails), and PicoClaw (edge efficiency) without their respective tradeoffs.\n\nArchitecturally, it emphasizes security and correctness at the edges: container isolation, prompt-injection detection, a circuit-breaker provider stack, tool-schema sanitization for strict providers (Anthropic) and local grammar-constrained backends (llama.cpp), and conservative coercion of malformed tool arguments from small local models. Recent work shows deep attention to the local-model deployment story — parsing `reasoning_content` from OpenAI-compatible endpoints so reasoning models like Qwen3 and DeepSeek distills never return silent empty replies, with explicit guards preventing chain-of-thought leakage into tool calls or streams.\n\nCompared to OpenClaw, ZeptoClaw trades ecosystem breadth for footprint and control: no large TypeScript app, no heavy config surface, and a local-first posture with optional cloud providers. The project maintains a large test suite (3,900+ tests claimed) and active dependency security hygiene (prompt Rustls advisory patching), though it recently removed GitHub Actions CI in favor of local validation gates, and third-party ecosystem digests characterize it as lower-velocity than the leading clones.",
   "latest_release": {
     "version": "v0.9.2",
     "date": "2026-04-07T15:45:01Z",
     "url": "https://github.com/qhkm/zeptoclaw/releases/tag/v0.9.2"
   },
-  "last_updated": "2026-10-05T02:43:14.867Z"
+  "last_updated": "2026-10-05T03:10:20.214Z"
 }

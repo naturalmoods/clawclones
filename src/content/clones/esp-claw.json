@@ -25,7 +25,7 @@
     "lua"
   ],
   "community_sentiment": 55,
-  "reddit_mentions": 12,
+  "reddit_mentions": 11,
   "web_mentions": 10,
   "best_for": [
     "IoT hobbyists wanting agent behavior on cheap ESP32 hardware",
@@ -82,7 +82,7 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 24,
-    "detected_at": "2026-10-04T17:40:58.958Z",
+    "detected_at": "2026-10-05T02:39:21.474Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -101,10 +101,10 @@
   "evidence_confidence": 78,
   "content_ops": {
     "last_generated_at": "2026-10-04T17:41:02.728Z",
-    "last_reviewed_at": "2026-10-04T17:41:02.728Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T02:39:25.226Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "ESP-Claw is Espressif's official **Chat Coding** AI agent framework for IoT devices, explicitly inspired by the OpenClaw concept and reimplemented in C on top of ESP-IDF. It runs the full agent loop — sensing, decision-making, and execution — locally on ESP32-series chips costing only a few dollars, turning traditionally passive IoT endpoints into active decision-making centers.\n\nIts standout architecture combines IM-style chat interaction with dynamic Lua module loading, letting ordinary users define and update device behavior conversationally without writing firmware. An event-driven runtime allows any hardware or network event to trigger the agent loop with millisecond-level response, and recent commits show active maintenance around CLI stability, flashing tools, Lua module APIs, and a newly added security policy.\n\nCompared to OpenClaw, which targets desktops and servers with large-context models, ESP-Claw trades reasoning depth and ecosystem breadth for extreme footprint efficiency and true edge autonomy. It is best viewed as the embedded frontier of the OpenClaw idea rather than a feature-equivalent alternative.",
@@ -113,5 +113,5 @@
     "date": "2026-06-12T12:11:00Z",
     "url": "https://github.com/espressif/esp-claw/releases/tag/v0.1.0"
   },
-  "last_updated": "2026-10-05T02:43:00.713Z"
+  "last_updated": "2026-10-05T02:39:25.226Z"
 }

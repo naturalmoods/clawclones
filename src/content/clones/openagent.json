@@ -1,0 +1,311 @@
+{
+  "id": "the-open-agent/openagent",
+  "name": "OpenAgent",
+  "language": "Go",
+  "vibe_summary": "A single-binary, self-hostable personal AI assistant combining LLMs, RAG knowledge bases, and agent loops with computer-use, browser-use, and coding capabilities. Recent commits show an aggressive security-hardening push closing pentest findings, SSRF, XSS, and authz issues.",
+  "health_status": "healthy",
+  "github_stars": 5689,
+  "metrics": {
+    "boot_time_ms": 35,
+    "memory_mb": 15,
+    "security_score": 82
+  },
+  "radar_chart": {
+    "sandboxing": 6,
+    "api_security": 8,
+    "network_isolation": 6,
+    "telemetry_safety": 7,
+    "shell_access_risk": 7
+  },
+  "tags": [
+    "personal-ai-assistant",
+    "rag",
+    "agent-loops",
+    "self-hosted",
+    "mcp"
+  ],
+  "community_sentiment": 55,
+  "reddit_mentions": 16,
+  "web_mentions": 10,
+  "best_for": [
+    "Users wanting a single-binary self-hosted AI assistant",
+    "Teams needing RAG over private documents with any LLM provider",
+    "Operators who value recent security hardening and audit logging"
+  ],
+  "avoid_if": [
+    "You need a mature plugin/skills ecosystem like OpenClaw's",
+    "You want multi-channel messaging (WhatsApp, Telegram, etc.) out of the box",
+    "You need a large community and extensive third-party tutorials"
+  ],
+  "deployment_target": [
+    "self-hosted",
+    "cloud",
+    "desktop"
+  ],
+  "local_first": true,
+  "cloud_dependency": "optional",
+  "setup_difficulty": "low",
+  "privacy_posture": "strong",
+  "multi_user": true,
+  "plugin_ecosystem": "emerging",
+  "license_type": "Apache-2.0",
+  "last_commit_at": "2026-10-01T12:16:33Z",
+  "contributors_count": 65,
+  "open_issues_count": 51,
+  "release_cadence_days": 2,
+  "operational_risk": "medium",
+  "model_support": {
+    "providers": [
+      "anthropic",
+      "azure-openai",
+      "cohere",
+      "deepseek",
+      "google",
+      "minimax",
+      "mistral",
+      "moonshot",
+      "ollama",
+      "openai",
+      "openai-compatible",
+      "openrouter",
+      "qwen",
+      "vllm",
+      "xai",
+      "zhipu"
+    ],
+    "provider_count": 12,
+    "local_capable": true,
+    "aggregator_capable": true,
+    "byo_endpoint": true,
+    "provider_lock": null,
+    "default_model": {
+      "model": "gpt-3.5-turbo",
+      "provider": "openai",
+      "path": "model/local.go",
+      "line": "model = \"gpt-3.5-turbo\"",
+      "strength": "weak"
+    },
+    "default_models": [
+      {
+        "model": "gpt-3.5-turbo",
+        "provider": "openai",
+        "path": "model/local.go",
+        "line": "model = \"gpt-3.5-turbo\"",
+        "strength": "weak"
+      },
+      {
+        "model": "gpt-4-vision-preview",
+        "provider": "openai",
+        "path": "model/openai_util.go",
+        "line": "if model == \"gpt-4-vision-preview\" || model == \"gpt-4-1106-vision-preview\" {",
+        "strength": "weak"
+      }
+    ],
+    "default_model_ambiguous": false,
+    "evidence": [
+      {
+        "kind": "dependency",
+        "value": "anthropic-sdk-go",
+        "path": "go.mod",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "claude.go",
+        "path": "model/claude.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "openai.azure.com",
+        "path": "web/src/ProviderSetting.js",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "cohere.go",
+        "path": "model/cohere.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "cohere.go",
+        "path": "embedding/cohere.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "deepseek.go",
+        "path": "model/deepseek.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.deepseek.com",
+        "path": "model/deepseek.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "genai",
+        "path": "go.mod",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "gemini.go",
+        "path": "model/gemini.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "minimax.go",
+        "path": "model/minimax.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "minimax.go",
+        "path": "embedding/minimax.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "mistral.go",
+        "path": "model/mistral.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.mistral.ai",
+        "path": "model/mistral.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "moonshot.go",
+        "path": "model/moonshot.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.moonshot.cn",
+        "path": "model/moonshot.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "web/src/ProviderSetting.js",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "model/local.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "dependency",
+        "value": "go-openai",
+        "path": "go.mod",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "openai.go",
+        "path": "model/openai.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "model/provider.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "web/src/ProviderSetting.js",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "openrouter.go",
+        "path": "model/openrouter.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "openrouter.ai/api",
+        "path": "model/openrouter.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "dashscope.aliyuncs.com",
+        "path": "model/alibabacloud.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "8000/v1",
+        "path": "web/src/ProviderSetting.js",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "grok.go",
+        "path": "model/grok.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.x.ai",
+        "path": "model/grok.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "open.bigmodel.cn",
+        "path": "model/chatglm.go",
+        "strength": "strong"
+      }
+    ],
+    "default_model_last_touched": "2026-09-17T13:05:53Z",
+    "default_model_released_at": "2023-05-28",
+    "default_model_date_source": "catalogue",
+    "files_examined": 69,
+    "detected_at": "2026-10-05T03:19:38.788Z",
+    "detection_version": "1"
+  },
+  "openclaw_advantages": [
+    "Ships as a single Go binary with no installation friction",
+    "Built-in RAG knowledge base from user documents",
+    "Recent systematic security hardening (SSRF, XSS, authz, secret masking)",
+    "MCP-compatible tool calling with usage analytics and audit logs"
+  ],
+  "openclaw_disadvantages": [
+    "Far smaller community and mindshare (5.7k vs ~391k stars)",
+    "No multi-channel messaging surface comparable to OpenClaw",
+    "Plugin/skills ecosystem is much less developed",
+    "Shell and computer-use access carries high risk without mature sandboxing"
+  ],
+  "confidence_summary": "Evidence is solid for architecture and security posture given the README and detailed security-fix commit history, but community sentiment is weak — most Reddit matches are tangential (OpenCode/OpenAgent forks, unrelated AoE posts) rather than direct discussion of this project.",
+  "evidence_confidence": 68,
+  "content_ops": {
+    "last_generated_at": "2026-10-05T03:19:48.641Z",
+    "last_reviewed_at": "2026-10-05T03:19:48.641Z",
+    "refresh_mode": "rewrite",
+    "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
+    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "generation_version": "clawclones-v2-decision-support"
+  },
+  "overview_markdown": "OpenAgent is a Go-based, single-binary personal AI assistant that unifies LLM chat, a RAG knowledge base built from your own documents, and autonomous agent loops capable of computer-use, browser-use, and coding tasks. It connects to any model provider and can invoke any MCP-compatible tool, positioning itself as a self-hostable alternative to heavier agent platforms.\n\nArchitecturally, its standout trait is deployment simplicity — one binary, no installation — paired with an admin surface that includes usage analytics, activity monitoring, tool management, and detailed logs. The recent commit history is dominated by security work: closing pentest findings around authorization, secret leaks, SSRF, stored XSS, SQL injection, webhook bypass, and store-admin command execution, plus signing storage URLs and auditing high-risk tool runs. This suggests the project is maturing from feature velocity into hardening.\n\nCompared to OpenClaw, OpenAgent trades ecosystem breadth for a leaner, more self-contained footprint. It lacks OpenClaw's massive community, multi-channel messaging integrations, and thousands of community skills, but offers a cleaner single-binary deployment story and an apparently serious approach to security auditing. It fits users who want a private, self-hosted assistant with RAG and MCP tooling rather than a sprawling agent ecosystem.",
+  "latest_release": {
+    "version": "v2.89.2",
+    "date": "2026-09-01T14:04:35Z",
+    "url": "https://github.com/the-open-agent/openagent/releases/tag/v2.89.2"
+  },
+  "last_updated": "2026-10-05T03:19:48.641Z"
+}

@@ -2,12 +2,12 @@
   "id": "openconstruct/freeclaw",
   "name": "FreeClaw",
   "language": "Python",
-  "vibe_summary": "A minimal Python reimplementation of the OpenClaw concept, focused on free/cheap LLM access via NVIDIA NIM, OpenRouter, and Groq. It ships multi-agent Discord bots, per-agent workspaces, and a task timer, but remains an early, single-maintainer project.",
+  "vibe_summary": "A minimal Python reimplementation of the OpenClaw concept, focused on free-tier LLM providers like NVIDIA NIM, OpenRouter, and Groq. It offers multi-agent Discord bots and a task timer in a lightweight, hackable package.",
   "health_status": "healthy",
   "github_stars": 61,
   "metrics": {
     "boot_time_ms": 180,
-    "memory_mb": 80,
+    "memory_mb": 70,
     "security_score": 45
   },
   "radar_chart": {
@@ -21,27 +21,27 @@
     "python",
     "openclaw-alternative",
     "discord-bot",
-    "nvidia-nim",
-    "multi-agent"
+    "cli-agent",
+    "nim-api"
   ],
   "community_sentiment": 40,
   "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
-    "Users wanting a free OpenClaw-like assistant via NIM/OpenRouter/Groq",
-    "Running multiple persona-based Discord bots from one install",
-    "Python developers who want a small, hackable agent CLI"
+    "Users wanting a free OpenClaw-like agent via NIM/OpenRouter/Groq",
+    "Tinkerers who prefer a small, readable Python codebase",
+    "Running multiple named Discord agent personas"
   ],
   "avoid_if": [
-    "You need a mature, battle-tested agent platform",
-    "You require strong sandboxing or audited security",
-    "You want local model inference (no Ollama-style local backend documented)"
+    "You need a mature plugin/skills ecosystem",
+    "You want strong sandboxing or audited security",
+    "You need broad chat channel support beyond Discord/SSH"
   ],
   "deployment_target": [
-    "self-hosted",
-    "desktop"
+    "desktop",
+    "self-hosted"
   ],
-  "local_first": false,
+  "local_first": true,
   "cloud_dependency": "required",
   "setup_difficulty": "medium",
   "privacy_posture": "mixed",
@@ -52,7 +52,7 @@
   "contributors_count": 1,
   "open_issues_count": 3,
   "release_cadence_days": null,
-  "operational_risk": "high",
+  "operational_risk": "medium",
   "model_support": {
     "providers": [
       "groq",
@@ -122,36 +122,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 24,
-    "detected_at": "2026-10-03T09:35:27.700Z",
+    "detected_at": "2026-10-05T03:03:00.231Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Simple Python codebase that is easy to read and modify",
-    "Free-tier friendly providers (NIM, Groq, OpenRouter) as defaults",
-    "Lightweight multi-agent profiles with per-agent workspaces",
-    "Lower resource footprint than the full OpenClaw stack"
+    "Much smaller and simpler Python codebase to audit and modify",
+    "Defaults to free-tier providers (NIM, Groq, OpenRouter)",
+    "Built-in multi-agent profiles with per-agent workspaces",
+    "Simple pip install with no heavy runtime dependencies"
   ],
   "openclaw_disadvantages": [
-    "Far smaller feature set, ecosystem, and community",
-    "No documented sandboxing or strong tool isolation",
-    "Single-maintainer project with early 0.1.0 maturity",
-    "No local model support; requires external API keys"
+    "Far fewer integrations and chat channels than OpenClaw",
+    "No established skills/plugin registry",
+    "Smaller community and thinner documentation",
+    "Security hardening and sandboxing are minimal"
   ],
-  "confidence_summary": "Evidence is limited to the README, commit log, and release metadata; there are zero Reddit mentions and no independent reviews, so security and maturity assessments carry significant uncertainty.",
+  "confidence_summary": "Evidence is limited to the README, commit history, and release metadata; there are no Reddit discussions and web mentions refer mostly to OpenClaw itself rather than FreeClaw. Assessments of security and community sentiment carry meaningful uncertainty.",
   "evidence_confidence": 55,
   "content_ops": {
-    "last_generated_at": "2026-09-21T03:00:49.363Z",
-    "last_reviewed_at": "2026-09-21T03:00:49.363Z",
+    "last_generated_at": "2026-10-05T03:03:03.776Z",
+    "last_reviewed_at": "2026-10-05T03:03:03.776Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "FreeClaw is a minimal Python reimplementation of the OpenClaw concept, built around OpenAI-compatible `/v1/chat/completions` endpoints. It defaults to NVIDIA NIM but also supports OpenRouter and Groq, making it oriented toward free or low-cost hosted inference rather than local models. Configuration is environment-variable driven, with tool execution constrained to a configurable `FREECLAW_TOOL_ROOT` and state (persona, tasks, memory DB) stored in per-agent workspaces.\n\nIts standout feature is multi-agent support: each named agent gets its own config, `.env`, memory database, and workspace, and the Discord integration can launch all agent bots at once or a single profile. A task-timer sidecar (with an optional web UI on port 3000) runs scheduled tasks and can post summaries to Discord, and a chat mode allows interaction over SSH.\n\nCompared to OpenClaw, FreeClaw trades the rich ecosystem, polish, and security hardening for a small, approachable Python codebase that is easy to self-host and modify. It is at version 0.1.0 with a single maintainer, no documented sandboxing model, and no community discussion footprint, so it is best suited for tinkerers comfortable with early-stage software.",
+  "overview_markdown": "FreeClaw is a minimal Python implementation of the OpenClaw concept, designed as a lightweight CLI agent that talks to OpenAI-compatible chat completion endpoints. It defaults to NVIDIA NIM but also supports OpenRouter and Groq, making it easy to run an agent on free or low-cost inference tiers. Setup is a simple `pip install -r requirements.txt` followed by an interactive `onboard` flow that collects an LLM API key and a Discord bot token.\n\nArchitecturally, FreeClaw centers on a CLI (`python -m freeclaw`) with subcommands for chat, Discord, task timers, and agent management. It supports multiple named agent profiles, each with its own config, `.env`, memory database, persona, and workspace directory, and the Discord command can launch all agent bots at once. A timer sidecar (with an optional web UI on port 3000) executes due tasks and can post summaries to Discord, and tools are constrained to a configurable root directory.\n\nCompared to OpenClaw, FreeClaw trades breadth for simplicity: it lacks the large skills registry, multi-channel support, and polished control UI, but offers a small, hackable codebase that a single developer can read end-to-end. It is best suited for hobbyists who want a free, self-hosted Discord agent and are comfortable managing their own security posture.",
   "latest_release": {
     "version": "0.1.0",
     "date": "2026-02-22T17:20:21Z",
     "url": "https://github.com/openconstruct/freeclaw/releases/tag/0.1.0"
   },
-  "last_updated": "2026-10-05T02:43:11.746Z"
+  "last_updated": "2026-10-05T03:03:03.776Z"
 }

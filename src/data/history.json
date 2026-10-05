@@ -258,7 +258,7 @@
     },
     {
       "date": "2026-10-05",
-      "stars": 391327
+      "stars": 391329
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -520,7 +520,7 @@
     },
     {
       "date": "2026-10-05",
-      "stars": 32933
+      "stars": 32932
     }
   ],
   "qwibitai/nanoclaw": [
@@ -7618,7 +7618,7 @@
     },
     {
       "date": "2026-10-05",
-      "stars": 35446
+      "stars": 35445
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -10238,7 +10238,7 @@
     },
     {
       "date": "2026-10-05",
-      "stars": 251255
+      "stars": 251258
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -11336,7 +11336,7 @@
     },
     {
       "date": "2026-10-05",
-      "stars": 11257
+      "stars": 11258
     }
   ],
   "zhayujie/CowAgent": [
@@ -11347,6 +11347,12 @@
     {
       "date": "2026-10-05",
       "stars": 47229
+    }
+  ],
+  "the-open-agent/openagent": [
+    {
+      "date": "2026-10-05",
+      "stars": 5689
     }
   ]
 }

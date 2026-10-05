@@ -25,7 +25,7 @@
     "security"
   ],
   "community_sentiment": 78,
-  "reddit_mentions": 22,
+  "reddit_mentions": 20,
   "web_mentions": 10,
   "best_for": [
     "Privacy-conscious users who want a local-first assistant",
@@ -246,7 +246,7 @@
     "default_model_released_at": "2025-06-17",
     "default_model_date_source": "catalogue",
     "files_examined": 143,
-    "detected_at": "2026-10-03T09:33:16.239Z",
+    "detected_at": "2026-10-05T02:52:22.430Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -265,10 +265,10 @@
   "evidence_confidence": 82,
   "content_ops": {
     "last_generated_at": "2026-09-21T02:36:35.667Z",
-    "last_reviewed_at": "2026-09-21T02:36:35.667Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T02:52:43.404Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "IronClaw is a Rust-based Agent OS from NEAR AI positioned as a secure, personal AI assistant that runs as a local background service with an encrypted credential store and a WebUI. Its philosophy is explicit: data stays local, there is no hidden telemetry, and the system is auditable open source under MIT/Apache-2.0. Onboarding is guided via `ironclaw onboard`, with installers for macOS, Linux, and Windows/WSL.\n\nArchitecturally, IronClaw emphasizes fail-closed security: channel extensions (e.g., Telegram) declare egress allowlists, pairing/binding is checked before command admission, and recent commits show deep investment in prompt-injection defenses, restricted egress lifecycles, subagent approval gates surfaced to owners, and careful handling of LLM cache keys (hashed before leaving the process). The commit history shows a mature engineering culture with contract tests, architecture gates, and performance work like streamed-text coalescing.\n\nCompared to OpenClaw, IronClaw trades ecosystem breadth for a hardened, privacy-first runtime with a smaller footprint and stricter network isolation. It fits users who prioritize control and auditability over plugin variety, though some community reports note onboarding friction and occasional task-execution hiccups.",
@@ -277,5 +277,5 @@
     "date": "2026-09-29T20:40:32Z",
     "url": "https://github.com/nearai/ironclaw/releases/tag/ironclaw-v1.4.1"
   },
-  "last_updated": "2026-10-05T02:43:07.493Z"
+  "last_updated": "2026-10-05T02:52:43.404Z"
 }

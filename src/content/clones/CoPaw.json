@@ -2,40 +2,40 @@
   "id": "agentscope-ai/CoPaw",
   "name": "CoPaw (QwenPaw)",
   "language": "TypeScript",
-  "vibe_summary": "A high-velocity personal AI assistant from the AgentScope team, positioned as an easy-to-install, self-hostable alternative in the OpenClaw ecosystem. It emphasizes multi-channel chat app support, a console UI, and an extensible plugin/skill architecture backed by a very active development team.",
+  "vibe_summary": "A personal AI assistant from the AgentScope team focused on easy self-hosting and multi-chat-app support. Recently rebranded to QwenPaw and in an active beta stabilization cycle with frequent fixes.",
   "health_status": "healthy",
-  "github_stars": 35446,
+  "github_stars": 35445,
   "metrics": {
-    "boot_time_ms": 180,
-    "memory_mb": 85,
-    "security_score": 72
+    "boot_time_ms": 200,
+    "memory_mb": 80,
+    "security_score": 62
   },
   "radar_chart": {
-    "sandboxing": 6,
-    "api_security": 7,
+    "sandboxing": 5,
+    "api_security": 6,
     "network_isolation": 5,
     "telemetry_safety": 6,
     "shell_access_risk": 6
   },
   "tags": [
     "personal-assistant",
-    "multi-channel",
     "self-hosted",
-    "agent-framework",
-    "openclaw-alternative"
+    "multi-channel",
+    "agentscope",
+    "chat-apps"
   ],
-  "community_sentiment": 68,
-  "reddit_mentions": 15,
+  "community_sentiment": 55,
+  "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
-    "Users wanting a self-hosted personal AI assistant with multi-chat-app support",
+    "Users wanting a self-hosted personal assistant with multi-chat-app support",
     "Teams already in the AgentScope/Qwen ecosystem",
-    "Developers who want an extensible plugin and skill architecture"
+    "Users who want easy local or cloud deployment"
   ],
   "avoid_if": [
-    "You need a minimal, single-binary lightweight agent",
-    "You require mature, audited sandboxing for untrusted tool execution",
-    "You want a stable non-beta release cadence"
+    "You need a stable, non-beta release cycle",
+    "You want a large third-party plugin ecosystem",
+    "You require extensive community discussion and docs outside the official channels"
   ],
   "deployment_target": [
     "self-hosted",
@@ -178,36 +178,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 119,
-    "detected_at": "2026-10-03T09:31:00.020Z",
+    "detected_at": "2026-10-05T02:35:46.855Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Backed by the AgentScope team with very high PR/issue velocity",
-    "Easy install via PyPI with polished console UI and docs site",
-    "Strong multi-channel chat app integration focus",
-    "Active work on plugin isolation and hub gateway architecture"
+    "Backed by the AgentScope org with structured CI and release process",
+    "Easy install and deployment positioning for non-expert users",
+    "Multi-chat-app integration out of the box",
+    "Desktop packaging (NSIS installer) for end users"
   ],
   "openclaw_disadvantages": [
-    "Still in beta versioning (2.2.x beta tags), less battle-tested",
-    "Sandboxing and security hardening appear less mature than OpenClaw's",
-    "Smaller independent community outside the AgentScope ecosystem",
-    "Recent activity weighted toward stability fixes rather than new capabilities"
+    "Much smaller community and PR throughput than OpenClaw",
+    "Currently in beta stabilization with frequent bugfix commits",
+    "Rebrand (CoPaw → QwenPaw) creates naming confusion and fragmented identity",
+    "No Reddit presence and limited independent community validation"
   ],
-  "confidence_summary": "Evidence is moderately strong: README, release data, and ecosystem digests confirm active development and positioning, but Reddit matches are irrelevant noise and independent security assessments are lacking.",
-  "evidence_confidence": 62,
+  "confidence_summary": "Evidence is moderate: official README, release data, and ecosystem digests confirm active development, but there are zero Reddit mentions and some digest sources describe the project as in 'maintenance limbo', creating mixed signals.",
+  "evidence_confidence": 60,
   "content_ops": {
-    "last_generated_at": "2026-09-21T01:59:43.203Z",
-    "last_reviewed_at": "2026-09-21T01:59:43.203Z",
+    "last_generated_at": "2026-10-05T02:36:05.833Z",
+    "last_reviewed_at": "2026-10-05T02:36:05.833Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "CoPaw (also branded QwenPaw) is a personal AI assistant from the AgentScope team, designed to be easy to install and deploy either on your own machine or in the cloud. It supports multiple chat applications out of the box and exposes an extensible capability model via plugins, skills, and a hub gateway, distributed via PyPI with a documented console UI.\n\nArchitecturally it pairs a Python agent runtime (Python 3.11–3.13) with a TypeScript console frontend, and recent commits show heavy investment in frontend performance (lazy-loaded locales, split chat dependencies), memory/reranker configuration UI (ReMe), and stability fixes across CI, Windows support, and tool-call lifecycle handling. Ecosystem digests place it among the small set of high-velocity 'platform' projects alongside OpenClaw, processing dozens of PRs per day.\n\nCompared to OpenClaw, CoPaw differentiates through its AgentScope/Qwen ecosystem integration, polished onboarding, and hub-gateway direction, but it remains in beta versioning with security and sandboxing hardening still catching up. It is a credible OpenClaw alternative for users who value ease of setup and multi-channel chat support over maximum isolation guarantees.",
+  "overview_markdown": "CoPaw (recently rebranded as **QwenPaw**) is a personal AI assistant from the AgentScope team, designed to be easy to install and deploy either on your own machine or in the cloud. It emphasizes multi-chat-app support with an extensible capability model, positioning itself as an approachable self-hosted assistant rather than a developer-only framework.\n\nThe project is in an active beta stabilization cycle: recent commits focus on e2e test fixes, CI improvements, memory backend restoration, terminal handling, and desktop installer packaging (NSIS). The latest tagged release is v2.2.1, with beta releases (v2.2.2-beta.x) also shipping. Ecosystem digests note steady issue and PR activity, though at a much smaller scale than OpenClaw.\n\nCompared to OpenClaw, CoPaw trades ecosystem size and community momentum for a more curated, org-backed experience with simpler onboarding and desktop distribution. Its Apache-2.0 license and AgentScope/Qwen alignment make it attractive for users in that ecosystem, but the rebrand and beta status introduce some uncertainty for long-term adopters.",
   "latest_release": {
     "version": "v2.2.1",
     "date": "2026-09-11T04:19:23Z",
     "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.1"
   },
-  "last_updated": "2026-10-05T02:42:58.471Z"
+  "last_updated": "2026-10-05T02:36:05.833Z"
 }

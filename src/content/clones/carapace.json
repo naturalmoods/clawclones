@@ -25,7 +25,7 @@
     "multi-channel"
   ],
   "community_sentiment": 35,
-  "reddit_mentions": 17,
+  "reddit_mentions": 19,
   "web_mentions": 10,
   "best_for": [
     "Security-conscious users who want an OpenClaw-style assistant without its disclosed vulnerabilities",
@@ -218,7 +218,7 @@
     "default_model_released_at": "2026-04-24",
     "default_model_date_source": "catalogue",
     "files_examined": 46,
-    "detected_at": "2026-10-03T09:35:54.359Z",
+    "detected_at": "2026-10-05T03:10:01.132Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -238,10 +238,10 @@
   "evidence_confidence": 78,
   "content_ops": {
     "last_generated_at": "2026-09-21T03:12:33.036Z",
-    "last_reviewed_at": "2026-09-21T03:12:33.036Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T03:10:07.950Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Carapace is a security-first, Rust-based reimplementation of the OpenClaw personal AI assistant concept, explicitly positioned as a hardened alternative in the wake of the January 2026 OpenClaw security disclosures. It supports the same broad shape of functionality — multi-provider LLM access (Anthropic, OpenAI, Codex, Ollama, Gemini, Vertex, Bedrock, and more) and multi-channel messaging across Matrix, Signal, Telegram, Discord, Slack, webhooks, and console — but rebuilds the trust model from the ground up.\n\nIts differentiators are architectural: plugins are Ed25519-signed and run in a WASM capability sandbox with resource limits; secrets live in the OS credential store with AES-256-GCM fallback; filesystem access is root-scoped and guarded; and subprocess execution uses OS-level sandboxing on macOS, Linux, and Windows with fail-closed behavior. Network posture is equally strict — localhost-only binding, CSRF-protected control endpoints, private-IP blocking, and post-resolution DNS validation to counter SSRF and rebinding attacks. Infrastructure extras include TLS/mTLS, mDNS discovery, Tailscale integration, Prometheus metrics, and audit logging.\n\nCompared to OpenClaw, Carapace trades ecosystem breadth for assurance. It transparently documents verified-vs-partial feature status (docs/feature-status.yaml), maintains a healthy CI pipeline with ~4900 tests, fuzz targets, and active dependency hygiene, and shipped a stable v0.8.0 release in May 2026. The trade-off is a small community (47 stars) and a younger plugin ecosystem, making it best suited for security-conscious self-hosters rather than users who need OpenClaw's mature tooling and community support.",
@@ -250,5 +250,5 @@
     "date": "2026-05-01T22:18:48Z",
     "url": "https://github.com/puremachinery/carapace/releases/tag/v0.8.0"
   },
-  "last_updated": "2026-10-05T02:43:14.261Z"
+  "last_updated": "2026-10-05T03:10:07.950Z"
 }

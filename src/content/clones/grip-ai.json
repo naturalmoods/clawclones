@@ -2,45 +2,45 @@
   "id": "5unnykum4r/grip-ai",
   "name": "grip-ai",
   "language": "Python",
-  "vibe_summary": "A self-hostable Python AI agent platform built on the Claude Agent SDK with LiteLLM fallback across 15+ providers. Stands out for its dual-engine architecture, unified 31-tool surface, and strong engineering hygiene (882 tests, mypy-clean CI).",
+  "vibe_summary": "A self-hostable Python agent platform built on the Claude Agent SDK with LiteLLM fallback across 15+ providers. Impressively engineered for a small project — 882 tests, mypy-clean CI, and real cross-provider failover — but with near-zero community traction.",
   "health_status": "healthy",
   "github_stars": 11,
   "metrics": {
     "boot_time_ms": 220,
     "memory_mb": 90,
-    "security_score": 68
+    "security_score": 62
   },
   "radar_chart": {
     "sandboxing": 4,
-    "api_security": 7,
-    "network_isolation": 4,
+    "api_security": 6,
+    "network_isolation": 3,
     "telemetry_safety": 7,
     "shell_access_risk": 8
   },
   "tags": [
     "python",
-    "claude-agent-sdk",
+    "self-hosted",
+    "multi-model",
     "litellm",
-    "multi-channel",
-    "self-hosted"
+    "claude-agent-sdk"
   ],
-  "community_sentiment": 40,
-  "reddit_mentions": 21,
+  "community_sentiment": 30,
+  "reddit_mentions": 18,
   "web_mentions": 10,
   "best_for": [
-    "Python developers wanting a Claude SDK-based agent platform",
+    "Python developers wanting a hackable OpenClaw-style agent",
     "Users needing multi-provider LLM failover with cost tracking",
-    "Self-hosters wanting Telegram/Discord/Slack agent channels"
+    "Self-hosters who want Telegram/Discord/Slack chat channels"
   ],
   "avoid_if": [
-    "You need a large community or mature ecosystem",
-    "You want container-level sandboxing for agent execution",
-    "You prefer a batteries-included UI dashboard"
+    "You need a proven, widely-audited project with community support",
+    "You want strong sandboxing for shell/browser tool execution",
+    "You prefer a mature plugin or skills ecosystem"
   ],
   "deployment_target": [
     "self-hosted",
-    "cloud",
-    "desktop"
+    "desktop",
+    "cloud"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
@@ -146,36 +146,36 @@
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
     "files_examined": 15,
-    "detected_at": "2026-10-03T09:30:43.126Z",
+    "detected_at": "2026-10-05T02:34:40.763Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Dual-engine design with real cross-provider failover via litellm.Router",
-    "Strong code quality signals: 882 tests, mypy-clean CI, ruff enforcement",
-    "Built-in USD cost tracking per LLM call",
-    "Broad provider support including local Ollama/LM Studio/vLLM"
+    "Dual-engine design: Claude Agent SDK primary with LiteLLM fallback to 15+ providers",
+    "Real cross-provider failover via litellm.Router plus per-call USD cost tracking",
+    "Strong code hygiene: 882 tests, mypy-clean tree enforced in CI",
+    "Built-in Playwright browser automation and 31 tools out of the box"
   ],
   "openclaw_disadvantages": [
-    "Tiny community (11 stars) versus OpenClaw's large ecosystem",
-    "No container sandboxing for shell/browser tool execution",
-    "Fewer integrations and no dedicated control UI",
-    "Single-maintainer project with unproven long-term maintenance"
+    "Tiny community (11 stars) with no visible third-party adoption or discussion",
+    "Single-maintainer project with uncertain long-term maintenance",
+    "No documented sandboxing for shell and browser tools",
+    "Much smaller skills/plugin ecosystem than OpenClaw"
   ],
-  "confidence_summary": "README and commit history give strong evidence of architecture and code quality, but community sentiment data is essentially noise (Reddit matches are unrelated keyword collisions). Adoption and real-world stability remain uncertain.",
-  "evidence_confidence": 62,
+  "confidence_summary": "README and commit history give strong evidence of engineering quality and active maintenance, but there is essentially no independent community feedback — all Reddit matches are unrelated keyword noise. Scores for sentiment, security, and ecosystem are low-confidence estimates.",
+  "evidence_confidence": 55,
   "content_ops": {
-    "last_generated_at": "2026-09-21T01:53:59.495Z",
-    "last_reviewed_at": "2026-09-21T01:53:59.495Z",
+    "last_generated_at": "2026-10-05T02:34:43.448Z",
+    "last_reviewed_at": "2026-10-05T02:34:43.448Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "grip-ai is a self-hostable AI agent platform written in Python (~24k lines, 120+ modules) that positions itself as a lightweight OpenClaw alternative. Its core architectural bet is a **dual-engine design**: the Claude Agent SDK serves as the primary engine for Claude models, while a LiteLLM engine covers 15+ other providers (OpenAI, DeepSeek, Groq, Gemini, Ollama, vLLM, LM Studio, and any OpenAI-compatible API). Crucially, both engines expose the same 31-tool surface — grip bridges its tool registry into the SDK as in-process MCP tools — so capabilities like filesystem access, shell execution, Playwright browser automation, web search, and document conversion work identically regardless of backend.\n\nReliability is a clear focus: automatic retries with exponential backoff, true cross-provider failover via `litellm.Router` fallback chains, and per-call USD cost tracking with daily totals. It ships multi-channel chat (Telegram, Discord, Slack), cron scheduling, multi-agent orchestration, and a REST API from a single `grip gateway` process. Engineering hygiene is unusually strong for a small project — 882 tests, a fully mypy-clean tree enforced in CI, and ruff linting.\n\nCompared to OpenClaw, grip-ai trades ecosystem breadth and community scale for a cleaner, type-safe Python codebase and more explicit provider-failover semantics. Its main weaknesses are the lack of container-level sandboxing for its powerful shell/browser tools, a very small user base (11 stars), and single-maintainer risk. It fits developers who want a hackable, well-tested Python agent platform and are comfortable operating infrastructure themselves.",
+  "overview_markdown": "grip-ai is a self-hostable AI agent platform written in Python (~24,000 lines, 120+ modules) that positions itself as a lightweight OpenClaw alternative. Its architecture is built around a dual-engine design: the Claude Agent SDK serves as the primary engine for Claude models, while a LiteLLM-based engine provides fallback to 15+ other providers including OpenAI, DeepSeek, Groq, Gemini, and local options like Ollama, vLLM, and LM Studio. Notably, grip bridges its full 31-tool registry into the SDK engine as in-process MCP tools, so both engines expose the same tool surface — filesystem, shell, web search, Playwright browser automation, document conversion, and more.\n\nReliability is a clear focus: the project implements automatic retries with exponential backoff, true cross-provider failover via litellm.Router with per-deployment credentials, and per-call USD cost tracking with daily totals. It supports multi-channel chat over Telegram, Discord, and Slack, cron scheduling, multi-agent orchestration, and a REST API, all from a single `grip gateway` process. Code quality practices are unusually rigorous for a project this size — 882 tests, ruff linting, and a mypy-clean tree enforced in CI as of v1.6.1.\n\nCompared to OpenClaw, grip-ai trades ecosystem maturity for a leaner, Python-native codebase that is easy to read and modify. However, it lacks documented sandboxing for its shell and browser tools, has no meaningful community adoption yet (11 stars, no real Reddit discussion), and depends heavily on a single maintainer. It is best suited for developers who want a hackable, multi-provider agent platform and are comfortable vetting the security model themselves.",
   "latest_release": {
     "version": "v1.6.1",
     "date": "2026-05-28T20:05:30Z",
     "url": "https://github.com/5unnykum4r/grip-ai/releases/tag/v1.6.1"
   },
-  "last_updated": "2026-10-05T02:42:57.077Z"
+  "last_updated": "2026-10-05T02:34:43.448Z"
 }

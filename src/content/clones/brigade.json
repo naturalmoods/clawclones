@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "Brigade is an enterprise-grade personal AI agent framework that eliminates API key juggling by reusing your existing Claude, ChatGPT, or Copilot subscriptions. Its standout feature is B³ (Brigade Bloody Benchmark), which exposes your agents to the open internet via tunnels to stress-test them against real-world strangers.",
   "health_status": "healthy",
-  "github_stars": 11257,
+  "github_stars": 11258,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 80,
@@ -183,7 +183,7 @@
     "default_model_released_at": "2026-03-17",
     "default_model_date_source": "catalogue",
     "files_examined": 67,
-    "detected_at": "2026-10-04T17:43:12.567Z",
+    "detected_at": "2026-10-05T03:18:31.216Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -202,10 +202,10 @@
   "evidence_confidence": 62,
   "content_ops": {
     "last_generated_at": "2026-10-04T17:43:23.787Z",
-    "last_reviewed_at": "2026-10-04T17:43:23.787Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T03:18:40.993Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Brigade positions itself as an enterprise-grade personal intelligence ecosystem rather than a single app. Its core differentiator is frictionless authentication: instead of juggling API keys, users sign in with existing Claude, ChatGPT, or Copilot subscriptions, or reuse active Claude Code / Codex CLI sessions. API keys remain on the local machine with no telemetry and no middleman proxying.\n\nThe headline feature is B³ (Brigade Bloody Benchmark), introduced in v1.9.0, which exposes your agent crew to the open internet through HTTPS tunnels (Cloudflare by default, or self-hosted bore/frp/sish relays) with an invisible secret key gating access. The philosophy is that the only benchmark that matters is real strangers probing your agents at 3 a.m. Recent releases (v1.38–1.39) added a durable team collaboration mode and hardened runtime message pagination, showing active, disciplined engineering with release-please automation and PR-gated main branch.\n\nCompared to OpenClaw, Brigade trades ecosystem breadth for auth simplicity and adversarial testing tooling. OpenClaw offers thousands of community skills and broad messaging-channel coverage, while Brigade focuses on a polished CLI experience, subscription reuse, and real-world exposure benchmarking. Its TypeScript stack means moderate resource footprint, and its tunnel-exposure features, while gated, warrant careful operational review.",
@@ -214,5 +214,5 @@
     "date": "2026-09-15T14:44:28Z",
     "url": "https://github.com/spinabot/brigade/releases/tag/brigade-v1.39.0"
   },
-  "last_updated": "2026-10-05T02:43:19.181Z"
+  "last_updated": "2026-10-05T03:18:40.993Z"
 }

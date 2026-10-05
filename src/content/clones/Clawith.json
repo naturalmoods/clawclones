@@ -104,36 +104,36 @@
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
     "files_examined": 58,
-    "detected_at": "2026-10-04T17:39:33.021Z",
+    "detected_at": "2026-10-05T02:38:22.422Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
     "Native multi-agent collaboration with shared crew workflows",
     "Persistent agent identity and long-term memory per agent",
-    "Team/organization-oriented features and hosted cloud option",
-    "Autonomous 'Aware' system for proactive agent behavior"
+    "Team/organization-oriented multi-user design",
+    "Hosted cloud option plus live demo for quick evaluation"
   ],
   "openclaw_disadvantages": [
     "Far smaller community and ecosystem than OpenClaw",
     "Heavier platform footprint versus OpenClaw's local-first simplicity",
-    "Fewer messaging channel integrations",
-    "Younger project with less production hardening"
+    "Fewer messaging-channel integrations",
+    "Younger project with less production hardening evidence"
   ],
-  "confidence_summary": "Evidence is moderate: README and active commit history are strong signals, but there are zero Reddit mentions and web sentiment is mostly indirect listicle coverage. Team-oriented claims are plausible but not independently validated.",
-  "evidence_confidence": 65,
+  "confidence_summary": "Evidence is moderate: the README and active commit history clearly show a real, actively maintained multi-agent platform, but there is zero Reddit discussion and limited independent web sentiment, so community and security assessments carry uncertainty.",
+  "evidence_confidence": 68,
   "content_ops": {
-    "last_generated_at": "2026-10-04T17:39:46.650Z",
-    "last_reviewed_at": "2026-10-04T17:39:46.650Z",
+    "last_generated_at": "2026-10-05T02:38:31.995Z",
+    "last_reviewed_at": "2026-10-05T02:38:31.995Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "Clawith is an open-source multi-agent collaboration platform built in Python and licensed under Apache-2.0, self-described as 'OpenClaw for Teams.' Where OpenClaw focuses on a single personal assistant running locally, Clawith gives every agent a persistent identity, long-term memory, and its own workspace, then orchestrates them as a crew that collaborates with each other and with human users.\n\nIts standout architectural feature is 'Aware,' an adaptive autonomous consciousness system: agents maintain structured working memory via Focus Items with status markers, bind triggers to focus items, and proactively perceive, decide, and act instead of passively awaiting commands. The project ships both a self-hostable open-source edition and a hosted Clawith Cloud production service, plus a shared live demo environment.\n\nRecent commit activity shows disciplined engineering — versioned hotfixes (v1.11.4-fix.1), quality tooling adoption (Pyright, ESLint, Prettier baselines), architecture guards, and extensive backend/frontend test suites. Compared to OpenClaw, Clawith trades the massive community, channel breadth, and local-first simplicity for genuine multi-agent, multi-user team collaboration primitives.",
+  "overview_markdown": "Clawith is an open-source multi-agent collaboration platform built in Python and licensed under Apache-2.0, self-described as 'OpenClaw for Teams.' Where OpenClaw focuses on a single personal assistant running locally, Clawith gives every agent a persistent identity, long-term memory, and its own workspace, then orchestrates them as a crew that collaborates with each other and with human users.\n\nIts standout architectural feature is **Aware**, an adaptive autonomous consciousness system: agents maintain structured working memory via Focus Items with status markers, bind triggers to focus items, and proactively perceive, decide, and act instead of passively awaiting commands. Recent commits show a disciplined engineering culture — a quality tooling harness (Pyright, ESLint, Prettier baselines), an Architecture Guard, sandbox block-warning handling, and a Tool Ledger with fail-closed integrity checks for executable artifacts.\n\nThe project offers both a self-hosted open-source edition and a hosted Clawith Cloud production service, plus a shared live demo. With ~4.2k stars and frequent releases (v1.11.4-fix.1), it is actively maintained, though its community footprint outside GitHub remains thin compared to OpenClaw's massive ecosystem.",
   "latest_release": {
     "version": "v1.11.4-fix.1",
     "date": "2026-08-24T12:11:06Z",
     "url": "https://github.com/dataelement/Clawith/releases/tag/v1.11.4-fix.1"
   },
-  "last_updated": "2026-10-05T02:43:00.329Z"
+  "last_updated": "2026-10-05T02:38:31.995Z"
 }

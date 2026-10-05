@@ -25,7 +25,7 @@
     "ai-agent"
   ],
   "community_sentiment": 45,
-  "reddit_mentions": 14,
+  "reddit_mentions": 17,
   "web_mentions": 10,
   "best_for": [
     "Java/Spring developers wanting an OpenClaw-style agent on the JVM",
@@ -112,7 +112,7 @@
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
     "files_examined": 63,
-    "detected_at": "2026-10-04T17:38:08.839Z",
+    "detected_at": "2026-10-05T02:38:07.516Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -131,12 +131,12 @@
   "evidence_confidence": 70,
   "content_ops": {
     "last_generated_at": "2026-10-04T17:38:22.856Z",
-    "last_reviewed_at": "2026-10-04T17:38:22.856Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T02:38:16.726Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "JavaClaw is a Java 25 / Spring Boot 4 reimplementation of the OpenClaw personal AI assistant, originally created as a demo for JobRunr and now positioned as a community-driven Java agent platform. It acts as a local control plane: a Spring Modulith core (`base/` and `app/`) handles the agent loop, task management, and configuration, while channel plugins (Telegram, Discord, WhatsApp via wacli, WebSocket chat) and tool plugins (Brave search, Playwright browser automation) self-register via Spring Boot auto-configuration. LLM access goes through Spring AI with pluggable providers — OpenAI, Anthropic (including Claude Code OAuth), Google GenAI, and local Ollama — selectable during a guided onboarding flow.\n\nIts standout differentiator is durable background job processing via JobRunr (with a dashboard on :8081), letting the agent schedule one-off, delayed, and cron-recurring tasks stored as human-readable Markdown files. Recent commits show active hardening: ArchUnit-enforced module boundaries, token-by-token WebSocket streaming, multi-model provider support with an agents management page, and careful security fixes like refusing WhatsApp group chats to prevent group members from instructing a shell-capable agent.\n\nCompared to OpenClaw, JavaClaw trades ecosystem breadth and runtime lightness for JVM familiarity and enterprise-grade structure. It keeps data local (embedded H2, file-backed workspace) with no telemetry, but the agent has unrestricted shell and file access with no sandboxing layer, so it carries the same high shell-risk profile as other local agents. There are no official releases yet, so expect a moving target.",
-  "last_updated": "2026-10-05T02:42:59.943Z"
+  "last_updated": "2026-10-05T02:38:16.726Z"
 }

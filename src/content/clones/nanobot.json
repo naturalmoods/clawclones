@@ -2,19 +2,19 @@
   "id": "HKUDS/nanobot",
   "name": "nanobot",
   "language": "Python",
-  "vibe_summary": "An ultra-lightweight (~4k line) Python rewrite of OpenClaw with WebUI, terminal, and chat-app frontends. Packs tools, memory, MCP, multi-agent delegation, and automation into a small, readable, self-hosted core.",
+  "vibe_summary": "An ultra-lightweight (~4,000-line) Python rewrite of OpenClaw that packs WebUI, memory, MCP, multi-agent delegation, and automation into a readable core. It's one of the most actively iterated OpenClaw alternatives with a huge star count and frequent releases.",
   "health_status": "healthy",
   "github_stars": 48786,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.5,
-    "security_score": 72
+    "security_score": 62
   },
   "radar_chart": {
-    "sandboxing": 5,
-    "api_security": 7,
-    "network_isolation": 5,
-    "telemetry_safety": 8,
+    "sandboxing": 4,
+    "api_security": 6,
+    "network_isolation": 4,
+    "telemetry_safety": 7,
     "shell_access_risk": 7
   },
   "tags": [
@@ -25,17 +25,17 @@
     "openclaw-alternative"
   ],
   "community_sentiment": 78,
-  "reddit_mentions": 3,
+  "reddit_mentions": 4,
   "web_mentions": 10,
   "best_for": [
-    "Users wanting a lightweight OpenClaw alternative in Python",
-    "Self-hosters who value a small, readable codebase",
-    "People needing multi-channel chat (Telegram/Discord/WhatsApp) plus WebUI"
+    "Users wanting a small, readable OpenClaw alternative in Python",
+    "Self-hosters who want WebUI, terminal, and chat-app access in one gateway",
+    "Tinkerers who want MCP, memory, and automation without a heavy codebase"
   ],
   "avoid_if": [
-    "You need hardened container-level sandboxing out of the box",
-    "You require enterprise multi-tenant access controls",
-    "You want a battle-tested project with years of production history"
+    "You need hardened container sandboxing for untrusted tool execution",
+    "You require enterprise-grade governance and extended-stable release channels",
+    "You want a large plugin marketplace rather than an emerging ecosystem"
   ],
   "deployment_target": [
     "self-hosted",
@@ -205,36 +205,36 @@
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
     "files_examined": 82,
-    "detected_at": "2026-10-03T09:31:42.530Z",
+    "detected_at": "2026-10-05T02:41:10.871Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Dramatically smaller codebase (~4k lines) that is easier to audit and modify",
-    "Lower resource footprint and faster startup",
-    "Built-in WebUI plus terminal and chat-app frontends",
-    "Native MCP support and multi-agent delegation in the core"
+    "Dramatically smaller, more readable codebase (~4k lines) that's easy to audit and modify",
+    "Very fast, lightweight startup compared to OpenClaw's heavier footprint",
+    "Broad provider support (46 providers) with model routing",
+    "Beginner-friendly onboarding including a no-technical-background install path"
   ],
   "openclaw_disadvantages": [
-    "Younger project with less production hardening",
-    "Smaller plugin/skill ecosystem than OpenClaw",
-    "Fewer community-contributed integrations and docs depth",
-    "Security model less proven at scale"
+    "Smaller community and governance structure than OpenClaw's massive ecosystem",
+    "Less mature sandboxing and security hardening for tool/shell execution",
+    "Plugin ecosystem is emerging rather than established",
+    "Fewer formalized release channels for production stability"
   ],
-  "confidence_summary": "Strong evidence from README, PyPI presence, active commits, and ecosystem digests confirming it as a leading OpenClaw alternative. Reddit discussion is thin, so community sentiment is partly inferred from web footprint and star count.",
-  "evidence_confidence": 82,
+  "confidence_summary": "Evidence is solid: rich README, active recent commits, a dated v0.3.5 release, and multiple ecosystem digests confirm active development. Uncertainty remains around sandboxing depth and multi-user support, which are not clearly documented in the provided sources.",
+  "evidence_confidence": 80,
   "content_ops": {
-    "last_generated_at": "2026-09-21T02:11:07.853Z",
-    "last_reviewed_at": "2026-09-21T02:11:07.853Z",
+    "last_generated_at": "2026-10-05T02:41:22.342Z",
+    "last_reviewed_at": "2026-10-05T02:41:22.342Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "**nanobot** is an ultra-lightweight, open-source personal AI agent framework from HKUDS, written in Python (3.11+) and distributed via PyPI as `nanobot-ai`. It positions itself as a compact (~4,000-line) rewrite of OpenClaw, keeping the core small and readable while still shipping a WebUI, terminal UI, and chat-app integrations (Telegram, Discord, WhatsApp). It includes tool use, long-term memory, MCP integrations, model routing, multi-agent delegation, scheduled automation, and an OpenAI-compatible API.\n\nArchitecturally, nanobot runs as a long-lived gateway service (`nanobot gateway`) that can be operated headless or through the browser-based WebUI, making it familiar to users coming from OpenClaw who already run agents as services. Recent releases (v0.3.5) added a refreshed terminal UI, a calendar for automations, side-by-side chats, plugins, and OAuth device-flow sign-in for providers like Copilot — evidence of rapid, sustained development with CI and an active Discord community.\n\nCompared to OpenClaw, nanobot trades ecosystem maturity for simplicity: the small codebase is easier to audit, self-host, and extend, and its resource footprint is minimal. However, its plugin ecosystem and security hardening are still emerging, so users needing battle-tested sandboxing or a large skill library may still prefer OpenClaw.",
+  "overview_markdown": "**nanobot** is an ultra-lightweight, open-source, self-hosted personal AI agent framework written in Python (3.11+), positioned as a compact rewrite of OpenClaw at roughly 4,000 lines of readable core code. Despite its small footprint, it ships a full feature set: a WebUI, terminal UI, chat-app integrations (Telegram, Discord, WhatsApp), tool use, long-term memory, MCP integrations, model routing across 46 providers, multi-agent delegation, scheduled automation with a calendar view, and an OpenAI-compatible API.\n\nArchitecturally, nanobot runs as a long-lived gateway service (`nanobot gateway`) that can be operated headless or with the WebUI, making it familiar to users coming from OpenClaw who already run agents as services. Recent commits show active investment in subagent session-owned task messaging and cancellation, WebUI mobile/touch polish, and provider compatibility fixes (e.g., GPT-6 temperature handling), indicating a fast-moving, well-maintained codebase with CI and PyPI distribution (`nanobot-ai`).\n\nCompared to OpenClaw, nanobot trades ecosystem scale and governance for simplicity and auditability: it's far easier to read, modify, and self-host, with strong local-first privacy posture and optional cloud model dependency. However, its sandboxing and security hardening are less documented, and its plugin ecosystem is still emerging, so production-critical or multi-tenant deployments may still favor OpenClaw's mature release channels and larger community.",
   "latest_release": {
     "version": "v0.3.5",
     "date": "2026-09-15T19:05:37Z",
     "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.3.5"
   },
-  "last_updated": "2026-10-05T02:43:01.657Z"
+  "last_updated": "2026-10-05T02:41:22.342Z"
 }

@@ -2,7 +2,7 @@
   "id": "zhayujie/CowAgent",
   "name": "CowAgent",
   "language": "Python",
-  "vibe_summary": "A massively popular open-source personal AI assistant and 'Agent Harness' that plans tasks, runs skills, and self-evolves with memory and knowledge. Its multi-agent, multi-model, multi-channel design and one-line install make it one of the most accessible OpenClaw-style frameworks.",
+  "vibe_summary": "A massively popular open-source personal AI assistant and 'Agent Harness' that plans tasks, runs skills, and self-evolves with memory and knowledge. Multi-agent, multi-model, and multi-channel with a one-line install and an active skill hub.",
   "health_status": "healthy",
   "github_stars": 47229,
   "metrics": {
@@ -21,25 +21,25 @@
     "agent-harness",
     "personal-assistant",
     "multi-agent",
-    "multi-channel",
-    "self-evolving"
+    "skills",
+    "im-integration"
   ],
-  "community_sentiment": 45,
-  "reddit_mentions": 10,
+  "community_sentiment": 55,
+  "reddit_mentions": 11,
   "web_mentions": 10,
   "best_for": [
     "Users wanting a 24/7 personal assistant across IM platforms",
-    "Developers extending agents via a skill hub and plugins",
-    "Multi-model users mixing LLM providers"
+    "Builders extending agents via a skill hub and plugins",
+    "Teams experimenting with multi-agent orchestration"
   ],
   "avoid_if": [
     "You need OS-level sandboxing for tool execution",
     "You want a minimal, auditable codebase",
-    "You require strict network isolation by default"
+    "You require strict offline-only operation guarantees"
   ],
   "deployment_target": [
-    "desktop",
     "self-hosted",
+    "desktop",
     "cloud"
   ],
   "local_first": true,
@@ -136,36 +136,36 @@
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 69,
-    "detected_at": "2026-10-04T17:49:58.178Z",
+    "detected_at": "2026-10-05T03:26:25.717Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "One-line install and lightweight deployment",
-    "Built-in skill hub with self-evolving memory and knowledge base",
-    "Broad IM channel coverage with active multi-agent teams",
-    "Very active maintenance with frequent releases"
+    "Very large community and 47k+ stars with active maintenance",
+    "Skill Hub and one-line install lower the barrier to extension",
+    "Broad multi-channel IM support out of the box",
+    "Self-evolution features: long-term memory and knowledge base"
   ],
   "openclaw_disadvantages": [
+    "Python runtime is heavier and slower to boot than lean alternatives",
     "Computer-control and shell access increase attack surface",
-    "Python runtime is heavier than compiled alternatives",
     "Security model appears application-level rather than OS-isolated",
-    "Smaller ecosystem footprint than OpenClaw's star count and channel catalog"
+    "Feature breadth may mean more config and dependency complexity"
   ],
-  "confidence_summary": "Strong evidence from README, commits, and release data confirms an active, feature-rich agent framework. However, the provided Reddit matches are unrelated noise, so community sentiment is highly uncertain.",
-  "evidence_confidence": 70,
+  "confidence_summary": "Strong evidence from README, releases, and commit activity confirms an active, feature-rich project. However, Reddit matches provided are irrelevant noise, so community sentiment is inferred mainly from stars and web footprint.",
+  "evidence_confidence": 72,
   "content_ops": {
-    "last_generated_at": "2026-10-04T17:50:09.520Z",
-    "last_reviewed_at": "2026-10-04T17:50:09.520Z",
+    "last_generated_at": "2026-10-05T03:26:35.142Z",
+    "last_reviewed_at": "2026-10-05T03:26:35.142Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Initial AI analysis for newly tracked clone.",
+    "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "CowAgent is an open-source personal AI assistant positioned as a reference implementation of 'Agent Harness' engineering. It proactively plans tasks, controls the host computer and external services, creates and runs Skills, and maintains a personal knowledge base with long-term memory. It supports multi-agent teams, multiple LLM providers, and deployment across the web and major IM platforms, all installable with a one-line setup.\n\nArchitecturally it is a Python-based, extensible framework with a Skill Hub ecosystem, prompt caching for Claude requests (with configurable TTL), and context trimming that preserves cacheable prompt prefixes — evidence of active performance engineering in recent commits. Memory features include an evolution log and 'dream diary', reflecting its self-evolution focus.\n\nCompared to OpenClaw, CowAgent emphasizes lightweight deployment and ease of extension over sheer channel breadth. Its computer-control capabilities imply meaningful shell-access risk, and its security model appears application-level rather than OS-isolated, so it suits tinkerers and personal-assistant users more than hardened enterprise deployments.",
+  "overview_markdown": "CowAgent is an open-source personal AI assistant positioned as a reference implementation of 'Agent Harness' engineering. It proactively plans tasks, controls the host computer and external services, creates and runs Skills, and maintains a personal knowledge base with long-term memory. It supports multi-agent teams, multiple LLM providers, and deployment across the web and major IM platforms, with a one-line install and a dedicated Skill Hub for extensions.\n\nRecent commits show active engineering focused on efficiency and reliability: prompt caching for Claude requests with configurable TTL, context trimming that preserves cacheable prompt prefixes, and a steady stream of community-contributed fixes across memory, model catalog, web search, and config handling. The project ships regular releases (v2.2.0 as of late September 2026) and maintains docs, a Discord, and a WeChat community.\n\nCompared to OpenClaw, CowAgent emphasizes self-evolution (memory, dream diary, evolution logs) and a broad skill ecosystem, while sharing the same general risk profile: deep computer control and shell access without strong OS-level sandboxing. It is a strong choice for users who want a hackable, community-driven assistant, but those prioritizing isolation and minimal attack surface may prefer containerized or Rust-based alternatives.",
   "latest_release": {
     "version": "2.2.0",
     "date": "2026-09-30T02:14:19Z",
     "url": "https://github.com/zhayujie/CowAgent/releases/tag/2.2.0"
   },
-  "last_updated": "2026-10-05T02:43:23.095Z"
+  "last_updated": "2026-10-05T03:26:35.142Z"
 }

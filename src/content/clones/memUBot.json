@@ -2,12 +2,12 @@
   "id": "NevaMind-AI/memUBot",
   "name": "memU Bot",
   "language": "TypeScript",
-  "vibe_summary": "An enterprise-focused OpenClaw alternative built on the memU memory framework, pitching persistent long-term memory and proactive behavior as its core edge. Recent commits show active work on secure API key storage, observability, and skill configuration.",
+  "vibe_summary": "An enterprise-focused OpenClaw alternative built on the memU memory framework, emphasizing persistent long-term memory and proactive behavior. Recent commits show active work on secure API key storage, observability, and multi-language support.",
   "health_status": "healthy",
   "github_stars": 459,
   "metrics": {
     "boot_time_ms": 220,
-    "memory_mb": 90,
+    "memory_mb": 85,
     "security_score": 78
   },
   "radar_chart": {
@@ -15,27 +15,27 @@
     "api_security": 8,
     "network_isolation": 7,
     "telemetry_safety": 7,
-    "shell_access_risk": 6
+    "shell_access_risk": 5
   },
   "tags": [
     "openclaw-alternative",
     "memory-layer",
     "enterprise",
-    "proactive-agent",
-    "self-hosted"
+    "local-first",
+    "ai-assistant"
   ],
   "community_sentiment": 55,
   "reddit_mentions": 1,
   "web_mentions": 10,
   "best_for": [
-    "Teams wanting an OpenClaw-style assistant with persistent memory",
-    "Enterprise users needing local-first, SOC2-friendly deployment",
-    "Users who want proactive rather than reactive agent behavior"
+    "Teams wanting a shared OpenClaw-style assistant",
+    "Users who need persistent long-term memory",
+    "Enterprise deployments with local data requirements"
   ],
   "avoid_if": [
-    "You want a mature, battle-tested ecosystem with many integrations",
-    "You need a stable tagged release (none published yet)",
-    "You prefer permissive licensing over AGPL-3.0"
+    "You want a mature, battle-tested ecosystem",
+    "You need an official stable release",
+    "You prefer minimal resource footprint"
   ],
   "deployment_target": [
     "desktop",
@@ -159,31 +159,32 @@
     "default_model_released_at": "2025-11-24",
     "default_model_date_source": "catalogue",
     "files_examined": 39,
-    "detected_at": "2026-10-03T09:33:46.423Z",
+    "detected_at": "2026-10-05T02:53:50.106Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
-    "Dedicated long-term memory layer via the memU framework",
-    "Enterprise positioning: secure key storage, observability, multi-user focus",
-    "Claims significant token cost reduction via memory caching",
-    "Encrypted API key and MCP env storage (AES-256-GCM, scrypt)"
+    "Dedicated long-term memory layer via memU framework",
+    "Encrypted secure storage for API keys (AES-256-GCM, scrypt)",
+    "Built-in observability: traces, metrics, structured logging",
+    "Team/enterprise-oriented multi-platform positioning",
+    "Claims significant token cost reduction via memory caching"
   ],
   "openclaw_disadvantages": [
     "Much smaller community and ecosystem than OpenClaw",
-    "No official releases yet; stability unproven",
+    "No official release published yet",
     "AGPL-3.0 license may restrict some commercial uses",
-    "Thin third-party discussion and independent reviews"
+    "Fewer skills/integrations than OpenClaw's large registry"
   ],
-  "confidence_summary": "Evidence is moderate: the README and recent commits clearly show active development on security and memory features, but there is minimal independent community discussion and no released version to validate enterprise claims.",
+  "confidence_summary": "Evidence is moderate: the README and recent commits clearly show active development on security and memory features, but there is almost no independent community discussion (1 Reddit match) and no official release, so real-world maturity is uncertain.",
   "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-09-21T02:42:26.411Z",
-    "last_reviewed_at": "2026-09-21T02:42:26.411Z",
+    "last_generated_at": "2026-10-05T02:53:56.282Z",
+    "last_reviewed_at": "2026-10-05T02:53:56.282Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "memU Bot positions itself as the enterprise-ready evolution of OpenClaw, built by NevaMind-AI on top of their open-source **memU memory framework**. Its central thesis is that personal AI assistants fail at production scale without persistent, structured long-term memory — so memory is treated as a first-class architectural layer rather than a bolt-on. The project claims up to 10x token cost reduction through intelligent memory caching, and emphasizes proactive behavior: the agent continuously captures intent and acts before being asked.\n\nOn the security and operations side, recent commits show meaningful investment: encrypted secure storage for API keys and MCP environment variables (scrypt + AES-256-GCM), backup/restore flows, an observability system with traces, metrics, and structured logging, and file access boundary controls. The project is local-first with a SOC2-friendly posture, supports multi-platform integrations, and offers one-click deployment targeting team-scale usage.\n\nCompared to OpenClaw, memU Bot trades ecosystem breadth for depth in memory and enterprise readiness. It is younger, has no tagged releases, a smaller community, and an AGPL-3.0 license that may complicate some commercial deployments. For teams that specifically need persistent memory and compliance-friendly self-hosting, it is a credible alternative; for general-purpose use, OpenClaw's maturity and integration ecosystem remain hard to beat.",
-  "last_updated": "2026-10-05T02:43:08.500Z"
+  "overview_markdown": "memU Bot positions itself as the enterprise-ready evolution of OpenClaw, built on top of the open-source memU memory framework. Its core architectural differentiator is a memory-first design: rather than treating each session as stateless, the assistant maintains persistent long-term understanding of users and context, which the project claims enables proactive behavior and up to 10x token cost reduction through intelligent memory caching.\n\nThe project is written in TypeScript and ships as a desktop-style application with multi-platform integrations. Recent development activity shows a strong focus on production readiness: encrypted secure storage for API keys using scrypt key derivation and AES-256-GCM, an observability subsystem with traces, metrics, and structured logging, MCP (Model Context Protocol) support with encrypted environment variables, and trilingual (EN/ZH/JA) internationalization.\n\nCompared to OpenClaw, memU Bot trades ecosystem breadth for depth in memory and enterprise features like SOC2-friendly local-first data handling and one-click deployment. However, it is still early: there is no official release, community discussion is minimal, and the AGPL-3.0 license may be a consideration for commercial adopters. It is best suited for teams who value persistent memory and local data control over a mature plugin ecosystem.",
+  "last_updated": "2026-10-05T02:53:56.282Z"
 }

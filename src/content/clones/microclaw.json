@@ -2,45 +2,45 @@
   "id": "microclaw/microclaw",
   "name": "MicroClaw",
   "language": "Rust",
-  "vibe_summary": "A Rust-native agentic assistant inspired by nanoclaw, shipping as a server, a native GPUI desktop app, and an embeddable SDK from one agent core. It targets durable, long-running agent work with resumable sessions, persistent memory, and governed extensions.",
+  "vibe_summary": "A self-hosted Rust agent platform inspired by nanoclaw, shipping one embeddable agent core across a server, a native GPUI desktop app, and an SDK. It emphasizes durable sessions, persistent memory, and governed tool access with recent security-hardening commits.",
   "health_status": "healthy",
   "github_stars": 744,
   "metrics": {
     "boot_time_ms": 8,
-    "memory_mb": 2,
-    "security_score": 72
+    "memory_mb": 1.8,
+    "security_score": 78
   },
   "radar_chart": {
     "sandboxing": 6,
     "api_security": 7,
-    "network_isolation": 6,
-    "telemetry_safety": 7,
+    "network_isolation": 5,
+    "telemetry_safety": 8,
     "shell_access_risk": 6
   },
   "tags": [
     "rust",
-    "agent-framework",
     "self-hosted",
-    "sdk",
-    "desktop-app"
+    "agent-engine",
+    "chat-assistant",
+    "sdk"
   ],
   "community_sentiment": 55,
   "reddit_mentions": 0,
   "web_mentions": 10,
   "best_for": [
     "Rust developers wanting an embeddable agent engine",
-    "Self-hosters needing always-on chat and scheduled agents",
-    "Users wanting a native desktop agent workspace"
+    "Self-hosters needing always-on chat agents with scheduling",
+    "Users wanting a native desktop agent app with approvals"
   ],
   "avoid_if": [
-    "You need a mature, battle-tested ecosystem",
-    "You want zero-config setup with hosted options",
-    "You rely on a large plugin marketplace"
+    "You need a large plugin/skill ecosystem",
+    "You want a managed hosted tier",
+    "You need proven production stability (main branch moves fast)"
   ],
   "deployment_target": [
     "self-hosted",
     "desktop",
-    "edge"
+    "cloud"
   ],
   "local_first": true,
   "cloud_dependency": "optional",
@@ -155,40 +155,40 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-09-29T02:54:13Z",
+    "default_model_last_touched": "2026-10-04T21:53:07Z",
     "default_model_released_at": "2025-09-29",
     "default_model_date_source": "model_id",
     "files_examined": 34,
-    "detected_at": "2026-10-03T09:32:42.368Z",
+    "detected_at": "2026-10-05T02:47:52.530Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
     "Rust core with very low resource footprint",
-    "Embeddable SDK for building custom Rust agent apps",
-    "Native GPUI desktop app for local workspace work",
-    "Explicit stable branch for production use"
+    "Embeddable SDK for embedding the agent engine in Rust apps",
+    "Native GPUI desktop app with checkpoints and approvals",
+    "Governance guards blocking tool writes to config/soul files"
   ],
   "openclaw_disadvantages": [
-    "Smaller community and fewer integrations",
+    "Far smaller community and channel coverage",
+    "No Reddit presence and thin third-party discussion",
     "Younger project with breaking changes on main",
-    "Less documentation and third-party tooling",
-    "No Reddit presence or measurable community discussion"
+    "Smaller skills/extension ecosystem"
   ],
-  "confidence_summary": "Evidence is solid from the README and active release history, but there is zero Reddit discussion and web mentions are mostly about the broader ecosystem rather than MicroClaw itself. Community sentiment and adoption signals remain uncertain.",
+  "confidence_summary": "Evidence from the README and recent commits is solid for architecture and security posture, but community sentiment is uncertain due to zero Reddit matches and web results mostly referencing OpenClaw rather than MicroClaw itself.",
   "evidence_confidence": 62,
   "content_ops": {
-    "last_generated_at": "2026-09-21T02:30:34.080Z",
-    "last_reviewed_at": "2026-09-21T02:30:34.080Z",
+    "last_generated_at": "2026-10-05T02:47:58.383Z",
+    "last_reviewed_at": "2026-10-05T02:47:58.383Z",
     "refresh_mode": "rewrite",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
     "change_reason": "Scheduled AI re-analysis after source refresh.",
     "generation_version": "clawclones-v2-decision-support"
   },
-  "overview_markdown": "MicroClaw is a self-hosted agentic AI platform written in Rust, inspired by nanoclaw and positioned as a lightweight alternative in the OpenClaw ecosystem. Its architecture centers on a single embeddable agent core that powers three surfaces: **MicroClaw Server** for always-on chat channels, APIs, scheduling, and automation; **MicroClaw Work**, a native GPUI desktop app for local workspace-centered agent sessions; and **`microclaw-sdk`**, which lets other Rust applications embed the same channel-independent Agent Engine with tools, policy, memory, skills, and runtime events.\n\nThe project is designed for work that outlasts a single request: multi-step tool use, resumable sessions, durable delivery, persistent memory, scheduled tasks, and governed extensions all run in one runtime. Compared to OpenClaw, MicroClaw trades ecosystem breadth for a lean Rust foundation, a native desktop experience, and an SDK-first embedding story. Development is active — the v0.6.1 release shipped recently with SDK 0.5.1 adding skill and delegation APIs — though the maintainers caution that `main` moves fast and production users should pin to the `stable` branch.",
+  "overview_markdown": "MicroClaw is a self-hosted agentic AI platform written in Rust, inspired by nanoclaw. It is built around a single embeddable Agent Engine exposed through three surfaces: **MicroClaw Server** for always-on chat channels, Web/API access, scheduling, and automation; **MicroClaw Work**, a native GPUI desktop app for local workspace-centered agent sessions with approvals and checkpoints; and **`microclaw-sdk`**, which lets other Rust applications embed the same engine, tools, policy, memory, skills, and runtime events.\n\nThe architecture targets work that outlasts a single request: multi-step tool use, resumable sessions, durable delivery, persistent memory, scheduled tasks, and governed extensions all share one runtime. Recent commits show active security hardening, including a GovernanceGuard that blocks file-tool writes to governance files (AGENTS.md, SOUL.md, config, path allowlists) with symlink-aware path resolution, plus memory deduplication fixes and Telegram partial-quote context forwarding.\n\nCompared to OpenClaw, MicroClaw trades ecosystem breadth for a lean Rust core, an embeddable SDK, and a native desktop experience. It is MIT licensed, actively maintained (v0.7.0, frequent commits, Dependabot automation), and recommends the `stable` branch for production since `main` moves quickly. Its community footprint is still small, with minimal Reddit or third-party discussion.",
   "latest_release": {
     "version": "v0.7.0",
     "date": "2026-09-29T06:18:19Z",
     "url": "https://github.com/microclaw/microclaw/releases/tag/v0.7.0"
   },
-  "last_updated": "2026-10-05T02:43:05.670Z"
+  "last_updated": "2026-10-05T02:47:58.383Z"
 }

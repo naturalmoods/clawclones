@@ -70,20 +70,13 @@
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "deepseek-chat",
-      "provider": "deepseek",
-      "path": "crates/app/src/chat.rs",
-      "line": "deepseek.model = \"deepseek-chat\".to_owned();",
+      "model": "MiniMax-M2.5",
+      "provider": "minimax",
+      "path": "crates/app/src/provider/model_candidate_resolver_runtime.rs",
+      "line": "model: \"MiniMax-M2.5\".to_owned(),",
       "strength": "weak"
     },
     "default_models": [
-      {
-        "model": "deepseek-chat",
-        "provider": "deepseek",
-        "path": "crates/app/src/chat.rs",
-        "line": "deepseek.model = \"deepseek-chat\".to_owned();",
-        "strength": "weak"
-      },
       {
         "model": "MiniMax-M2.5",
         "provider": "minimax",
@@ -92,31 +85,24 @@
         "strength": "weak"
       },
       {
-        "model": "claude-sonnet-4-6",
-        "provider": "anthropic",
-        "path": "crates/app/src/provider/tests.rs",
-        "line": "model: \"claude-sonnet-4-6\".to_owned(),",
-        "strength": "weak"
-      },
-      {
-        "model": "gpt-5-pro",
-        "provider": "openai",
-        "path": "crates/app/src/provider/tests.rs",
-        "line": "\"message\": \"The model `gpt-5-pro` only supports /v1/responses and not this endpoint.\"",
-        "strength": "weak"
-      },
-      {
-        "model": "gemini-3.1-pro",
-        "provider": "google",
-        "path": "crates/app/src/provider/tests.rs",
-        "line": "model: \"gemini-3.1-pro\".to_owned(),",
-        "strength": "weak"
-      },
-      {
         "model": "gpt-4o",
         "provider": "openai",
         "path": "crates/app/src/provider/failover.rs",
         "line": "model: \"openai/gpt-4o\".to_owned(),",
+        "strength": "weak"
+      },
+      {
+        "model": "gpt-5.4",
+        "provider": "openai",
+        "path": "crates/app/src/provider/request_executor.rs",
+        "line": "model: \"gpt-5.4\",",
+        "strength": "weak"
+      },
+      {
+        "model": "deepseek-chat",
+        "provider": "deepseek",
+        "path": "crates/app/src/config/provider/tests.rs",
+        "line": "model: \"deepseek-chat\".to_owned(),",
         "strength": "weak"
       }
     ],
@@ -143,7 +129,7 @@
       {
         "kind": "env_key",
         "value": "AWS_BEARER_TOKEN_BEDROCK",
-        "path": "crates/app/src/config/provider.rs",
+        "path": "crates/app/src/config/provider/catalog.rs",
         "strength": "weak"
       },
       {
@@ -155,7 +141,7 @@
       {
         "kind": "env_key",
         "value": "DEEPSEEK_API_KEY",
-        "path": "crates/app/src/config/provider.rs",
+        "path": "crates/app/src/config/provider/catalog.rs",
         "strength": "weak"
       },
       {
@@ -197,7 +183,7 @@
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "crates/daemon/src/gateway/client.rs",
+        "path": "crates/app/src/channel/registry/config_backed.rs",
         "strength": "strong"
       },
       {
@@ -213,11 +199,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-04-19T11:08:39Z",
-    "default_model_released_at": "2024-12-26",
+    "default_model_last_touched": "2026-04-18T15:06:55Z",
+    "default_model_released_at": "2026-02-12",
     "default_model_date_source": "catalogue",
-    "files_examined": 69,
-    "detected_at": "2026-10-03T09:32:20.631Z",
+    "files_examined": 87,
+    "detected_at": "2026-10-05T02:45:54.051Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
@@ -236,12 +222,12 @@
   "evidence_confidence": 72,
   "content_ops": {
     "last_generated_at": "2026-09-21T02:21:57.002Z",
-    "last_reviewed_at": "2026-09-21T02:21:57.002Z",
-    "refresh_mode": "rewrite",
+    "last_reviewed_at": "2026-10-05T02:46:07.562Z",
+    "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search",
-    "change_reason": "Scheduled AI re-analysis after source refresh.",
+    "change_reason": "AI generation unavailable; preserved prior AI fields and refreshed measured signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "Loong is a Rust-based foundation for building vertical AI agents, positioning itself as a security- and performance-first alternative in the OpenClaw ecosystem. Its core architectural idea is **architecture-governed safety**: outbound effects are modeled as `Action`s that must be authorized by policy before execution, with sandboxes and model review treated as defense-in-depth rather than the primary boundary.\n\nUnder the hood, Loong builds on its own actor runtime, [loac](https://github.com/InuDial/loac), which provides a lifetime model making components easy to run, extend, stop, and restart. Recent commits show heavy investment in converging the actor message API (reply/stream shapes, sync handlers, dispatch strategies) and building agents from serializable `AgentConfig`, indicating the framework plumbing is maturing even though product features are not.\n\nCompared to OpenClaw, Loong is explicitly **not ready to install or use** — the maintainers describe it as an independent-history rewrite containing an architecture and contract skeleton. Its long-term bet is that a small, well-governed Rust core with dual extension paths (compiled Rust integrations plus runtime scripts) will out-evolve larger but less disciplined codebases. For now, it is best suited to contributors and Rust developers who want to shape an agent framework from the ground up rather than end users seeking a working assistant.",
-  "last_updated": "2026-10-05T02:43:04.272Z"
+  "last_updated": "2026-10-05T02:46:07.562Z"
 }
