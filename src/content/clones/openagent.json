@@ -4,7 +4,7 @@
   "language": "Go",
   "vibe_summary": "A single-binary, self-hostable personal AI assistant combining LLMs, RAG knowledge bases, and agent loops with computer-use, browser-use, and coding capabilities. Recent commits show an aggressive security-hardening push closing pentest findings, SSRF, XSS, and authz issues.",
   "health_status": "healthy",
-  "github_stars": 5689,
+  "github_stars": 5684,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 15,
@@ -49,10 +49,10 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-10-01T12:16:33Z",
+  "last_commit_at": "2026-10-05T18:45:33Z",
   "contributors_count": 65,
   "open_issues_count": 51,
-  "release_cadence_days": 2,
+  "release_cadence_days": 1,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -307,5 +307,5 @@
     "date": "2026-09-01T14:04:35Z",
     "url": "https://github.com/the-open-agent/openagent/releases/tag/v2.89.2"
   },
-  "last_updated": "2026-10-05T03:19:48.641Z"
+  "last_updated": "2026-10-06T03:35:19.846Z"
 }

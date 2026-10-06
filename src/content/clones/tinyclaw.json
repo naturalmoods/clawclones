@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A multi-agent, multi-team orchestrator aimed at running a 'one person company' with isolated agent workspaces and a slick web office UI. Actively developed with rapid feature churn around its TinyOffice dashboard, task system, and channel integrations.",
   "health_status": "healthy",
-  "github_stars": 3620,
+  "github_stars": 3618,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 80,
@@ -136,5 +136,5 @@
     "date": "2026-03-26T17:23:07Z",
     "url": "https://github.com/TinyAGI/tinyagi/releases/tag/v0.0.20"
   },
-  "last_updated": "2026-10-05T03:20:50.187Z"
+  "last_updated": "2026-10-06T03:35:20.763Z"
 }

@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-creating, self-rewriting AI agent with persistent identity and durable memory across restarts. It coordinates a swarm of specialist agents and can modify its own code, prompts, tools, and dependencies.",
   "health_status": "healthy",
-  "github_stars": 1407,
+  "github_stars": 1411,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -48,10 +48,10 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-26T21:24:45Z",
-  "contributors_count": 46,
-  "open_issues_count": 219,
-  "release_cadence_days": 2,
+  "last_commit_at": "2026-10-05T18:44:08Z",
+  "contributors_count": 48,
+  "open_issues_count": 238,
+  "release_cadence_days": 3,
   "operational_risk": "high",
   "model_support": {
     "providers": [
@@ -182,9 +182,9 @@
   },
   "overview_markdown": "Ouroboros is an open-source, general-purpose AI agent built around a striking premise: it can rewrite the very implementation it runs on. Its identity, durable memory, and history persist across tasks and restarts, and reflection can change how it understands itself without breaking continuity. It coordinates a live swarm of specialist agents and works on external projects, with a rigorous CONTRIBUTING.md-gated review flow for changes.\n\nArchitecturally, it runs as a native desktop app (macOS, Windows, Linux installers provided) or a headless CLI, keeping its repository, memory, and history on your machine while model inference can use configured remote APIs or a local GGUF model. Recent commits show heavy investment in a 'plan-review' subsystem with typed refusals, custody tracking, and multi-seat review waves — much of it co-authored by the agent itself, which is both its signature feature and its biggest risk factor.\n\nCompared to OpenClaw, Ouroboros trades OpenClaw's mature multi-channel assistant experience and large skills registry for a far more radical self-evolution loop. It is best suited to researchers and experimenters; production users should weigh the high shell-access and self-modification risk carefully.",
   "latest_release": {
-    "version": "v7.5.1",
-    "date": "2026-09-26T23:00:38Z",
-    "url": "https://github.com/razzant/ouroboros/releases/tag/v7.5.1"
+    "version": "v7.6.0",
+    "date": "2026-10-05T23:10:11Z",
+    "url": "https://github.com/razzant/ouroboros/releases/tag/v7.6.0"
   },
-  "last_updated": "2026-10-05T03:13:12.318Z"
+  "last_updated": "2026-10-06T03:35:15.714Z"
 }

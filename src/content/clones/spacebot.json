@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "An opinionated Rust agent harness built for teams and communities, splitting the monolithic agent loop into specialized processes with typed graph memory in SQLite. It emphasizes durable state, multi-user concurrency, and self-improving skills over markdown-file memory hacks.",
   "health_status": "healthy",
-  "github_stars": 2403,
+  "github_stars": 2404,
   "metrics": {
     "boot_time_ms": 45,
     "memory_mb": 18,
@@ -195,5 +195,5 @@
     "date": "2026-05-07T06:55:33Z",
     "url": "https://github.com/spacedriveapp/spacebot/releases/tag/v0.5.0"
   },
-  "last_updated": "2026-10-05T03:18:02.348Z"
+  "last_updated": "2026-10-06T03:35:18.416Z"
 }
