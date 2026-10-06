@@ -262,7 +262,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 391459
+      "stars": 391513
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -528,7 +528,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 32938
+      "stars": 32936
     }
   ],
   "qwibitai/nanoclaw": [
@@ -794,7 +794,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 30876
+      "stars": 30882
     }
   ],
   "HKUDS/nanobot": [
@@ -1060,7 +1060,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 48806
+      "stars": 48827
     }
   ],
   "sipeed/picoclaw": [
@@ -1326,7 +1326,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 30012
+      "stars": 30013
     }
   ],
   "hesreallyhim/awesome-claude-code": [
@@ -1598,7 +1598,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 12639
+      "stars": 12640
     }
   ],
   "memovai/mimiclaw": [
@@ -1864,7 +1864,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 5783
+      "stars": 5784
     }
   ],
   "TinyAGI/tinyclaw": [
@@ -2130,7 +2130,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 3618
+      "stars": 3620
     }
   ],
   "nullclaw/nullclaw": [
@@ -2662,7 +2662,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 2231
+      "stars": 2233
     }
   ],
   "PhantomReaper2025/titanclaw": [
@@ -5074,7 +5074,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 18205
+      "stars": 18212
     }
   ],
   "EthereumPhone/AndyClaw": [
@@ -5606,7 +5606,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 1411
+      "stars": 1410
     }
   ],
   "zofrasca/lightclaw": [
@@ -6138,7 +6138,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 33330
+      "stars": 33346
     }
   ],
   "NevaMind-AI/memUBot": [
@@ -6404,7 +6404,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 459
+      "stars": 458
     }
   ],
   "puremachinery/carapace": [
@@ -7734,7 +7734,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 35443
+      "stars": 35457
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -8000,7 +8000,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 6082
+      "stars": 6084
     }
   ],
   "open-gitagent/gitclaw": [
@@ -8266,7 +8266,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 710
+      "stars": 711
     }
   ],
   "AstrBotDevs/AstrBot": [
@@ -8532,7 +8532,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 41454
+      "stars": 41487
     }
   ],
   "unitedbyai/droidclaw": [
@@ -8798,7 +8798,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 1569
+      "stars": 1570
     }
   ],
   "microclaw/microclaw": [
@@ -9064,7 +9064,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 745
+      "stars": 746
     }
   ],
   "letta-ai/lettabot": [
@@ -9862,7 +9862,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 2404
+      "stars": 2406
     }
   ],
   "poco-ai/poco-agent": [
@@ -10394,7 +10394,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 251474
+      "stars": 251643
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -10660,7 +10660,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 3639
+      "stars": 3640
     }
   ],
   "aiming-lab/MetaClaw": [
@@ -11192,7 +11192,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 640
+      "stars": 639
     }
   ],
   "agent0ai/agent-zero": [
@@ -11458,7 +11458,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 19376
+      "stars": 19378
     }
   ],
   "ClawRunr/JavaClaw": [
@@ -11500,7 +11500,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 2196
+      "stars": 2203
     }
   ],
   "ModalityDance/PalmClaw": [
@@ -11528,7 +11528,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 11269
+      "stars": 11274
     }
   ],
   "zhayujie/CowAgent": [
@@ -11542,7 +11542,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 47232
+      "stars": 47251
     }
   ],
   "the-open-agent/openagent": [
@@ -11552,7 +11552,7 @@
     },
     {
       "date": "2026-10-06",
-      "stars": 5684
+      "stars": 5689
     }
   ]
 }

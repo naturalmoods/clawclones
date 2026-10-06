@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A personal AI assistant from the AgentScope team focused on easy self-hosting and multi-chat-app support. Recently rebranded to QwenPaw and in an active beta stabilization cycle with frequent fixes.",
   "health_status": "healthy",
-  "github_stars": 35443,
+  "github_stars": 35457,
   "metrics": {
     "boot_time_ms": 200,
     "memory_mb": 80,
@@ -209,5 +209,5 @@
     "date": "2026-09-11T04:19:23Z",
     "url": "https://github.com/agentscope-ai/QwenPaw/releases/tag/v2.2.1"
   },
-  "last_updated": "2026-10-06T03:34:55.178Z"
+  "last_updated": "2026-10-06T17:44:50.504Z"
 }

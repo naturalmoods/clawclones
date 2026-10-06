@@ -50,7 +50,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-08-25T12:05:07Z",
   "contributors_count": 44,
-  "open_issues_count": 258,
+  "open_issues_count": 259,
   "release_cadence_days": 9,
   "operational_risk": "medium",
   "model_support": {
@@ -135,5 +135,5 @@
     "date": "2026-08-24T12:11:06Z",
     "url": "https://github.com/dataelement/Clawith/releases/tag/v1.11.4-fix.1"
   },
-  "last_updated": "2026-10-06T03:34:57.326Z"
+  "last_updated": "2026-10-06T17:44:52.848Z"
 }
