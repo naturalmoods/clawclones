@@ -118,7 +118,13 @@
       {
         "kind": "endpoint",
         "value": "openai.azure.com",
-        "path": "web/src/ProviderSetting.js",
+        "path": "web-old/src/ProviderSetting.js",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "openai.azure.com",
+        "path": "web/src/lib/provider-setting.ts",
         "strength": "strong"
       },
       {
@@ -196,13 +202,13 @@
       {
         "kind": "endpoint",
         "value": "11434",
-        "path": "web/src/ProviderSetting.js",
+        "path": "web-old/src/ProviderSetting.js",
         "strength": "strong"
       },
       {
         "kind": "endpoint",
         "value": "11434",
-        "path": "model/local.go",
+        "path": "web/src/lib/provider-setting.ts",
         "strength": "strong"
       },
       {
@@ -226,7 +232,7 @@
       {
         "kind": "prose",
         "value": "openai-compatible",
-        "path": "web/src/ProviderSetting.js",
+        "path": "web-old/src/ProviderSetting.js",
         "strength": "strong"
       },
       {
@@ -250,7 +256,13 @@
       {
         "kind": "endpoint",
         "value": "8000/v1",
-        "path": "web/src/ProviderSetting.js",
+        "path": "web-old/src/ProviderSetting.js",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "8000/v1",
+        "path": "web/src/lib/provider-setting.ts",
         "strength": "strong"
       },
       {
@@ -275,8 +287,8 @@
     "default_model_last_touched": "2026-09-17T13:05:53Z",
     "default_model_released_at": "2023-05-28",
     "default_model_date_source": "catalogue",
-    "files_examined": 69,
-    "detected_at": "2026-10-05T11:05:01.786Z",
+    "files_examined": 77,
+    "detected_at": "2026-10-07T10:48:42.894Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
