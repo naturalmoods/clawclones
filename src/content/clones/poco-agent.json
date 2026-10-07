@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "Poco is a polished, team-oriented OpenClaw alternative with a slick Next.js UI, channel-based collaboration, and a sandboxed Claude Code–powered runtime. It feels like 'Slack meets Claude Code' with built-in IM integrations and one-click Docker self-hosting.",
   "health_status": "healthy",
-  "github_stars": 1355,
+  "github_stars": 1354,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -201,5 +201,5 @@
     "date": "2026-06-18T02:32:30Z",
     "url": "https://github.com/poco-ai/poco-claw/releases/tag/0.5.7"
   },
-  "last_updated": "2026-10-07T03:01:00.965Z"
+  "last_updated": "2026-10-07T18:17:06.727Z"
 }
