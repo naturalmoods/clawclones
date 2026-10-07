@@ -3,7 +3,7 @@
   "name": "Angel-claw",
   "language": "Python",
   "vibe_summary": "Lean. Compatible. Based OpenClaw. Python ❤️",
-  "health_status": "warning",
+  "health_status": "healthy",
   "github_stars": 7,
   "metrics": {
     "boot_time_ms": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:23.266Z",
-    "last_reviewed_at": "2026-10-06T12:21:39.875Z",
+    "last_reviewed_at": "2026-10-07T12:13:45.039Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-04-10T08:13:26Z",
     "url": "https://github.com/Abdur-rahmaanJ/angel-claw/releases/tag/0.13.0"
   },
-  "last_updated": "2026-10-06T12:21:39.875Z",
+  "last_updated": "2026-10-07T12:13:45.039Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
