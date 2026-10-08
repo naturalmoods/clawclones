@@ -50,7 +50,7 @@
   "license_type": "NOASSERTION",
   "last_commit_at": "2026-10-04T16:31:42Z",
   "contributors_count": 129,
-  "open_issues_count": 256,
+  "open_issues_count": 258,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "model_support": {
@@ -248,5 +248,5 @@
     "date": "2026-06-15T08:59:44Z",
     "url": "https://github.com/nextlevelbuilder/goclaw/releases/tag/v3.14.0"
   },
-  "last_updated": "2026-10-08T03:17:26.111Z"
+  "last_updated": "2026-10-08T18:17:53.684Z"
 }
