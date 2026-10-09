@@ -57,11 +57,7 @@
   "model_support": {
     "providers": [
       "anthropic",
-      "fireworks",
-      "google",
-      "groq",
       "litellm",
-      "minimax",
       "mistral",
       "moonshot",
       "ollama",
@@ -72,26 +68,19 @@
       "vertex",
       "zhipu"
     ],
-    "provider_count": 11,
+    "provider_count": 7,
     "local_capable": true,
     "aggregator_capable": true,
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "claude-opus-4.6",
-      "provider": "anthropic",
-      "path": ".env.example",
-      "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
+      "model": "glm-5.2",
+      "provider": "zhipu",
+      "path": "hermes_cli/models_catalog_static.py",
+      "line": "PREFERRED_SILENT_DEFAULT_MODEL = \"z-ai/glm-5.2\"",
       "strength": "strong"
     },
     "default_models": [
-      {
-        "model": "claude-opus-4.6",
-        "provider": "anthropic",
-        "path": ".env.example",
-        "line": "# LLM_MODEL=anthropic/claude-opus-4.6",
-        "strength": "strong"
-      },
       {
         "model": "glm-5.2",
         "provider": "zhipu",
@@ -121,7 +110,7 @@
         "strength": "weak"
       }
     ],
-    "default_model_ambiguous": true,
+    "default_model_ambiguous": false,
     "evidence": [
       {
         "kind": "dependency",
@@ -136,42 +125,6 @@
         "strength": "weak"
       },
       {
-        "kind": "env_key",
-        "value": "FIREWORKS_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "FIREWORKS_API_KEY",
-        "path": "hermes_cli/providers.py",
-        "strength": "weak"
-      },
-      {
-        "kind": "env_key",
-        "value": "GEMINI_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "GOOGLE_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "GROQ_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "GROQ_MODEL",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
         "kind": "endpoint",
         "value": "litellm",
         "path": "hermes_cli/model_normalize.py",
@@ -182,18 +135,6 @@
         "value": "litellm",
         "path": "hermes_cli/config.py",
         "strength": "weak"
-      },
-      {
-        "kind": "env_key",
-        "value": "MINIMAX_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "api.minimaxi.com",
-        "path": ".env.example",
-        "strength": "strong"
       },
       {
         "kind": "dependency",
@@ -208,26 +149,26 @@
         "strength": "weak"
       },
       {
-        "kind": "env_key",
-        "value": "KIMI_API_KEY",
-        "path": ".env.example",
+        "kind": "endpoint",
+        "value": "api.moonshot.ai",
+        "path": "hermes_cli/model_normalize.py",
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "api.moonshot.cn",
-        "path": ".env.example",
+        "kind": "env_key",
+        "value": "KIMI_API_KEY",
+        "path": "hermes_cli/config.py",
+        "strength": "weak"
+      },
+      {
+        "kind": "env_key",
+        "value": "OLLAMA_HOST",
+        "path": "hermes_cli/models_local.py",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "OLLAMA_BASE_URL",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "OLLAMA_HOST",
         "path": "hermes_cli/models_local.py",
         "strength": "strong"
       },
@@ -287,22 +228,22 @@
       },
       {
         "kind": "env_key",
-        "value": "GLM_API_KEY",
-        "path": ".env.example",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
         "value": "ZHIPU_API_KEY",
         "path": "agent/redact.py",
         "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.z.ai",
+        "path": "agent/retry_utils.py",
+        "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-10-04T07:09:15Z",
-    "default_model_released_at": "2026-02-04",
+    "default_model_last_touched": "2026-10-07T21:12:40Z",
+    "default_model_released_at": "2026-06-16",
     "default_model_date_source": "catalogue",
-    "files_examined": 112,
-    "detected_at": "2026-10-07T10:45:24.593Z",
+    "files_examined": 108,
+    "detected_at": "2026-10-09T11:05:15.649Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
