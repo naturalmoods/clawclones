@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A radically minimal OpenClaw alternative where each agent runs in its own Linux container with real OS-level isolation instead of app-level permission checks. Small enough to read end-to-end, with per-agent Slack apps, memory, and scheduled jobs on Anthropic's Agents SDK.",
   "health_status": "healthy",
-  "github_stars": 30902,
+  "github_stars": 30903,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.5,
@@ -49,9 +49,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-06T13:58:40Z",
-  "contributors_count": 173,
-  "open_issues_count": 1042,
+  "last_commit_at": "2026-10-09T15:27:51Z",
+  "contributors_count": 174,
+  "open_issues_count": 1041,
   "release_cadence_days": 16,
   "operational_risk": "medium",
   "model_support": {
@@ -132,9 +132,9 @@
   },
   "overview_markdown": "NanoClaw is a deliberately minimal reimplementation of OpenClaw's core idea: a personal AI assistant reachable over WhatsApp, Telegram, Slack, Discord, Gmail, and iMessage, with persistent memory and scheduled jobs. The author's stated motivation is trust — OpenClaw's ~500k lines, 53 config files, and 70+ dependencies were too much to audit, so NanoClaw compresses the same core functionality into one process and a handful of files running on Anthropic's Agents SDK.\n\nThe defining architectural difference is isolation. Where OpenClaw enforces security at the application layer (allowlists, pairing codes) inside a single shared Node process, NanoClaw runs each agent in its own Linux container with filesystem isolation. A credential gateway brokers Anthropic credentials so agents never hold raw keys, and recent commits show active hardening: CA trust fixes for TLS-inspecting gateways, log redaction that survives BigInt/cycle edge cases, and a pinned Baileys release to patch a WhatsApp message-spoofing CVE.\n\nOperationally it targets self-hosters: a `nanoclaw.sh` bootstrap installs Node, pnpm, and Docker, builds the agent container, and pairs channels, with Claude Code auto-invoked to diagnose failed steps. Recent work added update channels (stable/beta/edge) and per-agent Slack app provisioning, signaling a maturing project — though the ecosystem and feature surface remain far smaller than OpenClaw's.",
   "latest_release": {
-    "version": "v2.4.0",
-    "date": "2026-09-23T17:15:13Z",
-    "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2.4.0"
+    "version": "v2026.10.0",
+    "date": "2026-10-09T11:26:13Z",
+    "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.0"
   },
-  "last_updated": "2026-10-09T03:23:47.006Z"
+  "last_updated": "2026-10-09T17:51:05.531Z"
 }

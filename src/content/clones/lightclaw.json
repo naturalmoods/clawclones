@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A single-binary Rust rewrite of the OpenClaw concept, shipping agentic tooling, memory, and Telegram/Discord integration in a ~15MB executable. It positions itself as the fast, local-first, low-footprint alternative for users who want Claw without the heavy runtime.",
   "health_status": "healthy",
-  "github_stars": 224,
+  "github_stars": 226,
   "metrics": {
     "boot_time_ms": 25,
     "memory_mb": 15,
@@ -181,5 +181,5 @@
     "date": "2026-02-18T23:15:03Z",
     "url": "https://github.com/enzofrasca/lightclaw/releases/tag/v0.2.1"
   },
-  "last_updated": "2026-10-09T03:23:57.346Z"
+  "last_updated": "2026-10-09T17:51:15.842Z"
 }
