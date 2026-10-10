@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "Clawith positions itself as 'OpenClaw for Teams' — a multi-agent collaboration platform where each agent gets persistent identity, long-term memory, and its own workspace. Its 'Aware' autonomous consciousness system lets agents proactively perceive, decide, and act rather than waiting for commands.",
   "health_status": "healthy",
-  "github_stars": 4165,
+  "github_stars": 4164,
   "metrics": {
     "boot_time_ms": 220,
     "memory_mb": 85,
@@ -135,5 +135,5 @@
     "date": "2026-08-24T12:11:06Z",
     "url": "https://github.com/dataelement/Clawith/releases/tag/v1.11.4-fix.1"
   },
-  "last_updated": "2026-10-10T03:02:54.692Z"
+  "last_updated": "2026-10-10T16:46:41.895Z"
 }
