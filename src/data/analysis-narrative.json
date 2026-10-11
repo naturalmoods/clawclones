@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-27",
-  "data_as_of": "2026-09-27",
+  "generated_at": "2026-10-11",
+  "data_as_of": "2026-10-11",
   "model": "moonshotai/kimi-k3",
   "tldr": [
-    "Hermes Agent led absolute gains at +1870; OpenClaw added +458 to 390599.",
-    "Edge and minimalist tools are the largest cohort at 22 projects with a median 12.5 MB footprint.",
-    "Compiled runtimes average a security score of 78 versus 66 for scripting runtimes.",
-    "36 projects are local-first and only 4 require a cloud account."
+    "Hermes Agent gained the most stars (+1420); OpenClaw stays largest at 391630.",
+    "Edge & minimalist is the biggest cohort with 24 projects and a 75 median security score.",
+    "Compiled runtimes average 77 on security vs 65 for scripting runtimes.",
+    "41 projects are local-first; only 5 require a cloud connection."
   ],
   "sections": {}
 }
