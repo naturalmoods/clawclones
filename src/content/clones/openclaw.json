@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "The canonical open-source personal AI assistant that runs on your own hardware and meets you in 20+ chat channels. Massive community, relentless release cadence, and a privacy-first 'your state stays on your devices' architecture.",
   "health_status": "healthy",
-  "github_stars": 391587,
+  "github_stars": 391630,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -50,9 +50,9 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-10T16:42:52Z",
-  "contributors_count": 3522,
-  "open_issues_count": 9425,
+  "last_commit_at": "2026-10-11T02:33:28Z",
+  "contributors_count": 3527,
+  "open_issues_count": 9485,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "model_support": {
@@ -298,9 +298,9 @@
   },
   "overview_markdown": "OpenClaw is the reference open-source personal AI assistant: a single Gateway process runs on your own hardware and connects you to Discord, iMessage, Slack, Teams, Telegram, WhatsApp, and 20+ other channels, plus native apps for macOS, iOS, Android, Windows, and Linux. State, memory, and credentials live locally; model providers and agent harnesses (Claude, Codex, local models) are swappable plugins, and the same binary scales from a laptop assistant to a shared team deployment with only configuration changes.\n\nThe architecture follows a 'trusted gateway, untrusted execution, deterministic policy' model, with telemetry limited to an opt-out daily version check and opt-in anonymous statistics. Recent commits show heavy investment in reliability: durable progress-attachment custody across restarts, host-owned SQLite brokers for session lifecycle, doctor/migration repair tooling, and CI policy hardening — evidence of a maturing, production-grade codebase.\n\nAs the upstream project, OpenClaw defines the category that clones (Hermes, Muse, BetterClaw, AnyClaw) differentiate against. Its strengths are ecosystem breadth (5,400+ community skills), a foundation-governed MIT license with no paid tier, and an aggressive release cadence (v2026.9.x with atomic updates and plugin hot reloading). Trade-offs include a Node.js resource footprint, occasional regressions from fast shipping, and setup complexity for non-technical users.",
   "latest_release": {
-    "version": "v2026.9.9",
-    "date": "2026-10-08T10:23:23Z",
-    "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.9.9"
+    "version": "v2026.10.1",
+    "date": "2026-10-10T23:54:03Z",
+    "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.1"
   },
-  "last_updated": "2026-10-10T16:46:55.423Z"
+  "last_updated": "2026-10-11T02:34:03.261Z"
 }
