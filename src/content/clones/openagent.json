@@ -49,7 +49,7 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-10-10T12:25:25Z",
+  "last_commit_at": "2026-10-11T14:10:35Z",
   "contributors_count": 65,
   "open_issues_count": 51,
   "release_cadence_days": 1,
@@ -319,5 +319,5 @@
     "date": "2026-09-01T14:04:35Z",
     "url": "https://github.com/the-open-agent/openagent/releases/tag/v2.89.2"
   },
-  "last_updated": "2026-10-11T02:34:12.793Z"
+  "last_updated": "2026-10-11T17:12:04.106Z"
 }
