@@ -48,25 +48,25 @@
     "url": "https://clawclones.com/compare/hermes-agent-vs-zeroclaw"
   },
   "updated_at": "2026-10-11T23:59:59.999Z",
-  "generated_at": "2026-10-11T17:12:10.458Z",
+  "generated_at": "2026-10-12T02:49:49.093Z",
   "freshness": {
     "updated_at": "2026-10-11T23:59:59.999Z",
-    "generated_at": "2026-10-11T17:12:10.458Z",
-    "source_age_hours": 0,
+    "generated_at": "2026-10-12T02:49:49.093Z",
+    "source_age_hours": 2.8,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
         "updated_at": "2026-10-11T17:12:10.083Z",
-        "age_hours": 0
+        "age_hours": 9.6
       },
       "history": {
         "updated_at": "2026-10-11T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 2.8
       },
       "analytics": {
         "updated_at": "2026-10-11T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 2.8
       }
     }
   }
