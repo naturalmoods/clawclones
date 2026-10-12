@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 50,
-    "total_stars": 1071598,
-    "total_stars_formatted": "1071.6k",
+    "total_stars": 1071775,
+    "total_stars_formatted": "1071.8k",
     "most_active_language": "Python",
     "language_breakdown": {
       "TypeScript": 11,
@@ -25,15 +25,15 @@
     "avg_sentiment": 55,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 391679,
+      "stars": 391703,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 252745,
-    "stars_growth_7d": 1600,
+    "stars": 252843,
+    "stars_growth_7d": 1585,
     "language": "Python",
     "sentiment": 78,
     "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to serverless, with a polished TUI and multi-platform messaging gateway.",
@@ -43,30 +43,30 @@
   },
   "hot_vs": {
     "clone_a": "hermes-agent",
-    "clone_b": "ZeroClaw",
-    "visits": 13,
-    "url": "https://clawclones.com/compare/hermes-agent-vs-zeroclaw"
+    "clone_b": "OpenClaw",
+    "visits": 10,
+    "url": "https://clawclones.com/compare/hermes-agent-vs-openclaw"
   },
-  "updated_at": "2026-10-11T23:59:59.999Z",
-  "generated_at": "2026-10-12T02:49:49.093Z",
+  "updated_at": "2026-10-12T23:59:59.999Z",
+  "generated_at": "2026-10-12T02:58:35.997Z",
   "freshness": {
-    "updated_at": "2026-10-11T23:59:59.999Z",
-    "generated_at": "2026-10-12T02:49:49.093Z",
-    "source_age_hours": 2.8,
+    "updated_at": "2026-10-12T23:59:59.999Z",
+    "generated_at": "2026-10-12T02:58:35.997Z",
+    "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-10-11T17:12:10.083Z",
-        "age_hours": 9.6
+        "updated_at": "2026-10-12T02:58:35.179Z",
+        "age_hours": 0
       },
       "history": {
-        "updated_at": "2026-10-11T23:59:59.999Z",
-        "age_hours": 2.8
+        "updated_at": "2026-10-12T23:59:59.999Z",
+        "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-10-11T23:59:59.999Z",
-        "age_hours": 2.8
+        "updated_at": "2026-10-12T23:59:59.999Z",
+        "age_hours": 0
       }
     }
   }
