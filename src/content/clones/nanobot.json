@@ -97,27 +97,6 @@
         "path": "nanobot/providers/azure_openai_provider.py",
         "line": "default_model: str = \"gpt-5.2-chat\",",
         "strength": "strong"
-      },
-      {
-        "model": "gpt-5.6-sol",
-        "provider": "openai",
-        "path": "nanobot/providers/openai_codex_provider.py",
-        "line": "default_model: str = \"openai-codex/gpt-5.6-sol\",",
-        "strength": "strong"
-      },
-      {
-        "model": "gpt-4o",
-        "provider": "openai",
-        "path": "nanobot/providers/openai_compat_provider.py",
-        "line": "default_model: str = \"gpt-4o\",",
-        "strength": "strong"
-      },
-      {
-        "model": "gpt-4.1",
-        "provider": "openai",
-        "path": "nanobot/providers/github_copilot_provider.py",
-        "line": "default_model: str = \"github-copilot/gpt-4.1\",",
-        "strength": "strong"
       }
     ],
     "default_model_ambiguous": true,
@@ -205,7 +184,7 @@
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
     "files_examined": 94,
-    "detected_at": "2026-10-11T10:25:56.197Z",
+    "detected_at": "2026-10-13T11:16:56.951Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
