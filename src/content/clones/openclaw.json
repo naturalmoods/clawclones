@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "The canonical open-source personal AI assistant that runs on your own hardware and meets you in 20+ chat channels. Massive community, relentless release cadence, and a privacy-first 'your state stays on your devices' architecture.",
   "health_status": "healthy",
-  "github_stars": 391920,
+  "github_stars": 391973,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -50,9 +50,9 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-14T02:25:43Z",
-  "contributors_count": 3561,
-  "open_issues_count": 9548,
+  "last_commit_at": "2026-10-14T16:19:14Z",
+  "contributors_count": 3578,
+  "open_issues_count": 9611,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "model_support": {
@@ -296,5 +296,5 @@
     "date": "2026-10-13T13:49:25Z",
     "url": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.3"
   },
-  "last_updated": "2026-10-14T02:26:18.160Z"
+  "last_updated": "2026-10-14T16:19:55.505Z"
 }
