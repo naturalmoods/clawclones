@@ -97,6 +97,27 @@
         "path": "nanobot/providers/azure_openai_provider.py",
         "line": "default_model: str = \"gpt-5.2-chat\",",
         "strength": "strong"
+      },
+      {
+        "model": "gpt-5.4",
+        "provider": "openai",
+        "path": "webui/src/dev/gallery/settings.tsx",
+        "line": "agent: { model: \"gpt-5.4\", provider: \"openai\", resolved_provider: \"openai\", has_api_key: true, model_preset: null,",
+        "strength": "weak"
+      },
+      {
+        "model": "gpt-image-1",
+        "provider": "openai",
+        "path": "webui/src/dev/gallery/settings.tsx",
+        "line": "image_generation: { enabled: true, provider: \"openai\", provider_configured: true, model: \"gpt-image-1\",",
+        "strength": "weak"
+      },
+      {
+        "model": "claude-sonnet-4",
+        "provider": "anthropic",
+        "path": "webui/src/dev/gallery/settings.tsx",
+        "line": "{ date: day.date, provider: \"anthropic\", model: \"claude-sonnet-4\", total_tokens: day.total_tokens * 0.4 },",
+        "strength": "weak"
       }
     ],
     "default_model_ambiguous": true,
@@ -164,7 +185,7 @@
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "nanobot/providers/azure_openai_provider.py",
+        "path": "webui/src/dev/gallery/settings.tsx",
         "strength": "strong"
       },
       {
@@ -184,7 +205,7 @@
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
     "files_examined": 94,
-    "detected_at": "2026-10-13T11:16:56.951Z",
+    "detected_at": "2026-10-15T08:41:38.707Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
