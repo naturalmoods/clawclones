@@ -258,15 +258,15 @@
       {
         "kind": "endpoint",
         "value": "8000/v1",
-        "path": "extensions/vllm/defaults.ts",
+        "path": "extensions/omlx/defaults.ts",
         "strength": "strong"
       }
     ],
     "default_model_last_touched": "2026-10-02T21:02:07Z",
     "default_model_released_at": "2026-09-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 310,
-    "detected_at": "2026-10-15T08:43:40.401Z",
+    "files_examined": 313,
+    "detected_at": "2026-10-17T08:12:49.678Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

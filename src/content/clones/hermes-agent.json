@@ -93,13 +93,6 @@
         "strength": "strong"
       },
       {
-        "model": "glm-5.2",
-        "provider": "zhipu",
-        "path": "hermes_cli/models_catalog_static.py",
-        "line": "PREFERRED_SILENT_DEFAULT_MODEL = \"z-ai/glm-5.2\"",
-        "strength": "strong"
-      },
-      {
         "model": "claude-sonnet-4",
         "provider": "anthropic",
         "path": "hermes_cli/config.py",
@@ -121,7 +114,7 @@
         "strength": "weak"
       }
     ],
-    "default_model_ambiguous": true,
+    "default_model_ambiguous": false,
     "evidence": [
       {
         "kind": "dependency",
@@ -301,8 +294,8 @@
     "default_model_last_touched": "2026-10-14T16:42:45Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 112,
-    "detected_at": "2026-10-15T08:43:17.080Z",
+    "files_examined": 107,
+    "detected_at": "2026-10-17T08:11:42.049Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
