@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-06-07T04:53:29Z",
   "contributors_count": 21,
-  "open_issues_count": 17,
+  "open_issues_count": 18,
   "release_cadence_days": 5,
   "operational_risk": "medium",
   "model_support": {
@@ -155,5 +155,5 @@
     "date": "2026-04-11T20:04:14Z",
     "url": "https://github.com/aiming-lab/MetaClaw/releases/tag/v0.4.1"
   },
-  "last_updated": "2026-10-18T01:50:37.646Z"
+  "last_updated": "2026-10-18T15:13:09.089Z"
 }

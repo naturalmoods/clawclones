@@ -48,10 +48,10 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-10-14T19:00:24Z",
+  "last_commit_at": "2026-10-18T14:32:25Z",
   "contributors_count": 5,
   "open_issues_count": 0,
-  "release_cadence_days": 6,
+  "release_cadence_days": 5,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -184,9 +184,9 @@
   },
   "overview_markdown": "KafClaw is a Go-based agent coordination framework that uses Apache Kafka as its communication backbone. Rather than being a personal assistant like OpenClaw, it is an infrastructure layer for running distributed swarms of autonomous agents, with a structured topic hierarchy (`group.<name>.requests`, `.responses`, `.traces`, `.control.roster`, etc.) and typed message envelopes carrying correlation IDs and timestamps for full observability.\n\nIts core contributions include enterprise-ready agent messaging, hierarchical orchestration, shared memory topics, distributed skill routing, and an agent onboarding protocol — all decoupled from any specific LLM provider or runtime. It is part of a broader Scalytics-backed stack (KafScale, GitClaw, Scalytics Copilot) aimed at private, self-hosted AI operations.\n\nCompared to OpenClaw, KafClaw trades approachability for scale: it has no chat-app channels, skills marketplace, or consumer UI, but offers durable, auditable, distributed coordination that OpenClaw's local-first model doesn't target. The project shows healthy engineering hygiene (CI with fuzzing, CodeQL, active Dependabot merges, a v1.0.0 release) but has a very small community so far.",
   "latest_release": {
-    "version": "v1.0.0",
-    "date": "2026-06-17T15:05:13Z",
-    "url": "https://github.com/KafClaw/KafClaw/releases/tag/v1.0.0"
+    "version": "v1.0.2",
+    "date": "2026-10-18T14:12:15Z",
+    "url": "https://github.com/KafClaw/KafClaw/releases/tag/v1.0.2"
   },
-  "last_updated": "2026-10-18T01:50:42.809Z"
+  "last_updated": "2026-10-18T15:13:14.509Z"
 }

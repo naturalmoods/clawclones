@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A single-binary Rust agent runtime that positions itself as the lean, self-owned alternative to OpenClaw — any OS, any LLM provider, 30+ channels. Its vibe is maximalist configurability with minimalist footprint: you own the agent, the data, and the machine.",
   "health_status": "healthy",
-  "github_stars": 32990,
+  "github_stars": 32991,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.5,
@@ -52,10 +52,10 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-10-18T00:07:37Z",
+  "last_commit_at": "2026-10-18T04:02:09Z",
   "contributors_count": 473,
-  "open_issues_count": 1002,
-  "release_cadence_days": 14,
+  "open_issues_count": 1005,
+  "release_cadence_days": 18,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -250,9 +250,9 @@
   },
   "overview_markdown": "ZeroClaw is a personal AI assistant runtime written in Rust (edition 2024), distributed as a single binary that you configure and run on your own hardware. It connects to roughly 20 LLM providers (Anthropic, OpenAI, Ollama, and others), reaches the world through 30+ channels (Discord, Telegram, Matrix, email, voice, webhooks, CLI), and acts through tools including shell, browser, HTTP, hardware, and custom MCP servers. Its stated philosophy is ownership: your keys, your workspace, your machine.\n\nCompared to OpenClaw, ZeroClaw trades ecosystem breadth for footprint and portability. Community reports highlight running a full autonomous agent in ~37MB of RAM on a $200 ARM NAS, and the project ships prebuilt installers for Unix and Windows plus distroless container builds. Recent commits show active hardening around session recovery, approval flows, and MCP tooling, indicating a maturing runtime rather than a proof-of-concept.\n\nThe main trade-offs are a smaller skills ecosystem, no first-party dashboard UI comparable to OpenClaw's Control UI, and the inherent risk of granting an autonomous agent shell and browser access on your own machine. It is best suited to technical users who want a lean, local-first, provider-agnostic agent they fully control.",
   "latest_release": {
-    "version": "v0.8.5",
-    "date": "2026-09-05T07:31:19Z",
-    "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.5"
+    "version": "v0.8.6",
+    "date": "2026-10-18T06:15:47Z",
+    "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.8.6"
   },
-  "last_updated": "2026-10-18T01:51:06.592Z"
+  "last_updated": "2026-10-18T15:13:39.019Z"
 }
