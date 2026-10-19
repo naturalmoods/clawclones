@@ -51,7 +51,7 @@
   "last_commit_at": "2026-10-18T14:32:25Z",
   "contributors_count": 5,
   "open_issues_count": 0,
-  "release_cadence_days": 5,
+  "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -188,5 +188,5 @@
     "date": "2026-10-18T14:12:15Z",
     "url": "https://github.com/KafClaw/KafClaw/releases/tag/v1.0.2"
   },
-  "last_updated": "2026-10-19T02:07:36.813Z"
+  "last_updated": "2026-10-19T18:09:28.757Z"
 }

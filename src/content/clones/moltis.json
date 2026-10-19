@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A security-first personal agent server written in Rust, shipping as a single sandboxed binary with multi-provider LLMs, voice, memory, and chat integrations. It positions itself as the hardened, auditable alternative to OpenClaw's TypeScript stack.",
   "health_status": "healthy",
-  "github_stars": 2899,
+  "github_stars": 2901,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 15,
@@ -51,10 +51,10 @@
   "multi_user": false,
   "plugin_ecosystem": "limited",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-18T22:30:41Z",
+  "last_commit_at": "2026-10-19T08:29:01Z",
   "contributors_count": 71,
-  "open_issues_count": 114,
-  "release_cadence_days": 3,
+  "open_issues_count": 115,
+  "release_cadence_days": 6,
   "operational_risk": "low",
   "model_support": {
     "providers": [
@@ -234,9 +234,9 @@
   },
   "overview_markdown": "Moltis is a secure, persistent personal agent server written entirely in Rust, distributed as a single self-contained binary with no Node.js or npm runtime dependencies. Its core differentiator is a security-first architecture: every command executes inside a sandboxed container rather than on the host, API keys never leave the local machine, and unsafe code is isolated to FFI and precompiled runtime boundaries. The workspace spans ~270K lines across 59 modular crates, but the agent runner and model interface fit in roughly 7.5K auditable lines, with 470+ test files.\n\nFeature-wise it is surprisingly complete: multi-provider LLM support, voice, cross-session memory and recall, automatic edit checkpoints, scheduling, Telegram/Signal/Discord/WhatsApp/Teams integrations, browser automation, MCP server support, SSH or node-backed remote execution, and managed deploy keys with host pinning. It deliberately avoids a plugin marketplace, framing that as a supply-chain security win rather than a limitation.\n\nCompared to OpenClaw's TypeScript stack with Swift/Kotlin companion apps, Moltis trades ecosystem breadth for auditability, a minimal footprint, and hardened defaults. It runs comfortably on a Mac Mini or Raspberry Pi, installs via a one-liner, Homebrew, Docker, or cargo, and recently hit the Hacker News front page. Recent commits show active release engineering, including macOS notarization hardening and frequent dated releases.",
   "latest_release": {
-    "version": "20260913.02",
-    "date": "2026-09-14T00:44:24Z",
-    "url": "https://github.com/moltis-org/moltis/releases/tag/20260913.02"
+    "version": "20261019.01",
+    "date": "2026-10-19T08:28:36Z",
+    "url": "https://github.com/moltis-org/moltis/releases/tag/20261019.01"
   },
-  "last_updated": "2026-10-19T02:07:41.048Z"
+  "last_updated": "2026-10-19T18:09:33.947Z"
 }

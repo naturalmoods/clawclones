@@ -49,10 +49,10 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-18T23:38:21Z",
+  "last_commit_at": "2026-09-22T11:40:25Z",
   "contributors_count": 9,
   "open_issues_count": 3,
-  "release_cadence_days": 22,
+  "release_cadence_days": 9,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -197,9 +197,9 @@
   },
   "overview_markdown": "Poco positions itself as a safer, more beautiful, and easier-to-use OpenClaw alternative, built around a 'pocket coworker' concept. Architecturally it pairs a Next.js 16 frontend with a FastAPI (Python 3.12+) backend, and runs all agent tasks inside isolated containers, with optional local directory mounting for self-hosted deployments. Under the hood it leverages a Claude Code–based agent runtime, giving it native slash commands, Plan Mode, MCP and Skills extensibility, a built-in browser, and GitHub repo integration.\n\nWhere Poco differentiates most is collaboration: long-lived servers with channels, DMs, and reply threads let teams mention persistent agents, convert messages into trackable tasks, and publish outputs as shared files. It also ships embedded IM backends for DingTalk, Feishu, and Telegram, mobile support, background execution with scheduled triggers, and a polished UI featuring artifacts previews (HTML, PDF, Excalidraw, Drawio, etc.) and playback of command I/O and tool calls.\n\nCompared to OpenClaw's local-first, chat-app-centric model, Poco is a heavier, server-oriented platform aimed at teams, offered both as one-click Docker self-hosting and a cloud subscription. Recent commits show active hardening — auth redirect fixes, visibility-aware service paths, signed workspace file streaming, and sandbox refinements — indicating a healthy but still maturing project at version 0.5.7.",
   "latest_release": {
-    "version": "v0.5.8",
-    "date": "2026-10-18T23:39:54Z",
-    "url": "https://github.com/poco-ai/poco-claw/releases/tag/v0.5.8"
+    "version": "0.5.7",
+    "date": "2026-06-18T02:32:30Z",
+    "url": "https://github.com/poco-ai/poco-claw/releases/tag/0.5.7"
   },
-  "last_updated": "2026-10-19T02:07:47.511Z"
+  "last_updated": "2026-10-19T18:09:41.710Z"
 }
