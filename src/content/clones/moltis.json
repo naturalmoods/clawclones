@@ -171,10 +171,10 @@
         "strength": "strong"
       },
       {
-        "kind": "adapter_file",
-        "value": "ollama.rs",
-        "path": "crates/provider-setup/src/ollama.rs",
-        "strength": "strong"
+        "kind": "env_key",
+        "value": "OLLAMA_BASE_URL",
+        "path": "crates/providers/src/model_catalogs.rs",
+        "strength": "weak"
       },
       {
         "kind": "dependency",
@@ -204,8 +204,8 @@
     "default_model_last_touched": "2026-08-24T11:22:11Z",
     "default_model_released_at": "2024-05-13",
     "default_model_date_source": "catalogue",
-    "files_examined": 175,
-    "detected_at": "2026-10-17T08:10:16.802Z",
+    "files_examined": 177,
+    "detected_at": "2026-10-19T09:26:31.495Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

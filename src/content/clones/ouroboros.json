@@ -127,15 +127,15 @@
         "strength": "strong"
       },
       {
-        "kind": "prose",
-        "value": "openai-compatible",
-        "path": "devtools/benchmarks/swe_bench_pro/e1v2/_run_settings.example.json",
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "web/modules/model_roles.js",
         "strength": "strong"
       },
       {
-        "kind": "prose",
-        "value": "openai-compatible",
-        "path": "web/modules/settings.js",
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "ouroboros/gateway/model_route_contracts.py",
         "strength": "strong"
       },
       {
@@ -154,8 +154,8 @@
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 46,
-    "detected_at": "2026-10-17T08:15:24.105Z",
+    "files_examined": 50,
+    "detected_at": "2026-10-19T09:28:39.645Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
