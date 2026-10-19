@@ -49,7 +49,7 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-18T15:02:35Z",
+  "last_commit_at": "2026-10-18T16:10:58Z",
   "contributors_count": 28,
   "open_issues_count": 1,
   "release_cadence_days": 5,
@@ -186,9 +186,9 @@
   },
   "overview_markdown": "MicroClaw is a self-hosted agentic AI platform written in Rust, inspired by nanoclaw. It is built around a single embeddable Agent Engine exposed through three surfaces: **MicroClaw Server** for always-on chat channels, Web/API access, scheduling, and automation; **MicroClaw Work**, a native GPUI desktop app for local workspace-centered agent sessions with approvals and checkpoints; and **`microclaw-sdk`**, which lets other Rust applications embed the same engine, tools, policy, memory, skills, and runtime events.\n\nThe architecture targets work that outlasts a single request: multi-step tool use, resumable sessions, durable delivery, persistent memory, scheduled tasks, and governed extensions all share one runtime. Recent commits show active security hardening, including a GovernanceGuard that blocks file-tool writes to governance files (AGENTS.md, SOUL.md, config, path allowlists) with symlink-aware path resolution, plus memory deduplication fixes and Telegram partial-quote context forwarding.\n\nCompared to OpenClaw, MicroClaw trades ecosystem breadth for a lean Rust core, an embeddable SDK, and a native desktop experience. It is MIT licensed, actively maintained (v0.7.0, frequent commits, Dependabot automation), and recommends the `stable` branch for production since `main` moves quickly. Its community footprint is still small, with minimal Reddit or third-party discussion.",
   "latest_release": {
-    "version": "v0.9.0",
-    "date": "2026-10-07T19:45:32Z",
-    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.9.0"
+    "version": "v0.10.0",
+    "date": "2026-10-18T16:09:03Z",
+    "url": "https://github.com/microclaw/microclaw/releases/tag/v0.10.0"
   },
-  "last_updated": "2026-10-18T15:13:17.970Z"
+  "last_updated": "2026-10-19T02:07:39.599Z"
 }
