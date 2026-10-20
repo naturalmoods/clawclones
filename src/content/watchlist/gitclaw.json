@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "OpenClaw but it runs entirely on github actions",
   "health_status": "abandoned",
-  "github_stars": 263,
+  "github_stars": 264,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,14 +47,14 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-20T06:16:37.073Z",
-    "last_reviewed_at": "2026-10-19T11:27:49.971Z",
+    "last_reviewed_at": "2026-10-20T10:34:11.560Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
     "generation_version": "clawclones-v2-decision-support"
   },
   "overview_markdown": "",
-  "last_updated": "2026-10-19T11:27:49.971Z",
+  "last_updated": "2026-10-20T10:34:11.560Z",
   "watchlist_added": "2026-03-20T06:16:25.130Z",
   "promotion_status": "observing"
 }
