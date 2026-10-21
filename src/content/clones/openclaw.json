@@ -92,27 +92,6 @@
         "path": "src/agents/defaults.ts",
         "line": "export const DEFAULT_MODEL = \"gpt-6-astra\";",
         "strength": "strong"
-      },
-      {
-        "model": "Llama-3-8B-Instruct",
-        "provider": null,
-        "path": "extensions/vllm/defaults.ts",
-        "line": "export const VLLM_MODEL_PLACEHOLDER = \"meta-llama/Meta-Llama-3-8B-Instruct\";",
-        "strength": "weak"
-      },
-      {
-        "model": "command-a-plus-05-2026",
-        "provider": "cohere",
-        "path": "extensions/cohere/models.ts",
-        "line": "const COHERE_COMMAND_A_PLUS_MODEL_ID = \"command-a-plus-05-2026\";",
-        "strength": "weak"
-      },
-      {
-        "model": "command-a-reasoning-08-2025",
-        "provider": "cohere",
-        "path": "extensions/cohere/models.ts",
-        "line": "const COHERE_COMMAND_A_REASONING_MODEL_ID = \"command-a-reasoning-08-2025\";",
-        "strength": "weak"
       }
     ],
     "default_model_ambiguous": false,
@@ -265,8 +244,8 @@
     "default_model_last_touched": "2026-10-02T21:02:07Z",
     "default_model_released_at": "2026-09-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 315,
-    "detected_at": "2026-10-19T09:27:46.757Z",
+    "files_examined": 316,
+    "detected_at": "2026-10-21T09:04:02.467Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

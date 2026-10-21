@@ -95,6 +95,12 @@
         "strength": "strong"
       },
       {
+        "kind": "env_key",
+        "value": "OPENAI_API_KEY",
+        "path": ".claude/skills/add-codex/payload/src/providers/codex.ts",
+        "strength": "strong"
+      },
+      {
         "kind": "prose",
         "value": "openai-compatible",
         "path": ".claude/skills/add-opencode/payload/container/agent-runner/src/providers/opencode-config.ts",
@@ -104,8 +110,8 @@
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 51,
-    "detected_at": "2026-10-19T09:28:35.202Z",
+    "files_examined": 61,
+    "detected_at": "2026-10-21T09:06:13.710Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
