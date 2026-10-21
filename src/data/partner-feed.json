@@ -6,7 +6,7 @@
   },
   "ecosystem": {
     "total_clones": 50,
-    "total_stars": 1077828,
+    "total_stars": 1077790,
     "total_stars_formatted": "1077.8k",
     "most_active_language": "Python",
     "language_breakdown": {
@@ -25,15 +25,15 @@
     "avg_sentiment": 55,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 392887,
+      "stars": 392689,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 255499,
-    "stars_growth_7d": 2087,
+    "stars": 255609,
+    "stars_growth_7d": 1903,
     "language": "Python",
     "sentiment": 78,
     "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to serverless, with a polished TUI and multi-platform messaging gateway.",
@@ -42,30 +42,30 @@
     "url": "https://clawclones.com/clones/NousResearch/hermes-agent"
   },
   "hot_vs": {
-    "clone_a": "NullClaw",
-    "clone_b": "ZeroClaw",
+    "clone_a": "grip-ai",
+    "clone_b": "nanobot",
     "visits": 9,
-    "url": "https://clawclones.com/compare/nullclaw-vs-zeroclaw"
+    "url": "https://clawclones.com/compare/grip-ai-vs-nanobot"
   },
-  "updated_at": "2026-10-20T23:59:59.999Z",
-  "generated_at": "2026-10-20T16:11:24.102Z",
+  "updated_at": "2026-10-21T23:59:59.999Z",
+  "generated_at": "2026-10-21T02:17:34.175Z",
   "freshness": {
-    "updated_at": "2026-10-20T23:59:59.999Z",
-    "generated_at": "2026-10-20T16:11:24.102Z",
+    "updated_at": "2026-10-21T23:59:59.999Z",
+    "generated_at": "2026-10-21T02:17:34.175Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-10-20T16:11:23.722Z",
+        "updated_at": "2026-10-21T02:17:33.315Z",
         "age_hours": 0
       },
       "history": {
-        "updated_at": "2026-10-20T23:59:59.999Z",
+        "updated_at": "2026-10-21T23:59:59.999Z",
         "age_hours": 0
       },
       "analytics": {
-        "updated_at": "2026-10-20T23:59:59.999Z",
+        "updated_at": "2026-10-21T23:59:59.999Z",
         "age_hours": 0
       }
     }

@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to serverless, with a polished TUI and multi-platform messaging gateway.",
   "health_status": "healthy",
-  "github_stars": 255499,
+  "github_stars": 255609,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-20T14:39:37Z",
-  "contributors_count": 4641,
-  "open_issues_count": 50194,
+  "last_commit_at": "2026-10-21T00:29:36Z",
+  "contributors_count": 4680,
+  "open_issues_count": 50204,
   "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
@@ -327,5 +327,5 @@
     "date": "2026-10-15T08:21:32Z",
     "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2"
   },
-  "last_updated": "2026-10-20T16:11:04.176Z"
+  "last_updated": "2026-10-21T02:17:15.523Z"
 }
