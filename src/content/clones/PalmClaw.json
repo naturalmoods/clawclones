@@ -4,7 +4,7 @@
   "language": "Kotlin",
   "vibe_summary": "An academic (EMNLP 2026 demo) OpenClaw-inspired agent framework that runs natively on Android phones with no PC required. It pairs on-device session/memory/tool management with user-configured LLM APIs and a permissions-first security model.",
   "health_status": "healthy",
-  "github_stars": 1170,
+  "github_stars": 1171,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 120,
@@ -48,7 +48,7 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "AGPL-3.0",
-  "last_commit_at": "2026-08-26T15:48:09Z",
+  "last_commit_at": "2026-10-21T12:43:23Z",
   "contributors_count": 2,
   "open_issues_count": 3,
   "release_cadence_days": 23,
@@ -176,5 +176,5 @@
     "date": "2026-08-26T15:28:58Z",
     "url": "https://github.com/ModalityDance/PalmClaw/releases/tag/v0.3.1"
   },
-  "last_updated": "2026-10-21T02:17:11.235Z"
+  "last_updated": "2026-10-21T16:26:33.882Z"
 }
