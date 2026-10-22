@@ -326,7 +326,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 392706
+      "stars": 392759
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -656,7 +656,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 33018
+      "stars": 33025
     }
   ],
   "qwibitai/nanoclaw": [
@@ -986,7 +986,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 30977
+      "stars": 30986
     }
   ],
   "HKUDS/nanobot": [
@@ -1316,7 +1316,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 49259
+      "stars": 49270
     }
   ],
   "sipeed/picoclaw": [
@@ -1646,7 +1646,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 30069
+      "stars": 30073
     }
   ],
   "hesreallyhim/awesome-claude-code": [
@@ -1982,7 +1982,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 12665
+      "stars": 12669
     }
   ],
   "memovai/mimiclaw": [
@@ -2972,7 +2972,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 8130
+      "stars": 8131
     }
   ],
   "tnm/zclaw": [
@@ -3302,7 +3302,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 2237
+      "stars": 2239
     }
   ],
   "PhantomReaper2025/titanclaw": [
@@ -3968,7 +3968,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 1861
+      "stars": 1862
     }
   ],
   "moltis-org/moltis": [
@@ -4298,7 +4298,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 2906
+      "stars": 2908
     }
   ],
   "ruvnet/ruvector": [
@@ -5294,7 +5294,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 1342
+      "stars": 1343
     }
   ],
   "rowboatlabs/rowboat": [
@@ -6290,7 +6290,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 18214
+      "stars": 18220
     }
   ],
   "EthereumPhone/AndyClaw": [
@@ -6950,7 +6950,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 1572
+      "stars": 1573
     }
   ],
   "zofrasca/lightclaw": [
@@ -7610,7 +7610,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 33683
+      "stars": 33700
     }
   ],
   "NevaMind-AI/memUBot": [
@@ -9590,7 +9590,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 35915
+      "stars": 35945
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -9920,7 +9920,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 6137
+      "stars": 6139
     }
   ],
   "open-gitagent/gitclaw": [
@@ -10580,7 +10580,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 42630
+      "stars": 42784
     }
   ],
   "unitedbyai/droidclaw": [
@@ -10910,7 +10910,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 1572
+      "stars": 1584
     }
   ],
   "microclaw/microclaw": [
@@ -12230,7 +12230,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 2422
+      "stars": 2421
     }
   ],
   "poco-ai/poco-agent": [
@@ -12890,7 +12890,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 255980
+      "stars": 256167
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -13550,7 +13550,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 3459
+      "stars": 3461
     }
   ],
   "loongclaw-ai/loongclaw": [
@@ -13880,7 +13880,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 639
+      "stars": 638
     }
   ],
   "agent0ai/agent-zero": [
@@ -14210,7 +14210,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 19536
+      "stars": 19544
     }
   ],
   "ClawRunr/JavaClaw": [
@@ -14366,7 +14366,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 4172
+      "stars": 4174
     }
   ],
   "espressif/esp-claw": [
@@ -14444,7 +14444,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 2279
+      "stars": 2285
     }
   ],
   "ModalityDance/PalmClaw": [
@@ -14600,7 +14600,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 11352
+      "stars": 11353
     }
   ],
   "zhayujie/CowAgent": [
@@ -14678,7 +14678,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 47501
+      "stars": 47502
     }
   ],
   "the-open-agent/openagent": [
@@ -14752,7 +14752,7 @@
     },
     {
       "date": "2026-10-22",
-      "stars": 5710
+      "stars": 5709
     }
   ]
 }

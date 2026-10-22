@@ -51,7 +51,7 @@
   "last_commit_at": "2026-05-03T23:21:29Z",
   "contributors_count": 23,
   "open_issues_count": 84,
-  "release_cadence_days": 3,
+  "release_cadence_days": null,
   "operational_risk": "high",
   "model_support": {
     "providers": [
@@ -154,5 +154,5 @@
     "date": "2026-03-10T22:43:22Z",
     "url": "https://github.com/letta-ai/lettabot/releases/tag/v0.2.0-alpha.12"
   },
-  "last_updated": "2026-10-22T02:11:22.523Z"
+  "last_updated": "2026-10-22T16:27:08.414Z"
 }
