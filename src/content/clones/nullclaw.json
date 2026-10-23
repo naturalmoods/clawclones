@@ -54,8 +54,8 @@
   "license_type": "MIT",
   "last_commit_at": "2026-10-05T10:42:39Z",
   "contributors_count": 111,
-  "open_issues_count": 95,
-  "release_cadence_days": null,
+  "open_issues_count": 96,
+  "release_cadence_days": 8,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -286,5 +286,5 @@
     "date": "2026-05-29T13:41:10Z",
     "url": "https://github.com/nullclaw/nullclaw/releases/tag/v2026.5.29"
   },
-  "last_updated": "2026-10-22T16:27:20.475Z"
+  "last_updated": "2026-10-23T02:17:32.091Z"
 }

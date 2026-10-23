@@ -1,334 +1,4 @@
 {
-  "2026-09-23": {
-    "nanoclaw-vs-zeroclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "droidclaw": {
-      "type": "clone",
-      "visits": 0
-    },
-    "loongclaw-vs-picoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "aionui-vs-nanoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "nanoclaw-vs-zeptoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "picobot-vs-picoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "nullclaw-vs-picoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "picobot-vs-thepopebot": {
-      "type": "vs",
-      "visits": 1
-    },
-    "smallclaw": {
-      "type": "clone",
-      "visits": 0
-    },
-    "hermes-agent-vs-nanoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "picobot-vs-zclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "lobsterai-vs-poco-agent": {
-      "type": "vs",
-      "visits": 1
-    },
-    "hermes-agent-vs-picoclaw": {
-      "type": "vs",
-      "visits": 6
-    },
-    "n8nclaw-vs-tinyclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "/faq": {
-      "type": "page",
-      "visits": 1
-    },
-    "zeptoclaw": {
-      "type": "clone",
-      "visits": 1
-    },
-    "zeroclaw": {
-      "type": "clone",
-      "visits": 0
-    },
-    "astrbot": {
-      "type": "clone",
-      "visits": 2
-    },
-    "/about": {
-      "type": "page",
-      "visits": 1
-    },
-    "astrbot-vs-openclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "moltis-vs-openclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "mimiclaw-vs-picobot": {
-      "type": "vs",
-      "visits": 1
-    },
-    "astrbot-vs-ouroboros": {
-      "type": "vs",
-      "visits": 0
-    },
-    "picoclaw-vs-zeroclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "loongclaw-vs-openclaw": {
-      "type": "vs",
-      "visits": 3
-    },
-    "hermes-agent-vs-ironclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "aionui-vs-nanobot": {
-      "type": "vs",
-      "visits": 0
-    },
-    "spacebot": {
-      "type": "clone",
-      "visits": 0
-    },
-    "agent-zero-vs-hermes-agent": {
-      "type": "vs",
-      "visits": 0
-    },
-    "nanobot-vs-nanoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "goclaw-vs-tinyclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "astrbot-vs-picoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "lobsterai-vs-nullclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "moltis-vs-zclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "openclaw-vs-spacebot": {
-      "type": "vs",
-      "visits": 1
-    },
-    "kafclaw-vs-ouroboros": {
-      "type": "vs",
-      "visits": 1
-    },
-    "nullclaw-vs-zeroclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "/analysis": {
-      "type": "page",
-      "visits": 0
-    },
-    "nanoclaw-vs-picoclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "n8nclaw-vs-thepopebot": {
-      "type": "vs",
-      "visits": 1
-    },
-    "lettabot-vs-memubot": {
-      "type": "vs",
-      "visits": 1
-    },
-    "goclaw-vs-nanobot": {
-      "type": "vs",
-      "visits": 0
-    },
-    "goclaw-vs-opengork": {
-      "type": "vs",
-      "visits": 0
-    },
-    "nullclaw-vs-spacebot": {
-      "type": "vs",
-      "visits": 0
-    },
-    "nanobot-vs-spacebot": {
-      "type": "vs",
-      "visits": 2
-    },
-    "lightclaw-vs-mimiclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "lightclaw-vs-picoclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "openclaw-vs-zeroclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "moltis": {
-      "type": "clone",
-      "visits": 2
-    },
-    "loongclaw-vs-picobot": {
-      "type": "vs",
-      "visits": 0
-    },
-    "droidclaw-vs-ironclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "andyclaw-vs-nanobot": {
-      "type": "vs",
-      "visits": 1
-    },
-    "andyclaw-vs-moltis": {
-      "type": "vs",
-      "visits": 1
-    },
-    "grip-ai": {
-      "type": "clone",
-      "visits": 1
-    },
-    "zclaw": {
-      "type": "clone",
-      "visits": 1
-    },
-    "nanobot": {
-      "type": "clone",
-      "visits": 1
-    },
-    "memubot-vs-zeroclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "ironclaw-vs-picoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "lettabot-vs-tinyclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "freeclaw-vs-nanoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "lettabot-vs-nanoclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "spacebot-vs-titanclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "gitclaw-vs-openclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "aionui-vs-hermes-agent": {
-      "type": "vs",
-      "visits": 4
-    },
-    "mimiclaw": {
-      "type": "clone",
-      "visits": 0
-    },
-    "nanoclaw-vs-openclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "grip-ai-vs-memubot": {
-      "type": "vs",
-      "visits": 0
-    },
-    "hermes-agent-vs-nanobot": {
-      "type": "vs",
-      "visits": 1
-    },
-    "ironclaw-vs-titanclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "lettabot-vs-lightclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "hermes-agent-vs-poco-agent": {
-      "type": "vs",
-      "visits": 0
-    },
-    "nanoclaw-vs-smallclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "ouroboros": {
-      "type": "clone",
-      "visits": 0
-    },
-    "picobot-vs-poco-agent": {
-      "type": "vs",
-      "visits": 0
-    },
-    "aionui-vs-tinyclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "hermes-agent-vs-zeroclaw": {
-      "type": "vs",
-      "visits": 1
-    },
-    "astrbot-vs-bashobot": {
-      "type": "vs",
-      "visits": 1
-    },
-    "copaw": {
-      "type": "clone",
-      "visits": 1
-    },
-    "aionui-vs-zeroclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "ironclaw-vs-safeclaw": {
-      "type": "vs",
-      "visits": 0
-    },
-    "openclaw-vs-openfang": {
-      "type": "vs",
-      "visits": 1
-    },
-    "hermes-agent-vs-openfang": {
-      "type": "vs",
-      "visits": 3
-    }
-  },
   "2026-09-24": {
     "openclaw-vs-picoclaw": {
       "type": "vs",
@@ -20429,6 +20099,740 @@
     "lobsterai-vs-nanobot": {
       "type": "vs",
       "visits": 0
+    }
+  },
+  "2026-10-23": {
+    "picobot-vs-picoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "hermes-agent-vs-n8nclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "carapace-vs-ironclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "mimiclaw-vs-nullclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "droidclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "carapace-vs-openclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "agent-zero-vs-clawith": {
+      "type": "vs",
+      "visits": 0
+    },
+    "brigade-vs-copaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "openclaw-vs-palmclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "titanclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "ironclaw-vs-zeptoclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "poco-agent": {
+      "type": "clone",
+      "visits": 0
+    },
+    "agent-zero-vs-thepopebot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "ironclaw-vs-microclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "esp-claw-vs-picoclaw": {
+      "type": "vs",
+      "visits": 3
+    },
+    "moltis": {
+      "type": "clone",
+      "visits": 0
+    },
+    "ouroboros": {
+      "type": "clone",
+      "visits": 0
+    },
+    "grip-ai-vs-nanobot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "ironclaw-vs-loongclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "spacebot": {
+      "type": "clone",
+      "visits": 0
+    },
+    "kafclaw": {
+      "type": "clone",
+      "visits": 2
+    },
+    "brigade-vs-memubot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "smallclaw": {
+      "type": "clone",
+      "visits": 1
+    },
+    "aionui": {
+      "type": "clone",
+      "visits": 2
+    },
+    "nanoclaw-vs-nullclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "hermes-agent-vs-safeclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "openfang": {
+      "type": "clone",
+      "visits": 0
+    },
+    "nullclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "esp-claw": {
+      "type": "clone",
+      "visits": 1
+    },
+    "javaclaw-vs-zeptoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nanoclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "agent-zero-vs-brigade": {
+      "type": "vs",
+      "visits": 1
+    },
+    "hermes-agent-vs-zclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "tinyclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "hermes-agent-vs-lettabot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "/faq": {
+      "type": "page",
+      "visits": 1
+    },
+    "esp-claw-vs-openclaw": {
+      "type": "vs",
+      "visits": 3
+    },
+    "zeptoclaw": {
+      "type": "clone",
+      "visits": 1
+    },
+    "goclaw-vs-poco-agent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nanoclaw-vs-tinyclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "zeroclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "lettabot": {
+      "type": "clone",
+      "visits": 0
+    },
+    "lobsterai": {
+      "type": "clone",
+      "visits": 6
+    },
+    "javaclaw-vs-zeroclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "zeptoclaw-vs-zeroclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "astrbot": {
+      "type": "clone",
+      "visits": 0
+    },
+    "copaw": {
+      "type": "clone",
+      "visits": 1
+    },
+    "/about": {
+      "type": "page",
+      "visits": 0
+    },
+    "openclaw-vs-safeclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "picobot": {
+      "type": "clone",
+      "visits": 4
+    },
+    "brigade-vs-nanoclaw": {
+      "type": "vs",
+      "visits": 2
+    },
+    "loongclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "/compare": {
+      "type": "page",
+      "visits": 0
+    },
+    "grip-ai-vs-poco-agent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "astrbot-vs-openclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "memubot": {
+      "type": "clone",
+      "visits": 0
+    },
+    "thepopebot": {
+      "type": "clone",
+      "visits": 3
+    },
+    "safeclaw": {
+      "type": "clone",
+      "visits": 1
+    },
+    "gitclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "astrbot-vs-hermes-agent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "javaclaw-vs-openclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "cowagent-vs-hermes-agent": {
+      "type": "vs",
+      "visits": 2
+    },
+    "grip-ai-vs-openclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "andyclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "lightclaw-vs-openclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "openfang-vs-zeptoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "mimiclaw-vs-moltis": {
+      "type": "vs",
+      "visits": 0
+    },
+    "microclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "andyclaw-vs-memubot": {
+      "type": "vs",
+      "visits": 0
+    },
+    "mimiclaw-vs-zeptoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "bashobot": {
+      "type": "clone",
+      "visits": 0
+    },
+    "droidclaw-vs-palmclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "lettabot-vs-zeroclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "n8nclaw-vs-tinyclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nullclaw-vs-ouroboros": {
+      "type": "vs",
+      "visits": 1
+    },
+    "moltis-vs-zeptoclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "clawith": {
+      "type": "clone",
+      "visits": 1
+    },
+    "hermes-agent-vs-lobsterai": {
+      "type": "vs",
+      "visits": 2
+    },
+    "astrbot-vs-kafclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "microclaw-vs-moltis": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nanobot-vs-ouroboros": {
+      "type": "vs",
+      "visits": 1
+    },
+    "hermes-agent": {
+      "type": "clone",
+      "visits": 0
+    },
+    "brigade-vs-openclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "mimiclaw-vs-nanobot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "lightclaw-vs-zeptoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "metaclaw-vs-openclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "/clawverse": {
+      "type": "page",
+      "visits": 0
+    },
+    "openfang-vs-picobot": {
+      "type": "vs",
+      "visits": 0
+    },
+    "astrbot-vs-safeclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "clawith-vs-cowagent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "loongclaw-vs-spacebot": {
+      "type": "vs",
+      "visits": 2
+    },
+    "kafclaw-vs-loongclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "bashobot-vs-lightclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "cowagent-vs-freeclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "javaclaw": {
+      "type": "clone",
+      "visits": 1
+    },
+    "nullclaw-vs-zeroclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "aionui-vs-gitclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "moltis-vs-thepopebot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "brigade-vs-smallclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "astrbot-vs-thepopebot": {
+      "type": "vs",
+      "visits": 2
+    },
+    "carapace": {
+      "type": "clone",
+      "visits": 0
+    },
+    "/analysis": {
+      "type": "page",
+      "visits": 0
+    },
+    "kafclaw-vs-zclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nanobot-vs-poco-agent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "picoclaw": {
+      "type": "clone",
+      "visits": 2
+    },
+    "gitclaw-vs-kafclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "aionui-vs-nanoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "gitclaw-vs-lightclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "safeclaw-vs-zclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nanoclaw-vs-poco-agent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "ironclaw-vs-nanoclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "esp-claw-vs-zclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "kafclaw-vs-openagent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "moltis-vs-picobot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "lightclaw-vs-picoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "andyclaw-vs-loongclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "carapace-vs-moltis": {
+      "type": "vs",
+      "visits": 1
+    },
+    "ironclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "mimiclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "agent-zero": {
+      "type": "clone",
+      "visits": 0
+    },
+    "carapace-vs-zeroclaw": {
+      "type": "vs",
+      "visits": 2
+    },
+    "brigade-vs-lettabot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nanoclaw-vs-ouroboros": {
+      "type": "vs",
+      "visits": 1
+    },
+    "goclaw-vs-hermes-agent": {
+      "type": "vs",
+      "visits": 0
+    },
+    "carapace-vs-lightclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "loongclaw-vs-picobot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "bashobot-vs-lettabot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "ironclaw-vs-moltis": {
+      "type": "vs",
+      "visits": 1
+    },
+    "picoclaw-vs-zclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "agent-zero-vs-palmclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "goclaw-vs-openclaw": {
+      "type": "vs",
+      "visits": 3
+    },
+    "lightclaw": {
+      "type": "clone",
+      "visits": 1
+    },
+    "clawith-vs-openclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "copaw-vs-titanclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "gitclaw-vs-lobsterai": {
+      "type": "vs",
+      "visits": 1
+    },
+    "goclaw-vs-grip-ai": {
+      "type": "vs",
+      "visits": 1
+    },
+    "grip-ai": {
+      "type": "clone",
+      "visits": 0
+    },
+    "brigade-vs-tinyclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "zclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "hermes-agent-vs-javaclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nanobot": {
+      "type": "clone",
+      "visits": 1
+    },
+    "metaclaw-vs-nanoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "lettabot-vs-nanoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "poco-agent-vs-spacebot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "lightclaw-vs-zeroclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "lobsterai-vs-nanoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "mimiclaw-vs-openagent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "carapace-vs-ouroboros": {
+      "type": "vs",
+      "visits": 0
+    },
+    "loongclaw-vs-moltis": {
+      "type": "vs",
+      "visits": 1
+    },
+    "aionui-vs-picoclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "astrbot-vs-poco-agent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "n8nclaw-vs-openclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "brigade-vs-javaclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "openclaw-vs-zeptoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "hermes-agent-vs-nanobot": {
+      "type": "vs",
+      "visits": 4
+    },
+    "bashobot-vs-zeptoclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nanobot-vs-smallclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "freeclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "goclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "openclaw": {
+      "type": "clone",
+      "visits": 0
+    },
+    "clawith-vs-nanobot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "goclaw-vs-nanoclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "openagent": {
+      "type": "clone",
+      "visits": 2
+    },
+    "palmclaw": {
+      "type": "clone",
+      "visits": 2
+    },
+    "metaclaw": {
+      "type": "clone",
+      "visits": 2
+    },
+    "cowagent": {
+      "type": "clone",
+      "visits": 1
+    },
+    "gitclaw-vs-picoclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "grip-ai-vs-memubot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "copaw-vs-grip-ai": {
+      "type": "vs",
+      "visits": 1
+    },
+    "astrbot-vs-bashobot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "andyclaw-vs-metaclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "bashobot-vs-moltis": {
+      "type": "vs",
+      "visits": 1
+    },
+    "nullclaw-vs-picobot": {
+      "type": "vs",
+      "visits": 1
+    },
+    "cowagent-vs-openclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "esp-claw-vs-mimiclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "cowagent-vs-grip-ai": {
+      "type": "vs",
+      "visits": 1
+    },
+    "brigade": {
+      "type": "clone",
+      "visits": 1
+    },
+    "nanoclaw-vs-zeptoclaw": {
+      "type": "vs",
+      "visits": 0
+    },
+    "openclaw-vs-ouroboros": {
+      "type": "vs",
+      "visits": 1
+    },
+    "astrbot-vs-nanobot": {
+      "type": "vs",
+      "visits": 2
+    },
+    "hermes-agent-vs-tinyclaw": {
+      "type": "vs",
+      "visits": 1
+    },
+    "agent-zero-vs-cowagent": {
+      "type": "vs",
+      "visits": 1
+    },
+    "mimiclaw-vs-openclaw": {
+      "type": "vs",
+      "visits": 1
     }
   }
 }
