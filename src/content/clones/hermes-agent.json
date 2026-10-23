@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to serverless, with a polished TUI and multi-platform messaging gateway.",
   "health_status": "healthy",
-  "github_stars": 256268,
+  "github_stars": 256463,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -49,10 +49,10 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-23T00:35:03Z",
-  "contributors_count": 4683,
-  "open_issues_count": 50568,
-  "release_cadence_days": 4,
+  "last_commit_at": "2026-10-23T15:17:37Z",
+  "contributors_count": 4685,
+  "open_issues_count": 50677,
+  "release_cadence_days": 3,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -323,9 +323,9 @@
   },
   "overview_markdown": "Hermes Agent is Nous Research's flagship personal AI agent, positioned as 'the agent that grows with you.' Its defining feature is a closed learning loop: the agent autonomously creates skills after complex tasks, improves those skills during use, nudges itself to persist knowledge, and searches its own past conversations via FTS5 with LLM summarization. It integrates Honcho for dialectic user modeling and is compatible with the agentskills.io open standard, making memory and skill portability first-class concerns.\n\nArchitecturally, it is a Python application with a full terminal UI (multiline editing, slash-command autocomplete, streaming tool output) plus a single gateway process that bridges Telegram, Discord, Slack, WhatsApp, and Signal with cross-platform conversation continuity and voice memo transcription. It is model-agnostic — Nous Portal, OpenRouter, OpenAI, or custom endpoints — switchable at runtime via `hermes model`. Deployment targets range from a $5 VPS to GPU clusters to scale-to-zero serverless, and it ships scheduled automations and a plugin system with a catalog of model-provider and desktop plugins.\n\nRelative to OpenClaw, Hermes competes directly (it even ships `hermes claw migrate`) and differentiates on its learning loop and messaging-gateway breadth. Recent commits show heavy investment in provider correctness (Anthropic thinking-mode handling), desktop UX polish, and plugin infrastructure. The main caveats are operational: unrestricted shell access means users are advised to run it in Docker, and the project's extremely high inbound issue/PR volume can outpace maintainer throughput.",
   "latest_release": {
-    "version": "v0.22.4",
-    "date": "2026-10-21T18:49:24Z",
-    "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.4"
+    "version": "v0.22.5",
+    "date": "2026-10-23T05:28:45Z",
+    "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5"
   },
-  "last_updated": "2026-10-23T02:17:31.525Z"
+  "last_updated": "2026-10-23T16:16:08.282Z"
 }

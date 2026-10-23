@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A massively popular open-source personal AI assistant and 'Agent Harness' that plans tasks, runs skills, and self-evolves with memory and knowledge. Multi-agent, multi-model, and multi-channel with a one-line install and an active skill hub.",
   "health_status": "healthy",
-  "github_stars": 47510,
+  "github_stars": 47518,
   "metrics": {
     "boot_time_ms": 220,
     "memory_mb": 85,
@@ -49,7 +49,7 @@
   "multi_user": true,
   "plugin_ecosystem": "strong",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-22T12:36:07Z",
+  "last_commit_at": "2026-10-23T10:37:05Z",
   "contributors_count": 193,
   "open_issues_count": 35,
   "release_cadence_days": 13,
@@ -180,5 +180,5 @@
     "date": "2026-10-14T02:24:35Z",
     "url": "https://github.com/zhayujie/CowAgent/releases/tag/2.2.1"
   },
-  "last_updated": "2026-10-23T02:17:47.003Z"
+  "last_updated": "2026-10-23T16:16:29.226Z"
 }

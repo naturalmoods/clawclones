@@ -4,7 +4,7 @@
   "language": "Kotlin",
   "vibe_summary": "A full OpenClaw-style agentic assistant rebuilt as a native Android APK, with deep ethOS/dGEN1 integration including wallet control, XMTP messaging, and on-device reflex models. It stands out for its unusually rigorous security hardening (taint tracking, approval gating, staged skill installs) rare among mobile AI agents.",
   "health_status": "healthy",
-  "github_stars": 95,
+  "github_stars": 96,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 120,
@@ -163,5 +163,5 @@
     "date": "2026-03-16T18:15:59Z",
     "url": "https://github.com/EthereumPhone/AndyClaw/releases/tag/v19"
   },
-  "last_updated": "2026-10-23T02:17:22.317Z"
+  "last_updated": "2026-10-23T16:15:56.762Z"
 }
