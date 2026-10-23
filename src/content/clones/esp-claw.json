@@ -74,15 +74,15 @@
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "components/claw_modules/claw_core/src/llm/backends/claw_llm_backend_anthropic.c",
+        "path": "application/edge_agent/components/http_server/frontend_source/src/api/client.ts",
         "strength": "strong"
       }
     ],
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 27,
-    "detected_at": "2026-10-21T08:59:36.007Z",
+    "files_examined": 26,
+    "detected_at": "2026-10-23T08:56:43.487Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
