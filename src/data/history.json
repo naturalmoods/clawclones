@@ -334,7 +334,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 392887
+      "stars": 392930
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -672,7 +672,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 33037
+      "stars": 33038
     }
   ],
   "qwibitai/nanoclaw": [
@@ -1010,7 +1010,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 31004
+      "stars": 31006
     }
   ],
   "HKUDS/nanobot": [
@@ -1348,7 +1348,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 49309
+      "stars": 49325
     }
   ],
   "sipeed/picoclaw": [
@@ -2030,7 +2030,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 12671
+      "stars": 12674
     }
   ],
   "memovai/mimiclaw": [
@@ -6442,7 +6442,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 18220
+      "stars": 18219
     }
   ],
   "EthereumPhone/AndyClaw": [
@@ -7118,7 +7118,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 1578
+      "stars": 1581
     }
   ],
   "zofrasca/lightclaw": [
@@ -7794,7 +7794,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 33734
+      "stars": 33743
     }
   ],
   "NevaMind-AI/memUBot": [
@@ -9822,7 +9822,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 36020
+      "stars": 36043
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -10160,7 +10160,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 6142
+      "stars": 6144
     }
   ],
   "open-gitagent/gitclaw": [
@@ -10836,7 +10836,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 43017
+      "stars": 43184
     }
   ],
   "unitedbyai/droidclaw": [
@@ -11174,7 +11174,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 1593
+      "stars": 1594
     }
   ],
   "microclaw/microclaw": [
@@ -13202,7 +13202,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 256544
+      "stars": 256715
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -13540,7 +13540,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 3667
+      "stars": 3666
     }
   ],
   "aiming-lab/MetaClaw": [
@@ -14554,7 +14554,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 19552
+      "stars": 19558
     }
   ],
   "ClawRunr/JavaClaw": [
@@ -14726,7 +14726,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 4175
+      "stars": 4177
     }
   ],
   "espressif/esp-claw": [
@@ -14812,7 +14812,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 2297
+      "stars": 2300
     }
   ],
   "ModalityDance/PalmClaw": [
@@ -15070,7 +15070,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 47524
+      "stars": 47548
     }
   ],
   "the-open-agent/openagent": [
@@ -15152,7 +15152,7 @@
     },
     {
       "date": "2026-10-24",
-      "stars": 5712
+      "stars": 5708
     }
   ]
 }
