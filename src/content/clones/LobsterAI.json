@@ -66,18 +66,18 @@
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "deepseek-reasoner",
+      "model": "deepseek-v4-flash",
       "provider": "deepseek",
       "path": "src/renderer/config.ts",
-      "line": "defaultModel: 'deepseek-reasoner',",
+      "line": "defaultModel: 'deepseek-v4-flash',",
       "strength": "strong"
     },
     "default_models": [
       {
-        "model": "deepseek-reasoner",
+        "model": "deepseek-v4-flash",
         "provider": "deepseek",
         "path": "src/renderer/config.ts",
-        "line": "defaultModel: 'deepseek-reasoner',",
+        "line": "defaultModel: 'deepseek-v4-flash',",
         "strength": "strong"
       },
       {
@@ -147,15 +147,15 @@
       {
         "kind": "prose",
         "value": "openai-compatible",
-        "path": "src/shared/providers/constants.ts",
-        "strength": "weak"
+        "path": "src/shared/providers/openaiApiMode.ts",
+        "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-10-14T15:45:13Z",
-    "default_model_released_at": null,
-    "default_model_date_source": null,
+    "default_model_last_touched": "2026-10-21T04:35:29Z",
+    "default_model_released_at": "2026-04-24",
+    "default_model_date_source": "catalogue",
     "files_examined": 102,
-    "detected_at": "2026-10-23T08:59:14.583Z",
+    "detected_at": "2026-10-25T08:50:02.116Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
