@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "Privacy-first personal AI assistant platform with autonomous agents, tool orchestration, and multi-provider support.",
   "health_status": "healthy",
-  "github_stars": 429,
+  "github_stars": 430,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-10-05T12:54:50.847Z",
-    "last_reviewed_at": "2026-10-24T09:57:17.538Z",
+    "last_reviewed_at": "2026-10-25T10:19:27.768Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -59,7 +59,7 @@
     "date": "2026-06-23T10:09:24Z",
     "url": "https://github.com/ownpilot/OwnPilot/releases/tag/v0.8.3"
   },
-  "last_updated": "2026-10-24T09:57:17.538Z",
+  "last_updated": "2026-10-25T10:19:27.768Z",
   "watchlist_added": "2026-10-04T15:57:39.087Z",
   "promotion_status": "observing"
 }
