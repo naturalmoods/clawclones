@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A polished, corporate-backed desktop agent from NetEase Youdao that layers a Cowork session UI on top of OpenClaw as its runtime. Its standout angle is real-desktop tool execution with phone-based remote control via WeChat, Feishu, DingTalk, and Telegram.",
   "health_status": "healthy",
-  "github_stars": 6146,
+  "github_stars": 6150,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -49,7 +49,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-10-23T16:20:12Z",
   "contributors_count": 65,
-  "open_issues_count": 190,
+  "open_issues_count": 189,
   "release_cadence_days": 5,
   "operational_risk": "medium",
   "model_support": {
@@ -186,5 +186,5 @@
     "date": "2026-10-23T15:23:16Z",
     "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.10.23"
   },
-  "last_updated": "2026-10-25T02:01:44.990Z"
+  "last_updated": "2026-10-25T15:24:00.665Z"
 }
