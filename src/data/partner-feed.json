@@ -48,25 +48,25 @@
     "url": "https://clawclones.com/compare/carapace-vs-zeroclaw"
   },
   "updated_at": "2026-10-25T23:59:59.999Z",
-  "generated_at": "2026-10-25T15:24:21.373Z",
+  "generated_at": "2026-10-26T01:56:50.605Z",
   "freshness": {
     "updated_at": "2026-10-25T23:59:59.999Z",
-    "generated_at": "2026-10-25T15:24:21.373Z",
-    "source_age_hours": 0,
+    "generated_at": "2026-10-26T01:56:50.605Z",
+    "source_age_hours": 1.9,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
         "updated_at": "2026-10-25T15:24:20.991Z",
-        "age_hours": 0
+        "age_hours": 10.5
       },
       "history": {
         "updated_at": "2026-10-25T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 1.9
       },
       "analytics": {
         "updated_at": "2026-10-25T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 1.9
       }
     }
   }
