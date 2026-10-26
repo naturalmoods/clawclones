@@ -50,7 +50,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-10-23T00:14:43Z",
   "contributors_count": 52,
-  "open_issues_count": 212,
+  "open_issues_count": 191,
   "release_cadence_days": 4,
   "operational_risk": "high",
   "model_support": {
@@ -186,5 +186,5 @@
     "date": "2026-10-23T05:56:11Z",
     "url": "https://github.com/razzant/ouroboros/releases/tag/v7.8.0"
   },
-  "last_updated": "2026-10-26T02:03:22.068Z"
+  "last_updated": "2026-10-26T18:05:03.924Z"
 }
