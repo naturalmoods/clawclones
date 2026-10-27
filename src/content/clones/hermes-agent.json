@@ -137,7 +137,7 @@
       {
         "kind": "env_key",
         "value": "FIREWORKS_API_KEY",
-        "path": "hermes_cli/providers.py",
+        "path": "hermes_cli/config_defaults.py",
         "strength": "weak"
       },
       {
@@ -221,8 +221,8 @@
       {
         "kind": "env_key",
         "value": "OLLAMA_HOST",
-        "path": "hermes_cli/models_local.py",
-        "strength": "strong"
+        "path": "hermes_cli/models.py",
+        "strength": "weak"
       },
       {
         "kind": "dependency",
@@ -245,7 +245,7 @@
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "hermes_cli/models_local.py",
+        "path": "hermes_cli/model_setup.py",
         "strength": "strong"
       },
       {
@@ -294,8 +294,8 @@
     "default_model_last_touched": "2026-10-23T08:42:14Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 113,
-    "detected_at": "2026-10-25T08:50:22.130Z",
+    "files_examined": 99,
+    "detected_at": "2026-10-27T09:30:07.411Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
