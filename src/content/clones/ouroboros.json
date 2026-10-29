@@ -48,8 +48,8 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-10-23T00:14:43Z",
-  "contributors_count": 52,
+  "last_commit_at": "2026-10-29T02:13:11Z",
+  "contributors_count": 54,
   "open_issues_count": 187,
   "release_cadence_days": 4,
   "operational_risk": "high",
@@ -182,9 +182,9 @@
   },
   "overview_markdown": "Ouroboros is an open-source, general-purpose AI agent built around a striking premise: it can rewrite the very implementation it runs on. Its identity, durable memory, and history persist across tasks and restarts, and reflection can change how it understands itself without breaking continuity. It coordinates a live swarm of specialist agents and works on external projects, with a rigorous CONTRIBUTING.md-gated review flow for changes.\n\nArchitecturally, it runs as a native desktop app (macOS, Windows, Linux installers provided) or a headless CLI, keeping its repository, memory, and history on your machine while model inference can use configured remote APIs or a local GGUF model. Recent commits show heavy investment in a 'plan-review' subsystem with typed refusals, custody tracking, and multi-seat review waves — much of it co-authored by the agent itself, which is both its signature feature and its biggest risk factor.\n\nCompared to OpenClaw, Ouroboros trades OpenClaw's mature multi-channel assistant experience and large skills registry for a far more radical self-evolution loop. It is best suited to researchers and experimenters; production users should weigh the high shell-access and self-modification risk carefully.",
   "latest_release": {
-    "version": "v7.8.0",
-    "date": "2026-10-23T05:56:11Z",
-    "url": "https://github.com/razzant/ouroboros/releases/tag/v7.8.0"
+    "version": "v7.9.0",
+    "date": "2026-10-29T01:58:51Z",
+    "url": "https://github.com/razzant/ouroboros/releases/tag/v7.9.0"
   },
-  "last_updated": "2026-10-28T17:47:12.023Z"
+  "last_updated": "2026-10-29T03:11:43.091Z"
 }
