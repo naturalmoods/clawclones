@@ -135,7 +135,7 @@
       {
         "kind": "env_key",
         "value": "configurable base URL",
-        "path": "ouroboros/gateway/model_route_contracts.py",
+        "path": "ouroboros/gateway/settings.py",
         "strength": "strong"
       },
       {
@@ -154,8 +154,8 @@
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 52,
-    "detected_at": "2026-10-27T09:33:34.321Z",
+    "files_examined": 54,
+    "detected_at": "2026-10-29T10:40:21.374Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

@@ -164,21 +164,21 @@
       {
         "kind": "dependency",
         "value": "dashscope",
-        "path": "plugins/tool/qwen-image/requirements.txt",
+        "path": "plugins/channel/sip/requirements.txt",
         "strength": "strong"
       },
       {
         "kind": "dependency",
         "value": "dashscope",
-        "path": "plugins/tool/wan27/requirements.txt",
+        "path": "plugins/tool/qwen-image/requirements.txt",
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-10-16T08:44:50Z",
+    "default_model_last_touched": "2026-10-29T10:24:00Z",
     "default_model_released_at": null,
     "default_model_date_source": null,
-    "files_examined": 121,
-    "detected_at": "2026-10-27T09:26:13.007Z",
+    "files_examined": 139,
+    "detected_at": "2026-10-29T10:33:39.199Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

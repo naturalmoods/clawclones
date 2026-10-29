@@ -68,8 +68,22 @@
     "aggregator_capable": false,
     "byo_endpoint": true,
     "provider_lock": null,
-    "default_model": null,
-    "default_models": [],
+    "default_model": {
+      "model": "minimax-m3.1-flash",
+      "provider": "minimax",
+      "path": "models/reasoning_capabilities.py",
+      "line": "if base_pid == \"minimax\" and model == \"minimax-m3.1-flash\":",
+      "strength": "weak"
+    },
+    "default_models": [
+      {
+        "model": "minimax-m3.1-flash",
+        "provider": "minimax",
+        "path": "models/reasoning_capabilities.py",
+        "line": "if base_pid == \"minimax\" and model == \"minimax-m3.1-flash\":",
+        "strength": "weak"
+      }
+    ],
     "default_model_ambiguous": false,
     "evidence": [
       {
@@ -145,11 +159,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": null,
-    "default_model_released_at": null,
-    "default_model_date_source": null,
-    "files_examined": 70,
-    "detected_at": "2026-10-27T09:35:24.900Z",
+    "default_model_last_touched": "2026-10-29T02:27:07Z",
+    "default_model_released_at": "2026-10-19",
+    "default_model_date_source": "catalogue",
+    "files_examined": 71,
+    "detected_at": "2026-10-29T10:42:17.519Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
