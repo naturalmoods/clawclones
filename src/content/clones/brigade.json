@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-09-15T14:44:13Z",
   "contributors_count": 10,
-  "open_issues_count": 40,
+  "open_issues_count": 41,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "model_support": {
@@ -214,5 +214,5 @@
     "date": "2026-09-15T14:44:28Z",
     "url": "https://github.com/spinabot/brigade/releases/tag/brigade-v1.39.0"
   },
-  "last_updated": "2026-10-30T03:15:05.295Z"
+  "last_updated": "2026-10-30T17:36:38.882Z"
 }
