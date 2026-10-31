@@ -49,8 +49,8 @@
   "license_type": "MIT",
   "last_commit_at": "2026-10-30T10:47:25Z",
   "contributors_count": 65,
-  "open_issues_count": 187,
-  "release_cadence_days": 5,
+  "open_issues_count": 188,
+  "release_cadence_days": 4,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -182,9 +182,9 @@
   },
   "overview_markdown": "LobsterAI is an open-source desktop-grade AI agent built by NetEase Youdao, positioned as an all-scenario office assistant. It is an Electron 43 + React 18 application for macOS and Windows that operates directly in the user's real working environment: local files, terminal commands, browser workflows, documents, spreadsheets, slides, scheduled jobs, and project workspaces. Architecturally, it splits responsibilities between a Cowork product/session layer (local persistence, permissions, UI state, artifacts, agents, memory, and IM bindings) and OpenClaw, which serves as the underlying agent runtime and gateway.\n\nIts differentiators versus running OpenClaw directly are the polished desktop experience and remote control: users can issue commands from their phone via WeChat, Feishu, DingTalk, or Telegram, and sensitive actions like file operations, terminal commands, or network access require explicit approval in the UI. It also supports multi-agent workflows with custom identities, models, skills, and working directories, plus installable Expert Kits that package scenario-specific capabilities.\n\nRecent development is active and maintenance-focused: the 2026.9.23 release unified activity step rendering with turn timing, hardened OpenClaw plugin startup with degraded-mode recovery, and updated the dsh runtime. Ecosystem digests describe it as stabilizing core infrastructure (OpenClaw gateway, IPC security) with a moderate but steady commit pace, making it one of the more mature OpenClaw-based desktop distributions.",
   "latest_release": {
-    "version": "2026.10.23",
-    "date": "2026-10-23T15:23:16Z",
-    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.10.23"
+    "version": "2026.10.30",
+    "date": "2026-10-31T01:00:14Z",
+    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.10.30"
   },
-  "last_updated": "2026-10-30T17:36:18.641Z"
+  "last_updated": "2026-10-31T02:59:03.428Z"
 }
