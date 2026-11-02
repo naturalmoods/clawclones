@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A security-hardened Rust rewrite of the OpenClaw personal assistant concept, built explicitly to counter the January 2026 OpenClaw vulnerability disclosures. It pairs a signed WASM plugin runtime with OS-level sandboxing and encrypted secret storage for a genuinely locked-down local agent.",
   "health_status": "healthy",
-  "github_stars": 47,
+  "github_stars": 48,
   "metrics": {
     "boot_time_ms": 35,
     "memory_mb": 15,
@@ -250,5 +250,5 @@
     "date": "2026-05-01T22:18:48Z",
     "url": "https://github.com/puremachinery/carapace/releases/tag/v0.8.0"
   },
-  "last_updated": "2026-11-02T03:01:04.860Z"
+  "last_updated": "2026-11-02T21:16:33.985Z"
 }
