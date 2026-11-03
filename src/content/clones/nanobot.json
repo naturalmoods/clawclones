@@ -57,14 +57,13 @@
   "model_support": {
     "providers": [
       "anthropic",
-      "azure-openai",
       "bedrock",
       "groq",
       "openai",
       "openai-compatible",
       "openrouter"
     ],
-    "provider_count": 5,
+    "provider_count": 4,
     "local_capable": false,
     "aggregator_capable": true,
     "byo_endpoint": true,
@@ -89,13 +88,6 @@
         "provider": "anthropic",
         "path": "nanobot/providers/anthropic_provider.py",
         "line": "default_model: str = \"claude-sonnet-4-6\",",
-        "strength": "strong"
-      },
-      {
-        "model": "gpt-5.2-chat",
-        "provider": "openai",
-        "path": "nanobot/providers/azure_openai_provider.py",
-        "line": "default_model: str = \"gpt-5.2-chat\",",
         "strength": "strong"
       },
       {
@@ -133,12 +125,6 @@
         "value": "ANTHROPIC_API_KEY",
         "path": "README.md",
         "strength": "weak"
-      },
-      {
-        "kind": "endpoint",
-        "value": "cognitiveservices.azure.com",
-        "path": "nanobot/providers/azure_openai_provider.py",
-        "strength": "strong"
       },
       {
         "kind": "env_key",
@@ -205,7 +191,7 @@
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
     "files_examined": 94,
-    "detected_at": "2026-11-01T10:54:44.103Z",
+    "detected_at": "2026-11-03T11:28:59.272Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

@@ -72,18 +72,18 @@
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "gpt-5.5",
+      "model": "gpt-6.1-terra",
       "provider": "openai",
       "path": "plugins/_oauth/helpers/providers/codex.py",
-      "line": "CODEX_DEFAULT_MODEL = \"gpt-5.5\"",
+      "line": "CODEX_DEFAULT_MODEL = \"gpt-6.1-terra\"",
       "strength": "strong"
     },
     "default_models": [
       {
-        "model": "gpt-5.5",
+        "model": "gpt-6.1-terra",
         "provider": "openai",
         "path": "plugins/_oauth/helpers/providers/codex.py",
-        "line": "CODEX_DEFAULT_MODEL = \"gpt-5.5\"",
+        "line": "CODEX_DEFAULT_MODEL = \"gpt-6.1-terra\"",
         "strength": "strong"
       },
       {
@@ -176,11 +176,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-07-08T13:08:44Z",
-    "default_model_released_at": "2026-04-24",
+    "default_model_last_touched": "2026-10-31T21:15:31Z",
+    "default_model_released_at": "2026-10-26",
     "default_model_date_source": "catalogue",
     "files_examined": 75,
-    "detected_at": "2026-11-01T10:53:25.275Z",
+    "detected_at": "2026-11-03T11:28:04.635Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
