@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "Brigade is an enterprise-grade personal AI agent framework that eliminates API key juggling by reusing your existing Claude, ChatGPT, or Copilot subscriptions. Its standout feature is B³ (Brigade Bloody Benchmark), which exposes your agents to the open internet via tunnels to stress-test them against real-world strangers.",
   "health_status": "healthy",
-  "github_stars": 11367,
+  "github_stars": 11370,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 80,
@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-09-15T14:44:13Z",
+  "last_commit_at": "2026-11-03T18:40:54Z",
   "contributors_count": 10,
-  "open_issues_count": 42,
+  "open_issues_count": 44,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "model_support": {
@@ -214,5 +214,5 @@
     "date": "2026-09-15T14:44:28Z",
     "url": "https://github.com/spinabot/brigade/releases/tag/brigade-v1.39.0"
   },
-  "last_updated": "2026-11-03T04:20:18.180Z"
+  "last_updated": "2026-11-03T18:56:23.212Z"
 }

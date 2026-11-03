@@ -49,9 +49,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-08-20T06:35:52Z",
-  "contributors_count": 7,
-  "open_issues_count": 61,
+  "last_commit_at": "2026-11-03T17:40:23Z",
+  "contributors_count": 8,
+  "open_issues_count": 60,
   "release_cadence_days": 19,
   "operational_risk": "medium",
   "model_support": {
@@ -189,5 +189,5 @@
     "date": "2026-08-20T06:54:09Z",
     "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.2.0"
   },
-  "last_updated": "2026-11-03T04:20:06.313Z"
+  "last_updated": "2026-11-03T18:56:11.864Z"
 }
