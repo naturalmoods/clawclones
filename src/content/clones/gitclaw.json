@@ -60,105 +60,111 @@
       "google",
       "ollama",
       "openai",
-      "openai-compatible"
+      "openai-compatible",
+      "openrouter",
+      "vllm"
     ],
     "provider_count": 3,
     "local_capable": true,
-    "aggregator_capable": false,
+    "aggregator_capable": true,
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "gpt-4o-mini",
-      "provider": "openai",
-      "path": "src/index.ts",
-      "line": "const defaultModel = model || \"openai:gpt-4o-mini\";",
-      "strength": "strong"
+      "model": "claude-opus-5-5",
+      "provider": "anthropic",
+      "path": "crates/provider/src/anthropic/tests.rs",
+      "line": "model: \"claude-opus-5-5\".into(),",
+      "strength": "weak"
     },
     "default_models": [
       {
-        "model": "gpt-4o-mini",
-        "provider": "openai",
-        "path": "src/index.ts",
-        "line": "const defaultModel = model || \"openai:gpt-4o-mini\";",
-        "strength": "strong"
-      },
-      {
-        "model": "claude-sonnet-4-6",
+        "model": "claude-opus-5-5",
         "provider": "anthropic",
-        "path": "install.sh",
-        "line": "MODEL=\"anthropic:claude-sonnet-4-6\"",
-        "strength": "weak"
-      },
-      {
-        "model": "claude-opus-4-6",
-        "provider": "anthropic",
-        "path": "install.sh",
-        "line": "2) MODEL=\"anthropic:claude-opus-4-6\" ;;",
+        "path": "crates/provider/src/anthropic/tests.rs",
+        "line": "model: \"claude-opus-5-5\".into(),",
         "strength": "weak"
       }
     ],
     "default_model_ambiguous": false,
     "evidence": [
       {
-        "kind": "env_key",
-        "value": "ANTHROPIC_API_KEY",
-        "path": "rust/gitagent-rs/src/pi/provider.rs",
+        "kind": "adapter_file",
+        "value": "anthropic.rs",
+        "path": "crates/provider/src/anthropic.rs",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "ANTHROPIC_API_KEY",
-        "path": "install.sh",
+        "path": "crates/provider/src/anthropic.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "google.rs",
+        "path": "crates/provider/src/google.rs",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "GEMINI_API_KEY",
-        "path": "install.sh",
+        "path": "crates/provider/src/google.rs",
         "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "GEMINI_API_KEY",
-        "path": "src/index.ts",
-        "strength": "weak"
       },
       {
         "kind": "endpoint",
         "value": "11434",
-        "path": "rust/gitagent-rs/src/pi/provider.rs",
+        "path": "crates/provider/src/compat.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "openai.rs",
+        "path": "crates/provider/src/openai.rs",
         "strength": "strong"
       },
       {
         "kind": "env_key",
         "value": "OPENAI_API_KEY",
-        "path": "rust/gitagent-rs/src/pi/provider.rs",
+        "path": "crates/provider/src/openai.rs",
         "strength": "strong"
       },
       {
         "kind": "env_key",
-        "value": "OPENAI_API_KEY",
-        "path": "install.sh",
+        "value": "configurable base URL",
+        "path": "crates/provider/src/google.rs",
         "strength": "strong"
       },
       {
-        "kind": "prose",
-        "value": "openai-compatible",
-        "path": "rust/gitagent-rs/src/pi/provider.rs",
+        "kind": "env_key",
+        "value": "configurable base URL",
+        "path": "crates/provider/src/openai.rs",
         "strength": "strong"
       },
       {
-        "kind": "prose",
-        "value": "openai-compatible",
-        "path": "src/loader.ts",
+        "kind": "env_key",
+        "value": "OPENROUTER_API_KEY",
+        "path": "crates/provider/src/compat.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "openrouter.ai/api",
+        "path": "crates/provider/src/compat.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "8000/v1",
+        "path": "crates/provider/src/compat.rs",
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-08-19T11:17:16Z",
-    "default_model_released_at": "2024-07-18",
+    "default_model_last_touched": "2026-10-30T17:21:41Z",
+    "default_model_released_at": "2026-09-22",
     "default_model_date_source": "catalogue",
-    "files_examined": 57,
-    "detected_at": "2026-11-03T11:30:47.865Z",
+    "files_examined": 42,
+    "detected_at": "2026-11-05T11:46:13.348Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
