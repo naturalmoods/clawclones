@@ -50,7 +50,7 @@
   "license_type": "AGPL-3.0",
   "last_commit_at": "2026-10-21T12:43:23Z",
   "contributors_count": 2,
-  "open_issues_count": 3,
+  "open_issues_count": 4,
   "release_cadence_days": 23,
   "operational_risk": "medium",
   "model_support": {
@@ -176,5 +176,5 @@
     "date": "2026-08-26T15:28:58Z",
     "url": "https://github.com/ModalityDance/PalmClaw/releases/tag/v0.3.1"
   },
-  "last_updated": "2026-11-05T03:57:46.468Z"
+  "last_updated": "2026-11-05T19:20:39.005Z"
 }

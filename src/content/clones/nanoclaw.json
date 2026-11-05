@@ -49,9 +49,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-11-04T17:32:01Z",
+  "last_commit_at": "2026-11-05T17:49:17Z",
   "contributors_count": 186,
-  "open_issues_count": 1037,
+  "open_issues_count": 1035,
   "release_cadence_days": 14,
   "operational_risk": "medium",
   "model_support": {
@@ -142,5 +142,5 @@
     "date": "2026-10-09T11:26:13Z",
     "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.10.0"
   },
-  "last_updated": "2026-11-05T03:57:58.785Z"
+  "last_updated": "2026-11-05T19:20:55.121Z"
 }
