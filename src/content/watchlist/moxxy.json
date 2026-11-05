@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "Moxxy Personal Assistant",
   "health_status": "healthy",
-  "github_stars": 5,
+  "github_stars": 6,
   "metrics": {
     "boot_time_ms": 0,
     "memory_mb": 0,
@@ -47,7 +47,7 @@
   "evidence_confidence": 20,
   "content_ops": {
     "last_generated_at": "2026-03-13T04:57:22.265Z",
-    "last_reviewed_at": "2026-11-04T13:25:45.274Z",
+    "last_reviewed_at": "2026-11-05T13:39:54.117Z",
     "refresh_mode": "refresh",
     "source_window": "GitHub metadata, README, recent commits, latest release, Reddit, Brave search; watchlist mode without full AI rewrite",
     "change_reason": "Watchlist refresh using lightweight repository signals.",
@@ -55,11 +55,11 @@
   },
   "overview_markdown": "",
   "latest_release": {
-    "version": "@moxxy/plugin-provider-anthropic@0.48.1",
-    "date": "2026-11-02T22:38:25Z",
-    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-provider-anthropic%400.48.1"
+    "version": "@moxxy/plugin-tts-gemini@0.48.2",
+    "date": "2026-11-04T13:36:27Z",
+    "url": "https://github.com/moxxy-ai/moxxy/releases/tag/%40moxxy/plugin-tts-gemini%400.48.2"
   },
-  "last_updated": "2026-11-04T13:25:45.274Z",
+  "last_updated": "2026-11-05T13:39:54.117Z",
   "watchlist_added": "2026-03-05T04:46:03.370Z",
   "promotion_status": "observing"
 }
