@@ -49,9 +49,9 @@
   "multi_user": true,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-11-07T00:39:02Z",
+  "last_commit_at": "2026-11-07T16:50:13Z",
   "contributors_count": 29,
-  "open_issues_count": 2,
+  "open_issues_count": 3,
   "release_cadence_days": 2,
   "operational_risk": "medium",
   "model_support": {
@@ -216,5 +216,5 @@
     "date": "2026-11-07T00:31:55Z",
     "url": "https://github.com/microclaw/microclaw/releases/tag/v0.26.0"
   },
-  "last_updated": "2026-11-07T03:30:08.094Z"
+  "last_updated": "2026-11-07T17:17:19.597Z"
 }
