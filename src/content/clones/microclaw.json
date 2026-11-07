@@ -57,11 +57,13 @@
   "model_support": {
     "providers": [
       "anthropic",
+      "deepseek",
+      "ollama",
       "openai",
       "openai-compatible"
     ],
-    "provider_count": 2,
-    "local_capable": false,
+    "provider_count": 3,
+    "local_capable": true,
     "aggregator_capable": false,
     "byo_endpoint": true,
     "provider_lock": null,
@@ -79,6 +81,13 @@
         "path": "microclaw.config.example.yaml",
         "line": "#   - model: \"claude-sonnet-4-5-20250929\"",
         "strength": "strong"
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "provider": "anthropic",
+        "path": "crates/microclaw-code-core/src/settings.rs",
+        "line": "#   model: claude-sonnet-4-6",
+        "strength": "weak"
       },
       {
         "model": "gpt-5.2",
@@ -107,13 +116,6 @@
         "path": "crates/microclaw-engine/src/llm/openai.rs",
         "line": "let mut body = json!({\"model\":\"MiniMax-M2.5\",\"messages\":[]});",
         "strength": "weak"
-      },
-      {
-        "model": "gemini-3-flash-preview",
-        "provider": "google",
-        "path": "crates/microclaw-engine/src/llm/openai.rs",
-        "line": "config.model = \"gemini-3-flash-preview\".into();",
-        "strength": "weak"
       }
     ],
     "default_model_ambiguous": false,
@@ -125,10 +127,34 @@
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "api.anthropic.com",
-        "path": "crates/microclaw-engine/src/llm/anthropic.rs",
+        "kind": "env_key",
+        "value": "ANTHROPIC_API_KEY",
+        "path": "crates/microclaw-code-core/src/settings.rs",
         "strength": "strong"
+      },
+      {
+        "kind": "env_key",
+        "value": "DEEPSEEK_API_KEY",
+        "path": "crates/microclaw-code-core/src/settings.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.deepseek.com",
+        "path": "crates/microclaw-code-core/src/settings.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "crates/microclaw-code-core/src/settings.rs",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "11434",
+        "path": "crates/microclaw-engine/src/llm/openai.rs",
+        "strength": "weak"
       },
       {
         "kind": "env_key",
@@ -158,8 +184,8 @@
     "default_model_last_touched": "2026-11-05T01:33:20Z",
     "default_model_released_at": "2025-09-29",
     "default_model_date_source": "model_id",
-    "files_examined": 33,
-    "detected_at": "2026-11-05T11:44:33.540Z",
+    "files_examined": 35,
+    "detected_at": "2026-11-07T10:48:18.895Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
