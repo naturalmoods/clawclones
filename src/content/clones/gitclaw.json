@@ -52,7 +52,7 @@
   "last_commit_at": "2026-11-03T17:40:23Z",
   "contributors_count": 9,
   "open_issues_count": 61,
-  "release_cadence_days": 19,
+  "release_cadence_days": 27,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -191,9 +191,9 @@
   },
   "overview_markdown": "GitClaw (branded Gitagent) is a git-native AI agent framework: the agent itself is a git repository, with `agent.yaml` for config, `SOUL.md` for personality, `RULES.md` for constraints, and version-controlled `memory/`, `tools/`, `skills/`, and `hooks/` directories. This 'agents as repos' model lets you fork agents, branch personalities, and `git log` an agent's memory — a fundamentally different abstraction from OpenClaw's channel-centric personal assistant model.\n\nArchitecturally it ships as a Node/TypeScript CLI + SDK (with a slim core package split from the voice UI to satisfy supply-chain scanners), plus a newer Rust rewrite called 'ira' that powers a Tauri desktop app (Lyzr Edgespace) with an embedded web UI, Ollama-based local model management, and an onboarding wizard. It supports MCP servers (stdio + http/sse), declarative YAML tools, lifecycle hooks, and an OpenAI-compatible API surface.\n\nRecent commits show serious engineering hygiene: two hardening batches closed a load-time RCE via shell-interpolated `git clone`, fixed tool concurrency races, wired real abort/steer semantics, and eliminated e2b VM and credential leaks — all with regression tests. Telemetry work groups model requests into per-turn traces. Compared to OpenClaw, GitClaw is more developer-infrastructure than end-user assistant: stronger on auditability and git workflows, weaker on messaging-channel breadth and community scale.",
   "latest_release": {
-    "version": "v2.2.0",
-    "date": "2026-08-20T06:54:09Z",
-    "url": "https://github.com/open-gitagent/gitagent/releases/tag/v2.2.0"
+    "version": "v3.0.0",
+    "date": "2026-11-08T16:15:46Z",
+    "url": "https://github.com/open-gitagent/gitagent/releases/tag/v3.0.0"
   },
-  "last_updated": "2026-11-08T02:59:21.768Z"
+  "last_updated": "2026-11-08T17:28:48.533Z"
 }

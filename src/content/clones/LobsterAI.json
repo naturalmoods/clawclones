@@ -49,7 +49,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-11-06T10:05:36Z",
   "contributors_count": 66,
-  "open_issues_count": 177,
+  "open_issues_count": 176,
   "release_cadence_days": 5,
   "operational_risk": "medium",
   "model_support": {
@@ -186,5 +186,5 @@
     "date": "2026-11-06T15:29:01Z",
     "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.11.6"
   },
-  "last_updated": "2026-11-08T02:59:18.421Z"
+  "last_updated": "2026-11-08T17:28:45.808Z"
 }
