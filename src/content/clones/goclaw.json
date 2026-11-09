@@ -57,6 +57,7 @@
     "providers": [
       "anthropic",
       "google",
+      "minimax",
       "ollama",
       "openai",
       "openai-compatible",
@@ -64,24 +65,24 @@
       "vertex",
       "zhipu"
     ],
-    "provider_count": 6,
+    "provider_count": 7,
     "local_capable": true,
     "aggregator_capable": false,
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "MiniMax-M3",
+      "model": "MiniMax-M3.1-Flash",
       "provider": "minimax",
       "path": "internal/store/provider_store.go",
-      "line": "MiniMaxDefaultModel   = \"MiniMax-M3\"",
+      "line": "MiniMaxDefaultModel   = \"MiniMax-M3.1-Flash\"",
       "strength": "strong"
     },
     "default_models": [
       {
-        "model": "MiniMax-M3",
+        "model": "MiniMax-M3.1-Flash",
         "provider": "minimax",
         "path": "internal/store/provider_store.go",
-        "line": "MiniMaxDefaultModel   = \"MiniMax-M3\"",
+        "line": "MiniMaxDefaultModel   = \"MiniMax-M3.1-Flash\"",
         "strength": "strong"
       },
       {
@@ -145,6 +146,18 @@
         "value": "GEMINI_API_KEY",
         "path": "internal/config/config_load.go",
         "strength": "weak"
+      },
+      {
+        "kind": "adapter_file",
+        "value": "minimax.go",
+        "path": "internal/providers/minimax.go",
+        "strength": "strong"
+      },
+      {
+        "kind": "endpoint",
+        "value": "api.minimaxi.com",
+        "path": "internal/providers/minimax.go",
+        "strength": "strong"
       },
       {
         "kind": "dependency",
@@ -213,11 +226,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-09-25T20:33:33Z",
-    "default_model_released_at": "2026-05-31",
+    "default_model_last_touched": "2026-11-09T04:09:41Z",
+    "default_model_released_at": "2026-10-19",
     "default_model_date_source": "catalogue",
     "files_examined": 101,
-    "detected_at": "2026-11-07T10:49:07.689Z",
+    "detected_at": "2026-11-09T12:23:12.649Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
