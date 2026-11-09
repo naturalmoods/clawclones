@@ -48,25 +48,25 @@
     "url": "https://clawclones.com/compare/hermes-agent-vs-openclaw"
   },
   "updated_at": "2026-11-08T23:59:59.999Z",
-  "generated_at": "2026-11-08T17:29:02.717Z",
+  "generated_at": "2026-11-09T03:12:51.863Z",
   "freshness": {
     "updated_at": "2026-11-08T23:59:59.999Z",
-    "generated_at": "2026-11-08T17:29:02.717Z",
-    "source_age_hours": 0,
+    "generated_at": "2026-11-09T03:12:51.863Z",
+    "source_age_hours": 3.2,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
         "updated_at": "2026-11-08T17:29:02.406Z",
-        "age_hours": 0
+        "age_hours": 9.7
       },
       "history": {
         "updated_at": "2026-11-08T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 3.2
       },
       "analytics": {
         "updated_at": "2026-11-08T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 3.2
       }
     }
   }
