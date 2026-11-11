@@ -75,13 +75,20 @@
     "byo_endpoint": true,
     "provider_lock": null,
     "default_model": {
-      "model": "gemini-3-pro-preview",
-      "provider": "google",
-      "path": "crates/zeroclaw-providers/src/gemini.rs",
-      "line": "model: \"gemini-3-pro-preview\".to_string(),",
+      "model": "claude-opus-5-5",
+      "provider": "anthropic",
+      "path": "crates/zeroclaw-tools/src/model_routing_config.rs",
+      "line": "entry.model = Some(\"claude-opus-5-5\".to_string());",
       "strength": "weak"
     },
     "default_models": [
+      {
+        "model": "claude-opus-5-5",
+        "provider": "anthropic",
+        "path": "crates/zeroclaw-tools/src/model_routing_config.rs",
+        "line": "entry.model = Some(\"claude-opus-5-5\".to_string());",
+        "strength": "weak"
+      },
       {
         "model": "gemini-3-pro-preview",
         "provider": "google",
@@ -115,13 +122,6 @@
         "provider": "google",
         "path": "crates/zeroclaw-providers/src/openrouter.rs",
         "line": "model: \"google/gemini-2.5-pro\".into(),",
-        "strength": "weak"
-      },
-      {
-        "model": "claude-sonnet-4",
-        "provider": "anthropic",
-        "path": "crates/zeroclaw-providers/src/openrouter.rs",
-        "line": "model: \"anthropic/claude-sonnet-4\".into(),",
         "strength": "weak"
       }
     ],
@@ -224,11 +224,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-10-06T05:57:11Z",
-    "default_model_released_at": null,
-    "default_model_date_source": null,
-    "files_examined": 124,
-    "detected_at": "2026-11-09T12:27:51.262Z",
+    "default_model_last_touched": "2026-11-10T17:48:14Z",
+    "default_model_released_at": "2026-09-22",
+    "default_model_date_source": "catalogue",
+    "files_examined": 126,
+    "detected_at": "2026-11-11T11:37:55.350Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

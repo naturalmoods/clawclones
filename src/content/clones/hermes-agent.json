@@ -173,8 +173,8 @@
       {
         "kind": "endpoint",
         "value": "litellm",
-        "path": "hermes_cli/config.py",
-        "strength": "weak"
+        "path": "hermes_cli/model_assignment.py",
+        "strength": "strong"
       },
       {
         "kind": "env_key",
@@ -291,11 +291,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-10-23T08:42:14Z",
+    "default_model_last_touched": "2026-11-09T19:19:30Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 110,
-    "detected_at": "2026-11-09T12:23:26.460Z",
+    "files_examined": 114,
+    "detected_at": "2026-11-11T11:35:33.711Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

@@ -181,11 +181,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-11-05T01:33:20Z",
+    "default_model_last_touched": "2026-11-09T22:14:47Z",
     "default_model_released_at": "2025-09-29",
     "default_model_date_source": "model_id",
     "files_examined": 35,
-    "detected_at": "2026-11-09T12:21:53.750Z",
+    "detected_at": "2026-11-11T11:34:41.207Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
