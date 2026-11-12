@@ -4,7 +4,7 @@
   "language": "Rust",
   "vibe_summary": "A single-binary Rust agent runtime that positions itself as the lean, self-owned alternative to OpenClaw — any OS, any LLM provider, 30+ channels. Its vibe is maximalist configurability with minimalist footprint: you own the agent, the data, and the machine.",
   "health_status": "healthy",
-  "github_stars": 33333,
+  "github_stars": 33340,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.5,
@@ -52,9 +52,9 @@
   "multi_user": null,
   "plugin_ecosystem": "emerging",
   "license_type": "Apache-2.0",
-  "last_commit_at": "2026-11-11T17:40:22Z",
-  "contributors_count": 480,
-  "open_issues_count": 1198,
+  "last_commit_at": "2026-11-12T10:35:52Z",
+  "contributors_count": 479,
+  "open_issues_count": 1196,
   "release_cadence_days": 18,
   "operational_risk": "medium",
   "model_support": {
@@ -260,5 +260,5 @@
     "date": "2026-11-12T02:02:49Z",
     "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.9.0"
   },
-  "last_updated": "2026-11-12T04:39:44.215Z"
+  "last_updated": "2026-11-12T19:25:47.604Z"
 }

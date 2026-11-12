@@ -4,7 +4,7 @@
   "language": "JavaScript",
   "vibe_summary": "A self-hosted personal agent hub that unifies chat (Telegram, web), any LLM, and any coding agent into one app with live browser terminals and background Docker jobs. It leans hard into 'real work, not just chat' — agents open PRs, auto-merge, and DM you when done.",
   "health_status": "healthy",
-  "github_stars": 1858,
+  "github_stars": 1859,
   "metrics": {
     "boot_time_ms": 180,
     "memory_mb": 80,
@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-05-13T20:16:48Z",
   "contributors_count": 5,
-  "open_issues_count": 52,
+  "open_issues_count": 51,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "model_support": {
@@ -194,5 +194,5 @@
     "date": "2026-05-13T20:49:05Z",
     "url": "https://github.com/stephengpope/thepopebot/releases/tag/v1.2.82"
   },
-  "last_updated": "2026-11-12T04:39:40.046Z"
+  "last_updated": "2026-11-12T19:25:42.958Z"
 }
