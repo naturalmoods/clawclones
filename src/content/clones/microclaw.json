@@ -51,7 +51,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-11-13T01:05:20Z",
   "contributors_count": 29,
-  "open_issues_count": 1,
+  "open_issues_count": 2,
   "release_cadence_days": 1,
   "operational_risk": "medium",
   "model_support": {
@@ -216,5 +216,5 @@
     "date": "2026-11-13T00:32:11Z",
     "url": "https://github.com/microclaw/microclaw/releases/tag/v0.31.0"
   },
-  "last_updated": "2026-11-13T03:51:58.917Z"
+  "last_updated": "2026-11-13T19:03:56.617Z"
 }
