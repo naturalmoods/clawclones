@@ -108,7 +108,7 @@
         "model": "claude-sonnet-4",
         "provider": "anthropic",
         "path": "webui/src/dev/gallery/settings.tsx",
-        "line": "{ date: day.date, provider: \"anthropic\", model: \"claude-sonnet-4\", total_tokens: day.total_tokens * 0.4 },",
+        "line": "{ provider: \"anthropic\", model: \"claude-sonnet-4\", share: 0.4, speed: 33 + index % 5 },",
         "strength": "weak"
       }
     ],
@@ -191,7 +191,7 @@
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
     "files_examined": 94,
-    "detected_at": "2026-11-11T11:34:02.445Z",
+    "detected_at": "2026-11-13T11:42:27.841Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

@@ -163,12 +163,6 @@
         "strength": "strong"
       },
       {
-        "kind": "endpoint",
-        "value": "api.minimaxi.com",
-        "path": "src/agents/minimax-vlm.ts",
-        "strength": "strong"
-      },
-      {
         "kind": "dependency",
         "value": "@mistralai/mistralai",
         "path": "package.json",
@@ -250,8 +244,8 @@
     "default_model_last_touched": "2026-11-06T15:44:32Z",
     "default_model_released_at": "2026-09-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 332,
-    "detected_at": "2026-11-11T11:35:55.024Z",
+    "files_examined": 335,
+    "detected_at": "2026-11-13T11:44:22.074Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

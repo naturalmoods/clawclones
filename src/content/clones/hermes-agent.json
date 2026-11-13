@@ -69,10 +69,9 @@
       "openai-compatible",
       "openrouter",
       "together",
-      "vertex",
       "zhipu"
     ],
-    "provider_count": 11,
+    "provider_count": 10,
     "local_capable": true,
     "aggregator_capable": true,
     "byo_endpoint": true,
@@ -104,13 +103,6 @@
         "provider": "openai",
         "path": "agent/model_metadata.py",
         "line": "# (\"Unsupported parameter: 'reasoning.effort' is not supported with this model\"): gpt-3.5,",
-        "strength": "weak"
-      },
-      {
-        "model": "grok-4.6",
-        "provider": "xai",
-        "path": "hermes_cli/model_setup_flows.py",
-        "line": "selected = _prompt_model_selection(models, current_model=current_model or (models[0] if models else \"grok-4.6\"))",
         "strength": "weak"
       }
     ],
@@ -227,13 +219,13 @@
       {
         "kind": "dependency",
         "value": "openai",
-        "path": "hermes_cli/setup.py",
+        "path": "pyproject.toml",
         "strength": "strong"
       },
       {
-        "kind": "dependency",
-        "value": "openai",
-        "path": "pyproject.toml",
+        "kind": "env_key",
+        "value": "OPENAI_BASE_URL",
+        "path": ".env.example",
         "strength": "strong"
       },
       {
@@ -251,13 +243,13 @@
       {
         "kind": "dependency",
         "value": "openrouter",
-        "path": "hermes_cli/setup.py",
+        "path": "pyproject.toml",
         "strength": "strong"
       },
       {
-        "kind": "dependency",
-        "value": "openrouter",
-        "path": "pyproject.toml",
+        "kind": "env_key",
+        "value": "OPENROUTER_API_KEY",
+        "path": ".env.example",
         "strength": "strong"
       },
       {
@@ -265,18 +257,6 @@
         "value": "together",
         "path": "pyproject.toml",
         "strength": "strong"
-      },
-      {
-        "kind": "endpoint",
-        "value": "aiplatform.googleapis.com",
-        "path": "hermes_cli/model_setup_flows.py",
-        "strength": "strong"
-      },
-      {
-        "kind": "env_key",
-        "value": "VERTEX_PROJECT_ID",
-        "path": "hermes_cli/config_defaults.py",
-        "strength": "weak"
       },
       {
         "kind": "env_key",
@@ -291,11 +271,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-11-09T19:19:30Z",
+    "default_model_last_touched": "2026-11-13T03:03:43Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 114,
-    "detected_at": "2026-11-11T11:35:33.711Z",
+    "files_examined": 106,
+    "detected_at": "2026-11-13T11:43:57.456Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
