@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "An ultra-lightweight (~4,000-line) Python rewrite of OpenClaw that packs WebUI, memory, MCP, multi-agent delegation, and automation into a readable core. It's one of the most actively iterated OpenClaw alternatives with a huge star count and frequent releases.",
   "health_status": "healthy",
-  "github_stars": 50067,
+  "github_stars": 50068,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.5,
@@ -222,5 +222,5 @@
     "date": "2026-11-06T15:55:22Z",
     "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.4.1"
   },
-  "last_updated": "2026-11-13T19:03:51.629Z"
+  "last_updated": "2026-11-14T03:50:24.351Z"
 }
