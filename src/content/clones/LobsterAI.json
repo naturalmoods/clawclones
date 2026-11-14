@@ -47,7 +47,7 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-11-13T14:58:50Z",
+  "last_commit_at": "2026-11-14T04:32:43Z",
   "contributors_count": 67,
   "open_issues_count": 176,
   "release_cadence_days": 5,
@@ -186,5 +186,5 @@
     "date": "2026-11-06T15:29:01Z",
     "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.11.6"
   },
-  "last_updated": "2026-11-14T03:50:31.573Z"
+  "last_updated": "2026-11-14T17:33:38.697Z"
 }
