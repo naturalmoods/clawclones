@@ -219,13 +219,13 @@
       {
         "kind": "dependency",
         "value": "openai",
-        "path": "pyproject.toml",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
-        "kind": "env_key",
-        "value": "OPENAI_BASE_URL",
-        "path": ".env.example",
+        "kind": "dependency",
+        "value": "openai",
+        "path": "pyproject.toml",
         "strength": "strong"
       },
       {
@@ -243,13 +243,13 @@
       {
         "kind": "dependency",
         "value": "openrouter",
-        "path": "pyproject.toml",
+        "path": "hermes_cli/setup.py",
         "strength": "strong"
       },
       {
-        "kind": "env_key",
-        "value": "OPENROUTER_API_KEY",
-        "path": ".env.example",
+        "kind": "dependency",
+        "value": "openrouter",
+        "path": "pyproject.toml",
         "strength": "strong"
       },
       {
@@ -271,11 +271,11 @@
         "strength": "strong"
       }
     ],
-    "default_model_last_touched": "2026-11-13T03:03:43Z",
+    "default_model_last_touched": "2026-11-13T18:18:51Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 106,
-    "detected_at": "2026-11-13T11:43:57.456Z",
+    "files_examined": 114,
+    "detected_at": "2026-11-15T11:42:05.552Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
