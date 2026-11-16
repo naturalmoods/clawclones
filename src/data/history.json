@@ -426,7 +426,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 394546
+      "stars": 394596
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -1286,7 +1286,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 31120
+      "stars": 31119
     }
   ],
   "HKUDS/nanobot": [
@@ -1716,7 +1716,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 50110
+      "stars": 50128
     }
   ],
   "sipeed/picoclaw": [
@@ -2146,7 +2146,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 30129
+      "stars": 30135
     }
   ],
   "hesreallyhim/awesome-claude-code": [
@@ -2582,7 +2582,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 12716
+      "stars": 12717
     }
   ],
   "memovai/mimiclaw": [
@@ -3012,7 +3012,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 5829
+      "stars": 5830
     }
   ],
   "TinyAGI/tinyclaw": [
@@ -3872,7 +3872,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 8228
+      "stars": 8229
     }
   ],
   "tnm/zclaw": [
@@ -4302,7 +4302,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 2241
+      "stars": 2243
     }
   ],
   "PhantomReaper2025/titanclaw": [
@@ -5598,7 +5598,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 2962
+      "stars": 2966
     }
   ],
   "ruvnet/ruvector": [
@@ -6034,7 +6034,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 284
+      "stars": 285
     }
   ],
   "shabbirun/n8nclaw": [
@@ -8190,7 +8190,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 18250
+      "stars": 18251
     }
   ],
   "EthereumPhone/AndyClaw": [
@@ -9050,7 +9050,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 1670
+      "stars": 1672
     }
   ],
   "zofrasca/lightclaw": [
@@ -9910,7 +9910,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 34304
+      "stars": 34322
     }
   ],
   "NevaMind-AI/memUBot": [
@@ -12490,7 +12490,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 37797
+      "stars": 37822
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -12920,7 +12920,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 6191
+      "stars": 6192
     }
   ],
   "open-gitagent/gitclaw": [
@@ -13780,7 +13780,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 47001
+      "stars": 47053
     }
   ],
   "unitedbyai/droidclaw": [
@@ -14210,7 +14210,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 1612
+      "stars": 1611
     }
   ],
   "microclaw/microclaw": [
@@ -15070,7 +15070,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 327
+      "stars": 328
     }
   ],
   "qhkm/zeptoclaw": [
@@ -15930,7 +15930,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 2436
+      "stars": 2435
     }
   ],
   "poco-ai/poco-agent": [
@@ -16360,7 +16360,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 1360
+      "stars": 1358
     }
   ],
   "NousResearch/hermes-agent": [
@@ -16790,7 +16790,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 263670
+      "stars": 263892
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -17220,7 +17220,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 3714
+      "stars": 3717
     }
   ],
   "aiming-lab/MetaClaw": [
@@ -18510,7 +18510,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 19872
+      "stars": 19883
     }
   ],
   "ClawRunr/JavaClaw": [
@@ -18866,7 +18866,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 4189
+      "stars": 4190
     }
   ],
   "espressif/esp-claw": [
@@ -19044,7 +19044,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 2387
+      "stars": 2391
     }
   ],
   "ModalityDance/PalmClaw": [
@@ -19400,7 +19400,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 11374
+      "stars": 11378
     }
   ],
   "zhayujie/CowAgent": [
@@ -19578,7 +19578,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 47947
+      "stars": 47953
     }
   ],
   "the-open-agent/openagent": [
@@ -19752,7 +19752,7 @@
     },
     {
       "date": "2026-11-16",
-      "stars": 5746
+      "stars": 5745
     }
   ]
 }
