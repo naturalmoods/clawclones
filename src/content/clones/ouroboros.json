@@ -4,7 +4,7 @@
   "language": "Python",
   "vibe_summary": "A self-creating, self-rewriting AI agent with persistent identity and durable memory across restarts. It coordinates a swarm of specialist agents and can modify its own code, prompts, tools, and dependencies.",
   "health_status": "healthy",
-  "github_stars": 1684,
+  "github_stars": 1685,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -50,7 +50,7 @@
   "license_type": "MIT",
   "last_commit_at": "2026-11-18T07:33:36Z",
   "contributors_count": 60,
-  "open_issues_count": 325,
+  "open_issues_count": 316,
   "release_cadence_days": 6,
   "operational_risk": "high",
   "model_support": {
@@ -186,5 +186,5 @@
     "date": "2026-11-17T09:27:00Z",
     "url": "https://github.com/razzant/ouroboros/releases/tag/v7.11.0"
   },
-  "last_updated": "2026-11-18T19:51:08.954Z"
+  "last_updated": "2026-11-19T04:48:29.301Z"
 }
