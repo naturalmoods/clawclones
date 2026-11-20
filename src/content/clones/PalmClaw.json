@@ -51,7 +51,7 @@
   "last_commit_at": "2026-10-21T12:43:23Z",
   "contributors_count": 2,
   "open_issues_count": 5,
-  "release_cadence_days": 23,
+  "release_cadence_days": 31,
   "operational_risk": "medium",
   "model_support": {
     "providers": [
@@ -176,5 +176,5 @@
     "date": "2026-08-26T15:28:58Z",
     "url": "https://github.com/ModalityDance/PalmClaw/releases/tag/v0.3.1"
   },
-  "last_updated": "2026-11-20T04:39:22.297Z"
+  "last_updated": "2026-11-20T19:30:28.412Z"
 }
