@@ -105,13 +105,19 @@
         "value": "openai-compatible",
         "path": ".claude/skills/add-opencode/payload/container/agent-runner/src/providers/opencode-config.ts",
         "strength": "strong"
+      },
+      {
+        "kind": "prose",
+        "value": "openai-compatible",
+        "path": "README.md",
+        "strength": "weak"
       }
     ],
     "default_model_last_touched": null,
     "default_model_released_at": null,
     "default_model_date_source": null,
     "files_examined": 61,
-    "detected_at": "2026-11-19T12:26:20.615Z",
+    "detected_at": "2026-11-21T11:57:20.509Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
