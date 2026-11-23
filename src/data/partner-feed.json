@@ -48,25 +48,25 @@
     "url": "https://clawclones.com/compare/nanoclaw-vs-zeroclaw"
   },
   "updated_at": "2026-11-22T23:59:59.999Z",
-  "generated_at": "2026-11-22T18:56:01.529Z",
+  "generated_at": "2026-11-23T04:16:02.749Z",
   "freshness": {
     "updated_at": "2026-11-22T23:59:59.999Z",
-    "generated_at": "2026-11-22T18:56:01.529Z",
-    "source_age_hours": 0,
+    "generated_at": "2026-11-23T04:16:02.749Z",
+    "source_age_hours": 4.3,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
         "updated_at": "2026-11-22T18:56:01.228Z",
-        "age_hours": 0
+        "age_hours": 9.3
       },
       "history": {
         "updated_at": "2026-11-22T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 4.3
       },
       "analytics": {
         "updated_at": "2026-11-22T23:59:59.999Z",
-        "age_hours": 0
+        "age_hours": 4.3
       }
     }
   }
