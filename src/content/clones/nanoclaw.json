@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A radically minimal OpenClaw alternative where each agent runs in its own Linux container with real OS-level isolation instead of app-level permission checks. Small enough to read end-to-end, with per-agent Slack apps, memory, and scheduled jobs on Anthropic's Agents SDK.",
   "health_status": "healthy",
-  "github_stars": 31151,
+  "github_stars": 31154,
   "metrics": {
     "boot_time_ms": 8,
     "memory_mb": 1.5,
@@ -49,8 +49,8 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-11-22T10:57:05Z",
-  "contributors_count": 191,
+  "last_commit_at": "2026-11-24T18:08:09Z",
+  "contributors_count": 192,
   "open_issues_count": 1069,
   "release_cadence_days": 3,
   "operational_risk": "medium",
@@ -148,5 +148,5 @@
     "date": "2026-11-20T18:45:10Z",
     "url": "https://github.com/nanocoai/nanoclaw/releases/tag/v2026.11.0"
   },
-  "last_updated": "2026-11-24T07:21:42.695Z"
+  "last_updated": "2026-11-24T21:50:20.811Z"
 }
