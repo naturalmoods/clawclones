@@ -6,8 +6,8 @@
   },
   "ecosystem": {
     "total_clones": 50,
-    "total_stars": 1102799,
-    "total_stars_formatted": "1102.8k",
+    "total_stars": 1103071,
+    "total_stars_formatted": "1103.1k",
     "most_active_language": "Python",
     "language_breakdown": {
       "TypeScript": 11,
@@ -25,15 +25,15 @@
     "avg_sentiment": 55,
     "top_clone": {
       "name": "OpenClaw",
-      "stars": 395173,
+      "stars": 395202,
       "language": "TypeScript",
       "url": "https://clawclones.com/clones/openclaw/openclaw"
     }
   },
   "trending": {
     "name": "Hermes Agent",
-    "stars": 265951,
-    "stars_growth_7d": 1472,
+    "stars": 266082,
+    "stars_growth_7d": 1603,
     "language": "Python",
     "sentiment": 78,
     "vibe_summary": "A self-improving personal AI agent from Nous Research with a built-in learning loop that creates and refines skills from experience. It runs anywhere from a $5 VPS to serverless, with a polished TUI and multi-platform messaging gateway.",
@@ -48,16 +48,16 @@
     "url": "https://clawclones.com/compare/hermes-agent-vs-nanobot"
   },
   "updated_at": "2026-11-25T23:59:59.999Z",
-  "generated_at": "2026-11-25T05:53:18.413Z",
+  "generated_at": "2026-11-25T20:57:42.443Z",
   "freshness": {
     "updated_at": "2026-11-25T23:59:59.999Z",
-    "generated_at": "2026-11-25T05:53:18.413Z",
+    "generated_at": "2026-11-25T20:57:42.443Z",
     "source_age_hours": 0,
     "stale_threshold_hours": 336,
     "is_stale": false,
     "sources": {
       "clones": {
-        "updated_at": "2026-11-25T05:53:17.600Z",
+        "updated_at": "2026-11-25T20:57:42.083Z",
         "age_hours": 0
       },
       "history": {
