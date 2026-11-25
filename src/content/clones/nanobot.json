@@ -84,13 +84,6 @@
         "strength": "strong"
       },
       {
-        "model": "claude-sonnet-4-6",
-        "provider": "anthropic",
-        "path": "nanobot/providers/anthropic_provider.py",
-        "line": "default_model: str = \"claude-sonnet-4-6\",",
-        "strength": "strong"
-      },
-      {
         "model": "gpt-5.4",
         "provider": "openai",
         "path": "webui/src/dev/gallery/settings.tsx",
@@ -112,7 +105,7 @@
         "strength": "weak"
       }
     ],
-    "default_model_ambiguous": true,
+    "default_model_ambiguous": false,
     "evidence": [
       {
         "kind": "dependency",
@@ -191,7 +184,7 @@
     "default_model_released_at": "2026-04-16",
     "default_model_date_source": "catalogue",
     "files_examined": 94,
-    "detected_at": "2026-11-23T13:52:07.920Z",
+    "detected_at": "2026-11-25T13:44:31.335Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [

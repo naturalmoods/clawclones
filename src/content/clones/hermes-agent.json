@@ -274,8 +274,8 @@
     "default_model_last_touched": "2026-11-13T18:18:51Z",
     "default_model_released_at": "2026-02-04",
     "default_model_date_source": "catalogue",
-    "files_examined": 114,
-    "detected_at": "2026-11-23T13:55:26.513Z",
+    "files_examined": 92,
+    "detected_at": "2026-11-25T13:47:34.679Z",
     "detection_version": "1"
   },
   "openclaw_advantages": [
