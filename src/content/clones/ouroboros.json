@@ -48,9 +48,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-11-25T16:05:47Z",
+  "last_commit_at": "2026-11-26T04:47:43Z",
   "contributors_count": 61,
-  "open_issues_count": 422,
+  "open_issues_count": 423,
   "release_cadence_days": 7,
   "operational_risk": "high",
   "model_support": {
@@ -186,5 +186,5 @@
     "date": "2026-11-25T15:15:54Z",
     "url": "https://github.com/razzant/ouroboros/releases/tag/v7.12.0"
   },
-  "last_updated": "2026-11-25T20:57:32.573Z"
+  "last_updated": "2026-11-26T05:44:04.905Z"
 }
