@@ -4,7 +4,7 @@
   "language": "TypeScript",
   "vibe_summary": "A polished, corporate-backed desktop agent from NetEase Youdao that layers a Cowork session UI on top of OpenClaw as its runtime. Its standout angle is real-desktop tool execution with phone-based remote control via WeChat, Feishu, DingTalk, and Telegram.",
   "health_status": "healthy",
-  "github_stars": 6220,
+  "github_stars": 6223,
   "metrics": {
     "boot_time_ms": 250,
     "memory_mb": 90,
@@ -47,9 +47,9 @@
   "multi_user": false,
   "plugin_ecosystem": "emerging",
   "license_type": "MIT",
-  "last_commit_at": "2026-11-20T12:10:36Z",
+  "last_commit_at": "2026-11-27T14:36:52Z",
   "contributors_count": 67,
-  "open_issues_count": 172,
+  "open_issues_count": 169,
   "release_cadence_days": 7,
   "operational_risk": "medium",
   "model_support": {
@@ -182,9 +182,9 @@
   },
   "overview_markdown": "LobsterAI is an open-source desktop-grade AI agent built by NetEase Youdao, positioned as an all-scenario office assistant. It is an Electron 43 + React 18 application for macOS and Windows that operates directly in the user's real working environment: local files, terminal commands, browser workflows, documents, spreadsheets, slides, scheduled jobs, and project workspaces. Architecturally, it splits responsibilities between a Cowork product/session layer (local persistence, permissions, UI state, artifacts, agents, memory, and IM bindings) and OpenClaw, which serves as the underlying agent runtime and gateway.\n\nIts differentiators versus running OpenClaw directly are the polished desktop experience and remote control: users can issue commands from their phone via WeChat, Feishu, DingTalk, or Telegram, and sensitive actions like file operations, terminal commands, or network access require explicit approval in the UI. It also supports multi-agent workflows with custom identities, models, skills, and working directories, plus installable Expert Kits that package scenario-specific capabilities.\n\nRecent development is active and maintenance-focused: the 2026.9.23 release unified activity step rendering with turn timing, hardened OpenClaw plugin startup with degraded-mode recovery, and updated the dsh runtime. Ecosystem digests describe it as stabilizing core infrastructure (OpenClaw gateway, IPC security) with a moderate but steady commit pace, making it one of the more mature OpenClaw-based desktop distributions.",
   "latest_release": {
-    "version": "2026.11.20",
-    "date": "2026-11-21T01:09:59Z",
-    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.11.20"
+    "version": "2026.11.27",
+    "date": "2026-11-27T17:04:33Z",
+    "url": "https://github.com/netease-youdao/LobsterAI/releases/tag/2026.11.27"
   },
-  "last_updated": "2026-11-27T05:38:56.970Z"
+  "last_updated": "2026-11-27T20:33:44.650Z"
 }

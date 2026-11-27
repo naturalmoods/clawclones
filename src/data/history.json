@@ -470,7 +470,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 395322
+      "stars": 395351
     }
   ],
   "zeroclaw-labs/zeroclaw": [
@@ -944,7 +944,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 33638
+      "stars": 33642
     }
   ],
   "qwibitai/nanoclaw": [
@@ -1418,7 +1418,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 31170
+      "stars": 31172
     }
   ],
   "HKUDS/nanobot": [
@@ -1892,7 +1892,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 50377
+      "stars": 50400
     }
   ],
   "sipeed/picoclaw": [
@@ -2366,7 +2366,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 30173
+      "stars": 30175
     }
   ],
   "hesreallyhim/awesome-claude-code": [
@@ -2846,7 +2846,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 12720
+      "stars": 12719
     }
   ],
   "memovai/mimiclaw": [
@@ -3320,7 +3320,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 5847
+      "stars": 5848
     }
   ],
   "TinyAGI/tinyclaw": [
@@ -4268,7 +4268,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 8244
+      "stars": 8243
     }
   ],
   "tnm/zclaw": [
@@ -7598,7 +7598,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 1343
+      "stars": 1342
     }
   ],
   "rowboatlabs/rowboat": [
@@ -9974,7 +9974,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 1720
+      "stars": 1725
     }
   ],
   "zofrasca/lightclaw": [
@@ -10922,7 +10922,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 34528
+      "stars": 34553
     }
   ],
   "NevaMind-AI/memUBot": [
@@ -13766,7 +13766,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 38239
+      "stars": 38263
     }
   ],
   "netease-youdao/LobsterAI": [
@@ -14240,7 +14240,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 6220
+      "stars": 6223
     }
   ],
   "open-gitagent/gitclaw": [
@@ -14714,7 +14714,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 756
+      "stars": 755
     }
   ],
   "AstrBotDevs/AstrBot": [
@@ -15188,7 +15188,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 47614
+      "stars": 47647
     }
   ],
   "unitedbyai/droidclaw": [
@@ -16136,7 +16136,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 758
+      "stars": 757
     }
   ],
   "letta-ai/lettabot": [
@@ -17558,7 +17558,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 2437
+      "stars": 2438
     }
   ],
   "poco-ai/poco-agent": [
@@ -18032,7 +18032,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 1357
+      "stars": 1356
     }
   ],
   "NousResearch/hermes-agent": [
@@ -18506,7 +18506,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 266452
+      "stars": 266610
     }
   ],
   "nextlevelbuilder/goclaw": [
@@ -18980,7 +18980,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 3723
+      "stars": 3724
     }
   ],
   "aiming-lab/MetaClaw": [
@@ -19454,7 +19454,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 3474
+      "stars": 3475
     }
   ],
   "loongclaw-ai/loongclaw": [
@@ -20402,7 +20402,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 20003
+      "stars": 20014
     }
   ],
   "ClawRunr/JavaClaw": [
@@ -20846,7 +20846,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 4195
+      "stars": 4197
     }
   ],
   "espressif/esp-claw": [
@@ -21290,7 +21290,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 1185
+      "stars": 1186
     }
   ],
   "spinabot/brigade": [
@@ -21512,7 +21512,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 11392
+      "stars": 11393
     }
   ],
   "zhayujie/CowAgent": [
@@ -21734,7 +21734,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 48103
+      "stars": 48116
     }
   ],
   "the-open-agent/openagent": [
@@ -21952,7 +21952,7 @@
     },
     {
       "date": "2026-11-27",
-      "stars": 5754
+      "stars": 5755
     }
   ]
 }
