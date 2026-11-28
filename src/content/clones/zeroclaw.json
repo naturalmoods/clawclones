@@ -54,7 +54,7 @@
   "license_type": "Apache-2.0",
   "last_commit_at": "2026-11-26T23:58:55Z",
   "contributors_count": 495,
-  "open_issues_count": 1284,
+  "open_issues_count": 1290,
   "release_cadence_days": 18,
   "operational_risk": "medium",
   "model_support": {
@@ -260,5 +260,5 @@
     "date": "2026-11-12T02:02:49Z",
     "url": "https://github.com/zeroclaw-labs/zeroclaw/releases/tag/v0.9.0"
   },
-  "last_updated": "2026-11-27T20:34:01.804Z"
+  "last_updated": "2026-11-28T05:16:53.453Z"
 }
